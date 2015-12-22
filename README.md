@@ -18,7 +18,7 @@ This category is related with any hardware that can be programmed over the Ardui
 
 <p align="center">
 <a href="arduino">
-<img src="assets/arduino-logo.png" width="400px">
+<img src="assets/arduino-logo.png" width="300px">
 </a>
 </p>
 
@@ -56,7 +56,7 @@ The Cloud Console is related with the management front-end designed to easily ma
 
 <p align="center">
 <a href="console">
-<img src="assets/console.png" width="400px">
+<img src="assets/console.png" width="350px">
 </a>
 </p>
 
