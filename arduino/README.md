@@ -136,7 +136,7 @@ So for this module is required to have installed the **Adafruit CC3000 Libraries
 The following example will allow connecting your device to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials, and the **wifi_ssid**, **wifi_password** with the WiFi credentials.
 
 <p align="center">
-<img src="assets/adafruit-cc3000.jpg" width="400px">
+<img src="assets/adafruit-cc3000.png" width="250px">
 </p>
 
 ``` cpp
@@ -246,7 +246,7 @@ Once the environment is available and you can program the board examples, then y
 The following example will allow connecting your device to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials, and the **wifi_ssid**, **wifi_password** with the WiFi credentials.
 
 <p align="center">
-<img src="assets/ti-cc3200.png" width="400px">
+<img src="assets/ti-cc3200.png" width="350px">
 </p>
 
 ``` cpp
@@ -304,7 +304,7 @@ void loop() {
 You can easily start with some available example for your device after you install the client libraries.
 
 <p align="center">
-<img src="assets/arduino-examples.png" width="400px">
+<img src="assets/arduino-examples.png" width="350">
 </p>
 
 > It is recommended to start with some of the examples available in the Arduino IDE when you install the librarires
@@ -497,7 +497,7 @@ In this case, you must detect when you want to stream the event, like the accele
 The following example will report the compass heading in real-time if the heading value changes more than 1 degree.
 
 <p align="center">
-<img src="assets/esp8266-real-time-websockets.gif" width="480px">
+<img src="assets/esp8266-real-time-websockets.gif" width="100%">
 </p>
 
 ```cpp
@@ -528,7 +528,7 @@ It is possible to easily interact with your devices within minutes once you have
 One of the easiest ways to access your devices is to simply issue a device token to grant access to the device. When you generate a device token you can restrict the shared resources, and the token expiration time, so you can share some device functionality with other people safely. The idea is that you can use this device token and scan it as a QR code in the Android application.
 
 <p align="center">
-<img src="assets/token.png" width="400px">
+<img src="assets/token.png" width="350px">
 </p>
 
 > Generate a device token in your cloud console, so you can easily interact from your phone within minutes.
@@ -559,8 +559,6 @@ In progress... Refer to the Cloud Console documentation
 
 
 ### API Explorer
-
-[![API Explorer Example](http://img.youtube.com/vi/CmFh-jCgrPw/0.jpg)](http://www.youtube.com/watch?v=CmFh-jCgrPw "API Explorer Example")
 
 
 ## Server API
