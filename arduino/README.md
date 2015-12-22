@@ -28,14 +28,14 @@ The most easy way to install new libraries is by using the `Library Manager` ava
 
 Open the **Library Manager**
 
-<img src="//discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/30a5f56c8917f8a26b03efb2438bfa444d531b2f.png" width="100%"> 
+<img src="https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/30a5f56c8917f8a26b03efb2438bfa444d531b2f.png" width="100%"> 
 
 > Open the **Library Manager** in the Arduino menu in `Sketch` >
     `Include Library` > `Manage Libraries`
 
 **Search** and install the thinger.io library
 
-<img src="//discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/0e8bc7c86b5aff26aea7649741b592c8157cae11.png" width="100%">  
+<img src="https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/0e8bc7c86b5aff26aea7649741b592c8157cae11.png" width="100%">  
 
 > Search the library with name **thinger.io** and then click `Install`. You can update the library also from this manager when it is updated.
 
@@ -193,19 +193,19 @@ This devices can be directly programmed from the Arduino IDE. You can follow the
 
 For this step, just put http://arduino.esp8266.com/stable/package_esp8266com_index.json into **Additional Board Manager URLs** field in the **Arduino v1.6.4+** preferences. If this URL is not working, maybe you may need to check the Github project that supports the library: [ESP8266 Github](https://github.com/esp8266/Arduino).
 
-<img src="//discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/b9ef9df0c95c1bff0e9d7db258a355bb44374b06.png" width="100%"> 
+<img src="https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/b9ef9df0c95c1bff0e9d7db258a355bb44374b06.png" width="100%"> 
 
 > In the Arduino preferences, enter http://arduino.esp8266.com/stable/package_esp8266com_index.json in **Additional Boards Manager URLs**
 
 Next, go to the Boards manager to install the ESP8266 package. Search for the esp8266 and install the package **esp8266 by ESP8266 Community**
 
-<img src="//discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/efdec170e35cb296b895dd92b9868f8e0a9d3cd9.png" width="100%"> 
+<img src="https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/efdec170e35cb296b895dd92b9868f8e0a9d3cd9.png" width="100%"> 
 
 > **Tools** > **Boards** > **Board manager...** Then search and install the esp8266 package.
 
 Now you can program almost any ESP8266 directly from the Arduino IDE. From the **Tools** > **Boards** you should see now the new ESP8266 boards installed. Select your board to be able to compile code for the ESP8266.
 
-<img src="//discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/4db23ae2b7121cbf6702f5d55c3c931de6be5f33.png" width="250px"> 
+<img src="https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/4db23ae2b7121cbf6702f5d55c3c931de6be5f33.png" width="250px"> 
 
 > Select the ESP8266 based board you will program from **Tools** > **Boards**
 
