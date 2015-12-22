@@ -214,7 +214,7 @@ You can find additional information for the ESP8266 package in the [ESP8266 Gith
 The following example will allow connecting your device to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials, and the **wifi_ssid**, **wifi_password** with the WiFi credentials.
 
 <p align="center">
-<img src="assets/nodemcu.png" width="350px">
+<img src="assets/nodemcu.png" width="325px">
 </p>
 
 ``` cpp
@@ -246,7 +246,7 @@ Once the environment is available and you can program the board examples, then y
 The following example will allow connecting your device to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials, and the **wifi_ssid**, **wifi_password** with the WiFi credentials.
 
 <p align="center">
-<img src="assets/ti-cc3200.png" width="350px">
+<img src="assets/ti-cc3200.png" width="325px">
 </p>
 
 ``` cpp
@@ -304,7 +304,7 @@ void loop() {
 You can easily start with some available example for your device after you install the client libraries.
 
 <p align="center">
-<img src="assets/arduino-examples.png" width="350">
+<img src="assets/arduino-examples.png" width="325">
 </p>
 
 > It is recommended to start with some of the examples available in the Arduino IDE when you install the librarires
@@ -528,7 +528,7 @@ It is possible to easily interact with your devices within minutes once you have
 One of the easiest ways to access your devices is to simply issue a device token to grant access to the device. When you generate a device token you can restrict the shared resources, and the token expiration time, so you can share some device functionality with other people safely. The idea is that you can use this device token and scan it as a QR code in the Android application.
 
 <p align="center">
-<img src="assets/token.png" width="350px">
+<img src="assets/token.png" width="325px">
 </p>
 
 > Generate a device token in your cloud console, so you can easily interact from your phone within minutes.
@@ -538,7 +538,7 @@ One of the easiest ways to access your devices is to simply issue a device token
 The current version of the [Android APP](https://play.google.com/store/apps/details?id=io.thinger.thinger) does not require any kind of login to interact with your devices. Simply scan your token as a QR code and your phone will be able to interact with your device for reading sensor values, changing led or relays states, and so on.
 
 <p align="center">
-<img src="assets/phone.png" width="350px">
+<img src="assets/phone.png" width="325px">
 </p>
 
 > In the current version of the Android APP, you can interact with your device resources out of the box. Just scan the QR Code and start interacting with your resources directly from the Internet.
