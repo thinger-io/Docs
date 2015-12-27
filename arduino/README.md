@@ -548,18 +548,39 @@ The current version of the [Android APP](https://play.google.com/store/apps/deta
 Coming soon!
 
 ## Cloud Console
-In progress... Refer to the Cloud Console documentation
 
+The Cloud Console add some support for out of the box device interaction. You can interact with your devices from the API explorer, or also create real-time dashboards to display the device information. It is not necessary to write additional code to support this kind of interaction, just only declare your resources in your device and you will be able to access them directly in the console.
 
-### Dashboard
+So this section will review different interaction approaches from the cloud console.
+
+### Dashboards
+
+In the cloud console you can easily create and configure real-time dashboards for display your device data, like sensors. You just need to select the device, an associated resource, and select the update method, that can be a configurable sampling interval, or update as required by device.
+
+TODO Reference to dashboards in cloud console
 
 <p align="center">
 <img src="assets/dashboards.gif" width="100%">
 </p>
 
+> Visualize your sensor data in real-time using the dashboards. Add different widgets, like maps, charts, donut charts, text, etc. This example is monitoring several sensors like pressure, temperature, humidity, compass, and altitude. So you can configure the dashboards with the devices and resources you want.
 
 ### API Explorer
 
+Another way of interaction with your device is trhough the API Explorer. Every defined resource in your device is automatically accesible from the API Explorer, so you can read data, send commands or values, call functions, etc. 
+
+This feature is so useful if you want to interact with your device using the Server API, so you can easily visualize the device exposed API, and the expected input and output. Also it is very important while writing code on your device, so you can easily check if your resources are working as expected, like reading a sensor value, turning on and off a relay, and so on. 
+
+TODO Reference to API Explorer in cloud console
+
+<p align="center">
+<video width="100%" autoplay loop>
+  <source src="assets/api-explorer.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</p>
+
+> Every defined resource in your device, like a sensor, a relay, a light, and so on, can be accessed out of the box from the API Explorer. This example is turning on and off a led directly from the explorer.
 
 ## Server API
 
