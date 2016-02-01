@@ -519,7 +519,7 @@ void loop() {
 ```
 
 ## Enabling Debug Output
-Thinger.io library provides extensive logging of its activities, which is especially useful when one needs to troubleshoot authentication and Wi-Fi connectivity issues. Include the following definition in your sketch, but *make sure it comes first, before any other includes* (it was reported to cause crashes on some boards otherwise):
+Thinger.io library provides extensive logging of its activities, which is especially useful when one needs to troubleshoot authentication and Wi-Fi connectivity issues. Include the following definition in your sketch, but *make sure it comes first, before any other includes* (it was reported to cause crashes on some boards otherwise).
 
 ```
 #define _DEBUG_
