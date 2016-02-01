@@ -266,6 +266,15 @@ void loop() {
 
 Want to add some device resources (led, sensors, etc.) to interact with them from the Internet?, check the [Add Resources](#coding-adding-resources) section.
 
+## Enabling Debug Output
+Thinger.io library provides extensive logging of its activities, which is especially useful when one needs to troubleshoot authentication and Wi-Fi connectivity issues. Include the following definition in your sketch, but *make sure it comes first, before any other includes* (it was reported to cause crashes on some boards otherwise):
+
+```
+#define _DEBUG_
+
+// the rest of your sketch goes here
+```
+
 Coding
 ======
 
