@@ -535,8 +535,23 @@ void setup() {
 }
 ```
 
+## Note on ESP8266 Deep Sleep and SmartConfig
+`SmartConfig` allows one to configure board's WiFi credentials via an external device on the same network (e.g. smartphone or another wifi client). This means no sensitive information goes into a sketch nor in a config file on a device.
+
+`Deep Sleep` is a special mode of ESP8266 which allows it to shut down most of the circuits and wake up after some configurable time. For deep sleep (and wake up) to work properly, one has to connect `GPIO16` (usually a `D0` on dev boards) and `RST` pins.
+
+However, some boards chose to wire a built-in LED to the same `D0` pin, and will go into a crash loop when using `ThingerSmartConfig` class, which uses the LED as a debugging aid at runtime. The solution is to use an overloaded constructor and disable its use of the LED, as below:
+```
+ThingerSmartConfig thing(USERNAME,
+                         DEVICE_ID,
+                         DEVICE_CREDENTIAL,
+                         false); // required for deep sleep
+```
+
+
+
 Interacting
-===========
+============
 
 It is possible to easily interact with your devices within minutes once you have defined your resources and the device is connected to the platform. There are several ways of interaction, like creating dashboards, accessing with a mobile application (currently only in Android), accessing from the API explorer, or calling the cloud API directly.
 
