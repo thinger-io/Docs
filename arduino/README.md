@@ -551,7 +551,7 @@ ThingerSmartConfig thing(USERNAME,
 
 
 Interacting
-============
+===========
 
 It is possible to easily interact with your devices within minutes once you have defined your resources and the device is connected to the platform. There are several ways of interaction, like creating dashboards, accessing with a mobile application (currently only in Android), accessing from the API explorer, or calling the cloud API directly.
 
