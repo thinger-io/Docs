@@ -527,6 +527,14 @@ Thinger.io library provides extensive logging of its activities, which is especi
 // the rest of your sketch goes here
 ```
 
+It is also necessary to enable `Serial` communication, as all the debugging information is displayed over Serial. So enable it in your sketch in the setup method.
+
+```
+void setup() {
+  Serial.begin(115200);
+}
+```
+
 Interacting
 ===========
 
