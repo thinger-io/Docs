@@ -266,6 +266,107 @@ void loop() {
 
 Want to add some device resources (led, sensors, etc.) to interact with them from the Internet?, check the [Add Resources](#coding-adding-resources) section.
 
+## Arduino + ENC28J60
+
+The ENC28J60 is a very cheap Ethernet controller that can be used with our Arduinos to extend its connectivity. The main advantage of this controller is that it is inexpensive, as you can find this module for a few dollars. The bad news is that all the TCP/IP stack, DNS features, and so on, must run in the microcontroller itself, so there is no enough space in stock Arduinos for building things. This way, for integrating the thinger.io libraries in the sketch, it would be necessary to disable the DHCP protocol (that uses UDP under the hood), and assign a manual IP address. If this is ok for you, then this module can be a great option.
+
+There are some libraries for managing this boards, but we will use [UIPEthernet](https://github.com/ntruchsess/arduino_uip), as it provides an standard interface that is compatible with the stock Thinger libraries.
+
+The following example will allow connecting your device to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials.
+
+<p align="center">
+<img src="assets/ENC28J60.jpg" width="325px">
+</p>
+
+``` cpp
+// UIPEthernet for ENC28J60: https://github.com/ntruchsess/arduino_uip
+#include <UIPEthernet.h>
+#include <ThingerENC28J60.h>
+
+#define USERNAME "your_username"
+#define DEVICE_ID "your_device_id"
+#define DEVICE_CREDENTIAL "your_device_credential"
+
+ThingerENC28J60 thing(USERNAME, DEVICE_ID, DEVICE_CREDENTIAL);
+
+void setup() {
+  // ENC28J60 using fixed IP Address. DHCP is too big for the sketch.
+  uint8_t mac[6] = {0x00, 0x01, 0x02, 0x03, 0x04, 0x05};
+  Ethernet.begin(mac, IPAddress(192, 168, 1, 125));
+
+  pinMode(2, OUTPUT);
+
+  // pin control example (i.e. turning on/off a light, a relay, etc)
+  thing["led"] << digitalPin(2);
+
+  // resource output example (i.e. reading a sensor value)
+  thing["millis"] >> outputValue(millis());
+}
+
+void loop() {
+  thing.handle();
+}
+```
+
+Want to add some device resources (led, sensors, etc.) to interact with them from the Internet?, check the [Add Resources](#coding-adding-resources) section.
+
+
+## SeeedStudio LinkIT ONE
+
+The LinkIt ONE development board is an open source, high performance, Arduino footprint board for prototyping Internet of Things (IoT) devices. The list of capabilities is truly staggering. The board is based around a powerful ARM7 EJ-S™ processor, but has onboard GSM, GPRS, Wi-Fi, Bluetooth BR/EDR/BLE, GPS, Audio codec, and SD card connector (and more!).
+
+The board is programmed through the Arduino IDE with a plugin from MediaTek. Check the [MediaTek LinkIt™ ONE SDK for Arduino](http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit/sdk_intro/index.gsp) 
+
+<p align="center">
+<img src="assets/linkit_one.jpg" width="325px">
+</p>
+
+
+> Pin-out similar to Arduino boards, including Digital I/O, Analog I/O, PWM, I2C, SPI, UART and power supply, compatible with Grove 4-pin interface. Although the board is made by Seeed, the chipset is made by MediaTek, a large Chinese company who are already offering significant SDK / support resources.
+
+### WIFI Connection
+The following example will allow connecting your device to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials, and the **wifi_ssid**, **wifi_password** with the WiFi credentials.
+
+``` cpp
+#include <LTask.h>
+#include <LWiFi.h>
+#include <LWiFiClient.h>
+#include <ThingerLinkItOneWifi.h>
+
+ThingerLinkItOneWifi thing("username", "deviceId", "deviceCredential");
+
+void setup() {
+    thing.add_wifi("wifi_ssid", "wifi_password");
+}
+
+void loop() {
+    thing.handle();
+}
+```
+
+### GPRS Connection
+
+It is also possible to connect the board by using the GPRS connection, so it does not require a WiFi connection for the communication, improving the board mobility. Note that the current version of the LinkIt ONE does not support a SIM with PIN, so remove the PIN befor its use. In this case, it is only necessary to provide the **apn**, **username**, and **password** provided by your network operator. But you can skip this process if your SIM already integrates this information.
+
+``` cpp
+#include <LGPRS.h>
+#include <LGPRSClient.h>
+#include <ThingerLinkItOneGPRS.h>
+
+ThingerLinkItOneGPRS thing("user_id", "device_id", "device_credential");
+
+void setup() {
+  thing.set_apn("apn", "username", "password");
+}
+
+void loop() {
+  thing.handle();
+}
+```
+
+Want to add some device resources (led, sensors, etc.) to interact with them from the Internet?, check the [Add Resources](#coding-adding-resources) section.
+
+
 Coding
 ======
 
@@ -437,9 +538,83 @@ You can also define more complex input/output resources, that takes several inpu
 
 ``` cpp
 thing["in_out"] = [](pson& in, pson& out){
-      out["sum"] = (long)in["value1"] + (long)in["value2"];
-      out["mult"] = (long)in["value1"] * (long)in["value2"];
+    out["sum"] = (long)in["value1"] + (long)in["value2"];
+    out["mult"] = (long)in["value1"] * (long)in["value2"];
 };
+```
+
+### Resources without parameters
+
+It is also possible to define resources that does not require any input nor generates any output. They are just like callbacks that can be executed as you want, for example to reboot the device, or do some required action. 
+
+In this case, the resource is defined as a function without any input or output parameters.
+
+``` cpp
+thing["resource"] = [](){
+    // write here your execution code
+};
+```
+
+## Easier Resources
+
+The client library also includes some useful syntactic sugar definitions for declaring resources more easily without having to think in input or or output resources. This syntactic sugar features are macros that are expanded automatically to define the resources in the standard way.
+
+The advantage of using this kind of definitions is that your resources will be able to handle state when you query them from the API. For example, if you have a digital pin enabled or disabled, you will be able to see its current state both in the API explorer or in a dashboard.
+
+### Control a digital pin
+
+This kind of resources will allow defining a resource for declaring a control over a digital pin, so you can alternate over on/off states, that can be used for controlling a led, a relay, a light, etc.
+
+It is required to define the digital pin as OUTPUT in your setup code, or the resource will not work properly.
+
+``` cpp
+thing["relay"] << digitalPin(PIN_NUMBER);
+thing["relay"] << invertedDigitalPin(PIN_NUMBER);
+```
+
+### Define Output Resources
+ 
+This kind of resources will allow defining a resource for declaring a read-only resource, like a value obtained from a sensor, or a given variable in our sketch.
+
+In this example we are defining a resource that exposes a sensor reading, like the DHT11 sensor temperature.
+
+``` cpp
+thing["temperature"] >> outputValue(dht.readTemperature());
+```
+
+But it is also possible to define a output resource for any global variable in our sketch.
+
+``` cpp
+thing["variable"] >> outputValue(myVar);
+```
+
+### Modify Sketch Variables
+
+Our sketch usually defines some parameters or variables that are used inside the loop code. This kind of resources are normally used to handle or control the execution behaviour. With this kind of resources we can modify any parameter we want to expose, like a float, an integer, a boolean, etc.
+
+In this example it is possible to remotelly modify the boolean `sdLogging` variable defined as a global variable.
+``` cpp
+thing["logging"] << inputValue(sdLogging);
+```
+
+It is also possible to define a callback function to know when the variable has changed, so we can perform any other action. For this use case, define the resource as the following to have some code executed when the `hysteresisVar` changes.
+
+``` cpp
+thing["hysteresis"] << inputValue(hysteresisVar, {
+    // execute some code when the value change
+    Serial.println("Hystereis changed to: ");
+    Serial.print(hysteresisVar);
+});
+```
+
+### Servo control
+
+It is also possible to define a resource for controlling a servo instance. This way, the defined resource will automatically handle your servo instance, reading its current position, or changing to a new one according to the API interactions.
+
+For defining a servo resource just define and initialize your servo as usual, and then use the declared instance in the resource definition. 
+
+``` cpp
+thing["servo"] << servo(myServoInstance);
 ```
 
 ## Using Endpoints
@@ -545,7 +720,16 @@ The current version of the [Android APP](https://play.google.com/store/apps/deta
 
 ### Android Wear
 
-Coming soon!
+The Android APP supports Android Wear devices for controlling and reading values from your devices! The current version is still under testing and therefore it can still have some errors. At this moment the Wear version allows reading values (not composed values at this moment), execute resources, and control boolean resources. It is so cool to turn on and off things from the SmartWatch! 
+
+To get the devices available in the SmartWatch, it is not required to do anything special. As usually, just scan the QR code from the platform with the mobile phone.
+
+<p align="center">
+<img src="assets/android_wear_1.png" width="40%">
+<img src="assets/android_wear_2.png" width="40%">
+<img src="assets/android_wear_3.png" width="40%">
+<img src="assets/android_wear_4.png" width="40%">
+</p>
 
 ## Cloud Console
 
