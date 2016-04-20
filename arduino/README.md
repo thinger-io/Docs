@@ -693,6 +693,37 @@ void loop() {
 }
 ```
 
+## Enabling Debug Output
+Thinger.io library provides extensive logging of its activities, which is especially useful when one needs to troubleshoot authentication and Wi-Fi connectivity issues. Include the following definition in your sketch, but *make sure it comes first, before any other includes* (it was reported to cause crashes on some boards otherwise).
+
+```
+#define _DEBUG_
+
+// the rest of your sketch goes here
+```
+
+It is also necessary to enable `Serial` communication, as all the debugging information is displayed over Serial. So enable it in your sketch in the setup method.
+
+```
+void setup() {
+  Serial.begin(115200);
+}
+```
+
+## ESP8266 Deep Sleep and SmartConfig
+`SmartConfig` allows one to configure board's WiFi credentials via an external device on the same network (e.g. smartphone or another wifi client). This means no sensitive information goes into a sketch nor in a config file on a device.
+
+`Deep Sleep` is a special mode of ESP8266 which allows it to shut down most of the circuits and wake up after some configurable time. For deep sleep (and wake up) to work properly, one has to connect `GPIO16` (usually a `D0` on dev boards) and `RST` pins.
+
+However, some boards chose to wire a built-in LED to the same `D0` pin, and will go into a crash loop when using `ThingerSmartConfig` class, which uses the LED as a debugging aid at runtime. The solution is to use an overloaded constructor and disable its use of the LED.
+
+```
+ThingerSmartConfig thing(USERNAME,
+                         DEVICE_ID,
+                         DEVICE_CREDENTIAL,
+                         false); // required for deep sleep
+```
+
 Interacting
 ===========
 
