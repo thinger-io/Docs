@@ -52,37 +52,25 @@ At this stage, if you type `gcc-v` it should show version 4.9.2 or greater. You 
 
 Install additional dependencies
 ----------------------------
-It is necessary use CMake for compiling the examples and install thinger as daemon if you want. It is also required to install Open SSL if we want to securely connect to the platform.
+It is necessary use CMake for compiling the examples and install thinger as daemon if you want. It is also required to install Open SSL if we want to securely connect to the platform trhough TLS. 
 
-Install CMake ``````
+Update the apt repository first: 
 
-    sudo apt-get install cmake
+    sudo apt-get update
 
- Install Open SSL Libraries
+Install Dependencies (CMake and OpenSSL)
 
-    sudo apt-get install libssl-dev
+    sudo apt-get install cmake libssl-dev
 
 ## Starting with the platform ##
 
 Download the latest Linux Client version from GitHub.
 
-    wget https://github.com/thinger-io/Linux-Client/archive/master.zip
+    git clone https://github.com/thinger-io/Linux-Client.git
 
-Unzip the library.
+Enter in the Linux-Client folder we just cloned.
 
-    unzip master.zip
-
-Change the folder name.
-
-    mv Linux-Client-master thinger_client
-
-Remove the zip file if you want.
-
-    rm master.zip
-
-Enter in the thinger_client folder we just decompressed.
-
-    cd thinger_client/
+    cd Linux-Client
 
 And now it is time to enter the credentials in the main project file. So we are going to edit the `main.cpp` file from `src` folder. You can use any editor you want. We will use here `nano`.
 
