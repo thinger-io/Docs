@@ -10,7 +10,9 @@ This how-to will cover how to get the first steps while using the thinger.io pla
 Installing a newer GCC Version
 ------------------------------
 
-It is necessary to use a modern compiler to build thinger.io examples. The latest Raspbian version (Debian Wheezy) ships with GCC 4.6. But it is required **at least GCC 4.8.2**. Please type `gcc -`v in a terminal to check if you need to update your compiler.
+**Note: Not required for Raspbian Jessie or newer versions.**
+
+It is necessary to use a modern compiler to build thinger.io examples. The latest Raspbian version already provides a modern compiler, starting with Jessie, but you may install a newer compiler if you are using older Raspbian versions. It is required **at least GCC 4.8.2**. Please type `gcc -`v in a terminal to check if you need to update your compiler.
 
 It is necessary to keep all your system updated, so please start by upgrading all the installed packages by typing the following commands. It may take some time depending on your Internet connection
 
