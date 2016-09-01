@@ -572,6 +572,8 @@ thing["relay"] << digitalPin(PIN_NUMBER);
 thing["relay"] << invertedDigitalPin(PIN_NUMBER);
 ```
 
+**NOTE:** This syntactic sugar definition may not work correctly on non AVR devices, or devices that cannot read the digital status of an output pin.
+
 ### Define Output Resources
  
 This kind of resources will allow defining a resource for declaring a read-only resource, like a value obtained from a sensor, or a given variable in our sketch.
