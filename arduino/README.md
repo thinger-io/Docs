@@ -185,6 +185,39 @@ void loop() {
 
 Want to add some device resources (led, sensors, etc.) to interact with them from the Internet?. Check the [Add Resources](#coding-adding-resources) section.
 
+## Arduino MKR1000
+
+The Arduino MKR1000 is a microcontroller based on the Atmel ATSAMW25 SoC (System on Chip), that is part of the SmartConnect family of Atmel Wireless devices, specifically designed for IoT projects and devices. A good 32 bit computational power similar to the Zero board, the usual rich set of I/O interfaces, low power Wi-Fi with a Cryptochip for secure communication, and the ease of use of the Arduino Software (IDE) for code development and programming. All these features make this board the preferred choice for the emerging IoT battery-powered projects in a compact form factor.
+ 
+The following example will allow connecting the MKR1000 to the cloud platform in a few lines using secure connections (TLS/SSL). Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials, and the **wifi_ssid**, **wifi_password** with the WiFi credentials.
+
+<p align="center">
+<img src="assets/Arduino_MKR1000.png" width="300px">
+</p>
+
+``` cpp
+#include <WiFi101.h>
+#include <ThingerWifi101.h>
+
+ThingerWifi101 thing("username", "deviceId", "deviceCredential");
+
+void setup() {
+  thing.add_wifi("your_wifi_ssid", "your_wifi_ssid_password");
+}
+
+void loop() {
+  thing.handle();
+}
+```
+
+If you want to disable the secure TLS/SSL connection, you can instantiate the `thing` instance by passing `false` after the device credentials.
+
+``` cpp
+ThingerWifi101 thing("username", "deviceId", "deviceCredential", false);
+``` 
+
+Want to add some device resources (led, sensors, etc.) to interact with them from the Internet?. Check the [Add Resources](#coding-adding-resources) section.
+
 ## ESP8266 / NodeMCU
 
 The ESP8266 chip from Espressif was the new generation of low-cost WiFi chips after the TI CC3000/CC3200. This small chip not only integrates the whole WiFi features, but also a powerful programmable MCU. Depending on the board layout (ESP-01, ESP-03, ESP-07, ESP12, etc) it is attached to a programmable flash, ranging from 512K to 4M. This increases the available user code space, and make possible other cool features like a small file system, or OTA updates.
