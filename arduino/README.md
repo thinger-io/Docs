@@ -210,10 +210,11 @@ void loop() {
 }
 ```
 
-If you want to disable the secure TLS/SSL connection, you can instantiate the `thing` instance by passing `false` after the device credentials.
+If you want to disable the secure TLS/SSL connection, you can declare the following define before any other include.
 
 ``` cpp
-ThingerWifi101 thing("username", "deviceId", "deviceCredential", false);
+#define _DISABLE_TLS_
+// other includes goes here
 ``` 
 
 Want to add some device resources (led, sensors, etc.) to interact with them from the Internet?. Check the [Add Resources](#coding-adding-resources) section.
@@ -265,6 +266,13 @@ void loop() {
   thing.handle();
 }
 ```
+
+Since library version 2.5.0, the ESP8266 will connect by default using secure sockets layers (SSL/TLS). However, if you want to disable the secure TLS/SSL connection, you can declare the following define before any other include.
+
+``` cpp
+#define _DISABLE_TLS_
+// other includes goes here
+``` 
 
 Want to add some device resources (led, sensors, etc.) to interact with them from the Internet?. Check the [Add Resources](#coding-adding-resources) section.
 
@@ -652,6 +660,79 @@ For defining a servo resource just define and initialize your servo as usual, an
 thing["servo"] << servo(myServoInstance);
 ```
 
+## Communication between devices
+
+In Thinger.io, it is possible that devices can communicate between them. There are two possibilities here. One is the communication between devices from the same account, and the other is the communication between devices from different accounts. Here we describe the two different approaches:
+
+### Same account communication
+
+For this use case, there are specific methods that the devices can use to communicate with other devices. Suppose that we have a `deviceA`, and a `deviceB` that wants to communicate between them.
+
+The `deviceA` defines a resource like in the following example.
+
+```cpp
+setup(){
+    thing[“methodOnA”] = [](){
+        Serial.println("Someone is calling me!");
+    };
+}
+```
+
+`deviceB` can easily call this method by running the following command.
+
+```cpp
+loop(){
+    thing.handle();
+    // be sure to call it at an appropiate rate
+    thing.call_device("deviceA", "methodOnA");
+}
+```
+
+But also, the `deviceA` can define a resource with some expected input.
+
+```cpp
+setup(){
+    thing[“methodOnA”] << [](pson& in){
+        int val1 = in["anyValue1"];
+        float va2 = in["anyValue2"];
+        // Work with the updated parameters here
+    };
+}
+```
+
+`deviceB` can also call this method providing the appropriated input by defining a `pson` type that is filled with the same keys used on `methodOnA`.
+
+```cpp
+loop(){
+    thing.handle();
+    // be sure to call it at an appropiate rate
+    pson data;
+    data["anyValue1"] = 3;
+    data["anyValue2"] = 43.1;
+    thing.call_device("deviceA", "methodOnA", data);
+}
+```
+
+`deviceB` can also call this method by providing the information from an defined resource that generates the information, in this case, the call is similar as the previous example, but using the resource as the data source.
+
+```cpp
+setup(){
+    thing["resourceName"] >> [](pson& out){
+        out["anyValue1"] = 3;
+        out["anyValue2"] = 43.1;
+    };
+}
+
+loop(){
+    thing.handle();
+    // be sure to call it at an appropiate rate
+    thing.call_device("deviceA", "methodOnA", thing["resourceName"]);
+}
+```
+
+### Different account communication
+
+
 ## Using Endpoints
 
 In Thinger.io, an endpoint is defined as some kind of external resource that can be accessed by the device. With the endpoints feature, devices can easily send emails, SMS, push data to external WebServices, interact with IFTTT, and any general action that can be made by using WebHooks (Calling HTTP/HTTPS URLs).
@@ -696,6 +777,23 @@ pson data;
 data["temperature"] = dht.readTemperature();
 data["humidity"] = dht.readHumidity();
 thing.call_endpoint("keen_endpoint", data);
+```
+
+You can also send data based on a defined resource, i.e., suppose you have a resource that already serves the temperature and humidity. It is possible to reuse this definition for sending this same data to the endpoint, without having to redefine the sensor reading, like in the following example.
+
+```cpp
+setup(){
+    // defined resource in the setup for reading a sensor value
+    thing["data"] >> (pson& out){
+        out["temperature"] = dht.readTemperature();
+        out["humidity"] = dht.readHumidity();
+    }
+}
+
+loop(){`
+    // be careful of sending data at an appropriate rate!
+    thing.call_endpoint("endpoint", thing["data"]);
+}
 ```
 
 ## Streaming Resources
