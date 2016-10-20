@@ -520,13 +520,13 @@ thing["location"] << [](pson& in){
 };
 ```
 
-*Show Input Resource State in Dashboards/API*
+*Show Input Resources State in Dashboards and API*
 
-The dashboards works in a way that when you open them, they query the associated resources to correctly print its current state, i.e. the switch is on or off. In this way, when the dashboard is open, each associated resource is called, receiving empty data in the input, as there is no intention to control the resource (the pson input will be empty).
+The Dashboards or API works in a way that when you open them, they query the associated resources to correctly print its current state, i.e., the switch is on or off. In this way, when the API or a Dashboard is open, each associated input resource is called, receiving empty data in the call, as there is no intention to control the resource (the pson input will be empty).
 
-So, how the dashboards know what is the current state of an input resource? The resource must set its current state in the input parameter, if it is empty, or use the input value if there is one. This way, we can obtain three different things: query the current resource state (without modifying it), modify the current resource state, and obtain the expected input on the resource (this is how the API explorer on the device works).
+So, how the Dashboards or the API knows what is the current state of an input resource? The resource must set its current state in the input parameter, if it is empty, or use the input value if there is one. This way, we can obtain three different things: query the current resource state (without modifying it), modify the current resource state, and obtain the expected input on the resource (this is how the API explorer on the device works).
 
-Therefore, a correct input resource definition that actually allows to display the current state of the resource in a dashboard or in the API, will be like this example code.
+Therefore, a correct input resource definition that actually allows to display the current state of the resource in a Dashboard or in the API, will be like this example code.
 
 ```cpp
 thing["resource"] << [](pson& in){
@@ -539,7 +539,7 @@ thing["resource"] << [](pson& in){
 }
 ```
 
-This sample code basically returns the current state (like a boolean, a number, etc) if there is no input control, or use the incoming data update the current state. This can be easily adapted for controlling a led, while showing its current state in the dashboard once opened or updated. 
+This sample code basically returns the current state (like a boolean, a number, etc) if there is no input control, or use the incoming data to update the current state. This can be easily adapted for controlling a led, while showing its current state in the dashboard once opened or updated. 
 
 ```cpp
 thing["led"] << [](pson& in){
