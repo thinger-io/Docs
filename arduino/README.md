@@ -520,6 +520,39 @@ thing["location"] << [](pson& in){
 };
 ```
 
+*Show Input Resource State in Dashboards/API*
+
+The dashboards works in a way that when you open them, they query the associated resources to correctly print its current state, i.e. the switch is on or off. In this way, when the dashboard is open, each associated resource is called, receiving empty data in the input, as there is no intention to control the resource (the pson input will be empty).
+
+So, how the dashboards know what is the current state of an input resource? The resource must set its current state in the input parameter, if it is empty, or use the input value if there is one. This way, we can obtain three different things: query the current resource state (without modifying it), modify the current resource state, and obtain the expected input on the resource (this is how the API explorer on the device works).
+
+Therefore, a correct input resource definition that actually allows to display the current state of the resource in a dashboard or in the API, will be like this example code.
+
+```cpp
+thing["resource"] << [](pson& in){
+    if(in.is_empty()){
+        in = currentState;
+    }
+    else{
+        currentState = in;
+    }
+}
+```
+
+This sample code basically returns the current state (like a boolean, a number, etc) if there is no input control, or use the incoming data update the current state. This can be easily adapted for controlling a led, while showing its current state in the dashboard once opened or updated. 
+
+```cpp
+thing["led"] << [](pson& in){
+    if(in.is_empty()){
+        in = (bool) digitalRead(pin);
+    }
+    else{
+        digitalWrite(pin, in ? HIGH : LOW);
+    }
+}
+```
+
+Note: for controlling a digital pin just use the method explained in the Easier Resources Section.
 
 ### Output Resources
 
@@ -672,7 +705,7 @@ The `deviceA` defines a resource like in the following example.
 
 ```cpp
 setup(){
-    thing[“methodOnA”] = [](){
+    thing[“resourceOnA”] = [](){
         Serial.println("Someone is calling me!");
     };
 }
@@ -684,7 +717,7 @@ setup(){
 loop(){
     thing.handle();
     // be sure to call it at an appropiate rate
-    thing.call_device("deviceA", "methodOnA");
+    thing.call_device("deviceA", "resourceOnA");
 }
 ```
 
@@ -692,15 +725,15 @@ But also, the `deviceA` can define a resource with some expected input.
 
 ```cpp
 setup(){
-    thing[“methodOnA”] << [](pson& in){
+    thing[“resourceOnA”] << [](pson& in){
         int val1 = in["anyValue1"];
-        float va2 = in["anyValue2"];
+        float val2 = in["anyValue2"];
         // Work with the updated parameters here
     };
 }
 ```
 
-`deviceB` can also call this method providing the appropriated input by defining a `pson` type that is filled with the same keys used on `methodOnA`.
+`deviceB` can also call this method providing the appropriated input by defining a `pson` type that is filled with the same keys used on `resourceOnA`.
 
 ```cpp
 loop(){
@@ -709,7 +742,7 @@ loop(){
     pson data;
     data["anyValue1"] = 3;
     data["anyValue2"] = 43.1;
-    thing.call_device("deviceA", "methodOnA", data);
+    thing.call_device("deviceA", "resourceOnA", data);
 }
 ```
 
@@ -726,12 +759,17 @@ setup(){
 loop(){
     thing.handle();
     // be sure to call it at an appropiate rate
-    thing.call_device("deviceA", "methodOnA", thing["resourceName"]);
+    thing.call_device("deviceA", "resourceOnA", thing["resourceName"]);
 }
 ```
 
 ### Different account communication
 
+If we want to communicate devices from different accounts, we can do that through calling and endpoint of type `Thinger.io Device Call`
+
+<p align="center">
+<img src="assets/esp8266-real-time-websockets.gif" width="100%">
+</p>
 
 ## Using Endpoints
 
