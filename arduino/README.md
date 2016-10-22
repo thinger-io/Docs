@@ -761,13 +761,27 @@ loop(){
 }
 ```
 
-### Different account communication
+###  Communication between different accounts
 
-If we want to communicate devices from different accounts, we can do that through calling and endpoint of type `Thinger.io Device Call`
+If we want to communicate devices from different accounts, we can do that through calling an endpoint of type `Thinger.io Device Call`. Just register an endpoint of this type in the console, like in the following example.
 
 <p align="center">
-<img src="assets/esp8266-real-time-websockets.gif" width="100%">
+<img src="assets/device_call.png" width="100%">
 </p>
+
+In this case it is required to define different parameters in the endpoint:
+
+* Endpoint Identifier: The endpoint id that the device will use for calling the device.
+* Device Owner: The device owner username.
+* Device Identifier: The device id of the other account.
+* Resource Name: The resource on the device to be called.
+* Device Access Token: A device token generated in the other account for granting external access to the device.
+
+Once defined, the device will be able to call the endpoint, as explained in the following section. It basically consists on calling the `call_endpoint`method.
+
+```cpp
+thing.call_endpoint("DeviceACall");
+```
 
 ## Using Endpoints
 
