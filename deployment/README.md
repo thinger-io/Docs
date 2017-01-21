@@ -2,6 +2,10 @@
 
 ## Install MongoDB
 	
+Thinger.io IoT platform requires a MongoDB server for storing some server information. So, the first step is to install a MongoDB Server in your host. The following information has been obtained from the official documentation:
+ 
+[https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
+
 ### Import the public key used by the package management system.
 
 The Ubuntu package management tools (i.e. dpkg and apt) ensure package consistency and authenticity by requiring that distributors sign packages with GPG keys. Issue the following command to import the MongoDB public GPG Key:
@@ -307,3 +311,46 @@ Once you are done, just update the settings and click on `Back to the Applicatio
 <p align="center">
     <img src="assets/console_config_update.png" width="650">
 </p>
+
+# Connect the devices to your server
+
+
+## Arduino Devices
+
+Connecting the devices to your own server, does not require a complex setup. In your sketch, just add a definition to your server, by adding the `THINGER_SERVER` define pointing you your server IP Address or host name, as in the following example:
+
+```cpp
+#define THINGER_SERVER "192.168.1.120"
+
+#include <ESP8266WiFi.h>
+#include <ThingerESP8266.h>
+
+#define USERNAME "your_user_name"
+#define DEVICE_ID "your_device_id"
+#define DEVICE_CREDENTIAL "your_device_credential"
+
+#define SSID "your_wifi_ssid"
+#define SSID_PASSWORD "your_wifi_ssid_password"
+
+ThingerESP8266 thing(USERNAME, DEVICE_ID, DEVICE_CREDENTIAL);
+
+void setup() {
+  pinMode(BUILTIN_LED, OUTPUT);
+
+  thing.add_wifi(SSID, SSID_PASSWORD);
+
+  // digital pin control example (i.e. turning on/off a light, a relay, configuring a parameter, etc)
+  thing["led"] << digitalPin(BUILTIN_LED);
+
+  // resource output example (i.e. reading a sensor value)
+  thing["millis"] >> outputValue(millis());
+
+  // more details at http://docs.thinger.io/arduino/
+}
+
+void loop() {
+  thing.handle();
+}
+```
+
+Note: The `THINGER_SERVER` definition must appear before any other includes in the Sketch.
