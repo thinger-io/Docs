@@ -263,6 +263,24 @@ When using the snap package, the default config files, buckets exports, and logs
 
 ```
 
+Documentation in progress...
+
+## Configure SMTP Server
+
+It is possible to configure an SMTP Server for sending emails through the endpoints, for the sign in process, forgot password, etc. Just add another field with the following information.
+```json
+"email" : {
+    "domain" : "your_domain",
+    "type" : "smtp",
+    "smtp" : {
+      "host" : "your_host",
+      "port" : "465",
+      "username" : "your_user",
+      "password" : "your_password",
+      "secure" : true
+    }
+},
+```
 
 
 # Using the Cloud Console with your server
