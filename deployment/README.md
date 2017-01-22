@@ -1,5 +1,12 @@
 # Install on Ubuntu 16.04
 
+It is recommended to update your Ubuntu 16.04 installation before doing any other step by running this commands:
+
+```bash
+sudo apt update
+sudo apt upgrade
+``` 
+
 ## Install MongoDB
 	
 Thinger.io IoT platform requires a MongoDB server for storing some server information. So, the first step is to install a MongoDB Server in your host. The following information has been obtained from the official documentation:
