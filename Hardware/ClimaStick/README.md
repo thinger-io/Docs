@@ -44,6 +44,8 @@ it is ready to:
 #### EXENCION OF RESPONSABILITY
 - This device its commercialized by Thinger.io platform like a software development kit, so it is not subject to commerce homologation rules. The owner is liable for all injuries to third parties and damage to their properties. 
 
+
+
 ## GETTING STARTED
 #### RUNNING STOCK EXAMPLE CODE:
 > 1. Power up the board with a micro USB-B 5V supply, like a cell phone charger. 
@@ -76,7 +78,9 @@ http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx
 
 &#9888; **Flash boot mode:** If you follow "uploading firmware steps", and there is any problem to stablish the communication with the board, you can force a flash boot up keeping pressed USR button and making reset (pressing RST button).
  
-## CLIMASTICK LIBRARY
+ 
+ 
+## CLIMA_MOVE LIBRARY
 #### EASY FUNCTIONS
 Clima_move.h library is included on Thinger.io libraries. It contains all sensor integration code that you will need to read variables. next list shows all function names that retrieves real time read values:
 ```cpp
