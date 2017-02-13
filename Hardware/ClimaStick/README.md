@@ -9,7 +9,6 @@ it could be user to:
 
 ## WARNINGS
 ##### GENERAL ADVERTISEMENT
-==================
 
 -  It should be powered with a 5V and 250 to 1000mah USB power supply.
 -  This board has a low heat dissipation capacity, so it is normal that it keeps hot on high transmission processes. The temperature sensor could takes values up to 70ºC on full duplex communication process.
