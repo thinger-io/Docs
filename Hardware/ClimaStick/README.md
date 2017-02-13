@@ -23,18 +23,18 @@ it could be user to:
 -  Store in a cool, dry place. Protected from dust.
 
 #### BATTERY POWERING
->- Using BAT power header, be careful to wire up correctly, as it is showed on image below:
->
-><img src="https://github.com/jtrinc266/myThinger/blob/master/Images/i3.PNG?raw=true"   width="200" height="180" />
-> - BAT header is connected to a lithium battery charger that can manage 3.7Vdc, 500mah Li-Po / li-ion batteries charge and discharge process. 
+- Using BAT power header, be careful to wire up correctly, as it is showed on image below:
+
+<img src="https://github.com/jtrinc266/myThinger/blob/master/Images/i3.PNG?raw=true"   width="200" height="180" />
+ - BAT header is connected to a lithium battery charger that can manage 3.7Vdc, 500mah Li-Po / li-ion batteries charge and discharge process. 
 
 &#9888; if you are ussing different battery, plug it on VIN connector.
 
 &#9888; if cell voltage flows under 3.6V, an authomatic battery protection circuit will power off the system. 
 
-> - To load a battery, connect it on BAT heather and power on the ClimaStick through USB / VIN connectors. The battery charger will manage the charging voltage to increase live battery and stops charging cycle when voltage ups to 4.2Vdc.
+ - To load a battery, connect it on BAT heather and power on the ClimaStick through USB / VIN connectors. The battery charger will manage the charging voltage to increase live battery and stops charging cycle when voltage ups to 4.2Vdc.
 
-> - Never use a computer USB port to battery charging, it could damage your computer’s circuitry. 
+ - Never use a computer USB port to battery charging, it could damage your computer’s circuitry. 
 
 
 #### EXENCION OF RESPONSABILITY
@@ -51,9 +51,9 @@ it could be user to:
 
 #### START PROGRAMING
 1- Download and install the working environements:
-> - CP2102 drivers from silicon labs web site:
+ - CP2102 drivers from silicon labs web site:
 http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx
-> - Arduino IDE v1.6.13 or newer:
+ - Arduino IDE v1.6.13 or newer:
  https://www.arduino.cc/en/main/software
  
 2- Configure Arduino IDE, opening next interfaces:
