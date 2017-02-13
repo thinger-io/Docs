@@ -13,19 +13,23 @@ it could be user to:
 -  It should be powered with a 5V and 250 to 1000mah USB power supply.
 -  This board has a low heat dissipation capacity, so it is normal that it keeps hot on high transmission processes. The temperature sensor could takes values up to 70ºC on full duplex communication process.
 -  If you use the VIN power header, be careful to connect in the correct position, as it is showed on image2. Do not follow this directive could damage the protection diod.
-
+<p align="center">
 <img src="https://github.com/jtrinc266/myThinger/blob/master/Images/i1.JPG?raw=true"   width="200" height="180" />
+</p>
 -  This device is developed like a software testing platform and it is not protected to support hard weather conditions without the appropriate cover case.
 - Do not touch the components Surfaces to grab the device, it will sport the electrical contacts, producing shortcuts and wrong working. keep holding from lateral edges like in the illustration below:
-
+<p align="center">
 <img src="https://github.com/jtrinc266/myThinger/blob/master/Images/i2.PNG?raw=true"   width="200" height="300" />
+</p>
+
 - If it is necessary, clean the circuit using a non-damaging contact cleaner like Isopropyl alcohol and soft brush. 
 -  Store in a cool, dry place. Protected from dust.
 
 #### BATTERY POWERING
 - Using BAT power header, be careful to wire up correctly, as it is showed on image below:
-
+<p align="center">
 <img src="https://github.com/jtrinc266/myThinger/blob/master/Images/i3.PNG?raw=true"   width="200" height="180" />
+</p>
  - BAT header is connected to a lithium battery charger that can manage 3.7Vdc, 500mah Li-Po / li-ion batteries charge and discharge process. 
 
 &#9888; if you are ussing different battery, plug it on VIN connector.
