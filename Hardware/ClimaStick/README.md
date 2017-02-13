@@ -30,7 +30,7 @@ it could be user to:
 <p align="center">
 <img src="https://github.com/jtrinc266/myThinger/blob/master/Images/i3.PNG?raw=true"   width="200" height="180" />
 </p>
- - BAT header is connected to a lithium battery charger that can manage 3.7Vdc, 500mah Li-Po / li-ion batteries charge and discharge process. 
+- BAT header is connected to a lithium battery charger that can manage 3.7Vdc, 500mah Li-Po / li-ion batteries charge and discharge process. 
 
 &#9888; if you are ussing different battery, plug it on VIN connector.
 
