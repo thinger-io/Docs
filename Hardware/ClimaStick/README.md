@@ -2,7 +2,7 @@
 
 This board is a complete Internet of Things development kit, that integrates a full programable WiFi transmissor and all environmetal and inertial sensors you will need to create tons of connected projects easily than ever, thanks to thinger.io libraries and infraestructure. 
 
-it could be user to:
+it is ready to:
 - Meassure environmetral variables such as Temperature, relative humidity, barometric pressure or luminic radiation.
 - Take inertial datas like vibrations, linear and angular accelerations. 
 - Export all data for bucket storage or monitoricing process.
