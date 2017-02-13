@@ -10,24 +10,26 @@ it could be user to:
 ## WARNINGS
 ##### GENERAL ADVERTISEMENT
 
->-  It should be powered with a 5V and 250 to 1000mah USB power supply.
->-  This board has a low heat dissipation capacity, so it is normal that it keeps hot on high transmission processes. The temperature sensor could takes values up to 70ºC on full duplex communication process.
->-  If you use the VIN power header, be careful to connect in the correct position, as it is showed on image2. Do not follow this directive could damage the protection diod.
->
-><img src="https://github.com/jtrinc266/myThinger/blob/master/Images/i1.JPG?raw=true"   width="200" height="180" />
->-  This device is developed like a software testing platform and it is not protected to support hard weather conditions without the appropriate cover case.
->- Do not touch the components Surfaces to grab the device, it will sport the electrical contacts, producing shortcuts and wrong working. keep holding from lateral edges like in the illustration below:
->
-><img src="https://github.com/jtrinc266/myThinger/blob/master/Images/i2.PNG?raw=true"   width="200" height="300" />
->- If it is necessary, clean the circuit using a non-damaging contact cleaner like Isopropyl alcohol and soft brush. 
->-  Store in a cool, dry place. Protected from dust.
+-  It should be powered with a 5V and 250 to 1000mah USB power supply.
+-  This board has a low heat dissipation capacity, so it is normal that it keeps hot on high transmission processes. The temperature sensor could takes values up to 70ºC on full duplex communication process.
+-  If you use the VIN power header, be careful to connect in the correct position, as it is showed on image2. Do not follow this directive could damage the protection diod.
+
+<img src="https://github.com/jtrinc266/myThinger/blob/master/Images/i1.JPG?raw=true"   width="200" height="180" />
+-  This device is developed like a software testing platform and it is not protected to support hard weather conditions without the appropriate cover case.
+- Do not touch the components Surfaces to grab the device, it will sport the electrical contacts, producing shortcuts and wrong working. keep holding from lateral edges like in the illustration below:
+
+<img src="https://github.com/jtrinc266/myThinger/blob/master/Images/i2.PNG?raw=true"   width="200" height="300" />
+- If it is necessary, clean the circuit using a non-damaging contact cleaner like Isopropyl alcohol and soft brush. 
+-  Store in a cool, dry place. Protected from dust.
 
 #### BATTERY POWERING
 >- Using BAT power header, be careful to wire up correctly, as it is showed on image below:
 >
 ><img src="https://github.com/jtrinc266/myThinger/blob/master/Images/i3.PNG?raw=true"   width="200" height="180" />
 > - BAT header is connected to a lithium battery charger that can manage 3.7Vdc, 500mah Li-Po / li-ion batteries charge and discharge process. 
- &#9888; if you are ussing different battery, plug it on VIN connector.
+
+&#9888; if you are ussing different battery, plug it on VIN connector.
+
 &#9888; if cell voltage flows under 3.6V, an authomatic battery protection circuit will power off the system. 
 
 > - To load a battery, connect it on BAT heather and power on the ClimaStick through USB / VIN connectors. The battery charger will manage the charging voltage to increase live battery and stops charging cycle when voltage ups to 4.2Vdc.
@@ -36,7 +38,7 @@ it could be user to:
 
 
 #### EXENCION OF RESPONSABILITY
-> - This device its commercialized by Thinger.io platform like a software development kit, so it is not subject to commerce homologation rules. The owner is liable for all injuries to third parties and damage to their properties. 
+- This device its commercialized by Thinger.io platform like a software development kit, so it is not subject to commerce homologation rules. The owner is liable for all injuries to third parties and damage to their properties. 
 
 ## GETTING STARTED
 #### RUNNING STOCK EXAMPLE CODE:
@@ -63,12 +65,12 @@ http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx
 6. Now you can start developing with Thinger.io ClimaStic. Check out the source code examples opening Arduino IDE: File>Examples>Thinger.io>ClimaStick Basic
 
 #### UPLOADING FIRMWARE 
-> - Be sure that your USB wire allows data transmission.
+- Be sure that your USB wire allows data transmission.
 - Verify that your operative system recognised the CP2102 serial port interface.
 - Check out the selected serial COM number on Arduino IDE: Tools>port
 - On Arduino IDE main menu, press &#9658; button to start compiling and flashing de firmware.
 
-> &#9888; **Flash boot mode:** If you follow "uploading firmware steps", and there is any problem to stablish the communication with the board, you can force a flash boot up keeping pressed USR button and making reset (pressing RST button).
+&#9888; **Flash boot mode:** If you follow "uploading firmware steps", and there is any problem to stablish the communication with the board, you can force a flash boot up keeping pressed USR button and making reset (pressing RST button).
  
 ## CLIMASTICK LIBRARY
 #### EASY FUNCTIONS
@@ -83,12 +85,12 @@ Clima_move.h library is included on Thinger.io libraries. It contains all sensor
  float getBatteryLoad();
 ```
 After execute this functions, the retrieve variables will be ready to work with readed values. Next list shows all this variables:
-> - Accelerometer: ax, ay, az.
-> - Gyroscope: gx, gy, gz.
-> - Magnetometer:  mx, my, mz.
-> - Compass: heading, headingDegrees.
-> - Environmental: temperature, humidity, altitude, pressure, vissibleSpectum, IRSpectum;
-> - Time: hour, minute, second
+ - Accelerometer: ax, ay, az.
+ - Gyroscope: gx, gy, gz.
+ - Magnetometer:  mx, my, mz.
+ - Compass: heading, headingDegrees.
+ - Environmental: temperature, humidity, altitude, pressure, vissibleSpectum, IRSpectum;
+ - Time: hour, minute, second
  
 #### EMBEDED RGB LED
 
