@@ -92,7 +92,7 @@ Clima_move.h library is included on Thinger.io libraries. It contains all sensor
  float getBatteryVoltage();
  float getBatteryLoad();
 ```
-After execute this functions, the retrieve variables will be ready to work with readed values. Next list shows all this variables:
+After executing this functions, the retrieve variables will be ready to work with readed values. Next list shows all this variables:
  - Accelerometer: ax, ay, az.
  - Gyroscope: gx, gy, gz.
  - Magnetometer:  mx, my, mz.
@@ -109,7 +109,7 @@ After execute this functions, the retrieve variables will be ready to work with 
 ```
 
 #### ENVIRONMENTAL SAMPLING PROTOCOL
-Due to the low power dissipation capacity, climaSticks gets hot after a few seconds of working, so it is not possible to make high-rate real time temperature reads. For reading temperature process, it is necessary to hibernate the processor, and wait a few minutes before to execute a high precision temperature read. This function is available using ESP.deepsleep(<-milliseconds->). during specified time period, the running process will be stopped,  and processor will not respond to any inquiry or WiFi transmissions. When the countdown is over, the device make a hard reset and the process will be start from new.
+Due to low power dissipation capacity, climaSticks gets hot after a few seconds of working, so it is not possible to make high-rate real time temperature reads. For reading temperature process, it is necessary to hibernate the processor, and wait a few minutes before to executing a high precision temperature read. This function is available using ESP.deepsleep(<-milliseconds->). during specified time period, the running process will be stopped,  and processor will not respond to any inquiry or WiFi transmissions. When the countdown is over, the device will  make a hard reset and the process will start from new.
 
 
 ```cpp
