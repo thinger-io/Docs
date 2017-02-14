@@ -1,6 +1,6 @@
 # Thinger.io ClimaStick Quick Start Gide
 
-This board is a complete Internet of Things development kit, that integrates a full programable WiFi transmissor and all environmetal and inertial sensors you will need to create tons of connected projects easily than ever, thanks to thinger.io libraries and infraestructure. 
+This board is a complete Internet of Things development kit, that integrates a full programable WiFi transmissor and all environmetal and inertial sensors you will need to create a lot of connected projects easily than ever, thanks to thinger.io libraries and infraestructure. 
 
 it is ready to:
 - Meassure environmetral variables such as Temperature, relative humidity, barometric pressure or luminic radiation.
@@ -12,7 +12,7 @@ it is ready to:
 
 -  It should be powered with a 5V and 250 to 1000mah USB power supply.
 -  This board has a low heat dissipation capacity, so it is normal that it keeps hot on high transmission processes. The temperature sensor could takes values up to 70ºC on full duplex communication process.
--  If you use the VIN power header, be careful to connect in the correct position, as it is showed on image2. Do not follow this directive could damage the protection diod.
+-  If you use the VIN power header, be careful to connect it in the correct position, as it is showed on image2. Not following this directive could damage the protection diod.
 <p align="center">
 <img src="https://github.com/jtrinc266/myThinger/blob/master/Images/i1.JPG?raw=true"   width="200" height="180" />
 </p>
@@ -22,7 +22,7 @@ it is ready to:
 <img src="https://github.com/jtrinc266/myThinger/blob/master/Images/i2.PNG?raw=true"   width="200" height="300" />
 </p>
 
-- If it is necessary, clean the circuit using a non-damaging contact cleaner like Isopropyl alcohol and soft brush. 
+- If necessary, clean the circuit using a non-damaging contact cleaner like Isopropyl alcohol and soft brush. 
 -  Store in a cool, dry place. Protected from dust.
 
 #### BATTERY POWERING
@@ -32,13 +32,13 @@ it is ready to:
 </p>
 - BAT header is connected to a lithium battery charger that can manage 3.7Vdc, 500mah Li-Po / li-ion batteries charge and discharge process. 
 
-&#9888; if you are ussing different battery, plug it on VIN connector.
+&#9888; if you are ussing a different battery, plug it on VIN connector.
 
 &#9888; if cell voltage flows under 3.6V, an authomatic battery protection circuit will power off the system. 
 
- - To load a battery, connect it on BAT heather and power on the ClimaStick through USB / VIN connectors. The battery charger will manage the charging voltage to increase live battery and stops charging cycle when voltage ups to 4.2Vdc.
+ - To load a battery, connect it on BAT heather and power on the ClimaStick through USB / VIN connectors. The battery charger will manage the charging voltage to increase life battery and stops charging cycle when voltage ups to 4.2Vdc.
 
- - Never use a computer USB port to battery charging, it could damage your computer’s circuitry. 
+ - Never use a computer USB port to charge batteries, it could damage your computer’s circuitry. 
 
 
 #### EXENCION OF RESPONSABILITY
