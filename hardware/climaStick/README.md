@@ -8,7 +8,7 @@ it is ready to:
 - Export all data for bucket storage or monitoricing process.
 
 <p align="center">
-<img src="assets/i0.PNG?raw=true"   width="600" height="400" />
+<img src="assets/i0.PNG?raw=true"   width="600" height="300" />
 </p>
 
 
