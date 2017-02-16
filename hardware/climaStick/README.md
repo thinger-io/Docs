@@ -7,43 +7,9 @@ it is ready to:
 - Take inertial datas like vibrations, linear and angular accelerations. 
 - Export all data for bucket storage or monitoricing process.
 
-## WARNINGS
-##### GENERAL ADVERTISEMENT
-
--  It should be powered with a 5V and 250 to 1000mah USB power supply.
--  This board has a low heat dissipation capacity, so it is normal that it keeps hot on high transmission processes. The temperature sensor could takes values up to 70ºC on full duplex communication process.
--  If you use the VIN power header, be careful to connect it in the correct position, as it is showed on image2. Not following this directive could damage the protection diod.
 <p align="center">
-<img src="assets/i1.PNG?raw=true"   width="200" height="180" />
+<img src="assets/i0.PNG?raw=true"   width="600" height="400" />
 </p>
--  This device is developed like a software testing platform and it is not protected to support hard weather conditions without the appropriate cover case.
-- Do not touch the components Surfaces to grab the device, it will sport the electrical contacts, producing shortcuts and wrong working. keep holding from lateral edges like in the illustration below:
-<p align="center">
-<img src="assets/i2.PNG?raw=true"   width="200" height="300" />
-</p>
-
-- If necessary, clean the circuit using a non-damaging contact cleaner like Isopropyl alcohol and soft brush. 
--  Store in a cool, dry place. Protected from dust.
-
-#### BATTERY POWERING
-- Using BAT power header, be careful to wire up correctly, as it is showed on image below:
-<p align="center">
-<img src="assets/i3.PNG?raw=true"   width="200" height="180" />
-</p>
-- BAT header is connected to a lithium battery charger that can manage 3.7Vdc, 500mah Li-Po / li-ion batteries charge and discharge process. 
-
-&#9888; if you are ussing a different battery, plug it on VIN connector.
-
-&#9888; if cell voltage flows under 3.6V, an authomatic battery protection circuit will power off the system. 
-
- - To load a battery, connect it on BAT heather and power on the ClimaStick through USB / VIN connectors. The battery charger will manage the charging voltage to increase life battery and stops charging cycle when voltage ups to 4.2Vdc.
-
- - Never use a computer USB port to charge batteries, it could damage your computer’s circuitry. 
-
-
-#### EXENCION OF RESPONSABILITY
-- This device its commercialized by Thinger.io platform like a software development kit, so it is not subject to commerce homologation rules. The owner is liable for all injuries to third parties and damage to their properties. 
-
 
 
 ## GETTING STARTED
@@ -143,3 +109,40 @@ void loop(){
 
 > - During the deepSleep mode, it is not possible to flash code. To change the program you will need to make a forced flash mode boot up.
 > - Note that, when the processor makes a hard reset, all dynamic variables will lost its values. 
+
+## OTHER CONSIDERATIONS
+##### GENERAL ADVERTISEMENT
+
+-  It should be powered with a 5V and 250 to 1000mah USB power supply.
+-  This board has a low heat dissipation capacity, so it is normal that it keeps hot on high transmission processes. The temperature sensor could takes values up to 70ºC on full duplex communication process.
+-  If you use the VIN power header, be careful to connect it in the correct position, as it is showed on image2. Not following this directive could damage the protection diod.
+<p align="center">
+<img src="assets/i1.PNG?raw=true"   width="200" height="180" />
+</p>
+-  This device is developed like a software testing platform and it is not protected to support hard weather conditions without the appropriate cover case.
+- Do not touch the components Surfaces to grab the device, it will sport the electrical contacts, producing shortcuts and wrong working. keep holding from lateral edges like in the illustration below:
+<p align="center">
+<img src="assets/i2.PNG?raw=true"   width="200" height="300" />
+</p>
+
+- If necessary, clean the circuit using a non-damaging contact cleaner like Isopropyl alcohol and soft brush. 
+-  Store in a cool, dry place. Protected from dust.
+
+#### BATTERY POWERING
+- Using BAT power header, be careful to wire up correctly, as it is showed on image below:
+<p align="center">
+<img src="assets/i3.PNG?raw=true"   width="200" height="180" />
+</p>
+- BAT header is connected to a lithium battery charger that can manage 3.7Vdc, 500mah Li-Po / li-ion batteries charge and discharge process. 
+
+&#9888; if you are ussing a different battery, plug it on VIN connector.
+
+&#9888; if cell voltage flows under 3.6V, an authomatic battery protection circuit will power off the system. 
+
+ - To load a battery, connect it on BAT heather and power on the ClimaStick through USB / VIN connectors. The battery charger will manage the charging voltage to increase life battery and stops charging cycle when voltage ups to 4.2Vdc.
+
+ - Never use a computer USB port to charge batteries, it could damage your computer’s circuitry. 
+
+
+#### EXENCION OF RESPONSABILITY
+- This device its commercialized by Thinger.io platform like a software development kit, so it is not subject to commerce homologation rules. The owner is liable for all injuries to third parties and damage to their properties. 
