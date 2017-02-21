@@ -1,10 +1,10 @@
 # Thinger.io ClimaStick Quick Start Gide
 
-This board is a complete Internet of Things development kit, that integrates a full programable WiFi transmissor and all environmetal and inertial sensors you will need to create a lot of connected projects easily than ever, thanks to thinger.io libraries and infraestructure. 
+This board is a complete Internet of Things development kit, that integrates WiFi connectivity along with a set of powerful sensors to provide environmental and motion sensing. This way, it is possible to create several connected projects easily. It is fully compatible with the Thinger.io cloud infrastructure, and provides easy to use libraries that can be used in the Arduino IDE. 
 
 it is ready to:
 - Meassure environmetral variables such as Temperature, relative humidity, barometric pressure or luminic radiation.
-- Take inertial datas like vibrations, linear and angular accelerations. 
+- Take inertial measurements like vibrations, accelerations, angles and compass.
 - Export all data for bucket storage or monitoricing process.
 
 <p align="center">
@@ -29,12 +29,22 @@ http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx
  https://www.arduino.cc/en/main/software
  
 2- Configure Arduino IDE, opening next interfaces:
-  > 1. On File>Preferences>Additional_Boards_URL_Manager to include the "ESP8266 boards manager link" that you can retrieve from Github community project: https://github.com/esp8266/Arduino
+  > 1. On File > Preferences > Additional_Boards_URL_Manager to include the "ESP8266 boards manager link" that you can retrieve from Github community project: https://github.com/esp8266/Arduino
+<p align="center">
+<img src="assets/i4.PNG?raw=true"   width="900" height="900" />
+</p>
 2. On Tools>Board>Board_manager and look for ESP8266 community board firmware, and install the last version.
-3. On Tools>Board, Select **NODE_MCU V1.0 (ESP-12E)** board
-4. On Edit>include_libraries>libraries_manager, look for the last version of **Thinger.io** libraries. 
-5. Connect the ClimaStick to your computer and select its serial communication port number on: Tools>port
-6. Now you can start developing with Thinger.io ClimaStic. Check out the source code examples opening Arduino IDE: File>Examples>Thinger.io>ClimaStick Basic
+<p align="center">
+<img src="assets/i5.PNG?raw=true"   width="900" height="900" />
+</p>
+3. Now you can program almost any ESP8266 directly from the Arduino IDE. From the Tools > Boards you should see now the new ESP8266 boards installed. To program the Thinger.io ClimaStick you should select **NODE_MCU V1.0 (ESP-12E Module)**.
+<p align="center">
+<img src="assets/i6.PNG?raw=true"   width="900" height="900" />
+</p>
+4. On Edit > include_libraries > libraries_manager, look for the last version of **Thinger.io** libraries. In this step we are dowloading all thinger.io libraries sourcecode, and examples.
+5. Repeat step 4, to download the ClimaStick libraries and example codes.
+6. Connect the ClimaStick to your computer and select its serial communication port number on: Tools > port
+7. Now you can start developing with Thinger.io ClimaStic! Check out the source code examples opening Arduino IDE: File > Examples > Thinger.io > ClimaStick Basic
 
 #### UPLOADING FIRMWARE 
 - Be sure that your USB wire allows data transmission.
