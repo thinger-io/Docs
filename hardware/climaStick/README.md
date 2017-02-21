@@ -31,15 +31,15 @@ http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx
 2- Configure Arduino IDE, opening next interfaces:
   > 1. On File > Preferences > Additional_Boards_URL_Manager to include the "ESP8266 boards manager link" that you can retrieve from Github community project: https://github.com/esp8266/Arduino
 <p align="center">
-<img src="assets/i4.PNG?raw=true"   width="900" height="900" />
+<img src="assets/i4.PNG?raw=true"   width="800" height="600" />
 </p>
 2. On Tools>Board>Board_manager and look for ESP8266 community board firmware, and install the last version.
 <p align="center">
-<img src="assets/i5.PNG?raw=true"   width="900" height="900" />
+<img src="assets/i5.PNG?raw=true"   width="800" height="600" />
 </p>
 3. Now you can program almost any ESP8266 directly from the Arduino IDE. From the Tools > Boards you should see now the new ESP8266 boards installed. To program the Thinger.io ClimaStick you should select **NODE_MCU V1.0 (ESP-12E Module)**.
 <p align="center">
-<img src="assets/i6.PNG?raw=true"   width="900" height="900" />
+<img src="assets/i6.png?raw=true"   width="800" height="700" />
 </p>
 4. On Edit > include_libraries > libraries_manager, look for the last version of **Thinger.io** libraries. In this step we are dowloading all thinger.io libraries sourcecode, and examples.
 5. Repeat step 4, to download the ClimaStick libraries and example codes.
