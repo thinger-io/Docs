@@ -31,15 +31,15 @@ http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx
 2- Configure Arduino IDE, opening next interfaces:
   > 1. On File > Preferences > Additional_Boards_URL_Manager to include the "ESP8266 boards manager link" that you can retrieve from Github community project: https://github.com/esp8266/Arduino
 <p align="center">
-<img src="assets/i4.PNG?raw=true"   width="700" height="500" />
+<img src="assets/i4.PNG?raw=true"   width="600" height="500" />
 </p>
 2. On Tools>Board>Board_manager and look for ESP8266 community board firmware, and install the last version.
 <p align="center">
-<img src="assets/i5.PNG?raw=true"   width="700" height="500" />
+<img src="assets/i5.PNG?raw=true"   width="600" height="400" />
 </p>
 3. Now you can program almost any ESP8266 directly from the Arduino IDE. From the Tools > Boards you should see now the new ESP8266 boards installed. To program the Thinger.io ClimaStick you should select **NODE_MCU V1.0 (ESP-12E Module)**.
 <p align="center">
-<img src="assets/i6.png?raw=true"   width="700" height="500" />
+<img src="assets/i6.png?raw=true"   width="600" height="550" />
 </p>
 4. On Edit > include_libraries > libraries_manager, look for the last version of **Thinger.io** libraries. In this step we are dowloading all thinger.io libraries sourcecode, and examples.
 5. Repeat step 4, to download the ClimaStick libraries and example codes.
@@ -47,13 +47,19 @@ http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx
 7. Now you can start developing with Thinger.io ClimaStic! Check out the source code examples opening Arduino IDE: File > Examples > Thinger.io > ClimaStick Basic
 
 #### UPLOADING FIRMWARE 
+**Before programming check out process**
 - Be sure that your USB wire allows data transmission.
 - Verify that your operative system recognised the CP2102 serial port interface.
 - Check out the selected serial COM number on Arduino IDE: Tools>port
-- On Arduino IDE main menu, press &#9658; button to start compiling and flashing de firmware.
 
-&#9888; **Flash boot mode:** If you follow "uploading firmware steps", and there is any problem to stablish the communication with the board, you can force a flash boot up keeping pressed USR button and making reset (pressing RST button).
+- &#9888; **Flash boot mode:** If you follow "uploading firmware steps", and there is any problem to stablish the communication with the board, you can force a flash boot up keeping pressed USR button and making reset (pressing RST button).
  
+**Running the example project**
+ Now you are ready to open an example code and upload it to your ClimaStick. Open File > Examples > ClimaStick > QuickStart file, it contains the following code, that will show you all routine names that we hace create in the library:
+ 
+ ```cpp
+ QuickStart example
+ ```
  
  
 ## CLIMA_MOVE LIBRARY
