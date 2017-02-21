@@ -55,7 +55,8 @@ http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx
 - &#9888; **Flash boot mode:** If you follow "uploading firmware steps", and there is any problem to stablish the communication with the board, you can force a flash boot up keeping pressed USR button and making reset (pressing RST button).
  
 **Running the example project**
- Now you are ready to open an example code and upload it to your ClimaStick. Open File > Examples > ClimaStick > QuickStart file, it contains the following code, that will show you all routine names that we hace create in the library:
+
+Now you are ready to open an example code and upload it to your ClimaStick. Open File > Examples > ClimaStick > QuickStart file, it contains the following code, that will show you all routine names that we hace create in the library:
  
  ```cpp
  QuickStart example
