@@ -54,7 +54,7 @@ http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx
 
 - &#9888; **Flash boot mode:** If you follow "uploading firmware steps", and there is any problem to stablish the communication with the board, you can force a flash boot up keeping pressed USR button and making reset (pressing RST button).
  
-**Running the example project**
+**Running the example code**
 
 Now you are ready to open an example code and upload it to your ClimaStick. On Arduino Ide, File > Examples > ClimaStick you will find some examples that explains most usefull routines from ClimaStick.h, divided on diferente subjects like IMU, Battery, CLima and RGB led. The ClimaStick_Auto example code, is a little sketch that implements all ClimaStick.h functions and create Thinger resources to update all data to the server:
  
@@ -85,9 +85,9 @@ void loop() {
  
 ## CLIMA_MOVE LIBRARY
 #### EASY FUNCTIONS
-Clima_move.h library is included on Thinger.io libraries. It contains all sensor integration code that you will need to read variables. next list shows all function names that retrieves real time read values:
+ClimaStick.h contains some routines designed to simplify the programing process. This functions retrieve the reads from sensors and save it into its pertinent struct, making easier to work with all the ClimaStic features.
 ```cpp
- void getMotion();
+ void getMotion(); 
  void getCompass();
  void getMagnet();
  void getClima();
@@ -95,14 +95,37 @@ Clima_move.h library is included on Thinger.io libraries. It contains all sensor
  float getBatteryVoltage();
  float getBatteryLoad();
 ```
-After executing this functions, the retrieve variables will be ready to work with readed values. Next list shows all this variables:
- - Accelerometer: ax, ay, az.
- - Gyroscope: gx, gy, gz.
- - Magnetometer:  mx, my, mz.
- - Compass: heading, headingDegrees.
- - Environmental: temperature, humidity, altitude, pressure, vissibleSpectum, IRSpectum;
- - Time: hour, minute, second
+#### STRUCTS
+After executing this functions, the retrieve variables will be ready to work with readed values. Next examples shows how can you use all this variables:
+```cpp
+//Accelerometer:
+    float ax = accel.x; 
+    float ay = accel.y;
+    float az = accel.z;
  
+ //Gyroscope:
+    float gx = gyro.x;
+    float gy = gyro.y;
+    float gz = gyro.z;
+ 
+ //Magnetometer:
+    mx = magnet.x;
+    my = magnet.y;
+    mz = magnet.z;  
+ 
+ //Compass:
+    int heading = compass.heading;
+    int headingDegrees = compass.headingDegrees;
+ 
+ //Environmental:
+    float temperature = clima.temperature;
+    float humidity = clima.humidity;
+    float pressure = clima.pressure;
+    float altitude = clima.altitude;
+    float luminosity = clima.luminosity;
+    float lux = clima.lux;
+ 
+ ```
 #### EMBEDED RGB LED
 
 
