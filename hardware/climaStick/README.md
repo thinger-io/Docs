@@ -56,7 +56,7 @@ http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx
  
 **Running the example project**
 
-Now you are ready to open an example code and upload it to your ClimaStick. On Arduino Ide, File > Examples > ClimaStick you will find some examples that explains most usefull routines from ClimaStick.h, divided on diferente subjects like IMU, Battery, CLima and RGB led. The ClimaStick_Auto example code, is a little sketch that implements all ClimaStick.h functions and create Thinger resources to update all datas to the server:
+Now you are ready to open an example code and upload it to your ClimaStick. On Arduino Ide, File > Examples > ClimaStick you will find some examples that explains most usefull routines from ClimaStick.h, divided on diferente subjects like IMU, Battery, CLima and RGB led. The ClimaStick_Auto example code, is a little sketch that implements all ClimaStick.h functions and create Thinger resources to update all data to the server:
  
  ```cpp
 #define _batterySwProtection_ //This parameter enables the auto-sleep mode when battery voltage flows down 3.65V
