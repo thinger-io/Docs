@@ -99,23 +99,26 @@ ClimaStick.h contains some routines designed to simplify the programing process.
 After executing this functions, the retrieve variables will be ready to work with readed values. Next examples shows how can you use all this variables:
 ```cpp
 //Accelerometer:
-    float ax = accel.x; 
-    float ay = accel.y;
-    float az = accel.z;
+    uint16_t ax = accel.x; 
+    uint16_t ay = accel.y;
+    uint16_t az = accel.z;
  
  //Gyroscope:
-    float gx = gyro.x;
-    float gy = gyro.y;
-    float gz = gyro.z;
+    uint16_t gx = gyro.x;
+    uint16_t gy = gyro.y;
+    uint16_t gz = gyro.z;
  
  //Magnetometer:
-    mx = magnet.x;
-    my = magnet.y;
-    mz = magnet.z;  
+    float mx = magnet.x;
+    float my = magnet.y;
+    float mz = magnet.z; 
+    float normaliced_x = magnet.nx;
+    float normaliced_y = magnet.ny;
+    float normaliced_z = magnet.nz; 
  
  //Compass:
-    int heading = compass.heading;
-    int headingDegrees = compass.headingDegrees;
+    float heading = compass.heading;
+    float headingDegrees = compass.headingDegrees;
  
  //Environmental:
     float temperature = clima.temperature;
