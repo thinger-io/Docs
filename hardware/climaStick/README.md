@@ -56,10 +56,30 @@ http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx
  
 **Running the example project**
 
-Now you are ready to open an example code and upload it to your ClimaStick. Open File > Examples > ClimaStick > QuickStart file, it contains the following code, that will show you all routine names that we hace create in the library:
+Now you are ready to open an example code and upload it to your ClimaStick. On Arduino Ide, File > Examples > ClimaStick you will find some examples that explains most usefull routines from ClimaStick.h, divided on diferente subjects like IMU, Battery, CLima and RGB led. The ClimaStick_Auto example code, is a little sketch that implements all ClimaStick.h functions and create Thinger resources to update all datas to the server:
  
  ```cpp
- QuickStart example
+#define _batterySwProtection_ //This parameter enables the auto-sleep mode when battery voltage flows down 3.65V
+#include <ClimaStick_Auto.h>
+ 
+#define USERNAME "your_user_name"
+#define DEVICE_ID "your_device_id"
+#define DEVICE_CREDENTIAL "your_device_credential"
+
+#define SSID "your_wifi_ssid"
+#define SSID_PASSWORD "your_wifi_ssid_password"
+
+ThingerESP8266 thing(USERNAME, DEVICE_ID, DEVICE_CREDENTIAL);
+ 
+void setup() {
+  thing.add_wifi(SSID, SSID_PASSWORD);
+  init_resources(thing);  
+  
+}
+
+void loop() { 
+  thing.handle(); 
+}
  ```
  
  
