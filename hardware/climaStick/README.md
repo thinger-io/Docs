@@ -1,49 +1,15 @@
 # Thinger.io ClimaStick Quick Start Gide
 
-This board is a complete Internet of Things development kit, that integrates a full programable WiFi transmissor and all environmetal and inertial sensors you will need to create a lot of connected projects easily than ever, thanks to thinger.io libraries and infraestructure. 
+This board is a complete Internet of Things development kit, that integrates WiFi connectivity along with a set of powerful sensors to provide environmental and motion sensing. This way, it is possible to create several connected projects easily. It is fully compatible with the Thinger.io cloud infrastructure, and provides easy to use libraries that can be used in the Arduino IDE. 
 
 it is ready to:
 - Meassure environmetral variables such as Temperature, relative humidity, barometric pressure or luminic radiation.
-- Take inertial datas like vibrations, linear and angular accelerations. 
+- Take inertial measurements like vibrations, accelerations, angles and compass.
 - Export all data for bucket storage or monitoricing process.
 
-## WARNINGS
-##### GENERAL ADVERTISEMENT
-
--  It should be powered with a 5V and 250 to 1000mah USB power supply.
--  This board has a low heat dissipation capacity, so it is normal that it keeps hot on high transmission processes. The temperature sensor could takes values up to 70ºC on full duplex communication process.
--  If you use the VIN power header, be careful to connect it in the correct position, as it is showed on image2. Not following this directive could damage the protection diod.
 <p align="center">
-<img src="assets/i1.PNG?raw=true"   width="200" height="180" />
+<img src="assets/i0.PNG?raw=true"   width="600" height="350" />
 </p>
--  This device is developed like a software testing platform and it is not protected to support hard weather conditions without the appropriate cover case.
-- Do not touch the components Surfaces to grab the device, it will sport the electrical contacts, producing shortcuts and wrong working. keep holding from lateral edges like in the illustration below:
-<p align="center">
-<img src="assets/i2.PNG?raw=true"   width="200" height="300" />
-</p>
-
-- If necessary, clean the circuit using a non-damaging contact cleaner like Isopropyl alcohol and soft brush. 
--  Store in a cool, dry place. Protected from dust.
-
-#### BATTERY POWERING
-- Using BAT power header, be careful to wire up correctly, as it is showed on image below:
-<p align="center">
-<img src="assets/i3.PNG?raw=true"   width="200" height="180" />
-</p>
-- BAT header is connected to a lithium battery charger that can manage 3.7Vdc, 500mah Li-Po / li-ion batteries charge and discharge process. 
-
-&#9888; if you are ussing a different battery, plug it on VIN connector.
-
-&#9888; if cell voltage flows under 3.6V, an authomatic battery protection circuit will power off the system. 
-
- - To load a battery, connect it on BAT heather and power on the ClimaStick through USB / VIN connectors. The battery charger will manage the charging voltage to increase life battery and stops charging cycle when voltage ups to 4.2Vdc.
-
- - Never use a computer USB port to charge batteries, it could damage your computer’s circuitry. 
-
-
-#### EXENCION OF RESPONSABILITY
-- This device its commercialized by Thinger.io platform like a software development kit, so it is not subject to commerce homologation rules. The owner is liable for all injuries to third parties and damage to their properties. 
-
 
 
 ## GETTING STARTED
@@ -63,43 +29,106 @@ http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx
  https://www.arduino.cc/en/main/software
  
 2- Configure Arduino IDE, opening next interfaces:
-  > 1. On File>Preferences>Additional_Boards_URL_Manager to include the "ESP8266 boards manager link" that you can retrieve from Github community project: https://github.com/esp8266/Arduino
+  > 1. On File > Preferences > Additional_Boards_URL_Manager to include the "ESP8266 boards manager link" that you can retrieve from Github community project: https://github.com/esp8266/Arduino
+<p align="center">
+<img src="assets/i4.PNG?raw=true"   width="600" height="500" />
+</p>
 2. On Tools>Board>Board_manager and look for ESP8266 community board firmware, and install the last version.
-3. On Tools>Board, Select **NODE_MCU V1.0 (ESP-12E)** board
-4. On Edit>include_libraries>libraries_manager, look for the last version of **Thinger.io** libraries. 
-5. Connect the ClimaStick to your computer and select its serial communication port number on: Tools>port
-6. Now you can start developing with Thinger.io ClimaStic. Check out the source code examples opening Arduino IDE: File>Examples>Thinger.io>ClimaStick Basic
+<p align="center">
+<img src="assets/i5.PNG?raw=true"   width="600" height="400" />
+</p>
+3. Now you can program almost any ESP8266 directly from the Arduino IDE. From the Tools > Boards you should see now the new ESP8266 boards installed. To program the Thinger.io ClimaStick you should select **NODE_MCU V1.0 (ESP-12E Module)**.
+<p align="center">
+<img src="assets/i6.png?raw=true"   width="600" height="550" />
+</p>
+4. On Edit > include_libraries > libraries_manager, look for the last version of **Thinger.io** libraries. In this step we are dowloading all thinger.io libraries sourcecode, and examples.
+5. Repeat step 4, to download the ClimaStick libraries and example codes.
+6. Connect the ClimaStick to your computer and select its serial communication port number on: Tools > port
+7. Now you can start developing with Thinger.io ClimaStic! Check out the source code examples opening Arduino IDE: File > Examples > Thinger.io > ClimaStick Basic
 
 #### UPLOADING FIRMWARE 
+**Before programming check out process**
 - Be sure that your USB wire allows data transmission.
 - Verify that your operative system recognised the CP2102 serial port interface.
 - Check out the selected serial COM number on Arduino IDE: Tools>port
-- On Arduino IDE main menu, press &#9658; button to start compiling and flashing de firmware.
 
-&#9888; **Flash boot mode:** If you follow "uploading firmware steps", and there is any problem to stablish the communication with the board, you can force a flash boot up keeping pressed USR button and making reset (pressing RST button).
+- &#9888; **Flash boot mode:** If you follow "uploading firmware steps", and there is any problem to stablish the communication with the board, you can force a flash boot up keeping pressed USR button and making reset (pressing RST button).
  
+**Running the example code**
+
+Now you are ready to open an example code and upload it to your ClimaStick. On Arduino Ide, File > Examples > ClimaStick you will find some examples that explains most usefull routines from ClimaStick.h, divided on diferente subjects like IMU, Battery, CLima and RGB led. The ClimaStick_Auto example code, is a little sketch that implements all ClimaStick.h functions and create Thinger resources to update all data to the server:
+ 
+ ```cpp
+#define _batterySwProtection_ //This parameter enables the auto-sleep mode when battery voltage flows down 3.65V
+#include <ClimaStick_Auto.h>
+ 
+#define USERNAME "your_user_name"
+#define DEVICE_ID "your_device_id"
+#define DEVICE_CREDENTIAL "your_device_credential"
+
+#define SSID "your_wifi_ssid"
+#define SSID_PASSWORD "your_wifi_ssid_password"
+
+ThingerESP8266 thing(USERNAME, DEVICE_ID, DEVICE_CREDENTIAL);
+ 
+void setup() {
+  thing.add_wifi(SSID, SSID_PASSWORD);
+  init_resources(thing);  
+  
+}
+
+void loop() { 
+  thing.handle(); 
+}
+ ```
  
  
 ## CLIMA_MOVE LIBRARY
 #### EASY FUNCTIONS
-Clima_move.h library is included on Thinger.io libraries. It contains all sensor integration code that you will need to read variables. next list shows all function names that retrieves real time read values:
+ClimaStick.h contains some routines designed to simplify the programing process. This functions retrieve the reads from sensors and save it into its pertinent struct, making easier to work with all the ClimaStic features.
 ```cpp
- void getMotion();
- void getCompass();
- void getMagnet();
- void getClima();
- void getTime();
- float getBatteryVoltage();
- float getBatteryLoad();
+ void getMotion();  //refresh accel and gyro variables
+ void getCompass(); //refresh compass variables
+ void getMagnet();  //refres  magnet variables
+ void getClima();   //fill all climatologic variables from clima struct
+ void getTime();    //starts NTP client and refresh time variables
+ float getBatteryVoltage(); //returns main voltage into a float value
+ float getBatteryLoad();    //returns remain battery load porcentage
 ```
-After executing this functions, the retrieve variables will be ready to work with readed values. Next list shows all this variables:
- - Accelerometer: ax, ay, az.
- - Gyroscope: gx, gy, gz.
- - Magnetometer:  mx, my, mz.
- - Compass: heading, headingDegrees.
- - Environmental: temperature, humidity, altitude, pressure, vissibleSpectum, IRSpectum;
- - Time: hour, minute, second
+#### STRUCTS
+After executing this functions, the retrieve variables will be ready to work with readed values. Next examples shows how can you use all this variables:
+```cpp
+//Accelerometer:
+    uint16_t ax = accel.x; 
+    uint16_t ay = accel.y;
+    uint16_t az = accel.z;
  
+ //Gyroscope:
+    uint16_t gx = gyro.x;
+    uint16_t gy = gyro.y;
+    uint16_t gz = gyro.z;
+ 
+ //Magnetometer:
+    float mx = magnet.x;
+    float my = magnet.y;
+    float mz = magnet.z; 
+    float normaliced_x = magnet.nx;
+    float normaliced_y = magnet.ny;
+    float normaliced_z = magnet.nz; 
+ 
+ //Compass:
+    float heading = compass.heading;
+    float headingDegrees = compass.headingDegrees;
+ 
+ //Environmental:
+    float temperature = clima.temperature;
+    float humidity = clima.humidity;
+    float pressure = clima.pressure;
+    float altitude = clima.altitude;
+    float luminosity = clima.luminosity;
+    float lux = clima.lux;
+ 
+ ```
 #### EMBEDED RGB LED
 
 
@@ -143,3 +172,40 @@ void loop(){
 
 > - During the deepSleep mode, it is not possible to flash code. To change the program you will need to make a forced flash mode boot up.
 > - Note that, when the processor makes a hard reset, all dynamic variables will lost its values. 
+
+## OTHER CONSIDERATIONS
+##### GENERAL ADVERTISEMENT
+
+-  It should be powered with a 5V and 250 to 1000mah USB power supply.
+-  This board has a low heat dissipation capacity, so it is normal that it keeps hot on high transmission processes. The temperature sensor could takes values up to 70ºC on full duplex communication process.
+-  If you use the VIN power header, be careful to connect it in the correct position, as it is showed on image2. Not following this directive could damage the protection diod.
+<p align="center">
+<img src="assets/i1.PNG?raw=true"   width="200" height="180" />
+</p>
+-  This device is developed like a software testing platform and it is not protected to support hard weather conditions without the appropriate cover case.
+- Do not touch the components Surfaces to grab the device, it will sport the electrical contacts, producing shortcuts and wrong working. keep holding from lateral edges like in the illustration below:
+<p align="center">
+<img src="assets/i2.PNG?raw=true"   width="200" height="300" />
+</p>
+
+- If necessary, clean the circuit using a non-damaging contact cleaner like Isopropyl alcohol and soft brush. 
+-  Store in a cool, dry place. Protected from dust.
+
+#### BATTERY POWERING
+- Using BAT power header, be careful to wire up correctly, as it is showed on image below:
+<p align="center">
+<img src="assets/i3.PNG?raw=true"   width="200" height="180" />
+</p>
+- BAT header is connected to a lithium battery charger that can manage 3.7Vdc, 500mah Li-Po / li-ion batteries charge and discharge process. 
+
+&#9888; if you are ussing a different battery, plug it on VIN connector.
+
+&#9888; if cell voltage flows under 3.6V, an authomatic battery protection circuit will power off the system. 
+
+ - To load a battery, connect it on BAT heather and power on the ClimaStick through USB / VIN connectors. The battery charger will manage the charging voltage to increase life battery and stops charging cycle when voltage ups to 4.2Vdc.
+
+ - Never use a computer USB port to charge batteries, it could damage your computer’s circuitry. 
+
+
+#### EXENCION OF RESPONSABILITY
+- This device its commercialized by Thinger.io platform like a software development kit, so it is not subject to commerce homologation rules. The owner is liable for all injuries to third parties and damage to their properties. 
