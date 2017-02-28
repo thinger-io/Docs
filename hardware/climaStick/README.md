@@ -87,13 +87,13 @@ void loop() {
 #### EASY FUNCTIONS
 ClimaStick.h contains some routines designed to simplify the programing process. This functions retrieve the reads from sensors and save it into its pertinent struct, making easier to work with all the ClimaStic features.
 ```cpp
- void getMotion(); 
- void getCompass();
- void getMagnet();
- void getClima();
- void getTime();
- float getBatteryVoltage();
- float getBatteryLoad();
+ void getMotion();  //refresh accel and gyro variables
+ void getCompass(); //refresh compass variables
+ void getMagnet();  //refres  magnet variables
+ void getClima();   //fill all climatologic variables from clima struct
+ void getTime();    //starts NTP client and refresh time variables
+ float getBatteryVoltage(); //returns main voltage into a float value
+ float getBatteryLoad();    //returns remain battery load porcentage
 ```
 #### STRUCTS
 After executing this functions, the retrieve variables will be ready to work with readed values. Next examples shows how can you use all this variables:
