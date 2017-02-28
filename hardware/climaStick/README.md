@@ -85,48 +85,46 @@ void loop() {
  
 ## CLIMA_MOVE LIBRARY
 #### EASY FUNCTIONS
-ClimaStick.h contains some routines designed to simplify the programing process. This functions retrieve the reads from sensors and save it into its pertinent struct, making easier to work with all the ClimaStic features.
+ClimaStick.h contains some routines designed to simplify data retrieving and programing process. This functions returns all reads from sensors into complex structs that you can use like in the example below:
 ```cpp
- void getMotion();  //refresh accel and gyro variables
- void getCompass(); //refresh compass variables
- void getMagnet();  //refres  magnet variables
- void getClima();   //fill all climatologic variables from clima struct
- void getTime();    //starts NTP client and refresh time variables
- float getBatteryVoltage(); //returns main voltage into a float value
- float getBatteryLoad();    //returns remain battery load porcentage
+ struct accelerometer accelgyro = get_acceleration();  //refresh accel and gyro variables
+ struct compass myCompass = get_compass();              //refresh compass variables
+ struct magnet myMagnet = get_magnet();  //refres  magnet variables
+ struct environmental myClima = getClima();   //fill all climatologic variables from clima struct
+ struct time myTime = getTime();    //starts NTP client and refresh time variables
+ float voltage = getBatteryVoltage(); //returns main voltage into a float value
+ float remainBattery = getBatteryLoad();    //returns remain battery load porcentage
 ```
 #### STRUCTS
-After executing this functions, the retrieve variables will be ready to work with readed values. Next examples shows how can you use all this variables:
+After executing this functions, you can access to each data calling it and saving into your local variable. Next examples shows how to extract all this variables:
 ```cpp
 //Accelerometer:
-    uint16_t ax = accel.x; 
-    uint16_t ay = accel.y;
-    uint16_t az = accel.z;
- 
- //Gyroscope:
-    uint16_t gx = gyro.x;
-    uint16_t gy = gyro.y;
-    uint16_t gz = gyro.z;
+    uint16_t ax = accelgyro.ax; 
+    uint16_t ay = accelgyro.ay;
+    uint16_t az = accelgyro.az;
+    uint16_t gx = accelgyro.gx;
+    uint16_t gy = accelgyro.gy;
+    uint16_t gz = accelgyro.gz;
  
  //Magnetometer:
-    float mx = magnet.x;
-    float my = magnet.y;
-    float mz = magnet.z; 
-    float normaliced_x = magnet.nx;
-    float normaliced_y = magnet.ny;
-    float normaliced_z = magnet.nz; 
+    float mx = myMagnet.x;
+    float my = myMagnet.y;
+    float mz = myMagnet.z; 
+    float normaliced_x = myMagnet.nx;
+    float normaliced_y = myMagnet.ny;
+    float normaliced_z = myMagnet.nz; 
  
  //Compass:
-    float heading = compass.heading;
-    float headingDegrees = compass.headingDegrees;
+    float heading = myCompass.heading;
+    float headingDegrees = myCompass.headingDegrees;
  
  //Environmental:
-    float temperature = clima.temperature;
-    float humidity = clima.humidity;
-    float pressure = clima.pressure;
-    float altitude = clima.altitude;
-    float luminosity = clima.luminosity;
-    float lux = clima.lux;
+    float temperature = myClima.temperature;
+    float humidity = myClima.humidity;
+    float pressure = myClima.pressure;
+    float altitude = myClima.altitude;
+    float luminosity = myClima.luminosity;
+    float lux = myClima.lux;
  
  ```
 #### EMBEDED RGB LED
