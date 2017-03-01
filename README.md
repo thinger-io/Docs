@@ -90,7 +90,7 @@ Thinger.io Hardware
 This section is related to the Thinger.io hardware boards, like the ClimaStick. A small powerful device plenty of sensors, ready for prototyping, learning, or developing products.
 
 <p align="center">
-[ClimaStick Board >](hardware/climastick)
+[ClimaStick Board >](hardware/climaStick)
 </p>
 
 Server Deployment
