@@ -89,7 +89,7 @@ ClimaStick.h contains some routines designed to simplify data retrieving and pro
 ```cpp
  struct accelerometer accelgyro = get_acceleration();  //refresh accel and gyro variables
  struct compass myCompass = get_compass();             //refresh compass variables
- struct magnet myMagnet = get_magnet();                //refres  magnet variables
+ struct magnetometer myMagnet = get_magnet();                //refres  magnet variables
  struct environmental myClima = get_clima();            //fill all climatologic variables from clima struct
  struct time myTime = get_time();                       //starts NTP client and refresh time variables
  float voltage = batteryVoltage();                  //returns main voltage into a float value
