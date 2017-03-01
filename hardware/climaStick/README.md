@@ -11,56 +11,66 @@ it is ready to:
 <img src="assets/i0.PNG?raw=true"   width="600" height="350" />
 </p>
 
+# Configure Environment
 
-## GETTING STARTED
-#### RUNNING STOCK EXAMPLE CODE:
-> 1. Power up the board with a micro USB-B 5V supply, like a cell phone charger. 
-2. Sign-up on thinger.io
-3. Using a Smartphone, look for and connect to “Thinger device” LAN.
-4. Open your web browser and enter your Thinger.io account name, and your WiFi credentials.
-5. Get out of “thinger device” WiFi Access point and connect to your home WiFi.
-6. Open your browser on thinger.io > dashboards > ClimaStick_Example
 
-#### START PROGRAMING
-1- Download and install the working environements:
- - CP2102 drivers from silicon labs web site:
-http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx
- - Arduino IDE v1.6.13 or newer:
- https://www.arduino.cc/en/main/software
+## Install required components
  
-2- Configure Arduino IDE, opening next interfaces:
-  > 1. On File > Preferences > Additional_Boards_URL_Manager to include the "ESP8266 boards manager link" that you can retrieve from Github community project: https://github.com/esp8266/Arduino
+* You may need to install the CP2102 drivers from Silicon Labs if the ClimaStick device is not recognized from your computer. This driver is for the USB to serial interface to communicate with the board.
+
+[Download page >](http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx)
+
+* Arduino IDE v1.6.13 or newer. 
+ 
+[Download page >](https://www.arduino.cc/en/main/software)
+ 
+## Configure Arduino IDE
+
+1. Open File > Preferences > Additional_Boards_URL_Manager to include the "ESP8266 boards manager link" that you can retrieve from [Github community project](https://github.com/esp8266/Arduino). It is normally ```http://arduino.esp8266.com/stable/package_esp8266com_index.json```
 <p align="center">
 <img src="assets/i4.PNG?raw=true"   width="600" height="500" />
 </p>
-2. On Tools>Board>Board_manager and look for ESP8266 community board firmware, and install the last version.
+
+2. Open Tools > Boards > Boards Manager... and search for ESP8266 package, then install the last version.
 <p align="center">
 <img src="assets/i5.PNG?raw=true"   width="600" height="400" />
 </p>
+
 3. Now you can program almost any ESP8266 directly from the Arduino IDE. From the Tools > Boards you should see now the new ESP8266 boards installed. To program the Thinger.io ClimaStick you should select **NODE_MCU V1.0 (ESP-12E Module)**.
 <p align="center">
 <img src="assets/i6.png?raw=true"   width="600" height="550" />
 </p>
-4. On Edit > include_libraries > libraries_manager, look for the last version of **Thinger.io** libraries. In this step we are dowloading all thinger.io libraries sourcecode, and examples.
-5. Repeat step 4, to download the ClimaStick libraries and example codes.
-6. Connect the ClimaStick to your computer and select its serial communication port number on: Tools > port
-7. Now you can start developing with Thinger.io ClimaStic! Check out the source code examples opening Arduino IDE: File > Examples > Thinger.io > ClimaStick Basic
 
-#### UPLOADING FIRMWARE 
-**Before programming check out process**
-- Be sure that your USB wire allows data transmission.
-- Verify that your operative system recognised the CP2102 serial port interface.
-- Check out the selected serial COM number on Arduino IDE: Tools>port
+4. Open Sketch > Include Library > Manage Libraries, and search for **Thinger.io** libraries. Then install the Thinger.io and ClimaStick libraries, as shown in the following picture.
+<p align="center">
+<img src="assets/climastick_libraries.png" width="600" />
+</p>
 
-- &#9888; **Flash boot mode:** If you follow "uploading firmware steps", and there is any problem to stablish the communication with the board, you can force a flash boot up keeping pressed USR button and making reset (pressing RST button).
+6. Connect the ClimaStick to your computer and select its serial communication port number on: Tools > Port. It normally will be a COM port, or named as /dev/cu.SLAB_USBtoUART on Mac.
+
+7. Now you can start developing with Thinger.io ClimaStick! It is helpful to start with the examples provided in the library, by opening File > Examples > ClimaStick
+
+## Uploading firmware
+
+The ClimaStick board can be programmed directly by pressing the Upload button of the Arduino IDE. If it does not work, please check the following:
+
+* Be sure that your micro USB wire allows data transmission. Some cables are only for electrical power and may not work properly.
+- Verify that your operating system properly recognize the CP2102 serial port interface.
+- Checkout the selected serial COM port on Arduino IDE: Tools > Port
+
+- &#9888; **Flash boot mode:** If you are sure that everything is configured properly, and the problem still persists, you can force a flash boot up by keeping pressed the USR button of the board, then press the RST button once, and finally release the USR button.
  
-**Running the example code**
 
-Now you are ready to open an example code and upload it to your ClimaStick. On Arduino Ide, File > Examples > ClimaStick you will find some examples that explains most usefull routines from ClimaStick.h, divided on diferente subjects like IMU, Battery, CLima and RGB led. The ClimaStick_Auto example code, is a little sketch that implements all ClimaStick.h functions and create Thinger resources to update all data to the server:
+# QuickStart Examples
+
+Now you should be ready to open any example of the ClimaStick library and upload it to your ClimaStick device. On Arduino IDE, open File > Examples > ClimaStick and you will find some examples that illustrates the most useful functions over the board features, like sensors, like accessing the IMU, reading battery levels, read weather conditions, changing led state, and so on. 
+
+## ClimaStick Auto
+
+The ClimaStick_Auto example code, is a little sketch that integrates all ClimaStick functionality, defining all sensor resources that will be accesible from the Thinger.io Platform:
  
  ```cpp
-#define _batterySwProtection_ //This parameter enables the auto-sleep mode when battery voltage flows down 3.65V
-#include <ClimaStick_Auto.h>
+#include <ClimaStick.h>
  
 #define USERNAME "your_user_name"
 #define DEVICE_ID "your_device_id"
@@ -69,81 +79,26 @@ Now you are ready to open an example code and upload it to your ClimaStick. On A
 #define SSID "your_wifi_ssid"
 #define SSID_PASSWORD "your_wifi_ssid_password"
 
-ThingerESP8266 thing(USERNAME, DEVICE_ID, DEVICE_CREDENTIAL);
+ClimaStick thing(USERNAME, DEVICE_ID, DEVICE_CREDENTIAL);
  
 void setup() {
   thing.add_wifi(SSID, SSID_PASSWORD);
-  init_resources(thing);  
-  
+  thing.init_sensors();
+  thing.init_resources();
 }
 
 void loop() { 
-  thing.handle(); 
+  thing.handle();
 }
- ```
- 
- 
-## CLIMA_MOVE LIBRARY
-#### EASY FUNCTIONS
-ClimaStick.h contains some routines designed to simplify the programing process. This functions retrieve the reads from sensors and save it into its pertinent struct, making easier to work with all the ClimaStic features.
-```cpp
- void getMotion();  //refresh accel and gyro variables
- void getCompass(); //refresh compass variables
- void getMagnet();  //refres  magnet variables
- void getClima();   //fill all climatologic variables from clima struct
- void getTime();    //starts NTP client and refresh time variables
- float getBatteryVoltage(); //returns main voltage into a float value
- float getBatteryLoad();    //returns remain battery load porcentage
 ```
-#### STRUCTS
-After executing this functions, the retrieve variables will be ready to work with readed values. Next examples shows how can you use all this variables:
-```cpp
-//Accelerometer:
-    uint16_t ax = accel.x; 
-    uint16_t ay = accel.y;
-    uint16_t az = accel.z;
  
- //Gyroscope:
-    uint16_t gx = gyro.x;
-    uint16_t gy = gyro.y;
-    uint16_t gz = gyro.z;
- 
- //Magnetometer:
-    float mx = magnet.x;
-    float my = magnet.y;
-    float mz = magnet.z; 
-    float normaliced_x = magnet.nx;
-    float normaliced_y = magnet.ny;
-    float normaliced_z = magnet.nz; 
- 
- //Compass:
-    float heading = compass.heading;
-    float headingDegrees = compass.headingDegrees;
- 
- //Environmental:
-    float temperature = clima.temperature;
-    float humidity = clima.humidity;
-    float pressure = clima.pressure;
-    float altitude = clima.altitude;
-    float luminosity = clima.luminosity;
-    float lux = clima.lux;
- 
- ```
-#### EMBEDED RGB LED
+## Data Recording using Sleep
 
+You can easily configure your board for record environment values and then going to sleep. This is quite useful while powering the device from a battery. This example will write the environment values to the `BucketId`, that you must create in your Thinger.io console.
 
 ```cpp
- rgb(String "colorName");
- rgb(int red, int green, int blue);
-```
-
-#### ENVIRONMENTAL SAMPLING PROTOCOL
-Due to low power dissipation capacity, climaSticks gets hot after a few seconds of working, so it is not possible to make high-rate real time temperature reads. For reading temperature process, it is necessary to hibernate the processor, and wait a few minutes before to executing a high precision temperature read. This function is available using ESP.deepsleep(<-milliseconds->). during specified time period, the running process will be stopped,  and processor will not respond to any inquiry or WiFi transmissions. When the countdown is over, the device will  make a hard reset and the process will start from new.
-
-
-```cpp
-#include <Clima_Move.h>
-
+#include <ClimaStick.h>
+ 
 #define USERNAME "your_user_name"
 #define DEVICE_ID "your_device_id"
 #define DEVICE_CREDENTIAL "your_device_credential"
@@ -151,61 +106,167 @@ Due to low power dissipation capacity, climaSticks gets hot after a few seconds 
 #define SSID "your_wifi_ssid"
 #define SSID_PASSWORD "your_wifi_ssid_password"
 
-void setup() {
-  thing.add_wifi(SSID, SSID_PASSWORD);
-  climaMove(thing);   
-} 
+ClimaStick thing(USERNAME, DEVICE_ID, DEVICE_CREDENTIAL);
  
-void loop(){
-  thing.handle();
-  
-  thing.stream(thing["environment"]);
-  
-  if(sleepMode==1){
-      ESP.deepSleep(5*60*1000000);      //Sleeping 5 minutes until reset 
-  }
+void setup() {
+  // configure board wifi
+  thing.add_wifi(SSID, SSID_PASSWORD);
+  // initialize board sensors
+  thing.init_sensors();
+  // define the "environment" resource
+  thing.init_environment_resource();
+}
 
+void loop() { 
+  thing.handle();
+  // write to bucket BucketId
+  thing.write_bucket("BucketId", "environment");
+  // sleep the device 60 seconds
+  thing.sleep(60);
 }
 ```
 
+This example is quite useful while requiring accurate temperature values. Due to the low power dissipation capacity, the small ClimaStick board gets hot after a few seconds of working, so it is not possible to make accurate temperature readings while the device is working constantly. For reading temperature more accurately, it is possible to sleep the processor, and wait a few minutes before trying to get a fresh sensor read. The board supports the `thing.sleep(seconds)` function, that will sleep the processor and all WiFi transmissions. After the sleep, the device will start again like a normal reboot.
+
 >**&#9888; DEEPSLEEP CONSIDERATIONS:** 
 
-> - During the deepSleep mode, it is not possible to flash code. To change the program you will need to make a forced flash mode boot up.
-> - Note that, when the processor makes a hard reset, all dynamic variables will lost its values. 
+> - During the deepSleep mode, it is not possible to flash code. To change the program you will need to make a forced flash mode boot up as described in the Uploading firmware section.
+> - Note that, when the processor makes a hard reset, all dynamic variables will lost its values.
 
-## OTHER CONSIDERATIONS
-##### GENERAL ADVERTISEMENT
+After some time, your bucket should look like:
 
--  It should be powered with a 5V and 250 to 1000mah USB power supply.
--  This board has a low heat dissipation capacity, so it is normal that it keeps hot on high transmission processes. The temperature sensor could takes values up to 70ºC on full duplex communication process.
--  If you use the VIN power header, be careful to connect it in the correct position, as it is showed on image2. Not following this directive could damage the protection diod.
 <p align="center">
-<img src="assets/i1.PNG?raw=true"   width="200" height="180" />
+<img src="assets/climastick_bucket.png" width="600" />
 </p>
--  This device is developed like a software testing platform and it is not protected to support hard weather conditions without the appropriate cover case.
-- Do not touch the components Surfaces to grab the device, it will sport the electrical contacts, producing shortcuts and wrong working. keep holding from lateral edges like in the illustration below:
+
+That will allow you to create historical dashboards like the following:
+
+<p align="center">
+<img src="assets/climastick_dashboard.png" width="600" />
+</p>
+ 
+# ClimaStick Functions
+
+You can run the ClimaStick functions to read any sensor value as required by your application. Here we describe some of the most important functions. Using these functions requires always to initialie the sensors on the setup method:
+
+```cpp
+void setup() {
+    thing.init_sensors();
+}
+```
+
+## Reading Accelerometer
+
+```cpp
+Accelerometer accel = thing.get_acceleration();
+Serial.println(accel.ax);
+Serial.println(accel.ay);
+Serial.println(accel.az);
+```
+
+## Reading Gyroscope
+
+```cpp
+Gyroscope gyro = thing.get_gyroscope();
+Serial.println(gyro.gx);
+Serial.println(gyro.gy);
+Serial.println(gyro.gz);
+```
+
+## Reading Compass
+
+```cpp
+Compass compass = thing.get_compass();
+Serial.println(compass.heading);
+Serial.println(compass.headingDegrees);
+```
+
+## Reading Magnetometer
+
+```cpp
+// you can also call thing.get_raw_magnetometer() to read raw values and not normalized
+Magnetometer magnet = thing.get_magnetometer();
+Serial.println(magnet.x);
+Serial.println(magnet.y);
+Serial.println(magnet.z);
+```
+
+## Reading Temperature
+
+```cpp
+float temperature = thing.get_temperature();
+Serial.println(temperature);
+```
+
+## Reading Humidity
+```cpp
+float humidity = thing.get_humidity();
+Serial.println(humidity);
+```
+
+## Reading Pressure
+```cpp
+float pressure = thing.get_pressure();
+Serial.println(pressure);
+```
+
+## Reading Lux
+```cpp
+uint16_t lux = thing.get_lux();
+Serial.println(lux);
+```
+
+## Change RGB Led
+
+```cpp
+ int r=255, g=0, b=0;
+ thing.set_rgb(r, g, b);
+ // or
+ thing.set_rgb("blue");
+```
+
+# OTHER CONSIDERATIONS
+
+This section covers different considerations while using the board.
+
+## General Considerations
+
+* The device should be powered with a 5V USB power supply, being able to provide current from 250 to 1000mah.
+* This board has a low heat dissipation capacity, so it is normal that it keeps hot on high transmission processes. The temperature sensor could read high values while doing full duplex communication process.
+* This device is developed for prototyping and support software development, so it is not protected to support hard weather conditions without the proper cover case.
+* Try to avoid touching the components surfaces while using the device, it can produce an electrostatic shock on the device, producing shortcuts and malfunction. It is recommended to take the board from the edges like in the following illustration.
+
 <p align="center">
 <img src="assets/i2.PNG?raw=true"   width="200" height="300" />
 </p>
 
-- If necessary, clean the circuit using a non-damaging contact cleaner like Isopropyl alcohol and soft brush. 
--  Store in a cool, dry place. Protected from dust.
+* If necessary, clean the circuit using a non-damaging contact cleaner like Isopropyl alcohol and soft brush. 
+* Store in a cool, dry place. Protected from dust.
 
-#### BATTERY POWERING
-- Using BAT power header, be careful to wire up correctly, as it is showed on image below:
+## External Power Supply
+
+* If you use the VIN power header, be careful to connect it in the correct position, as it is shown in the following image. Not following this directive could damage the protection diode.
+
+<p align="center">
+<img src="assets/i1.PNG?raw=true"   width="200" height="180" />
+</p>
+
+* &#9888; Do not use VIN power supply and USB power supply at the same time! It can damage your hardware.
+
+## Battery Power Supply 
+* You can power and charge a battery directly from the board. Use the BAT power header, and take care to of the polarity, as it is shown in the following picture:
+
 <p align="center">
 <img src="assets/i3.PNG?raw=true"   width="200" height="180" />
 </p>
-- BAT header is connected to a lithium battery charger that can manage 3.7Vdc, 500mah Li-Po / li-ion batteries charge and discharge process. 
 
-&#9888; if you are ussing a different battery, plug it on VIN connector.
+* BAT header is connected to a lithium battery charger that can manage 3.7Vdc, 500mah Li-Po / li-ion batteries charge and discharge process. 
 
-&#9888; if cell voltage flows under 3.6V, an authomatic battery protection circuit will power off the system. 
+* To charge a battery, connect it on BAT header and power on the ClimaStick through USB / VIN connectors. The battery charger will manage the charging voltage to increase life battery and stops charging cycle when voltage ups to 4.2Vdc.
 
- - To load a battery, connect it on BAT heather and power on the ClimaStick through USB / VIN connectors. The battery charger will manage the charging voltage to increase life battery and stops charging cycle when voltage ups to 4.2Vdc.
+* &#9888; If you are using a different battery, plug it on VIN connector.
 
- - Never use a computer USB port to charge batteries, it could damage your computer’s circuitry. 
+* &#9888; If cell voltage drops under 3.6V, an automatic battery protection circuit will power off the system. 
 
-
-#### EXENCION OF RESPONSABILITY
-- This device its commercialized by Thinger.io platform like a software development kit, so it is not subject to commerce homologation rules. The owner is liable for all injuries to third parties and damage to their properties. 
+## Disclaimer
+* This device is commercialized by the Thinger.io platform (THINK BIG LABS S.L) as a development kit, so it is not subject to commerce homologation rules. The device owner is liable for all injuries to third parties and damage to their properties. 
