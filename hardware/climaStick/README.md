@@ -90,10 +90,10 @@ ClimaStick.h contains some routines designed to simplify data retrieving and pro
  struct accelerometer accelgyro = get_acceleration();  //refresh accel and gyro variables
  struct compass myCompass = get_compass();             //refresh compass variables
  struct magnet myMagnet = get_magnet();                //refres  magnet variables
- struct environmental myClima = getClima();            //fill all climatologic variables from clima struct
- struct time myTime = getTime();                       //starts NTP client and refresh time variables
- float voltage = getBatteryVoltage();                  //returns main voltage into a float value
- float remainBattery = getBatteryLoad();               //returns remain battery load porcentage
+ struct environmental myClima = get_clima();            //fill all climatologic variables from clima struct
+ struct time myTime = get_time();                       //starts NTP client and refresh time variables
+ float voltage = get_batteryVoltage();                  //returns main voltage into a float value
+ float remainBattery = get_batteryLoad();               //returns remain battery load porcentage
 ```
 #### STRUCTS
 After executing this functions, you can access to each data calling it and saving into your local variable. Next examples shows how to extract all this variables:
