@@ -80,6 +80,19 @@ The Thinger.io Cloud is supported by a REST API designed to easily integrate you
 [Server API Documentation >](api)
 </p>
 
+Thinger.io Hardware
+===================
+
+<p align="center">
+<img src="assets/climastick.jpg" width="200px">
+</p>
+
+This section is related to the Thinger.io hardware boards, like the ClimaStick. A small powerful device plenty of sensors, ready for prototyping, learning, or developing products.
+
+<p align="center">
+[ClimaStick Board >](hardware/climastick)
+</p>
+
 Server Deployment
 =================
 
@@ -87,7 +100,7 @@ Server Deployment
 <img src="assets/docker-logo.png" width="200px">
 </p>
 
-This section is related with the Cloud configuration and deployment in your own infrastructure, both in local machines or in the cloud.
+This section is related to the Cloud configuration and deployment in your own infrastructure, both in local machines or in the cloud.
 
 <p align="center">
 [Server Deployment Documentation >](deployment)

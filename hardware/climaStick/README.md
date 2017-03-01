@@ -1,18 +1,32 @@
-# Thinger.io ClimaStick Quick Start Gide
+# ClimaStick Reference
 
 This board is a complete Internet of Things development kit, that integrates WiFi connectivity along with a set of powerful sensors to provide environmental and motion sensing. This way, it is possible to create several connected projects easily. It is fully compatible with the Thinger.io cloud infrastructure, and provides easy to use libraries that can be used in the Arduino IDE. 
 
-it is ready to:
-- Meassure environmetral variables such as Temperature, relative humidity, barometric pressure or luminic radiation.
-- Take inertial measurements like vibrations, accelerations, angles and compass.
-- Export all data for bucket storage or monitoricing process.
+## Board Layout
 
 <p align="center">
 <img src="assets/i0.PNG?raw=true"   width="600" height="350" />
 </p>
 
+## Board Features
+
+* Environmental sensing for temperature, relative humidity, barometric pressure, and lux intensity. A micro weather station!
+* Inertial Measurements Unit (IMU), integrating an accelerometer, a gyroscope, and a digital compass.
+* Li-Po Charger. It is able to charge (and be powered by) batteries from a solar panel or the built-in USB.
+* RGB Led.
+* User button.
+* Fully compatible with the Arduino Environment. Can be programmed directly from the Arduino IDE. There are libraries for reading the sensors and connecting the board to the Thinger.io Cloud or other Internet services.
+
+## Sample Use Cases
+
+* Education: This board provides an easy to use environment for education. It is fully compatible with the Arduino IDE, so they can still use this friendly environment. It also integrates multiple sensors that the students can use for building their projects. The students can start coding projects directly without wiring multiple sensors and controllers in big protoboards, avoiding possible shorts and burns. Moreover, it integrates WiFi, so they can get one step further building connected solutions, building dashboards, sending emails, recording data, and so on.
+* Remote Telemetry: It provides a full IMU with Wifi connectivity that can be used for remote telemetry. The low weight of the device (4gr) and the option for setting a different power supply than the USB, make this board an excellent option for monitoring drones or UAVs in real-time.
+* Industry 4.0: It can be used in industrial environments for predictive maintenance, as it is possible to measure vibrations, temperature, and humidity in real-time and determine if the sensed parameters are between normal operation thresholds.
+* Weather Station: This device can be used as a micro weather station. It can be powered easily from a battery and a solar panel, and collaborate with weather platforms, or just store your information in the Thinger.io cloud.
+
 # Configure Environment
 
+This section covers how to setup your computer to start working with the ClimaStick device.
 
 ## Install required components
  
