@@ -45,6 +45,29 @@ sudo apt-get update
 sudo apt-get install -y mongodb-org
 ```
 
+
+### Make MongoDB run at startup
+
+Edit the following file to make MongoDB run at startup as a service.
+```bash
+sudo nano /etc/systemd/system/mongodb.service
+```
+
+Then copy the following configuration and save the file.
+
+```bash
+[Unit]
+Description=High-performance, schema-free document-oriented database
+After=network.target
+
+[Service]
+User=mongodb
+ExecStart=/usr/bin/mongod --quiet --config /etc/mongod.conf
+
+[Install]
+WantedBy=multi-user.target
+```
+
 ### Start MongoDB
 
 ```bash

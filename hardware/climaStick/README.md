@@ -282,5 +282,12 @@ This section covers different considerations while using the board.
 
 * &#9888; If cell voltage drops under 3.6V, an automatic battery protection circuit will power off the system. 
 
+## Device Datasheet
+
+Your can download the device datasheet from the following link:
+
+[ClimaStick Datasheet >](assets/ClimaStick_Datasheet.pdf)
+
+
 ## Disclaimer
 * This device is commercialized by the Thinger.io platform (THINK BIG LABS S.L) as a development kit, so it is not subject to commerce homologation rules. The device owner is liable for all injuries to third parties and damage to their properties. 
