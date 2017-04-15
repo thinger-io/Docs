@@ -1,17 +1,23 @@
-# Install on Ubuntu 16.04
+# Install on Ubuntu (starting from 16.04)
 
-It is recommended to update your Ubuntu 16.04 installation before doing any other step by running this commands:
+The server can be installed in any architecture, like x86, amd64, arm64, or armhf, which is compatible with the Ubuntu Snap packages (on only Ubuntu OS, check out [this page](https://snapcraft.io/)) . However, it is recommended to use 64 bit architectures, as the MongodB database is limited to 2GB of data in 32 bits systems.
+
+
+It is highly recommended to update your Ubuntu installation before doing any other step by running this commands:
 
 ```bash
 sudo apt update
 sudo apt upgrade
 ``` 
 
+
 ## Install MongoDB
 	
-Thinger.io IoT platform requires a MongoDB server for storing some server information. So, the first step is to install a MongoDB Server in your host. The following information has been obtained from the official documentation:
- 
+Thinger.io IoT platform requires a MongoDB server for storing some server information. So, the first step is to install a MongoDB Server in your host. The following information has been obtained from the official documentation. 
 [https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
+
+*Notice* that this steps are for amd64 architectures. If you are installing the server in a different system, you should check the specific install instructions for the architecture.
+
 
 ### Import the public key used by the package management system.
 
