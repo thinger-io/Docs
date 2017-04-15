@@ -114,35 +114,6 @@ sudo snap install thinger-maker-server
 You can also install the server by installing it from the Ubuntu Store. Just search for `Thinger.io` and the package should appear.
 
 
-## Check that the server is running
-
-Open a browser and enter the address [https://localhost](https://localhost)
-
-
-### Add SSL Exception
-
-Accessing the server by HTTPS may generate some certificate issues, as the server comes with a self-signed SSL certificate. So, add some browser exceptions to allow using the server by SSL. Do this step now in orther to ensure compatibility with the console. You can later set your own SSL certificates if you want.
-
-<p align="center">
-    <img src="assets/ssl_exception_1.png" width="650">
-</p>
-
-<p align="center">
-    <img src="assets/ssl_exception_2.png" width="650">
-</p>
-
-<p align="center">
-    <img src="assets/ssl_exception_3.png" width="650">
-</p>
-
-### Check server page
-
-Once you have correctly configured the SSL exception, you will be able to see the server page. It is a dummy page to confirm that the server is running. If you cannot add the SSL exception, you can also check that the server is running by accessing from a non secured connection ([http://localhost](http://localhost)).
-
-<p align="center">
-    <img src="assets/server_running.png" width="650">
-</p>
-
 ## Check service status
 
 You can check the status of the Thinger.io daemon service by running:
@@ -170,6 +141,12 @@ ene 20 22:39:19 supermicro systemd[1]: Starting Service for snap application thi
 ene 20 22:39:19 supermicro systemd[1]: Started Service for snap application thinger-maker-server.thingerd.
 
 ```
+
+At this moment you should be able to open a browser pointing to your server IP address, and the web console should appear, just like the cloud console.
+
+<p align="center">
+    <img src="assets/console.png" width="650">
+</p>
 
 ### Restart service
 
@@ -217,6 +194,13 @@ When using the snap package, the default config files, buckets exports, and logs
       {
         "host": "*",
         "type":"rest"
+      },
+      "cors": {
+        "enabled" : true
+      },
+      "web_fallback" : {
+        "enabled" : true,
+        "root": "${SNAP}/console"
       }
     ]
   },
@@ -290,11 +274,13 @@ When using the snap package, the default config files, buckets exports, and logs
       },
       "dashboards" : {
         "max_count" : -1
+      },
+      "tokens" : {
+        "max_count" : -1
       }
     }
   }
 }
-
 ```
 
 Documentation in progress...
@@ -316,31 +302,6 @@ It is possible to configure an SMTP Server for sending emails through the endpoi
 },
 ```
 
-
-# Using the Cloud Console with your server
-
-
-In this step we will use the Thinger.io console to connect to our own host. The console is hosted at [https://console.thinger.io](https://console.thinger.io)
-
-<p align="center">
-    <img src="assets/console.png" width="650">
-</p>
-
-The cloud console can be used for accessing your own server easily. Just access to the console config page in the following address:
-
-[https://console.thinger.io/#/settings](https://console.thinger.io/#/settings)
-
-Change here the Thinger.io API server from `api.thinger.io` to `localhost` or the IP Adress of your server.
-
-<p align="center">
-    <img src="assets/console_config.png" width="650">
-</p>
-
-Once you are done, just update the settings and click on `Back to the Application` button. Sometimes after a host change, it may be required to refresh the page to completely update the changes.
-
-<p align="center">
-    <img src="assets/console_config_update.png" width="650">
-</p>
 
 # Connect the devices to your server
 
