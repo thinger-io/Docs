@@ -77,14 +77,13 @@ WantedBy=multi-user.target
 ### Start MongoDB
 
 ```bash
-sudo service mongod start
-
+sudo systemctl start mongodb
 ```
 
 ### Check that MongoDB is running
 
 ```bash
-sudo service mongod status
+sudo systemctl status mongodb
 ```
 
 ```bash
@@ -101,6 +100,12 @@ alvaro@supermicro:~$ sudo service mongod status
            └─3825 /usr/bin/mongod --quiet --config /etc/mongod.conf
 
 ene 21 10:56:13 supermicro systemd[1]: Started High-performance, schema-free document-oriented database.
+```
+
+Then, just make the automatic startup by typing:
+
+```bash
+sudo systemctl enable mongodb
 ```
 
 ## Install Thinger.io Maker Server
