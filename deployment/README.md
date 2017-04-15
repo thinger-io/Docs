@@ -16,7 +16,7 @@ sudo apt upgrade
 Thinger.io IoT platform requires a MongoDB server for storing some server information. So, the first step is to install a MongoDB Server in your host. The following information has been obtained from the official documentation. 
 [https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
 
-*Notice* that this steps are for amd64 architectures. If you are installing the server in a different system, you should check the specific install instructions for the architecture.
+*Notice* that this steps are for amd64/arm64 architectures. If you are installing the server in a different system, you should check the specific install instructions for the architecture.
 
 
 ### Import the public key used by the package management system.
@@ -41,14 +41,14 @@ echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb
 Issue the following command to reload the local package database:
 
 ```bash
-sudo apt-get update
+sudo apt update
 
 ```
 
 ### Install the MongoDB packages
 
 ```bash
-sudo apt-get install -y mongodb-org
+sudo apt install -y mongodb-org
 ```
 
 
