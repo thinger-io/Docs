@@ -40,6 +40,18 @@ If you want to develop an IoT product or project based on a device running Linux
 [Linux Client Documentation >](linux)
 </p>
 
+## Sigfox
+
+<p align="center">
+<img src="assets/sigfox-logo.jpg" width="250px">
+</p>
+
+In this category is covered the Sigfox integration with the platform, where the user can configure callbacks for transmitting data from the devices to the cloud for creating real-time dashboards.
+
+<p align="center">
+[SigFox Integration Documentation >](sigfox)
+</p>
+
 ## ARM Mbed
 
 <p align="center">
@@ -87,7 +99,7 @@ Thinger.io Hardware
 <img src="assets/climastick.jpg" width="200px">
 </p>
 
-This section is related to the Thinger.io hardware boards, like the ClimaStick. A small powerful device plenty of sensors, ready for prototyping, learning, or developing products.
+This section is related to the Thinger.io hardware boards, like the ClimaStick. A small powerful device plenty of sensors, WiFi, ready for prototyping, learning, or developing products.
 
 <p align="center">
 [ClimaStick Board >](hardware/climaStick)
