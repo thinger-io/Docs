@@ -5,7 +5,7 @@
 
 Sigfox is a French company founded in 2009 that builds wireless networks to connect low-energy objects such as electricity meters, smartwatches, and washing machines, which need to be continuously on and emitting small amounts of data. Sigfox employs a proprietary technology that enables communication using the Industrial, Scientific and Medical ISM radio band which uses 868MHz in Europe and 902MHz in the US. It utilizes a wide-reaching signal that passes freely through solid objects, called "ultra narrowband" and requires little energy, being termed "Low-power Wide-area network (LPWAN)". The network is based on one-hop star topology and requires a mobile operator to carry the generated traffic. The signal can also be used to easily cover large areas and to reach underground objects.
                                                                                                                                                                                                                                             
-Sigfox has partnered with a number of firms in the LPWAN industry such as Texas Instruments, Silicon Labs and Axom. The ISM radio band support bidirectional communication. The existing standard for Sigfox communications supports up to **140 uplink messages a day**, each of which can carry a payload of **12 Bytes** (Excluding message header and transmission information) and up to 4 downlink messages per day, each of which can carry a payload of 8 Bytes.
+Sigfox has partnered with a number of firms in the LPWAN industry such as Texas Instruments, or Silicon Labs. The ISM radio band support bidirectional communication. The existing standard for Sigfox communications supports up to **140 uplink messages a day**, each of which can carry a payload of **12 Bytes** (Excluding message header and transmission information) and up to 4 downlink messages per day, each of which can carry a payload of 8 Bytes. If you want more details about Sigfox, please visit the [Sigfox Developer Portal](http://makers.sigfox.com/about/).
 
 This documentation will describe how to integrate SigFox devices and its data into the Thinger.io Platform. In the firsts steps, we will review how to configure Thinger.io resources, and then, in the Sigfox side we will configure the communication with the platform for pushing our sensors data.
 
@@ -66,7 +66,7 @@ In this step, you need to select that you want to create a `Custom Callback`, as
 
 <img src="./assets/create_sigfox_callback.png" width="700px" style="border: 1px solid #000000;"> 
 
-Then, we need to configure the callback to write to our data bucket. If you want to show how the configuration looks like, here you have our configuration. But you have the details of every field after the screenshot.
+Then, we need to configure the callback to write to our data bucket. If you want to see how the configuration looks like, here you have our configuration. But you have the details of every field after the screenshot.
 
 <p align="center">
 <img src="./assets/sigfox_callback.png" style="border: 1px solid #000000;"> 
