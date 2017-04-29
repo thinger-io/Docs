@@ -109,14 +109,197 @@ The configuration in our example is the following:
 After these steps, we should have now a callback completely configured to push data to our data bucket.
 
 ## Programming the Device
+Now it is time to program our Sigfox Device that will be sending data to our buckets. In this case, we provide examples for the [SmartEverything](http://www.smarteverything.it/) device, and the [Arduino MKRFOX1200](https://www.arduino.cc/en/Main.ArduinoBoardMKRFox1200).
 
-Now it is time to program our Sigfox Device that will be sending data to our buckets. For this example, we will using the [SmartEverything](http://www.smarteverything.it/) device. SmartEverything is an IoT device specially designed for rapid prototyping, as it has full Arduino compatibility, with multiple sensors ready to use, like MEMS Pressure Sensor, Proximity and Ambient Light Sensor, iNEMO 9-axis inertial module, humidity and temperature sensors, and even NFC NTAG, or a GPS/GNSS integrated antenna. If these features are quite interesting by themselves, this board also integrates a Bluetooth Low Energy (BLE), and of course a Sigfox Module (Telit LE51-868 S 868MHz module).
+### Arduino MKRFOX1200
+
+Arduino MKRFOX1200 has been designed to offer a practical and cost effective solution for makers seeking to add SigFox connectivity to their projects with minimal previous experience in networking. It is based on the Microchip SAMD21 and a ATA8520 SigFox module. Can run for over six months on 2 AA 1.5V batteries with typical usage. The design includes the ability to power the board using two 1.5V AA or AAA batteries or external 5V. 
+
+<p align="center">
+<img src="./assets/arduino_mkrfox1200.jpeg" width="400px"> 
+</p>
+
+
+#### Initial Setup
+
+To program this device, we will use the [Arduino IDE](https://arduino.cc). In this case, it is necessary to install or update the board toolchain, that can be done directly from the Boards Manager, searching for `mrk`, and selecting the Arduino SAMD Boards.
+
+<p align="center">
+<img src="./assets/mkrfox1200_install.png" width="600px" style="border: 1px solid #000000;"> 
+</p>
+
+You will need to install also the `Arduino SigFox for MKRFox1200` library that is available from the Library Manager, and it is also **NECESSARY** to install the `Arduino Low Power`, and the `RTCZero` libraries.
+
+<p align="center">
+<img src="./assets/arduino_sigfox_library.png" width="600px" style="border: 1px solid #000000;"> 
+</p>
+
+
+After a successful installation, we can now select the Board in the Arduino IDE. Just select the Arduino MKRFOX12000. You must also select, as any other Arduino board, the port where de device is connected.
+
+<p align="center">
+<img src="./assets/arduino_mkr1200_board_selection.png" width="300px" style="border: 1px solid #000000;"> 
+</p>
+
+
+You can check that everything is up and running by flashing the following example that will provide information about your module, like the board ID and PAC. This information is necessary for registering the device in Sigfox.
+```cpp
+#include <SigFox.h>
+
+void setup() {
+  Serial.begin(9600); 
+
+  while(!Serial) {};
+
+  if (!SigFox.begin()) {
+    Serial.println("Shield error or not present!");
+    return;
+  }
+
+  String version = SigFox.SigVersion();
+  String ID = SigFox.ID();
+  String PAC = SigFox.PAC();
+
+  // Display module informations
+  Serial.println("MKRFox1200 Sigfox first configuration");
+  Serial.println("SigFox FW version " + version);
+  Serial.println("ID  = " + ID);
+  Serial.println("PAC = " + PAC);
+
+  Serial.println("");
+
+  Serial.print("Module temperature: ");
+  Serial.println(SigFox.internalTemperature());
+
+  Serial.println("Register your board on https://backend.sigfox.com/activate with provided ID and PAC");
+
+  delay(100);
+
+  // Send the module to the deepest sleep
+  SigFox.end();
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+}
+```
+
+**Notice:** from now on, we assume that you already registered the board if your Sigfox account. If not, please, check the [First Configuration](https://www.arduino.cc/en/Tutorial/SigFoxFirstConfiguration) tutorial from Arduino.
+
+#### Pushing data to Sigfox
+
+Now that we have our toolchain running, it is time to code something to push data to the Sigfox Backend. Before presenting the code, **remember** that in the callback we have defined in the Sigfox, we stablished a payload config that is expecting to receive two floats representing both temperature and humidity. So, our payload must match with this definition:
+                                                                                                          
+ ```
+ temp::float:32:little-endian hum::float:32:little-endian
+ ```
+  
+ In our code, this payload can be easily represented by a `struct` that holds two floats. Obviously, you can define your own structs with different data types (but take care of structure padding, and architecture), but the Sigfox payload must be reconfigured to properly decode the fields you are sending.
+  
+  ```cpp
+ struct data{
+  float temp;
+  float hum;
+ };
+  ```
+  
+ So, the code will finally look like the following. In this case we are using the Arduino MKRFOX1200 along with a DHT sensor providing temperature and humidity required for the callback we have configured in the Sigfox back-end. If you do not have a DHT sensor, you can try using the internal temperature sensor of the board, by calling `SigFox.internalTemperature()`, and setting the humidity value to zero or any other value.
+  
+ ```cpp
+ #include <SigFox.h>
+ #include <SimpleDHT.h>
+ #include <ArduinoLowPower.h>
+ 
+ #define DHT11_PIN 0
+ 
+ void setup() {
+   Serial.begin(9600);
+   pinMode(LED_BUILTIN, OUTPUT);
+ }
+ 
+ void blink(unsigned int count, unsigned long ms){
+   for(int i=0; i<count; i++){
+     digitalWrite(LED_BUILTIN, HIGH);
+     delay(ms);
+     digitalWrite(LED_BUILTIN, LOW);    
+     delay(ms);
+   }
+ }
+ 
+ void send_data(){
+   // initialize sigfox module
+   SigFox.begin();
+   delay(100);
+ 
+   // Enable debug led and disable automatic deep sleep
+   SigFox.debug();
+ 
+   // clears all pending interrupts
+   SigFox.status();
+   delay(1);
+   
+   // define sigfox payload data structure
+   struct data{
+     float temp;
+     float hum;
+   };
+ 
+   // read temperature and humidity from DHT sensor connected at pin DHT11_PIN
+   SimpleDHT11 dht11;
+   byte temp, hum;
+   dht11.read(DHT11_PIN, &temp, &hum, NULL);
+   
+   // NOTE! it is not quite efficient sending bytes as floats over the net, but this is just for illustrative purposes
+   struct data reading;
+   reading.temp = temp;
+   reading.hum = hum;
+ 
+   // send the structure to sigfox (8 bytes)
+   Serial.println("Sending SigFox message!");
+   
+   // start a packet
+   SigFox.beginPacket();
+ 
+   // write our buffer
+   SigFox.write((const char*)&reading, sizeof(reading));
+ 
+   // send buffer to SIGFOX network
+   int ret = SigFox.endPacket();  
+   if (ret > 0) {
+     Serial.println("No transmission");
+     // 3 quick blink on error
+     blink(3, 500);
+   } else {
+     Serial.println("Transmission ok");
+     // 1 blink on success
+     blink(1, 1000);
+   }
+   
+   SigFox.end();
+ }
+ 
+ void loop() {
+   send_data();
+   delay(10*60*1000);
+   // you can deep sleep the device if you want
+   //LowPower.sleep(10*60*1000);
+ }
+ ```
+ 
+**Notice**, you can uncomment the `LowPower.sleep` function call and comment the `sleep` one if you want to deep sleep your Arduino MRKFOX1200, i.e., when running from batteries. You can also avoid using the `Serial`, and the `SigFox.debug()` that is there just for debugging purposes. In sleep mode, the device requires a manual reset before flashing it again.
+
+
+### SmartEverything
+
+SmartEverything is an IoT device specially designed for rapid prototyping, as it has full Arduino compatibility, with multiple sensors ready to use, like MEMS Pressure Sensor, Proximity and Ambient Light Sensor, iNEMO 9-axis inertial module, humidity and temperature sensors, and even NFC NTAG, or a GPS/GNSS integrated antenna. If these features are quite interesting by themselves, this board also integrates a Bluetooth Low Energy (BLE), and of course a Sigfox Module (Telit LE51-868 S 868MHz module).
 
 <p align="center">
 <img src="./assets/sigfox_smarteverything_thinger.jpg"> 
 </p>
 
 With these awesome features, we can use the board for multiple purposes, like vehicle tracking with the GPS, building a micro meteorological station, registaring vibrations and impacts with the accelerometers, o any other use case. For this example, we will register just the temperature and humidity. This way, we have created a simple code that will be registering temperature and humidity every 10 minutes. 
+
+#### Initial Setup
 
 To program this device, we will use the [Arduino IDE](https://arduino.cc). In this case, it is necessary to install the board toolchain, that can be done directly from the Boards Manager, searching for `smarteverything`, and selecting the Arrow Boards by Axel Elettronica.
 
@@ -129,6 +312,8 @@ After a successful installation, we can now select the Board in the Arduino IDE.
 <p align="center">
 <img src="./assets/smarteverything_sigfox_board.png" width="300px" style="border: 1px solid #000000;"> 
 </p>
+
+#### Pushing data to Sigfox
 
 Now it is time to write a simple sketch to send our sensor readings to Sigfox. The provided sample sketch will basically initialize, in the setup, the Sigfox Modem, the sensors, and the USB Serial port for some debugging. Then, in the loop, our sketch will read both the temperature and humidity and will transmit the data to Sigfox. It will also check if the transmission is OK to blink a green led on success or a red led otherwise. After that, it will sleep for 10 minutes, as we mentioned in the introduction, Sigfox will allow only 140 messages a day.
 

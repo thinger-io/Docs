@@ -1,6 +1,7 @@
-Any device in thinger.io must be registered to get access to the cloud. Each one has its own identifier and credentials and is related to the user account. The most easy way to registering the device is by using the thinger.io cloud console. This post describes the required steps to register a new device.
 
-## Adding Devices ##
+#Device Management
+
+Any device in Thinger.io must be registered to get access to the cloud. Each one has its own identifier and credentials and is related to the user account. The most easy way to registering the device is by using the thinger.io cloud console. This post describes the required steps to register a new device.
 
 Once you have been logged in your console dashboard, please go to the **Devices** section that appears in the left menu.
 
@@ -31,3 +32,6 @@ Now you can use your new device id and the device credentials to connect the new
 You can try clicking in the device name for opening its dashboard, that currently displays some information like its connection status, connected time, up and down bytes, and a real time activity state. This dashboard will be improved in the future with more functionality and configurable elements. Also you can see in this dashboard a small button called **DEVICE_NAME API**. This button will open a screen that allows you interacting directly with the resources programmed in your device.
 
 <img src="https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/f61eadbe92939d1c7a6bc066df698e6b88ecb74e.png" width="100%">
+
+
+## Data Buckets ##
