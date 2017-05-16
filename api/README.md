@@ -73,8 +73,8 @@ This method allows getting both the access token and refresh token from the user
 
 * **Success Response:**
 
-  * **Code:** 200 <br />
-   **Content:** 
+  * **Code:** 200
+  * **Content:** 
    
    ```json
     {  
@@ -87,8 +87,8 @@ This method allows getting both the access token and refresh token from the user
    ```    
 * **Error Response:**
 
-  * **Code:** 401 Unauthorized <br />
-    **Content:** 
+  * **Code:** 401 Unauthorized
+  * **Content:** 
     ```json
      {  
         "error":{  
@@ -127,8 +127,8 @@ This method allows getting fresh access token and refresh token from a valid ref
 
 * **Success Response:**
 
-  * **Code:** 200 <br />
-   **Content:** 
+  * **Code:** 200
+  * **Content:** 
    ```json
     {  
        "access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE0ODYwNTY0MjYsImlhdCI6MTQ4NjA0OTIyNiwidXNyIjoianQifQ.H7G4N3MMHxUO2gPHzG0a9N1lZ5--Gt56CC4HOiFMKLE",
@@ -140,8 +140,8 @@ This method allows getting fresh access token and refresh token from a valid ref
    ```    
 * **Error Response:**
 
-  * **Code:** 401 Unauthorized <br />
-    **Content:** 
+  * **Code:** 401 Unauthorized
+  * **Content:** 
     ```json
      {  
         "error":{  
@@ -201,8 +201,8 @@ This method allows getting user devices.
 
 * **Success Response:**
 
-  * **Code:** 200 <br />
-   **Content:** Array of devices, with the device identifier, description, and connection status.
+  * **Code:** 200
+  * **Content:** Array of devices, with the device identifier, description, and connection status.
    ```json
    [  
       {  
@@ -218,11 +218,10 @@ This method allows getting user devices.
     
 * **Error Response:**
 
-  * **Code:** 401 Unauthorized <br />
-  * **Code:** 400 Bad request if the search device name is not valid.<br />
-  * **Code:** 404 Not Found <br />
+  * **Code:** 401 Unauthorized
+  * **Code:** 400 Bad request if the search device name is not valid
+  * **Code:** 404 Not Found
   
-
 ## Add User Device
     
 This method allows add a device to an user
@@ -257,12 +256,12 @@ This method allows add a device to an user
       
 * **Success Response:**
 
-  * **Code:** 200 <br />
+  * **Code:** 200
         
 * **Error Response:**
 
-  * **Code:** 401 Unauthorized. If the auth is not success.<br /> 
-  * **Code:** 400 Bad request. If there are missing fields, the device is id is not valid (only [a-zA-Z0-9_]{1,25} is allowed), the device already exists, or the user account is limited.<br /> 
+  * **Code:** 401 Unauthorized. If the auth is not success.
+  * **Code:** 400 Bad request. If there are missing fields, the device is id is not valid (only [a-zA-Z0-9_]{1,25} is allowed), the device already exists, or the user account is limited.
   
  ## Delete User Device
   
@@ -282,13 +281,13 @@ This method allows add a device to an user
   
   * **Success Response:**
   
-    * **Code:** 200 <br />
+    * **Code:** 200
           
   * **Error Response:**
   
-    * **Code:** 401 Unauthorized. If the auth is not success.<br />
-    * **Code:** 400 Bad request. If the device is connected.<br />
-    * **Code:** 404 Not Found. If the device does not exists.<br />
+    * **Code:** 401 Unauthorized. If the auth is not success.
+    * **Code:** 400 Bad request. If the device is connected.
+    * **Code:** 404 Not Found. If the device does not exists.
     
 ## Get Device Stats
 
@@ -308,8 +307,8 @@ This method allows getting information about the device statistics in real-time 
 
 * **Success Response:**
 
-  * **Code:** 200 <br />
-   **Content:** Information about the device, like its connection state and timestamp, its current IP address, and transmitted data.
+  * **Code:** 200
+  * **Content:** Information about the device, like its connection state and timestamp, its current IP address, and transmitted data.
    ```json
    {  
       "connected":true,
@@ -322,9 +321,9 @@ This method allows getting information about the device statistics in real-time 
     
 * **Error Response:**
 
-  * **Code:** 401 Unauthorized <br />
-  * **Code:** 400 Bad request if the search device name is not valid.<br />
-  * **Code:** 404 Not Found <br />
+  * **Code:** 401 Unauthorized
+  * **Code:** 400 Bad request if the search device name is not valid
+  * **Code:** 404 Not Found
   
 *  **Note** 
 
@@ -348,8 +347,8 @@ This method allows getting information about the tokens issued to providing acce
 
 * **Success Response:**
 
-  * **Code:** 200 <br />
-   **Content:** Array with information for each device token.
+  * **Code:** 200
+  * **Content:** Array with information for each device token.
    ```json
     [  
        {  
@@ -362,8 +361,8 @@ This method allows getting information about the tokens issued to providing acce
     
 * **Error Response:**
 
-  * **Code:** 401 Unauthorized <br />
-  * **Code:** 404 Not Found <br />
+  * **Code:** 401 Unauthorized
+  * **Code:** 404 Not Found
 
 ## Add Device Token
     
@@ -402,8 +401,8 @@ Use the generated token in the Authorization header when accessing the device re
    **Note:** `token_resources` and `token_expiration` fields are optional. Use this fields only if you need to limit the access to the device resources, or make the token expire at a given time in UTC.
       
 * **Success Response:**
-  * **Code:** 200 <br />
-  **Body:** Information about the created token, like its identifier, name and token itself.
+  * **Code:** 200
+  * **Body:** Information about the created token, like its identifier, name and token itself.
     ```json
     {
         "id": "58938c016f789e15ee15b583",
@@ -414,8 +413,8 @@ Use the generated token in the Authorization header when accessing the device re
         
 * **Error Response:**
 
-  * **Code:** 401 Unauthorized. If the auth is not success.<br /> 
-  * **Code:** 400 Bad request. If there are missing fields.<br /> 
+  * **Code:** 401 Unauthorized. If the auth is not success.
+  * **Code:** 400 Bad request. If there are missing fields.
   
   
  ## Delete Device Token
@@ -436,12 +435,12 @@ Use the generated token in the Authorization header when accessing the device re
   
   * **Success Response:**
   
-    * **Code:** 200 <br />
+    * **Code:** 200
           
   * **Error Response:**
   
-    * **Code:** 401 Unauthorized. If the auth is not success.<br />
-    * **Code:** 404 Not Found. If the token cannot be found.<br />
+    * **Code:** 401 Unauthorized. If the auth is not success.
+    * **Code:** 404 Not Found. If the token cannot be found.
   
 
 ## Access Device Resources
@@ -474,8 +473,8 @@ You can access all your device resources by calling API endpoints according to y
           
   * **Error Response:**
   
-    * **Code:** 401 Unauthorized. If the auth is not success.<br />
-    * **Code:** 404 Not Found. If the device or resource is not available.<br />
+    * **Code:** 401 Unauthorized. If the auth is not success.
+    * **Code:** 404 Not Found. If the device or resource is not available.
     
 #### Example 1
   
@@ -554,8 +553,8 @@ You can send a HTTP GET request over https://api.thinger.io/v2/users/alvarolb/de
           
   * **Error Response:**
   
-    * **Code:** 401 Unauthorized. If the auth is not success.<br />
-    * **Code:** 404 Not Found. If the device or resource is not available.<br />
+    * **Code:** 401 Unauthorized. If the auth is not success.
+    * **Code:** 404 Not Found. If the device or resource is not available.
     
 #### Example 1
   
@@ -690,8 +689,8 @@ curl \
           
   * **Error Response:**
   
-    * **Code:** 401 Unauthorized. If the auth is not success.<br />
-    * **Code:** 404 Not Found. If the device or resource is not available.<br />
+    * **Code:** 401 Unauthorized. If the auth is not success.
+    * **Code:** 404 Not Found. If the device or resource is not available.
     
 #### Example 1
   
@@ -764,8 +763,8 @@ This API method allows calling a resource defined in your device, so you can exe
           
   * **Error Response:**
   
-    * **Code:** 401 Unauthorized. If the auth is not success.<br />
-    * **Code:** 404 Not Found. If the device or resource is not available.<br />
+    * **Code:** 401 Unauthorized. If the auth is not success.
+    * **Code:** 404 Not Found. If the device or resource is not available.
 
 #### Example 1
   
