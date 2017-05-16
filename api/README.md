@@ -1,4 +1,14 @@
-# Authentication
+# API HOST
+
+All the examples described in this documentation defines URL endpoints based on an relative path, assuming the host is just your server IP, domain, or just the default Thinger.io server. For all calls issued over the default Thinger.io cloud, the host address will be the following:
+
+```
+https://api.thinger.io
+```
+
+*Notice* that if you are running the Thinger.io server in your own host or domain, a secure HTTPS request may fail if you do not configure the appropriate SSL certificate. You can also use non-secure HTTP for your calls, but it is not recommended in production environments.
+
+# Authentication API
 
 ## REST API Authentication
 
@@ -8,21 +18,30 @@ All queries done to the API Rest interface must be signed in order to access the
 Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE0ODYwNDkxNTcsImlhdCI6MTQ4NjA0MTk1NywidXNyIjoianQifQ.pkyG43xiEhDtUHLxuycYv156FGuvNh6nDKQ07kGcaGk
 ```
 
-The access token is a JWT Token that needs to be obtained from the user credentials or from a refresh token. So there are two different concepts:
+The access token is a JWT Token that needs to be obtained from the user credentials, from a refresh token, or just a from a user-defined access token. So there are two different concepts:
 
-**Access Token**
-Is the code used for signing all API requests. It should be included in the HTTP `Authorization` header along with the keyword `Bearer`.
+### Access Token
+Is the token used for granting access to API requests. It should be included in the HTTP `Authorization` header along with the keyword `Bearer`. It can be also included as a URL parameter in the HTTP request, with the key `authorization` (case-sensitive), and the token as the value.
 
-This token, once obtained, has a validity of **2 hours**. So it must be refreshed periodically in order have a valid access token.
+*Notice* that when this token is obtained from user credentials, or from a refresh token, it has a validity of **2 hours**. So it must be refreshed periodically in order have a valid access token.
 
-**Refresh Token**
+### Refresh Token
 The refresh token is a token that cannot provide access to the user resources, but can be used for getting fresh access token in case they expired.
 
-This token has a validity of around **2 months** from issue date, and will be refreshed every time you use it for getting a new access token.
+This token, obtained with the user credentials, or with a valid refresh token, has a validity of around **2 months** from issue date, and will be refreshed every time you use it for getting a new pair of access, and refresh tokens.
 
 So, the idea behind the authentication is that you need to use the user credentials for getting both an access token and a refresh token. You can keep the refresh token in a secure place, and use the access token for accessing user resources. Once the access token has been expired, then use the refresh token for getting a new access token and a new refresh token. 
 
 This way, if the account is used periodically, the user credentials are not required for the authentication process. If the access token is leaked in some way, then the attacker would have a short timespan of access. If the refresh token is also leaked, it can be revoked manually to avoid its use for getting new tokens.
+
+### User Token
+The tokens defined by the user in their account, can be used just like any other access token to authenticate the request. However, as contrary as the tokens obtained from the user credentials, this token does not expire by default, and the user can define the access level over the account resources. So, in this way, the user could define a token for accessing a single device, or for writing to a data bucket without comprising other account resources.
+  
+This kind of tokens can be defined directly from the Thinger.io Console in the `Access Tokens` section. The following picture illustrates how to add permissions to the token for writing to a single bucket, but you can configure them for granting access to different resources and actions of your account.
+
+<p align="center">
+<img src="./assets/token_permission.png" width="400px" style="border: 1px solid #000000;"> 
+</p>
 
 ## Getting Tokens From User Credentials
 
@@ -46,7 +65,7 @@ This method allows getting both the access token and refresh token from the user
   Content-Type:application/x-www-form-urlencoded
   ```
   
-* **Content**
+* **Body**
 
     ```
     grant_type=password&username=username&password=password
@@ -100,7 +119,7 @@ This method allows getting fresh access token and refresh token from a valid ref
   Content-Type:application/x-www-form-urlencoded
   ```
   
-* **Content**
+* **Body**
 
     ```
     grant_type=refresh_token&refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE0OTEzMTIzNTcsImlhdCI6MTQ4NjA0MTk1NywianRpIjoiNTg5MzMzNjUzOWNiZWY0YWEzMDE1YWJjIn0.BYwRii9eL7jeQQQqMbuBEZAvwmmVRAU8kWYCNZEDn0s
@@ -162,7 +181,7 @@ This method allows getting user devices.
 * **URL**
 
     ```
-    /v1/users/:user_id/devices
+    /v1/users/{USER_ID}/devices
     ```
 
 * **Method:**
@@ -211,7 +230,7 @@ This method allows add a device to an user
 * **URL**
 
     ```
-    /v1/users/:user_id/devices
+    /v1/users/{USER_ID}/devices
     ```
 
 * **Method:**
@@ -226,7 +245,7 @@ This method allows add a device to an user
   Content-Type:application/json;charset=UTF-8
   ```
   
-* **Content**
+* **Body**
   
    ```json
    {  
@@ -252,7 +271,7 @@ This method allows add a device to an user
   * **URL**
   
     ```
-    /v1/users/:user_id/devices/:device_id
+    /v1/users/{USER_ID}/devices/{DEVICE_ID}
     ```
   
   * **Method:**
@@ -278,7 +297,7 @@ This method allows getting information about the device statistics in real-time 
 * **URL**
 
     ```
-    /v1/users/:user_id/devices/:device_id/stats
+    /v1/users/{USER_ID}/devices/{DEVICE_ID}/stats
     ```
 
 * **Method:**
@@ -318,7 +337,7 @@ This method allows getting information about the tokens issued to providing acce
 * **URL**
 
     ```
-    /v1/users/:user_id/devices/:device_id/tokens
+    /v1/users/{USER_ID}/devices/{DEVICE_ID}/tokens
     ```
 
 * **Method:**
@@ -355,7 +374,7 @@ Use the generated token in the Authorization header when accessing the device re
 * **URL**
 
     ```
-    /v1/users/:user_id/devices/:device_id/tokens
+    /v1/users/{USER_ID}/devices/{DEVICE_ID}/tokens
     ```
 
 * **Method:**
@@ -370,7 +389,7 @@ Use the generated token in the Authorization header when accessing the device re
   Content-Type:application/json;charset=UTF-8
   ```
   
-* **Content**
+* **Body**
   
    ```json
     {
@@ -384,7 +403,7 @@ Use the generated token in the Authorization header when accessing the device re
       
 * **Success Response:**
   * **Code:** 200 <br />
-  **Content:** Information about the created token, like its identifier, name and token itself.
+  **Body:** Information about the created token, like its identifier, name and token itself.
     ```json
     {
         "id": "58938c016f789e15ee15b583",
@@ -406,7 +425,7 @@ Use the generated token in the Authorization header when accessing the device re
   * **URL**
   
     ```
-    /v1/users/:user_id/devices/:device_id/tokens/:token_id
+    /v1/users/{USER_ID}/devices/{DEVICE_ID}/tokens/:token_id
     ```
   
   * **Method:**
@@ -424,8 +443,346 @@ Use the generated token in the Authorization header when accessing the device re
     * **Code:** 401 Unauthorized. If the auth is not success.<br />
     * **Code:** 404 Not Found. If the token cannot be found.<br />
   
- 
-Work in progress...
+
+## Access Device Resources
+
+You can access all your device resources by calling API endpoints according to your account id, your device id, and the resource you define in your own devices. This section describes how to access different types of resources, like output, input, input/output, and callback resources.
+
+### Output Resources
+
+  Device output resources are the way external processes or services can query information to connected devices, like sensed parameters, reading the current device state, or any other value it is required to extract from the device.
+  
+  This method allows accessing an output resource defined in your device, so you can read the contents provided by each resource in real-time. This way, every API call will execute your output resource to fill the information defined in the resource.
+  
+  * **URL**
+  
+    ```
+    /v2/users/{USER_ID}/devices/{DEVICE_ID}/{RESOURCE_ID}
+    ```
+  
+  * **Method:**
+  
+    ```
+    GET
+    ```
+  
+  * **Success Response:**
+  
+    * **Code:** 200
+    * **Content-type**: application/json
+    * **Body**: A JSON document with the key `out` that stores your resource definition.
+          
+  * **Error Response:**
+  
+    * **Code:** 401 Unauthorized. If the auth is not success.<br />
+    * **Code:** 404 Not Found. If the device or resource is not available.<br />
+    
+#### Example 1
+  
+If your account is `alvarolb`, your device identifier is `nodemcu`, and you have a resource in your device defined like this:
+
+```cpp
+thing["location"] >> [](pson& out){
+    out["lat"] = gps.getLatitude();
+    out["lon"] = gps.getLongitude();
+};
+```
+
+You can send a HTTP GET request over https://api.thinger.io/v2/users/alvarolb/devices/nodemcu/location to get the latitude and longitude from the device:
+
+```json
+{
+  "out" : {
+    "latitude" : 40.125698,
+    "longitude" : -5.466911
+  }
+}
+```
+    
+#### Example 2
+  
+If your account is `alvarolb`, your device identifier is `nodemcu`, and you have a resource in your device defined like this:
+
+```cpp
+thing["temperature"] >> [](pson& out){
+    out = dht.readTemperature();
+};
+```
+
+You can send a HTTP GET request over https://api.thinger.io/v2/users/alvarolb/devices/nodemcu/temperature to get the current temperature:
+
+```json
+{
+  "out" : 21.00
+}
+```
+
+### Input Resources
+
+  Device input resources are the way the connected devices can receive information from the cloud, like actuating over them to activate a motor, switch a relay, move a servo, or setting a different logical configuration.
+  
+  This method allows pushing data to an input resource defined in your device, so you can send data to your resources in real-time. Therefore, this call will execute your device resource with some information.
+  
+  * **URL**
+  
+    ```
+    /v2/users/{USER_ID}/devices/{DEVICE_ID}/{RESOURCE_ID}
+    ```
+  
+  * **Method:**
+  
+    ```
+    POST
+    ```
+    
+      
+  * **Content Type**
+    ```
+    Content-Type:application/json;charset=UTF-8
+    ```
+  
+  * **Body**
+   ```json
+   {  
+      "in": <any json value, json document, or json array>
+   }
+   ```
+  
+  * **Success Response:**
+  
+    * **Code:** 200 OK. If your device is connected and the resource was called successfully.
+          
+  * **Error Response:**
+  
+    * **Code:** 401 Unauthorized. If the auth is not success.<br />
+    * **Code:** 404 Not Found. If the device or resource is not available.<br />
+    
+#### Example 1
+  
+If your account is `alvarolb`, your device identifier is `nodemcu`, and you have an input resource in your device defined like this, i.e., for turning on/off a relay:
+
+```cpp
+thing["relay"] << [](pson& in){
+    digitalWrite(RELAY_PIN, (bool)in);
+};
+```
+
+You can send a HTTP POST request over https://api.thinger.io/v2/users/alvarolb/devices/nodemcu/relay to change the current state:
+
+```json
+{
+  "in" : true
+}
+```
+
+```bash
+curl \
+  -H "Content-Type: application/json;charset=UTF-8" \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." \
+  -H "Accept: application/json, text/plain, */*" \
+  -X POST \
+  -d '{"in":true}' \
+  https://api.thinger.io/v2/users/alvarolb/devices/nodemcu/relay
+```
+    
+#### Example 2
+  
+If your account is `alvarolb`, your device identifier is `nodemcu`, and you have an input resource in your device defined like this, i.e., for changing an RGB light color:
+
+```cpp
+thing["rgb"] << [](pson& in){
+    int r = in["r"];
+    int g = in["g"];
+    int b = in["b"];
+    // use here r, g, and b values to change the light color
+};
+```
+
+You can send a HTTP POST request over https://api.thinger.io/v2/users/alvarolb/devices/nodemcu/rgb to set the current color:
+
+```json
+{
+  "in" : {
+    "r" : 0,
+    "g" : 255,
+    "b" : 0
+  }
+}
+```
+
+Curl example:
+
+```bash
+curl \
+  -H "Content-Type: application/json;charset=UTF-8" \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." \
+  -H "Accept: application/json, text/plain, */*" \
+  -X POST \
+  -d '{"in":{"r":0,"g":255,"b":0}}' \
+  https://api.thinger.io/v2/users/alvarolb/devices/nodemcu/rgb
+```
+
+#### Example 3
+  
+If your account is `alvarolb`, your device identifier is `nodemcu`, and you have an input resource in your device defined like this, i.e., for executing a linux command, changing a text on a screen, etc:
+
+```cpp
+thing["command"] << [](pson& in){
+    String command = in;
+    // work here with the string
+};
+```
+
+You can send a HTTP POST request over https://api.thinger.io/v2/users/alvarolb/devices/nodemcu/command to set the current color:
+
+```json
+{
+  "in" : "New customer: 101 today!"
+}
+```
+
+Curl example:
+
+```bash
+curl \
+  -H "Content-Type: application/json;charset=UTF-8" \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." \
+  -H "Accept: application/json, text/plain, */*" \
+  -X POST \
+  -d '{"in":"New customer: 101 today!"}' \
+  https://api.thinger.io/v2/users/alvarolb/devices/nodemcu/command
+```
+
+### Input/Output Resources
+
+  Device resources can be defined also as input/output resources, that is, they can provide an output based on an input.
+  
+  
+  * **URL**
+  
+    ```
+    /v2/users/{USER_ID}/devices/{DEVICE_ID}/{RESOURCE_ID}
+    ```
+  
+  * **Method:**
+  
+    ```
+    POST
+    ```
+      
+  * **Content Type**
+    ```
+    Content-Type:application/json;charset=UTF-8
+    ```
+  
+  * **Body**
+   ```json
+   {  
+      "in": <any json value, json document, or json array>
+   }
+   ```
+  
+  * **Success Response:**
+  
+    * **Code:** 200
+    * **Content-type**: application/json
+    * **Body**: A JSON document with the key `out` that stores your resource output.
+          
+  * **Error Response:**
+  
+    * **Code:** 401 Unauthorized. If the auth is not success.<br />
+    * **Code:** 404 Not Found. If the device or resource is not available.<br />
+    
+#### Example 1
+  
+If your account is `alvarolb`, your device identifier is `nodemcu`, and you have an input/output resource `io` in your device defined like this, i.e., for returning the sum and multiplication:
+
+```cpp
+thing["io"] = [](pson& in, pson& out){
+    out["sum"] = (long)in["value1"] + (long)in["value2"];
+    out["mult"] = (long)in["value1"] * (long)in["value2"];
+};
+```
+
+You can send a HTTP POST request over https://api.thinger.io/v2/users/alvarolb/devices/nodemcu/io to get the result based on the input:
+
+**Input**
+
+```json
+{
+  "in" : {
+    "value1" : 20,
+    "value2" : 10
+  }
+}
+```
+
+**Output**
+
+```json
+{
+  "out" : {
+    "sum" : 30,
+    "mult" : 200
+  }
+}
+```
+
+**Curl Example**
+
+```bash
+curl \
+  -H "Content-Type: application/json;charset=UTF-8" \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." \
+  -H "Accept: application/json, text/plain, */*" \
+  -X POST \
+  -d '{"value1":20,"value2":10}' \
+  https://api.thinger.io/v2/users/alvarolb/devices/nodemcu/io
+```
+
+### Resources without parameters
+
+This kind of resources does not provide or requires any information to be executed. They are just like functions defined in the device that can be called as required, for example, to force a device update, reboot the system, or any other action. 
+
+This API method allows calling a resource defined in your device, so you can execute the associated function. 
+
+  * **URL**
+  
+    ```
+    /v2/users/{USER_ID}/devices/{DEVICE_ID}/{RESOURCE_ID}
+    ```
+  
+  * **Method:**
+  
+    ```
+    GET
+    ```
+  
+  * **Success Response:**
+  
+    * **Code:** 200 OK. If your device is connected and the resource was called successfully.
+          
+  * **Error Response:**
+  
+    * **Code:** 401 Unauthorized. If the auth is not success.<br />
+    * **Code:** 404 Not Found. If the device or resource is not available.<br />
+
+#### Example 1
+  
+If your account is `alvarolb`, your device identifier is `nodemcu`, and you have a resource `reset` in your device defined like this, i.e., for rebooting the ESP8266 device.
+
+```cpp
+thing["reset"] = [](){
+    ESP.reset();
+};
+```
+You can send a HTTP GET request over https://api.thinger.io/v2/users/alvarolb/devices/nodemcu/reset to reboot the device:
+
+```bash
+curl \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." \
+  https://api.thinger.io/v2/users/alvarolb/devices/nodemcu/reset
+```
 
 # User API
 
