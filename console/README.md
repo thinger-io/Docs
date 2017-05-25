@@ -168,7 +168,7 @@ write call that will allow us to send data from different devices and time perio
 <img src="assets/bucketTimeSample.PNG" width="300px">
 </p> 
 
-There are some limitations into the minimum period between data writes and in the time of data retention according to your account, you can check this into the
+There are some limitations into the minimum sampling interval and in the data retention time according to your account, you can check this into the
 pricing tab: https://thinger.io/pricing/
 
 ## Exporting database
