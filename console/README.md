@@ -255,6 +255,11 @@ One endpoint is a REST API message that we can send to any third party system to
 Create and endpoint entry on your account is very easy too, just go to the **endpoint** menu tab and press into de **Add endpoint** button, it will open a form where you can introduce the endpoint indentifier which you will use into your code, some description and select a type.
 Different types are preconfigured endpoints that we have created to simplify even more the endpoint creation process. so, just select any of the strip menu options and fill the new form entries, then press **Save** button and your endpoint will be created.
 There are some particular endpoint types that we should talk about:
+
+<p align="center">
+<img src="assets/EmailEndpoint.PNG" width="300px">
+</p> 
+
 Thinger.io email endpoint: This types allows to send an email to an specific direction. It is possible to include virtual data values into the email context using the output identifier any variables included in the call_endpoint() attached Pson, surrounded by two keys: "{{example}}"
 
 ```cpp
