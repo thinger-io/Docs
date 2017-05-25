@@ -183,7 +183,7 @@ into "Export data" button. After a few minutes, you will receive an email with a
 It is possible to delete all the stored information selecting the check box and pressing Delete button. This process could delay some minutes if there was a lot of entries.
 
 <p align="center">
-<img src="assets/deleteBucket.png" width="300px">
+<img src="assets/deleteBucket.PNG" width="300px">
 </p>     
         
 Dashboards
