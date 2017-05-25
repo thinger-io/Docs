@@ -151,7 +151,7 @@ Thinger.io server is able to create data bases with the output resources informa
 to create historic dashboards or to export to a CSV file and apply some data analysis to the registered information. You can manage data buckets pressing into the next main menu tab:
     
  <p align="center">
- <img src="assets/bucketsTab.png" width="300px">
+ <img src="assets/bucketsTab.PNG" width="300px">
  </p> 
     
 To create a data bucket, just click into the menu tab and press the **Add Bucket** button.
