@@ -212,7 +212,7 @@ First you will see on this form is a strip menu where you can select the widget 
 to identify the widget and the represented information like is showed in the image below:
 
 <p align="center">
-<img src="assets/addWidget.PNG" width="300px">
+<img src="assets/widgetTypes.PNG" width="300px">
 </p>  
     
 This is the most important things you should now about the widgets configuration:
@@ -222,7 +222,7 @@ is connected, the form will create a new strip menu where you can select the res
 write the resource and variables identifier into a text box, but it is very important that you write the identifiers properly. 
     
 <p align="center">
-<img src="assets/widgetTypes.PNG" width="300px">
+<img src="assets/dataSource.PNG" width="300px">
 </p>  
     
 When you begin creating a series chart, note that more than one variable can be selected into the same chart it belongs to the same resource, using **control** key of your keyboard or making a 
