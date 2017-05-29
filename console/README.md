@@ -240,12 +240,29 @@ Ones you have fill out the details and click the **save** button, the widget wil
 Sampling protocol: There are to different sampling protocols that you can select to actualize the data when it comes from a device: A fixed sampling interval (with a minimum sampling of one second), or "send by device" interval what do not point any specific time, so the server will be always ready to receive any data from the device when it makes any data stream.
 
 ```cpp
+int last_stream;
 
-// update by device example code
+void setup(){
+  thing.add_wifi(SSID, SSID_PASSWORD);
+  thing["lux"] >> [](pson& out){     
+    out = analogRead(A0);
+  };
+}
 
+float previousHeading = 0;
+void loop() {
+  thing.handle();
+ 
+  if(millis()>last_stream+60000){  //stream each minute
+    thing.stream(thing["lux"]);
+    last_stream=millis();
+  }
+}
 ```
-
-   PONER EL GIFT DEL DASHBOARD 
+<p align="center">
+<img src="https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/c05197985d9ee92a9e12aaa71ab7508682bc3fbc.gif" width="100%">
+</p> 
+ 
                     
 Endpoints
 ======
