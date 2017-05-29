@@ -43,7 +43,7 @@ If all goes fine, you should see some success message
 Now you can use your new device id and the device credentials to connect the new device.
 
 
-Check out the source code libraries installation guide to get the main code and the examples for your working platform:
+Checkout the source code libraries installation guide to get the main code and the examples for your working platform:
  
   [Arduino](http://docs.thinger.io/arduino/)
   
@@ -84,13 +84,13 @@ an identifier with the resource name and if you make a complex resource with mor
 with there input or output keys. 
 
 Thinger.io counts with two different basic resource types: input and output. You can see an explanation of how to create each
-resource for your work platform in the source code documentation. > link a la docu de recursos
+resource for your work platform in the source code documentation. 
 
 <p align="center">
 <img src="assets/deviceApi.PNG" width="80%">
 </p>
 
-The input resources will be represented with an input tex box, and will be automatically limited by the system to receive 
+The input resources will be represented with an input text box, and will be automatically limited by the system to receive 
 a valid value due to the variable type that you associate to de input key.
 
 If you create a bool or binary value input, the interface is able to create a switch like this
@@ -139,7 +139,7 @@ It is possible to change some device details like the description and the creden
 <img src="assets/deviceEdit.png" width="100%">
 </p>
   
- If you need to change the name or it es necessary to delete the device, it is possible to delete the hole configuration of the
+ If you need to change the name or it is necessary to delete the device, it is possible to delete the hole configuration of the
  device selecting it into the device tab and clicking on the "Delete" button.
  
  
@@ -190,7 +190,7 @@ Dashboards
 ## creating dashboards
 A dashboard is graphical interface system that allows to create representations of any resource values from your devices. They counts with a lot of different widgets that 
 you can use to represent the information according to your requirements, such as time series or donut charts, progress bars, text and image boxes and some input widgets like a slide button 
-or a slider. Best thing of this feature is that you can select multiple parameters like widgets sizes, colours units, or even the data refresh sampling interval that the system will use to
+or a slider. Best thing of this feature is that you can select multiple parameters like widgets sizes, colors units, or even the data refresh sampling interval that the system will use to
 actualize the represented values. All dashboard features can be founded into the next menu tab:
 
  
@@ -216,7 +216,7 @@ to identify the widget and the represented information like is showed in the ima
     
 This is the most important things you should now about the widgets configuration:
 
-Chart input from device: If you select this option you will be able to access to any device resources, that will be showed en real time during the visualization o this dashboard. If the device
+Chart input from device: If you select this option you will be able to access to any device resources that will be showed en real time during the visualization o this dashboard. If the device
 is connected, the form will create a new strip menu where you can select the resource and the variables that you want to include into the widget. If the device is not connected you can select it and 
 write the resource and variables identifier into a text box, but it is very important that you write the identifiers properly. 
     
@@ -225,7 +225,7 @@ write the resource and variables identifier into a text box, but it is very impo
 </p>  
     
 When you begin creating a series chart, note that more than one variable can be selected into the same chart it belongs to the same resource, using **control** key of your keyboard or making a 
-multiple selection dragging the mouse. It is possible to change the colors of each variable line clicking into the colour box at the bottom of the form. 
+multiple selection dragging the mouse. It is possible to change the colors of each variable line clicking into the color box at the bottom of the form. 
   
 <p align="center">
 <img src="assets/multipleVariable.PNG" width="80%">
@@ -235,7 +235,7 @@ chart input from data bucket: Feed a dashboard directly from device will works a
 If you want to make a long range time representation of any data, the correct  way to make it is creating a data bucket and feeding the dashboard with the stored data. When you select this tab into the strip menu, it will appear a list with all created bucket that you can select.
 
 Fill splines option: This option will create a nice color effect your widget, specially if you are using a multivariable chart.
-Multiple axes option: This feature is necessary if you are using variables with different units or ranges, because it wil include different ordinate axes to the chart, making easy the check out of the values.
+Multiple axes option: This feature is necessary if you are using variables with different units or ranges, because it will include different ordinate axes to the chart, making easy the checkout of the values.
 Ones you have fill out the details and click the **save** button, the widget will appear into an standard size and position that you can modified like you want by dragging the box or his margins.
 Sampling protocol: There are to different sampling protocols that you can select to actualize the data when it comes from a device: A fixed sampling interval (with a minimum sampling of one second), or "send by device" interval what do not point any specific time, so the server will be always ready to receive any data from the device when it makes any data stream.
 
@@ -268,7 +268,7 @@ Endpoints
 ======
   
 One endpoint is a REST API message that we can send to any third party system to apply for an specific service. It is possible to create and send endpoint queries with the device program, but you will need to include a lot of inefficient code to send, receive and extract the information if the endpoint server gives some output. Thinger.io server includes an endpoint manager that allows to create endpoints to different services using the same simple structure in your  source code >>you can see the source code explanation and examples here<<, note that it is possible to attach an output Pson into the endpoint call, with which you can include some information to the server.  
-Create and endpoint entry on your account is very easy too, just go to the **endpoint** menu tab and press into de **Add endpoint** button, it will open a form where you can introduce the endpoint indentifier which you will use into your code, some description and select a type.
+Create and endpoint entry on your account is very easy too, just go to the **endpoint** menu tab and press into de **Add endpoint** button, it will open a form where you can introduce the endpoint identifier which you will use into your code, some description and select a type.
 Different types are preconfigured endpoints that we have created to simplify even more the endpoint creation process. so, just select any of the strip menu options and fill the new form entries, then press **Save** button and your endpoint will be created.
 There are some particular endpoint types that we should talk about:
 
@@ -297,7 +297,7 @@ void loop() {
 
 
 IFTTT maker channel: 
-This channel allows executing multiple actions like sending tweets, posting to Facebook, doing push notifications, sending emails or SMS, and many many other actions you must check. To do this you will need to have an IFTTT account. 
+This channel allows executing multiple actions like sending tweets, posting to Facebook, doing push notifications, sending emails or SMS, and many other actions you must check. To do this you will need to have an IFTTT account. 
 
 HTTP request: There are countless endpoint services on internet, if you want to create queries to any other service that is not include in our selection, it is possible to create an HTTP request interface in the Thinger.io server, select the type (GET / POST) and even include any other request headers that you need to adapt the request to the third party requirements. Then you can select the request body, creating a JSON encapsulation or sending a custom data string.
 
