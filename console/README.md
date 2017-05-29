@@ -23,23 +23,23 @@ So, once you have been logged in your console dashboard, please go to the **Devi
 <img src="https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/8b411097d72092216e8611aab2d02efea16ef797.png" width="196" height="38"> 
 
 This section will list your registered devices and will show some information about its connection. Something like the following picture.
-
+<p align="center">
 <img src="https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/58e06f4e8771738d9a1fa7f26a53fdb2864b5937.png" width="80%"> 
-    
+</p>    
 In this screen click on **Add Device** that will open a form in which you can introduce the device credentials.
-
+<p align="center">
 <img src="https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/b0a8aa7501dfb947a8b6d0add5a9d4b698bb657a.png" width="80%"> 
-
+</p>
 Add here the **device identifier** (unique within your devices), a **device description** that may help you to identify your device, and the **device credentials**. Each device has its own identifier/credential, so a comprised device will not affect other devices. All your passwords in the server are stored securely using `PBKDF2 SHA256` with a 32 bytes salt generated with `PRNG` and a non-despreciable amount of iterations. Keep your **device identifier** and **device credential**, as you will need them for connecting your device (the password is not visible once you set it).
 
 If all goes fine, you should see some success message 
-
+<p align="center">
 <img src="https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/68e13f2c4df7ecb9f0261d84ba36e12b3d8498ce.png" width="80%"> 
-
+</p>
  Go back to your devices list, and now you should see your new device created.
-
+<p align="center">
 <img src="https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/ed5abaa692e2257e08cc06bbed7065d6a4ff3a58.png" width="80%"> 
-
+</p>
 Now you can use your new device id and the device credentials to connect the new device.
 
 
@@ -149,10 +149,9 @@ Data buckets
 ## creating a bucket
 Thinger.io server is able to create data bases with the output resources information that we associate to a Data Bucket. With this feature, we can store the values 
 to create historic dashboards or to export to a CSV file and apply some data analysis to the registered information. You can manage data buckets pressing into the next main menu tab:
-    
- <p align="center">
- <img src="assets/bucketsTab.PNG" width="200px" height="38">
- </p> 
+ 
+ <img src="assets/bucketsTab.PNG" width="200px" height="50">
+ 
     
 To create a data bucket, just click into the menu tab and press the **Add Bucket** button.
 
@@ -194,9 +193,9 @@ you can use to represent the information according to your requirements, such as
 or a slider. Best thing of this feature is that you can select multiple parameters like widgets sizes, colours units, or even the data refresh sampling interval that the system will use to
 actualize the represented values. All dashboard features can be founded into the next menu tab:
 
-<p align="center">
-<img src="assets/dashboardTab.PNG" width="200px" height="38">
-</p> 
+ 
+<img src="assets/dashboardTab.PNG" width="200px" height="50">
+ 
 
 First step to create a dashboard is go to the dashboards tab and press into the "Add dashboard button", it will open a details form where you can introduce the name, description
 and identifier of the new dashboard. Then go back the main tab and select the new element to open the dashboard and see the empty canvass. Pressing into the upper button you
