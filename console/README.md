@@ -276,16 +276,23 @@ There are some particular endpoint types that we should talk about:
 <img src="assets/EmailEndpoint.PNG" width="80%">
 </p> 
 
-Thinger.io email endpoint: This types allows to send an email to an specific direction. It is possible to include virtual data values into the email context using the output identifier any variables included in the call_endpoint() attached Pson, surrounded by two keys: "{{example}}"
+Thinger.io email endpoint: This types allows to send an email to an specific direction. It is possible to include virtual data values into the email context using the output identifier any variables included in the call_endpoint() attached Pson, surrounded by two keys: **{{identifier}}**. Then, the source code of your program should call this endpoint and attach any Pson with the variables like in the example below:
 
-```cpp
-EJEMPLO DE CORREO CON VARIABLES
-```
+ ```cpp
+void setup(){
+  thing.add_wifi(SSID, SSID_PASSWORD);
+}
+ 
+void loop() {
+  thing.handle();
+  
+  pson data;
+  data["temperature"] = dht.readTemperature();
+  data["Humidity"] = dht.readHumidity();
+ 
+  thing.call_endpoint("ExampleMail", data);
+  }
 
-Then, the source code of your program should call this endpoint and attach any Pson with the variables like in the example below:
-
-```cpp
-EJEMPLO DE CODIGO DE LLAMADA A ENDPOINT
 ```
 
 
