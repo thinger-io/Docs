@@ -11,7 +11,7 @@ and functionalities with your devices. The basic account, allows to create two d
 use a few of all features but, you can enlarge this capabilities using the Account Update tab. 
 
 <p align="center">
-<img src="assets/Stadistics.PNG" width="600px">
+<img src="assets/Stadistics.PNG" width="100%">
 </p>
 
 
@@ -24,21 +24,21 @@ So, once you have been logged in your console dashboard, please go to the **Devi
 
 This section will list your registered devices and will show some information about its connection. Something like the following picture.
 
-<img src="https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/58e06f4e8771738d9a1fa7f26a53fdb2864b5937.png" width="100%"> 
+<img src="https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/58e06f4e8771738d9a1fa7f26a53fdb2864b5937.png" width="80%"> 
     
 In this screen click on **Add Device** that will open a form in which you can introduce the device credentials.
 
-<img src="https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/b0a8aa7501dfb947a8b6d0add5a9d4b698bb657a.png" width="100%"> 
+<img src="https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/b0a8aa7501dfb947a8b6d0add5a9d4b698bb657a.png" width="80%"> 
 
 Add here the **device identifier** (unique within your devices), a **device description** that may help you to identify your device, and the **device credentials**. Each device has its own identifier/credential, so a comprised device will not affect other devices. All your passwords in the server are stored securely using `PBKDF2 SHA256` with a 32 bytes salt generated with `PRNG` and a non-despreciable amount of iterations. Keep your **device identifier** and **device credential**, as you will need them for connecting your device (the password is not visible once you set it).
 
 If all goes fine, you should see some success message 
 
-<img src="https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/68e13f2c4df7ecb9f0261d84ba36e12b3d8498ce.png" width="100%"> 
+<img src="https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/68e13f2c4df7ecb9f0261d84ba36e12b3d8498ce.png" width="80%"> 
 
  Go back to your devices list, and now you should see your new device created.
 
-<img src="https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/ed5abaa692e2257e08cc06bbed7065d6a4ff3a58.png" width="100%"> 
+<img src="https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/ed5abaa692e2257e08cc06bbed7065d6a4ff3a58.png" width="80%"> 
 
 Now you can use your new device id and the device credentials to connect the new device.
 
@@ -58,14 +58,14 @@ Open an example code an fill the device details with the same device ID and cred
 interface, like it is showed in the image below:
      
 <p align="center">
-<img src="assets/AddDevice2.PNG" width="300px">
+<img src="assets/AddDevice2.PNG" width="100%">
 </p>
         
 Then, compile and run our program and click on your device name to open its administration dashboard, where you will be able to see 
  some status information about your device like IP, connection time or actual connection status:
  
   <p align="center">
-  <img src="assets/DeviceDashboard.png" width="300px">
+  <img src="assets/DeviceDashboard.png" width="100%">
   </p>
 
 ## Opening the device dashboard ##
@@ -87,7 +87,7 @@ Thinger.io counts with two different basic resource types: input and output. You
 resource for your work platform in the source code documentation. > link a la docu de recursos
 
 <p align="center">
-<img src="assets/deviceApi.PNG" width="300px">
+<img src="assets/deviceApi.PNG" width="80%">
 </p>
 
 The input resources will be represented with an input tex box, and will be automatically limited by the system to receive 
@@ -101,7 +101,7 @@ It is possible to build a dual resource with input and output values. this value
 them with a value keys:
 
 <p align="center">
-<img src="assets/inOutResource.PNG" width="300px">
+<img src="assets/inOutResource.PNG" width="80%">
 </p>
 
     
@@ -113,7 +113,7 @@ possible to reproduce the functionality of your actions in any other Rest-full p
 functionality will be explained into an specific section of the documentation. 
 
  <p align="center">
- <img src="assets/showQuery.PNG" width="300px">
+ <img src="assets/showQuery.PNG" width="80%">
  </p>
     
 ## Creating a device Token 
@@ -126,7 +126,7 @@ the green button with the text "+ Add" on the right of the box. It will appear a
 and the specific time and resources permissions. 
 
 <p align="center">
-<img src="assets/addTockenForm.PNG" width="300px">
+<img src="assets/addTockenForm.PNG" width="80%">
 </p>
 
 ## Edit device settings
@@ -136,7 +136,7 @@ It is possible to change some device details like the description and the creden
  the device.
    
  <p align="center">
-<img src="assets/deviceEdit.png" width="300px">
+<img src="assets/deviceEdit.png" width="100%">
 </p>
   
  If you need to change the name or it es necessary to delete the device, it is possible to delete the hole configuration of the
@@ -151,13 +151,13 @@ Thinger.io server is able to create data bases with the output resources informa
 to create historic dashboards or to export to a CSV file and apply some data analysis to the registered information. You can manage data buckets pressing into the next main menu tab:
     
  <p align="center">
- <img src="assets/bucketsTab.PNG" width="300px">
+ <img src="assets/bucketsTab.PNG" width="200px" height="38">
  </p> 
     
 To create a data bucket, just click into the menu tab and press the **Add Bucket** button.
 
  <p align="center">
- <img src="assets/AddBucket.PNG" width="300px">
+ <img src="assets/AddBucket.PNG" width="100%">
  </p>
 
 Then fill the details and switch on the storage with the button "Enable". 
@@ -165,7 +165,7 @@ Next step will be associate the bucket to any data source, which can be an speci
 write call that will allow us to send data from different devices and time periods using a Bucket_call instruction with the bucket identifier. 
 
 <p align="center">
-<img src="assets/bucketTimeSample.PNG" width="300px">
+<img src="assets/bucketTimeSample.PNG" width="80%">
 </p> 
 
 There are some limitations into the minimum sampling interval and in the data retention time according to your account, you can check this into the
@@ -176,14 +176,14 @@ You can download all your stored information into a CSV file going to any bucket
 into "Export data" button. After a few minutes, you will receive an email with a download of your file. 
             
 <p align="center">
-<img src="assets/DowloadBucket.PNG" width="300px">
+<img src="assets/DowloadBucket.PNG" width="80%">
 </p>        
       
 ## Delete database
 It is possible to delete all the stored information selecting the check box and pressing Delete button. This process could delay some minutes if there was a lot of entries.
 
 <p align="center">
-<img src="assets/deleteBucket.PNG" width="300px">
+<img src="assets/deleteBucket.PNG" width="80%">
 </p>     
         
 Dashboards
@@ -195,7 +195,7 @@ or a slider. Best thing of this feature is that you can select multiple paramete
 actualize the represented values. All dashboard features can be founded into the next menu tab:
 
 <p align="center">
-<img src="assets/dashboardTab.PNG" width="300px">
+<img src="assets/dashboardTab.PNG" width="200px" height="38">
 </p> 
 
 First step to create a dashboard is go to the dashboards tab and press into the "Add dashboard button", it will open a details form where you can introduce the name, description
@@ -203,7 +203,7 @@ and identifier of the new dashboard. Then go back the main tab and select the ne
 will enable the dashboard edition, and then you are ready to create the first widget going to the "new widget" button to open the settings form. 
 
 <p align="center">
-<img src="assets/emptyDashboard.PNG" width="300px">
+<img src="assets/emptyDashboard.PNG" width="100%">
 </p> 
 
 ## adding new widgets
@@ -212,7 +212,7 @@ First you will see on this form is a strip menu where you can select the widget 
 to identify the widget and the represented information like is showed in the image below:
 
 <p align="center">
-<img src="assets/widgetTypes.PNG" width="300px">
+<img src="assets/widgetTypes.PNG" width="80%">
 </p>  
     
 This is the most important things you should now about the widgets configuration:
@@ -222,14 +222,14 @@ is connected, the form will create a new strip menu where you can select the res
 write the resource and variables identifier into a text box, but it is very important that you write the identifiers properly. 
     
 <p align="center">
-<img src="assets/dataSource.PNG" width="300px">
+<img src="assets/dataSource.PNG" width="80%">
 </p>  
     
 When you begin creating a series chart, note that more than one variable can be selected into the same chart it belongs to the same resource, using **control** key of your keyboard or making a 
 multiple selection dragging the mouse. It is possible to change the colors of each variable line clicking into the colour box at the bottom of the form. 
   
 <p align="center">
-<img src="assets/multipleVariable.PNG" width="300px">
+<img src="assets/multipleVariable.PNG" width="80%">
 </p> 
  
 chart input from data bucket: Feed a dashboard directly from device will works always on real time situations, and the data will be stored into your browser cache memory so, if your refresh the session, all data sowed into your time series charts will be lost. 
@@ -257,7 +257,7 @@ Different types are preconfigured endpoints that we have created to simplify eve
 There are some particular endpoint types that we should talk about:
 
 <p align="center">
-<img src="assets/EmailEndpoint.PNG" width="300px">
+<img src="assets/EmailEndpoint.PNG" width="80%">
 </p> 
 
 Thinger.io email endpoint: This types allows to send an email to an specific direction. It is possible to include virtual data values into the email context using the output identifier any variables included in the call_endpoint() attached Pson, surrounded by two keys: "{{example}}"
@@ -271,13 +271,7 @@ Then, the source code of your program should call this endpoint and attach any P
 ```cpp
 EJEMPLO DE CODIGO DE LLAMADA A ENDPOINT
 ```
-		
 
-The result of this integration should be this:
-		
-<p align="center">
-<img src="assets/ReceivedEmailText.PNG" width="300px">
-</p> 
 
 IFTTT maker channel: 
 This channel allows executing multiple actions like sending tweets, posting to Facebook, doing push notifications, sending emails or SMS, and many many other actions you must check. To do this you will need to have an IFTTT account. 
