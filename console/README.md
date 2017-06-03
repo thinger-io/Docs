@@ -309,7 +309,7 @@ All thinger.io features are bassed on REST API messages, so it is possible to cr
 All thinger.io features are based on REST API messages, so it is possible to create multiple integrations with the platform by this way but, it is necessary to count with a persistent authorization that allows to create secure communications with thinger.io server.  An access token is a key that we can create and administrate to allow access to any feature of our personal account. It is possible to get access to multiple elements with only one token, like an specific resource of any device, a dashboard, a data bucket, etc. 
 To create an Access token, go to its menu tab and press into “Add Token” button. 
 
-<img src="assets/dashboardTab.PNG" width="200px" height="50">
+<img src="assets/accessTockenTab.PNG" width="200px" height="50">
 
 It will appear a form, where you can fill the token details, manage the enabled status and the permissions. If you do not add permissions, the token will be created without any capability, so next step will be select any features, for example we selected given access to a device:
 
