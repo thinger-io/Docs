@@ -314,13 +314,13 @@ To create an Access token, go to its menu tab and press into “Add Token” but
 It will appear a form, where you can fill the token details, manage the enabled status and the permissions. If you do not add permissions, the token will be created without any capability, so next step will be select any features, for example we selected given access to a device:
 
 <p align="center">
-<img src="assets/addTokenPermission.PNG" width="80%">
+<img src="assets/addTokenPermission.png" width="80%">
 </p>  
 
 Now we can select an specific action between all possible functions that we can make on thinger.io with a single device. We have added permission to access to any resources of our device:
 
 <p align="center">
-<img src="assets/selectPermission.PNG" width="80%">
+<img src="assets/selectPersmission.PNG" width="80%">
 </p>   
 
 Then , press **Add permission** and **Add tocken** and your authorization code will be created:
