@@ -82,7 +82,7 @@ When you are done editing the parameters, exit the nano editor pressing `Ctrl+X`
 
 Now you must add execute permissions to the `run.sh` script. 
 
-    chdmod +x run.sh
+    chmod +x run.sh
 
 And now you can run it to test that everything is working.
 
