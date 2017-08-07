@@ -423,7 +423,7 @@ The configurable parameters are the following:
 The image/MJPEG widget can be used to represent both a still image, like your business logo, or a live stream from a MJPEG source, like a surveillance camera. To feed this widget it is necessary the image/MJPEG url.
 
 <p align="center">
-<img src="assets/CameraMJPEG.PNG" width="80%">
+<img src="assets/CameraMJPEG.png" width="80%">
 </p>  
 
 The configurable parameters are the following:
