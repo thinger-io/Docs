@@ -284,7 +284,7 @@ To manage all your dashboards, it is necessary to access to the `Dashboards` sec
 Then click on the `Add Dashboard` button that will open a new interface for entering the dashboard details, like in the following screenshot:
 
 <p align="center">
-<img src="assets/CreateDashboard.PNG" width="80%">
+<img src="assets/CreateDashboard.png" width="80%">
 </p>
 
 Here it is necessary to configure different parameters:
@@ -324,7 +324,7 @@ A time series chart is a graph that can display values over time. In this sense,
 The configurable parameters are the following:
 
 <p align="center">
-<img src="assets/TimeSeriesChartWidget.PNG" width="80%">
+<img src="assets/TimeSeriesChartWidget.png" width="80%">
 </p>
 
 * **Title**: Optional title for the widget. 
@@ -353,7 +353,7 @@ A donut chart is a graph that can display a value, normally in form of a rounded
 The configurable parameters are the following:
 
 <p align="center">
-<img src="assets/DonutChartWidget.PNG" width="80%">
+<img src="assets/DonutChartWidget.png" width="80%">
 </p>  
 
 * **Title**: Optional title for the widget. 
@@ -376,7 +376,7 @@ A progressbar is a graph that can easily represent a progress on some action or 
 The configurable parameters are the following:
 
 <p align="center">
-<img src="assets/ProgressbarWidget.PNG" width="80%">
+<img src="assets/ProgressbarWidget.png" width="80%">
 </p>  
 
 * **Title**: Optional title for the widget. 
@@ -404,7 +404,7 @@ Here is an example of this widget working in real-time with a connected device:
 The configurable parameters are the following:
 
 <p align="center">
-<img src="assets/GoogleMapWidget.PNG" width="80%">
+<img src="assets/GoogleMapWidget.png" width="80%">
 </p>  
 
 * **Title**: Optional title for the widget. 
@@ -429,7 +429,7 @@ The image/MJPEG widget can be used to represent both a still image, like your bu
 The configurable parameters are the following:
 
 <p align="center">
-<img src="assets/ImageWidget.PNG" width="80%">
+<img src="assets/ImageWidget.png" width="80%">
 </p>  
 
 * **Title**: Optional title for the widget. 
@@ -451,7 +451,7 @@ The text/value widget is an useful widget to display any arbitrary data, special
 The configurable parameters are the following:
 
 <p align="center">
-<img src="assets/TextWidget.PNG" width="80%">
+<img src="assets/TextWidget.png" width="80%">
 </p>  
 
 * **Title**: Optional title for the widget. 
@@ -472,7 +472,7 @@ This widget is just a clock widget that can display the current time both in the
 The configurable parameters are the following:
 
 <p align="center">
-<img src="assets/ClockWidget.PNG" width="80%">
+<img src="assets/ClockWidget.png" width="80%">
 </p>  
 
 * **Title**: Optional title for the widget. 
@@ -557,7 +557,7 @@ To manage all your endpoints, it is necessary to access to the Endpoints section
 Then click on the Add Endpoint button that will open a new interface for entering the endpoint details, like in the following screenshot:
 
 <p align="center">
-<img src="assets/AddEndpoint.PNG" width="80%">
+<img src="assets/AddEndpoint.png" width="80%">
 </p> 
 
 
