@@ -10,8 +10,8 @@ On the left side of the `Statistics` screen you will find the main menu, which c
 <img src="assets/Stadistics.PNG" width="100%">
 </p>
 
-Device Management
-=================
+Devices
+=======
 
 ## Create Device
 The first step to start an IoT project in Thinger.io (except for not connected devices like Sigfox) is by creating devices, which will grant access to connect your devices to your account. Any device in Thinger.io must be registered to get access to the cloud. Each one has its own identifier and credentials and is related to the user account. This section describes the required steps to register a new device in your account.
@@ -619,16 +619,73 @@ The configurable parameters are the following:
 <img src="assets/HTTPEndpoint.png" width="100%">
 </p>
 
+# Access Tokens
 
+All the Thinger.io back-end can be accessed over REST API Calls. In fact, the console is just an Angular REST client interacting with the API to manage devices, buckets, endpoints, dashboards, and so on. Every REST API request must be authenticated in order to take  effect, so, any client needs to provide an authorization code in every call. This way, access tokens is the way to provide authorization to third party services or applications to make API Requests, without having to share the username and password. Moreover, with access tokens it is possible to grant access to specific resources and actions of your account, like read a specific device, or write to a custom bucket (like in [this example](http://docs.thinger.io/sigfox/#steps-in-thingerio-create-an-access-token)).
 
+**Note: ** Using an access token via API is covered in more detail [here](http://docs.thinger.io/api/#authentication-api-rest-api-authentication).
 
+## Create Token
 
+To manage all your tokens, it is necessary to access to the `Access Tokens` section, by clicking in the following menu item:
 
+<img src="assets/AccessTokenTab.png" width="200px">
 
+Then click on the `Add Token` button that will open a new interface for entering the endpoint details, like in the following screenshot:
 
+<p align="center">
+<img src="assets/AddToken.png" width="100%">
+</p> 
 
+The configurable parameters are the following:
 
-
-
-
-
+* **Token ID**: Unique Token ID within the user account.
+* **Token Name**: Token name to easily recognize the token scope.
+* **Enabled**: Controls whether the token is enabled or disabled. 
+* **Token Permissions**: In this section it is possible to define the scope, or the level access of the token. Depending on the given permissions, the token will have access to different parts of your account. Adding a new permission will normally require selecting the permission type (access a device, bucket, dashboard, etc.), the level access (some specific resource or all of their type), and the allowed actions (all or some of them). This configuration is handled by the following screenshot:
+    <p align="center">
+    <img src="assets/AddUserTokenPermission.png" width="80%">
+    </p> 
+    The available permission types and their actions are defined as follows:
+    * **Admin Access**: Provides access to the whole account.
+    * **Device**: Provides access to a single device or all devices. It is possible to define the action between:
+        * `AccessDeviceResources`: Grants access to executing device resources, like reading a sensor variable.
+        * `ListDeviceResources`: Grants access to list the device resources names.
+        * `GetDeviceStats`: Grants access to read device statistics like public ip, connected time, bandwidth, etc.
+        * `CreateDeviceToken`: Grants access to create device tokens.
+        * `ListDeviceTokens`: Grants access to read device tokens.
+        * `DeleteDeviceToken`: Grants access to delete device tokens.
+        * `ListDevices`: Grants access to list the account devices.
+        * `DeleteDevice`: Grants access to delete devices. 
+        * `CreateDevice`: Grants access to create a new device.
+        * `UpdateDevice`: Grants access to modify a device, like its description or credential.
+        * `ListDeviceLocations`: Grants access to fetch the connected devices locations.
+    * **Bucket**: Provides access to a single bucket or all buckets. It is possible to define the action between:
+        * `ReadBucket`: Grants access to read information stored in a bucket.
+        * `WriteBucket`: Grants access to write information to a bucket.
+        * `ExportBucket`: Grants access to export the information stored in a bucket.
+        * `ClearBucket`: Grants access to clear the information stored in a bucket.
+        * `ListBuckets`: Grants access to list the account buckets.
+        * `DeleteBucket`: Grants access to delete buckets. 
+        * `CreateBucket`: Grants access to create a new bucket.
+        * `UpdateBucket`: Grants access to modify the bucket configuration, like data sources, description, etc.
+        * `ReadBucketConfig`: Grants access to read the current bucket config.
+    * **Endpoint**: Provides access to a single endpoint or all endpoints. It is possible to define the action between:
+        * `ListEndpoints`: Grants access to list the account endpoints.
+        * `CreateEndpoint`: Grants access to create a new endpoint.
+        * `ReadEndpointConfig`: Grants access to read the current endpoint config.
+        * `UpdateEndpoint`: Grants access to modify the endpoint configuration.
+        * `DeleteEndpoint`: Grants access to delete endpoints. 
+        * `CallEndpoint`: Grants access to execute an endpoint.     
+    * **Dashboard**: Provides access to a single dashboard or all dashboards. It is possible to define the action between:
+        * `ListDashboards`: Grants access to list the account dashboards.
+        * `CreateDashboard`: Grants access to create a new dashboard.
+        * `ReadDashboardConfig`: Grants access to read the current dashboard config.
+        * `UpdateDashboard`: Grants access to modify the dashboard configuration.
+        * `DeleteDashboard`: Grants access to delete dashboards. 
+    * **Token**: Provides access to a single token or all tokens. It is possible to define the action between:
+        * `ListTokens`: Grants access to list the account tokens.
+        * `CreateToken`: Grants access to create a new token.
+        * `ReadTokenConfig`: Grants access to read the current token config.
+        * `UpdateToken`: Grants access to modify the token configuration.
+        * `DeleteToken`: Grants access to delete tokens. 
