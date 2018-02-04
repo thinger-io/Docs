@@ -9,10 +9,6 @@ This board is a complete Internet of Things development kit, that integrates WiF
 </p>
 
 <p align="center">
-<img src="assets/i0_7.png?raw=true"   width="600" height="350" />
-</p>
-
-<p align="center">
 <img src="assets/i0_1.png?raw=true"   width="600" height="350" />
 </p>
 
