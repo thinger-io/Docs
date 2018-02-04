@@ -4,10 +4,12 @@ This board is a complete Internet of Things development kit, that integrates WiF
 
 ## Board Layout
 
+### ClimaStick V1.1:
 <p align="center">
 <img src="assets/i0.PNG?raw=true"   width="600" height="350" />
 </p>
 
+### ClimaStick V2:
 <p align="center">
 <img src="assets/i0_1.png?raw=true"   width="600" height="350" />
 </p>
