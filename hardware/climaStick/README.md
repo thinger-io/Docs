@@ -17,7 +17,7 @@ This board is a complete Internet of Things development kit, that integrates WiF
 * Environmental sensing for temperature, relative humidity, barometric pressure, and lux intensity. A micro weather station!
 * Inertial Measurements Unit (IMU), integrating an accelerometer, a gyroscope, and a digital compass.
 * Li-Po Charger. It is able to charge (and be powered by) batteries from a solar panel or the built-in USB.
-* RGB Led.
+* RGB Led (only in ClimaStick V1).
 * User button.
 * Fully compatible with the Arduino Environment. Can be programmed directly from the Arduino IDE. There are libraries for reading the sensors and connecting the board to the Thinger.io Cloud or other Internet services.
 
