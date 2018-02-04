@@ -12,6 +12,10 @@ This board is a complete Internet of Things development kit, that integrates WiF
 <img src="assets/i0_1.png?raw=true"   width="600" height="350" />
 </p>
 
+<p align="center">
+<img src="assets/i0_2.png?raw=true"   width="600" height="350" />
+</p>
+
 ## Board Features
 
 * Environmental sensing for temperature, relative humidity, barometric pressure, and lux intensity. A micro weather station!
