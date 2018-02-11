@@ -58,9 +58,9 @@ This section covers how to setup your computer to start working with the ClimaSt
 
 3. Now you can program almost any ESP82XX processor directly from the Arduino IDE. From the Tools > Boards you should see now the new ESP8266 community boards installed.
 
-For program ClimaStick V1 select **NODE_MCU V1.0 (ESP-12E Module)**.
+-For program ClimaStick V1 select **NODE_MCU V1.0 (ESP-12E Module)**.
 
-For program ClimaStick V2 select **WeMos D1 Mini Lite**.
+-For program ClimaStick V2 select **WeMos D1 Mini Lite**.
 
 <p align="center">
 <img src="assets/i6.png?raw=true"   width="600" height="550" />
