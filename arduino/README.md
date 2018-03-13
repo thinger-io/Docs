@@ -172,16 +172,35 @@ The following example will allow connecting the Yun to the cloud platform in a f
 #include <YunClient.h>
 #include <ThingerYun.h>
 
-ThingerYun thing("username", "deviceId", "deviceCredential");
+#define USERNAME "username"
+#define DEVICE_ID "device_id"
+#define DEVICE_CREDENTIAL "device_credential"
+
+ThingerYun thing(USERNAME, DEVICE_ID, DEVICE_CREDENTIAL);
 
 void setup() {
-    Bridge.begin();
+  pinMode(LED_BUILTIN, OUTPUT);
+
+  // initialize bridge
+  Bridge.begin();
+
+  // pin control example (i.e. turning on/off a light, a relay, etc)
+  thing["led"] << digitalPin(LED_BUILTIN);
+
+  // resource output example (i.e. reading a sensor value, a variable, etc)
+  thing["millis"] >> outputValue(millis());
 }
 
 void loop() {
-    thing.handle();
+  thing.handle();
 }
 ```
+
+**&#9888; NOTE:** For using Arduino Yun, the device must be connected to a network with Internet, just with Ethernet or a Wifi connection.
+
+<p align="center">
+<img src="assets/arduino_yun_network.png" width="700px">
+</p>
 
 Want to add some device resources (led, sensors, etc.) to interact with them from the Internet?. Check the [Add Resources](#coding-adding-resources) section.
 
@@ -264,8 +283,6 @@ void setup() {
 
   // resource output example (i.e. reading a sensor value, a variable, etc)
   thing["millis"] >> outputValue(millis());
-
-  // more details at http://docs.thinger.io/arduino/
 }
 
 void loop() {
