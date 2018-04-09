@@ -83,7 +83,7 @@ Mobile App
 ==========
 
 <p align="center">
-<a href="console">
+<a href="mobile">
 <img src="assets/mobile-app.png" width="180px">
 </a>
 </p>
