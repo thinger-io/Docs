@@ -169,19 +169,38 @@ The following example will allow connecting the Yun to the cloud platform in a f
 </p>
 
 ``` cpp
-#include <YunClient.h>
+#include <BridgeSSLClient.h>
 #include <ThingerYun.h>
 
-ThingerYun thing("username", "deviceId", "deviceCredential");
+#define USERNAME "your_user_name"
+#define DEVICE_ID "your_device_id"
+#define DEVICE_CREDENTIAL "your_device_credential"
+
+ThingerYun thing(USERNAME, DEVICE_ID, DEVICE_CREDENTIAL);
 
 void setup() {
-    Bridge.begin();
+  pinMode(LED_BUILTIN, OUTPUT);
+
+  // initialize bridge
+  Bridge.begin();
+
+  // pin control example (i.e. turning on/off a light, a relay, etc)
+  thing["led"] << digitalPin(LED_BUILTIN);
+
+  // resource output example (i.e. reading a sensor value, a variable, etc)
+  thing["millis"] >> outputValue(millis());
 }
 
 void loop() {
-    thing.handle();
+  thing.handle();
 }
 ```
+
+**&#9888; NOTE:** For using Arduino Yun, the device must be connected to a network with Internet, just with Ethernet or a Wifi connection.
+
+<p align="center">
+<img src="assets/arduino_yun_network.png" width="700px">
+</p>
 
 Want to add some device resources (led, sensors, etc.) to interact with them from the Internet?. Check the [Add Resources](#coding-adding-resources) section.
 
@@ -195,7 +214,7 @@ The following example will allow connecting the MKR1000 to the cloud platform in
 <img src="assets/Arduino_MKR1000.png" width="300px">
 </p>
 
-``` cpp
+```cpp
 #include <WiFi101.h>
 #include <ThingerWifi101.h>
 
@@ -210,12 +229,66 @@ void loop() {
 }
 ```
 
-If you want to disable the secure TLS/SSL connection, you can declare the following define before any other include.
+**&#9888; NOTE:** For using MKR1000 over the default TLS/SSL connection it is required to install the Thinger.io server certificate in the board with the Wifi101 Firmware Updater located in the Tools menu.
 
-``` cpp
+<p align="center">
+<img src="assets/mkr1000_ssl_certificate.png">
+</p>
+
+Or it is possible to disable the secure TLS/SSL connection, by declaring the following define before any other include:
+
+```cpp
 #define _DISABLE_TLS_
 // other includes goes here
 ``` 
+
+## Arduino MKR GSM1400
+
+Arduino MKR GSM 1400 has been designed to offer a practical and cost effective solution for makers seeking to add global GSM connectivity to their projects with minimal previous experience in networking. It is based on the Atmel SAMD21 and a SARAU201 GSM module.
+ 
+The following example will allow connecting the GSM1400 to the cloud platform in a few lines using secure connections (TLS/SSL). Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials, and the **GPRS_APN**, **GPRS_LOGIN**, **GPRS_PASSWORD**, and **PIN_NUMBER** with your SIM information.
+
+<p align="center">
+<img src="assets/arduino_gsm1400.png" width="300px">
+</p>
+
+```cpp
+#include <MKRGSM.h>
+#include <ThingerMKRGSM.h>
+
+#define USERNAME "your_user_name"
+#define DEVICE_ID "your_device_id"
+#define DEVICE_CREDENTIAL "your_device_credential"
+
+#define PIN_NUMBER "your_pin"
+
+#define GPRS_APN "your_apn_name"
+#define GPRS_LOGIN "your_gprs_login"
+#define GPRS_PASSWORD "your_gprs_password"
+
+ThingerMKRGSM thing(USERNAME, DEVICE_ID, DEVICE_CREDENTIAL);
+
+void setup() {
+  // optional set pin number
+  thing.set_pin(PIN_NUMBER);
+
+  // set APN
+  thing.set_apn(GPRS_APN, GPRS_LOGIN, GPRS_PASSWORD);
+
+  // set builtin led to output
+  pinMode(LED_BUILTIN, OUTPUT);
+
+  // pin control example over internet (i.e. turning on/off a light, a relay, etc)
+  thing["led"] << digitalPin(LED_BUILTIN);
+
+  // resource output example (i.e. reading a sensor value, a variable, etc)
+  thing["millis"] >> outputValue(millis());
+}
+
+void loop() {
+  thing.handle();
+}
+```
 
 Want to add some device resources (led, sensors, etc.) to interact with them from the Internet?. Check the [Add Resources](#coding-adding-resources) section.
 
