@@ -183,8 +183,11 @@ When using the snap package, the default config files, buckets exports, and logs
 ```
 
 ```json
-
 {
+
+  "deployment" : {
+    "contact_email" : "admin@thinger.io"
+  },
 
   "ssl" : {
     "ssl_certificate" : "certificates/server.crt",
@@ -201,14 +204,14 @@ When using the snap package, the default config files, buckets exports, and logs
     "hosts" : [
       {
         "host": "*",
-        "type":"rest"
-      },
-      "cors": {
-        "enabled" : true
-      },
-      "web_fallback" : {
-        "enabled" : true,
-        "root": "${SNAP}/console"
+        "type": "rest",
+        "cors": {
+          "enabled" : true
+        },
+        "web_fallback" : {
+          "enabled" : true,
+          "root": "${SNAP}/console"
+        }
       }
     ]
   },
@@ -263,6 +266,11 @@ When using the snap package, the default config files, buckets exports, and logs
     }
   },
 
+  "rate_limiter" : {
+    "enabled" : false,
+    "type" : "memory"
+  },
+
   "accounts" : {
     "invalid_usernames" : [],
     "invalid_email_domains" : [],
@@ -278,7 +286,8 @@ When using the snap package, the default config files, buckets exports, and logs
         "min_interval" : -1
       },
       "endpoints" : {
-        "max_count" : -1
+        "max_count" : -1,
+        "min_interval" : -1
       },
       "dashboards" : {
         "max_count" : -1
@@ -295,21 +304,22 @@ Documentation in progress...
 
 ## Configure SMTP Server
 
-It is possible to configure an SMTP Server for sending emails through the endpoints, for the sign in process, forgot password, etc. Just add another field with the following information.
-```json
+It is possible to configure an SMTP Server for sending emails through the endpoints, for the sign in process, forgot password, etc. Just add another field with the following information. The following is an example for Gmail:
+
+``` json
 "email" : {
-    "domain" : "your_domain",
     "type" : "smtp",
+    "domain" : "gmail.com",
+    "sender" : "alvarolb",
     "smtp" : {
-      "host" : "your_host",
-      "port" : "465",
-      "username" : "your_user",
-      "password" : "your_password",
-      "secure" : true
+        "host" : "smtp.gmail.com",
+        "port" : "465",
+        "username" : "alvarolb@gmail.com",
+        "password" : "your app password goes here (required if 2FA is enabled)",
+        "secure" : true
     }
 },
 ```
-
 
 # Connect the devices to your server
 
