@@ -79,6 +79,22 @@ The Cloud Console is related with the management front-end designed to easily ma
 [Cloud Console Documentation >](console)
 </p>
 
+Mobile App
+==========
+
+<p align="center">
+<a href="mobile">
+<img src="assets/mobile-app.png" width="180px">
+</a>
+</p>
+
+This section is related with the use of the Android and iOS Mobile App. You will learn how to scan devices, point them to another server or visualize and manage its information.
+
+<p align="center">
+[Mobile App Documentation >](mobile)
+</p>
+
+
 Server API
 ==========
 
