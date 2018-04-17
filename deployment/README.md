@@ -300,8 +300,6 @@ When using the snap package, the default config files, buckets exports, and logs
 }
 ```
 
-Documentation in progress...
-
 ## Configure SMTP Server
 
 It is possible to configure an SMTP Server for sending emails through the endpoints, for the sign in process, forgot password, etc. Just add another field with the following information. The following is an example for Gmail:
@@ -319,6 +317,26 @@ It is possible to configure an SMTP Server for sending emails through the endpoi
         "secure" : true
     }
 },
+```
+
+## Upgrade Server 
+
+
+### Snap Command
+It is possible to upgrade the server just by doing a snap refresh, like:
+
+```bash
+sudo snap refresh thinger-maker-server
+
+```
+
+**Note:** Take into account that the config file will not replaced after a refresh. So, if new configurable parameters are available, they should be copied manually after the upgrade process.
+
+It is also possible to upgrade from BETA channels to get the latests versions (which can be unstable):
+
+```bash
+sudo snap refresh thinger-maker-server --beta
+
 ```
 
 # Connect the devices to your server
