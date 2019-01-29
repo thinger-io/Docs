@@ -80,6 +80,10 @@ In this case you must edit the fields `USER_ID`, `DEVICE_ID`, and `DEVICE_CREDEN
 <img src="https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/2697e5c757b23eec7537fc9ac232544f5923d583.png" width="100%"> 
 When you are done editing the parameters, exit the nano editor pressing `Ctrl+X` and then type '`y`' to save the changes.
 
+If you are executing the script on a Raspberry Pi, make sure the `run.sh` contains the `-DRASPBERRY=ON` commandline parameter as follows - 
+
+    cmake -DCMAKE_BUILD_TYPE=Release -DDAEMON=OFF -DRASPBERRY=ON
+
 Now you must add execute permissions to the `run.sh` script. 
 
     chmod +x run.sh
