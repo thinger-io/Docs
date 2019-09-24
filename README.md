@@ -1,8 +1,11 @@
-# README
+---
+description: >-
+  This documentation will try to cover some different aspects of the Thinger.io
+  platform in terms of hardware integration, cloud console, server a API, and
+  server deployment.
+---
 
-## Overview
-
-This documentation will try to cover some different aspects of the Thinger.io platform in terms of hardware integration, cloud console, server a API, and server deployment.
+# OVERVIEW
 
 ## Hardware Clients
 
@@ -14,19 +17,19 @@ So, to start using the platform select the hardware platform you want to use.
 
 ### Arduino
 
-![](.gitbook/assets/arduino-logo.png)
+![](.gitbook/assets/arduino-logo.png) 
 
 This category is related with any hardware that can be programmed over the Arduino IDE and its libraries. So it is not exclusively for Arduino Devices, as you can also program different boards like the ESP8266, or Texas Instruments CC3200 board. Of course, you can still use any other Arduino Board with Ethernet of Wifi capabilities.
 
- \[Arduino Client Documentation &gt;\]\(arduino\)
+{% page-ref page="arduino.md" %}
 
 ### Linux
 
- [![](.gitbook/assets/raspberry-pi.png)](linux.md) ![](.gitbook/assets/computer_edison.png) ![](.gitbook/assets/linux-logo.png)
+![](.gitbook/assets/linux-versions.png)
 
 If you want to develop an IoT product or project based on a device running Linux OS, there is also an special client for this platform. There are some specific examples for each common Linux board like Raspberry Pi or Intel Edison. But you can run the client in practically any computer running a Linux distribution, including a computer with Mac OS.
 
- \[Linux Client Documentation &gt;\]\(linux\)
+{% page-ref page="linux.md" %}
 
 ### Sigfox
 
@@ -34,7 +37,7 @@ If you want to develop an IoT product or project based on a device running Linux
 
 In this category is covered the Sigfox integration with the platform, where the user can configure callbacks for transmitting data from the devices to the cloud for creating real-time dashboards.
 
- \[SigFox Integration Documentation &gt;\]\(sigfox\)
+{% page-ref page="sigfox.md" %}
 
 ### ARM Mbed
 
