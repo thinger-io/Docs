@@ -1,8 +1,8 @@
-# CLOUD CONSOLE
+# README
 
 ## Introduction
 
-This documentation provides information about the front-end console of the Thinger.io IoT platform. This way you will learn how to manage different elements of the platform, like devices, endpoints, data buckets, or access tokens.
+This documentation provides information about the back-end console of the Thinger.io IoT platform. This way you will learn how to manage different elements of the platform, like devices, endpoints, data buckets, or access tokens.
 
 Once you log in to your Thinger.io account, you will access by default to the `Statistics` section, where you can see some basic information about your account, like number of devices, endpoints, data buckets, endpoints, ans so on. There is also a map, which displays the current approximate location of your connected devices. Finally, there are some statistics about your devices consumption in terms of sent or received information.
 

@@ -1,11 +1,8 @@
----
-description: >-
-  This documentation will try to cover different aspects of the Thinger.io
-  platform in terms of hardware integration, cloud console, server a API, and
-  server deployment.
----
+# README
 
-# OVERVIEW
+## Overview
+
+This documentation will try to cover some different aspects of the Thinger.io platform in terms of hardware integration, cloud console, server a API, and server deployment.
 
 ## Hardware Clients
 

@@ -1,4 +1,4 @@
-# MOBILE APP
+# README
 
 ## Introduction
 

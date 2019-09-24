@@ -1,12 +1,14 @@
 # Table of contents
 
-* [OVERVIEW](README.md)
-* [ARDUINO](arduino.md)
-* [SIGFOX INTEGRATION](sigfox.md)
-* [RASBERRY PI](linux.md)
-* [CLOUD CONSOLE](console.md)
-* [SERVER API](api.md)
-* [MOBILE APP](mobile.md)
-* [THINGER.IO HARDWARE](climastick.md)
-* [SERVER DEPLOYMENT](deployment.md)
+* [README](README.md)
+* [README](api.md)
+* [README](sigfox.md)
+* [README](mobile.md)
+* [hardware](hardware/README.md)
+  * [README](hardware/climastick.md)
+* [README](deployment.md)
+* [README](arduino.md)
+* [README](mbed.md)
+* [README](linux.md)
+* [README](console.md)
 

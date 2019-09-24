@@ -1,6 +1,6 @@
-# SERVER API
+# README
 
-## Intro
+## API HOST
 
 All the examples described in this documentation defines URL endpoints based on an relative path, assuming the host is just your server IP, domain, or just the default Thinger.io server. For all calls issued over the default Thinger.io cloud, the host address will be the following:
 

@@ -1,4 +1,4 @@
-# SERVER DEPLOYMENT
+# README
 
 ## Install on Ubuntu \(starting from 16.04\)
 

@@ -1,4 +1,4 @@
-# SIGFOX INTEGRATION
+# README
 
 ![](.gitbook/assets/sigfox_thinger.png)
 
