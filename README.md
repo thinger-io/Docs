@@ -17,13 +17,13 @@ So, to start using the platform select the hardware platform you want to use.
 
 ### [Arduino](arduino/)
 
-                                             <p align="center">   [![](.gitbook/assets/arduino-logo.png)](arduino/)</p>
-
+                                             [![](.gitbook/assets/arduino-logo.png)](arduino/)
+                                             
 This category is related with any hardware that can be programmed over the Arduino IDE and its libraries. So it is not exclusively for Arduino Devices, as you can also program different boards like the ESP8266, or Texas Instruments CC3200 board. Of course, you can still use any other Arduino Board with Ethernet of Wifi capabilities.
 
 ### [Linux](linux.md)
 
-### [![](.gitbook/assets/linux-versions.png)](linux.md)
+[![](.gitbook/assets/linux-versions.png)](linux.md)
 
 If you want to develop an IoT product or project based on a device running Linux OS, there is also an special client for this platform. There are some specific examples for each common Linux board like Raspberry Pi or Intel Edison. But you can run the client in practically any computer running a Linux distribution, including a computer with Mac OS.
 
@@ -43,13 +43,15 @@ ARM is building its own IoT ecosystem in the cloud, mainly to simplify the devel
 
 ## [Cloud Console](console.md)
 
-                                                 [![](.gitbook/assets/console.png)](console.md)The Cloud Console is related with the management front-end designed to easily manage your devices and visualize its information in the cloud. In this section you will learn how to register devices, create real-time dashboards, access the devices API, and other management operations.
+                                                 [![](.gitbook/assets/console.png)](console.md)
+
+The Cloud Console is related with the management front-end designed to easily manage your devices and visualize its information in the cloud. In this section you will learn how to register devices, create real-time dashboards, access the devices API, and other management operations.
 
 {% page-ref page="console.md" %}
 
 ## [Mobile App](mobile.md)
 
- [                                                ![](.gitbook/assets/mobile-app.png)](mobile.md)
+ [![](.gitbook/assets/mobile-app.png)](mobile.md)
 
 This section is related with the use of the Android and iOS Mobile App. You will learn how to scan devices, point them to another server or visualize and manage its information.
 
