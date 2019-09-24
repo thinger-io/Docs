@@ -455,8 +455,8 @@ This section will cover how to add different functionality to your devices for e
 
 ### Sketch Overview
 
-Almost all Arduino Sketches looks the same. There is a setup method, and there is a loop method. Nothing changes here while integrating with Thinger.io. However you must know where you should define your device resources, or where it is possible to interact with external services. In general terms, any device resource \(led, relay, sensor, servo, etc.\) must be defined inside the `setup()` method. As well as you initialize your devices, set the input/output direction of a digital pin, or initialize the Serial port speed, you also need to initialize here your resources. This basically consists on configuring what values or resources you want to expose over the Internet.  
-  
+Almost all Arduino Sketches looks the same. There is a setup method, and there is a loop method. Nothing changes here while integrating with Thinger.io. However you must know where you should define your device resources, or where it is possible to interact with external services. In general terms, any device resource \(led, relay, sensor, servo, etc.\) must be defined inside the `setup()` method. As well as you initialize your devices, set the input/output direction of a digital pin, or initialize the Serial port speed, you also need to initialize here your resources. This basically consists on configuring what values or resources you want to expose over the Internet.
+
 The `loop()` is the place to always call to the `thing.handle()` method, so the thinger libraries can handle the connection with the platform. This is the place also for calling your endpoints, or streaming real-time data to an open WebSocket. Please, take into account to **do not add any delay inside the `loop()`** except if you know what you are doing, like working with deep sleep modes or so in your device. Any other delay will condition the proper functioning of Thinger in your device. Also it can be bad to read a sensor value in every loop if the sensor takes too much time to complete a read. This will result in a device with a noticeable lag while attending to our commands.
 
 ```cpp
@@ -1001,7 +1001,7 @@ The Android APP supports Android Wear devices for controlling and reading values
 
 To get the devices available in the SmartWatch, it is not required to do anything special. As usually, just scan the QR code from the platform with the mobile phone.
 
- ![](../.gitbook/assets/android_wear_1.png) ![](../.gitbook/assets/android_wear_2.png) ![](../.gitbook/assets/android_wear_3.png) ![](../.gitbook/assets/android_wear_4.png)
+![](../.gitbook/assets/android_wear_1.png) ![](../.gitbook/assets/android_wear_2.png) ![](../.gitbook/assets/android_wear_3.png) ![](../.gitbook/assets/android_wear_4.png)
 
 ### Cloud Console
 
@@ -1027,7 +1027,7 @@ This feature is so useful if you want to interact with your device using the Ser
 
 TODO Reference to API Explorer in cloud console
 
- Your browser does not support the video tag.
+Your browser does not support the video tag.
 
 > Every defined resource in your device, like a sensor, a relay, a light, and so on, can be accessed out of the box from the API Explorer. This example is turning on and off a led directly from the explorer.
 

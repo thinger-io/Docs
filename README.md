@@ -17,8 +17,8 @@ So, to start using the platform select the hardware platform you want to use.
 
 ### [Arduino](arduino/)
 
-                                             [![](.gitbook/assets/arduino-logo.png)](arduino/)
-                                             
+### [ ![](.gitbook/assets/arduino-logo.png) ](arduino/)
+
 This category is related with any hardware that can be programmed over the Arduino IDE and its libraries. So it is not exclusively for Arduino Devices, as you can also program different boards like the ESP8266, or Texas Instruments CC3200 board. Of course, you can still use any other Arduino Board with Ethernet of Wifi capabilities.
 
 ### [Linux](linux.md)
@@ -29,21 +29,25 @@ If you want to develop an IoT product or project based on a device running Linux
 
 ### [Sigfo](arduino/sigfox.md)x
 
-###  [![](.gitbook/assets/sigfox-logo.jpg)](arduino/sigfox.md)
+### [![](.gitbook/assets/sigfox-logo.jpg)](arduino/sigfox.md)
 
 In this category is covered the Sigfox integration with the platform, where the user can configure callbacks for transmitting data from the devices to the cloud for creating real-time dashboards.
 
 ### ARM Mbed
 
-                                                 ![](.gitbook/assets/mbed-enabled-logo.png) 
+```text
+                                             ![](.gitbook/assets/mbed-enabled-logo.png) 
+```
 
 ARM is building its own IoT ecosystem in the cloud, mainly to simplify the development process in any ARM mBed compatible hardware. So, if you have an ARM mBed compatible board, this is your place.
 
- \[ARM MBed Client Documentation &gt;\]\(mbed\)
+\[ARM MBed Client Documentation &gt;\]\(mbed\)
 
 ## [Cloud Console](console.md)
 
-                                                 [![](.gitbook/assets/console.png)](console.md)
+```text
+                                             [![](.gitbook/assets/console.png)](console.md)
+```
 
 The Cloud Console is related with the management front-end designed to easily manage your devices and visualize its information in the cloud. In this section you will learn how to register devices, create real-time dashboards, access the devices API, and other management operations.
 
@@ -51,7 +55,7 @@ The Cloud Console is related with the management front-end designed to easily ma
 
 ## [Mobile App](mobile.md)
 
- [![](.gitbook/assets/mobile-app.png)](mobile.md)
+[![](.gitbook/assets/mobile-app.png)](mobile.md)
 
 This section is related with the use of the Android and iOS Mobile App. You will learn how to scan devices, point them to another server or visualize and manage its information.
 
@@ -63,7 +67,7 @@ This section is related with the use of the Android and iOS Mobile App. You will
 
 The Thinger.io Cloud is supported by a REST API designed to easily integrate your IoT projects with other applications like WebServices, mobile phones, or desktop applications. So if you want to integrate your device with your own application or service, then this is the starting point.
 
- \[Server API Documentation &gt;\]\(api\)
+\[Server API Documentation &gt;\]\(api\)
 
 ## Thinger.io Hardware
 

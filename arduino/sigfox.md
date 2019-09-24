@@ -105,7 +105,7 @@ The configuration in our example is the following:
     }
    ```
 
-    Notice that we are mixing Sigfox variables, like `{device}`, with our own custom data in the payaload, like `{customData#temp}`. This body is then processed on every message reception, and the variables will be replaced with the current values. So, the server will receive a JSON payload with the device identifier, device temperature, humidity, coarse location \(km accuracy\), and signal quality. 
+   Notice that we are mixing Sigfox variables, like `{device}`, with our own custom data in the payaload, like `{customData#temp}`. This body is then processed on every message reception, and the variables will be replaced with the current values. So, the server will receive a JSON payload with the device identifier, device temperature, humidity, coarse location \(km accuracy\), and signal quality.
 
 After these steps, we should have now a callback completely configured to push data to our data bucket.
 
