@@ -52,7 +52,7 @@ Now **rename** the `Arduino-Library-master.zip` file to something more relevant 
 
 The final step is to **import** the `zip` library using the Arduino IDE. This step will uncompress and copy the `zip` library in the Arduino libraries folder. Which is usually under your Documents folder.
 
-![](.gitbook/assets/add-zip-library.png)
+![](../.gitbook/assets/add-zip-library.png)
 
 > Sketch &gt; Include Library &gt; Add .ZIP libraries
 
@@ -70,7 +70,7 @@ The Arduino Ethernet Shield connects your Arduino to the internet in mere minute
 
 The following example will allow connecting your device to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials.
 
-![](.gitbook/assets/arduino-ethernet.png)
+![](../.gitbook/assets/arduino-ethernet.png)
 
 ```cpp
 #include <SPI.h>
@@ -87,7 +87,7 @@ void loop() {
 }
 ```
 
-Want to add some device resources \(led, sensors, etc.\) to interact with them from the Internet?. Check the [Add Resources](arduino.md#coding-adding-resources) section.
+Want to add some device resources \(led, sensors, etc.\) to interact with them from the Internet?. Check the [Add Resources](./#coding-adding-resources) section.
 
 ### Arduino + Wifi
 
@@ -95,7 +95,7 @@ The Arduino Wifi Shield is a poweful IoT shield that connects your Arduino board
 
 The following example will allow connecting your device to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials, and the **wifi\_ssid**, **wifi\_password** with the WiFi credentials.
 
-![](.gitbook/assets/arduino-wifi-shield.png)
+![](../.gitbook/assets/arduino-wifi-shield.png)
 
 ```cpp
 #include <SPI.h>
@@ -113,7 +113,7 @@ void loop() {
 }
 ```
 
-Want to add some device resources \(led, sensors, etc.\) to interact with them from the Internet?. Check the [Add Resources](arduino.md#coding-adding-resources) section.
+Want to add some device resources \(led, sensors, etc.\) to interact with them from the Internet?. Check the [Add Resources](./#coding-adding-resources) section.
 
 ### Arduino + CC3000
 
@@ -125,7 +125,7 @@ So for this module is required to have installed the **Adafruit CC3000 Libraries
 
 The following example will allow connecting your device to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials, and the **wifi\_ssid**, **wifi\_password** with the WiFi credentials.
 
-![](.gitbook/assets/adafruit-cc3000.png)
+![](../.gitbook/assets/adafruit-cc3000.png)
 
 ```cpp
 #include <Adafruit_CC3000.h>
@@ -144,7 +144,7 @@ void loop() {
 }
 ```
 
-Want to add some device resources \(led, sensors, etc.\) to interact with them from the Internet?. Check the [Add Resources](arduino.md#coding-adding-resources) section.
+Want to add some device resources \(led, sensors, etc.\) to interact with them from the Internet?. Check the [Add Resources](./#coding-adding-resources) section.
 
 ### Arduino Yun
 
@@ -152,7 +152,7 @@ The Arduino Yún is a microcontroller board based on the ATmega32u4 and the Athe
 
 The following example will allow connecting the Yun to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials. Notice that it is not required to configure any network parameter in the code, as this managed by the running Linux distribution. However you many need to connect with your Arduino Yun via WiFi to connect it some local network.
 
-![](.gitbook/assets/arduino-yun.png)
+![](../.gitbook/assets/arduino-yun.png)
 
 ```cpp
 #include <BridgeSSLClient.h>
@@ -184,9 +184,9 @@ void loop() {
 
 **⚠ NOTE:** For using Arduino Yun, the device must be connected to a network with Internet, just with Ethernet or a Wifi connection.
 
-![](.gitbook/assets/arduino_yun_network.png)
+![](../.gitbook/assets/arduino_yun_network.png)
 
-Want to add some device resources \(led, sensors, etc.\) to interact with them from the Internet?. Check the [Add Resources](arduino.md#coding-adding-resources) section.
+Want to add some device resources \(led, sensors, etc.\) to interact with them from the Internet?. Check the [Add Resources](./#coding-adding-resources) section.
 
 ### Arduino MKR1000
 
@@ -194,7 +194,7 @@ The Arduino MKR1000 is a microcontroller based on the Atmel ATSAMW25 SoC \(Syste
 
 The following example will allow connecting the MKR1000 to the cloud platform in a few lines using secure connections \(TLS/SSL\). Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials, and the **wifi\_ssid**, **wifi\_password** with the WiFi credentials.
 
-![](.gitbook/assets/arduino_mkr1000.png)
+![](../.gitbook/assets/arduino_mkr1000.png)
 
 ```cpp
 #include <WiFi101.h>
@@ -213,7 +213,7 @@ void loop() {
 
 **⚠ NOTE:** For using MKR1000 over the default TLS/SSL connection it is required to install the Thinger.io server certificate in the board with the Wifi101 Firmware Updater located in the Tools menu.
 
-![](.gitbook/assets/mkr1000_ssl_certificate.png)
+![](../.gitbook/assets/mkr1000_ssl_certificate.png)
 
 Or it is possible to disable the secure TLS/SSL connection, by declaring the following define before any other include:
 
@@ -228,7 +228,7 @@ Arduino MKR GSM 1400 has been designed to offer a practical and cost effective s
 
 The following example will allow connecting the GSM1400 to the cloud platform in a few lines using secure connections \(TLS/SSL\). Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials, and the **GPRS\_APN**, **GPRS\_LOGIN**, **GPRS\_PASSWORD**, and **PIN\_NUMBER** with your SIM information.
 
-![](.gitbook/assets/arduino_gsm1400.png)
+![](../.gitbook/assets/arduino_gsm1400.png)
 
 ```cpp
 #include <MKRGSM.h>
@@ -268,7 +268,7 @@ void loop() {
 }
 ```
 
-Want to add some device resources \(led, sensors, etc.\) to interact with them from the Internet?. Check the [Add Resources](arduino.md#coding-adding-resources) section.
+Want to add some device resources \(led, sensors, etc.\) to interact with them from the Internet?. Check the [Add Resources](./#coding-adding-resources) section.
 
 ### ESP8266 / NodeMCU
 
@@ -298,7 +298,7 @@ You can find additional information for the ESP8266 package in the [ESP8266 Gith
 
 The following example will allow connecting your device to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials, and the **wifi\_ssid**, **wifi\_password** with the WiFi credentials.
 
-![](.gitbook/assets/nodemcu.png)
+![](../.gitbook/assets/nodemcu.png)
 
 ```cpp
 #include <SPI.h>
@@ -323,7 +323,7 @@ Since library version 2.5.0, the ESP8266 will connect by default using secure so
 // other includes goes here
 ```
 
-Want to add some device resources \(led, sensors, etc.\) to interact with them from the Internet?. Check the [Add Resources](arduino.md#coding-adding-resources) section.
+Want to add some device resources \(led, sensors, etc.\) to interact with them from the Internet?. Check the [Add Resources](./#coding-adding-resources) section.
 
 ### TI Launchpad CC3200
 
@@ -331,11 +331,11 @@ The TI CC3200 was the natural evolution of the CC3000/CC3100 chip. Instead on pr
 
 To program this board it is possible to use an Arduino-based IDE that is called [Energia](http://energia.nu/download/). So, download and install it before continue. Checkout also the required [instructions](http://energia.nu/pin-maps/guide_cc3200launchpad/) for programming the CC3200, as you need to make a short between two pins.
 
-Once the environment is available and you can program the board examples, then you should install the Thinger Arduino Client Libraries also in the Energia IDE. Check the [Manual Import](arduino.md#installation-manual-import) for reference.
+Once the environment is available and you can program the board examples, then you should install the Thinger Arduino Client Libraries also in the Energia IDE. Check the [Manual Import](./#installation-manual-import) for reference.
 
 The following example will allow connecting your device to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials, and the **wifi\_ssid**, **wifi\_password** with the WiFi credentials.
 
-![](.gitbook/assets/ti-cc3200.png)
+![](../.gitbook/assets/ti-cc3200.png)
 
 ```cpp
 #include <WiFi.h>
@@ -352,7 +352,7 @@ void loop() {
 }
 ```
 
-Want to add some device resources \(led, sensors, etc.\) to interact with them from the Internet?, check the [Add Resources](arduino.md#coding-adding-resources) section.
+Want to add some device resources \(led, sensors, etc.\) to interact with them from the Internet?, check the [Add Resources](./#coding-adding-resources) section.
 
 ### Arduino + ENC28J60
 
@@ -362,7 +362,7 @@ There are some libraries for managing this boards, but we will use [UIPEthernet]
 
 The following example will allow connecting your device to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials.
 
-![](.gitbook/assets/enc28j60.jpg)
+![](../.gitbook/assets/enc28j60.jpg)
 
 ```cpp
 // UIPEthernet for ENC28J60: https://github.com/ntruchsess/arduino_uip
@@ -394,7 +394,7 @@ void loop() {
 }
 ```
 
-Want to add some device resources \(led, sensors, etc.\) to interact with them from the Internet?, check the [Add Resources](arduino.md#coding-adding-resources) section.
+Want to add some device resources \(led, sensors, etc.\) to interact with them from the Internet?, check the [Add Resources](./#coding-adding-resources) section.
 
 ### SeeedStudio LinkIT ONE
 
@@ -402,7 +402,7 @@ The LinkIt ONE development board is an open source, high performance, Arduino fo
 
 The board is programmed through the Arduino IDE with a plugin from MediaTek. Check the [MediaTek LinkIt™ ONE SDK for Arduino](http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit/sdk_intro/index.gsp)
 
-![](.gitbook/assets/linkit_one.jpg)
+![](../.gitbook/assets/linkit_one.jpg)
 
 > Pin-out similar to Arduino boards, including Digital I/O, Analog I/O, PWM, I2C, SPI, UART and power supply, compatible with Grove 4-pin interface. Although the board is made by Seeed, the chipset is made by MediaTek, a large Chinese company who are already offering significant SDK / support resources.
 
@@ -447,7 +447,7 @@ void loop() {
 }
 ```
 
-Want to add some device resources \(led, sensors, etc.\) to interact with them from the Internet?, check the [Add Resources](arduino.md#coding-adding-resources) section.
+Want to add some device resources \(led, sensors, etc.\) to interact with them from the Internet?, check the [Add Resources](./#coding-adding-resources) section.
 
 ## Coding
 
@@ -486,7 +486,7 @@ void loop() {
 
 You can easily start with some available example for your device after you install the client libraries.
 
-![](.gitbook/assets/arduino-examples.png)
+![](../.gitbook/assets/arduino-examples.png)
 
 > It is recommended to start with some of the examples available in the Arduino IDE when you install the librarires
 
@@ -806,7 +806,7 @@ loop(){
 
 If we want to communicate devices from different accounts, we can do that through calling an endpoint of type `Thinger.io Device Call`. Just register an endpoint of this type in the console, like in the following example.
 
-![](.gitbook/assets/device_call.png)
+![](../.gitbook/assets/device_call.png)
 
 In this case it is required to define different parameters in the endpoint:
 
@@ -922,7 +922,7 @@ In this case, you must detect when you want to stream the event, like the accele
 
 The following example will report the compass heading in real-time if the heading value changes more than 1 degree.
 
-![](.gitbook/assets/esp8266-real-time-websockets.gif)
+![](../.gitbook/assets/esp8266-real-time-websockets.gif)
 
 ```cpp
 void setup(){
@@ -983,7 +983,7 @@ It is possible to easily interact with your devices within minutes once you have
 
 One of the easiest ways to access your devices is to simply issue a device token to grant access to the device. When you generate a device token you can restrict the shared resources, and the token expiration time, so you can share some device functionality with other people safely. The idea is that you can use this device token and scan it as a QR code in the Android application.
 
-![](.gitbook/assets/token.png)
+![](../.gitbook/assets/token.png)
 
 > Generate a device token in your cloud console, so you can easily interact from your phone within minutes.
 
@@ -991,7 +991,7 @@ One of the easiest ways to access your devices is to simply issue a device token
 
 The current version of the [Android APP](https://play.google.com/store/apps/details?id=io.thinger.thinger) does not require any kind of login to interact with your devices. Simply scan your token as a QR code and your phone will be able to interact with your device for reading sensor values, changing led or relays states, and so on.
 
-![](.gitbook/assets/phone.png)
+![](../.gitbook/assets/phone.png)
 
 > In the current version of the Android APP, you can interact with your device resources out of the box. Just scan the QR Code and start interacting with your resources directly from the Internet.
 
@@ -1001,7 +1001,7 @@ The Android APP supports Android Wear devices for controlling and reading values
 
 To get the devices available in the SmartWatch, it is not required to do anything special. As usually, just scan the QR code from the platform with the mobile phone.
 
- ![](.gitbook/assets/android_wear_1.png) ![](.gitbook/assets/android_wear_2.png) ![](.gitbook/assets/android_wear_3.png) ![](.gitbook/assets/android_wear_4.png)
+ ![](../.gitbook/assets/android_wear_1.png) ![](../.gitbook/assets/android_wear_2.png) ![](../.gitbook/assets/android_wear_3.png) ![](../.gitbook/assets/android_wear_4.png)
 
 ### Cloud Console
 
@@ -1015,7 +1015,7 @@ In the cloud console you can easily create and configure real-time dashboards fo
 
 TODO Reference to dashboards in cloud console
 
-![](.gitbook/assets/dashboards.gif)
+![](../.gitbook/assets/dashboards.gif)
 
 > Visualize your sensor data in real-time using the dashboards. Add different widgets, like maps, charts, donut charts, text, etc. This example is monitoring several sensors like pressure, temperature, humidity, compass, and altitude. So you can configure the dashboards with the devices and resources you want.
 
