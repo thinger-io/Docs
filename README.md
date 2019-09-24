@@ -17,7 +17,7 @@ So, to start using the platform select the hardware platform you want to use.
 
 ### [Arduino](arduino/)
 
-### [ ![](.gitbook/assets/arduino-logo.png) ](arduino/)
+[ ![](.gitbook/assets/arduino-logo.png) ](arduino/)
 
 This category is related with any hardware that can be programmed over the Arduino IDE and its libraries. So it is not exclusively for Arduino Devices, as you can also program different boards like the ESP8266, or Texas Instruments CC3200 board. Of course, you can still use any other Arduino Board with Ethernet of Wifi capabilities.
 
@@ -35,53 +35,37 @@ In this category is covered the Sigfox integration with the platform, where the 
 
 ### ARM Mbed
 
-```text
-                                             ![](.gitbook/assets/mbed-enabled-logo.png) 
-```
+[ ![](.gitbook/assets/mbed-enabled-logo.png) ](arduino/)
 
 ARM is building its own IoT ecosystem in the cloud, mainly to simplify the development process in any ARM mBed compatible hardware. So, if you have an ARM mBed compatible board, this is your place.
 
-\[ARM MBed Client Documentation &gt;\]\(mbed\)
-
 ## [Cloud Console](console.md)
 
-```text
-                                             [![](.gitbook/assets/console.png)](console.md)
-```
+[ ![](.gitbook/assets/console.png) ](console.md)
 
 The Cloud Console is related with the management front-end designed to easily manage your devices and visualize its information in the cloud. In this section you will learn how to register devices, create real-time dashboards, access the devices API, and other management operations.
 
-{% page-ref page="console.md" %}
-
 ## [Mobile App](mobile.md)
 
-[![](.gitbook/assets/mobile-app.png)](mobile.md)
+[  ![](.gitbook/assets/mobile-app.png)](mobile.md)
 
 This section is related with the use of the Android and iOS Mobile App. You will learn how to scan devices, point them to another server or visualize and manage its information.
 
-{% page-ref page="mobile.md" %}
+## [Server API](api.md)
 
-## Server API
-
-![](.gitbook/assets/api.png)
+[ ![](.gitbook/assets/api.png) ](api.md)
 
 The Thinger.io Cloud is supported by a REST API designed to easily integrate your IoT projects with other applications like WebServices, mobile phones, or desktop applications. So if you want to integrate your device with your own application or service, then this is the starting point.
 
-\[Server API Documentation &gt;\]\(api\)
+## [Thinger.io Hardware](climastick.md)
 
-## Thinger.io Hardware
-
-![](.gitbook/assets/climastick.jpg)
+[ ![](.gitbook/assets/climastick.jpg) ](climastick.md)
 
 This section is related to the Thinger.io hardware boards, like the ClimaStick. A small powerful device plenty of sensors, WiFi, ready for prototyping, learning, or developing products.
 
-{% page-ref page="climastick.md" %}
+## [Server Deployment](deployment.md)
 
-## Server Deployment
-
-![](.gitbook/assets/docker-logo.png)
+ [![](.gitbook/assets/docker-logo.png) ](deployment.md)
 
 This section is related to the Cloud configuration and deployment in your own infrastructure, both in local machines or in the cloud.
-
-{% page-ref page="deployment.md" %}
 
