@@ -53,7 +53,7 @@ ARM is building its own IoT ecosystem in the cloud, mainly to simplify the devel
 
 The Cloud Console is related with the management front-end designed to easily manage your devices and visualize its information in the cloud. In this section you will learn how to register devices, create real-time dashboards, access the devices API, and other management operations.
 
- \[Cloud Console Documentation &gt;\]\(console\)
+{% page-ref page="console.md" %}
 
 ## Mobile App
 
@@ -61,7 +61,7 @@ The Cloud Console is related with the management front-end designed to easily ma
 
 This section is related with the use of the Android and iOS Mobile App. You will learn how to scan devices, point them to another server or visualize and manage its information.
 
- \[Mobile App Documentation &gt;\]\(mobile\)
+{% page-ref page="mobile.md" %}
 
 ## Server API
 
@@ -77,7 +77,7 @@ The Thinger.io Cloud is supported by a REST API designed to easily integrate you
 
 This section is related to the Thinger.io hardware boards, like the ClimaStick. A small powerful device plenty of sensors, WiFi, ready for prototyping, learning, or developing products.
 
- \[ClimaStick Board &gt;\]\(hardware/climaStick\)
+{% page-ref page="climastick.md" %}
 
 ## Server Deployment
 
@@ -85,5 +85,5 @@ This section is related to the Thinger.io hardware boards, like the ClimaStick. 
 
 This section is related to the Cloud configuration and deployment in your own infrastructure, both in local machines or in the cloud.
 
- \[Server Deployment Documentation &gt;\]\(deployment\)
+{% page-ref page="deployment.md" %}
 
