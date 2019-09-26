@@ -7,7 +7,7 @@ description: >-
 
 # OVERVIEW
 
-## Hardware Clients
+## Hardware Devices
 
 This section will cover how to program your hardware to connect and use the Thinger.io platform. As there are many IoT hardware available nowadays, this section is divided in different categories.
 
@@ -38,6 +38,12 @@ In this category is covered the Sigfox integration with the platform, where the 
 [![](.gitbook/assets/mbed-enabled-logo.png) ](arduino.md)
 
 ARM is building its own IoT ecosystem in the cloud, mainly to simplify the development process in any ARM mBed compatible hardware. So, if you have an ARM mBed compatible board, this is your place.
+
+## Software Client [Coding](coding.md)
+
+![](.gitbook/assets/coding.png) 
+
+This section will cover how to add different functionality to your devices for exposing resources, calling endpoints, or streaming data to real-time websockets.
 
 ## [Cloud Console](console.md)
 

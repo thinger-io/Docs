@@ -14,8 +14,6 @@ This board is a complete Internet of Things development kit, that integrates WiF
 
 ![](.gitbook/assets/i0_7.png)
 
-![](https://github.com/thinger-io/Docs/tree/9fc057586e6704dcf058d1a33a7f25ae648c002c/hardware/climaStick/assets/i0_1.png?raw=true)
-
 ### Board Features
 
 * Environmental sensing for temperature, relative humidity, barometric pressure, and lux intensity. A micro weather station!
@@ -66,8 +64,6 @@ This section covers how to setup your computer to start working with the ClimaSt
 4- Open Sketch &gt; Include Library &gt; Manage Libraries, and search for **Thinger.io** libraries. Then install the Thinger.io and ClimaStick libraries, as shown in the following picture.
 
 ![](.gitbook/assets/climastick_libraries.png)
-
-### 
 
 5- Connect the ClimaStick to your computer and select its serial communication port number on: Tools &gt; Port. It normally will be a COM port, or named as /dev/cu.SLAB\_USBtoUART on Mac.
 
@@ -259,7 +255,7 @@ This section covers different considerations while using the board.
 * This device is developed for prototyping and support software development, so it is not protected to support hard weather conditions without the proper cover case.
 * Try to avoid touching the components surfaces while using the device, it can produce an electrostatic shock on the device, producing shortcuts and malfunction. It is recommended to take the board from the edges like in the following illustration.
 
-![](https://github.com/thinger-io/Docs/tree/9fc057586e6704dcf058d1a33a7f25ae648c002c/hardware/climaStick/assets/i2.PNG?raw=true)
+![](.gitbook/assets/i2.PNG) 
 
 * If necessary, clean the circuit using a non-damaging contact cleaner like Isopropyl alcohol and soft brush. 
 * Store in a cool, dry place. Protected from dust.
@@ -268,7 +264,7 @@ This section covers different considerations while using the board.
 
 * If you use the VIN power header, be careful to connect it in the correct position, as it is shown in the following image. Not following this directive could damage the protection diode.
 
-![](https://github.com/thinger-io/Docs/tree/9fc057586e6704dcf058d1a33a7f25ae648c002c/hardware/climaStick/assets/i1.PNG?raw=true)
+![](.gitbook/assets/i1.PNG) 
 
 * ⚠ Do not use VIN power supply and USB power supply at the same time! It can damage your hardware.
 
@@ -276,7 +272,7 @@ This section covers different considerations while using the board.
 
 * You can power and charge a battery directly from the board. Use the BAT power header, and take care to of the polarity, as it is shown in the following picture:
 
-![](https://github.com/thinger-io/Docs/tree/9fc057586e6704dcf058d1a33a7f25ae648c002c/hardware/climaStick/assets/i3.PNG?raw=true)
+![](.gitbook/assets/i3.PNG) 
 
 * BAT header is connected to a lithium battery charger that can manage 3.7Vdc, 500mah Li-Po / li-ion batteries charge and discharge process.
 * To charge a battery, connect it on BAT header and power on the ClimaStick through USB / VIN connectors. The battery charger will manage the charging voltage to increase life battery and stops charging cycle when voltage ups to 4.2Vdc.
