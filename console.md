@@ -40,15 +40,13 @@ Now, you can o back to your devices list, and your device should appear as disco
 
 Now you can use your new device id and the device credentials to connect the new device. Depending on your device, you will need to install the required libraries or development environment, so checkout the following sections according to your device:
 
-[Arduino Compatible Boards &gt;](http://docs.thinger.io/arduino/)
+{% page-ref page="arduino.md" %}
 
-[Linux & Raspberry Pi &gt;](http://docs.thinger.io/linux/)
-
-[ARM Mbed &gt;](http://docs.thinger.io/mbed/)
+{% page-ref page="linux.md" %}
 
 Remember that Sigfox devices, does not share the concept of connected device, as they are by default offline devices that send information periodically. If you want to store information from these devices, please, checkout the following documentation.
 
-[Sigfox Devices &gt;](http://docs.thinger.io/sigfox/)
+{% page-ref page="sigfox.md" %}
 
 For the following example, we will be using the Arduino IDE along with an ESP8266 device, like the NodeMCU. In this case, you can open the example code for the ESP8266, and fill the device details: your username, the device ID, and the device credentials established while creating the device. The following picture represents the relation between the code and the device created in your account.
 
@@ -161,7 +159,7 @@ Here it is necessary to configure different parameters:
 * **Data source**:
   * **From Device Resource**: It means that it will take information from a specific device resource \(like temperature, motion, and so on\). In this option, the device should keep a permanent connection with the server. This add some benefits as we can change the sampling rate on demand, without having to change our device code, by using the `Sampling Interval` option.
 
-    ![](.gitbook/assets/buckettimesample.PNG)
+
 
     **Remember** that defining a resource in the device is described in more detail [here](http://docs.thinger.io/arduino/#coding-adding-resources), but a single resource reporting temperature and humidity from a DHT sensor could be coded like this:
 
@@ -211,6 +209,8 @@ Here it is necessary to configure different parameters:
       ESP.deepSleep(SLEEP_MS*1000, WAKE_RF_DEFAULT); 
     }
     ```
+
+![](.gitbook/assets/buckettimesample.PNG)
 
 ### Review Bucket Data
 
@@ -290,13 +290,13 @@ The configurable parameters are the following:
 * **Chart Input**: Configure how to feed the values to the time series chart. It is possible to feed the information from a connected **device** or from a **data bucket**.
   * **From Device**: With this option it is necessary to select a device \(that must be connected to provide information\) and specify the resources to plot. The following figure is an example that is selecting the device `deviceA`, and the resource `millis` from the device. Notice that when a time series widget is feed from a device, it will not keep the information if the dashboard is closed or refreshed, as it is just real-time data from your device to your dashboard. You can also select between different refresh modes, like sampling at different intervals \(that can be updated online\), or the chart is updated by the device.
 
-    ![](.gitbook/assets/datasource.PNG)
-
   * **From Data Bucket**: With this option, the widget will take the information from a given bucket to plot the historic information on it. So, it is necessary to just select the bucket identifier created in your account. If the bucket is composed by multiple variables, it will allow selecting the variables to plot, like in the following picture. When the information is selected from the data bucket, you will require to establish a data timeframe to be displayed, that can be relative to the current time, or an absolute period between two dates.
-
-    ![](.gitbook/assets/multiplevariable.PNG)
 * **Options**: It is possible to configure some graph features like splines, legends, axis, etc.
 * **Chart Color**: Both on data selected from a device or from a data bucket, it is possible to configure series colors, depending on the information available in the resource, it will show only one configurable color, or a color for each series, like in the previous screenshot.
+
+![](.gitbook/assets/datasource.PNG)
+
+![](.gitbook/assets/multiplevariable.PNG)
 
 #### Donut Chart
 
@@ -550,7 +550,7 @@ The configurable parameters are the following:
 * **Enabled**: Controls whether the token is enabled or disabled. 
 * **Token Permissions**: In this section it is possible to define the scope, or the level access of the token. Depending on the given permissions, the token will have access to different parts of your account. Adding a new permission will normally require selecting the permission type \(access a device, bucket, dashboard, etc.\), the level access \(some specific resource or all of their type\), and the allowed actions \(all or some of them\). This configuration is handled by the following screenshot:
 
-    ![](.gitbook/assets/addusertokenpermission.png)
+  
 
     &lt;/p&gt; 
 
@@ -598,4 +598,6 @@ The configurable parameters are the following:
     * `ReadTokenConfig`: Grants access to read the current token config.
     * `UpdateToken`: Grants access to modify the token configuration.
     * `DeleteToken`: Grants access to delete tokens. 
+
+![](.gitbook/assets/addusertokenpermission.png)
 

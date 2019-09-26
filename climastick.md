@@ -8,9 +8,11 @@ This board is a complete Internet of Things development kit, that integrates WiF
 
 #### ClimaStick V1.1:
 
-![](https://github.com/thinger-io/Docs/tree/9fc057586e6704dcf058d1a33a7f25ae648c002c/hardware/climaStick/assets/i0.PNG?raw=true)
+![](.gitbook/assets/i0.PNG)
 
 #### ClimaStick V2:
+
+![](.gitbook/assets/i0_7.png)
 
 ![](https://github.com/thinger-io/Docs/tree/9fc057586e6704dcf058d1a33a7f25ae648c002c/hardware/climaStick/assets/i0_1.png?raw=true)
 
@@ -46,26 +48,30 @@ This section covers how to setup your computer to start working with the ClimaSt
 
 ### Configure Arduino IDE
 
-1. Open File &gt; Preferences &gt; Additional\_Boards\_URL\_Manager to include the "ESP8266 boards manager link" that you can retrieve from [Github community project](https://github.com/esp8266/Arduino). It is normally `http://arduino.esp8266.com/stable/package_esp8266com_index.json`
+1- Open File &gt; Preferences &gt; Additional\_Boards\_URL\_Manager to include the "ESP8266 boards manager link" that you can retrieve from [Github community project](https://github.com/esp8266/Arduino). It is normally `http://arduino.esp8266.com/stable/package_esp8266com_index.json`
 
-   ![](https://github.com/thinger-io/Docs/tree/9fc057586e6704dcf058d1a33a7f25ae648c002c/hardware/climaStick/assets/i4.PNG?raw=true)
+![](.gitbook/assets/i4.PNG)
 
-2. Open Tools &gt; Boards &gt; Boards Manager... and search for ESP8266 package, then install the last version.
+2- Open Tools &gt; Boards &gt; Boards Manager... and search for ESP8266 package, then install the last version.
 
-   ![](https://github.com/thinger-io/Docs/tree/9fc057586e6704dcf058d1a33a7f25ae648c002c/hardware/climaStick/assets/i5.PNG?raw=true)
+![](.gitbook/assets/i5.PNG)
 
-3. Now you can program almost any ESP82XX processor directly from the Arduino IDE. From the Tools &gt; Boards you should see now the new ESP8266 community boards installed.
-4. For program ClimaStick V1 select **NODE\_MCU V1.0 \(ESP-12E Module\)**.
-5. For program ClimaStick V2 select **WeMos D1 Mini Lite**.
+3- Now you can program almost any ESP82XX processor directly from the Arduino IDE. From the Tools &gt; Boards you should see now the new ESP8266 community boards installed.
 
-![](https://github.com/thinger-io/Docs/tree/9fc057586e6704dcf058d1a33a7f25ae648c002c/hardware/climaStick/assets/i6.png?raw=true)
+1. For program ClimaStick V1 select **NODE\_MCU V1.0 \(ESP-12E Module\)**.
+2. For program ClimaStick V2 select **WeMos D1 Mini Lite**.
 
-1. Open Sketch &gt; Include Library &gt; Manage Libraries, and search for **Thinger.io** libraries. Then install the Thinger.io and ClimaStick libraries, as shown in the following picture.
+![](.gitbook/assets/i6.png)
 
-   ![](.gitbook/assets/climastick_libraries.png)
+4- Open Sketch &gt; Include Library &gt; Manage Libraries, and search for **Thinger.io** libraries. Then install the Thinger.io and ClimaStick libraries, as shown in the following picture.
 
-2. Connect the ClimaStick to your computer and select its serial communication port number on: Tools &gt; Port. It normally will be a COM port, or named as /dev/cu.SLAB\_USBtoUART on Mac.
-3. Now you can start developing with Thinger.io ClimaStick! It is helpful to start with the examples provided in the library, by opening File &gt; Examples &gt; ClimaStick
+![](.gitbook/assets/climastick_libraries.png)
+
+### 
+
+5- Connect the ClimaStick to your computer and select its serial communication port number on: Tools &gt; Port. It normally will be a COM port, or named as /dev/cu.SLAB\_USBtoUART on Mac.
+
+6- Now you can start developing with Thinger.io ClimaStick! It is helpful to start with the examples provided in the library, by opening File &gt; Examples &gt; ClimaStick
 
 ### Uploading firmware
 

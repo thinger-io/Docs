@@ -1,4 +1,4 @@
-# RASPBERRY PI
+# LINUX / RASPBERRY PI
 
 ![](https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/67c344bcaf24746012ef751c63731fa96b457e4a.gif)
 
@@ -103,7 +103,9 @@ And now it is time to enter the credentials in the main project file. So we are 
 nano src/main.cpp
 ```
 
-In this case you must edit the fields `USER_ID`, `DEVICE_ID`, and `DEVICE_CREDENTIAL` with the information you provided while registering your device in the platform. Here is an example screenshot of how the `main.cpp` file should look like before editing these fields. ![](https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/2697e5c757b23eec7537fc9ac232544f5923d583.png) When you are done editing the parameters, exit the nano editor pressing `Ctrl+X` and then type '`y`' to save the changes.
+In this case you must edit the fields `USER_ID`, `DEVICE_ID`, and `DEVICE_CREDENTIAL` with the information you provided while registering your device in the platform. Here is an example screenshot of how the `main.cpp` file should look like before editing these fields.  When you are done editing the parameters, exit the nano editor pressing `Ctrl+X` and then type '`y`' to save the changes.
+
+![](https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/2697e5c757b23eec7537fc9ac232544f5923d583.png)
 
 If you are executing the script on a Raspberry Pi, make sure the `run.sh` contains the `-DRASPBERRY=ON` commandline parameter as follows -
 
@@ -123,7 +125,9 @@ And now you can run it to test that everything is working.
 ./run.sh
 ```
 
-If everything is going fine you should see how the program is compiled and executed automatically. The program actually reports some debug text that can help us to check if we have configured the credentials well. The expected result you should see is something like the following picture. ![](https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/e321714a8b9fcac120cb1dafae8502cca65e9b39.png) Now you can go to your thinger.io console and check that the Raspberry appears as connected. You can even try to execute the `sum` resource defined in the `main.cpp` that simply performs a sum. For test the device resources, please go to the API Explorer that appears in the device dashboard.
+If everything is going fine you should see how the program is compiled and executed automatically. The program actually reports some debug text that can help us to check if we have configured the credentials well. The expected result you should see is something like the following picture.  Now you can go to your thinger.io console and check that the Raspberry appears as connected. You can even try to execute the `sum` resource defined in the `main.cpp` that simply performs a sum. For test the device resources, please go to the API Explorer that appears in the device dashboard.
+
+![](https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/e321714a8b9fcac120cb1dafae8502cca65e9b39.png)
 
 ![](https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/7b3bf8846f66eb57b422a803ac157560ea608e19.png)
 
