@@ -1,11 +1,11 @@
 ---
 description: >-
-  This section will cover how to add different functionality to your devices for
-  exposing resources, calling endpoints, or streaming data to real-time
-  websockets.
+  This section will cover how to create devices firmware using Thinger.io
+  libraries to easily create data input and output resources, calling endpoints,
+  or streaming data to real-time WebSockets, etc.
 ---
 
-# CODING
+# FIRMWARE CODING
 
 ## Sketch Overview
 

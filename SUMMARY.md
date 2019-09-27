@@ -9,5 +9,5 @@
 * [MOBILE APP](mobile.md)
 * [THINGER.IO HARDWARE](climastick.md)
 * [SERVER DEPLOYMENT](deployment.md)
-* [CODING](coding.md)
+* [FIRMWARE CODING](coding.md)
 

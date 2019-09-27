@@ -39,9 +39,9 @@ In this category is covered the Sigfox integration with the platform, where the 
 
 ARM is building its own IoT ecosystem in the cloud, mainly to simplify the development process in any ARM mBed compatible hardware. So, if you have an ARM mBed compatible board, this is your place.
 
-## Software Client [Coding](coding.md)
+## [Software Client Coding](coding.md)
 
-![](.gitbook/assets/coding.png) 
+[ ![](.gitbook/assets/coding.png) ](coding.md)
 
 This section will cover how to add different functionality to your devices for exposing resources, calling endpoints, or streaming data to real-time websockets.
 
