@@ -433,6 +433,53 @@ Since library version 2.5.0, the ESP8266 will connect by default using secure so
 
 Want to add some device resources \(led, sensors, etc.\) to interact with them from the Internet?. Check the [Add Resources](arduino.md#coding-adding-resources) section.
 
+### ESP32 / Expressif Wroom 32
+
+ESP32 is a series of low-cost, low-power system on a chip microcontrollers with integrated Wi-Fi and dual-mode Bluetooth. There are multiple modules based on this microcontroller that includes different kinds of antennas, pinouts and memory extensions. It is the successor to the ESP8266 microcontroller and is designed to be one of the most relevant IoT impultors during the next years and there is a great diversity of PCBs that exploit its capacities together with other peripherals, integrating LoRa communication, audio amplifiers, LCD screens, etc.
+
+![](.gitbook/assets/esp32.png)
+
+This devices can be directly programmed from the Arduino IDE by including the ESP32 core libraries with Arduino Boards Manager. For this step, you will need fist to include [https://dl.espressif.com/dl/package\_esp32\_index.json](https://dl.espressif.com/dl/package_esp32_index.json) into "Additional Board Manager URLs" field in the Arduino v1.6.4+ preferences.
+
+![](.gitbook/assets/esp32_preferences.PNG)
+
+Next, go to the Boards manager to install the ESP8266 package. Search for the esp8266 and install the package **esp8266 by ESP8266 Community**
+
+![](.gitbook/assets/esp32_boardsmanager.PNG)
+
+After this proces you shold be able to select this PCB on your Arduino IDE and start creating your IoT projects with Thinger.io. The following example will allow connecting your device to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials, and the **wifi\_ssid**, **wifi\_password** with the WiFi credentials.
+
+```cpp
+#include <ThingerESP32.h>
+
+#define USERNAME "your_user_name"
+#define DEVICE_ID "your_device_id"
+#define DEVICE_CREDENTIAL "your_device_credential"
+
+#define SSID "your_wifi_ssid"
+#define SSID_PASSWORD "your_wifi_ssid_password"
+
+ThingerESP32 thing(USERNAME, DEVICE_ID, DEVICE_CREDENTIAL);
+
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+
+  thing.add_wifi(SSID, SSID_PASSWORD);
+
+  // digital pin control example (i.e. turning on/off a light, a relay, configuring a parameter, etc)
+  thing["led"] << digitalPin(LED_BUILTIN);
+
+  // resource output example (i.e. reading a sensor value)
+  thing["millis"] >> outputValue(millis());
+
+  // more details at http://docs.thinger.io/arduino/
+}
+
+void loop() {
+  thing.handle();
+}
+```
+
 ### TI Launchpad CC3200
 
 The TI CC3200 was the natural evolution of the CC3000/CC3100 chip. Instead on providing a single chip for managing the WiFi communications, it also integrates a powerful programmable MCU, in the same way the ESP8266 is doing. So you can program your code and have WiFi capabilities right out of the box. The easiest way to start with this chip is by using the TI CC3200 Launchpad, which integrates the chip, as well as some sensors, leds, and the USB to serial so you can program the board right from the USB.

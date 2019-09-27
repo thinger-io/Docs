@@ -468,6 +468,71 @@ And receiving an email with the text:
 
 The actual level is 80.34%
 
+## Using Data Buckets
+
+Thinger.io provides an easy to use and extremely scalable virtual storage system, that allows to store long term device data from device output resources. This information can be used to be ploted in dashboards, or can be exported in different formats for offline processing or third party Data Analysis process.
+
+### From Device Resource
+
+It is not necessary to implement specific codification in your device firmware to start storing data in a data bucket, because they will retrieve information from your output resources, just configure your Data Bucket to set the source and sampling interval as it is explained in our Console documentation at: [http://docs.thinger.io/console/\#data-buckets](http://docs.thinger.io/console/#data-buckets)
+
+### Streaming Resource Data
+
+It is also possible to let he device stream the information when required, i.e., by raising an event when detected. In this case, we can use the "Update by Device" option while configuring the bucket, and we will use the streaming resource instruction as described here:
+
+Using a previous defined output reource, that was called for example \["location"\], it could be done like in the following code snippet.
+
+```cpp
+ void loop() {
+  thing.handle();
+  // use your own logic here to determine when to stream/record the resource.
+  if(requires_recording){
+      thing.stream("location");
+  }
+}
+```
+
+### From Write Call
+
+This option will allow setting the bucket in a state that it will not register any information by default, but it will just wait for writing calls, both from the Arduino library using the write\_bucket method, as shown here, or calling the REST API directly like done with Sigfox. This feature opens the option to register information in the same bucket from different devices, or store information from devices that are not connected permanently with the server, that are in sleep mode, or use a different technology like Sigfox.
+
+Here is an example of an ESP8266 device writing information to a bucket using the write\_bucket function:
+
+```cpp
+void setup() {
+  // define the resource with temperature and humidity
+  thing["door_status"] >> [](pson &out){ 
+    out["OPEN"] = (bool)digitalRead(SENSOR_PIN);
+  };
+}
+
+void loop() { 
+  // handle connection
+  thing.handle();
+
+  if(digitalRead(SENSOR_PIN)!=previous_status){
+    // write to bucket BucketId when the door changes its status
+    thing.write_bucket("BucketId", "door_status");
+  }
+  previous_status=digitalRead(SENSOR_PIN);
+}
+```
+
+Note that this instruction will retrieve the \["door\_status"\] resource PSON, so it is also possible to call this function by attaching a custom PSON, as shown down below:
+
+```cpp
+void loop(){
+  // handle connection
+  thing.handle();
+
+  if(digitalRead(SENSOR_PIN)!=previous_status){
+    // write to bucket BucketId when the door changes its status
+    thing.write_bucket("BucketId", "door_status");
+  }
+  previous_status=digitalRead(SENSOR_PIN);
+}
+```
+
 ## Streaming Resources
 
 In Thinger.io you can open WebSockets connections against your devices, so you can receive sensor values, events, or any other information in real-time. The WebSockets are mainly used in the Dashboard feature of the Console, and are normally used for streaming resources at a fixed configurable interval. This functionality is available right out of the box when you define an output resource. However, if you want to transmit the information right when it is required, like when your device detects a movement, presence, etc., you must program some code, that is quite similar to calling an endpoint.
