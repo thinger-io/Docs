@@ -10,4 +10,6 @@
 * [THINGER.IO HARDWARE](climastick.md)
 * [SERVER DEPLOYMENT](deployment.md)
 * [FIRMWARE CODING](coding.md)
+* [PLUGINS](plugins/README.md)
+  * [The Things Network](plugins/the-things-network.md)
 
