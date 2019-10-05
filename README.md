@@ -15,27 +15,27 @@ There is a category related with Arduino compatible hardware, which is any board
 
 So, to start using the platform select the hardware platform you want to use.
 
-### [Arduino](arduino.md)
+### [Arduino](hardware-devices/arduino.md)
 
-[![](.gitbook/assets/arduino-logo.png) ](arduino.md)
+[![](.gitbook/assets/arduino-logo.png) ](hardware-devices/arduino.md)
 
 This category is related with any hardware that can be programmed over the Arduino IDE and its libraries. So it is not exclusively for Arduino Devices, as you can also program different boards like the ESP8266, or Texas Instruments CC3200 board. Of course, you can still use any other Arduino Board with Ethernet of Wifi capabilities.
 
-### [Linu](linux.md)[x](linux.md)
+### [Linu](hardware-devices/linux.md)[x](hardware-devices/linux.md)
 
-### [![](.gitbook/assets/imagen1.png)](linux.md)
+### [![](.gitbook/assets/imagen1.png)](hardware-devices/linux.md)
 
 If you want to develop an IoT product or project based on a device running Linux OS, there is also an special client for this platform. There are some specific examples for each common Linux board like Raspberry Pi or Intel Edison. But you can run the client in practically any computer running a Linux distribution, including a computer with Mac OS.
 
-### [Sigfo](sigfox.md)x
+### [Sigfo](hardware-devices/sigfox.md)x
 
-### [![](.gitbook/assets/sigfox-logo.jpg)](sigfox.md)
+### [![](.gitbook/assets/sigfox-logo.jpg)](hardware-devices/sigfox.md)
 
 In this category is covered the Sigfox integration with the platform, where the user can configure callbacks for transmitting data from the devices to the cloud for creating real-time dashboards.
 
 ### ARM Mbed
 
-[![](.gitbook/assets/mbed-enabled-logo.png) ](arduino.md)
+[![](.gitbook/assets/mbed-enabled-logo.png) ](hardware-devices/arduino.md)
 
 ARM is building its own IoT ecosystem in the cloud, mainly to simplify the development process in any ARM mBed compatible hardware. So, if you have an ARM mBed compatible board, this is your place.
 

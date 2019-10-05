@@ -6,7 +6,7 @@ This documentation is related with the Arduino client library version of the Thi
 
 The client library allows connecting your IoT devices to the [Thinger.io](http://thinger.io) cloud platform. This is a library specifically designed for the Arduino IDE, so you can easily program your devices and connect them within minutes by creating `Input` and `Output` resources. Ones the data is online it is possible to show in customizable dashboards, store in data buckets or send to third parties via endpoint.
 
-![](.gitbook/assets/thingerio-architecture.png)
+![](../.gitbook/assets/thingerio-architecture.png)
 
 This library supports multiple network interfaces and boards, like Ethernet Shield, Wifi Shield, and GSM. It also supports other boards like ESP8266 \(or NodeMCU\), Texas Instruments CC3200 Launchpad, and Adafruit CC3000 board. It requires a modern Arduino IDE version, starting at 1.6.3.
 
@@ -54,7 +54,7 @@ Now **rename** the `Arduino-Library-master.zip` file to something more relevant 
 
 The final step is to **import** the `zip` library using the Arduino IDE. This step will uncompress and copy the `zip` library in the Arduino libraries folder. Which is usually under your Documents folder.
 
-![](.gitbook/assets/add-zip-library.png)
+![](../.gitbook/assets/add-zip-library.png)
 
 > Sketch &gt; Include Library &gt; Add .ZIP libraries
 
@@ -72,7 +72,7 @@ The Arduino Ethernet Shield connects your Arduino to the internet in mere minute
 
 The following example will allow connecting your device to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials.
 
-![](.gitbook/assets/arduino-ethernet.png)
+![](../.gitbook/assets/arduino-ethernet.png)
 
 ```cpp
 #include <SPI.h>
@@ -97,7 +97,7 @@ The Arduino Wifi Shield is a poweful IoT shield that connects your Arduino board
 
 The following example will allow connecting your device to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials, and the **wifi\_ssid**, **wifi\_password** with the WiFi credentials.
 
-![](.gitbook/assets/arduino-wifi-shield.png)
+![](../.gitbook/assets/arduino-wifi-shield.png)
 
 ```cpp
 #include <SPI.h>
@@ -127,7 +127,7 @@ So for this module is required to have installed the **Adafruit CC3000 Libraries
 
 The following example will allow connecting your device to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials, and the **wifi\_ssid**, **wifi\_password** with the WiFi credentials.
 
-![](.gitbook/assets/adafruit-cc3000.png)
+![](../.gitbook/assets/adafruit-cc3000.png)
 
 ```cpp
 #include <Adafruit_CC3000.h>
@@ -154,7 +154,7 @@ The Arduino Yún is a microcontroller board based on the ATmega32u4 and the Athe
 
 The following example will allow connecting the Yun to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials. Notice that it is not required to configure any network parameter in the code, as this managed by the running Linux distribution. However you many need to connect with your Arduino Yun via WiFi to connect it some local network.
 
-![](.gitbook/assets/arduino-yun.png)
+![](../.gitbook/assets/arduino-yun.png)
 
 ```cpp
 #include <BridgeSSLClient.h>
@@ -186,7 +186,7 @@ void loop() {
 
 **⚠ NOTE:** For using Arduino Yun, the device must be connected to a network with Internet, just with Ethernet or a Wifi connection.
 
-![](.gitbook/assets/arduino_yun_network.png)
+![](../.gitbook/assets/arduino_yun_network.png)
 
 Want to add some device resources \(led, sensors, etc.\) to interact with them from the Internet?. Check the [Add Resources](arduino.md#coding-adding-resources) section.
 
@@ -196,7 +196,7 @@ The Arduino MKR1000 is a microcontroller based on the Atmel ATSAMW25 SoC \(Syste
 
 The following example will allow connecting the MKR1000 to the cloud platform in a few lines using secure connections \(TLS/SSL\). Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials, and the **wifi\_ssid**, **wifi\_password** with the WiFi credentials.
 
-![](.gitbook/assets/arduino_mkr1000.png)
+![](../.gitbook/assets/arduino_mkr1000.png)
 
 ```cpp
 #include <WiFi101.h>
@@ -215,7 +215,7 @@ void loop() {
 
 **⚠ NOTE:** For using MKR1000 over the default TLS/SSL connection it is required to install the Thinger.io server certificate in the board with the Wifi101 Firmware Updater located in the Tools menu.
 
-![](.gitbook/assets/mkr1000_ssl_certificate.png)
+![](../.gitbook/assets/mkr1000_ssl_certificate.png)
 
 Or it is possible to disable the secure TLS/SSL connection, by declaring the following define before any other include:
 
@@ -228,7 +228,7 @@ Or it is possible to disable the secure TLS/SSL connection, by declaring the fol
 
 In the same iconic size of the Arduino Nano, the Arduino Nano 33 IoT hosts an Arm Cortex-M0+ SAMD21 processor, a WiFi and Bluetooth module based on ESP32, a 6 axis Inertial Measurement Unit \(IMU\) and a crypto chip which can securely store certificates and pre shared keys.
 
-![](.gitbook/assets/33iot.png)
+![](../.gitbook/assets/33iot.png)
 
 The integration with Thinger.io requires downloading an aditional library called "Arduino WiFiNINA" that allows communicating with the U-BLOX WiFi module.
 
@@ -268,7 +268,7 @@ void loop() {
 
 **⚠ NOTE:** For using MKR WIFI1010 over the default TLS/SSL connection it is required to install the Thinger.io server certificate in the board with the Wifi101/WiFiNINA Firmware Updater located in the Tools menu and including "thinger.io:443" domain in the bottom text input.
 
-![](.gitbook/assets/mkr1000_ssl_certificate.png)
+![](../.gitbook/assets/mkr1000_ssl_certificate.png)
 
 Or it is possible to disable the secure TLS/SSL connection, by declaring the following define before any other include:
 
@@ -281,7 +281,7 @@ Or it is possible to disable the secure TLS/SSL connection, by declaring the fol
 
 The Arduino Uno WiFi is functionally the same as the Arduino Uno Rev3, but with the addition of WiFi and some other enhancements. It incorporates a brand new 8-bit microprocessor from Microchip and has an onboard IMU \(Inertial Measurement Unit\). The Wi-Fi Module is a self-contained SoC with integrated TCP/IP protocol stack that can provide access to a Wi-Fi network, or act as an access point.
 
-![](.gitbook/assets/unowifirev2.jpg)
+![](../.gitbook/assets/unowifirev2.jpg)
 
 The integration with Thinger.io requires downloading an aditional library called "Arduino WiFiNINA" that allows communicating with the U-BLOX WiFi module.
 
@@ -321,7 +321,7 @@ void loop() {
 
 **⚠ NOTE:** For using MKR WIFI1010 over the default TLS/SSL connection it is required to install the Thinger.io server certificate in the board with the Wifi101/WiFiNINA Firmware Updater located in the Tools menu and including "thinger.io:443" domain in the bottom text input.
 
-![](.gitbook/assets/mkr1000_ssl_certificate.png)
+![](../.gitbook/assets/mkr1000_ssl_certificate.png)
 
 Or it is possible to disable the secure TLS/SSL connection, by declaring the following define before any other include:
 
@@ -336,7 +336,7 @@ Arduino MKR GSM 1400 has been designed to offer a practical and cost effective s
 
 The following example will allow connecting the GSM1400 to the cloud platform in a few lines using secure connections \(TLS/SSL\). Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials, and the **GPRS\_APN**, **GPRS\_LOGIN**, **GPRS\_PASSWORD**, and **PIN\_NUMBER** with your SIM information.
 
-![](.gitbook/assets/arduino_gsm1400.png)
+![](../.gitbook/assets/arduino_gsm1400.png)
 
 ```cpp
 #include <MKRGSM.h>
@@ -406,7 +406,7 @@ You can find additional information for the ESP8266 package in the [ESP8266 Gith
 
 The following example will allow connecting your device to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials, and the **wifi\_ssid**, **wifi\_password** with the WiFi credentials.
 
-![](.gitbook/assets/nodemcu.png)
+![](../.gitbook/assets/nodemcu.png)
 
 ```cpp
 #include <SPI.h>
@@ -454,15 +454,15 @@ ThingerSmartConfig thing(USERNAME,
 
 ESP32 is a series of low-cost, low-power system on a chip microcontrollers with integrated Wi-Fi and dual-mode Bluetooth. There are multiple modules based on this microcontroller that includes different kinds of antennas, pinouts and memory extensions. It is the successor to the ESP8266 microcontroller and is designed to be one of the most relevant IoT impultors during the next years and there is a great diversity of PCBs that exploit its capacities together with other peripherals, integrating LoRa communication, audio amplifiers, LCD screens, etc.
 
-![](.gitbook/assets/esp32.png)
+![](../.gitbook/assets/esp32.png)
 
 This devices can be directly programmed from the Arduino IDE by including the ESP32 core libraries with Arduino Boards Manager. For this step, you will need fist to include [https://dl.espressif.com/dl/package\_esp32\_index.json](https://dl.espressif.com/dl/package_esp32_index.json) into "Additional Board Manager URLs" field in the Arduino v1.6.4+ preferences.
 
-![](.gitbook/assets/esp32_preferences.PNG)
+![](../.gitbook/assets/esp32_preferences.PNG)
 
 Next, go to the Boards manager to install the ESP8266 package. Search for the esp8266 and install the package **esp8266 by ESP8266 Community**
 
-![](.gitbook/assets/esp32_boardsmanager.PNG)
+![](../.gitbook/assets/esp32_boardsmanager.PNG)
 
 After this proces you shold be able to select this PCB on your Arduino IDE and start creating your IoT projects with Thinger.io. The following example will allow connecting your device to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials, and the **wifi\_ssid**, **wifi\_password** with the WiFi credentials.
 
@@ -519,7 +519,7 @@ Once the environment is available and you can program the board examples, then y
 
 The following example will allow connecting your device to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials, and the **wifi\_ssid**, **wifi\_password** with the WiFi credentials.
 
-![](.gitbook/assets/ti-cc3200.png)
+![](../.gitbook/assets/ti-cc3200.png)
 
 ```cpp
 #include <WiFi.h>
@@ -546,7 +546,7 @@ There are some libraries for managing this boards, but we will use [UIPEthernet]
 
 The following example will allow connecting your device to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials.
 
-![](.gitbook/assets/enc28j60.jpg)
+![](../.gitbook/assets/enc28j60.jpg)
 
 ```cpp
 // UIPEthernet for ENC28J60: https://github.com/ntruchsess/arduino_uip
@@ -586,7 +586,7 @@ The LinkIt ONE development board is an open source, high performance, Arduino fo
 
 The board is programmed through the Arduino IDE with a plugin from MediaTek. Check the [MediaTek LinkIt™ ONE SDK for Arduino](http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit/sdk_intro/index.gsp)
 
-![](.gitbook/assets/linkit_one.jpg)
+![](../.gitbook/assets/linkit_one.jpg)
 
 > Pin-out similar to Arduino boards, including Digital I/O, Analog I/O, PWM, I2C, SPI, UART and power supply, compatible with Grove 4-pin interface. Although the board is made by Seeed, the chipset is made by MediaTek, a large Chinese company who are already offering significant SDK / support resources.
 
