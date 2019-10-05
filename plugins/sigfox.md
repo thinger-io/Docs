@@ -191,7 +191,7 @@ The last step of this plugin is to call the device callback in Thinger.io. This 
 
 In this case, the plugin interacts with the platform over such REST interface, pushing data received from Sigfox, and processed by the custom uplink method. By default, the plugin initializes an HTTP device to write to a data bucket that is also automatically created. So, every message sent by a Sigfox device, will write finally write to a specific data bucket. As shown in the following picture:
 
-![HTTP Device created by the Sigfox Plugin](../.gitbook/assets/image%20%2813%29.png)
+![](../.gitbook/assets/sigfoxdevicecallbackauto.png)
 
 After the device callback is done, it will appear as a connected device, showing also its location if it was configured in the plugin options.
 

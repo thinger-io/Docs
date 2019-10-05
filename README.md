@@ -51,9 +51,9 @@ This section will cover how to add different functionality to your devices for e
 
 The Cloud Console is related with the management front-end designed to easily manage your devices and visualize its information in the cloud. In this section you will learn how to register devices, create real-time dashboards, access the devices API, and other management operations.
 
-## [Mobile App](mobile.md)
+## [Mobile A](mobile.md)[pp](mobile.md)
 
-[![](.gitbook/assets/mobile-app.png)](mobile.md)
+[![](.gitbook/assets/mobile-app.png) ](mobile.md)
 
 This section is related with the use of the Android and iOS Mobile App. You will learn how to scan devices, point them to another server or visualize and manage its information.
 
