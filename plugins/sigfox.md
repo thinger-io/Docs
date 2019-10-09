@@ -136,7 +136,7 @@ Use the interface tester to see if your code is correctly procesing the payloads
 
 In this section it is described how the uplink data flow works, from its source in the Sigfox network, to its final destination in Thinger.io.
 
-![](../.gitbook/assets/image%20%286%29.png)
+![](../.gitbook/assets/image%20%2812%29.png)
 
 In the following subsections are described the elements shown in the figure.
 
@@ -171,7 +171,7 @@ Once this information is received by the plugin, it is processed in order to exe
 
 This plugin stores some basic information about the device that is sending data. This information is mainly used for keeping some information necessary for the downlink, like the original device identifier used in Sigfox Cloud; the associated Device Type identifier to handle its downlink processor properly; and the most important, the downlink url the platform should use to issue a downlink request to the Sigfox network.
 
-![Sample device information stored in Thinger.io for every TTN device](../.gitbook/assets/image%20%284%29.png)
+![Sample device information stored in Thinger.io for every TTN device](../.gitbook/assets/image%20%289%29.png)
 
 #### Uplink Processor
 
@@ -197,5 +197,5 @@ After the device callback is done, it will appear as a connected device, showing
 
 ### Downlink Data Flow
 
-![Sigfox Downlink Flow Overview](../.gitbook/assets/image%20%2812%29.png)
+![Sigfox Downlink Flow Overview](../.gitbook/assets/image%20%2827%29.png)
 
