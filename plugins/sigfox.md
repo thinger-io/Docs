@@ -1,5 +1,5 @@
 ---
-description: Plugin to inprove the integration of Sigfox devices
+description: Plugin to improve the integration of Sigfox devices
 ---
 
 # Sigfox
@@ -16,15 +16,15 @@ Note: Plugins are only available for private Thinger.io instances.
 * [x] Store Sigfox device metadata: device location, signal quality, hardware serial, etc. 
 * [x] Store device data automatically in data buckets so it can be easily used from the console.
 * [x] Custom **uplink data processing with NodeJS,** for both `payload_raw` or  `payload_fields` .
-* [x] Support for **defining custom downlink** **callbacks** on NodeJS, so it is possible to configure downlink data in an user-friendly format \(JSON\), and then convert it to `payload_raw` or `payload_fields`, as required by TTN network.
+* [x] Support for **defining custom downlink** **callbacks** in NodeJS, so it is possible to configure downlink data in an user-friendly format \(JSON\), and then convert it to `payload_raw` or `payload_fields`, as required by TTN network.
 
 ## Sigfox Concepts
 
 For a better understanding of the following sections, here is described some basic Sigfox concepts:
 
 * Device: It is a hardware device with a oficial Sigfox interface.
-* Gateway: It is Sigfox infrastructure hardware interface that basically receives messages from multiple edje devices, and push them to Sigfox server over IP comunication. These gateways are exclusively property of Sigfox company. 
-* Uplink: It is a data flow which represents messages sent from a device to the sigfox cloud. There are two different uplink processes: unidirectional uplink \(single data communication from the device to Sigfox network\) and bidirectional uplink, that also allows to Sigfox sytem sending a Downlink to the device.  
+* Gateway: It is Sigfox infrastructure hardware interface that basically receives messages from multiple edje devices, and push them to Sigfox server over IP communication. These gateways are exclusively property of Sigfox company. 
+* Uplink: It is a data flow which represents messages sent from a device to the sigfox cloud. There are two different uplink processes: unidirectional uplink \(single data communication from the device to Sigfox network\) and bidirectional uplink, that also allows to Sigfox system sending a Downlink to the device.  
 * Downlink: It is a data flow which represents messages sent from the Sigfox cloud to a device.
 * Device Type: It is a concept that defines a group of devices of the same type, normally sending the same kind of data both in uplink and downlink\). 
 
@@ -34,7 +34,7 @@ In this section it is described the different interfaces that can be used to con
 
 ### Applications
 
-Every Sifgox "Device Type" that is integrated over this plugin, should define a new profile in Thinger.io plugin, with the same identifier as defined in Sigfox Platform. Note that each Sigfox Device Type defined in this way will allow to customize the plugin behaviour for that kind of devices.
+Every Sigfox "Device Type" that is integrated over this plugin, should define a new profile in Thinger.io plugin, with the same identifier as defined in Sigfox Platform. Note that each Sigfox Device Type defined in this way will allow to customize the plugin behaviour for that kind of devices.
 
 ![](../.gitbook/assets/sigfoxplugindevicetype.png)
 

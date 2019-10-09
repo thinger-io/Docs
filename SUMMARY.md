@@ -12,6 +12,7 @@
 * [THINGER.IO HARDWARE](climastick.md)
 * [FIRMWARE CODING](coding.md)
 * [PLUGINS](plugins/README.md)
-  * [Sigfox](plugins/sigfox.md)
   * [The Things Network](plugins/the-things-network.md)
+  * [Sigfox](plugins/sigfox.md)
+  * [Node-RED](plugins/node-red.md)
 
