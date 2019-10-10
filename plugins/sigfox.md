@@ -4,10 +4,12 @@ description: Plugin to improve the integration of Sigfox devices
 
 # Sigfox
 
+![](../.gitbook/assets/image%20%2824%29.png)
+
 This plugin is an interface for using Sigfox HTTP Callback feature in an optimized way, providing features to easily integratie these devices with Thinger.io Platform such as automatic device and storage provisioning and both uplink and downlink cloud processing. 
 
 {% hint style="info" %}
-Note: Plugins are only available for private Thinger.io instances.
+[Note: Plugins are only available for private Thinger.io instances. Check **this link** to create your own instance within minutes](http://bit.ly/2nXCOs4)
 {% endhint %}
 
 ## Plugin Features
@@ -27,6 +29,10 @@ For a better understanding of the following sections, here is described some bas
 * Uplink: It is a data flow which represents messages sent from a device to the sigfox cloud. There are two different uplink processes: unidirectional uplink \(single data communication from the device to Sigfox network\) and bidirectional uplink, that also allows to Sigfox system sending a Downlink to the device.  
 * Downlink: It is a data flow which represents messages sent from the Sigfox cloud to a device.
 * Device Type: It is a concept that defines a group of devices of the same type, normally sending the same kind of data both in uplink and downlink\). 
+
+{% hint style="info" %}
+[Learn how to configure Sigfox Callback to send data to Thinger.io platform **here** ](https://docs.thinger.io/hardware-devices/sigfox#create-sigfox-callback)\*\*\*\*
+{% endhint %}
 
 ## Plugin Configuration
 
@@ -136,7 +142,7 @@ Use the interface tester to see if your code is correctly procesing the payloads
 
 In this section it is described how the uplink data flow works, from its source in the Sigfox network, to its final destination in Thinger.io.
 
-![](../.gitbook/assets/image%20%2812%29.png)
+![](../.gitbook/assets/image%20%2842%29.png)
 
 In the following subsections are described the elements shown in the figure.
 
@@ -159,26 +165,25 @@ Here is an example of the raw information received by the plugin:
 More information about Sigfox HTTP Integration [here](https://www.thethingsnetwork.org/docs/applications/http).
 {% endhint %}
 
-Once this information is received by the plugin, it is processed in order to execute the following actions in Thinger.io:
+Once this information is received by the plugin, it is processed in order to execute the following actions in Th~~inger.io:~~
 
-1. ~~Auto provision new device and its associated data bucket if the device does not exists on the platform. It is based on the `dev_id` field.~~ 
-2. ~~Store updated device information in a device property called `device`, It saves information like `app_id`, `dev_id`, `hardware_serial`, `port`, `counter`, and `downlink_url`.~~
-3. ~~Store other device metadata as configured in the plugin, i.e, updating device location based on gateway location, or saving the `metadata` field for further analysis.~~
-4. ~~Use the configured uplink processor \(if any\) to transform the information provided from TTN network in the fields `payload_raw` or `payload_fields` before its use in the platform.~~
-5. ~~Call device callback that will actually push processed data to its associated data bucket, but could do any other action like forwarding data to other endpoints.~~
+1. Auto provision new device and its associated data bucket if the device does not exists on the platform. It is based on the `dev_id` field. 
+2. Store updated device information in a device property called `device`, It saves information like `app_id`, `dev_id`, `hardware_serial`, `port`, `counter`, and `downlink_url`.
+3. Store other device metadata as configured in the plugin, i.e, updating device location based on gateway location, or saving the `metadata` field for further analysis.
+4. Call device callback that will actually push processed data to its associated data bucket, but could do any other action like forwarding data to other endpoints.
 
 #### Sigfox Device information
 
 This plugin stores some basic information about the device that is sending data. This information is mainly used for keeping some information necessary for the downlink, like the original device identifier used in Sigfox Cloud; the associated Device Type identifier to handle its downlink processor properly; and the most important, the downlink url the platform should use to issue a downlink request to the Sigfox network.
 
-![Sample device information stored in Thinger.io for every TTN device](../.gitbook/assets/image%20%289%29.png)
+![Sample device information stored in Thinger.io for every TTN device](../.gitbook/assets/image%20%2811%29.png)
 
 #### Uplink Processor
 
 This plugin allows to configure custom code for processing incoming data. The information sent by Sigfox devices is normally encoded in small binary payloads that cannot be directly used for representation, as they should not contain tags, JSON, ascii text, etc., in order to minimize transmission time. So, it is required to process the data sent by devices in some point of the cloud.
 
 {% hint style="info" %}
-[~~Information aobut Sigfox limitations~~](https://www.thethingsnetwork.org/docs/lorawan/limitations.html)~~~~
+[Information aobut Sigfox limitations](https://www.thethingsnetwork.org/docs/lorawan/limitations.html)
 {% endhint %}
 
 This plugin also allows to create custom decoders if necessary. The advantage of using the Thinger.io payload processing \(if necessary\), is that it is using NodeJS runtime instead of plain Javascript, so it is possible to use NodeJS modules like Buffer, that simplifies the condig of the processing functions.
@@ -196,6 +201,4 @@ In this case, the plugin interacts with the platform over such REST interface, p
 After the device callback is done, it will appear as a connected device, showing also its location if it was configured in the plugin options.
 
 ### Downlink Data Flow
-
-![Sigfox Downlink Flow Overview](../.gitbook/assets/image%20%2827%29.png)
 

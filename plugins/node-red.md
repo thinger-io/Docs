@@ -6,7 +6,7 @@ description: Plugin to improve the integration of Node-RED into Thinger.io
 
 Node-RED is an Open Source project created by IBM to provide the Rule Engines market of a simple but powerful framework with an easy to use graphical programing interface, and a huge users community that has made more than 2.000 contributions. 
 
-![](../.gitbook/assets/nodered-intro%20%281%29.png)
+![](../.gitbook/assets/image%20%2829%29.png)
 
 {% hint style="info" %}
 Note: Plugins are only available for private Thinger.io instances.
@@ -44,7 +44,7 @@ Node-RED counts with some nodes that allows to work with the flow's payload usin
 
 **Output and Debug Nodes**              ![](../.gitbook/assets/node_debug%20%281%29.png) ****
 
-~~This nodes  the end haver only an input connector that allows to extract data from the flow to third parties, files or debug console in the web editor.~~
+This nodes only have an input connector that allows extracting data from the flow to third parties, files or debug console in the web editor.
 
 ### Palette
 
@@ -143,11 +143,17 @@ In this section you can find our own cookbook with some useful flows that you ca
 
 {% tabs %}
 {% tab title="Device Disconnection Alert" %}
-Using the "Device Status Change" property of the Server Event Node, it is possible to detect the  disconnection of any device of your IoT network and execute a flow in Node-RED to notify the incidence using an e-mail endpoint \(for example\), as it's making the flow down below. 
+Using the "Device Status Change" property of the Server Event Node, it is possible to detect the  disconnection of any device of your IoT network and execute a flow in Node-RED to notify the incidence using an endpoint sending an email for example.
 
-![](../.gitbook/assets/image%20%2825%29.png)
+{% hint style="info" %}
+[Learn how to create an email endpoint here. ](https://docs.thinger.io/console#email-endpoint)
+{% endhint %}
 
-You can import this flow into your Node-RED workspace using the next JSON:
+The next flow uses two Thinger.io Nodes, the first one is triggering the Device Disconnection Server Event that will throw a JSON formatted message with the device ID, the status and the timestamp of the change. The second Node allows calling the Endpoint profile to send the alert with the device information JSON attached so it is possible to custom the message to easily identify the problem. 
+
+![](../.gitbook/assets/image%20%2832%29.png)
+
+This flow can be easily imported into your Node-RED workspace using the next JSON:
 
 ```text
 [{"id":"d577ba5d.a271b8","type":"tab","label":"Flow 1","disabled":false,"info":""},{"id":"b5b501a2.a5287","type":"server-events","z":"d577ba5d.a271b8","name":"","event":"device_state_change","bucket":"","device":"","endpoint":[{"id":"d577ba5d.a271b8","type":"tab","label":"Flow 1","disabled":false,"info":""},{"id":"b5b501a2.a5287","type":"server-events","z":"d577ba5d.a271b8","name":"","event":"device_state_change","bucket":"","device":"","endpoint":"","state":"disconnected","server":"4b6f387.dbcc5c8","x":231,"y":158.99999809265137,"wires":[["6fd24968.0dc1b8"]]},{"id":"6fd24968.0dc1b8","type":"endpoint-call","z":"d577ba5d.a271b8","name":"","endpoint":"DisconnectionAlert","server":"4b6f387.dbcc5c8","x":481,"y":158.99999809265137,"wires":[]},{"id":"4b6f387.dbcc5c8","type":"thinger-server","z":"","host":"$(THINGER_HOST)","name":"","ssl":true}]","state":"","server":"4b6f387.dbcc5c8","x":231,"y":158.99999809265137,"wires":[["6fd24968.0dc1b8"]]},{"id":"6fd24968.0dc1b8","type":"endpoint-call","z":"d577ba5d.a271b8","name":"","endpoint":"DisconnectionAlert","server":"4b6f387.dbcc5c8","x":481,"y":158.99999809265137,"wires":[]},{"id":"4b6f387.dbcc5c8","type":"thinger-server","z":"","host":"$(THINGER_HOST)","name":"","ssl":true}]
@@ -159,7 +165,13 @@ Note that, the `Device ID` parameter of Server Event Node is empty, in order to 
 {% tab title="MQTT to Thinger.io" %}
 MQTT is an extended communication protocol  in IoT that works on top of the TCP/IP protocol suite. It is designed for connections with remote locations where a "small code footprint" is required or the network bandwidth is limited. The next flow allows sending data from a device hosted by NodeRED MQTT Server to the REST API Callback of a Thinger.io HTTP device, in order to store, analyze an show that information with Thinger.io features.   
 
-![MQTT to Thinger.io interface flow](../.gitbook/assets/image%20%285%29.png)
+{% hint style="info" %}
+[Learn how to work with Thinger.io HTTP device callback here](../hardware-devices/http-devices.md)
+{% endhint %}
+
+![MQTT to Thinger.io interface flow](../.gitbook/assets/image%20%286%29.png)
+
+This flow can be easily imported into your Node-RED workspace using the next JSON:
 
 ```text
 [{"id":"a3d8dc1f.2ef57","type":"tab","label":"MQTT to Thinger.io","disabled":false,"info":""},{"id":"ce84849f.8d4278","type":"mqtt in","z":"a3d8dc1f.2ef57","name":"MQTT Device","topic":"Device","qos":"2","datatype":"json","broker":"","x":193.0000114440918,"y":139.99999332427979,"wires":[["af229fc2.2759a"]]},{"id":"af229fc2.2759a","type":"function","z":"a3d8dc1f.2ef57","name":"Json Creator","func":"msg.payload = {\"temperatura1\":msg.payload};\nreturn msg;","outputs":1,"noerr":0,"x":352.9999771118164,"y":139.99999332427979,"wires":[["157f8686.482779"]]},{"id":"157f8686.482779","type":"http request","z":"a3d8dc1f.2ef57","name":"","method":"POST","ret":"txt","paytoqs":false,"url":"https://<SERVER_ID>.do.thinger.io/v3/users/<USERNAME>/devices/<DEVICE_ID>/callback/data","tls":"","proxy":"","authType":"bearer","x":524.9999084472656,"y":138.9999885559082,"wires":[["da89c2c1.ce839"]]},{"id":"da89c2c1.ce839","type":"debug","z":"a3d8dc1f.2ef57","name":"Check Result","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"true","targetType":"full","x":694.9999237060547,"y":138.99999618530273,"wires":[]}]
@@ -171,9 +183,17 @@ Note that his is an easy example that only retrieves data from just one MQTT dev
 {% tab title="GPS Geofences" %}
 Geofencing is an interesting IoT use case, with many applications in asset management, fleets or package tracking. The next flow shows how to monitor the location of any device to create an alert when it leaves an area specified with a Geofence Node.  
 
-![](../.gitbook/assets/image%20%2823%29.png)
+![](../.gitbook/assets/image%20%2830%29.png)
 
-Creating this integration with the "device\_location" property, it is possible to integrate any kind of device including Thinger.io Software Clients, Sigfox, TTN or even HTTP devices in a very simple way. 
+Creating this integration with the "device\_location" property, it is possible to integrate any kind of device including Thinger.io Software Clients, Sigfox, TTN or even HTTP devices in a very simple way.
+
+{% hint style="info" %}
+[Learn how to create an email endpoint here. ](https://docs.thinger.io/console#email-endpoint)
+{% endhint %}
+
+  
+   
+This flow can be easily imported into your Node-RED workspace using the next JSON:
 
 ```text
 [{"id":"59de004e.ca5eb","type":"geofence","z":"d644cd0f.0093c","name":"","mode":"circle","inside":"false","rad":146402.02859820635,"points":[],"centre":{"latitude":40.636101528180916,"longitude":-4.011267721652985},"x":357.01296615600586,"y":209.84895133972168,"wires":[["c0dd553b.456428"]]}]
@@ -181,7 +201,7 @@ Creating this integration with the "device\_location" property, it is possible t
 {% endtab %}
 {% endtabs %}
 
-## Plugin Development Details
+
 
 
 

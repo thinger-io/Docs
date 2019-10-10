@@ -5,6 +5,7 @@
   * [ARDUINO](hardware-devices/arduino.md)
   * [SIGFOX INTEGRATION](hardware-devices/sigfox.md)
   * [LINUX / RASPBERRY PI](hardware-devices/linux.md)
+  * [HTTP DEVICES](hardware-devices/http-devices.md)
 * [CLOUD CONSOLE](console.md)
 * [SERVER API](api.md)
 * [SERVER DEPLOYMENT](deployment.md)

@@ -1,6 +1,6 @@
 # LINUX / RASPBERRY PI
 
-![](https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/67c344bcaf24746012ef751c63731fa96b457e4a.gif)
+![](../.gitbook/assets/linux-versions.png)
 
 This how-to will cover how to get the first steps while using the thinger.io platform in the Raspberry Pi. This includes how to download, compile and execute the main example available in the [GitHub Repository](https://github.com/thinger-io/Linux-Client).
 

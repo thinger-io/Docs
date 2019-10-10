@@ -12,9 +12,13 @@ This documentation will describe how to integrate SigFox devices and its data in
 
 ## Steps in Thinger.io
 
+### **Advanced Integration \(with Sigfox plugin\)**
+
+### Traditional integration \(without plugins\)
+
 We need to configure some resources in our Thinger.io account, like defining a place where the Sigfox data will be stored, and grating access to the Sigfox platform to store data in our account. The required steps are defined in the following subsections.
 
-### Create a Data Bucket
+#### Create a Data Bucket
 
 Data buckets are data storage that will keep the information received from the Sigfox devices. So, wee need to create a data bucket to store the information from our Sigfox device. We can use one data bucket to store data from multiple devices, but it is preferred a single data bucket for each device. This way, we can create dashboards with time-series data from each bucket representing a single device or sensed entity.
 
@@ -30,7 +34,7 @@ Then, open the Buckets section in your cloud console, and create a new Data Buck
 
 Once the form is filled, just click on `Add Bucket` to create you bucket.
 
-### Create an Access Token
+#### Create an Access Token
 
 At this moment we have created a data bucket to store our Sigfox Data, but, as any Thinger.io resource, they are protected by our account credentials. This way, we need to issue an access token that will allow Sigfox back-end to interact with our data bucket. In this example, we will create an access token that will grant access only to our data bucket, and moreover, access to the the write operation. This way, if the token is leaked in some way, we are not exposing other resources to the attacker.
 
@@ -49,11 +53,11 @@ Once the form is filled, just click on Add Token to create your token. In this m
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJTbWFydEV2ZXJ5dGhpbmciLCJ1c3IiOiJhbHZhcm9sYiJ9.0Qb48c_ToBiIVcCOdvXU2Kn51mTnGLDcN44shVRzNls
 ```
 
-## Steps with Sigfox
+### Steps with Sigfox
 
 At this moment, we have configured everything we need to receive data on our Thinger.io bucket. The next step is to configure the Sigfox Backend for pushing data to it, using our token identifier, and the token we have generated.
 
-### Create Sigfox Callback
+#### Create Sigfox Callback
 
 In this step we will create a Sigfox callback that will push the information from our Sigfox device to our Thinger.io data bucket. In our example, a callback is just and endpoint that is called when the Sigfox device send data over the network, so we will configure the callback pointing to our data bucket.
 
@@ -109,7 +113,7 @@ The configuration in our example is the following:
 
 After these steps, we should have now a callback completely configured to push data to our data bucket.
 
-### Programming the Device
+### Programming Sigfox Devices
 
 Now it is time to program our Sigfox Device that will be sending data to our buckets. In this case, we provide examples for the [SmartEverything](http://www.smarteverything.it/) device, and the [Arduino MKRFOX1200](https://www.arduino.cc/en/Main.ArduinoBoardMKRFox1200).
 
@@ -387,7 +391,7 @@ void loop() {
 }
 ```
 
-## Checking setup
+## Checking Sigfox Setup
 
 After we have both the device code running, the Sigfox callback configured, and the data bucket created, we should check now that everything is up and running.
 
