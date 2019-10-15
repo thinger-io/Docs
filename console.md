@@ -8,7 +8,7 @@ Once you log in to your Thinger.io account, you will access by default to the `S
 
 On the left side of the `Statistics` screen you will find the main menu, which contains all the platform features that you will need when building IoT projects. These features are described in more detail in the following sections.
 
-![](.gitbook/assets/image%20%2823%29.png)
+![](.gitbook/assets/image%20%2826%29.png)
 
 ## Devices
 
