@@ -6,7 +6,7 @@ description: Plugin to improve the integration of Node-RED into Thinger.io
 
 Node-RED is an Open Source project created by IBM to provide the Rule Engines market of a simple but powerful framework with an easy to use graphical programing interface, and a huge users community that has made more than 2.000 contributions. 
 
-![](../.gitbook/assets/image%20%2844%29.png)
+![](../.gitbook/assets/image%20%2851%29.png)
 
 {% hint style="info" %}
 Note: Plugins are only available for private Thinger.io instances.
@@ -116,7 +116,7 @@ It is an **Output** Node that allows to store data into a Thinger.io Data Bucket
 
 The configuration of this Node just requires introducing the `Bucket ID`, however, it is important to make a proper management of the input json in order to store the right data. It is strongly recommended to filter the JSON keys using a "Change" Node and check the result with a "Debug" Node to be sure about the data that we are sending.  
 
-### Device Write                ![](../.gitbook/assets/imagen1ddd.png) 
+### Device Write                ![](../.gitbook/assets/imagen1ddd%20%281%29.png) 
 
 It is an **Output** Node that allows sending data to a Thinger.io connected Device. It is able to receive a JSON from Node-RED flow and automatically send it to other device in real time. So results quite useful to implement scalable data storage to any project.
 
@@ -151,7 +151,7 @@ Using the "Device Status Change" property of the Server Event Node, it is possib
 
 The next flow uses two Thinger.io Nodes, the first one is triggering the Device Disconnection Server Event that will throw a JSON formatted message with the device ID, the status and the timestamp of the change. The second Node allows calling the Endpoint profile to send the alert with the device information JSON attached so it is possible to custom the message to easily identify the problem. 
 
-![](../.gitbook/assets/image%20%2850%29.png)
+![](../.gitbook/assets/image%20%2858%29.png)
 
 This flow can be easily imported into your Node-RED workspace using the next JSON:
 
@@ -183,7 +183,7 @@ Note that his is an easy example that only retrieves data from just one MQTT dev
 {% tab title="GPS Geofences" %}
 Geofencing is an interesting IoT use case, with many applications in asset management, fleets or package tracking. The next flow shows how to monitor the location of any device to create an alert when it leaves an area specified with a Geofence Node.  
 
-![](../.gitbook/assets/image%20%2847%29.png)
+![](../.gitbook/assets/image%20%2854%29.png)
 
 Creating this integration with the "device\_location" property, it is possible to integrate any kind of device including Thinger.io Software Clients, Sigfox, TTN or even HTTP devices in a very simple way.
 

@@ -8,7 +8,7 @@ Once you log in to your Thinger.io account, you will access by default to the `S
 
 On the left side of the `Statistics` screen you will find the main menu, which contains all the platform features that you will need when building IoT projects. These features are described in more detail in the following sections.
 
-![](.gitbook/assets/image%20%2826%29.png)
+![](.gitbook/assets/image%20%2828%29.png)
 
 ## Devices
 
@@ -386,16 +386,75 @@ The configurable parameters are the following:
 * **Title**: Optional title for the widget. 
 * **Subtitle**: Optional subtitle for the widget.
 * **Background**: Optional color for the widget background \(defaults to white\).
-* **Chart Input**: Configure how to feed the values to the time series chart. It is possible to feed the information from a connected **device** or from a **data bucket**.
+* **Chart Input**: Configure how to feed the values to the time series chart. It is possible to feed the information from a connected **device** or from a **data bucket**
   * **From Device**: With this option it is necessary to select a device \(that must be connected to provide information\) and specify the resources to plot. The following figure is an example that is selecting the device `deviceA`, and the resource `millis` from the device. Notice that when a time series widget is feed from a device, it will not keep the information if the dashboard is closed or refreshed, as it is just real-time data from your device to your dashboard. You can also select between different refresh modes, like sampling at different intervals \(that can be updated online\), or the chart is updated by the device.
 
   * **From Data Bucket**: With this option, the widget will take the information from a given bucket to plot the historic information on it. So, it is necessary to just select the bucket identifier created in your account. If the bucket is composed by multiple variables, it will allow selecting the variables to plot, like in the following picture. When the information is selected from the data bucket, you will require to establish a data timeframe to be displayed, that can be relative to the current time, or an absolute period between two dates.
-* **Options**: It is possible to configure some graph features like splines, legends, axis, etc.
-* **Chart Color**: Both on data selected from a device or from a data bucket, it is possible to configure series colors, depending on the information available in the resource, it will show only one configurable color, or a color for each series, like in the previous screenshot.
 
 ![](.gitbook/assets/datasource.PNG)
 
+* **Options**: It is possible to configure some graph features like splines, legends, axis, etc.
+* **Chart Color**: Both on data selected from a device or from a data bucket, it is possible to configure series colors, depending on the information available in the resource, it will show only one configurable color, or a color for each series, like in the previous screenshot.
+
 ![](.gitbook/assets/multiplevariable.PNG)
+
+* **Data Aggregation**: 
+
+Show raw data directly from a Bucket could be tricky when there is a lot of data-points, specially if the measures are very noisy or irregular. This feature allows aggregating data using different statistics such as medians, means, minimum and maximum values, a counter of data points per period and a data sumatory. The aggregation can be applied over different intervals that goes from five minutes to one week, by using the next configuration inputs in the widget form, and also using the upside right parameters on each time series chart widgets.
+
+![](.gitbook/assets/iot-data-aggregation.PNG)
+
+The next image shows four different representations of the same dataset and time interval, aggregated using different algorithms:  
+
+![](.gitbook/assets/image%20%2873%29.png)
+
+{% hint style="warning" %}
+Note that Data Aggregation system is only available in **private server** instances with **InfluxDB** 
+{% endhint %}
+
+#### Tachometer Chart
+
+It is a quite visual widget that allows showing device data in a traditional "dial gauge" representation, that can be customized with different value ranges and color marcs, making it more accurate or simplifying the simpection with just a glance.
+
+![](.gitbook/assets/iot-tachometer.PNG)
+
+The configurable parameters are the following:
+
+![](.gitbook/assets/image%20%2831%29.png)
+
+* **Title**: Optional title for the widget. 
+* **Subtitle**: Optional subtitle for the widget.
+* **Background**: Optional color for the widget background \(defaults to white\). This widget has a particularity behavior in relation to this parameter. Pressing into the green "+" button, It is possible to select different background colors depending on the real time value that is being shown: 
+
+![](.gitbook/assets/image%20%2837%29.png)
+
+This image is representing an example in which the measured variable is reaching dangerous pressure values. According to this situation, the background color is changing to red, so it will be easier to identify and manage the event if there is not any automatic system in the product.  
+
+![](.gitbook/assets/image%20%2826%29.png)
+
+* **Chart Input**: Configure how to feed the values to the time series chart. It is possible to feed the information from a connected **device** or from a **data bucket**
+
+  * **From Device Resource**: With this option it is necessary to select a device \(that must be connected to provide information\) and specify the resources to plot. The following figure is an example that is selecting the device `deviceA`, and the resource `millis` from the device. Notice that when a time series widget is feed from a device, it will not keep the information if the dashboard is closed or refreshed, as it is just real-time data from your device to your dashboard. You can also select between different refresh modes, like sampling at different intervals \(that can be updated online\), or the chart is updated by the device.
+  * **From Device Property:** sd
+  * **From Data Bucket**: With this option, the widget will take the information from a given bucket to plot the historic information on it. So, it is necessary to just select the bucket identifier created in your account. If the bucket is composed by multiple variables, it will allow selecting the variables to plot, like in the following picture. When the information is selected from the data bucket, you will require to establish a data timeframe to be displayed, that can be relative to the current time, or an absolute period between two dates.
+  * **Manual Data**:
+
+The last tab shows all the display options. This is probably the most customizable widget of Thinger.io Platform. It allows selecting a lot of different parameters as shown in the image below: 
+
+![](.gitbook/assets/image%20%2887%29.png)
+
+* **Display options:**
+  * **Units**: Optional information that will display the variable unit, like ºC.
+  * **Value Ranges**: This parameter configures the total data range that will be shown at the chart, and also allows adding sub-ranges that can be configured with different colors in order to simplify the visual checking.
+  * **Plate Color**: Configure the background plate color.
+  * **Text Color**: Configure the text color.
+  * **Tick Color**: Configure the division ticks color. 
+  * **Major Ticks**: Allows to configure the range of each tick
+  * **Show Value**: To display or hide the numeric representation of the value in a digital textbox.
+
+#### Virtual LED
+
+Using LED spots is very common in electronic projects in order to create simple graphical interfaces to represent system status, alerts  . This widget has been included in Thinger.io Platform 
 
 #### Donut Chart
 
@@ -453,7 +512,7 @@ The configurable parameters are the following:
 * **Background**: Optional color for the widget background \(defaults to white\).
 * **Location**: Configure how to feed the location in the map. It is possible to feed the information from a connected **device** or from a **data bucket**. When feeding the plot from a data bucket or a device, it is required to match the required latitude and longitude \(in degrees\) with the variables present in the bucket, or in the device resource.
 
-  ![](.gitbook/assets/locationvalue.png)
+![](.gitbook/assets/locationvalue.png)
 
 * **Center**: Force the map to automatically keep the location in the center.
 
@@ -472,7 +531,7 @@ The configurable parameters are the following:
 * **Background**: Optional color for the widget background \(defaults to white\).
 * **Image Source**: Configure if the image source is a still image, or a MJPEG stream. In both cases it is required to provide the source URL, like in the following screenshot:
 
-  ![](.gitbook/assets/mjpegcamera.png)
+![](.gitbook/assets/mjpegcamera.png)
 
 #### Text/Value
 
@@ -515,7 +574,7 @@ In Thinger.io it is possible to not just display information in dashboard, but a
 
 The On/Off widget allows controlling a boolean state of a connected device, like turning on/off a light, a motor, a relay, or any other element. The device should expose a boolean input, just like those examples for controlling a led. The resource is then mapped to this widget, that can change the device state in real-time. If the input resource is defined properly [implemented](http://docs.thinger.io/arduino/#coding-adding-resources-input-resources), this widget is also able to show the current device state.
 
-![](.gitbook/assets/switchbutton.png)
+ ![](.gitbook/assets/switchbutton.png) 
 
 The configurable parameters are the following:
 
@@ -526,7 +585,18 @@ The configurable parameters are the following:
 * **Background**: Optional color for the widget background \(defaults to white\).
 * **Device Resource**: Determines the specific device and resource to control. Use a connected device for an easy config, as you can automatically select the device and resource.
 
-  ![](.gitbook/assets/deviceresource.png)
+![](.gitbook/assets/deviceresource.png)
+
+This widgect has te posibility to be shown in two different appearances, that can be specified in the **Switch Style** parameter: **Switch** is the standard configuration with a little non-configurable switch, and **Button** which is an improved face that can be configured with different colors and icons. When this option is selected, next paremeters will be shown:
+
+![](.gitbook/assets/image%20%2894%29.png)
+
+* **On Color**: The color that will be displayed when the boolean value of this resource is true.
+* **Off Color**: The color that will be displayed when the boolean value of this reource is false.
+* **Icon**: This button is able to show a customizable icon from favicon library or any other icon library URL.
+* **Icon Color**: Icon color is also configurable with an hexadecimal value. Note that there are different color options for both button status, so you can customize it as you want.
+
+  ![](.gitbook/assets/image%20%2862%29.png)
 
 #### Slider
 

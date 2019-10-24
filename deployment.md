@@ -369,3 +369,31 @@ void loop() {
 
 Note: The `THINGER_SERVER` definition must appear before any other includes in the Sketch.
 
+
+
+SANDBOX
+
+### Arduino
+
+[![](.gitbook/assets/arduino-logo.png) ](hardware-devices/arduino.md)
+
+This category is related with any hardware that can be programmed over the Arduino IDE and its libraries. So it is not exclusively for Arduino Devices, as you can also program different boards like the ESP8266, or Texas Instruments CC3200 board. Of course, you can still use any other Arduino Board with Ethernet of Wifi capabilities.
+
+### [Linu](hardware-devices/linux.md)[x](hardware-devices/linux.md)
+
+### ![](.gitbook/assets/imagen1.png)
+
+If you want to develop an IoT product or project based on a device running Linux OS, there is also an special client for this platform. There are some specific examples for each common Linux board like Raspberry Pi or Intel Edison. But you can run the client in practically any computer running a Linux distribution, including a computer with Mac OS.
+
+### [Sigfo](hardware-devices/sigfox.md)x
+
+### ![](.gitbook/assets/sigfox-logo.jpg)
+
+In this category is covered the Sigfox integration with the platform, where the user can configure callbacks for transmitting data from the devices to the cloud for creating real-time dashboards.
+
+### ARM Mbed
+
+[ ](hardware-devices/arduino.md)![](.gitbook/assets/mbed-enabled-logo.png)
+
+ARM is building its own IoT ecosystem in the cloud, mainly to simplify the development process in any ARM mBed compatible hardware. So, if you have an ARM mBed compatible board, this is your place.
+

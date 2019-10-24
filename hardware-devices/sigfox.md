@@ -14,6 +14,8 @@ This documentation will describe how to integrate SigFox devices and its data in
 
 ### **Advanced Integration \(with Sigfox plugin\)**
 
+{% page-ref page="../plugins/sigfox.md" %}
+
 ### Traditional integration \(without plugins\)
 
 We need to configure some resources in our Thinger.io account, like defining a place where the Sigfox data will be stored, and grating access to the Sigfox platform to store data in our account. The required steps are defined in the following subsections.
