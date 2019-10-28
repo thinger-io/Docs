@@ -1,13 +1,36 @@
 ---
 description: >-
-  This documentation will try to cover some different aspects of the Thinger.io
-  platform in terms of hardware integration, cloud console, server a API, and
-  server deployment.
+  Thinger.io is an Open-Source Platform for the Internet of Things. This
+  documentation helps learning about how to use each component to create awesome
+  projects within minutes.
 ---
 
 # OVERVIEW
 
-## Hardware Devices
+## What is Thinger.io?
+
+Thinger.io is a cloud IoT Platform that provides every needed tool to prototype, scale and manage connected  products in a very simple way. Our goal is democratize the use of IoT making it accessible to the hole world, and streamlining the development of big IoT projects.
+
+* **Free IoT platform**: Thinger.io provides a lifetime freemium account with only few limitations to start learning and prototyping, when your product becomes ready to scale, you can deploy a Premium Server with full capacities within minutes.
+* **Simple but Powerful**: Just a couple code lines to connect a device and start retrieving data or controlling it's functionalities with our web based Console, able to connect and manage thousands of devices in a simple way.
+* **Hardware agnostic:** Any device from any manufacturer can be easily integrated with Thinger.io's infrastructure.
+* **Open-Source**: most of the platform modules, libraries and APP source code are available in our github repository to be downloaded and modified with MIT license. 
+* **Customizable**: Fully white-labelable frontend allows customizing Thinger.io Platform with your brand colors, logotype and web domain.
+
+### Thinger.io Main Features
+
+![](.gitbook/assets/thinger.io-platform-feature.png)
+
+* **Connect devices:** Any kind of device can be integrated, no matter the processor, the network or the manufacturer. Thinger.io is ready to create bidirectional communications with all of them even with edge devices like Sigfox, or LoRaWAN ones. 
+* **Bidirectional Efficient Communications:** Allows retrieving Real-time data from thousands of devices, but also to send data to them with extremely low latency. Perfect for smart-autonomous projects o remote controlling systems. 
+* **Store Device Data:** Just a couple clicks to create a Data Bucket a store IoT data in an scalable, efficient and affordable way, that also allows real-time data aggregation. 
+* **Show Real-time or Stored Data:** Using our awesome dashboards, it is possible to create used-friendly data visualization interfaces and share it in minutes with your customers. 
+* **Cloud Computing:** Using the scheduler and other Plugins it is possible to process device data to extract useful information or create automatic behaviors. 
+* **Integrate with third parties:** Our Open API allows retrieving data and share it with third party Internet Platforms and custom programs.
+
+Are you ready to start creating IoT projects? [**Create here your free account**](https://console.thinger.io/#/signup) and learn below how to use all this technology.
+
+## Compatible Devices
 
 This section will cover how to program your hardware to connect and use the Thinger.io platform. As there are many IoT hardware available nowadays, this section is divided in different categories.
 
@@ -113,9 +136,9 @@ The Thinger.io Cloud is supported by a REST API designed to easily integrate you
 
 ## Plugins
 
-## [Thinger.io Hardware](climastick.md)
+## [Thinger.io Hardware](climastick/)
 
-[![](.gitbook/assets/climastick.jpg) ](climastick.md)
+[![](.gitbook/assets/climastick.jpg) ](climastick/)
 
 This section is related to the Thinger.io hardware boards, like the ClimaStick. A small powerful device plenty of sensors, WiFi, ready for prototyping, learning, or developing products.
 

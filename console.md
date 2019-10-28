@@ -52,7 +52,7 @@ Now you can use your new device id and the device credentials to connect the new
 
 Remember that Sigfox devices, does not share the concept of connected device, as they are by default offline devices that send information periodically. If you want to store information from these devices, please, checkout the following documentation.
 
-{% page-ref page="hardware-devices/sigfox.md" %}
+{% page-ref page="hardware-devices/sigfox/" %}
 
 For the following example, we will be using the Arduino IDE along with an ESP8266 device, like the NodeMCU. In this case, you can open the example code for the ESP8266, and fill the device details: your username, the device ID, and the device credentials established while creating the device. The following picture represents the relation between the code and the device created in your account.
 
@@ -432,12 +432,11 @@ This image is representing an example in which the measured variable is reaching
 
 ![](.gitbook/assets/image%20%2827%29.png)
 
-* **Chart Input**: Configure how to feed the values to the time series chart. It is possible to feed the information from a connected **device** or from a **data bucket**
-
+* **Chart Input**: Configure how to feed the values to the tachometer chart. It is possible to feed the information from a connected **device** or from a **data bucket**
   * **From Device Resource**: With this option it is necessary to select a device \(that must be connected to provide information\) and specify the resources to plot. The following figure is an example that is selecting the device `deviceA`, and the resource `millis` from the device. Notice that when a time series widget is feed from a device, it will not keep the information if the dashboard is closed or refreshed, as it is just real-time data from your device to your dashboard. You can also select between different refresh modes, like sampling at different intervals \(that can be updated online\), or the chart is updated by the device.
-  * **From Device Property:** sd
+  * **From Device Property:** This option allows retrieving data from device properties, which is really useful to show device configuration data, but also is the better way to show real time \(or last received\) data from HTTP devices. 
   * **From Data Bucket**: With this option, the widget will take the information from a given bucket to plot the historic information on it. So, it is necessary to just select the bucket identifier created in your account. If the bucket is composed by multiple variables, it will allow selecting the variables to plot, like in the following picture. When the information is selected from the data bucket, you will require to establish a data timeframe to be displayed, that can be relative to the current time, or an absolute period between two dates.
-  * **Manual Data**:
+  * **Manual Data**: It is always possible to manually introduce values in order to create simulate the behavior of the widget.
 
 The last tab shows all the display options. This is probably the most customizable widget of Thinger.io Platform. It allows selecting a lot of different parameters as shown in the image below: 
 
@@ -454,13 +453,30 @@ The last tab shows all the display options. This is probably the most customizab
 
 #### Virtual LED
 
-Using LED spots is very common in electronic projects in order to create simple graphical interfaces to represent system status, alerts  . This widget has been included in Thinger.io Platform with the same purpose, so it can be used to show binary status by changing its color, but also to make alerts by setting blink behavior or show multiple data by including more than one color range. 
+Using LED spots is a common way  to create simple graphical interfaces in electronic projects in order to represent system status, alerts, etc. This widget has been included in Thinger.io Platform with the same purpose, so it can be used to show binary status by changing its color, create alerts by setting blink behavior or show multiple data by including more than one color range in a kind of RGB simulation. 
 
 ![](.gitbook/assets/image%20%2896%29.png)
 
-This widget can be configured in many different ways: 
+This widget can be configured in many different ways though the three steps form. first of all selecting "Led indicator" in the Widget menu tab, and then indicating:
 
-![](.gitbook/assets/image%20%2849%29.png)
+* **Title**: Optional title for the widget. 
+* **Subtitle**: Optional subtitle for the widget.
+* **Background**: Optional color for the widget background \(defaults to white\). This widget has a particularity behavior in relation to this parameter. Pressing into the green "+" button, It is possible to select different background colors depending on the real time value that is being shown: 
+
+Then, the Led indicator menu tab allows selecting the data source, that can be a connected device or a data bucket:
+
+* **Chart Input**: Configure how to feed the values to the tachometer chart. It is possible to feed the information from a connected **device** or from a **data bucket**
+  * **From Device Resource**: With this option it is necessary to select a device \(that must be connected to provide information\) and specify the resources to plot. The following figure is an example that is selecting the device `deviceA`, and the resource `millis` from the device. Notice that when a time series widget is feed from a device, it will not keep the information if the dashboard is closed or refreshed, as it is just real-time data from your device to your dashboard. You can also select between different refresh modes, like sampling at different intervals \(that can be updated online\), or the chart is updated by the device.
+  * **From Device Property:** This option allows retrieving data from device properties, which is really useful to show device configuration data, but also is the better way to show real time \(or last received\) data from HTTP devices. 
+  * **From Data Bucket**: With this option, the widget will take the information from a given bucket to plot the historic information on it. So, it is necessary to just select the bucket identifier created in your account. If the bucket is composed by multiple variables, it will allow selecting the variables to plot, like in the following picture. When the information is selected from the data bucket, you will require to establish a data timeframe to be displayed, that can be relative to the current time, or an absolute period between two dates.
+  * **Manual Data**: It is always possible to manually introduce values in order to create simulate the behavior of the widget.
+
+Finally, the "Display Options" tab allows to custom the led behavior in the next parameters:
+
+* **Led Size**: Configure the diameter of the led spot pixels
+* **Color**: configures the led default color, and also allows creating color ranges by pressing the green "+" button on the right side.
+  * **Color ranges**: Each time that the "+" button is pressed, a new color range is included, allowing to define a new range and the color that will be shown when the selected input value belongs to this range.  
+  * **Blinking led option:** The right side switches allows adding a blinking behavior to the led when this range profile begins active. It is also possible to disable the blinking by pressing over the led widget. 
 
 ![](.gitbook/assets/image%20%283%29.png)
 

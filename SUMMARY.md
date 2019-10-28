@@ -1,10 +1,12 @@
 # Table of contents
 
 * [OVERVIEW](README.md)
-* [HARDWARE DEVICES](hardware-devices/README.md)
+* [COMPATIBLE DEVICES](hardware-devices/README.md)
   * [ARDUINO](hardware-devices/arduino.md)
-  * [SIGFOX INTEGRATION](hardware-devices/sigfox.md)
   * [LINUX / RASPBERRY PI](hardware-devices/linux.md)
+  * [EDGE DEVICES](hardware-devices/sigfox/README.md)
+    * [Sigfox](hardware-devices/sigfox/sigfox.md)
+    * [TheThingsNetwork \(LoRa\)](hardware-devices/sigfox/thethingsnetwork-lora.md)
   * [HTTP DEVICES](hardware-devices/http-devices.md)
 * [CLOUD CONSOLE](console.md)
 * [FIRMWARE CODING](coding.md)
@@ -14,6 +16,8 @@
   * [The Things Network](plugins/the-things-network.md)
   * [Sigfox](plugins/sigfox.md)
   * [Node-RED](plugins/node-red.md)
-* [THINGER.IO HARDWARE](climastick.md)
+* [THINGER.IO HARDWARE](climastick/README.md)
+  * [ClimaStick](climastick/climastick-devices.md)
+  * [WiFi Button](climastick/wifi-button.md)
 * [SERVER DEPLOYMENT](deployment.md)
 

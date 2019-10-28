@@ -385,7 +385,7 @@ This category is related with any hardware that can be programmed over the Ardui
 
 If you want to develop an IoT product or project based on a device running Linux OS, there is also an special client for this platform. There are some specific examples for each common Linux board like Raspberry Pi or Intel Edison. But you can run the client in practically any computer running a Linux distribution, including a computer with Mac OS.
 
-### [Sigfo](hardware-devices/sigfox.md)x
+### [Sigfo](hardware-devices/sigfox/)x
 
 ### ![](.gitbook/assets/sigfox-logo.jpg)
 
