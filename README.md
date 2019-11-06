@@ -56,11 +56,15 @@ Find additional documentation about Arduino or Linux devices connection at the *
 {% endtab %}
 
 {% tab title="HTTP devices" %}
-
+Ups! This resume is work in progress, but all the documentation about how to connect HTTP devices can be found [**HERE**](hardware-devices/http-devices.md)\*\*\*\*
 {% endtab %}
 
-{% tab title="Edge Devices" %}
+{% tab title="Sigfox / LoRaWAN devices" %}
+Any individual Sigfox or LoraWAN device can be integrated using our API as HTTP devices, just setting an HTTP device callback into their callback managers, but if a big network is going to be created using these technologies, it is better to use our integration plugins:
 
+{% page-ref page="plugins/sigfox.md" %}
+
+{% page-ref page="plugins/the-things-network.md" %}
 {% endtab %}
 {% endtabs %}
 

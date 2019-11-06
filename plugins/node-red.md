@@ -2,7 +2,7 @@
 description: Plugin to improve the integration of Node-RED into Thinger.io
 ---
 
-# Node-RED
+# Node-RED Plugin
 
 Node-RED is an Open Source project created by IBM to provide the Rule Engines market of a simple but powerful framework with an easy to use graphical programing interface, and a huge users community that has made more than 2.000 contributions. 
 

@@ -2,7 +2,7 @@
 description: Plugin to improve the integration of Sigfox devices
 ---
 
-# Sigfox
+# Sigfox Plugin
 
 ![](../.gitbook/assets/image%20%2848%29.png)
 

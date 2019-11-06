@@ -2,7 +2,7 @@
 description: Plugin for automatically integrating TTN devices in Thinger.io platform.
 ---
 
-# The Things Network
+# The Things Network Plugin
 
 ![](../.gitbook/assets/image%20%282%29.png)
 

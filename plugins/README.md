@@ -18,7 +18,7 @@ Note that Plugin System is only available for private Thinger.io instances. Free
 
 ## Default Plugins
 
-| [![](../.gitbook/assets/imagen1sas.png)](node-red.md) |                                       | [![](../.gitbook/assets/imagen12.png)](sigfox.md) |
+| [![](../.gitbook/assets/imagen1sas.png)](node-red.md) |                    | [![](../.gitbook/assets/imagen12.png)](sigfox.md) |
 | :--- | :--- | :--- |
 | [![](../.gitbook/assets/imagen123.png)](the-things-network.md) |  |   |
 
