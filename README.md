@@ -30,6 +30,60 @@ Thinger.io is a cloud IoT Platform that provides every needed tool to prototype,
 
 Are you ready to start creating IoT projects? [**Create here your free account**](https://console.thinger.io/#/signup) and learn below how to use all this technology.
 
+## Quick Start Guide
+
+### 1.Create Device
+
+Using "Devices" menu tab, just click in "New device" button, and fill the form with the device ID, description and Credentials you prefer.
+
+![](.gitbook/assets/image%20%289%29.png)
+
+### 2.Connect Device
+
+After provisioning the device at Thinger.io cloud, it is the moment to configure it in the Hardware device. there are many different hardware supports and communication technologies but Thinger.io allows using all of them: 
+
+{% tabs %}
+{% tab title="Arduino/Linux Devices" %}
+1. Install Thinger.io libraries into your Arduino IDE
+2. Going to "File&gt;Examples&gt;Thinger.io", open the example code that fix better for the PCB
+3. Edit the example code to write Thinger.io and connection credentials as shown in the image below. Finally upload the sketch
+
+![](.gitbook/assets/image%20%2867%29.png)
+
+{% hint style="success" %}
+Find additional documentation about Arduino or Linux devices connection at the **COMPATIBLE DEVICES** section 
+{% endhint %}
+{% endtab %}
+
+{% tab title="HTTP devices" %}
+
+{% endtab %}
+
+{% tab title="Edge Devices" %}
+
+{% endtab %}
+{% endtabs %}
+
+Going to "devices" menu tab, a complete device list will be shown, allowing to manage the devices and check its connection status. Just click over the device ID to access the device management dashboard
+
+### 3.Retrieve & Send Data to Devices
+
+Each device can be managed through the "Device Dashboard", an interface that shows connection data and also allows checking the "device API" with raw device data representation.
+
+Thinger.io provides bidirectional communication, so it is possible to retrieve data into the server from devices "output resources" and send messages from server to devices "input resources". Both resources are represented in the "device API" viewer.
+
+### 4.Store, Show & Share Data
+
+Thinger.io provides three essential tools to work with devices data that are the basis for creating any IoT project, such as: 
+
+| Data Buckets | Dashboards | Access Tokens |
+| :--- | :--- | :--- |
+| To **store** **device data** in an scalable way, programming different sampling intervals or catching streams | Panels with **customizable widgets** that can be created within minutes using drag'n drop technology, to show real time and stored data | Dashboards, Data buckets or Device resources can be easily shared with third parties using **Access Tokens** and our **API** |
+
+### 5.Extend Thinger.io
+
+Thinger.io platform can be complemented with many different Internet services using the plugins. Just go to our marketplace, select the technology you want to complement Thinger.io and deploy it. 
+
 ## Compatible Devices
 
 This section will cover how to program your hardware to connect and use the Thinger.io platform. As there are many IoT hardware available nowadays, this section is divided in different categories.
@@ -74,20 +128,11 @@ So, to start using the platform select the hardware platform you want to use.
       <td style="text-align:left">
         <p><b>Edge Devices</b>
         </p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p>
-          <img src=".gitbook/assets/sigfox-logo.jpg" alt/>
-        </p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
+        <p>&lt;b&gt;&lt;/b&gt;<a href="hardware-devices/sigfox/">&lt;b&gt;&lt;/b&gt;<img src=".gitbook/assets/edge-devices-thinger.io (1).png" alt/><b> </b></a>&lt;b&gt;&lt;/b&gt;</p>
         <p>In this category is covered the Sigfox integration with the platform,
           where the user can configure callbacks for transmitting data from the devices
-          to the cloud for creating real-time dashboards.</p>
+          to the cloud for creating real-time dashboards.<b> </b>
+        </p>
       </td>
       <td style="text-align:left">&lt;b&gt;&lt;/b&gt;</td>
       <td style="text-align:left">
@@ -97,8 +142,7 @@ So, to start using the platform select the hardware platform you want to use.
           <img src=".gitbook/assets/mbed-enabled-logo.png" alt/>
         </p>
         <p>ARM is building its own IoT ecosystem in the cloud, mainly to simplify
-          the development process when using this kind of hardware. So, to integrate
-          an ARM mBed compatible board, this is your place.</p>
+          the development process when using this kind of hardware.</p>
       </td>
     </tr>
   </tbody>

@@ -4,7 +4,7 @@ description: Plugin to improve the integration of Sigfox devices
 
 # Sigfox
 
-![](../.gitbook/assets/image%20%2846%29.png)
+![](../.gitbook/assets/image%20%2848%29.png)
 
 This plugin is an interface for using Sigfox HTTP Callback feature in an optimized way, providing features to easily integratie these devices with Thinger.io Platform such as automatic device and storage provisioning and both uplink and downlink cloud processing. 
 
@@ -71,7 +71,7 @@ In this section it is possible to configure the payload processors that will tra
 
 The interface provides a code editor for NodeJS, where it is possible to define the `uplink` and `downlink`processors. It is also possible to test the code by providing a sample input data both for `uplink` and `downlink`.
 
-![](../.gitbook/assets/image%20%2819%29.png)
+![](../.gitbook/assets/image%20%2820%29.png)
 
 In the following, there is information about the uplink and downlink methods.
 
@@ -134,7 +134,7 @@ Use the interface tester to see if your code is correctly procesing the payloads
 
 ### Uplink Integration
 
-![](../.gitbook/assets/image%20%2833%29.png)
+![](../.gitbook/assets/image%20%2834%29.png)
 
 ### Downlink Integration
 
@@ -144,7 +144,7 @@ Use the interface tester to see if your code is correctly procesing the payloads
 
 In this section it is described how the uplink data flow works, from its source in the Sigfox network, to its final destination in Thinger.io.
 
-![](../.gitbook/assets/image%20%28100%29.png)
+![](../.gitbook/assets/image%20%28106%29.png)
 
 In the following subsections are described the elements shown in the figure.
 
