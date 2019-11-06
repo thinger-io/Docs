@@ -86,15 +86,11 @@ Thinger.io provides three essential tools to work with devices data that are the
 
 ### 5.Extend Thinger.io
 
-Thinger.io platform can be complemented with many different Internet services using the plugins. Just go to our marketplace, select the technology you want to complement Thinger.io and deploy it. 
+Thinger.io platform can be complemented with many different Internet services using **Plugins** that can be found and deployed within seconds Just going to our marketplace and selecting it:
+
+{% page-ref page="plugins/" %}
 
 ## Compatible Devices
-
-This section will cover how to program your hardware to connect and use the Thinger.io platform. As there are many IoT hardware available nowadays, this section is divided in different categories.
-
-There is a category related with Arduino compatible hardware, which is any board you can program with the Arduino IDE \(Arduino + Ethernet, Arduino + Wifi, ESP8266, NodeMCU, TI CC3200, etc\). There is other general category related with Linux powered devices like the Raspberry Pi, Intel Edison, or any other Linux computer running Ubuntu or MacOS. Finally, there is a section that will cover the integration with the ARM Mbed platform and compatible devices.
-
-So, to start using the platform select the hardware platform you want to use.
 
 <table>
   <thead>
@@ -164,35 +160,5 @@ This section will cover how to add different functionality to your devices for e
 
 The Cloud Console is related with the management front-end designed to easily manage your devices and visualize its information in the cloud. In this section you will learn how to register devices, create real-time dashboards, access the devices API, and other management operations.
 
-## Plugins System
 
-![](.gitbook/assets/imagen1dddcc.png) 
-
-Plugins are extensions that allows complementing Thinger.io Platform with specific features or functionalities. 
-
-## [Mobile A](mobile.md)[pp](mobile.md)
-
-[![](.gitbook/assets/mobile-app.png) ](mobile.md)
-
-This section is related with the use of the Android and iOS Mobile App. You will learn how to scan devices, point them to another server or visualize and manage its information.
-
-## [Server API](api.md)
-
-[![](.gitbook/assets/api.png)](api.md)
-
-The Thinger.io Cloud is supported by a REST API designed to easily integrate your IoT projects with other applications like Web Services, mobile phones, or desktop applications. So if you want to integrate your device with your own application or service, then this is the starting point.
-
-## Plugins
-
-## [Thinger.io Hardware](climastick/)
-
-[![](.gitbook/assets/climastick.jpg) ](climastick/)
-
-This section is related to the Thinger.io hardware boards, like the ClimaStick. A small powerful device plenty of sensors, WiFi, ready for prototyping, learning, or developing products.
-
-## [Server Deployment](deployment.md)
-
-[![](.gitbook/assets/docker-logo.png) ](deployment.md)
-
-This section is related to the Cloud configuration and deployment in your own infrastructure, both in local machines or in the cloud.
 
