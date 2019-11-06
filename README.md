@@ -17,7 +17,7 @@ Thinger.io is a cloud IoT Platform that provides every needed tool to prototype,
 * **Open-Source**: most of the platform modules, libraries and APP source code are available in our github repository to be downloaded and modified with MIT license. 
 * **Customizable**: Fully white-labelable frontend allows customizing Thinger.io Platform with your brand colors, logotype and web domain.
 
-### Thinger.io Main Features
+## Thinger.io Main Features
 
 ![](.gitbook/assets/thinger.io-platform-feature.png)
 
@@ -56,7 +56,14 @@ Find additional documentation about Arduino or Linux devices connection at the *
 {% endtab %}
 
 {% tab title="HTTP devices" %}
-Ups! This resume is work in progress, but all the documentation about how to connect HTTP devices can be found [**HERE**](hardware-devices/http-devices.md)\*\*\*\*
+1\) Create an HTTP device profile by selecting it in the "Device Type" when creating the device  
+2\) Going to the device dashboard, create an HTTP device Callback  
+3\) Create a device Access Tocken to authorize the device sending data to the platform  
+4\) Introduce the HTTP request \(API+TOKEN\) into your device code or third party platform and start sending data to Thinger.io
+
+{% hint style="success" %}
+[Follow a detailed tutorial about HTTP devices connection **here!**](hardware-devices/http-devices.md)
+{% endhint %}
 {% endtab %}
 
 {% tab title="Sigfox / LoRaWAN devices" %}
