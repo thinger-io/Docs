@@ -32,11 +32,13 @@ Are you ready to start creating IoT projects? [**Create here your free account**
 
 ## Quick Start Guide
 
-### 1.Create Device
+To start working with Thinger.io just [**create a free account in our cloud platform**](https://console.thinger.io/#/signup) and follow the next steps to configure and connect your first IoT device
+
+### 1. Create Device
 
 Using "Devices" menu tab, just click in "New device" button, and fill the form with the device ID, description and Credentials you prefer.
 
-![](.gitbook/assets/image%20%289%29.png)
+![](.gitbook/assets/image%20%2810%29.png)
 
 ### 2.Connect Device
 
@@ -46,12 +48,18 @@ After provisioning the device at Thinger.io cloud, it is the moment to configure
 {% tab title="Arduino/Linux Devices" %}
 1. Install Thinger.io libraries into your Arduino IDE
 2. Going to "File&gt;Examples&gt;Thinger.io", open the example code that fix better for the PCB
-3. Edit the example code to write Thinger.io and connection credentials as shown in the image below. Finally upload the sketch
+3. Edit the example code to include your username, device ID and Thinger.io credentials. If the device use a secured networks, connection credentials needs to be written too as shown in the image below. 
 
-![](.gitbook/assets/image%20%2867%29.png)
+![](.gitbook/assets/image%20%2812%29.png)
+
+This example can be modified to adapt the device behavior to each use case. After modifying the source code, just upload the sketch and wait for the device connection.
 
 {% hint style="success" %}
-Find additional documentation about Arduino or Linux devices connection at the **COMPATIBLE DEVICES** section 
+Find additional information about Thinger.io devices in the next sections: 
+
+1. \*\*\*\*[**Compatible Arduino and Linux devices**](hardware-devices/)\*\*\*\*
+2. \*\*\*\*[**Zero to Hero Thinger.io Firmware Coding Guide**](coding.md) ****
+3. **Connection Troubleshooting Guide**
 {% endhint %}
 {% endtab %}
 
@@ -75,21 +83,39 @@ Any individual Sigfox or LoraWAN device can be integrated using our API as HTTP 
 {% endtab %}
 {% endtabs %}
 
-Going to "devices" menu tab, a complete device list will be shown, allowing to manage the devices and check its connection status. Just click over the device ID to access the device management dashboard
+Complete device list can be displayed by going to "devices" menu tab. This interface allows managing devices and check its connection status and accessing devices dashboard by clicking over each devices ID.
 
-### 3.Retrieve & Send Data to Devices
+### 3.Devices & Data management
 
-Each device can be managed through the "Device Dashboard", an interface that shows connection data and also allows checking the "device API" with raw device data representation.
+Each device can be managed through the "Device Dashboard". This interface shows connection data and also allows checking the "device API" with raw device data representation.
 
-Thinger.io provides bidirectional communication, so it is possible to retrieve data into the server from devices "output resources" and send messages from server to devices "input resources". Both resources are represented in the "device API" viewer.
+![](.gitbook/assets/image%20%283%29.png)
+
+Thinger.io provides bidirectional communication, so it is possible to retrieve data into the server using "**devices output resources**" and also sending messages from server to the "**devices input resources**". Both resources are represented in the "device API" viewer.
+
+![Input &amp; Output resources in the device API inspector](.gitbook/assets/image%20%2820%29.png)
 
 ### 4.Store, Show & Share Data
 
-Thinger.io provides three essential tools to work with devices data that are the basis for creating any IoT project, such as: 
+Thinger.io provides three essential tools to work with devices data that are the basis for creating any IoT project, next tabs shows each tool introduction:
 
-| Data Buckets | Dashboards | Access Tokens |
-| :--- | :--- | :--- |
-| To **store** **device data** in an scalable way, programming different sampling intervals or catching streams | Panels with **customizable widgets** that can be created within minutes using drag'n drop technology, to show real time and stored data | Dashboards, Data buckets or Device resources can be easily shared with third parties using **Access Tokens** and our **API** |
+{% tabs %}
+{% tab title="Data Buckets" %}
+To **store** **device data** in an scalable way, programming different sampling intervals or catching streams
+{% endtab %}
+
+{% tab title="Dashboards" %}
+Panels with **customizable widgets** that can be created within minutes using drag'n drop technology, to show real time and stored data
+{% endtab %}
+
+{% tab title="Endpoints" %}
+
+{% endtab %}
+
+{% tab title="Access Tockens" %}
+Dashboards, Data buckets or Device resources can be easily shared with third parties using **Access Tokens** and our **API**
+{% endtab %}
+{% endtabs %}
 
 ### 5.Extend Thinger.io
 
