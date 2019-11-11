@@ -17,7 +17,7 @@ Thinger.io is a cloud IoT Platform that provides every needed tool to prototype,
 * **Open-Source**: most of the platform modules, libraries and APP source code are available in our github repository to be downloaded and modified with MIT license. 
 * **Customizable**: Fully white-labelable frontend allows customizing Thinger.io Platform with your brand colors, logotype and web domain.
 
-## Thinger.io Main Features
+### Thinger.io Main Features
 
 ![](.gitbook/assets/thinger.io-platform-feature.png)
 
@@ -123,63 +123,9 @@ Thinger.io platform can be complemented with many different Internet services us
 
 {% page-ref page="plugins/" %}
 
-## Compatible Devices
+## [Compatible Devices](hardware-devices/)
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left"><a href="hardware-devices/arduino.md">Arduino</a>
-      </th>
-      <th style="text-align:left"></th>
-      <th style="text-align:left"><a href="hardware-devices/linux.md">Linux</a>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">
-        <p>&lt;b&gt;&lt;/b&gt;<a href="hardware-devices/arduino.md"><b> </b></a>
-        </p>
-        <p><a href="hardware-devices/arduino.md"><img src=".gitbook/assets/arduino-logo.png" alt/></a>
-        </p>
-        <p></p>
-        <p><a href="hardware-devices/arduino.md"> </a>
-        </p>
-        <p></p>
-        <p><a href="hardware-devices/arduino.md">This category is related with any hardware that can be programmed over the Arduino IDE and its libraries. So it is not exclusively for Arduino Devices, as you can also program different boards like the ESP8266, ESP32, </a>Arduino
-          MRK, etc.</p>
-      </td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">
-        <p><a href="hardware-devices/linux.md"><img src=".gitbook/assets/imagen1.png" alt/></a>
-        </p>
-        <p>For <a href="hardware-devices/linux.md">Linux OS based devices, such as  Raspberry Pi, Intel Edison, and many other computer running a Linux distribution, including a Mac OS computer.</a>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
-        <p><b>Edge Devices</b>
-        </p>
-        <p>&lt;b&gt;&lt;/b&gt;<a href="hardware-devices/sigfox/">&lt;b&gt;&lt;/b&gt;<img src=".gitbook/assets/edge-devices-thinger.io (1).png" alt/><b> </b></a>&lt;b&gt;&lt;/b&gt;</p>
-        <p>In this category is covered the Sigfox integration with the platform,
-          where the user can configure callbacks for transmitting data from the devices
-          to the cloud for creating real-time dashboards.<b> </b>
-        </p>
-      </td>
-      <td style="text-align:left">&lt;b&gt;&lt;/b&gt;</td>
-      <td style="text-align:left">
-        <p><b>ARM mbed</b>
-        </p>
-        <p>&lt;b&gt;&lt;/b&gt;
-          <img src=".gitbook/assets/mbed-enabled-logo.png" alt/>
-        </p>
-        <p>ARM is building its own IoT ecosystem in the cloud, mainly to simplify
-          the development process when using this kind of hardware.</p>
-      </td>
-    </tr>
-  </tbody>
-</table>However, Thinger.io can be adapted to many other hardware devices running our C++ source code libraries or third party platforms by using the HTTP device integration. 
+[Thinger.io is Hardware agnostic, so it allows connecting any kind of electronic device without matter the manufacturer, hardware architecture, network technology or operative system. However there are different ways to integrate each device type, in this section it is explained how to connect most common devices by including our software libraries or using Thinger.io API to send data with HTTP queries](hardware-devices/)
 
 ## [Software Client Coding](coding.md)
 

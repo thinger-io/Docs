@@ -42,7 +42,7 @@ You can easily start with some available example for your device after you insta
 
 ![](.gitbook/assets/arduino-examples.png)
 
-> It is recommended to start with some of the examples available in the Arduino IDE when you install the librarires
+> It is recommended to start with some of the examples available in the Arduino IDE when you install the libraries
 
 ## Setting Credentials
 
@@ -72,7 +72,7 @@ The following subsections will show how to define different input resources for 
 
 #### _**Turn on/off a led, a relay, etc**_
 
-This kind of resources only requires an on/off state so it can be enabled or disabled as required. As the `pson` type han hold multiple data types, we can think that the `pson` parameter of the input function is like a boolean.
+This kind of resources only requires an on/off state so it can be enabled or disabled as required. As the `pson` type can hold multiple data types, we can think that the `pson` parameter of the input function is like a boolean.
 
 So, inside the `setup` function you can place a resource called `led` \(but you can use any other name\), of input type \(using the operator `<<`\), that takes a reference to a `pson` parameter. This example will turn on/off the digital pin 10 using a ternary operator over the `in` parameter.
 
@@ -105,7 +105,7 @@ thing["hysteresis"] << [](pson& in){
 
 #### _**Pass multiple data**_
 
-The `pson` data type can hold not only different data types, but also is fully compatible with JSON documents. So you can use the pson data type to receive multiple values at the same time. This example will receive two different floats that are stored with the `lat` and `lon` keys.
+The `pson` data type can hold not only different data types, but also is fully compatible with JSON documents. So you can use the Pson data type to receive multiple values at the same time. This example will receive two different floats that are stored with the `lat` and `lon` keys.
 
 ```cpp
 thing["location"] << [](pson& in){
@@ -260,7 +260,7 @@ thing["variable"] >> outputValue(myVar);
 
 Our sketch usually defines some parameters or variables that are used inside the loop code. This kind of resources are normally used to handle or control the execution behaviour. With this kind of resources we can modify any parameter we want to expose, like a float, an integer, a boolean, etc.
 
-In this example it is possible to remotelly modify the boolean `sdLogging` variable defined as a global variable.
+In this example it is possible to remotely modify the boolean `sdLogging` variable defined as a global variable.
 
 ```cpp
 thing["logging"] << inputValue(sdLogging);
@@ -378,7 +378,7 @@ thing.call_endpoint("DeviceACall");
 
 ## Using Endpoints
 
-In Thinger.io, an endpoint is defined as some kind of external resource that can be accessed by the device. With the endpoints feature, devices can easily send emails, SMS, push data to external WebServices, interact with IFTTT, and any general action that can be made by using WebHooks \(Calling HTTP/HTTPS URLs\).
+In Thinger.io, an endpoint is defined as some kind of external resource that can be accessed by the device. With the endpoints feature, devices can easily send emails, SMS, push data to external Web Services, interact with IFTTT, and any general action that can be made by using WebHooks \(Calling HTTP/HTTPS URLs\).
 
 Calling an endpoint is so easy from the Arduino sketch, as it is only required to call the `call_endpoint` method over the `thing` variable.
 
@@ -462,15 +462,15 @@ Notice that there are a variable that limitates the run of this "if" just once, 
 
 At endpoint configuration, in the custom body email, must add double brackets "" to invoke the variable sent by the microcontroller, in our example, we used the following body
 
-"The actual level is %"
+`"The actual level is %"`
 
 And receiving an email with the text:
 
-The actual level is 80.34%
+`The actual level is 80.34%`
 
 ## Using Data Buckets
 
-Thinger.io provides an easy to use and extremely scalable virtual storage system, that allows to store long term device data from device output resources. This information can be used to be ploted in dashboards, or can be exported in different formats for offline processing or third party Data Analysis process.
+Thinger.io provides an easy to use and extremely scalable virtual storage system, that allows to store long term device data from device output resources. This information can be used to be plotted in dashboards, or can be exported in different formats for offline processing or third party Data Analysis process.
 
 ### From Device Resource
 
@@ -480,7 +480,7 @@ It is not necessary to implement specific codification in your device firmware t
 
 It is also possible to let he device stream the information when required, i.e., by raising an event when detected. In this case, we can use the "Update by Device" option while configuring the bucket, and we will use the streaming resource instruction as described here:
 
-Using a previous defined output reource, that was called for example \["location"\], it could be done like in the following code snippet.
+Using a previous defined Output Resource, that was called for example \["location"\], it could be done like in the following code snippet.
 
 ```cpp
  void loop() {
@@ -594,63 +594,19 @@ ThingerSmartConfig thing(USERNAME,
                          false); // required for deep sleep
 ```
 
-## Interacting
+## Connection Troubleshooting Guideline
 
-It is possible to easily interact with your devices within minutes once you have defined your resources and the device is connected to the platform. There are several ways of interaction, like creating dashboards, accessing with a mobile application \(currently only in Android\), accessing from the API explorer, or calling the cloud API directly.
+There are few situations that can produce the malfunction of the software client, hampering the connection with the IoT platform or making it unstable. But Thinger.io software client has been provided of some tools to detect and avoid these kind of problems. 
 
-### Android
+If a recently programmed device is showing problems to be "online" on Thinger.io Server or even is being locked, the "\_DEBUG\_" command can help identify the problem. This command must be included at the top of the program, along with the required instructions for printing in the system console or serial port, for example, in Arduino framework: 
 
-One of the easiest ways to access your devices is to simply issue a device token to grant access to the device. When you generate a device token you can restrict the shared resources, and the token expiration time, so you can share some device functionality with other people safely. The idea is that you can use this device token and scan it as a QR code in the Android application.
+```text
 
-![](.gitbook/assets/token.png)
+```
 
-> Generate a device token in your cloud console, so you can easily interact from your phone within minutes.
+When this command is included, the program will print all the communication traze, allowing to identify any mistake that can be the cause of the problem. 
 
-#### Mobile APP
+next list shows the main problems and fix for each one
 
-The current version of the [Android APP](https://play.google.com/store/apps/details?id=io.thinger.thinger) does not require any kind of login to interact with your devices. Simply scan your token as a QR code and your phone will be able to interact with your device for reading sensor values, changing led or relays states, and so on.
 
-![](.gitbook/assets/phone.png)
-
-> In the current version of the Android APP, you can interact with your device resources out of the box. Just scan the QR Code and start interacting with your resources directly from the Internet.
-
-#### Android Wear
-
-The Android APP supports Android Wear devices for controlling and reading values from your devices! The current version is still under testing and therefore it can still have some errors. At this moment the Wear version allows reading values \(not composed values at this moment\), execute resources, and control boolean resources. It is so cool to turn on and off things from the SmartWatch!
-
-To get the devices available in the SmartWatch, it is not required to do anything special. As usually, just scan the QR code from the platform with the mobile phone.
-
-![](.gitbook/assets/android_wear_1.png) ![](.gitbook/assets/android_wear_2.png) ![](.gitbook/assets/android_wear_3.png) ![](.gitbook/assets/android_wear_4.png)
-
-### Cloud Console
-
-The Cloud Console add some support for out of the box device interaction. You can interact with your devices from the API explorer, or also create real-time dashboards to display the device information. It is not necessary to write additional code to support this kind of interaction, just only declare your resources in your device and you will be able to access them directly in the console.
-
-So this section will review different interaction approaches from the cloud console.
-
-#### Dashboards
-
-In the cloud console you can easily create and configure real-time dashboards for display your device data, like sensors. You just need to select the device, an associated resource, and select the update method, that can be a configurable sampling interval, or update as required by device.
-
-TODO Reference to dashboards in cloud console
-
-![](.gitbook/assets/dashboards.gif)
-
-> Visualize your sensor data in real-time using the dashboards. Add different widgets, like maps, charts, donut charts, text, etc. This example is monitoring several sensors like pressure, temperature, humidity, compass, and altitude. So you can configure the dashboards with the devices and resources you want.
-
-#### API Explorer
-
-Another way of interaction with your device is trhough the API Explorer. Every defined resource in your device is automatically accesible from the API Explorer, so you can read data, send commands or values, call functions, etc.
-
-This feature is so useful if you want to interact with your device using the Server API, so you can easily visualize the device exposed API, and the expected input and output. Also it is very important while writing code on your device, so you can easily check if your resources are working as expected, like reading a sensor value, turning on and off a relay, and so on.
-
-TODO Reference to API Explorer in cloud console
-
-Your browser does not support the video tag.
-
-> Every defined resource in your device, like a sensor, a relay, a light, and so on, can be accessed out of the box from the API Explorer. This example is turning on and off a led directly from the explorer.
-
-### Server API
-
-In progress... Refer to the Server API documentation
 
