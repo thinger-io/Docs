@@ -1,11 +1,11 @@
 # Table of contents
 
 * [OVERVIEW](README.md)
-* [COMPATIBLE DEVICES](hardware-devices/README.md)
-  * [ARDUINO](hardware-devices/arduino.md)
-  * [LINUX / RASPBERRY PI](hardware-devices/linux.md)
-  * [SIGFOX](hardware-devices/sigfox.md)
-  * [HTTP DEVICES](hardware-devices/http-devices.md)
+* [COMPATIBLE DEVICES](compatible-devices/README.md)
+  * [ARDUINO](compatible-devices/arduino.md)
+  * [LINUX / RASPBERRY PI](compatible-devices/linux.md)
+  * [SIGFOX](compatible-devices/sigfox.md)
+  * [HTTP DEVICES](compatible-devices/http-devices.md)
 * [CLOUD CONSOLE](console.md)
 * [FIRMWARE CODING](coding.md)
 * [SERVER API](api.md)
