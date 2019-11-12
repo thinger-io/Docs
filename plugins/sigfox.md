@@ -9,16 +9,16 @@ description: Plugin to improve the integration of Sigfox devices
 This plugin is an interface for using Sigfox HTTP Callback feature in an optimized way, providing features to easily integratie these devices with Thinger.io Platform such as automatic device and storage provisioning and both uplink and downlink cloud processing. 
 
 {% hint style="info" %}
-[Note: Plugins are only available for private Thinger.io instances. Check **this link** to create your own instance within minutes](http://bit.ly/2nXCOs4)
+[Note: Plugins are only available for premium Thinger.io servers. Check **this link** to create your own instance within minutes](https://pricing.thinger.io)
 {% endhint %}
 
 ## Plugin Features
 
-* [x] Automatic device and bucket provisioning for new devices included in a Sigfox "Device Type".  
-* [x] Store Sigfox device metadata: device location, signal quality, hardware serial, etc. 
-* [x] Store device data automatically in data buckets so it can be easily used from the console.
-* [x] Custom **uplink data processing with NodeJS,** for both `payload_raw` or  `payload_fields` .
-* [x] Support for **defining custom downlink** **callbacks** in NodeJS, so it is possible to configure downlink data in an user-friendly format \(JSON\), and then convert it to `payload_raw` or `payload_fields`, as required by TTN network.
+* Automatic device and bucket provisioning for new devices included in a Sigfox "Device Type".  
+* Store Sigfox device metadata: device location, signal quality, hardware serial, etc. 
+* Store device data automatically in data buckets so it can be easily used from the console.
+* Custom **uplink data processing with NodeJS,** for both `payload_raw` or  `payload_fields` .
+* Support for **defining custom downlink** **callbacks** in NodeJS, so it is possible to configure downlink data in an user-friendly format \(JSON\), and then convert it to `payload_raw` or `payload_fields`, as required by TTN network.
 
 ## Sigfox Concepts
 
@@ -80,9 +80,7 @@ In the following, there is information about the uplink and downlink methods.
 The uplink method will be called when a device sends a new message through the network. Depending on the configuration done in the Sigfox network, this function can receive two different inputs:
 
 * **Base64 String**: If the Sigfox Device Type define a Custom payload format, this method will receive the raw payload encoded in base64. In this case, it will be necessary to write a function to transform this base64 data to a JSON object.
-* **JSON Object:**
-
-The output of this method must be always a JSON object containing the information that is necessary to be used by the platform. In the following, there is an uplink method that converts base64 data into a JSON object with `temperature` and `humidity` parsed from the binary data.
+* **JSON Object:**The output of this method must be always a JSON object containing the information that is necessary to be used by the platform. In the following, there is an uplink method that converts base64 data into a JSON object with `temperature` and `humidity` parsed from the binary data.
 
 ```javascript
 /* convert a base64 payload to a JSON object that can be used 
@@ -164,10 +162,6 @@ Here is an example of the raw information received by the plugin:
 }
 ```
 
-{% hint style="info" %}
-More information ~~about Sigfox HTTP Integration~~ [~~here~~](https://www.thethingsnetwork.org/docs/applications/http)~~.~~
-{% endhint %}
-
 Once this information is received by the plugin, it is processed in order to execute the following actions in Thinger.io:
 
 1. Auto provision new device and its associated data bucket if the device does not exists on the platform. It is based on the `dev_id` field. 
@@ -176,10 +170,6 @@ Once this information is received by the plugin, it is processed in order to exe
 #### Uplink Processor
 
 This plugin allows to configure custom code for processing incoming data. The information sent by Sigfox devices is normally encoded in small binary payloads that cannot be directly used for representation, as they should not contain tags, JSON, ascii text, etc., in order to minimize transmission time. So, it is required to process the data sent by devices in some point of the cloud.
-
-{% hint style="info" %}
-~~~~[~~Information about Sigfox limitations~~](https://www.thethingsnetwork.org/docs/lorawan/limitations.html)~~~~
-{% endhint %}
 
 This plugin also allows to create custom decoders if necessary. The advantage of using the Thinger.io payload processing \(if necessary\), is that it is using NodeJS runtime instead of plain Javascript, so it is possible to use NodeJS modules like Buffer, that simplifies the condig of the processing functions.
 

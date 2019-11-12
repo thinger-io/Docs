@@ -75,12 +75,22 @@ This section covers how to setup your computer to start working with the ClimaSt
 
 ### Uploading firmware
 
-The ClimaStick board can be programmed directly by pressing the Upload button of the Arduino IDE. If it does not work, please check the following:
+The ClimaStick board can be programmed directly by pressing the Upload button of the Arduino IDE as it has been designed with an automatic synchronization circuitry.  However, if the synchronization fails or the program is not able to connect with the PCB, please follow the next check-list in order to identify the problem: 
+
+#### Firmware upload Troubleshooting
 
 * Be sure that your micro USB wire allows data transmission. Some cables are only for electrical power and may not work properly.
 * Verify that your operating system properly recognize the CP2102 serial port interface.
 * Checkout the selected serial COM port on Arduino IDE: Tools &gt; Port
-* ⚠ **Flash boot mode:** If you are sure that everything is configured properly, and the problem still persists, you can force a flash boot up by keeping pressed the USR button of the board, then press the RST button once, and finally release the USR button.
+* ⚠ **Flash boot mode:** If you are sure that everything is configured properly, and the problem still persists, you can force a flash boot up by keeping pressed the USR button of the board, then press the RST button once, and finally release the USR button. After doing this, the PCB should be ready to receive the program. 
+
+{% hint style="info" %}
+ClimaStick's processor status can be checked be opening the Serial Port inspector of ArduinoIDE and selecting 74.880 baudrate. When booting up, the PCB will print the bootstatus between two possibilities:   
+
+1\) If the processor is in normal execution mode, a message ended with the command "mode\(3,6\)" will be printed. 
+
+2\) If Flash mode, a message ended in  "mode\(1,6\)" means that the processor is ready to receive a new sketch. 
+{% endhint %}
 
 ## QuickStart Examples
 

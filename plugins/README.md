@@ -13,12 +13,12 @@ The core of Thinger.io IoT Platform is designed to be lean and lightweight, to m
 For instructions and information about installing, upgrading, troubleshooting, and managing Thinger.io plugins, see "[Managing Plugins](https://app.gitbook.com/@thinger-io/s/docs/~/drafts/-LrOtZT2lM_x5eeYS6ra/primary/plugins#managing-plugins)" section. For learning how to use any existent plugin, just find below a list of each one.
 
 {% hint style="info" %}
-Note that Plugin System is only available for private Thinger.io instances. Free IoT platform accounts can't deploy this functionalities. 
+[Note: Plugins are only available for premium Thinger.io servers. Check **this link** to create your own instance within minutes](https://pricing.thinger.io)
 {% endhint %}
 
 ## Default Plugins
 
-| [![](../.gitbook/assets/imagen1sas.png)](node-red.md) |                    | [![](../.gitbook/assets/imagen12.png)](sigfox.md) |
+| [![](../.gitbook/assets/imagen1sas.png)](node-red.md) |                 | [![](../.gitbook/assets/imagen12.png)](sigfox.md) |
 | :--- | :--- | :--- |
 | [![](../.gitbook/assets/imagen123.png)](the-things-network.md) |  |   |
 

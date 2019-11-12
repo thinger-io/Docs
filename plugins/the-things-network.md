@@ -9,7 +9,7 @@ description: Plugin for automatically integrating TTN devices in Thinger.io plat
 The Things Network \(TTN\) plugin is a solution for using The Things Network HTTP integration in an optimized way, providing features like both uplink and downlink processing, or automatic device and data storage provisioning, so it is not required to configure TTN devices in both places. 
 
 {% hint style="info" %}
-Note: Plugins are only available for private Thinger.io instances.
+[Note: Plugins are only available for premium Thinger.io servers. Check **this link** to create your own instance within minutes](https://pricing.thinger.io)
 {% endhint %}
 
 ## Plugin Features

@@ -9,7 +9,7 @@ Node-RED is an Open Source project created by IBM to provide the Rule Engines ma
 ![](../.gitbook/assets/image%20%2860%29.png)
 
 {% hint style="info" %}
-Note: Plugins are only available for private Thinger.io instances.
+[Note: Plugins are only available for premium Thinger.io servers. Check **this link** to create your own instance within minutes](https://pricing.thinger.io)
 {% endhint %}
 
 ## Plugin Features
