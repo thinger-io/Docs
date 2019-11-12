@@ -1,3 +1,9 @@
+---
+description: >-
+  This section explains what Sigfox infrastructure is and how to integrate their
+  devices with Thinger.io platform in a very simple way.
+---
+
 # SIGFOX
 
 ![](../.gitbook/assets/sigfox_thinger.png)
@@ -12,11 +18,9 @@ This documentation will describe how to integrate SigFox devices and its data in
 
 ## Integrating a Sigfox Device with Thinger.io
 
-This process is carried out in two parts, on the one hand, the preparation of Thinger.io to receive data from Sigfox and, on the other hand, the configuration of Sigfox cloud callback that will send the information to Thinger.io. In this document we will explain both parts.
+This process is carried out in two parts, on the one hand, the preparation of Thinger.io to receive data from Sigfox and, on the other hand, the configuration of Sigfox cloud callback that will send the information to Thinger.io. During the next sections we will explain both parts, starting with Thinger.io side steps: 
 
-### Steps in Thinger.io
-
-there are two ways to configure Thinger.io to work with Sigfox devices. The best option is by deploying the "Sigfox Plugin", which will manage the integration, providing advanced features such as devices auto-provisioning, Uplink/Downlink payload processing and device management, but this option is only available for subscribed developers. Freemium accounts can also integrate Sigfox devices following the "tradicional integration" section below:
+There are two ways to configure Thinger.io to work with Sigfox devices. The best option is by deploying the "Sigfox Plugin", which will manage the integration, providing advanced features such as devices auto-provisioning, Uplink/Downlink payload processing and device management, but this option is only available for subscribed developers. Freemium accounts can also integrate Sigfox devices following the "tradicional integration" section below:
 
 ### **Advanced Integration \(with Sigfox plugin\)**
 
@@ -61,11 +65,11 @@ Once the form is filled, just click on Add Token to create your token. In this m
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJTbWFydEV2ZXJ5dGhpbmciLCJ1c3IiOiJhbHZhcm9sYiJ9.0Qb48c_ToBiIVcCOdvXU2Kn51mTnGLDcN44shVRzNls
 ```
 
-### Steps with Sigfox
+## Sigfox Cloud Configuration
 
 At this moment, we have configured everything we need to receive data on our Thinger.io bucket. The next step is to configure the Sigfox Backend for pushing data to it, using our token identifier, and the token we have generated.
 
-#### Create Sigfox Callback
+### Creating Sigfox Callback
 
 In this step we will create a Sigfox callback that will push the information from our Sigfox device to our Thinger.io data bucket. In our example, a callback is just and endpoint that is called when the Sigfox device send data over the network, so we will configure the callback pointing to our data bucket.
 
