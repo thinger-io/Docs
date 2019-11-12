@@ -1,6 +1,6 @@
-# EDGE DEVICES
+# SIGFOX
 
-![](../../.gitbook/assets/sigfox_thinger.png)
+![](../.gitbook/assets/sigfox_thinger.png)
 
 ## Introduction
 
@@ -10,11 +10,17 @@ Sigfox has partnered with a number of firms in the LPWAN industry such as Texas 
 
 This documentation will describe how to integrate SigFox devices and its data into the Thinger.io Platform. In the firsts steps, we will review how to configure Thinger.io resources, and then, in the Sigfox side we will configure the communication with the platform for pushing our sensors data.
 
-## Steps in Thinger.io
+## Integrating a Sigfox Device with Thinger.io
+
+This process is carried out in two parts, on the one hand, the preparation of Thinger.io to receive data from Sigfox and, on the other hand, the configuration of Sigfox cloud callback that will send the information to Thinger.io. In this document we will explain both parts.
+
+### Steps in Thinger.io
+
+there are two ways to configure Thinger.io to work with Sigfox devices. The best option is by deploying the "Sigfox Plugin", which will manage the integration, providing advanced features such as devices auto-provisioning, Uplink/Downlink payload processing and device management, but this option is only available for subscribed developers. Freemium accounts can also integrate Sigfox devices following the "tradicional integration" section below:
 
 ### **Advanced Integration \(with Sigfox plugin\)**
 
-{% page-ref page="../../plugins/sigfox.md" %}
+{% page-ref page="../plugins/sigfox.md" %}
 
 ### Traditional integration \(without plugins\)
 
@@ -32,7 +38,7 @@ Then, open the Buckets section in your cloud console, and create a new Data Buck
 4. `Enabled`, that needs to be true to allow bucket writing.
 5. `Data Source`, that needs to bee set to `From Write Call`, as the Sigfox devices won't be connected directly to the platform, but will push data over the REST API Interface.
 
-![](../../.gitbook/assets/create_sigfox_bucket.png)
+![](../.gitbook/assets/create_sigfox_bucket.png)
 
 Once the form is filled, just click on `Add Bucket` to create you bucket.
 
@@ -47,7 +53,7 @@ Then, open the Access Tokens section in your cloud console, and create a new Acc
 3. `Enabled`, that needs to be true to allow using the token. It can be disabled in any moment if you want.
 4. `Token permissions`, that will be configured for accessing our Bucket resource, `SmartEverything` in this case, with the `WriteBucket` action.
 
-![](../../.gitbook/assets/create_sigfox_token.png)
+![](../.gitbook/assets/create_sigfox_token.png)
 
 Once the form is filled, just click on Add Token to create your token. In this moment, the token value will appear. In our case, the token generated is the following. Keep this token in hand, as it will be used in the Sigfox side.
 
@@ -71,11 +77,11 @@ To create a callback in Sigfox, just follow this steps:
 
 In this step, you need to select that you want to create a `Custom Callback`, as we need to call an endpoint that is not directly supported by the Sigfox back-end.
 
-![](../../.gitbook/assets/create_sigfox_callback.png)
+![](../.gitbook/assets/create_sigfox_callback.png)
 
 Then, we need to configure the callback to write to our data bucket. If you want to see how the configuration looks like, here you have our configuration. But you have the details of every field after the screenshot.
 
-![](../../.gitbook/assets/sigfox_callback.png)
+![](../.gitbook/assets/sigfox_callback.png)
 
 The configuration in our example is the following:
 
@@ -123,21 +129,21 @@ Now it is time to program our Sigfox Device that will be sending data to our buc
 
 Arduino MKRFOX1200 has been designed to offer a practical and cost effective solution for makers seeking to add SigFox connectivity to their projects with minimal previous experience in networking. It is based on the Microchip SAMD21 and a ATA8520 SigFox module. Can run for over six months on 2 AA 1.5V batteries with typical usage. The design includes the ability to power the board using two 1.5V AA or AAA batteries or external 5V.
 
-![](../../.gitbook/assets/arduino_mkrfox1200.jpeg)
+![](../.gitbook/assets/arduino_mkrfox1200.jpeg)
 
 **Initial Setup**
 
 To program this device, we will use the [Arduino IDE](https://arduino.cc). In this case, it is necessary to install or update the board toolchain, that can be done directly from the Boards Manager, searching for `mrk`, and selecting the Arduino SAMD Boards.
 
-![](../../.gitbook/assets/mkrfox1200_install.png)
+![](../.gitbook/assets/mkrfox1200_install.png)
 
 You will need to install also the `Arduino SigFox for MKRFox1200` library that is available from the Library Manager, and it is also **NECESSARY** to install the `Arduino Low Power`, and the `RTCZero` libraries.
 
-![](../../.gitbook/assets/arduino_sigfox_library.png)
+![](../.gitbook/assets/arduino_sigfox_library.png)
 
 After a successful installation, we can now select the Board in the Arduino IDE. Just select the Arduino MKRFOX12000. You must also select, as any other Arduino board, the port where de device is connected.
 
-![](../../.gitbook/assets/arduino_mkr1200_board_selection.png)
+![](../.gitbook/assets/arduino_mkr1200_board_selection.png)
 
 You can check that everything is up and running by flashing the following example that will provide information about your module, like the board ID and PAC. This information is necessary for registering the device in Sigfox.
 
@@ -290,7 +296,7 @@ So, the code will finally look like the following. In this case we are using the
 
 SmartEverything is an IoT device specially designed for rapid prototyping, as it has full Arduino compatibility, with multiple sensors ready to use, like MEMS Pressure Sensor, Proximity and Ambient Light Sensor, iNEMO 9-axis inertial module, humidity and temperature sensors, and even NFC NTAG, or a GPS/GNSS integrated antenna. If these features are quite interesting by themselves, this board also integrates a Bluetooth Low Energy \(BLE\), and of course a Sigfox Module \(Telit LE51-868 S 868MHz module\).
 
-![](../../.gitbook/assets/sigfox_smarteverything_thinger.jpg)
+![](../.gitbook/assets/sigfox_smarteverything_thinger.jpg)
 
 With these awesome features, we can use the board for multiple purposes, like vehicle tracking with the GPS, building a micro meteorological station, registaring vibrations and impacts with the accelerometers, o any other use case. For this example, we will register just the temperature and humidity. This way, we have created a simple code that will be registering temperature and humidity every 10 minutes.
 
@@ -298,11 +304,11 @@ With these awesome features, we can use the board for multiple purposes, like ve
 
 To program this device, we will use the [Arduino IDE](https://arduino.cc). In this case, it is necessary to install the board toolchain, that can be done directly from the Boards Manager, searching for `smarteverything`, and selecting the Arrow Boards by Axel Elettronica.
 
-![](../../.gitbook/assets/smarteverything_install_arduino.png)
+![](../.gitbook/assets/smarteverything_install_arduino.png)
 
 After a successful installation, we can now select the Board in the Arduino IDE. Just select the SmartEverything Fox \(Native USB Port\). You must also select, as any other Arduino board, the port where de device is connected.
 
-![](../../.gitbook/assets/smarteverything_sigfox_board.png)
+![](../.gitbook/assets/smarteverything_sigfox_board.png)
 
 **Pushing data to Sigfox**
 
@@ -399,19 +405,19 @@ After we have both the device code running, the Sigfox callback configured, and 
 
 We can start by checking that the Sigfox platform is receiving our messages. Just go to your device in the Sigfox back-end, and open the `Messages` section that is on the left panel. We should see something like the following screenshot, where some messages have been received. You can also see the payload being sent \(in hexadecimal\), and some other information like link quality, timestamp, or callback result.
 
-![](../../.gitbook/assets/sigfox_messages.png)
+![](../.gitbook/assets/sigfox_messages.png)
 
 It is interesting here to check that our callback response is success, as the callback icon change from green to red depending on the result. In our case, our callbacks are in green, so the request was ok. You can click on the icon to see the server response, that is a 200 OK HTTP response.
 
-![](../../.gitbook/assets/sigfox_callback_response.png)
+![](../.gitbook/assets/sigfox_callback_response.png)
 
 Then we can also check that our data bucket is being populated with the data received from Sigfox. So, opening your data bucket in Thinger.io, should look like the following. Nice! We have our data now being stored. **Notice** that the columns in the bucket are just the fields we configured in the Sigfox callback body.
 
-![](../../.gitbook/assets/sigfox_bucket_data.png)
+![](../.gitbook/assets/sigfox_bucket_data.png)
 
 ## Building a Dashboard
 
 Now that we have our data in the bucket, we can just create a real-time dashboard from our Sigfox data. You can just create the widgets selecting your bucket as the data source, and that's all!
 
-![](../../.gitbook/assets/sigfox_dashboard.png)
+![](../.gitbook/assets/sigfox_dashboard.png)
 

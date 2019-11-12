@@ -52,7 +52,7 @@ Now you can use your new device id and the device credentials to connect the new
 
 Remember that Sigfox devices, does not share the concept of connected device, as they are by default offline devices that send information periodically. If you want to store information from these devices, please, checkout the following documentation.
 
-{% page-ref page="hardware-devices/sigfox/" %}
+{% page-ref page="hardware-devices/sigfox.md" %}
 
 For the following example, we will be using the Arduino IDE along with an ESP8266 device, like the NodeMCU. In this case, you can open the example code for the ESP8266, and fill the device details: your username, the device ID, and the device credentials established while creating the device. The following picture represents the relation between the code and the device created in your account.
 

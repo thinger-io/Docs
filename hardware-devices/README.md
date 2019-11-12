@@ -18,7 +18,7 @@ As there are many different IoT hardware available nowadays, this section is div
 
 **Low-Power Devices** or "Edge devices" such as **Sigfox**, **LoraWAN**, **TheThingsNetwork** or any other infrastructure with gateways:
 
-{% page-ref page="sigfox/" %}
+{% page-ref page="sigfox.md" %}
 
 **Any other device or third-party Platform** that can't be furnished with Thinger.io software client, can be also integrated using our open API
 
@@ -62,7 +62,7 @@ As there are many different IoT hardware available nowadays, this section is div
       <td style="text-align:left">
         <p><b>Edge Devices</b>
         </p>
-        <p>&lt;b&gt;&lt;/b&gt;<a href="sigfox/">&lt;b&gt;&lt;/b&gt;<img src="../.gitbook/assets/edge-devices-thinger.io (1).png" alt/><b> </b></a>&lt;b&gt;&lt;/b&gt;</p>
+        <p>&lt;b&gt;&lt;/b&gt;<a href="sigfox.md">&lt;b&gt;&lt;/b&gt;<img src="../.gitbook/assets/edge-devices-thinger.io (1).png" alt/><b> </b></a>&lt;b&gt;&lt;/b&gt;</p>
         <p>In this category is covered the Sigfox integration with the platform,
           where the user can configure callbacks for transmitting data from the devices
           to the cloud for creating real-time dashboards.<b> </b>

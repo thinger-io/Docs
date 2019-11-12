@@ -1,17 +1,17 @@
 # HTTP DEVICES
 
-There are some projects that require the integration of third party data sources, such as a Cloud Service, devices without Thinger.io library on it source code, or a custom program. In this section it is explained how to use the "HTTP device" profile at Thinger.io, that allows receiving data via REST API from whatever source that is able to create a connection with Thinger.io Server and send an HTTP request, taking advantage of all Thinger.io features such as display real time data in dashboards, store in data buckets or process it using a plugin. 
-
 {% hint style="info" %}
-This feature is only available for advanced Thinger.io Server instances. freemium users can integrate their HTTP devices sending data to a bucket as explained in the "traditional integration" section of this doc.
+[This feature is only available for advanced Thinger.io Server instances. freemium users can integrate their HTTP devices sending data to a bucket as explained in the "traditional integration" section of this doc.](https://docs.thinger.io/hardware-devices/http-devices#traditional-http-integration)
 {% endhint %}
+
+There are some projects that require the integration of third party data sources, such as a Cloud Service, devices without Thinger.io library on it source code, or a custom program. In this section it is explained how to use the "HTTP device" profile at Thinger.io, that allows receiving data via REST API from whatever source that is able to create a connection with Thinger.io Server and send an HTTP request, taking advantage of all Thinger.io features such as display real time data in dashboards, store in data buckets or process it using a plugin. 
 
 This integration provides bidirectional communication between Thinger.io and the data source by making use of HTTP request and response data, that consist on basic HTTP POST messages with JSON codificated data. 
 
 ![](../.gitbook/assets/image%20%2858%29.png)
 
 {% hint style="info" %}
-Note that this integration can't explode the 100% of Thinger.io features and benefits in terms of communication efficiency, real-time data and device administration, as it don't count with the required software functionalities, so it is strongly recommended integrating the devices using a Thinger.io software client if it is available for the device
+Note that this integration can't explode the 100% of Thinger.io features and benefits in terms of communication efficiency, real-time data and device administration, so it is strongly recommended integrating the devices using a Thinger.io software client if it is available.
 {% endhint %}
 
 In the next sections it is explained how to create and configure the HTTP Device Profile at Thinger.io Platform and how to link it with the data source.

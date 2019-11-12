@@ -119,7 +119,7 @@ Dashboards, Data buckets or Device resources can be easily shared with third par
 
 ### 5.Extend Thinger.io
 
-Thinger.io platform can be complemented with many different Internet services using **Plugins** that can be found and deployed within seconds Just going to our marketplace and selecting it:
+Thinger.io platform can be complemented with many different Internet services using **Plugins** that can be found and deployed within seconds Just going to our marketplace and selecting it
 
 {% page-ref page="plugins/" %}
 
