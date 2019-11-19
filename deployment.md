@@ -80,13 +80,5 @@ Finally, it is necessary to select the payment method between Credit Card or Dir
 
 ## On premise instances
 
-
-
-## Server Configuration
-
-### Custom  Web Domain Redirection
-
-### User Accounts Management
-
 ## Devices redirection
 
