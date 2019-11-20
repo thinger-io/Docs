@@ -76,7 +76,27 @@ Then include your billing address. VAT number will be required if the customer i
 
 ![](.gitbook/assets/image%20%2868%29.png)
 
-Finally, it is necessary to select the payment method between Credit Card or Direct Debit, that allows the domiciliation of the payment with SEPA tansferences. 
+Finally, it is necessary to select the payment method between Credit Card or Direct Debit, that allows the domiciliation of the payment with SEPA tansferences. Once the payment process is finished, Thinger.io customer management system will automatically configure the cloud host and deploy the private server instance. 
+
+## Steps After Contracting
+
+The deployment process delays few minutes. As soon as it has been completed a confirmation mail will be sent to the "Admin Email", meaning that the server is completely ready. To start working with it, just follow the next steps:
+
+### First Login
+
+1\) Access the server by writing the selected web-domain in a web browser, for example "acme.do.thinger.io".  This allows accessing the login page of the private server instance.   
+
+2\) Note that this server has never been accessed before, and it is a completely isolated instance so there is not any user account created, so it is necessary to click on "Create account" button, and fill the form to create a new user profile using the "Admin Email" address \(any other address will obtain an unauthorized message\).
+
+3\) After creating the new account it is possible to access the new server. It is not necessary to confirm the mail address. 
+
+### First Device Connection
+
+When working with a private Thinger.io Server Instance, it is necessary to modify the devices server hostname in order to introduce the right one. To make the redirection the next code line needs to be introduced on the top of the devices source code: 
+
+`#define THINGER_SERVER`
+
+Not doing this will cause the device to try to establish a connection to the public Thinger.io Platform Community Server instead of working against the new private server.
 
 ## On premise instances
 
