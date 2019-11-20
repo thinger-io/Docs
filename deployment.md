@@ -6,9 +6,9 @@ description: >-
 
 # SERVER DEPLOYMENT
 
-## Why to pay for Thinger.io?
-
 Freemium accounts are perfect for learning and testing Thinger.io platform with only few limitations, however, for getting the best performance and reliability of this platform and access to some advanced features that are essential for professional use, it is necessary to deploy a private Thinger.io Server. 
+
+## Thinger.io Private Instance Benefits
 
 Thinger.io supports private cloud deployments that can be automatically launched from the pricing page. Private instances are isolated servers for each customer, so the instance is not shared with other thousands of users from our community. 
 

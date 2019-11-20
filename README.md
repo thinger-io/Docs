@@ -57,7 +57,7 @@ This example can be modified to adapt the device behavior to each use case. Afte
 {% hint style="success" %}
 Find additional information about Thinger.io devices in the next sections: 
 
-1. \*\*\*\*[**Compatible Arduino and Linux devices**](compatible-devices/)\*\*\*\*
+1. \*\*\*\*[**Compatible Arduino and Linux devices**](devices/)\*\*\*\*
 2. \*\*\*\*[**Zero to Hero Thinger.io Firmware Coding Guide**](coding.md) ****
 3. **Connection Troubleshooting Guide**
 {% endhint %}
@@ -70,7 +70,7 @@ Find additional information about Thinger.io devices in the next sections:
 4\) Introduce the HTTP request \(API+TOKEN\) into your device code or third party platform and start sending data to Thinger.io
 
 {% hint style="success" %}
-[Follow a detailed tutorial about HTTP devices connection **here!**](compatible-devices/http-devices.md)
+[Follow a detailed tutorial about HTTP devices connection **here!**](devices/http-devices.md)
 {% endhint %}
 {% endtab %}
 
@@ -123,9 +123,9 @@ Thinger.io platform can be complemented with many different Internet services us
 
 {% page-ref page="plugins/" %}
 
-## [Compatible Devices](compatible-devices/)
+## [Compatible Devices](devices/)
 
-[Thinger.io is Hardware agnostic, so it allows connecting any kind of electronic device without matter the manufacturer, hardware architecture, network technology or operative system. However there are different ways to integrate each device type, in this section it is explained how to connect most common devices by including our software libraries or using Thinger.io API to send data with HTTP queries](compatible-devices/)
+[Thinger.io is Hardware agnostic, so it allows connecting any kind of electronic device without matter the manufacturer, hardware architecture, network technology or operative system. However there are different ways to integrate each device type, in this section it is explained how to connect most common devices by including our software libraries or using Thinger.io API to send data with HTTP queries](devices/)
 
 ## [Software Client Coding](coding.md)
 
