@@ -46,13 +46,13 @@ Now, you can o back to your devices list, and your device should appear as disco
 
 Now you can use your new device id and the device credentials to connect the new device. Depending on your device, you will need to install the required libraries or development environment, so checkout the following sections according to your device:
 
-{% page-ref page="devices/arduino.md" %}
+{% page-ref page="compatible-devices/arduino.md" %}
 
-{% page-ref page="devices/linux.md" %}
+{% page-ref page="compatible-devices/linux.md" %}
 
 Remember that Sigfox devices, does not share the concept of connected device, as they are by default offline devices that send information periodically. If you want to store information from these devices, please, checkout the following documentation.
 
-{% page-ref page="devices/sigfox.md" %}
+{% page-ref page="compatible-devices/sigfox.md" %}
 
 For the following example, we will be using the Arduino IDE along with an ESP8266 device, like the NodeMCU. In this case, you can open the example code for the ESP8266, and fill the device details: your username, the device ID, and the device credentials established while creating the device. The following picture represents the relation between the code and the device created in your account.
 
