@@ -4,7 +4,7 @@ description: >-
   platform.
 ---
 
-# COMPATIBLE DEVICES
+# DEVICES
 
 As there are many different IoT hardware available nowadays, this section is divided in different categories: 
 
