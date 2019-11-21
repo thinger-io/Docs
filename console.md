@@ -8,7 +8,7 @@ Once you log in to your Thinger.io account, you will access by default to the `S
 
 On the left side of the `Statistics` screen you will find the main menu, which contains all the platform features that you will need when building IoT projects. These features are described in more detail in the following sections.
 
-![](.gitbook/assets/image%20%2840%29.png)
+![](.gitbook/assets/image%20%2841%29.png)
 
 ## Devices
 
@@ -406,7 +406,7 @@ Show raw data directly from a Bucket could be tricky when there is a lot of data
 
 The next image shows four different representations of the same dataset and time interval, aggregated using different algorithms:  
 
-![](.gitbook/assets/image%20%28101%29.png)
+![](.gitbook/assets/image%20%28105%29.png)
 
 {% hint style="warning" %}
 Note that Data Aggregation system is only available in **private server** instances with **InfluxDB** 
@@ -420,17 +420,17 @@ It is a quite visual widget that allows showing device data in a traditional "di
 
 The configurable parameters are the following:
 
-![](.gitbook/assets/image%20%2843%29.png)
+![](.gitbook/assets/image%20%2844%29.png)
 
 * **Title**: Optional title for the widget. 
 * **Subtitle**: Optional subtitle for the widget.
 * **Background**: Optional color for the widget background \(defaults to white\). This widget has a particularity behavior in relation to this parameter. Pressing into the green "+" button, It is possible to select different background colors depending on the real time value that is being shown: 
 
-![](.gitbook/assets/image%20%2849%29.png)
+![](.gitbook/assets/image%20%2850%29.png)
 
 This image is representing an example in which the measured variable is reaching dangerous pressure values. According to this situation, the background color is changing to red, so it will be easier to identify and manage the event if there is not any automatic system in the product.  
 
-![](.gitbook/assets/image%20%2837%29.png)
+![](.gitbook/assets/image%20%2838%29.png)
 
 * **Chart Input**: Configure how to feed the values to the tachometer chart. It is possible to feed the information from a connected **device** or from a **data bucket**
   * **From Device Resource**: With this option it is necessary to select a device \(that must be connected to provide information\) and specify the resources to plot. The following figure is an example that is selecting the device `deviceA`, and the resource `millis` from the device. Notice that when a time series widget is feed from a device, it will not keep the information if the dashboard is closed or refreshed, as it is just real-time data from your device to your dashboard. You can also select between different refresh modes, like sampling at different intervals \(that can be updated online\), or the chart is updated by the device.
@@ -440,7 +440,7 @@ This image is representing an example in which the measured variable is reaching
 
 The last tab shows all the display options. This is probably the most customizable widget of Thinger.io Platform. It allows selecting a lot of different parameters as shown in the image below: 
 
-![](.gitbook/assets/image%20%28121%29.png)
+![](.gitbook/assets/image%20%28126%29.png)
 
 * **Display options:**
   * **Units**: Optional information that will display the variable unit, like ºC.
@@ -455,7 +455,7 @@ The last tab shows all the display options. This is probably the most customizab
 
 Using LED spots is a common way  to create simple graphical interfaces in electronic projects in order to represent system status, alerts, etc. This widget has been included in Thinger.io Platform with the same purpose, so it can be used to show binary status by changing its color, create alerts by setting blink behavior or show multiple data by including more than one color range in a kind of RGB simulation. 
 
-![](.gitbook/assets/image%20%28131%29.png)
+![](.gitbook/assets/image%20%28137%29.png)
 
 This widget can be configured in many different ways though the three steps form. first of all selecting "Led indicator" in the Widget menu tab, and then indicating:
 
@@ -613,14 +613,14 @@ The configurable parameters are the following:
 
 This widgect has te posibility to be shown in two different appearances, that can be specified in the **Switch Style** parameter: **Switch** is the standard configuration with a little non-configurable switch, and **Button** which is an improved face that can be configured with different colors and icons. When this option is selected, next paremeters will be shown:
 
-![](.gitbook/assets/image%20%28132%29.png)
+![](.gitbook/assets/image%20%28138%29.png)
 
 * **On Color**: The color that will be displayed when the boolean value of this resource is true.
 * **Off Color**: The color that will be displayed when the boolean value of this reource is false.
 * **Icon**: This button is able to show a customizable icon from favicon library or any other icon library URL.
 * **Icon Color**: Icon color is also configurable with an hexadecimal value. Note that there are different color options for both button status, so you can customize it as you want.
 
-  ![](.gitbook/assets/image%20%2887%29.png)
+  ![](.gitbook/assets/image%20%2890%29.png)
 
 #### Slider
 
