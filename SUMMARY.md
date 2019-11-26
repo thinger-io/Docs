@@ -13,7 +13,7 @@
   * [Sigfox Plugin](plugins/sigfox.md)
   * [Node-RED Plugin](plugins/node-red.md)
 * [SERVER DEPLOYMENT](deployment.md)
-* [SERVER CONFIGURATION](server-configuration.md)
+* [SERVER ADMINISTRATION](server-configuration.md)
 * [SERVER API](api.md)
 * [THINGER.IO HARDWARE](climastick/README.md)
   * [ClimaStick](climastick/climastick-devices.md)
