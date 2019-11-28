@@ -10,11 +10,11 @@ description: >-
 
 Thinger.io WiFi Button is a ready-to-go Internet of Things based dash-button that integrates ESP8266 processor with WiFi connectivity among a simple integration with Thinger.io platform events to provide a flexible support for many different use cases. 
 
-![](../.gitbook/assets/image%20%2830%29.png)
+![](../.gitbook/assets/image%20%2831%29.png)
 
 These devices are aimed to create simple interfaces Huma-Internet, which can be used for any kind of project in education, connected industry, or home automation. Depending on the user requirements, the WiFi-Button can be used to execute functions through Thinger.io Platform, such as sending notification via email, endpoints to IFTTT, messages to other devices or even, by means of a Thinger.io Server Event, trigger the execution of a flow in Node-RED.
 
-![](../.gitbook/assets/image%20%28108%29.png)
+![](../.gitbook/assets/image%20%28112%29.png)
 
 Our buttons have been provided with an example program that allows to configure a WiFi network and some Thinger.io credentials by means of a web server inserted in the device itself. Once the configuration is done, the device makes an instant connection with the Thinger.io Server that was configures, allowing it to perform any function programmed in the platform. After that, the hardware of the WiFi Button will change to an hibernation status that allows saving battery to extend life greater than 3000 pulsations in good conditions.
 
@@ -33,7 +33,7 @@ This section contains the deployment instruction that should be followed on devi
 
 This device has been provided with a basic program that allows creating useful functionalities using thinger.io endpoints. The next execution diagram shows how does this program and how to use the single button to move between the different program menus, that allows introducing or deleting WiFi credentials, changing the device program by using Arduino OTA feature or just making a single connection to order any functionality. 
 
-![](../.gitbook/assets/image%20%28123%29.png)
+![](../.gitbook/assets/image%20%28128%29.png)
 
 ### **Device Sound interface**
 
@@ -71,7 +71,7 @@ In order to save battery, the configuration hotspot is hold up for 180 seconds \
 
 3\)      When the device begins connected to the access point, a Web Browser should automatically open the configuration interface, as is shown in the image below:
 
-![](../.gitbook/assets/image%20%2881%29.png)
+![](../.gitbook/assets/image%20%2885%29.png)
 
 {% hint style="danger" %}
 **WARNING!** If the computer is connected to the WiFi hotspot but the web browser doesn't show this interface, it is possible to manually access it by opening web browser and writing 192.168.4.1 address in the browser bar.
@@ -79,7 +79,7 @@ In order to save battery, the configuration hotspot is hold up for 180 seconds \
 
 4\)      Select **“Configure WiFi”** option by pressing this button of the main menu. This option will launch a Scan process to find the better quality WiFi signals of your home or office and show it in the next menu.
 
-![](../.gitbook/assets/image%20%2846%29.png)
+![](../.gitbook/assets/image%20%2849%29.png)
 
 {% hint style="info" %}
 IMPORTANT: When the desired WiFi Network SSID doesn’t appears at this list, pressing “Scan” bottom text will launch a new scanning process. If the problem persist, the SSID can be manually wroten the SSID text box.
@@ -110,7 +110,7 @@ In addition to the common configuration parameters, each connected device has to
 
 As soon as a valid WiFi configuration is made, the WiFi button will create a new device profile on this platform according to the auto-provisioning process setting its device credentials with the data that was included during the button configuration. This profile can be checked at Thinger.io platform workspace, by clicking on “devices” menu tab.
 
-![](../.gitbook/assets/image%20%28151%29.png)
+![](../.gitbook/assets/image%20%28158%29.png)
 
 Clicking on the device name it is possible to access the device dashboard that contains information related to the device connection and status, and provides a simple way to show device parameters.
 

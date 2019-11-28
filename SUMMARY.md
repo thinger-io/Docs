@@ -6,6 +6,7 @@
   * [LINUX / RASPBERRY PI](devices/linux.md)
   * [SIGFOX](devices/sigfox.md)
   * [HTTP DEVICES](devices/http-devices.md)
+  * [MQTT](devices/mqtt.md)
 * [FIRMWARE CODING](coding.md)
 * [CLOUD CONSOLE](console.md)
 * [PLUGINS](plugins/README.md)
