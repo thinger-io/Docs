@@ -190,7 +190,7 @@ Properties declarations and modifications are made by means of a special context
 
 #### Coding with properties <a id="coding-with-properties"></a>
 
-It is also possible to create, retrieve and modify data properties from devices, however, at this point we must differentiate between HTTP devices or [thinger.io](http://thinger.io/) software client devices, which will use `set_property()` or `get_propery()` comands as shown in the example below:
+It is also possible to create, retrieve and modify data properties from devices, however, at this point we must differentiate between HTTP devices or [thinger.io](http://thinger.io/) software client devices, which will use `set_property()` or `get_propery()` comands as shown in the examples below:
 
 ```text
 /*set property value*/
@@ -201,14 +201,15 @@ data["longitude"]=-4.056;
 data["latitude"]=41.40;
 //sending new values to platform
 thing.set_property("location", data, true);
+```
 
+```text
 /*retrieve property value*/
 
 //creating a pson to store the property values
 pson data;
 //retrieving data from the platform
-thing.set_property("My_Property", data, true);
- 
+thing.get_property("My_Property", data);
 ```
 
 \(You can learn more details about this functions in the "codification" section of this documentation\).
