@@ -25,8 +25,8 @@ Thinger.io is a cloud IoT Platform that provides every needed tool to prototype,
 * **Bidirectional Efficient Communications:** Allows retrieving Real-time data from thousands of devices, but also to send data to them with extremely low latency. Perfect for smart-autonomous projects o remote controlling systems. 
 * **Store Device Data:** Just a couple clicks to create a Data Bucket a store IoT data in an scalable, efficient and affordable way, that also allows real-time data aggregation. 
 * **Show Real-time or Stored Data:** Using our awesome dashboards, it is possible to create used-friendly data visualization interfaces and share it in minutes with your customers. 
-* **Cloud Computing:** Using the scheduler and other Plugins it is possible to process device data to extract useful information or create automatic behaviors. 
-* **Integrate with third parties:** Our Open API allows retrieving data and share it with third party Internet Platforms and custom programs.
+* **Focus on Extensibility:** Multiple plugins can be deployed in common with this software in order to create extensible systems. 
+* **Integrable with 3rd Parties:** Our Open API allows retrieving data and share it with third party Internet Platforms and custom programs.
 
 Are you ready to start creating IoT projects? [**Create here your free account**](https://console.thinger.io/#/signup) and learn below how to use all this technology.
 
@@ -38,7 +38,7 @@ To start working with Thinger.io just [**create a free account in our cloud plat
 
 Using "Devices" menu tab, just click in "New device" button, and fill the form with the device ID, description and Credentials you prefer.
 
-![](.gitbook/assets/image%20%2818%29.png)
+![](.gitbook/assets/image%20%2819%29.png)
 
 ### 2.Connect Device
 
@@ -50,7 +50,7 @@ After provisioning the device at Thinger.io cloud, it is the moment to configure
 2. Going to "File&gt;Examples&gt;Thinger.io", open the example code that fix better for the PCB
 3. Edit the example code to include your username, device ID and Thinger.io credentials. If the device use a secured networks, connection credentials needs to be written too as shown in the image below. 
 
-![](.gitbook/assets/image%20%2820%29.png)
+![](.gitbook/assets/image%20%2821%29.png)
 
 This example can be modified to adapt the device behavior to each use case. After modifying the source code, just upload the sketch and wait for the device connection.
 
@@ -93,7 +93,7 @@ Each device can be managed through the "Device Dashboard". This interface shows 
 
 Thinger.io provides bidirectional communication, so it is possible to retrieve data into the server using "**devices output resources**" and also sending messages from server to the "**devices input resources**". Both resources are represented in the "device API" viewer.
 
-![Input &amp; Output resources in the device API inspector](.gitbook/assets/image%20%2828%29.png)
+![Input &amp; Output resources in the device API inspector](.gitbook/assets/image%20%2829%29.png)
 
 ### 4.Store, Show & Share Data
 
@@ -133,9 +133,9 @@ Thinger.io platform can be complemented with many different Internet services us
 
 This section will cover how to add different functionality to your devices for exposing resources, calling endpoints, or streaming data to real-time websockets.
 
-## [Cloud Console](console.md)
+## [Cloud Console](console/)
 
-[![](.gitbook/assets/console.png) ](console.md)
+[![](.gitbook/assets/console.png) ](console/)
 
 The Cloud Console is related with the management front-end designed to easily manage your devices and visualize its information in the cloud. In this section you will learn how to register devices, create real-time dashboards, access the devices API, and other management operations.
 
