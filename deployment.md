@@ -29,13 +29,13 @@ This process allows launching a completely private and customized Thinger.io IoT
 
 Private instances can be started in different cloud providers like Digital Ocean, Amazon Web Services, Google Cloud, or Azure in different availability zones. In that order, if our customer has already been using any of these providers for their company cloud infrastructure, it is possible to run Thinger.io Private server in the same location. 
 
-![](.gitbook/assets/image%20%28130%29.png)
+![](.gitbook/assets/image%20%28132%29.png)
 
 ### 2. Select the right license
 
 Private instances can be deployed over four licensing possibilities, each one provides different privileges and is fitted with an appropriate hardware host to the size of each project, as shown in the image below:
 
-![](.gitbook/assets/image%20%2896%29.png)
+![](.gitbook/assets/image%20%2897%29.png)
 
 This pricing includes the software license and all cloud expenses. Note that it is possible to select monthly or yearly license with a great discount. 
 
@@ -70,11 +70,11 @@ Ones the license has been selected, it is possible to custom the service with so
 
 Ones everything has been configured, the checkout process is really simple, just introduce your billing email \(the one that will receive the invoices from our side\), that can also be the same as the "Admin Email". 
 
-![](.gitbook/assets/image%20%28177%29.png)
+![](.gitbook/assets/image%20%28179%29.png)
 
 Then include your billing address. VAT number will be required if the customer is in the European Union in order to calculate the right taxes and build the invoice.
 
-![](.gitbook/assets/image%20%2889%29.png)
+![](.gitbook/assets/image%20%2890%29.png)
 
 Finally, it is necessary to select the payment method between Credit Card or Direct Debit, that allows the domiciliation of the payment with SEPA tansferences. Once the payment process is finished, Thinger.io customer management system will automatically configure the cloud host and deploy the private server instance. 
 

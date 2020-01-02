@@ -6,7 +6,7 @@ The first step to start an IoT project in Thinger.io \(except for not connected 
 
 To register a new device, once you have been logged in your console dashboard, please go to the **Devices** section that appears in the left menu.
 
-![](../.gitbook/assets/image%20%28149%29.png)
+![](../.gitbook/assets/image%20%28151%29.png)
 
 This section will list your registered devices and will show some information about its connection. Something similar to the following picture.
 

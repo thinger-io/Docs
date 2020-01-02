@@ -10,7 +10,7 @@ There are some projects that require the integration of third party data sources
 
 This integration provides bidirectional communication between Thinger.io and the data source by making use of HTTP request and response data, that consist on basic HTTP POST messages with JSON codificated data. 
 
-![](../.gitbook/assets/image%20%2887%29.png)
+![](../.gitbook/assets/image%20%2888%29.png)
 
 {% hint style="info" %}
 Note that this integration can't explode the 100% of Thinger.io features and benefits in terms of communication efficiency, real-time data and device administration, so it is strongly recommended integrating the devices using a Thinger.io software client if it is available.
@@ -22,11 +22,11 @@ In the next sections it is explained how to create and configure the HTTP Device
 
 First step to work with this interface consist on creating the device profile at the "devices" main menu tab and clicking on "new device" button. Then, select "HTTP Device \(Sigfox, Lora, cURL\)" type and fill `Device ID` and `Description` slots as required.  
 
-![](../.gitbook/assets/image%20%28142%29.png)
+![](../.gitbook/assets/image%20%28144%29.png)
 
 Ones the profile has been created it is possible to found it at the devices list, then, clicking the device identificator will open the "device dashboard", which is an interface that show device status and connection information and also allows working with the callback configuration and properties. 
 
-![](../.gitbook/assets/image%20%28175%29.png)
+![](../.gitbook/assets/image%20%28177%29.png)
 
 However, when time this page is first accessed \(before making the first call to the REST API\) there won't be any information to show o it will have the same aspect as the previous image. Note that this interface contains two additional tabs: the "Callback" tab allows managing the device behavior and capacities, each of these features will be explained in the "[**Managing Callback Functionalities**](https://docs.thinger.io/hardware-devices/http-devices#managing-callback-functionalities)" section of this document.  On the other hand, the "Properties" tab allows to create and manage device properties, which are variables related with this device stored in Thinger.io Server, that can be edited, displayed, or forwarded to the device using callback menu functionalities.
 
@@ -40,11 +40,11 @@ It is necessary to obtain the HTTP request and the authorization that allows int
 
 1\) Going to `Callback / Settings` tab, check the "authorization" box. A bearer token will appear into this section.  
 
-![](../.gitbook/assets/image%20%28144%29.png)
+![](../.gitbook/assets/image%20%28146%29.png)
 
 2\) Then, going to `Callback/Overview` tab, an specification of the REST API that provides access to this device will be shown, ready to be copied into the program or HTTP request entry. 
 
-![](../.gitbook/assets/image%20%2851%29.png)
+![](../.gitbook/assets/image%20%2852%29.png)
 
 After follow the first step, the authorization token that is shown on this interface will be fixed, being also the same as the one shown at "settings" tab, so it can be copied too in order to create the HTTP Request.  
 
@@ -88,11 +88,11 @@ The Callback Manager allows to easy associate the device data with a previously 
 
 This feature provides an easy way to select a property of this device in order to store just the last-received data from a device or set an specific attribute such as location data. This feature allows using Thinger.io server as a persistent memory for the device. To select the property that will be modified just select the checkbox and find it's ID in the text entry.
 
-![](../.gitbook/assets/image%20%2861%29.png)
+![](../.gitbook/assets/image%20%2862%29.png)
 
 The device properties can also be shown and managed by just going to "Device Properties" tab of the device dashboard.  
 
-![](../.gitbook/assets/image%20%28156%29.png)
+![](../.gitbook/assets/image%20%28158%29.png)
 
 ### HTTP Response Data
 
@@ -120,7 +120,7 @@ This parameter allows to establish a device connection timeout in minutes, so th
 
 Finally it is necessary to introduce the API given in the "callback overview" section in the system or device, allowing to connect with the platform and start sending data. If everything is done correctly the device dashboard will start displaying information as shown in the image below:
 
-![](../.gitbook/assets/image%20%28109%29.png)
+![](../.gitbook/assets/image%20%28110%29.png)
 
 As there are different ways to make this integration, in this section it is explained how to properly implement the request over different supports.  
 
@@ -136,7 +136,7 @@ https://trincado.do.thinger.io/v3/users/jt/devices/Example_Device/callback/data?
 
 This services provide a useful way to test HTTP integrations in a simply way. It is only necessary to follow the next steps to configure a request:
 
-![](../.gitbook/assets/image%20%28176%29.png)
+![](../.gitbook/assets/image%20%28178%29.png)
 
 1. Select &lt;POST&gt; message type
 2. Introduce the device callback into the main textbox
@@ -152,11 +152,21 @@ As shown in the previous image, you should receive an empty 200 OK status messag
 
 If the source system supports cURL instructions, there is an integration example into `Callback / Curl` tab, ready to copy and modify:
 
-![](../.gitbook/assets/image%20%2866%29.png)
+![](../.gitbook/assets/image%20%2867%29.png)
 
 ## Traditional HTTP integration
 
-### 
+If the user is working traditional Thinger.io Community Server, the "HTTP" Device will not be available on the "device type" list when creating a new device \(it will, in the future, when the community server gets updated to the newest version of Thinger.io\). But it still being possible to create a similar integration by sending data directly from the device to a Data Bucket using the Open REST API. To make this just follow the next steps: 
+
+1. Go to "Data Bucket" menu section and create a new data bucket selecting and **“From Write Call”** Data source.
+2. Create an access token with permissions to write over the data bucket [![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/c/c7ac34097facf9c1e4e60cfcba971cc74f0d0455_2_631x500.png)](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/c/c7ac34097facf9c1e4e60cfcba971cc74f0d0455.png)
+3. Build an HTTP Request using [Thinger.io](http://thinger.io/) REST API and the token authorization to allow a third party device sending data to the bucket from a third party software.
+4. to know the right API, go to the data bucket interface an open the Network inpector \(F12 in Chrome browser\). for example, in this case, the REST API is: [https://api.thinger.io/v1/users/jt/buckets/NodeRED\_Device\_Example/data 2](https://api.thinger.io/v1/users/jt/buckets/NodeRED_Device_Example/data)![](../.gitbook/assets/image%20%2846%29.png) 
+5. if we add now the **?authorization=** command and the token access, we obtain the complete request that can be used with any POSTMAN service or any device to send POST request to thinger.io server: [`https://api.thinger.io/v1/users/jt/buckets/NodeRED_Device_Example/data?authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJOb2RlUkVEX0RldmljZV9FeGFtcGxlIiwidXNyIjoianQifQ.1BOzYXp3UveYxGEmKThrSTIblYgc1Dp3IPBFdGAcu_0`](https://api.thinger.io/v1/users/jt/buckets/NodeRED_Device_Example/data?authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJOb2RlUkVEX0RldmljZV9FeGFtcGxlIiwidXNyIjoianQifQ.1BOzYXp3UveYxGEmKThrSTIblYgc1Dp3IPBFdGAcu_0)\`\`
+6. note that the value needs to go in a application/json type, so the device code needs to create a valid JSON on it code. 
+7. Finally open the data bucket inspector and check the result: [![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/f/f8b64b1a2219d80512bd8028d5904298e6356424_2_492x500.png)](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/f/f8b64b1a2219d80512bd8028d5904298e6356424.png)
+
+it is possible to send JSON with the data you need. However, the problem with this integration is that you can’t explode full [thigner.io](http://thigner.io/) features as can be made using the HTTP device, that is why wy will try to upgrade the community server as soon as possible. 
 
 ### 
 

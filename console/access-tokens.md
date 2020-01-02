@@ -29,7 +29,7 @@ The configurable parameters are the following:
 
 When all the parameters are filled, a new Access Token Profile will be added by pressing again the green "New Access Token" button, then, the authorization stream will be displayed in a blue text-box at the bottom of the interface as shown in the image below.
 
-![](../.gitbook/assets/image%20%28118%29.png)
+![](../.gitbook/assets/image%20%28120%29.png)
 
 This authorization can be added as bearer auth. to allow a third party system to work with Thinger.io Platform features. 
 
@@ -88,7 +88,7 @@ The Access Token profile permissions can be modified anytime from the "Edit Toke
 
 One or more a Access Token profiles can be deleted from the Access Token list by selecting it in the left-side checkbox and pressing into the red "delete" button.
 
-![](../.gitbook/assets/image%20%28158%29.png)
+![](../.gitbook/assets/image%20%28160%29.png)
 
 
 
