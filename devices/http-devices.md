@@ -1,7 +1,7 @@
 # HTTP DEVICES
 
 {% hint style="info" %}
-[This feature is only available for advanced Thinger.io Server instances. freemium users can integrate their HTTP devices sending data to a bucket as explained in the "traditional integration" section of this doc.](https://docs.thinger.io/hardware-devices/http-devices#traditional-http-integration)
+[This feature is only available on private Thinger.io Server instances. that uses the most up-to-date server. Freemium users can't use it yet, but they can integrate their HTTP devices by using the **"traditional integration"** which is explained on **this** section.](https://docs.thinger.io/hardware-devices/http-devices#traditional-http-integration)
 {% endhint %}
 
 There are some projects that require the integration of third party data sources, such as a Cloud Service, devices without Thinger.io library on it source code, or a custom program. In this section it is explained how to use the "HTTP device" profile at Thinger.io, that allows receiving data via REST API from whatever source that is able to create a connection with Thinger.io Server and send an HTTP request, taking advantage of all Thinger.io features such as display real time data in dashboards, store in data buckets or process it using a plugin. 
