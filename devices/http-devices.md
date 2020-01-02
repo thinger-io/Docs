@@ -1,7 +1,5 @@
 # HTTP DEVICES
 
-
-
 {% hint style="info" %}
 [This feature is only available for advanced Thinger.io Server instances. freemium users can integrate their HTTP devices sending data to a bucket as explained in the "traditional integration" section of this doc.](https://docs.thinger.io/hardware-devices/http-devices#traditional-http-integration)
 {% endhint %}
