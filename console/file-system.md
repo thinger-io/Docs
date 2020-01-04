@@ -4,6 +4,10 @@
 
 Thinger.io provides a flexible cloud storage system that allows uploading files to the IoT server in order to provide support to other platform features such as the HTML Widget or the OTA System. The information will be stored in a non-volatile memory of the server host, so it is important to take care about the size of the files, specially when the instance is shared with other user accounts, to prevent server local storage from becoming saturated.
 
+{% hint style="success" %}
+Note that this feature is only available for ****[**private instances**](../deployment.md), as it requires cloud storage system. 
+{% endhint %}
+
 ## Create an Storage Profile
 
 Each storage profile will create an isolated directory with different access permissions. To create a new storage profile, press the "Add Storage" button and complete the form as shown in the image below:
