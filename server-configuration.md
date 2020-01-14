@@ -79,17 +79,17 @@ Private Instances web-domain can be replaced with different custom web domains, 
 
 Pressing "Add Domain" button in the Domains List interface allows accessing to a domain creation form context, in which it is possible to introduce the new web domain for the instance and description as shown in the image below: 
 
-![](.gitbook/assets/image%20%28157%29.png)
+![](.gitbook/assets/image%20%28158%29.png)
 
 Before add the new web domain, it is necessary to verify the disponibility and create a secure certificate that will provide secure communications with the web console. To make this, press the "Verify Domain" button. 
 
-![](.gitbook/assets/image%20%28172%29.png)
+![](.gitbook/assets/image%20%28173%29.png)
 
 #### Redirecting the CNAME Entry 
 
 An important part of this process is to resolve the redirection between the new web domain and the private server original web domain by going to the domain administration service. 
 
-![](.gitbook/assets/image%20%28159%29.png)
+![](.gitbook/assets/image%20%28160%29.png)
 
 Onces the redirection has been made and the DNS service has propagated the A register, it is possible to verify the domain using the Domain Details button. 
 
@@ -125,7 +125,7 @@ First step to manage users network is clicking on the "User Accounts" tab of the
 
 Pressing "Add User" button of the user administration list opens a form context in which the new user parameters can be introduced:
 
-![](.gitbook/assets/image%20%28156%29.png)
+![](.gitbook/assets/image%20%28157%29.png)
 
 * **Username**: Account username, this parameter also works as user identificator. 
 * **Email**: needs to be a valid email account. Only emails introduced on this list can create a user account in order to prevent intruders.

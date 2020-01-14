@@ -2,17 +2,17 @@
 
 ## Subscribing and Deploying a Cloud Instance
 
-This process allows launching a completely private and customized Thinger.io IoT Server within minutes just accessing out Pricing Page in the "pricing" button of our Web Home \(Also available at this [**link**](https://pricing.thinger.io)\). and following the next steps:
+This section describres the proccess to deploy a private Thinger.io Cloud instance within minutes by just accessing the [**Pricing Page**](https://pricing.thinger.io) \(Cloud Pricing section\) in the "PRICING" link from our [Web Home](https://thinger.io). Just follow the next steps:
 
-### 1. Select any cloud provider
+### 1. Select a cloud provider
 
-Private instances can be started in different cloud providers like Digital Ocean, Amazon Web Services, Google Cloud, or Azure in different availability zones. In that order, if our customer has already been using any of these providers for their company cloud infrastructure, it is possible to run Thinger.io Private server in the same location. 
+Private instances can be deployed in different cloud providers like Digital Ocean, Amazon Web Services, Google Cloud, or Azure in different availability zones. In that order, if our customer has already been using any of these providers for their company cloud infrastructure, it is possible to run Thinger.io Private server in the same location. 
 
 ![](../.gitbook/assets/image%20%28132%29.png)
 
 ### 2. Select the right license
 
-Private instances can be deployed over four licensing possibilities, each one provides different privileges and is fitted with an appropriate hardware host to the size of each project, as shown in the image below:
+Private cloud instances can be deployed with different licenses, depending on the project requriements, like host performance, bandwidth; or platform features like rebrands, custom domains, additional suppport,  plugins, etc. Once the cloud provider is selected, then it is necessary to select required license, as shown in the image below:
 
 ![](../.gitbook/assets/image%20%2897%29.png)
 
@@ -23,19 +23,17 @@ The next table shows all different features that are provided by each license as
 |  | **MAKER** | **GROW** | **STARTUP** | **BUSINESS** |
 | :--- | :--- | :--- | :--- | :--- |
 | **Devices** | Unlimited | Unlimited | Unlimited | Unlimited |
-| **Dashboards** | Unlimited | Unlimited | Unlimited | Unlimited |
 | **Plugins** | 1 | 3 | 6 | Unlimited |
 | **Rebranding** | \*\*\*\* | ✓ | ✓ | Included |
 | **Custom Domain** | \*\*\*\* | ✓ | ✓ | Included |
-| **Extended support** | \*\*\*\* | ✓ | ✓ | included |
-| **Multiple Account** | \*\*\*\* | ✓ | ✓ | ✓ |
-| **Cluster Server** | \*\*\*\* |  |  | ✓ |
-| **High Availability**  | \*\*\*\* |  |  | ✓ |
+| **Extended support** | \*\*\*\* | ✓ | ✓ | ✓ |
+| **Multiple Account** | \*\*\*\* | ✓ | ✓ | Included |
+| **HA Cluster** | \*\*\*\* |  |  |  |
 | **Recommended network size** | Individual projects | &lt;10 user accounts. | 10 to 50 accounts |  &gt;50 user accounts |
 
 ### 3.  Configure preferences
 
-Ones the license has been selected, it is possible to custom the service with some preferences such as:
+Ones the license has been selected, it is possible to customize the service with some preferences such as:
 
 * **Region**: each cloud provider has server farms in different locations around the world. This option allows you to select the closest in order to minimize latency or host the private instance on the same farm as the rest of the client's enterprise software.
 * **Hostname**: enter here the grey-label name that will have the IoT server. This hostname will always be accompanied by the subdomain ".thinger.io" unless the "custom domains" option is selected.
@@ -49,7 +47,7 @@ Ones the license has been selected, it is possible to custom the service with so
 
 Ones everything has been configured, the checkout process is really simple, just introduce your billing email \(the one that will receive the invoices from our side\), that can also be the same as the "Admin Email". 
 
-![](../.gitbook/assets/image%20%28179%29.png)
+![](../.gitbook/assets/image%20%28180%29.png)
 
 Then include your billing address. VAT number will be required if the customer is in the European Union in order to calculate the right taxes and build the invoice.
 
