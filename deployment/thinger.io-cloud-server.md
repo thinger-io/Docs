@@ -8,7 +8,7 @@ This section describres the proccess to deploy a private Thinger.io Cloud instan
 
 Private instances can be deployed in different cloud providers like Digital Ocean, Amazon Web Services, Google Cloud, or Azure in different availability zones. In that order, if our customer has already been using any of these providers for their company cloud infrastructure, it is possible to run Thinger.io Private server in the same location. 
 
-![](../.gitbook/assets/image%20%28132%29.png)
+![Cloud provider selection between Digital Ocean, Amazon Web Services, Google Cloud and Azure](../.gitbook/assets/image%20%28132%29.png)
 
 ### 2. Select the right license
 
@@ -18,7 +18,7 @@ Private cloud instances can be deployed with different licenses, depending on th
 
 This pricing includes the software license and all cloud expenses. Note that it is possible to select monthly or yearly license with a great discount. 
 
-The next table shows all different features that are provided by each license as well as a desirable purpose specification. It is possible to select one license and change it in the future using the administration account. 
+The next table shows all different features that are provided by each license as well as a desirable purpose specification. It is possible to select one license and change it in the future using the [subscription management portal](https://thinger.chargebeeportal.com). 
 
 |  | **MAKER** | **GROW** | **STARTUP** | **BUSINESS** |
 | :--- | :--- | :--- | :--- | :--- |
@@ -26,18 +26,18 @@ The next table shows all different features that are provided by each license as
 | **Plugins** | 1 | 3 | 6 | Unlimited |
 | **Rebranding** | \*\*\*\* | ✓ | ✓ | Included |
 | **Custom Domain** | \*\*\*\* | ✓ | ✓ | Included |
-| **Extended support** | \*\*\*\* | ✓ | ✓ | ✓ |
 | **Multiple Account** | \*\*\*\* | ✓ | ✓ | Included |
+| **Extended support** | \*\*\*\* | ✓ | ✓ | ✓ |
 | **HA Cluster** | \*\*\*\* |  |  |  |
 | **Recommended network size** | Individual projects | &lt;10 user accounts. | 10 to 50 accounts |  &gt;50 user accounts |
 
 ### 3.  Configure preferences
 
-Ones the license has been selected, it is possible to customize the service with some preferences such as:
+Once the license has been selected, it is possible to customize the service with some preferences such as:
 
-* **Region**: each cloud provider has server farms in different locations around the world. This option allows you to select the closest in order to minimize latency or host the private instance on the same farm as the rest of the client's enterprise software.
-* **Hostname**: enter here the grey-label name that will have the IoT server. This hostname will always be accompanied by the subdomain ".thinger.io" unless the "custom domains" option is selected.
-* **Admin Email**: this account will be assigned for the administration of the private server. It will be the only one that will be able to register new users, domains, rebrandings, plugins etc.
+* **Region**: each cloud provider has server farms in different locations around the world. This option allows you to select the closest in order to minimize latency or host the private instance on the same datacenter as the rest of the client's enterprise software.
+* **Hostname**: enter the hostname for your private IoT instance. This hostname will always be accompanied by the subdomain ".thinger.io" to access your host. You can set custom domains selecting the additional domains option.
+* **Admin Email**: this email address will be assigned for the administration of the private server. It will be the only one that will be able to register new users, domains, rebrandings, plugins etc.
 * **Additional users**: Every private instance always has one user account, but this option allows to increase the amount of accounts in order to share the server with other collaborators or customers. However, note that the server could be overloaded if a large number of user accounts with plugins is added, affecting the proper functioning of the instance.
 * **Extended Support**: This option is recommended in order to obtain Thinger.io engineers development support. It provides 24-48h response time, however all accounts can use the community discussion forum to obtain support from other community developers at: https://community.thinger.io
 * **Custom Domains**: It is the amount of different web domains that can be redirected to the same Private Instance in order to create multiple rebrandings.
