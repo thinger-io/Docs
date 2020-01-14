@@ -1,4 +1,4 @@
-# Thinger.io Cloud Server
+# Thinger.io Cloud
 
 ## Subscribing and Deploying a Cloud Instance
 

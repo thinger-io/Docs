@@ -259,6 +259,10 @@ The configurable parameters are the following:
 * **Color**: Color for the text.
 * **UTC**: Display the clock in UTC or in the local timezone.
 
+### HTML Widget 
+
+This widget allows creating custom data representation interfaces by programming it with standard source code languages such as HTML, CSS, JS. Being also able to represent data from Thinger.io devices or data buckets. 
+
 ## Add a Control Widget
 
 In Thinger.io it is possible to not just display information in dashboard, but also control devices in real-time. In this section are described some available widgets that can be used control connected devices.
