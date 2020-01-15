@@ -142,7 +142,7 @@ Use the interface tester to see if your code is correctly procesing the payloads
 
 In this section it is described how the uplink data flow works, from its source in the Sigfox network, to its final destination in Thinger.io.
 
-![](../.gitbook/assets/image%20%28182%29.png)
+![](../.gitbook/assets/image%20%28183%29.png)
 
 In the following subsections are described the elements shown in the figure.
 

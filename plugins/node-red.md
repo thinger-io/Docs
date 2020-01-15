@@ -151,7 +151,7 @@ Using the "Device Status Change" property of the Server Event Node, it is possib
 
 The next flow uses two Thinger.io Nodes, the first one is triggering the Device Disconnection Server Event that will throw a JSON formatted message with the device ID, the status and the timestamp of the change. The second Node allows calling the Endpoint profile to send the alert with the device information JSON attached so it is possible to custom the message to easily identify the problem. 
 
-![](../.gitbook/assets/image%20%28104%29.png)
+![](../.gitbook/assets/image%20%28105%29.png)
 
 This flow can be easily imported into your Node-RED workspace using the next JSON:
 
@@ -183,7 +183,7 @@ Note that his is an easy example that only retrieves data from just one MQTT dev
 {% tab title="GPS Geofences" %}
 Geofencing is an interesting IoT use case, with many applications in asset management, fleets or package tracking. The next flow shows how to monitor the location of any device to create an alert when it leaves an area specified with a Geofence Node.  
 
-![](../.gitbook/assets/image%20%2899%29.png)
+![](../.gitbook/assets/image%20%28100%29.png)
 
 Creating this integration with the "device\_location" property, it is possible to integrate any kind of device including Thinger.io Software Clients, Sigfox, TTN or even HTTP devices in a very simple way.
 

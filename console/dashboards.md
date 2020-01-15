@@ -75,7 +75,7 @@ Show raw data directly from a Bucket could be tricky when there is a lot of data
 
 The next image shows four different representations of the same dataset and time interval, aggregated using different algorithms:  
 
-![](../.gitbook/assets/image%20%28130%29.png)
+![](../.gitbook/assets/image%20%28131%29.png)
 
 {% hint style="warning" %}
 Note that Data Aggregation system is only available in **private server** instances with **InfluxDB** 
@@ -109,7 +109,7 @@ This image is representing an example in which the measured variable is reaching
 
 The last tab shows all the display options. This is probably the most customizable widget of Thinger.io Platform. It allows selecting a lot of different parameters as shown in the image below: 
 
-![](../.gitbook/assets/image%20%28163%29.png)
+![](../.gitbook/assets/image%20%28164%29.png)
 
 * **Display options:**
   * **Units**: Optional information that will display the variable unit, like ºC.
@@ -124,7 +124,7 @@ The last tab shows all the display options. This is probably the most customizab
 
 Using LED spots is a common way  to create simple graphical interfaces in electronic projects in order to represent system status, alerts, etc. This widget has been included in Thinger.io Platform with the same purpose, so it can be used to show binary status by changing its color, create alerts by setting blink behavior or show multiple data by including more than one color range in a kind of RGB simulation. 
 
-![](../.gitbook/assets/image%20%28177%29.png)
+![](../.gitbook/assets/image%20%28178%29.png)
 
 This widget can be configured in many different ways though the three steps form. first of all selecting "Led indicator" in the Widget menu tab, and then indicating:
 
@@ -286,14 +286,14 @@ The configurable parameters are the following:
 
 This widgect has te posibility to be shown in two different appearances, that can be specified in the **Switch Style** parameter: **Switch** is the standard configuration with a little non-configurable switch, and **Button** which is an improved face that can be configured with different colors and icons. When this option is selected, next paremeters will be shown:
 
-![](../.gitbook/assets/image%20%28178%29.png)
+![](../.gitbook/assets/image%20%28179%29.png)
 
 * **On Color**: The color that will be displayed when the boolean value of this resource is true.
 * **Off Color**: The color that will be displayed when the boolean value of this reource is false.
 * **Icon**: This button is able to show a customizable icon from favicon library or any other icon library URL.
 * **Icon Color**: Icon color is also configurable with an hexadecimal value. Note that there are different color options for both button status, so you can customize it as you want.
 
-  ![](../.gitbook/assets/image%20%28111%29.png)
+  ![](../.gitbook/assets/image%20%28112%29.png)
 
 ### Slider
 
