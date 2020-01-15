@@ -10,7 +10,7 @@ Private instances can be deployed in different cloud providers like Digital Ocea
 
 ![Cloud provider selection between Digital Ocean, Amazon Web Services, Google Cloud and Azure](../.gitbook/assets/image%20%28132%29.png)
 
-### 2. Select the right license
+### 2. Select a license
 
 Private cloud instances can be deployed with different licenses, depending on the project requriements, like host performance, bandwidth; or platform features like rebrands, custom domains, additional suppport,  plugins, etc. Once the cloud provider is selected, then it is necessary to select required license, as shown in the image below:
 
@@ -49,13 +49,13 @@ These options are described in more detail in the following:
 
 ### 4. Checkout and payment options
 
-Ones everything has been configured, the checkout process is really simple, just introduce your billing email \(the one that will receive the invoices from our side\), that can also be the same as the "Admin Email". 
+After configuring the selected license, the checkout process is really simple, just click on the "Deploy Instance" button, and wait for the checkout pop-up. In the new form, it is necessary to introduce your billing email \(it can be different from the admin email\) where the invoices will be sent: 
 
-![](../.gitbook/assets/image%20%28181%29.png)
+![Billing email](../.gitbook/assets/image%20%28181%29.png)
 
-Then include your billing address. VAT number will be required if the customer is in the European Union in order to calculate the right taxes and build the invoice.
+After introducing the billing email, it is necessary to set the billing address. It is possible to set a VAT number if you are a registered company from the European Union in order to calculate the right taxes and build the invoice.
 
-![](../.gitbook/assets/image%20%2890%29.png)
+![Billing address configuration](../.gitbook/assets/image%20%2890%29.png)
 
 Finally, it is necessary to select the payment method between Credit Card or Direct Debit, that allows the domiciliation of the payment with SEPA tansferences. Once the payment process is finished, Thinger.io customer management system will automatically configure the cloud host and deploy the private server instance. 
 
