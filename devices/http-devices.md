@@ -24,7 +24,7 @@ First step to work with this interface consist on creating the device profile at
 
 Ones the profile has been created it is possible to found it at the devices list, then, clicking the device identificator will open the "device dashboard", which is an interface that show device status and connection information and also allows working with the callback configuration and properties. 
 
-![](../.gitbook/assets/image%20%28178%29.png)
+![](../.gitbook/assets/image%20%28179%29.png)
 
 However, when time this page is first accessed \(before making the first call to the REST API\) there won't be any information to show o it will have the same aspect as the previous image. Note that this interface contains two additional tabs: the "Callback" tab allows managing the device behavior and capacities, each of these features will be explained in the "[**Managing Callback Functionalities**](https://docs.thinger.io/hardware-devices/http-devices#managing-callback-functionalities)" section of this document.  On the other hand, the "Properties" tab allows to create and manage device properties, which are variables related with this device stored in Thinger.io Server, that can be edited, displayed, or forwarded to the device using callback menu functionalities.
 
@@ -90,7 +90,7 @@ This feature provides an easy way to select a property of this device in order t
 
 The device properties can also be shown and managed by just going to "Device Properties" tab of the device dashboard.  
 
-![](../.gitbook/assets/image%20%28159%29.png)
+![](../.gitbook/assets/image%20%28160%29.png)
 
 ### HTTP Response Data
 
@@ -134,7 +134,7 @@ https://trincado.do.thinger.io/v3/users/jt/devices/Example_Device/callback/data?
 
 This services provide a useful way to test HTTP integrations in a simply way. It is only necessary to follow the next steps to configure a request:
 
-![](../.gitbook/assets/image%20%28179%29.png)
+![](../.gitbook/assets/image%20%28180%29.png)
 
 1. Select &lt;POST&gt; message type
 2. Introduce the device callback into the main textbox

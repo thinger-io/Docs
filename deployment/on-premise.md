@@ -8,7 +8,7 @@ This section describres the proccess to deploy a private Thinger.io On-premise i
 
 On-premise instances can be deployed with different licenses, depending on the project requriements, mainly in terms of platform features like rebrands, custom domains, additional suppport, plugins, etc. On-premise licenses starts for free with the Maker license, but limited with some advanced features enabled in the following tiers, most notably, custom domains with automatic SSL support, rebranding, plugins, multiple server accounts, or extend the server capabilities with plugins like Node-Red. So, the first step is to select the required license, as shown in the image below:
 
-![On-premise license selection](../.gitbook/assets/image%20%28154%29.png)
+![On-premise license selection](../.gitbook/assets/image%20%28155%29.png)
 
 This pricing includes the software license to deploy an on-premise instance. Note that it is possible to select monthly or yearly license with a great discount. 
 

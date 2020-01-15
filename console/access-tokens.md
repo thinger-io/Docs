@@ -88,7 +88,7 @@ The Access Token profile permissions can be modified anytime from the "Edit Toke
 
 One or more a Access Token profiles can be deleted from the Access Token list by selecting it in the left-side checkbox and pressing into the red "delete" button.
 
-![](../.gitbook/assets/image%20%28161%29.png)
+![](../.gitbook/assets/image%20%28162%29.png)
 
 
 

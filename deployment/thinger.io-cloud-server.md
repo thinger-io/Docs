@@ -31,9 +31,13 @@ The next table shows all different features that are provided by each license as
 | **HA Cluster** | \*\*\*\* |  |  |  |
 | **Recommended network size** | Individual projects | &lt;10 user accounts. | 10 to 50 accounts |  &gt;50 user accounts |
 
-### 3.  Configure preferences
+### 3.  Configure license
 
-Once the license has been selected, it is possible to customize the service with some preferences such as:
+Once the license has been selected, it is possible to customize the service with some options like additional users, support, custom domains, brands, etc. These options appers after selecting a plan, like shown in the figure below:
+
+![Instance license preferences](../.gitbook/assets/image%20%28154%29.png)
+
+These options are described in more detail in the following:
 
 * **Region**: Cloud providers provides servers in different geographic locations. This option allows to select the closest region to your business or project in order to minimize latency between the instance and the devices, users consuming information, etc. It is recommended to select the closest region to the project location.
 * **Hostname**: Enter the hostname for your private IoT instance. This hostname will always be accompanied by the subdomain ".thinger.io" to access your host. It is possible to add custom domains selecting the additional domains option.
@@ -47,7 +51,7 @@ Once the license has been selected, it is possible to customize the service with
 
 Ones everything has been configured, the checkout process is really simple, just introduce your billing email \(the one that will receive the invoices from our side\), that can also be the same as the "Admin Email". 
 
-![](../.gitbook/assets/image%20%28180%29.png)
+![](../.gitbook/assets/image%20%28181%29.png)
 
 Then include your billing address. VAT number will be required if the customer is in the European Union in order to calculate the right taxes and build the invoice.
 

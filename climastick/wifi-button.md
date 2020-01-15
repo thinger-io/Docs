@@ -110,7 +110,7 @@ In addition to the common configuration parameters, each connected device has to
 
 As soon as a valid WiFi configuration is made, the WiFi button will create a new device profile on this platform according to the auto-provisioning process setting its device credentials with the data that was included during the button configuration. This profile can be checked at Thinger.io platform workspace, by clicking on “devices” menu tab.
 
-![](../.gitbook/assets/image%20%28169%29.png)
+![](../.gitbook/assets/image%20%28170%29.png)
 
 Clicking on the device name it is possible to access the device dashboard that contains information related to the device connection and status, and provides a simple way to show device parameters.
 
