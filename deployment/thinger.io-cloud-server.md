@@ -35,13 +35,13 @@ The next table shows all different features that are provided by each license as
 
 Once the license has been selected, it is possible to customize the service with some preferences such as:
 
-* **Region**: each cloud provider has server farms in different locations around the world. This option allows you to select the closest in order to minimize latency or host the private instance on the same datacenter as the rest of the client's enterprise software.
-* **Hostname**: enter the hostname for your private IoT instance. This hostname will always be accompanied by the subdomain ".thinger.io" to access your host. You can set custom domains selecting the additional domains option.
-* **Admin Email**: this email address will be assigned for the administration of the private server. It will be the only one that will be able to register new users, domains, rebrandings, plugins etc.
-* **Additional users**: Every private instance always has one user account, but this option allows to increase the amount of accounts in order to share the server with other collaborators or customers. However, note that the server could be overloaded if a large number of user accounts with plugins is added, affecting the proper functioning of the instance.
-* **Extended Support**: This option is recommended in order to obtain Thinger.io engineers development support. It provides 24-48h response time, however all accounts can use the community discussion forum to obtain support from other community developers at: https://community.thinger.io
-* **Custom Domains**: It is the amount of different web domains that can be redirected to the same Private Instance in order to create multiple rebrandings.
-* **Custom Brands**: It is the amount of different console rebrandings that can be created over the same server. Each rebrand may have a different customization of colors, web-domain and logotypes.
+* **Region**: Cloud providers provides servers in different geographic locations. This option allows to select the closest region to your business or project in order to minimize latency between the instance and the devices, users consuming information, etc. It is recommended to select the closest region to the project location.
+* **Hostname**: Enter the hostname for your private IoT instance. This hostname will always be accompanied by the subdomain ".thinger.io" to access your host. It is possible to add custom domains selecting the additional domains option.
+* **Admin Email**: This is the email address that must be used when creating the Thinger.io account in the private instance deployed. It will be the main account with admin privileges, allowing to create \(if contracted\) new users, domains, brands, etc.
+* **Additional users**: This option allows to increase the amount of accounts \(in addition to the admin account\) in order to allow other users to log-in to your instance. It is possible to add as many accounts as required, however, a large user base will require a better host to support their databases, plugins, etc. 
+* **Extended Support**: This option is recommended in order to obtain Thinger.io engineers development support with a 24-48h response time. All accounts can use the [community discussion](https://community.thinger.io) forum to obtain support from other community developers.
+* **Custom Domains**: It is the amount of different web domains that can be redirected to the same Private Instance. The instance will automatically provision and renew SSL certificates to support the new defined domains. Domains are required for different brands, as they are associated to the domain name.
+* **Custom Brands**: It is the amount of different console brands that can be created over the same instance. In each brand it is possible to customize some accent colors, logos, copyrights, contact emails, title, etc. Notice that each brand requires a custom domain, as the customization is done for each domain name.
 
 ### 4. Checkout and payment options
 
