@@ -20,7 +20,7 @@ Note that each web console reband needs to be supported by an individual web dom
 
 Clicking into "Add Brand" button of the "Rebranding" section, allows creating a new branding profile. The process starts by introducing a web domain name, that will be the identificator for the brand profile:
 
-![](.gitbook/assets/image%20%28138%29.png)
+![](.gitbook/assets/image%20%28137%29.png)
 
 ### Adding Branding Details
 
@@ -79,17 +79,17 @@ Private Instances web-domain can be replaced with different custom web domains, 
 
 Pressing "Add Domain" button in the Domains List interface allows accessing to a domain creation form context, in which it is possible to introduce the new web domain for the instance and description as shown in the image below: 
 
-![](.gitbook/assets/image%20%28161%29.png)
+![](.gitbook/assets/image%20%28160%29.png)
 
 Before add the new web domain, it is necessary to verify the disponibility and create a secure certificate that will provide secure communications with the web console. To make this, press the "Verify Domain" button. 
 
-![](.gitbook/assets/image%20%28176%29.png)
+![](.gitbook/assets/image%20%28175%29.png)
 
 #### Redirecting the CNAME Entry 
 
 An important part of this process is to resolve the redirection between the new web domain and the private server original web domain by going to the domain administration service. 
 
-![](.gitbook/assets/image%20%28163%29.png)
+![](.gitbook/assets/image%20%28162%29.png)
 
 Onces the redirection has been made and the DNS service has propagated the A register, it is possible to verify the domain using the Domain Details button. 
 
@@ -117,7 +117,7 @@ Thinger.io Server Instances can support multiple user accounts that can be manag
 Note that each additional account increases the RAM occupation and CPU load, so it is important to supervise the remaining computational resources when creating new user accounts, specially when using Node-RED plugin.
 {% endhint %}
 
-![](.gitbook/assets/image%20%28130%29.png)
+![](.gitbook/assets/image%20%28129%29.png)
 
 First step to manage users network is clicking on the "User Accounts" tab of the main menu. This interface allows showing user accounts list and manage each profile individually as explained in the next sections.
 
@@ -125,7 +125,7 @@ First step to manage users network is clicking on the "User Accounts" tab of the
 
 Pressing "Add User" button of the user administration list opens a form context in which the new user parameters can be introduced:
 
-![](.gitbook/assets/image%20%28160%29.png)
+![](.gitbook/assets/image%20%28159%29.png)
 
 * **Username**: Account username, this parameter also works as user identificator. 
 * **Email**: needs to be a valid email account. Only emails introduced on this list can create a user account in order to prevent intruders.

@@ -151,7 +151,7 @@ Using the "Device Status Change" property of the Server Event Node, it is possib
 
 The next flow uses two Thinger.io Nodes, the first one is triggering the Device Disconnection Server Event that will throw a JSON formatted message with the device ID, the status and the timestamp of the change. The second Node allows calling the Endpoint profile to send the alert with the device information JSON attached so it is possible to custom the message to easily identify the problem. 
 
-![](../.gitbook/assets/image%20%28106%29.png)
+![](../.gitbook/assets/image%20%28105%29.png)
 
 This flow can be easily imported into your Node-RED workspace using the next JSON:
 
