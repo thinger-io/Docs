@@ -20,11 +20,11 @@ In the next sections it is explained how to create and configure the HTTP Device
 
 First step to work with this interface consist on creating the device profile at the "devices" main menu tab and clicking on "new device" button. Then, select "HTTP Device \(Sigfox, Lora, cURL\)" type and fill `Device ID` and `Description` slots as required.  
 
-![](../.gitbook/assets/image%20%28145%29.png)
+![](../.gitbook/assets/image%20%28146%29.png)
 
 Ones the profile has been created it is possible to found it at the devices list, then, clicking the device identificator will open the "device dashboard", which is an interface that show device status and connection information and also allows working with the callback configuration and properties. 
 
-![](../.gitbook/assets/image%20%28180%29.png)
+![](../.gitbook/assets/image%20%28181%29.png)
 
 However, when time this page is first accessed \(before making the first call to the REST API\) there won't be any information to show o it will have the same aspect as the previous image. Note that this interface contains two additional tabs: the "Callback" tab allows managing the device behavior and capacities, each of these features will be explained in the "[**Managing Callback Functionalities**](https://docs.thinger.io/hardware-devices/http-devices#managing-callback-functionalities)" section of this document.  On the other hand, the "Properties" tab allows to create and manage device properties, which are variables related with this device stored in Thinger.io Server, that can be edited, displayed, or forwarded to the device using callback menu functionalities.
 
@@ -38,7 +38,7 @@ It is necessary to obtain the HTTP request and the authorization that allows int
 
 1\) Going to `Callback / Settings` tab, check the "authorization" box. A bearer token will appear into this section.  
 
-![](../.gitbook/assets/image%20%28147%29.png)
+![](../.gitbook/assets/image%20%28148%29.png)
 
 2\) Then, going to `Callback/Overview` tab, an specification of the REST API that provides access to this device will be shown, ready to be copied into the program or HTTP request entry. 
 
@@ -90,7 +90,7 @@ This feature provides an easy way to select a property of this device in order t
 
 The device properties can also be shown and managed by just going to "Device Properties" tab of the device dashboard.  
 
-![](../.gitbook/assets/image%20%28161%29.png)
+![](../.gitbook/assets/image%20%28162%29.png)
 
 ### HTTP Response Data
 
@@ -118,7 +118,7 @@ This parameter allows to establish a device connection timeout in minutes, so th
 
 Finally it is necessary to introduce the API given in the "callback overview" section in the system or device, allowing to connect with the platform and start sending data. If everything is done correctly the device dashboard will start displaying information as shown in the image below:
 
-![](../.gitbook/assets/image%20%28111%29.png)
+![](../.gitbook/assets/image%20%28112%29.png)
 
 As there are different ways to make this integration, in this section it is explained how to properly implement the request over different supports.  
 
@@ -134,7 +134,7 @@ https://trincado.do.thinger.io/v3/users/jt/devices/Example_Device/callback/data?
 
 This services provide a useful way to test HTTP integrations in a simply way. It is only necessary to follow the next steps to configure a request:
 
-![](../.gitbook/assets/image%20%28181%29.png)
+![](../.gitbook/assets/image%20%28182%29.png)
 
 1. Select &lt;POST&gt; message type
 2. Introduce the device callback into the main textbox
