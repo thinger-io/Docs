@@ -88,11 +88,29 @@ Sometimes it can be useful to clear the bucket information without deleting the 
 
 ![](../.gitbook/assets/data-bucket-clear.png)
 
+Data bucket profiles can also be deleted from the data bucket list, by selecting the profiles to be deleted and pressing the red "Remove Bucket" button as shown in the image below:
+
+![](../.gitbook/assets/image%20%2854%29.png)
+
 ## Export Bucket Data
 
-It is possible to export all your stored information in different file formats, so you can process the data offline, like applying Artificial Intelligence, Business Analytics, Big Data, etc. In this way, you can access your bucket and configure the export process, like selecting the file type, or the export range. After a few minutes, you will receive an email with a download to your file \(valid for 3 months in the default cloud console\).
+It is possible to export all your stored information in different file formats, so you can process the data offline, like applying Artificial Intelligence, Business Analytics, Big Data, etc. In this way, you can access your bucket and configure the export process:
 
 ![](../.gitbook/assets/dowloadbucket.PNG)
+
+ The configurable parameters are:
+
+* **Data format:** To obtain CSV, ARFF or JSON format file
+* **Time format:**  Timestamp or ISO date format
+* **Export range:** This section allows downloading the complete data bucket or selecting a custom range. 
+
+Onces the export data range and format has been select, the system will create a download link that will be stored in the "Export List" section below. This links can be used to provide customers of custom data reports form the IoT data.
+
+![](../.gitbook/assets/image%20%2839%29.png)
+
+{% hint style="info" %}
+if traditional Thinger.io Server is used, you will receive an email after few minutes with a download to your file \(valid for 3 months in the default cloud console\).
+{% endhint %}
 
 ## 
 
