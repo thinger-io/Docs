@@ -180,7 +180,9 @@ This section compiles all the possible operating problems and the recommendation
 
 {% tabs %}
 {% tab title="Configure Access Token" %}
-
+{% hint style="warning" %}
+Sorry! This is work in progress
+{% endhint %}
 {% endtab %}
 
 {% tab title="Using an Endpoint" %}
