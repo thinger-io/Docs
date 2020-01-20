@@ -28,7 +28,7 @@ The next table shows the main different features that are provided by each licen
 
 ### 2.  Configure license
 
-Once the license has been selected, it is possible to customize the service with some options like additional users, support, custom domains, brands, etc. These options appears after selecting any plan \(Maker is not configurable\), like shown in the figure below:
+Once the license has been selected, it is possible to customize the service with some options like additional users, support, custom domains, brands, etc. These options appears after selecting any plan, like shown in the figure below:
 
 ![Instance license preferences](../.gitbook/assets/image%20%2899%29.png)
 
@@ -39,6 +39,10 @@ These options are described in more detail in the following:
 * **Extended Support**: This option is recommended in order to obtain Thinger.io engineers development support with a 24-48h response time. All accounts can use the [community discussion](https://community.thinger.io) forum to obtain support from other community developers.
 * **Custom Domains**: It is the amount of different web domains that can be redirected to the same Private Instance. The instance will automatically provision and renew SSL certificates to support the new defined domains. Domains are required for different brands, as they are associated to the domain name.
 * **Custom Brands**: It is the amount of different console brands that can be created over the same instance. In each brand it is possible to customize some accent colors, logos, copyrights, contact emails, title, etc. Notice that each brand requires a custom domain, as the customization is done for each domain name.
+
+{% hint style="warning" %}
+Note that maker plan is a limited freemium service that is not configurable and do not allows extended support selection. 
+{% endhint %}
 
 ### 3.  Checkout and payment options
 
