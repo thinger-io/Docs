@@ -2,11 +2,11 @@
 
 ## Subscribing and Deploying On-premise Instances
 
-This section describres the proccess to deploy a private Thinger.io On-premise instance within minutes by just accessing the [**Pricing Page**](https://pricing.thinger.io) \(On-premise section\) in the "PRICING" link from our [Web Home](https://thinger.io). Just follow the next steps:
+This section describes the process to deploy a private Thinger.io On-premise instance within minutes by just accessing the [**Pricing Page**](https://pricing.thinger.io) \(On-premise section\) in the "PRICING" link from our [Web Home](https://thinger.io). Just follow the next steps:
 
 ### 1. Select the right licence
 
-On-premise instances can be deployed with different licenses, depending on the project requriements, mainly in terms of platform features like rebrands, custom domains, additional suppport, plugins, etc. On-premise licenses starts for free with the Maker license, but limited in some advanced features enabled in the following tiers, most notably, custom domains with automatic SSL support, rebranding, plugins, multiple server accounts, multi-threadhing support, or extend the server capabilities with plugins like Node-Red. So, the first step is to select the required license, as shown in the image below:
+On-premise instances can be deployed with different licenses, depending on the project requirements, mainly in terms of platform features like rebrands, custom domains, additional support, plugins, etc. On-premise licenses starts for free with the Maker license, but limited in some advanced features enabled in the following tiers, most notably, custom domains with automatic SSL support, rebranding, plugins, multiple server accounts, multi-threading support, or extend the server capabilities with plugins like Node-Red. So, the first step is to select the required license, as shown in the image below:
 
 ![On-premise license selection](../.gitbook/assets/image%20%28106%29.png)
 
