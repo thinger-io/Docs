@@ -28,7 +28,7 @@ The next table shows the main different features that are provided by each licen
 
 ### 2.  Configure license
 
-Once the license has been selected, it is possible to customize the service with some options like additional users, support, custom domains, brands, etc. These options appers after selecting a plan, like shown in the figure below:
+Once the license has been selected, it is possible to customize the service with some options like additional users, support, custom domains, brands, etc. These options appears after selecting any plan \(Maker is not configurable\), like shown in the figure below:
 
 ![Instance license preferences](../.gitbook/assets/image%20%2899%29.png)
 
