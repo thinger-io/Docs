@@ -143,7 +143,7 @@ Use the interface tester to see if your code is correctly procesing the payloads
 
 ## Plugin Development Details
 
-![](../.gitbook/assets/image%20%28187%29.png)[Github source code](https://github.com/thinger-io/ttn-plugin)
+![](../.gitbook/assets/image%20%28192%29.png)[Github source code](https://github.com/thinger-io/ttn-plugin)
 
 ### Uplink Data Flow
 
@@ -236,11 +236,11 @@ The last step of this plugin is to call the device callback in Thinger.io. This 
 
 In this case, the plugin interacts with the platform over such REST interface, pushing data received from TTN, and processed by the custom uplink method. By default, the plugin initializes an HTTP device to write to a data bucket that is also automatically created. So, every message sent by a TTN device, will write finally write to a specific data bucket. As shown in the following picture:
 
-![HTTP Device created by the TTN Plugin](../.gitbook/assets/image%20%28125%29.png)
+![HTTP Device created by the TTN Plugin](../.gitbook/assets/image%20%28129%29.png)
 
 After the device callback is done, it will appear as a connected device, showing also its location if it was configured in the plugin options.
 
 ### Downlink Data Flow
 
-![The Things Network Downlink Flow Overview](../.gitbook/assets/image%20%28122%29.png)
+![The Things Network Downlink Flow Overview](../.gitbook/assets/image%20%28126%29.png)
 

@@ -75,7 +75,7 @@ Show raw data directly from a Bucket could be tricky when there is a lot of data
 
 The next image shows four different representations of the same dataset and time interval, aggregated using different algorithms:  
 
-![](../.gitbook/assets/image%20%28134%29.png)
+![](../.gitbook/assets/image%20%28138%29.png)
 
 {% hint style="warning" %}
 Note that Data Aggregation system is only available in **private server** instances with **InfluxDB** 
@@ -109,7 +109,7 @@ This image is representing an example in which the measured variable is reaching
 
 The last tab shows all the display options. This is probably the most customizable widget of Thinger.io Platform. It allows selecting a lot of different parameters as shown in the image below: 
 
-![](../.gitbook/assets/image%20%28167%29.png)
+![](../.gitbook/assets/image%20%28171%29.png)
 
 * **Display options:**
   * **Units**: Optional information that will display the variable unit, like ºC.
@@ -124,7 +124,7 @@ The last tab shows all the display options. This is probably the most customizab
 
 Using LED spots is a common way  to create simple graphical interfaces in electronic projects in order to represent system status, alerts, etc. This widget has been included in Thinger.io Platform with the same purpose, so it can be used to show binary status by changing its color, create alerts by setting blink behavior or show multiple data by including more than one color range in a kind of RGB simulation. 
 
-![](../.gitbook/assets/image%20%28181%29.png)
+![](../.gitbook/assets/image%20%28186%29.png)
 
 This widget can be configured in many different ways though the three steps form. first of all selecting "Led indicator" in the Widget menu tab, and then indicating:
 
@@ -263,17 +263,47 @@ The configurable parameters are the following:
 
 This widget allows creating custom data representation interfaces by programming it with standard web source code languages such as HTML, CSS, JS. Being also able to represent data from Thinger.io devices or data buckets or show data from third party sources into the same dashboard. 
 
-To start using the HTML widget, first step is configure the common parameters:
+To start using the HTML widget, first step is configure the common Thinger.io widget parameters, such as:
 
 * **Title**: Optional title for the widget. 
 * **Subtitle**: Optional subtitle for the widget.
 * **Background**: Optional color for the widget background \(defaults to white\).
 
-Then, selecting HTML widget type, it is possible to introduce the data source, that can be a manual value, a device resource or a data bucket. And finally, it is possible to define a display HTML source.
+Then, selecting HTML widget type, it is possible to introduce the data source, that can be a manual value, a [**Device Resource**](https://docs.thinger.io/coding#adding-resources) or a [**Data Bucket**](buckets.md). And finally, it is possible to define a display HTML source.
 
-#### From Snipped Code:
+#### From Snipped Code
 
-#### From File Storage:
+To create a basic widget with a simple code such as a data table,  a ready-to-paste script from any website, or any other easy integration. The source code can be wrote using the small text editor in the widget form. Note that this code will be executed in the browser's [**Node.JS**](https://nodejs.org/es/docs/) console and that the HTML body context has been defined previously so only should directly enter the elements you want to represent, as shown in the examples below:
+
+{% tabs %}
+{% tab title="Basic Code Sniped" %}
+![](../.gitbook/assets/image%20%2878%29.png)
+
+Note that the value specified in "data source" can be retrieved in the console by using {{value}} command
+{% endtab %}
+
+{% tab title="Widget Script" %}
+![](../.gitbook/assets/image%20%28123%29.png)
+
+Next script can be used as example to create an HTML widget with another weather forecast provider:
+
+```text
+<div id="c_c1374694634f9f99525990d7fe6508ae" class="ancho"></div><script type="text/javascript" src="https://www.eltiempo.es/widget/widget_loader/c1374694634f9f99525990d7fe6508ae"></script>
+```
+
+![](../.gitbook/assets/image%20%28185%29.png)
+{% endtab %}
+{% endtabs %}
+
+#### From File Storage: 
+
+For more complex developments over the HTML Widget where several source code files are required, it is possible to use  to use our [**File System**](https://docs.thinger.io/console/file-system). This allows the development of more complex interfaces that exploit all the representation capabilities of the browser such as 3D object representation, animated widgets, etc.
+
+
+
+{% hint style="info" %}
+This is work in progress, we will add more documentation soon. Sorry for the inconveniences 
+{% endhint %}
 
 ## Add a Control Widget
 
@@ -298,14 +328,14 @@ The configurable parameters are the following:
 
 This widgect has te posibility to be shown in two different appearances, that can be specified in the **Switch Style** parameter: **Switch** is the standard configuration with a little non-configurable switch, and **Button** which is an improved face that can be configured with different colors and icons. When this option is selected, next paremeters will be shown:
 
-![](../.gitbook/assets/image%20%28182%29.png)
+![](../.gitbook/assets/image%20%28187%29.png)
 
 * **On Color**: The color that will be displayed when the boolean value of this resource is true.
 * **Off Color**: The color that will be displayed when the boolean value of this reource is false.
 * **Icon**: This button is able to show a customizable icon from favicon library or any other icon library URL.
 * **Icon Color**: Icon color is also configurable with an hexadecimal value. Note that there are different color options for both button status, so you can customize it as you want.
 
-  ![](../.gitbook/assets/image%20%28115%29.png)
+  ![](../.gitbook/assets/image%20%28117%29.png)
 
 ### Slider
 
