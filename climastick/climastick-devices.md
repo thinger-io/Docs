@@ -34,6 +34,10 @@ This board is a complete Internet of Things development kit, that integrates WiF
 * Industry 4.0: It can be used in industrial environments for predictive maintenance, as it is possible to measure vibrations, temperature, and humidity in real-time and determine if the sensed parameters are between normal operation thresholds.
 * Weather Station: This device can be used as a micro weather station. It can be powered easily from a battery and a solar panel, and collaborate with weather platforms, or just store your information in the Thinger.io cloud.
 
+{% hint style="info" %}
+To obtain high accurate weather variables, the PCB processor must be hibernated using "ESP.deepsleep\(\)" instruction.  
+{% endhint %}
+
 ## Configure Environment
 
 This section covers how to setup your computer to start working with the ClimaStick device.
@@ -293,7 +297,13 @@ This section covers different considerations while using the board.
 * ⚠ If you are using a different battery, plug it on VIN connector.
 * ⚠ If cell voltage drops under 3.6V, an automatic battery protection circuit will power off the system.
 
-## Device Documents
+## Device Files
+
+### Arduino Library
+
+Click below to download lastest ClimaStick.h library:
+
+{% file src="../.gitbook/assets/climastickv2\_5.zip" %}
 
 ### Datasheets
 
