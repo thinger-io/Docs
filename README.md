@@ -101,15 +101,15 @@ Thinger.io provides three essential tools to work with devices data that are the
 
 {% tabs %}
 {% tab title="Data Buckets" %}
-To **store** **device data** in an scalable way, programming different sampling intervals or catching streams
+To **store** **device data** in an scalable way, programming different sampling intervals or recording events raised by devices.
 {% endtab %}
 
 {% tab title="Dashboards" %}
-Panels with **customizable widgets** that can be created within minutes using drag'n drop technology, to show real time and stored data
+Panels with **customizable widgets** that can be created within minutes using drag'n drop technology, to show real-time and stored data.
 {% endtab %}
 
 {% tab title="Endpoints" %}
-
+Extend the devices interoperatibility by using endpoints to interact with other services like IFTTT, custom Web Services, emails, or call other devices.
 {% endtab %}
 
 {% tab title="Access Tockens" %}
@@ -119,7 +119,7 @@ Dashboards, Data buckets or Device resources can be easily shared with third par
 
 ### 5.Extend Thinger.io
 
-Thinger.io platform can be complemented with many different Internet services using **Plugins** that can be found and deployed within seconds Just going to our marketplace and selecting it
+Thinger.io platform can be complemented with many different Internet services using **Plugins** that can be found and deployed within seconds Just going to our marketplace and selecting it.
 
 {% page-ref page="plugins/" %}
 
