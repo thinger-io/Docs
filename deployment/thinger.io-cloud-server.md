@@ -61,21 +61,25 @@ Finally, it is necessary to select the payment method between Credit Card or Dir
 
 ## Steps After Contracting
 
-The deployment process delays few minutes. As soon as it has been completed a confirmation mail will be sent to the "Admin Email", meaning that the server is completely ready. To start working with it, just follow the next steps:
+The deployment process delays few minutes. As soon as it has been completed, a confirmation email will be sent to the `Admin Email`configured in the checkout process, meaning that the server is completely ready to be used. To start working with it, just follow the next steps:
 
 ### First Login
 
-1\) Access the server by writing the selected web-domain in a web browser, for example "acme.do.thinger.io".  This allows accessing the login page of the private server instance.   
+1. Access the server by writing the configured domain in a web browser, for example: [https://acme.do.thinger.io](https://acme.do.thinger.io). This step should show you the Thinger.io login screen.
+2. Note that this server has never been accessed before, and it is a completely isolated instance so there is not any user account created. Then, it is necessary to click on `Create an account`button, and fill the form to create a new user profile using the `Admin Email` address \(any other address will not be authorized to sign up\).
+3. After creating the new account it is possible to access the new server. It is not necessary to confirm the mail address.
 
-2\) Note that this server has never been accessed before, and it is a completely isolated instance so there is not any user account created, so it is necessary to click on "Create account" button, and fill the form to create a new user profile using the "Admin Email" address \(any other address will obtain an unauthorized message\).
+### Device Connection
 
-3\) After creating the new account it is possible to access the new server. It is not necessary to confirm the mail address. 
+When working with a private Thinger.io Cloud Instance, it is necessary to point your devices to the newly created hostname. If you are using the [Arduino](../devices/arduino.md) or [Linux](../devices/linux.md) client libraries, i.e., for Arduino, ESP8266, ESP32, Raspberry Pi, etc., you should add a definition on top of your code to point to your host. So, modify your sketch like this:
 
-### First Device Connection
+```text
+#define THINGER_SERVER "acme.do.thinger.io"
 
-When working with a private Thinger.io Server Instance, it is necessary to modify the devices server hostname in order to introduce the right one. To make the redirection the next code line needs to be introduced on the top of the devices source code: 
+// the rest of your code goes here
+```
 
-`#define THINGER_SERVER`
-
-Not doing this will cause the device to try to establish a connection to the public Thinger.io Platform Community Server instead of working against the new private server.
+{% hint style="info" %}
+If this the host definition is not provided, your devices will try to connect with the public instance. 
+{% endhint %}
 
