@@ -59,7 +59,7 @@ After introducing the billing email, it is necessary to set the billing address.
 
 Finally, it is necessary to select the payment method between Credit Card or Direct Debit, that allows the domiciliation of the payment with SEPA tansferences. Once the payment process is finished, Thinger.io customer management system will automatically configure the cloud host and deploy the private server instance. 
 
-## Steps After Contracting
+## Steps After Cloud Deployment
 
 The deployment process delays few minutes. As soon as it has been completed, a confirmation email will be sent to the `Admin Email`configured in the checkout process, meaning that the server is completely ready to be used. To start working with it, just follow the next steps:
 
