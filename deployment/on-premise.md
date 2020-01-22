@@ -41,7 +41,7 @@ These options are described in more detail in the following:
 * **Custom Brands**: It is the amount of different console brands that can be created over the same instance. In each brand it is possible to customize some accent colors, logos, copyrights, contact emails, title, etc. Notice that each brand requires a custom domain, as the customization is done for each domain name.
 
 {% hint style="warning" %}
-Note that Maker Plan is a limited freemium service that is not configurable and do not allow adding extended support. 
+Note that maker plan is a limited freemium service that is not configurable and do not allows extended support selection. 
 {% endhint %}
 
 ### 3.  Checkout and payment options
@@ -58,13 +58,13 @@ Finally, it is necessary to select the payment method between Credit Card or Dir
 
 ### 4.  On-premise install
 
-Once you have received the license token by email, it is possible to easily deploy Thinger.io on your host with a few commands. Before starting this guide, please, install [Docker Engine](https://docs.docker.com/install/) and [Docker Compose](https://docs.docker.com/compose/install/) in your computer or server. 
+Once you have received the license token, it is possible to easily deploy Thinger.io on your host with a few commands. Before starting this guide, please, [install Docker Engine](https://docs.docker.com/install/) in your computer or server. 
 
 {% hint style="success" %}
-Install [Docker Engine](https://docs.docker.com/install/) and [Docker Compose ](https://docs.docker.com/compose/install/)before following this guide.
+[Install Docker Engine](https://docs.docker.com/install/) before following this guide.
 {% endhint %}
 
-This guide assumes you are installing Thinger.io on a fresh Linux host with Docker support, as it will run databases like `MongoDB` and `InfluxDB`, and will start listening on several ports: `80`, `443`, `25200`, `25202`, `1883`, and`8883`. It will also create a root directory in `/data` where all the Thinger.io data and database information will be stored.
+This guide assumes you are installing Thinger.io on a fresh Linux host with Docker support, as it will run databases like MongoDB and InfluxDB, and will start listening on several ports: `80`, `443`, `25200`, `25202`, `1883`, and`8883`. It will also create a root directory in `/data` where all the Thinger.io related information will be stored.
 
 To start, just launch the following command that will download the `docker-compose` file associated to your license:
 
@@ -189,7 +189,7 @@ services:
 ```
 {% endcode %}
 
-Then, if everything seems to be correct, just run the following command to start all the processes defined in `docker-compose.yml` and run them in dettached mode with `-d` option:
+Then, if everything seems to be correct, just run the following command to start all the process:
 
 ```yaml
 docker-compose up -d
@@ -280,28 +280,4 @@ The latest versions of Ubuntu comes with ufw \(the default firewall configuratio
 {% endhint %}
 
 
-
-## Steps After On-premise Deployment
-
-To start working with your on-premise installation, just follow the next steps:
-
-### First Login
-
-1. Access the server by writing the local IP address of your host, for example: [https://1](https://acme.do.thinger.io)92.168.1.100. This step should show the Thinger.io login screen after accepting to use a self-signed certificate \(the browser will ask you about a security issue with the certificate\).
-2. Note that this server has never been accessed before, and it is a completely isolated instance so there is not any user account created. Then, it is necessary to click on `Create an account`button, and fill the form to create a new user profile using the `Admin Email` address provided in the license configuration \(any other address will not be authorized to sign up\).
-3. After creating the new account it is possible to access the new server. It is not necessary to confirm the mail address.
-
-### Device Connection
-
-When working with a private Thinger.io instance, it is necessary to point your devices to the newly created server. If you are using the [Arduino](../devices/arduino.md) or [Linux](../devices/linux.md) client libraries, i.e., for Arduino, ESP8266, ESP32, Raspberry Pi, etc., you should add a definition on top of your code to point to your host. So, modify your sketch like this:
-
-```text
-#define THINGER_SERVER "192.168.1.100"
-
-// the rest of your code goes here
-```
-
-{% hint style="info" %}
-If this host definition is not provided, your devices will try to connect with the public instance. 
-{% endhint %}
 
