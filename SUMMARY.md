@@ -24,8 +24,8 @@
   * [On-Premise](deployment/on-premise.md)
 * [SERVER ADMINISTRATION](server-configuration.md)
 * [SERVER API](api.md)
-* [THINGER.IO HARDWARE](climastick/README.md)
-  * [ClimaStick](climastick/climastick-devices.md)
-  * [WiFi Button](climastick/wifi-button.md)
+* [THINGER.IO HARDWARE](hardware/README.md)
+  * [ClimaStick](hardware/climastick-devices.md)
+  * [WiFi Button](hardware/wifi-button.md)
 * [MOBILE APP](mobile.md)
 
