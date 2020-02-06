@@ -67,7 +67,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJTbWFydEV2ZXJ5dGhpbmciLCJ1c3IiOiJ
 
 ## Sigfox Cloud Configuration
 
-At this moment, we have configured everything we need to receive data on our Thinger.io bucket. The next step is to configure the Sigfox Backend for pushing data to it, using our token identifier, and the token we have generated.
+After making all the configuration that is required to get Thinger.io ready for receiving data, the next step is to configure the Sigfox Backend for pushing data to it, using our token identifier, and the token we have generated.
 
 ### Creating Sigfox Callback
 

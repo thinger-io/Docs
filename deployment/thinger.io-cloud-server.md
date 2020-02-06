@@ -8,13 +8,13 @@ This section describres the proccess to deploy a private Thinger.io Cloud instan
 
 Private instances can be deployed in different cloud providers like Digital Ocean, Amazon Web Services, Google Cloud, or Azure in different availability zones. In that order, if our customer has already been using any of these providers for their company cloud infrastructure, it is possible to run Thinger.io Private server in the same location. 
 
-![Cloud provider selection between Digital Ocean, Amazon Web Services, Google Cloud and Azure](../.gitbook/assets/image%20%28140%29.png)
+![Cloud provider selection between Digital Ocean, Amazon Web Services, Google Cloud and Azure](../.gitbook/assets/image%20%28145%29.png)
 
 ### 2. Select a license
 
 Private cloud instances can be deployed with different licenses, depending on the project requriements, like host performance, bandwidth; or platform features like rebrands, custom domains, additional suppport,  plugins, etc. Once the cloud provider is selected, then it is necessary to select required license, as shown in the image below:
 
-![](../.gitbook/assets/image%20%28101%29.png)
+![](../.gitbook/assets/image%20%28106%29.png)
 
 This pricing includes the software license and all cloud expenses. Note that it is possible to select monthly or yearly license with a great discount. 
 
@@ -35,7 +35,7 @@ The next table shows all different features that are provided by each license as
 
 Once the license has been selected, it is possible to customize the service with some options like additional users, support, custom domains, brands, etc. These options appers after selecting a plan, like shown in the figure below:
 
-![Instance license preferences](../.gitbook/assets/image%20%28162%29.png)
+![Instance license preferences](../.gitbook/assets/image%20%28168%29.png)
 
 These options are described in more detail in the following:
 
@@ -51,11 +51,11 @@ These options are described in more detail in the following:
 
 After configuring the selected license, the checkout process is really simple, just click on the "Deploy Instance" button, and wait for the checkout pop-up. In the new form, it is necessary to introduce your billing email \(it can be different from the admin email\) where the invoices will be sent: 
 
-![Billing email](../.gitbook/assets/image%20%28190%29.png)
+![Billing email](../.gitbook/assets/image%20%28197%29.png)
 
 After introducing the billing email, it is necessary to set the billing address. It is possible to set a VAT number if you are a registered company from the European Union in order to calculate the right taxes and build the invoice.
 
-![Billing address configuration](../.gitbook/assets/image%20%2893%29.png)
+![Billing address configuration](../.gitbook/assets/image%20%2898%29.png)
 
 Finally, it is necessary to select the payment method between Credit Card or Direct Debit, that allows the domiciliation of the payment with SEPA tansferences. Once the payment process is finished, Thinger.io customer management system will automatically configure the cloud host and deploy the private server instance. 
 
