@@ -20,13 +20,13 @@ Note that each web console reband needs to be supported by an individual web dom
 
 Clicking into "Add Brand" button of the "Rebranding" section, allows creating a new branding profile. The process starts by introducing a web domain name, that will be the identificator for the brand profile:
 
-![](.gitbook/assets/image%20%28149%29.png)
+![](.gitbook/assets/image%20%28153%29.png)
 
 ### Adding Branding Details
 
 If the Domain Name is valid, the form context will expands allowing to complete the branding details sections by editing the standard thinger.io values:
 
-![](.gitbook/assets/image%20%2817%29.png)
+![](.gitbook/assets/image%20%2820%29.png)
 
 All the next elements are non-mandatory, so can be left empty and the system will remove their buttons from the main menu:
 
@@ -43,7 +43,7 @@ All the next elements are non-mandatory, so can be left empty and the system wil
 
 What really makes the difference when creating a rebranding is the use of custom logotypes. The second section of the branding editor allows changing each web console logotype separately. To obtain nice results, it is important to take care about the background color of each logotype in order to obtain enough contrast.
 
-![](.gitbook/assets/image%20%2886%29.png)
+![](.gitbook/assets/image%20%2889%29.png)
 
 {% hint style="info" %}
 Logotypes needs to be introduced in SVG or PNG file format with transparent background 
@@ -53,7 +53,7 @@ Logotypes needs to be introduced in SVG or PNG file format with transparent back
 
 The top bar has also a big impact into the website aspect. The branding menu allows changing it aspect in two ways: the Top Bar Color and the text color:
 
-![](.gitbook/assets/image%20%2866%29.png)
+![](.gitbook/assets/image%20%2869%29.png)
 
 It is important also to take care about selected colors in order to obtain good contrast between the texts and background. 
 
@@ -61,7 +61,7 @@ It is important also to take care about selected colors in order to obtain good 
 
 When the Console Rebranding profile is finished, a new entry will appear into the rebranding administration list as shown in the image below:
 
-![](.gitbook/assets/image.png)
+![](.gitbook/assets/image%20%281%29.png)
 
 It is possible to access the configuration form and edit all parameters by clicking into the brand profile identificator, which is the associated web domain.
 
@@ -69,7 +69,7 @@ It is possible to access the configuration form and edit all parameters by click
 
 A rebranding profile can be easily deleted just selecting it in the Brand List and clicking into the red "Remove Brand" button.
 
-![](.gitbook/assets/image%20%2884%29.png)
+![](.gitbook/assets/image%20%2887%29.png)
 
 ## Custom Web Domain 
 
@@ -79,21 +79,21 @@ Private Instances web-domain can be replaced with different custom web domains, 
 
 Pressing "Add Domain" button in the Domains List interface allows accessing to a domain creation form context, in which it is possible to introduce the new web domain for the instance and description as shown in the image below: 
 
-![](.gitbook/assets/image%20%28174%29.png)
+![](.gitbook/assets/image%20%28180%29.png)
 
 Before add the new web domain, it is necessary to verify the disponibility and create a secure certificate that will provide secure communications with the web console. To make this, press the "Verify Domain" button. 
 
-![](.gitbook/assets/image%20%28189%29.png)
+![](.gitbook/assets/image%20%28196%29.png)
 
 #### Redirecting the CNAME Entry 
 
 An important part of this process is to resolve the redirection between the new web domain and the private server original web domain by going to the domain administration service. 
 
-![](.gitbook/assets/image%20%28176%29.png)
+![](.gitbook/assets/image%20%28182%29.png)
 
 Onces the redirection has been made and the DNS service has propagated the A register, it is possible to verify the domain using the Domain Details button. 
 
-![](.gitbook/assets/image%20%2838%29.png)
+![](.gitbook/assets/image%20%2841%29.png)
 
 After this process the domain will be ready to be used in a rebranding profile, allowing users to access the private instance with the custom URL.
 
@@ -105,7 +105,7 @@ In the Domain List, clicking over the domain name allows opening the web domain 
 
 Any Web Console profile can be easily deleted just selecting it in the Domain List and clicking into the red "Remove Domain" button.
 
-![](.gitbook/assets/image%20%2888%29.png)
+![](.gitbook/assets/image%20%2891%29.png)
 
 Note that if a web domain is associated to a web console rebranding, removing it will prevent accessing to the console.  
 
@@ -117,7 +117,7 @@ Thinger.io Server Instances can support multiple user accounts that can be manag
 Note that each additional account increases the RAM occupation and CPU load, so it is important to supervise the remaining computational resources when creating new user accounts, specially when using Node-RED plugin.
 {% endhint %}
 
-![](.gitbook/assets/image%20%28141%29.png)
+![](.gitbook/assets/image%20%28144%29.png)
 
 First step to manage users network is clicking on the "User Accounts" tab of the main menu. This interface allows showing user accounts list and manage each profile individually as explained in the next sections.
 
@@ -125,7 +125,7 @@ First step to manage users network is clicking on the "User Accounts" tab of the
 
 Pressing "Add User" button of the user administration list opens a form context in which the new user parameters can be introduced:
 
-![](.gitbook/assets/image%20%28173%29.png)
+![](.gitbook/assets/image%20%28179%29.png)
 
 * **Username**: Account username, this parameter also works as user identificator. 
 * **Email**: needs to be a valid email account. Only emails introduced on this list can create a user account in order to prevent intruders.
@@ -139,7 +139,7 @@ When the form is completed, a new user profile will be added to the IoT server b
 
 The amount of user accounts that can be created in one instance is defined during the contracting and deployment of the server. If this value is reached \(or if no additional user account was contracted\) an error message will appear as shown in the image below:
 
-![](.gitbook/assets/image%20%2842%29.png)
+![](.gitbook/assets/image%20%2845%29.png)
 
 This threshold can be upgraded by going to the Subscriptions Management System, that can be accessed using the Admin Email Account at [**this link**](https://thinger.chargebeeportal.com). 
 
@@ -147,7 +147,7 @@ This threshold can be upgraded by going to the Subscriptions Management System, 
 
 User accounts can also be deleted from the Server Instance, just selecting the checkbox in the left side of the user account profile and clicking the "Remove User" button. 
 
-![](.gitbook/assets/image%20%2895%29.png)
+![](.gitbook/assets/image%20%2898%29.png)
 
 {% hint style="danger" %}
 Note that, when a user account is removed, all its IoT devices, buckets, configurations and personal information will be deleted and it won't be possible to restore them.
