@@ -132,7 +132,7 @@ Use the interface tester to see if your code is correctly procesing the payloads
 
 After getting Thinger.io Plugin ready for receiving data, the next step is to configure the Sigfox Backend for pushing messages on it. This process has been simplified by the "Sigfox Integration" section of the plugin settings menu, that automatically builds the **HTTP query** and the **Authorization token** that needs to be included into Sigfox Callbacks Manager:
 
-![](../.gitbook/assets/image%20%28175%29.png)
+![](../.gitbook/assets/image%20%28176%29.png)
 
 Note that Sigfox Cloud provides three different API, depending on the kind of interaction that it's going to be created, Thinger.io Platform allows integrating with all of them: Uplink, Advanced Data and Downlink callback type. Each callback configuration can be created to work with a single device or over all the devices that belongs to the same Device Type.   
 
@@ -175,7 +175,7 @@ congratulations now you can retrieve data from all your Sigfox devices into Thin
 
 As these devices are not real-time connected to the platform, it is hard to know if everything is running well in the long term, specially in large devices networks. But thanks to the timeout feature that is configurable using the "device connection timeout" of the plugin callback configuration menu, it is possible to know if a device is sending data in proper time frame or if otherwise it has stopped working  due to any problem by checking the "device status" that is available at its dashboard.  
 
-![Checking Sigfox device status and location with Thinger.io](../.gitbook/assets/image%20%28190%29.png)
+![Checking Sigfox device status and location with Thinger.io](../.gitbook/assets/image%20%28191%29.png)
 
 It is also possible to check the status of a large amount of devices from the device list, but note that this page is not showing real-time data so it is necessary to refresh it to know the current status.  
 
@@ -197,7 +197,7 @@ Thinger.io is part of a large ecosystem of technologies and platforms that enabl
 
 at thinger.io we continue to work to extend the platform's integration capabilities with technologies that can help create more advanced IoT projects in the easiest way. We have other plugins such as NodeRED that allow working with IoT data in almost unlimited ways, such as creating alerts on the data, geofencing, reporting, etc.
 
-![](../.gitbook/assets/image%20%28162%29.png)
+![](../.gitbook/assets/image%20%28163%29.png)
 
 ## Plugin Development Details
 
@@ -205,7 +205,7 @@ at thinger.io we continue to work to extend the platform's integration capabilit
 
 In this section it is described how the uplink data flow works, from its source in the Sigfox network, to its final destination in Thinger.io.
 
-![](../.gitbook/assets/image%20%28205%29.png)
+![](../.gitbook/assets/image%20%28206%29.png)
 
 In the following subsections are described the elements shown in the figure.
 

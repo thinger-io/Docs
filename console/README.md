@@ -18,7 +18,7 @@ The first step to start an IoT project in Thinger.io \(except for not connected 
 
 To register a new device, once you have been logged in your console dashboard, please go to the **Devices** section that appears in the left menu.
 
-![](../.gitbook/assets/image%20%28170%29.png)
+![](../.gitbook/assets/image%20%28171%29.png)
 
 This section will list your registered devices and will show some information about its connection. Something similar to the following picture.
 
@@ -406,7 +406,7 @@ Show raw data directly from a Bucket could be tricky when there is a lot of data
 
 The next image shows four different representations of the same dataset and time interval, aggregated using different algorithms:  
 
-![](../.gitbook/assets/image%20%28146%29.png)
+![](../.gitbook/assets/image%20%28147%29.png)
 
 {% hint style="warning" %}
 Note that Data Aggregation system is only available in **private server** instances with **InfluxDB** 
@@ -440,7 +440,7 @@ This image is representing an example in which the measured variable is reaching
 
 The last tab shows all the display options. This is probably the most customizable widget of Thinger.io Platform. It allows selecting a lot of different parameters as shown in the image below: 
 
-![](../.gitbook/assets/image%20%28184%29.png)
+![](../.gitbook/assets/image%20%28185%29.png)
 
 * **Display options:**
   * **Units**: Optional information that will display the variable unit, like ºC.
@@ -455,7 +455,7 @@ The last tab shows all the display options. This is probably the most customizab
 
 Using LED spots is a common way  to create simple graphical interfaces in electronic projects in order to represent system status, alerts, etc. This widget has been included in Thinger.io Platform with the same purpose, so it can be used to show binary status by changing its color, create alerts by setting blink behavior or show multiple data by including more than one color range in a kind of RGB simulation. 
 
-![](../.gitbook/assets/image%20%28200%29.png)
+![](../.gitbook/assets/image%20%28201%29.png)
 
 This widget can be configured in many different ways though the three steps form. first of all selecting "Led indicator" in the Widget menu tab, and then indicating:
 
@@ -613,7 +613,7 @@ The configurable parameters are the following:
 
 This widgect has te posibility to be shown in two different appearances, that can be specified in the **Switch Style** parameter: **Switch** is the standard configuration with a little non-configurable switch, and **Button** which is an improved face that can be configured with different colors and icons. When this option is selected, next paremeters will be shown:
 
-![](../.gitbook/assets/image%20%28201%29.png)
+![](../.gitbook/assets/image%20%28202%29.png)
 
 * **On Color**: The color that will be displayed when the boolean value of this resource is true.
 * **Off Color**: The color that will be displayed when the boolean value of this reource is false.
@@ -749,7 +749,7 @@ Onces the form is completed, pressing the "Add Storage" button will create a new
 
 The storage explorer is a complete file management tool ready to upload, modify and remove documents from the file system. Its graphical interface is constituted by three sections: 
 
-![](../.gitbook/assets/image%20%28207%29.png)
+![](../.gitbook/assets/image%20%28208%29.png)
 
 * Top bar contains logotypes with different controls
   * **Refresh**: If any changes have been made to the file system from a source other than this terminal, the refresh button allows you to update the status of the documents.
@@ -770,7 +770,7 @@ Thinger.io's file explorer has a upload manager that can be accessed by pressing
 
 The storage explorer contains a navigator in which the data hierarchy is displayed. Each file is represented under it's hierarchy context. an enhanced text editor is also included, allowing yo show and modify files in the cloud.  
 
-![](../.gitbook/assets/image%20%28142%29.png)
+![](../.gitbook/assets/image%20%28143%29.png)
 
 ## Access Tokens
 

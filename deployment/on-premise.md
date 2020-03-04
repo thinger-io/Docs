@@ -6,9 +6,9 @@ This section describes the process to deploy a private Thinger.io On-premise ins
 
 ### 1. Select the right licence
 
-On-premise instances can be deployed with different licenses, depending on the project requirements, mainly in terms of platform features like rebrands, custom domains, additional support, plugins, etc. On-premise licenses starts for free with the Maker license, but limited in some advanced features enabled in the following tiers, most notably, custom domains with automatic SSL support, rebranding, plugins, multiple server accounts, multi-threading support, or extend the server capabilities with plugins like Node-Red. So, the first step is to select the required license, as shown in the image below:
+On-premise instances can be deployed with different licenses, depending on the project requirements, mainly in terms of platform features like rebrands, custom domains, additional support, plugins, etc. On-premise licenses starts from free during first month with the Maker license \(4,95€/mo after\), which is limited in some advanced features, most notably, custom domains with automatic SSL support, rebranding, plugins, multiple server accounts, multi-threading support, or extend the server capabilities with plugins like Node-Red. So, the first step is to select the required license, as shown in the image below:
 
-![On-premise license selection](../.gitbook/assets/image%20%28116%29.png)
+![](../.gitbook/assets/image%20%28127%29.png)
 
 This pricing includes the software license to deploy an on-premise instance. Note that it is possible to select monthly or yearly license with a great discount. 
 
@@ -48,7 +48,7 @@ Note that Maker Plan is a limited freemium service that is not configurable and 
 
 After configuring the selected license, the checkout process is really simple, just click on the "Deploy Instance" button, and wait for the checkout pop-up. In the new form, it is necessary to introduce your billing email \(it can be different from the admin email\) where the invoices \(if subscribed to a paid plan\) will be sent:
 
-![Billing email](../.gitbook/assets/image%20%28204%29.png)
+![Billing email](../.gitbook/assets/image%20%28205%29.png)
 
 After introducing the billing email, it is necessary to set the billing address. It is possible to set a VAT number if you are a registered company from the European Union in order to calculate the right taxes and build the invoice.
 
