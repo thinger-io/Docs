@@ -8,7 +8,7 @@ Node-RED is an Open Source project created by IBM to provide the Rule Engines ma
 
 This technology begins especially useful for IoT projects, to process and analyze data or create rules to automate behaviors in response to events produced by the IoT devices measures. It can also be used as an MQTT broker or to show data in customizable dashboards. However, its greatest potential is obtained when used in combination with an IoT platform like [Thinger.io](https://thinger.io/), leaving one in charge of data acquisition, storage, and device management and the other one for processing, automation, etc.
 
-![Thinger.io web console with Node-RED plugin and ad-hoc nodes](../.gitbook/assets/image%20%28103%29.png)
+![Thinger.io web console with Node-RED plugin and ad-hoc nodes](../.gitbook/assets/image%20%28104%29.png)
 
 ## Thinger.io and Node-RED integration 
 
@@ -145,7 +145,7 @@ Using the "Device Status Change" property of the Server Event Node, it is possib
 
 The next flow uses two Thinger.io Nodes, the first one is triggering the Device Disconnection Server Event that will throw a JSON formatted message with the device ID, the status and the timestamp of the change. The second Node allows calling the Endpoint profile to send the alert with the device information JSON attached so it is possible to custom the message to easily identify the problem. 
 
-![](../.gitbook/assets/image%20%28118%29.png)
+![](../.gitbook/assets/image%20%28119%29.png)
 
 This flow can be easily imported into your Node-RED workspace using the next JSON:
 
@@ -163,7 +163,7 @@ MQTT is an extended communication protocol  in IoT that works on top of the TCP/
 [Learn how to work with Thinger.io HTTP device callback here](../devices/http-devices.md)
 {% endhint %}
 
-![MQTT to Thinger.io interface flow](../.gitbook/assets/image%20%2826%29.png)
+![MQTT to Thinger.io interface flow](../.gitbook/assets/image%20%2827%29.png)
 
 This flow can be easily imported into your Node-RED workspace using the next JSON:
 
@@ -177,7 +177,7 @@ Note that his is an easy example that only retrieves data from just one MQTT dev
 {% tab title="GPS Geofences" %}
 Geofencing is an interesting IoT use case, with many applications in asset management, fleets or package tracking. The next flow shows how to monitor the location of any device to create an alert when it leaves an area specified with a Geofence Node.  
 
-![](../.gitbook/assets/image%20%28111%29.png)
+![](../.gitbook/assets/image%20%28112%29.png)
 
 Creating this integration with the "device\_location" property, it is possible to integrate any kind of device including Thinger.io Software Clients, Sigfox, TTN or even HTTP devices in a very simple way.
 
@@ -195,9 +195,25 @@ This flow can be easily imported into your Node-RED workspace using the next JSO
 {% endtab %}
 
 {% tab title="Modify Incoming data" %}
-{% hint style="danger" %}
-This is work in progress, sorry about the inconveniences 
-{% endhint %}
+In some situations it is required to change the unit or metric of any variable, it is now possible to make this transformations before store data in a data bucket by use this Node-RED flow:
+
+![](../.gitbook/assets/image%20%28165%29.png)
+
+ The configuration is quite simple, fist node retrieves the measurement of any device to be modified by the "function" node, that contains the codification that has been included below, and finally the "bucket write" node allows storing the transformed data. 
+
+the codification of the function node is:
+
+```text
+msg.payload = {"KW":msg.payload.payload.wats/1000};
+msg.topic=msg.payload.device;
+return msg;
+```
+
+ the next json contains this flow in order to be imported:
+
+```text
+[{"id":"5f747490.ef8edc","type":"tab","label":"Flow 3","disabled":false,"info":""},{"id":"d74a9249.4e878","type":"server-events","z":"5f747490.ef8edc","name":"","event":"device_callback_call","bucket":"","device":"","endpoint":"","state":"","server":"285f7166.a811fe","x":157.66667556762695,"y":163.66667556762695,"wires":[["b126ed34.980eb"]]},{"id":"b126ed34.980eb","type":"function","z":"5f747490.ef8edc","name":"W to KW","func":"msg.payload = {\"KW\":msg.payload.payload.wats/1000};\nmsg.topic=msg.payload.device;\nreturn msg;","outputs":1,"noerr":0,"x":377.6667060852051,"y":163.66667652130127,"wires":[["3b91c2f8.827cbe"]]},{"id":"3b91c2f8.827cbe","type":"bucket-write","z":"5f747490.ef8edc","name":"","bucket":"","x":581.6000556945801,"y":162.00000286102295,"wires":[]},{"id":"285f7166.a811fe","type":"thinger-server","z":"","host":"$(THINGER_HOST)","name":"","ssl":true}]
+```
 {% endtab %}
 {% endtabs %}
 
