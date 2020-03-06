@@ -6,27 +6,22 @@ description: Plugin to improve the integration of Node-RED into Thinger.io
 
 Node-RED is an Open Source project created by IBM to provide the Rule Engines market of a simple but powerful framework with an easy to use graphical programing interface, and a huge users community that has made more than 2.000 contributions. 
 
-![](../.gitbook/assets/image%20%28103%29.png)
+This technology begins especially useful for IoT projects, to process and analyze data or create rules to automate behaviors in response to events produced by the IoT devices measures. It can also be used as an MQTT broker or to show data in customizable dashboards. However, its greatest potential is obtained when used in combination with an IoT platform like [Thinger.io](https://thinger.io/), leaving one in charge of data acquisition, storage, and device management and the other one for processing, automation, etc.
+
+![Thinger.io web console with Node-RED plugin and ad-hoc nodes](../.gitbook/assets/image%20%28103%29.png)
+
+## Thinger.io and Node-RED integration 
+
+With the objective of reinforce Thinger.io Platform capacities and flexibility, we have created some resources that simplifies the integration Node-RED flows with our IoT Platform features: 
+
+* A **contribution to Node-RED** repositories, called "node-red-contrib-thinger" that contains some nodes that has been specifically created to simplify the integration of Node-RED flows with Thinger.io features, allowing to interact with the IoT platform in the next ways:  1\) Subscribing to device resources at a given interval \(device stream node\). 2\) Reading a device resource when a event occurs \(device stream node\). 3\) Sending data to a connected device \(device write node\). 4\) Calling endpoints \(endpoint call node\). 5\) writing to data buckets \(bucket write node\). 
+* A **Node-RED Plugin** that allows deploying Node-RED server into the same host as Thinger.io IoT platform instance, running 24x7 without any kind of limitation. This way the problem of hosting the node-RED on another machine disappears
 
 {% hint style="info" %}
 [Note: Plugins are only available for premium Thinger.io servers. Check **this link** to create your own instance within minutes](https://pricing.thinger.io)
 {% endhint %}
 
-## Plugin Features
-
-* [x] Node-RED server hosted in the same private host as Thinger.io instace, runing 24/7 with no nodes limitation. 
-* [x] Improved palette with ad-hoc Thinger.io nodes that provide support for:
-
-  1\) Subscribing to device resources at a given interval \(device stream node\).
-
-  2\) Reading a device resource when a event occurs \(device stream node\).
-
-  3\) Sending data to a connected device \(device write node\).
-
-  4\) Calling endpoints \(endpoint call node\).  
-  5\) writing to data buckets \(bucket write node\).
-
-## Node-RED Concepts
+## Introduction to Node-RED Concepts
 
 Node red essentially consist in a development tool with two basic components: a "flow editor" that consist on a graphical programing tool that can be launch over any web-browser and a backend with the rule engine server that is able to execute the flows. This system is really easy to learn and to use, however there are some concepts that you should know before start working with it:
 
@@ -65,28 +60,27 @@ Is a section of the right slide bar that provides a structured view of the messa
 Alongside each message, the debug sidebar includes information about the time the message was received and which Debug node sent it. Clicking on the source node id will reveal that node within the workspace.
 
 {% hint style="info" %}
-### NodeRED documentation
+### Node-RED documentation
 
 You can find additional documentation about the using of this tool in Node-RED's official website: [https://nodered.org/docs/user-guide/editor/workspace/](https://nodered.org/docs/user-guide/editor/workspace/)
 {% endhint %}
 
-## Plugin Configuration
+## Starting with Thinger.io Nodes
 
-In this section it is described the different steps you need to follow to configure the Node-RED plugin to work with Thinger.io server. 
+In this section it is described **how to configure Node-RED** "Thinger.io Nodes" to start working with any particular Thinger.io server, that could be your own instance or the public one that is hosted on "https://api.thinger.io" and it is also necessary to provide an authorization to allow Node-RED to work with your Thinger.io account.
 
-When a Node-RED plugin is installed in Thinger.io Platform, the installation manager sets Thinger.io server as proxi-server for Node-RED communications, but during the first launch of the plugin, it is necessary to make a configuration of the particular server instance that is going to be used by the plugin Nodes. 
-
-To make this configuration, just open any Thinger.io Node properties form and go to the last input, called "Server " and click into the edition button, which will open the Thinger-Server configuration menu.
+To make this configuration, just drag onw Thinger.io Node to the canvass and open its properties form, then go to the last input, called "Server " and click into the edition button, which will open the Thinger-Server configuration menu.
 
 ![](../.gitbook/assets/nodeconfiguration.png)
 
-Then you can fill the server credentials of the Thinger.io server instance that is going to receive your Node-RED requests. If you just want to use the same server that is hosting the plugin,  it is only necessary to include `$(THINGER_HOST)` into "Host" box and `$(THINGER_TOKEN_NODE_RED_PLUGIN)` in the "Token" box, then you can disable SSL communication, as all messages are going to run into the same computer.
+This form allows to introduce the credentials of the specific Thinger.io instance address and authorization that is going to receive your Node-RED requests. However, it is important to take care about the next considerations in order to make a proper configuration: 
+
+{% hint style="info" %}
+* If you are using Node-RED in a THinger.io Plugin and you want to work with the same Thinger.io server that is hosting the plugin,  it is only necessary to include `$(THINGER_HOST)` into "Host" box and `$(THINGER_TOKEN_NODE_RED_PLUGIN)` in the "Token" box, then you can disable SSL communication, as all messages are going to run into the same computer. 
+* if you want to use a different Thinger.io Server or your aren't running Node-RED from a plugin, it will be necessary to **include its URL or IP Address** in the "Host" box and also a Thinger.io **Access Token with Admin-Access** privileges in the "Token" box, finally SSL would be preferable in this case. 
+{% endhint %}
 
 ![](../.gitbook/assets/server-configuration.png)
-
-{% hint style="warning" %}
-Note that, if you want to use a different Thinger.io Server or your aren't running Node-RED from a plugin, it will be necessary to **include its URL or IP Address** in the "Host" box and also a Thinger.io **Access Token with Admin-Access** privileges in the "Token" box, finally SSL would be preferable in this case. 
-{% endhint %}
 
 ## Thinger.io Nodes
 
