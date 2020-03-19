@@ -21,14 +21,15 @@ For some more of the history and highlights check out out blog: [https://thinger
 
 Thinger.io is a platform in constant growth, our development team is continuously analyzing the requirements of the IoT market to identify the best features to be included in the platform. There is still a long way to go to have a platform as complete as we would like it to be. Moreover, thanks to the plugin marketplace we can integrate with a great number of third party platforms. The following list, details the most important expansion projects that will be developed during this year. 
 
-* [x] _On-premise instances deployment_ 
-* [x] _File System_ 
-* [ ] _Global device properties_ 
-* [ ] _Project & products manager_
-* [ ] _MQTT integration_
-* [ ] _ESP32 & ESP8266 OTA_
-* [ ] _ARM-64 server compilation_ 
-* [ ] _COAP integration, NB-IoT & LTE CAT Mclient_ 
+* [x] On-premise instances deployment 
+* [x] File System 
+* [ ] Global device properties 
+* [ ] Project & products manager
+* [ ] MQTT integration
+* [ ] Maps widget improvement 
+* [ ] ESP32 & ESP8266 OTA
+* [ ] ARM-64 server compilation 
+* [ ] COAP integration, NB-IoT & LTE CAT Mclient 
 * [ ] Shared resources manager
 * [ ] Instance status visualizer 
 * [ ] New Plugins: Grafana, Kibana, HTTP devices plugin, Python container, and much more.
