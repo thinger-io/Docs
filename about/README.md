@@ -39,5 +39,7 @@ If you have identified any featured that is not included on this list, please fe
 
 **What if my company already needs one of these future features?** 
 
-The features that are on this list will be developed soon, the order has been set according to priorities and in an incremental logic, that optimizes the our resources, however, it is possible to anticipate the development of some features if there are required to create any project, if you are in this situation, you can contact us and we will study how to collaborate to reorganize resources and anticipate the feature development.
+The features that are on this list will be developed soon, the order has been set according to priorities and in an incremental logic, that optimizes the our resources, however, it is possible to anticipate the development of some features if there are required to create any project, if you are in this situation, you can contact us and we will study how to collaborate to reorganize resources and anticipate the feature development. 
+
+Note that the developments always return to the community and never give exclusivity on their use, so your company can collaborate in the growth of new features as many others did in the past to increase the capabilities of thinger.io with the features that we can all use today.
 
