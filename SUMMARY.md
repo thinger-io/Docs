@@ -7,7 +7,8 @@
   * [SIGFOX](devices/sigfox.md)
   * [HTTP DEVICES](devices/http-devices.md)
   * [MQTT](devices/mqtt.md)
-* [FIRMWARE CODING](coding.md)
+* [FIRMWARE CODING](coding/README.md)
+  * [Good Practices & Troubleshooting](coding/good-practices-and-troubleshooting.md)
 * [CLOUD CONSOLE](console/README.md)
   * [DEVICES ADMINISTRATION](console/devices-administration.md)
   * [BUCKETS](console/buckets.md)
@@ -28,4 +29,7 @@
   * [ClimaStick](hardware/climastick-devices.md)
   * [WiFi Button](hardware/wifi-button.md)
 * [MOBILE APP](mobile.md)
+* [ABOUT](about/README.md)
+  * [Community](about/community.md)
+  * [Resources](about/resources.md)
 

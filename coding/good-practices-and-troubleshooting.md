@@ -1,0 +1,155 @@
+---
+description: >-
+  This section explains some tricks to create better code for connected devices
+  using Thigner.io's libraries as well as a troubleshooting guide to identify
+  and solve connection issues
+---
+
+# Good Practices & Troubleshooting
+
+## Coding Good Practices
+
+* Thinger resources definition code must be introduced in the `setup()` function or any other function that is executed just one time in the program source code.
+* `thing.handle()` instruction must be included in the `loop()` function or in the main recurrent execution function of the program source code.
+* Avoid using `delay()` or any other locking instructions when coding for IoT purposes. Using it will make your device losing the connection with the network, which will result in continuous reconnection processes. If the program requires timing functionalities, it is possible to use non-locking structures for example: 
+
+```text
+//to make a led blick every 5 seconds without lock the process 
+if(millis()%5000==0){
+    digitalWrite(LED_PIN, !digitalRead(LED_PIN);
+}
+```
+
+* If an specific routine requires several time to be executed, including and additional `thing.handle()` instruction could be helpful to guarantee the connection. 
+* Avoid polling data. Thinger.io implements a resources subscription paradigm that allows the server taking the control of when does the devices send data, according a user defined sampling interval. However, there are some instructions such as `thing.call_endpoint` and `thing.write_bucket`, that has been implemented to send  asynchronous communications to the server. It is important to be careful when using these instructions in a non-controlled way or create polling situations that will decrease the efficiency of the infrastructure. Next example code shows how to properly call to an asynchronous call just when an event is detected by the device code:
+
+```text
+void loop(){
+
+ thing.handle();
+ 
+ button_pressed = digitalRead(BUTTON_PIN);
+
+ //if the button wasn't pressed and is pressed now
+ if(button_pressed == 1 && last_button_status == 0) {
+      thing.call_endpoint("alert");   
+ }
+
+ last_button_status = button_pressed;
+
+}
+```
+
+* Use the debug mode when testing and prototyping to identify connection problems \(shee troubleshooting guidelines\)
+* Create consistent input resources using pson.is\_empty\(\) function. Every time Thinger server creates a new connection with any device, each resource code is executed with an empty Pson. To prevent this behavior making any runaway execution, it is useful to analyze the content of the Pson before allowing the resources to execute. The following example code implements the `pson.is_empty()` function and an auxiliar Pson to save the proper status of the resource \(arduino framework is being used\):
+
+```text
+pson aux;
+
+void setup(){
+aux=false;             //set an initial status for the aux pson
+
+
+ thing["secure_input_resource"] >> [] (pson & in){
+    
+    if(in.is_empty()){
+       in=aux;         //fill the pson with the aux value 
+    }
+    
+    digitalWrite(LED_PIN, in? HIGH:LOW);
+    in=aux;            //update the aux value
+ }
+} 
+```
+
+## Connection Troubleshooting Guidelines
+
+There are few situations that can produce the malfunction of the software client, hampering the connection with the IoT platform or making it unstable. But Thinger.io software client has been provided with some tools to detect and avoid these kind of problems. 
+
+If a recently programmed device is showing problems to be "online" on Thinger.io Server or even is being locked, the debug function will help to identify the issue. Include the following definition in your sketch, but make sure it comes first, before any other includes \(it was reported to cause crashes on some boards otherwise\). When using Arduino framework it is necessary to enable `Serial` communication, as all the debugging information is displayed over Serial.
+
+```text
+#define _DEBUG_
+
+#include "Thinger.h" //use the proper thinger.io library for each processor
+
+void setup() {
+  Serial.begin(115200);
+}
+```
+
+When this command is included, the program will print all the communication traze. Next block shows a correct connection traze for an ESP8266 connection.
+
+```text
+[NETWORK] Connecting to network my_wifi_SSID
+[NETWORK] Connected to WiFi!
+[NETWORK] Getting IP Address...
+[NETWORK] Got IP Address: 192.168.1.61
+[NETWORK] Connected!
+[_SOCKET] Connecting to iot.thinger.io:25202...
+[_SOCKET] Using secure TLS/SSL connection: yes
+[SSL/TLS] Warning: use #define _VALIDATE_SSL_CERTIFICATE_ if certificate validation is required
+[_SOCKET] Connected!
+[THINGER] Authenticating. User: my_user_name Device: my_device_ID
+[THINGER] Writing bytes: 29 [OK]
+[THINGER] Authenticated
+```
+
+### Problems and Solutions list
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Problem</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Solution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">Can&apos;t connect to network</td>
+      <td style="text-align:left">Wrong network credentials</td>
+      <td style="text-align:left">
+        <ul>
+          <li>Check the network credentials as WiFi SSID, PASSWORD, or GSM configuration
+            has been properly introduced</li>
+          <li>Check network signal</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Can&apos;t connect to Thinger.io Server</td>
+      <td style="text-align:left">Wrong Thinger.io server instance ID</td>
+      <td style="text-align:left">
+        <ul>
+          <li>The device is trying to connect to standard Thinger.io server, set your
+            server IP/web domain by using the definition #define THINGER_SERVER &quot;&lt;instance_URL&gt;&quot;</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Authentication Error</td>
+      <td style="text-align:left">Wrong account or device credentials</td>
+      <td style="text-align:left">
+        <ul>
+          <li>Check the username, Device ID and Device Credentials are the same as the
+            platform configuration</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">No debug trace</td>
+      <td style="text-align:left">Coding problem</td>
+      <td style="text-align:left">
+        <ul>
+          <li>Delete delay() instructions</li>
+          <li>Verify sensors connection and other libraries behavior</li>
+          <li>Identify and delete<code> while(1)</code> loops</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>## Community Support
+
+Utiliza los recursos del programador de forma activa, programa con la documentación y consulta las dudas en la comunidad de usuarios 
+

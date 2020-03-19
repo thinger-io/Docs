@@ -398,7 +398,7 @@ Next, go to the Boards manager to install the ESP8266 package. Search for the es
 
 Now you can program almost any ESP8266 directly from the Arduino IDE. From the **Tools** &gt; **Boards** you should see now the new ESP8266 boards installed. Select your board to be able to compile code for the ESP8266.
 
-![](https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/4db23ae2b7121cbf6702f5d55c3c931de6be5f33.png)
+![](../.gitbook/assets/efdec170e35cb296b895dd92b9868f8e0a9d3cd9.png)
 
 > Select the ESP8266 based board you will program from **Tools** &gt; **Boards**
 
@@ -447,8 +447,6 @@ ThingerSmartConfig thing(USERNAME,
                          DEVICE_CREDENTIAL,
                          false); // required for deep sleep
 ```
-
-
 
 ### ESP32 / Expressif Wroom 32
 

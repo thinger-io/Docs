@@ -62,7 +62,7 @@ This example can be modified to adapt the device behavior to each use case. Afte
 Find additional information about Thinger.io devices in the next sections: 
 
 1. \*\*\*\*[**Compatible Arduino and Linux devices**](devices/)\*\*\*\*
-2. \*\*\*\*[**Zero to Hero Thinger.io Firmware Coding Guide**](coding.md) ****
+2. \*\*\*\*[**Zero to Hero Thinger.io Firmware Coding Guide**](coding/) ****
 3. **Connection Troubleshooting Guide**
 {% endhint %}
 {% endtab %}
@@ -131,9 +131,9 @@ Thinger.io platform can be complemented with many different Internet services us
 
 [Thinger.io is Hardware agnostic, so it allows connecting any kind of electronic device without matter the manufacturer, hardware architecture, network technology or operative system. However there are different ways to integrate each device type, in this section it is explained how to connect most common devices by including our software libraries or using Thinger.io API to send data with HTTP queries](devices/)
 
-## [Software Client Coding](coding.md)
+## [Software Client Coding](coding/)
 
-[ ![](.gitbook/assets/coding.png) ](coding.md)
+[ ![](.gitbook/assets/coding.png) ](coding/)
 
 This section will cover how to add different functionality to your devices for exposing resources, calling endpoints, or streaming data to real-time websockets.
 
