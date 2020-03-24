@@ -112,13 +112,16 @@ Example of a downlink method converting a JSON device configuration into base64 
 
 ```javascript
 /* convert a JSON object with the device configuration in a base64
-   string expected by TTN */
+   string expected by Sigfox Cloud */
+   
 module.exports.downlink = function(payload){
+
     let bytes = [];
     bytes[0] = payload.enabled ? 1 : 0;
     bytes[1] = payload.frequency;
     bytes[2] = payload.threshold;
-    return Buffer.from(bytes).toString('base64');
+    
+    return Buffer.from(bytes).toString('hex');
 };
 ```
 {% endtab %}
