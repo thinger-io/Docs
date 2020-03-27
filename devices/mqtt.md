@@ -42,12 +42,12 @@ When all the information has been introduced, pressing "Add Device" button will 
 
 The second part of the integration is configure any device or program as a client to connect Thinger.io and start Publishing or subscribing data. In any case, the following parameters must be introduced in the client in order to create the connection: 
 
-* Broker Address: The Thinger.io instance web domain 
-* Broker Port: 8883
-* User Name: Thinger.io user account ID
-* Client ID: The device identifier that was configured at the device form
-* Password:
-* MQTT version: Must be "3.1.1"
+* **Broker Address**: The Thinger.io instance web domain 
+* **Broker Port**: 8883
+* **User Name**: Thinger.io user account ID
+* **Client ID**: The device identifier that was configured at the device form
+* **Password**: Must be the same key that was placed on Thinger.io "Device Credentials" parameter
+* **MQTT version**: Must be "3.1.1"
 
 Finally, all communications must be encrypted using the SSL/TLS message encryption protocol. Onces this data has been configured, the client should be able to create communications with the server, and depending on its program, will be able to publish data or recieve it from any topic.
 
