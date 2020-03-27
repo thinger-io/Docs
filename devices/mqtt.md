@@ -42,14 +42,31 @@ When all the information has been introduced, pressing "Add Device" button will 
 
 The second part of the integration is configure any device or program as a client to connect Thinger.io and start Publishing or subscribing data. In any case, the following parameters must be introduced in the client in order to create the connection: 
 
-* **Broker Address**: The Thinger.io instance web domain 
-* **Broker Port**: 8883
+* **Broker Address**: The Thinger.io instance domain \(i.e. acme.aws.thinger.io\) 
+* **Broker Port**: 1883 or 8883 for SSL/TLS
 * **User Name**: Thinger.io user account ID
 * **Client ID**: The device identifier that was configured at the device form
 * **Password**: Must be the same key that was placed on Thinger.io "Device Credentials" parameter
-* **MQTT version**: Must be "3.1.1"
+* **MQTT version**: Currently Thinger.io supports 3.1 or 3.1.1 versions of the protocol
 
-Finally, all communications must be encrypted using the SSL/TLS message encryption protocol. Onces this data has been configured, the client should be able to create communications with the server, and depending on its program, will be able to publish data or recieve it from any topic.
+{% hint style="info" %}
+It is recommended to use SSL/TLS communication using the port 8883
+{% endhint %}
+
+Once the client has been configured, it should be able to publish and subscribe data with the server, for example, using the `mosquit_pub` client:
+
+```text
+mosquitto_pub -d -h trincado.do.thinger.io -p 1883 -i MQTT -u jt -P testCredential -t telemetry -m '{"temperature":5}'  
+
+Client MQTT sending CONNECT
+Client MQTT received CONNACK (0)
+Client MQTT sending PUBLISH (d0, q0, r0, m1, 'telemetry', ... (17 bytes))
+Client MQTT sending DISCONNECT
+```
+
+Where `MQTT` is the  Client ID, `jt` is the user account, and `testCredentials` is the device password. 
+
+Note that Thinger.io MQTT broker has been designed to support multi-tenancy by default. It supports multiple clients / organisations to use the same broker wihtout overlapping topics.
 
 ## Working with MQTT data
 
@@ -70,6 +87,10 @@ The next parameters needs to be configured:
 * **MQTT Topic**: place here the MQTT topic that will be subscribed by the server 
 
 This way, Thinger.io Platform server will be configured as MQTT broker but also as a topic consumer in order to provide additional features.
+
+{% hint style="success" %}
+Use **JSON** as the payload type for the device messages stored by buckets.
+{% endhint %}
 
 ### Showing data in Dashboards
 
