@@ -23,6 +23,7 @@ Thinger.io is a platform in constant growth, our development team is continuousl
 
 * [x] On-premise instances deployment 
 * [x] File System 
+* [x] MQTT broker
 * [ ] Global device properties 
 * [ ] Project & products manager
 * [ ] Shared resources manager
