@@ -73,6 +73,10 @@ This way, Thinger.io Platform server will be configured as MQTT broker but also 
 
 ### Showing data in Dashboards
 
+Now that the MQTT data is being stored into the data bucket, it is possible to show it on dashboards, where multiple widgets can be used to create real-time or historical representations by selecting the bucket as the data source, and that's all!
+
+![](../.gitbook/assets/image%20%28144%29.png)
+
 ### Processing data with Node-RED Plugin 
 
 

@@ -33,7 +33,7 @@ This section contains the deployment instruction that should be followed on devi
 
 This device has been provided with a basic program that allows creating useful functionalities using thinger.io endpoints. The next execution diagram shows how does this program and how to use the single button to move between the different program menus, that allows introducing or deleting WiFi credentials, changing the device program by using Arduino OTA feature or just making a single connection to order any functionality. 
 
-![](../.gitbook/assets/image%20%28156%29.png)
+![](../.gitbook/assets/image%20%28157%29.png)
 
 ### **Device Sound interface**
 
@@ -110,7 +110,7 @@ In addition to the common configuration parameters, each connected device has to
 
 As soon as a valid WiFi configuration is made, the WiFi button will create a new device profile on this platform according to the auto-provisioning process setting its device credentials with the data that was included during the button configuration. This profile can be checked at Thinger.io platform workspace, by clicking on “devices” menu tab.
 
-![](../.gitbook/assets/image%20%28198%29.png)
+![](../.gitbook/assets/image%20%28199%29.png)
 
 Clicking on the device name it is possible to access the device dashboard that contains information related to the device connection and status, and provides a simple way to show device parameters.
 

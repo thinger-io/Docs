@@ -143,7 +143,7 @@ Use the interface tester to see if your code is correctly procesing the payloads
 
 ## Plugin Development Details
 
-![](../.gitbook/assets/image%20%28212%29.png)[Github source code](https://github.com/thinger-io/ttn-plugin)
+![](../.gitbook/assets/image%20%28213%29.png)[Github source code](https://github.com/thinger-io/ttn-plugin)
 
 ### Uplink Data Flow
 
