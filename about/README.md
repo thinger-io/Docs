@@ -26,11 +26,11 @@ Thinger.io is a platform in constant growth, our development team is continuousl
 * [ ] Global device properties 
 * [ ] Project & products manager
 * [ ] Shared resources manager
-* [ ] MQTT integration
 * [ ] ESP32 & ESP8266 OTA
 * [ ] Maps widget improvement 
 * [ ] ARM-64 server compilation 
-* [ ] COAP integration, NB-IoT & LTE CAT Mclient 
+* [ ] COAP integration, NB-IoT & LTE CAT Mclient
+* [ ] Custom plugins support 
 * [ ] Instance status visualizer 
 * [ ] New Plugins: Grafana, Kibana, HTTP devices plugin, Python container, and much more.
 * [ ] InfluxDB tagged data buckets
