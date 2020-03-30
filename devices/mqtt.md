@@ -25,11 +25,11 @@ The process is carried out in two parts, on the one hand, the definition of the 
 
 Creating the device on Thinger.io is done like any other resource on the platform, juts accessing the device list, available in the "devices" section of the main menu and clicking on the "Add device" button: 
 
-![](../.gitbook/assets/image%20%28123%29.png)
+![](../.gitbook/assets/image%20%28124%29.png)
 
 Then the "new device form" will appear, allowing to introduce device information:
 
-![](../.gitbook/assets/image%20%28107%29.png)
+![](../.gitbook/assets/image%20%28108%29.png)
 
 * **Device Type**: MQTT device should be selected
 * **Device identifier:** Must be unique within your devices
@@ -70,9 +70,15 @@ Note that Thinger.io MQTT broker has been designed to support multi-tenancy by d
 
 ## Working with MQTT data
 
+{% hint style="warning" %}
+As MQTT broker is **not creating a Device API**, it will not possible to work with its data in real-time with Endpoints or Dashboards until we develop an adaptation of these features. However, it is possible to store data in Buckets and configure the Dashboard widgets to read from that bucket. 
+{% endhint %}
+
 ### Storing data in buckets
 
-Thinger.io data buckets are a virtual storage where any kind of time series data can be saved, this information can be used to be plotted in dashboards, or to be exported in different formats for offline processing.  
+Thinger.io data buckets are a virtual storage where any kind of time series data can be saved, this information can be used to be plotted in dashboards, or to be exported in different formats for offline processing.
+
+  
 Configure a data bucket to store data from an specific MQTT topic just requires going to bucket section of the main menu and pressing the "Add Bucket" button to access the "new bucket form" in which introduce the topic configuration, as has been made in the image below:  
 
 ![](../.gitbook/assets/image%20%285%29.png)
@@ -86,7 +92,7 @@ The next parameters needs to be configured:
 * **Data Source**: Commonly this defines the Thinger.io device or resource that will be subscribed by the server. In this situation "From MQTT Topic" must be placed
 * **MQTT Topic**: place here the MQTT topic that will be subscribed by the server 
 
-This way, Thinger.io Platform server will be configured as MQTT broker but also as a topic consumer in order to provide additional features.
+This way, Thinger.io Platform server will be configured as MQTT broker but also as a topic consumer in order to provide additional features. Then, the client must be configured to send data in JSON format.
 
 {% hint style="success" %}
 Use **JSON** as the payload type for the device messages stored by buckets.
@@ -94,9 +100,13 @@ Use **JSON** as the payload type for the device messages stored by buckets.
 
 ### Showing data in Dashboards
 
-Now that the MQTT data is being stored into the data bucket, it is possible to show it on dashboards, where multiple widgets can be used to create real-time or historical representations by selecting the bucket as the data source, and that's all!
+Now that the MQTT data is being stored into the data bucket, it is possible to show it on dashboards, where multiple widgets can be used to create real-time or historical representations by selecting the bucket as the data source as it is shown in the image below: 
 
-![](../.gitbook/assets/image%20%28144%29.png)
+![](../.gitbook/assets/image%20%2885%29.png)
+
+Dashboard widgets can show data from different devices, and been configured to create flexible data representations as we have explained in the [**dashboard section of this documentation**](../console/dashboards.md). 
+
+![](../.gitbook/assets/image%20%28145%29.png)
 
 ### Processing data with Node-RED Plugin 
 
