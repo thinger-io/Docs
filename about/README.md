@@ -22,6 +22,7 @@ For some more of the history and highlights check out out blog: [https://thinger
 Thinger.io is a platform in constant growth, our development team is continuously analyzing the requirements of the IoT market to identify the best features to be included in the platform. There is still a long way to go to have a platform as complete as we would like it to be. Moreover, thanks to the plugin marketplace we can integrate with a great number of third party platforms. The following list, details the most important expansion projects that will be developed during this year. 
 
 * [x] On-premise instances deployment 
+* [x] Node-RED Plugin integration
 * [x] File System 
 * [x] MQTT broker
 * [ ] Global device properties 
@@ -32,9 +33,16 @@ Thinger.io is a platform in constant growth, our development team is continuousl
 * [ ] ARM-64 server compilation 
 * [ ] COAP integration, NB-IoT & LTE CAT Mclient
 * [ ] Custom plugins support 
-* [ ] Instance status visualizer 
-* [ ] New Plugins: Grafana, Kibana, HTTP devices plugin, Python container, and much more.
 * [ ] InfluxDB tagged data buckets
+* [ ] Instance status visualizer 
+
+In addition to this features, some new plugins will be added to our Marketplace in order to continue extending thinger.io integration with third parties or specific features:
+
+* [ ] Grafana
+* [ ] Kibana
+* [ ] HTTP devices integration plugin
+* [ ] Python container
+* [ ] Reporting generator tool 
 
 If you have identified any featured that is not included on this list, please feel free to send us your request to info@thinger.io. 
 
