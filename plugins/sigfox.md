@@ -103,10 +103,14 @@ The downlink method will be only called when the Sigfox device uplinks a bidirec
 
 This function will receive different inputs depending on how the plugin is called over its REST API.
 
-* **JSON Object**: If the downlink call is done for a Thinger.io device that defines a `downlink` property \(that is automatically initialized if `Initialize Downlink Data` is configured in the plugin\), this method will receive the JSON content of this property. It usually consists on a user-friendly device configuration that should be later encoded to binary in base64.
+* **JSON Object**: If the downlink call is done for a Thinger.io device that defines a `downlink` property \(that is automatically initialized if `Initialize Downlink Data` is configured in the plugin\), this method will receive the JSON content of this property. It usually consists on a user-friendly device configuration that should be later encoded to binary in base64. 
 * **JSON Object**: If the plugin downlink request contains a JSON payload in the POST call, this function will receive this payload instead of the one configured in the device `downlink` property. 
 
 The output of this method will be a **Base64 String** with the binary information that is going to be sent to Sigfox network.
+
+{% hint style="warning" %}
+When working with Downlink processes the "Initialize Downlink Data" parameter must be initialized with any data otherwise the processing of the downlink payload will fail
+{% endhint %}
 
 Example of a downlink method converting a JSON device configuration into base64 as required by Sigfox:
 
