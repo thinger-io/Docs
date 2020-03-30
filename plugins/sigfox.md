@@ -166,7 +166,7 @@ This callback configuration allows to retrieve additional information, such as g
 
 ### Uplink & Downlink
 
-Finally, selecting DATA/BIDIR Callback, it is possible to send uplink messages to configure Sigfox Cloud to send data to Thinger.io and waits for a downlink message that can be sent to the device in order to make any configuration or remote controlling procce. downlink payload processing
+Finally, selecting DATA/BIDIR Callback, it is possible to send uplink messages to configure Sigfox Cloud to send data to Thinger.io and waits for a downlink message that can be sent to the device in order to make any configuration or remote controlling processes. downlink payload processing
 
 ![](../.gitbook/assets/image%20%2840%29.png)
 
