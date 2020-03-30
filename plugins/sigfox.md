@@ -109,7 +109,7 @@ This function will receive different inputs depending on how the plugin is calle
 The output of this method will be a **Base64 String** with the binary information that is going to be sent to Sigfox network.
 
 {% hint style="warning" %}
-When working with Downlink processes the "Initialize Downlink Data" parameter must be initialized with any data otherwise the processing of the downlink payload will fail
+When working with Downlink processes the`Initialize Downlink Data`parameter must be initialized with any data otherwise the processing of the downlink payload will fail
 {% endhint %}
 
 Example of a downlink method converting a JSON device configuration into base64 as required by Sigfox:
