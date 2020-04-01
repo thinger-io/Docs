@@ -22,7 +22,7 @@ Thinger.io Platform private instances has been provided of a basic MQTT broker, 
 The process is carried out in two parts, on the one hand, the definition of the device at Thinger.io Platform Server that will acts as Broker, and on the other hand, the configuration of an MQTT Client that will create the communication with the server:
 
 {% hint style="danger" %}
-Note that this feature is not available on Thinger.io platform freemium accounts. So to test this integration it is necessary to deploy any private instance.  
+Note that this feature is not available on Thinger.io platform freemium accounts. So to test this integration it is necessary to deploy an on-premise or cloud private instance.  
 {% endhint %}
 
 ### Create device at Thinger.io  
