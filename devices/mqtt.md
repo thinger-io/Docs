@@ -66,18 +66,17 @@ Client MQTT sending DISCONNECT
 
 Where `MQTT` is the  Client ID, `jt` is the user account, and `testCredentials` is the device password. 
 
-Note that Thinger.io MQTT broker has been designed to support multi-tenancy by default. It supports multiple clients / organisations to use the same broker wihtout overlapping topics.
+Note that Thinger.io MQTT broker has been designed to support multi-tenancy by default. It supports multiple clients / organisations to use the same broker without overlapping topics.
 
 ## Working with MQTT data
 
 {% hint style="warning" %}
-As MQTT broker is **not creating a Device API**, it will not possible to work with its data in real-time with Endpoints or Dashboards until we develop an adaptation of these features. However, it is possible to store data in Buckets and configure the Dashboard widgets to read from that bucket. 
+As MQTT broker is **not creating a Device API**, it won't possible to work with its data in real-time with Endpoints or Dashboards until we develop an adaptation of these features. However, it is possible to store data in Buckets and configure Dashboard widgets to read from that bucket. 
 {% endhint %}
 
 ### Storing data in buckets
 
-Thinger.io data buckets are a virtual storage where any kind of time series data can be saved, this information can be used to be plotted in dashboards, or to be exported in different formats for offline processing.
-
+Thinger.io data buckets are a virtual storage where any kind of time series data can be saved, this information can be used to be plotted in dashboards, or to be exported in different formats for offline processing.  
   
 Configure a data bucket to store data from an specific MQTT topic just requires going to bucket section of the main menu and pressing the "Add Bucket" button to access the "new bucket form" in which introduce the topic configuration, as has been made in the image below:  
 
