@@ -1,10 +1,4 @@
----
-description: >-
-  This section explains how to integrate MQTT devices with Thinger.io Platform,
-  using it as a MQTT Broker.
----
-
-# MQTT
+# MQTT CLIENTS
 
 ## Introduccion to MQTT
 

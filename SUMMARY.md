@@ -6,7 +6,7 @@
   * [LINUX / RASPBERRY PI](devices/linux.md)
   * [SIGFOX](devices/sigfox.md)
   * [HTTP DEVICES](devices/http-devices.md)
-  * [MQTT](devices/mqtt.md)
+  * [MQTT CLIENTS](devices/mqtt.md)
 * [FIRMWARE CODING](coding/README.md)
   * [Good Practices & Troubleshooting](coding/good-practices-and-troubleshooting.md)
 * [CLOUD CONSOLE](console/README.md)
