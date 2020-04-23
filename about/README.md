@@ -52,11 +52,11 @@ The features that are on this list will be developed soon, the order has been se
 
 Note that the developments always return to the community and never give exclusivity on their use, so your company can collaborate in the growth of new features as many others did in the past to increase the capabilities of thinger.io with the features that we can all use today.
 
-## Partnerships
+## Partners
 
 Despite we don't have released it yet, still working on creating a partners directory en el que nuestros usuarios podrán encontrar y ponerse en contacto con las tecnologías mejor relacionadas, simplificando aún más el desarrollo de sus proyectos obteniendo además algunos privilegios. de Parents en la que ya se encuentran algunos important actors of the IoT behavior, por eso con so we continue working on creating a nice partners community 
 
-### Our current partners
+#### Our current partners
 
 * Sigfox global communication service provider for IoT
 * [Node-RED](https://nodered.org/) Open Source-Rule Engine for IoT projects
@@ -65,7 +65,7 @@ Despite we don't have released it yet, still working on creating a partners dire
 * [Talent Swarm](https://talentswarm.com/) Industrial Digital Tweens experts
 * [UC3M GIAA](http://portal.uc3m.es/portal/page/portal/grupos_investigacion/giaa) Advanced Artificial Intelligence and Data Analytics experts
 
-### How to become a partner
+#### How to become a partner
 
 There are multiple ways in which we can collaborate, by integrating your service,  your product or with a reseller partnership depending on your business model and services, so do not hesitate on writing us your proposal at info@thinger.io and benefit from better conditions,  access to our clients community or being an active part of a custom development that allows you to create a competitive advantage with Thinger.io technology.
 
