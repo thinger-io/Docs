@@ -52,3 +52,26 @@ The features that are on this list will be developed soon, the order has been se
 
 Note that the developments always return to the community and never give exclusivity on their use, so your company can collaborate in the growth of new features as many others did in the past to increase the capabilities of thinger.io with the features that we can all use today.
 
+## Partnerships
+
+Despite we don't have released it yet, still working on creating a partners directory en el que nuestros usuarios podrán encontrar y ponerse en contacto con las tecnologías mejor relacionadas, simplificando aún más el desarrollo de sus proyectos obteniendo además algunos privilegios. de Parents en la que ya se encuentran algunos important actors of the IoT behavior, por eso con so we continue working on creating a nice partners community 
+
+### Our current partners
+
+* Sigfox
+* Node-RED
+* Theobroma Systems
+* LaSiestaTech 
+* Talent Swarm 
+* UC3M GIAA
+
+### How to become a partner
+
+-Integrated Service partner
+
+-Hardware product partner
+
+-Reseller partner
+
+-Use case partner 
+

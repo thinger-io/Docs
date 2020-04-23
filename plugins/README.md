@@ -16,6 +16,10 @@ For instructions and information about installing, upgrading, troubleshooting, a
 [Note: Plugins are only available for premium Thinger.io servers. Check **this link** to create your own instance within minutes](https://pricing.thinger.io)
 {% endhint %}
 
+{% hint style="success" %}
+Thinger.io plugins source code are now available in our Github repository, so if you want to contribute do not hesitate on fork and send your pull-requests
+{% endhint %}
+
 ## Default Plugins
 
 | [![](../.gitbook/assets/imagen1sas.png)](node-red.md) |                 | [![](../.gitbook/assets/imagen12.png)](sigfox.md) |
@@ -47,12 +51,12 @@ That provides a graphical interface to make the next operations:
 * **Resume:** Launch the execution of the plugin after pause.
 * **Remove:** Uninstall the plugin
 
-## Plugin Development 
+## Custom Plugins Development 
 
-This section will provide deeply information about the infrastructure that is supporting plugins system and how to build new plugins.
+In order to provide a highly extensive system we are working to make it easy for community developers to contribute through Open Source plugins. This section will provide deeply information about the infrastructure that is supporting plugins system and how to build, test and deploy custom ones. 
 
 {% hint style="danger" %}
-Sorry! this is work in progress 
+This is work in progress, but hopefully will be ready by mid-2020
 {% endhint %}
 
 ### Plugins System Infrastructure
@@ -60,4 +64,6 @@ Sorry! this is work in progress
 ### Plugins Repository
 
 ### Writing a Plugin
+
+### Deploying a Custom Plugin
 
