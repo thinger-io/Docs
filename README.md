@@ -14,25 +14,27 @@ Thinger.io is a cloud IoT Platform that provides every needed tool to prototype,
 * **Free IoT platform**: Thinger.io provides a lifetime freemium account with only few limitations to start learning and prototyping, when your product becomes ready to scale, you can deploy a Premium Server with full capacities within minutes.
 * **Simple but Powerful**: Just a couple code lines to connect a device and start retrieving data or controlling it's functionalities with our web based Console, able to connect and manage thousands of devices in a simple way.
 * **Hardware agnostic:** Any device from any manufacturer can be easily integrated with Thinger.io's infrastructure.
+* **Extremely scalable & efficient infrastructure:** thanks to our unique communication paradigm, in which the server subscribes device resources to retrieve data only when it is necessary, a single Thinger.io instance is able to manage thousands of IoT devices with low computational load, bandwidth and latencies. 
 * **Open-Source**: most of the platform modules, libraries and APP source code are available in our github repository to be downloaded and modified with MIT license. 
-* **Customizable**: Fully white-labelable frontend allows customizing Thinger.io Platform with your brand colors, logotype and web domain.
+* **Customizable**: Fully white-labelable frontend allows customizing Thinger.io Platform with your \(our your different customers\) brand colors, logotype and web domain
 
 {% hint style="success" %}
-Sign-up ****[**HERE** ](https://console.thinger.io/#/signup)to obtain a freemium account and start creating IoT projects within minutes!
+Sign-up ****[**HERE** ](https://console.thinger.io/#/signup)to obtain a **free account** and start creating IoT projects within minutes!
 {% endhint %}
 
 ### Thinger.io Main Features
 
 ![](.gitbook/assets/thinger.io-platform-feature.png)
 
-* **Connect devices:** Any kind of device can be integrated, no matter the processor, the network or the manufacturer. Thinger.io is ready to create bidirectional communications with all of them even with edge devices like Sigfox, or LoRaWAN ones. 
-* **Bidirectional Efficient Communications:** Allows retrieving Real-time data from thousands of devices, but also to send data to them with extremely low latency. Perfect for smart-autonomous projects o remote controlling systems. 
+* **Connect devices:** Fully compatible with every kind of devices, no matter the processor, the network or the manufacturer. Thinger.io allows to create **bidirectional communications** with Linux, Arduino, Raspberry PI or MQTT devices and even with edge technologies like Sigfox or LoRaWAN. 
 * **Store Device Data:** Just a couple clicks to create a Data Bucket a store IoT data in an scalable, efficient and affordable way, that also allows real-time data aggregation. 
-* **Show Real-time or Stored Data:** Using our awesome dashboards, it is possible to create used-friendly data visualization interfaces and share it in minutes with your customers. 
+* **Show Real-time** or **Stored Data:** ith  Using multiple time series, donut charts, gauges and custom made widgets to create awesome dashboards within minutes. 
 * **Focus on Extensibility:** Multiple plugins can be deployed in common with this software in order to create extensible systems. 
 * **Integrable with 3rd Parties:** Our Open API allows retrieving data and share it with third party Internet Platforms and custom programs.
 
 Are you ready to start creating IoT projects? [**Create here your free account**](https://console.thinger.io/#/signup) and learn below how to use all this technology.
+
+
 
 ## Quick Start Guide
 
@@ -63,27 +65,35 @@ Find additional information about Thinger.io devices in the next sections:
 
 1. \*\*\*\*[**Compatible Arduino and Linux devices**](devices/)\*\*\*\*
 2. \*\*\*\*[**Zero to Hero Thinger.io Firmware Coding Guide**](coding/) ****
-3. **Connection Troubleshooting Guide**
+3. \*\*\*\*[**Connection Troubleshooting Guide**](https://docs.thinger.io/coding/good-practices-and-troubleshooting)\*\*\*\*
 {% endhint %}
 {% endtab %}
 
 {% tab title="HTTP devices" %}
 1\) Create an HTTP device profile by selecting it in the "Device Type" when creating the device  
 2\) Going to the device dashboard, create an HTTP device Callback  
-3\) Create a device Access Tocken to authorize the device sending data to the platform  
+3\) Create a device Access Token to authorize the device sending data to the platform  
 4\) Introduce the HTTP request \(API+TOKEN\) into your device code or third party platform and start sending data to Thinger.io
 
-{% hint style="success" %}
-[Follow a detailed tutorial about HTTP devices connection **here!**](devices/http-devices.md)
-{% endhint %}
+{% page-ref page="devices/http-devices.md" %}
 {% endtab %}
 
-{% tab title="Sigfox / LoRaWAN devices" %}
+{% tab title="Sigfox / TTN devices" %}
 Any individual Sigfox or LoraWAN device can be integrated using our API as HTTP devices, just setting an HTTP device callback into their callback managers, but if a big network is going to be created using these technologies, it is better to use our integration plugins:
 
 {% page-ref page="plugins/sigfox.md" %}
 
 {% page-ref page="plugins/the-things-network.md" %}
+{% endtab %}
+
+{% tab title="MQTT devices" %}
+1\) Create a new device profile and select "MQTT" device type  
+2\) Configure device credentials a secret password  
+3\) Configure the MQTT client to send data to the embedded broker
+
+More details at: 
+
+{% page-ref page="devices/mqtt.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -133,13 +143,9 @@ Thinger.io platform can be complemented with many different Internet services us
 
 ## [Software Client Coding](coding/)
 
-[ ![](.gitbook/assets/coding.png) ](coding/)
-
 This section will cover how to add different functionality to your devices for exposing resources, calling endpoints, or streaming data to real-time websockets.
 
-## [Cloud Console](console/)
-
-[![](.gitbook/assets/console.png) ](console/)
+## [Cloud Consol](console/)e
 
 The Cloud Console is related with the management front-end designed to easily manage your devices and visualize its information in the cloud. In this section you will learn how to register devices, create real-time dashboards, access the devices API, and other management operations.
 

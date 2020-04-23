@@ -2,7 +2,7 @@
 description: This section explains how to deploy and to use the platform Plugins System
 ---
 
-# PLUGINS MARKETPLACE
+# PLUGINS
 
 ## Introduction
 
@@ -14,10 +14,6 @@ For instructions and information about installing, upgrading, troubleshooting, a
 
 {% hint style="info" %}
 [Note: Plugins are only available for premium Thinger.io servers. Check **this link** to create your own instance within minutes](https://pricing.thinger.io)
-{% endhint %}
-
-{% hint style="success" %}
-Thinger.io plugins source code are now available in our Github repository, so if you want to contribute do not hesitate on fork and send your pull-requests
 {% endhint %}
 
 ## Default Plugins
@@ -51,12 +47,12 @@ That provides a graphical interface to make the next operations:
 * **Resume:** Launch the execution of the plugin after pause.
 * **Remove:** Uninstall the plugin
 
-## Custom Plugins Development 
+## Plugin Development 
 
-In order to provide a highly extensive system we are working to make it easy for community developers to contribute through Open Source plugins. This section will provide deeply information about the infrastructure that is supporting plugins system and how to build, test and deploy custom ones. 
+This section will provide deeply information about the infrastructure that is supporting plugins system and how to build new plugins.
 
 {% hint style="danger" %}
-This is work in progress, but hopefully will be ready by mid-2020
+Sorry! this is work in progress 
 {% endhint %}
 
 ### Plugins System Infrastructure
@@ -64,6 +60,4 @@ This is work in progress, but hopefully will be ready by mid-2020
 ### Plugins Repository
 
 ### Writing a Plugin
-
-### Deploying a Custom Plugin
 
