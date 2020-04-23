@@ -16,7 +16,7 @@
   * [DASHBOARDS](console/dashboards.md)
   * [FILE SYSTEM](console/file-system.md)
   * [ACCESS TOKENS](console/access-tokens.md)
-* [PLUGINS](plugins/README.md)
+* [PLUGINS MARKETPLACE](plugins/README.md)
   * [The Things Network Plugin](plugins/the-things-network.md)
   * [Sigfox Plugin](plugins/sigfox.md)
   * [Node-RED Plugin](plugins/node-red.md)

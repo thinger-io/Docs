@@ -2,7 +2,7 @@
 description: This section explains how to deploy and to use the platform Plugins System
 ---
 
-# PLUGINS
+# PLUGINS MARKETPLACE
 
 ## Introduction
 
