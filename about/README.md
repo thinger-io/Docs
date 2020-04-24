@@ -56,14 +56,15 @@ Note that the developments always return to the community and never give exclusi
 
 Despite we don't have released it yet, still working on creating a partners directory en el que nuestros usuarios podrán encontrar y ponerse en contacto con las tecnologías mejor relacionadas, simplificando aún más el desarrollo de sus proyectos obteniendo además algunos privilegios. de Parents en la que ya se encuentran algunos important actors of the IoT behavior, por eso con so we continue working on creating a nice partners community 
 
-#### Our current partners
+#### Our Partners
 
-* Sigfox global communication service provider for IoT
-* [Node-RED](https://nodered.org/) Open Source-Rule Engine for IoT projects
-* [Theobroma Systems](https://www.theobroma-systems.com/) High performance Hardware developers for devices, gateways and servers. 
-* [La Siesta Tech](http://www.lasiesta.tech/) Hardware developers and IoT consultants
-* [Talent Swarm](https://talentswarm.com/) Industrial Digital Tweens experts
-* [UC3M GIAA](http://portal.uc3m.es/portal/page/portal/grupos_investigacion/giaa) Advanced Artificial Intelligence and Data Analytics experts
+* \*\*\*\*[**Sigfox** ](https://sigfox.com)global communication service provider for IoT
+* \*\*\*\*[**Node-RED**](https://nodered.org/) Open Source-Rule Engine for IoT projects
+* \*\*\*\*[**Theobroma Systems**](https://www.theobroma-systems.com/) High performance Hardware developers for devices, gateways and servers. 
+* \*\*\*\*[**La Siesta Tech**](http://www.lasiesta.tech/) Hardware developers and IoT consultants
+* \*\*\*\*[**Talent Swarm**](https://talentswarm.com/) Industrial Digital Tweens experts
+* \*\*\*\*[**UC3M GIAA**](http://portal.uc3m.es/portal/page/portal/grupos_investigacion/giaa) Advanced Artificial Intelligence and Data Analytics experts
+* \*\*\*\*[**Fundación UNED** ](https://www.fundacion.uned.es/actividad/idactividad/20219)complementary education for engineers
 
 #### How to become a partner
 
