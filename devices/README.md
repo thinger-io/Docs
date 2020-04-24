@@ -16,6 +16,10 @@ As there are many different IoT hardware available nowadays, this section is div
 
 {% page-ref page="linux.md" %}
 
+**MQTT Devices** or software clients can also be integrated with Thinger.io's builtin MQTT broker
+
+{% page-ref page="mqtt.md" %}
+
 **Low-Power Devices** or "Edge devices" such as **Sigfox**, **LoraWAN**, **TheThingsNetwork** or any other infrastructure with gateways:
 
 {% page-ref page="sigfox.md" %}
