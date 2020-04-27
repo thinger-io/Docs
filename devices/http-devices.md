@@ -156,15 +156,36 @@ If the source system supports cURL instructions, there is an integration example
 
 If the user is working traditional Thinger.io Community Server, the "HTTP" Device will not be available on the "device type" list when creating a new device \(it will, in the future, when the community server gets updated to the newest version of Thinger.io\). But it still being possible to create a similar integration by sending data directly from the device to a Data Bucket using the Open REST API. To make this just follow the next steps: 
 
-1. Go to "Data Bucket" menu section and create a new data bucket selecting and **“From Write Call”** Data source.
-2. Create an access token with permissions to write over the data bucket [![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/c/c7ac34097facf9c1e4e60cfcba971cc74f0d0455_2_631x500.png)](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/c/c7ac34097facf9c1e4e60cfcba971cc74f0d0455.png)
-3. Build an HTTP Request using [Thinger.io](http://thinger.io/) REST API and the token authorization to allow a third party device sending data to the bucket from a third party software.
-4. to know the right API, go to the data bucket interface an open the Network inpector \(F12 in Chrome browser\). for example, in this case, the REST API is: [https://api.thinger.io/v1/users/jt/buckets/NodeRED\_Device\_Example/data 2](https://api.thinger.io/v1/users/jt/buckets/NodeRED_Device_Example/data)![](../.gitbook/assets/image%20%2855%29.png) 
-5. if we add now the **?authorization=** command and the token access, we obtain the complete request that can be used with any POSTMAN service or any device to send POST request to thinger.io server: [`https://api.thinger.io/v1/users/jt/buckets/NodeRED_Device_Example/data?authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJOb2RlUkVEX0RldmljZV9FeGFtcGxlIiwidXNyIjoianQifQ.1BOzYXp3UveYxGEmKThrSTIblYgc1Dp3IPBFdGAcu_0`](https://api.thinger.io/v1/users/jt/buckets/NodeRED_Device_Example/data?authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJOb2RlUkVEX0RldmljZV9FeGFtcGxlIiwidXNyIjoianQifQ.1BOzYXp3UveYxGEmKThrSTIblYgc1Dp3IPBFdGAcu_0)\`\`
-6. note that the value needs to go in a application/json type, so the device code needs to create a valid JSON on it code. 
-7. Finally open the data bucket inspector and check the result: [![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/f/f8b64b1a2219d80512bd8028d5904298e6356424_2_492x500.png)](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/f/f8b64b1a2219d80512bd8028d5904298e6356424.png)
+1- Go to "Data Bucket" menu section and create a new data bucket selecting and **“From Write Call”** Data source.
 
-it is possible to send JSON with the data you need. However, the problem with this integration is that you can’t explode full [thigner.io](http://thigner.io/) features as can be made using the HTTP device, that is why wy will try to upgrade the community server as soon as possible. 
+2- Create an access token with permissions to write over the data bucket 
+
+![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/c/c7ac34097facf9c1e4e60cfcba971cc74f0d0455_2_631x500.png)
+
+3- Build an HTTP Request using [Thinger.io](http://thinger.io/) REST API and the token authorization to allow a third party device sending data to the bucket from a third party software.
+
+4- The better way to find the appropriate API is using the "Network inspector" feature of Chrome browser when opening the data bucket page. for example, in the image below we can find the next REST API:
+
+```text
+https://api.thinger.io/v1/users/jt/buckets/NodeRED_Device_Example/data 2
+```
+
+![](../.gitbook/assets/image%20%2855%29.png)
+
+5- If we add now the **?authorization=** command and the token access, we obtain the complete request that can be used with any POSTMAN service or any device to send POST request to thinger.io server: 
+
+```text
+https://api.thinger.io/v1/users/jt/buckets/NodeRED_Device_Example/data?authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJOb2RlUkVEX0RldmljZV9FeGFtcGxlIiwidXNyIjoianQifQ.1BOzYXp3UveYxGEmKThrSTIblYgc1Dp3IPBFdGAcu_0
+
+```
+
+6- note that the value needs to go in a application/json type, so the device code needs to create a valid JSON on it code. 
+
+7- Finally open the data bucket inspector and check the result:
+
+![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/f/f8b64b1a2219d80512bd8028d5904298e6356424_2_492x500.png)
+
+It is possible to send JSON with the data you need. However, the problem with this integration is that you can’t explode full [thigner.io](http://thigner.io/) features as can be made using the HTTP device, that is why wy will try to upgrade the community server as soon as possible. 
 
 ### 
 

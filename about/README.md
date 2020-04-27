@@ -24,8 +24,8 @@ Thinger.io is a platform in constant growth, our development team is continuousl
 * [x] On-premise instances deployment 
 * [x] File System 
 * [x] MQTT broker
-* [x] Global device properties 
-* [x] Project & products manager
+* [ ] Global device properties 
+* [ ] Project & products manager
 * [ ] Shared resources manager
 * [ ] ESP32 & ESP8266 OTA
 * [ ] Maps widget improvement 
