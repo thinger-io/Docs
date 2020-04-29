@@ -157,7 +157,17 @@ When this command is included, the program will print all the communication traz
       </td>
     </tr>
   </tbody>
-</table>## Community Support
+</table>## Support
 
-Utiliza los recursos del programador de forma activa, programa con la documentación y consulta las dudas en la comunidad de usuarios 
+If after following this instructions it was impossible to find a solution, we have created other resources that can be used in order to find help: 
+
+* Community Discussion Forum: A forum \([accessible here](https://community.thinger.io)\) in which other users and some of our experts are providing free assistance. Making proper use of this resource means using the browser in order to find old topics related to the doubt before creating a new one, but if it is required, take in consideration: 
+
+  * Write in English language   
+  * Use an attractive and descriptive title
+  * Write a proper description of your problem, including some description of the context, use case or objectives or the project in order to help other people to understand the situation. 
+  * Don't forget providing all the material that will be required to replicate the problem such as: Source code, Libraries and PCB specification, Compiler output and Debug connection trace. 
+  * Be polite, remember that other developers are not compelled to help you and if they do it is with good intentions
+
+* Extended Support: For those professional developers that require quick assistance on development or maintenance processes,  Thinger.io privated instance licenses can be upgraded with an extended support service. 
 
