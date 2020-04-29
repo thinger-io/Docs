@@ -9,6 +9,7 @@ description: >-
 
 ## Coding Good Practices
 
+* First of all, read the platform documentation, it is strongly recommended to use the example codes provided there when creating new firmwares.
 * Thinger resources definition code must be introduced in the `setup()` function or any other function that is executed just one time in the program source code.
 * `thing.handle()` instruction must be included in the `loop()` function or in the main recurrent execution function of the program source code.
 * Avoid using `delay()` or any other locking instructions when coding for IoT purposes. Using it will make your device losing the connection with the network, which will result in continuous reconnection processes. If the program requires timing functionalities, it is possible to use non-locking structures for example: 
@@ -40,7 +41,7 @@ void loop(){
 }
 ```
 
-* Use the debug mode when testing and prototyping to identify connection problems \(shee troubleshooting guidelines\)
+* Use the **debug** mode when testing and prototyping to identify connection problems \(shee troubleshooting guidelines\)
 * Create consistent input resources using pson.is\_empty\(\) function. Every time Thinger server creates a new connection with any device, each resource code is executed with an empty Pson. To prevent this behavior making any runaway execution, it is useful to analyze the content of the Pson before allowing the resources to execute. The following example code implements the `pson.is_empty()` function and an auxiliar Pson to save the proper status of the resource \(arduino framework is being used\):
 
 ```text
@@ -61,6 +62,13 @@ aux=false;             //set an initial status for the aux pson
  }
 } 
 ```
+
+### Coding problems & Solutions list
+
+| Problem | Source | Solution |
+| :--- | :--- | :--- |
+| program don't compile | errors on your code or incompatible libraries | try with basic source code example to check it is working before continue developing |
+| Example code don't compile | PCB bootloader version incompatible | Check the compiler output to find the problem or install and older version of the device bootloader.  |
 
 ## Connection Troubleshooting Guidelines
 
@@ -101,7 +109,7 @@ When this command is included, the program will print all the communication traz
   <thead>
     <tr>
       <th style="text-align:left">Problem</th>
-      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Source</th>
       <th style="text-align:left">Solution</th>
     </tr>
   </thead>
