@@ -48,7 +48,7 @@ Note that Maker Plan is a limited freemium service that is not configurable and 
 
 After configuring the selected license, the checkout process is really simple, just click on the "Deploy Instance" button, and wait for the checkout pop-up. In the new form, it is necessary to introduce your billing email \(it can be different from the admin email\) where the invoices \(if subscribed to a paid plan\) will be sent:
 
-![Billing email](../.gitbook/assets/image%20%28212%29.png)
+![Billing email](../.gitbook/assets/image%20%28213%29.png)
 
 After introducing the billing email, it is necessary to set the billing address. It is possible to set a VAT number if you are a registered company from the European Union in order to calculate the right taxes and build the invoice.
 

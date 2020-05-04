@@ -177,7 +177,7 @@ Note that his is an easy example that only retrieves data from just one MQTT dev
 {% tab title="GPS Geofences" %}
 Geofencing is an interesting IoT use case, with many applications in asset management, fleets or package tracking. The next flow shows how to monitor the location of any device to create an alert when it leaves an area specified with a Geofence Node.  
 
-![](../.gitbook/assets/image%20%28115%29.png)
+![](../.gitbook/assets/image%20%28137%29.png)
 
 Creating this integration with the "device\_location" property, it is possible to integrate any kind of device including Thinger.io Software Clients, Sigfox, TTN or even HTTP devices in a very simple way.
 
@@ -185,19 +185,17 @@ Creating this integration with the "device\_location" property, it is possible t
 [Learn how to create an email endpoint here. ](https://docs.thinger.io/console#email-endpoint)
 {% endhint %}
 
-  
-   
 This flow can be easily imported into your Node-RED workspace using the next JSON:
 
 ```text
-[{"id":"59de004e.ca5eb","type":"geofence","z":"d644cd0f.0093c","name":"","mode":"circle","inside":"false","rad":146402.02859820635,"points":[],"centre":{"latitude":40.636101528180916,"longitude":-4.011267721652985},"x":357.01296615600586,"y":209.84895133972168,"wires":[["c0dd553b.456428"]]}]
+[{"id":"5f747490.ef8edc","type":"tab","label":"Flow 3","disabled":true,"info":""},{"id":"207937f8.10dc48","type":"server-events","z":"5f747490.ef8edc","name":"","event":"device_callback_call","bucket":"","device":"","endpoint":"","state":"","server":"285f7166.a811fe","x":158.60000228881836,"y":264.00000381469727,"wires":[["8f3dd8cd.71e4e8","56adf62.4aa1108"]]},{"id":"553ff10.2e60c1","type":"geofence","z":"5f747490.ef8edc","name":"","mode":"polyline","inside":"false","rad":0,"points":[{"latitude":39.89203705190782,"longitude":-3.8814695924520493},{"latitude":40.06041580712444,"longitude":-3.507934436202049},{"latitude":40.09404176311921,"longitude":-3.0025633424520493},{"latitude":41.14474248673421,"longitude":-3.5299070924520493},{"latitude":40.253538217286675,"longitude":-4.628539904952049},{"latitude":40.102445657515226,"longitude":-3.771606311202049}],"centre":{},"x":573.0000076293945,"y":265.0000276565552,"wires":[["be251c21.6d6e3","233f843b.94472c"]]},{"id":"be251c21.6d6e3","type":"endpoint-call","z":"5f747490.ef8edc","name":"","endpoint":"alert","server":"285f7166.a811fe","x":771.6000595092773,"y":266.0000286102295,"wires":[]},{"id":"8f3dd8cd.71e4e8","type":"debug","z":"5f747490.ef8edc","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","x":399.6000061035156,"y":346.00000762939453,"wires":[]},{"id":"233f843b.94472c","type":"debug","z":"5f747490.ef8edc","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","x":790.6000366210938,"y":347.0000057220459,"wires":[]},{"id":"56adf62.4aa1108","type":"change","z":"5f747490.ef8edc","name":"","rules":[{"t":"set","p":"payload","pt":"msg","to":"payload.payload","tot":"msg"}],"action":"","property":"","from":"","to":"","reg":false,"x":389.6000061035156,"y":265.00000381469727,"wires":[["553ff10.2e60c1"]]},{"id":"285f7166.a811fe","type":"thinger-server","z":"","host":"$(THINGER_HOST)","name":"","ssl":true}]
 ```
 {% endtab %}
 
 {% tab title="Modify Incoming data" %}
 In some situations it is required to change the unit or metric of any variable, it is now possible to make this transformations before store data in a data bucket by use this Node-RED flow:
 
-![](../.gitbook/assets/image%20%28170%29.png)
+![](../.gitbook/assets/image%20%28171%29.png)
 
  The configuration is quite simple, fist node retrieves the measurement of any device to be modified by the "function" node, that contains the codification that has been included below, and finally the "bucket write" node allows storing the transformed data. 
 

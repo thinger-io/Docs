@@ -103,7 +103,7 @@ Now that the MQTT data is being stored into the data bucket, it is possible to s
 
 Dashboard widgets can show data from different devices, and been configured to create flexible data representations as we have explained in the [**dashboard section of this documentation**](../console/dashboards.md). 
 
-![](../.gitbook/assets/image%20%28145%29.png)
+![](../.gitbook/assets/image%20%28146%29.png)
 
 ### Processing data with Node-RED Plugin 
 

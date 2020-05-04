@@ -2,11 +2,11 @@
 description: This section explains how to deploy and to use the platform Plugins System
 ---
 
-# PLUGINS
+# PLUGINS MARKETPLACE
 
 ## Introduction
 
-Plugins are extensions that allows complementing Thinger.io Platform with specific features or functionalities. 
+Plugins are extensions that allows complementing Thinger.io Platform with additional features or creating integrations with third party internet services, data analytics algorithms or custom softwares. 
 
 The core of Thinger.io IoT Platform is designed to be lean and lightweight, to maximize flexibility and minimize learning and common configuration of IoT networks.  Plugins offer custom functions that can be deployed on-demand,  allowing each user to complement their IoT server as it specific needs.
 
@@ -14,6 +14,10 @@ For instructions and information about installing, upgrading, troubleshooting, a
 
 {% hint style="info" %}
 [Note: Plugins are only available for premium Thinger.io servers. Check **this link** to create your own instance within minutes](https://pricing.thinger.io)
+{% endhint %}
+
+{% hint style="success" %}
+Thinger.io plugins source code are now available in our Github repository, so if you want to contribute do not hesitate on fork and send your pull-requests
 {% endhint %}
 
 ## Default Plugins
@@ -26,7 +30,7 @@ For instructions and information about installing, upgrading, troubleshooting, a
 
 Plugins Marketplace can be founded by clicking into "Plugins" main menu tab.  
 
-![](../.gitbook/assets/image%20%28166%29.png)
+![](../.gitbook/assets/image%20%28167%29.png)
 
 This interface contains a list of the existent plugins that can be installed to extend Thinger.io IoT Platform and will include some categories to filter and easily manage the collection of plugins, that at this moment is really small but it is planned to grow a lot in the next years. 
 
@@ -34,7 +38,7 @@ This interface contains a list of the existent plugins that can be installed to 
 
 Each plugin has a description page, that contains useful information to learn how to use its features and a "plugin management" context that allows managing its installation and status.
 
-![](../.gitbook/assets/image%20%28177%29.png)
+![](../.gitbook/assets/image%20%28178%29.png)
 
 That provides a graphical interface to make the next operations:
 
@@ -47,12 +51,12 @@ That provides a graphical interface to make the next operations:
 * **Resume:** Launch the execution of the plugin after pause.
 * **Remove:** Uninstall the plugin
 
-## Plugin Development 
+## Custom Plugins Development 
 
-This section will provide deeply information about the infrastructure that is supporting plugins system and how to build new plugins.
+In order to provide a highly extensive system we are working to make it easy for community developers to contribute through Open Source plugins. This section will provide deeply information about the infrastructure that is supporting plugins system and how to build, test and deploy custom ones. 
 
 {% hint style="danger" %}
-Sorry! this is work in progress 
+This is work in progress, but hopefully will be ready by mid-2020
 {% endhint %}
 
 ### Plugins System Infrastructure
@@ -60,4 +64,6 @@ Sorry! this is work in progress
 ### Plugins Repository
 
 ### Writing a Plugin
+
+### Deploying a Custom Plugin
 

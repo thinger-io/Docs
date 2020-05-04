@@ -163,10 +163,10 @@ If after following this instructions it was impossible to find a solution, we ha
 
 * **Community Discussion Forum:** A forum \([accessible here](https://community.thinger.io)\) in which other users and some of our experts are providing free assistance. Making proper use of this resource means using the browser in order to find old topics related to the doubt before creating a new one, but if it is required, take in consideration: 
 
-  * It is preferable to write in English language, the more people who can understand your problem, the more likely they are to find help.
+  * It is preferable to write in **English** language, as the more people can understand your problem, the more can help you providing different opinions or solutions.
   * Use an attractive and descriptive title and select the most accurate category
-  * Write a proper description of your problem, including some description of the context, use case or objectives or the project in order to help other people to understand the situation. 
-  * Don't forget providing all the material that will be required to replicate the problem such as: Source code, Libraries and PCB specification, Compiler output and Debug connection trace. 
+  * Write a proper description of your problem, including some **description of the context**, use case or objectives or the project in order to help other people to understand the situation. 
+  * Don't forget providing all the material that will be required to replicate the problem such as: **Source code,** Libraries and PCB specification, Compiler output and **Debug connection trace**, as well as **thinger.io configuration.** 
   * Be polite, remember that other developers are not compelled to help you and if they do it is with good intentions
 
 * **Extended Support:** For those professional developers that require quick assistance on development or maintenance processes,  Thinger.io privated instance licenses can be upgraded with an extended support service. 
