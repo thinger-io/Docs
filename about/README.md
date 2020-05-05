@@ -54,9 +54,9 @@ Note that the developments always return to the community and never give exclusi
 
 ## Partners
 
-Despite we don't have released it yet, still working on creating a partners directory en el que nuestros usuarios podrán encontrar y ponerse en contacto con las tecnologías mejor relacionadas, simplificando aún más el desarrollo de sus proyectos obteniendo además algunos privilegios. de Parents en la que ya se encuentran algunos important actors of the IoT behavior, por eso con so we continue working on creating a nice partners community 
+Despite we don't have released it yet, still working on creating a large partners community directory to provide our users a way to get in touch with the best related technologies, simplifying even more the development of their projects obtaining also some privileges. of Parents in which there are already some important actors of the IoT behavior, that's why with so we continue working on creating a nice partners community.
 
-#### Our Partners
+#### Thinger.io Partners
 
 * \*\*\*\*[**Sigfox** ](https://sigfox.com)global communication service provider for IoT
 * \*\*\*\*[**Node-RED**](https://nodered.org/) Open Source-Rule Engine for IoT projects
@@ -68,5 +68,5 @@ Despite we don't have released it yet, still working on creating a partners dire
 
 #### How to become a partner
 
-There are multiple ways in which we can collaborate, by integrating your service,  your product or with a reseller partnership depending on your business model and services, so do not hesitate on writing us your proposal at info@thinger.io and benefit from better conditions,  access to our clients community or being an active part of a custom development that allows you to create a competitive advantage with Thinger.io technology.
+There are multiple ways in which we can collaborate depending on your business model and services, so do not hesitate on writing us your proposal at info@thinger.io and benefit from better contracting conditions, access to our clients community or being an active part of Thinger.io Platform contributors, that are helping us to continue growing this technology in the best direction. 
 
