@@ -30,6 +30,6 @@
   * [WiFi Button](hardware/wifi-button.md)
 * [MOBILE APP](mobile.md)
 * [ABOUT](about/README.md)
-  * [Community](about/community.md)
+  * [IoT Ecosystem](about/community.md)
   * [Resources](about/resources.md)
 

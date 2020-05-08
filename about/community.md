@@ -1,4 +1,4 @@
-# Community
+# IoT Ecosystem
 
 ## Developers Network
 
@@ -15,17 +15,24 @@ If you can't find help there, or you need professional support, please consider 
 
 Despite we don't have released it yet, still working on creating a large partners community directory to provide our users a way to get in touch with the best related technologies, simplifying even more the development of their projects obtaining also some privileges. of Parents in which there are already some important actors of the IoT behavior, that's why with so we continue working on creating a nice partners community.
 
-#### Thinger.io Partners
+### Thinger.io **p**artners
 
-* \*\*\*\*[**Sigfox** ](https://sigfox.com)global communication service provider for IoT
-* \*\*\*\*[**Node-RED**](https://nodered.org/) Open Source-Rule Engine for IoT projects
-* \*\*\*\*[**Theobroma Systems**](https://www.theobroma-systems.com/) High performance Hardware developers for devices, gateways and servers. 
-* \*\*\*\*[**La Siesta Tech**](http://www.lasiesta.tech/) Hardware developers and IoT consultants
-* \*\*\*\*[**Talent Swarm**](https://talentswarm.com/) Industrial Digital Tweens experts
-* \*\*\*\*[**UC3M GIAA**](http://portal.uc3m.es/portal/page/portal/grupos_investigacion/giaa) Advanced Artificial Intelligence and Data Analytics experts
-* \*\*\*\*[**Fundación UNED** ](https://www.fundacion.uned.es/actividad/idactividad/20219)complementary education for engineers
+#### IoT service providers
 
-#### How to become a partner
+* \*\*\*\*[**Sigfox:** ](https://sigfox.com)global communication service provider for IoT
+* \*\*\*\*[**Node-RED**](https://nodered.org/)**:** Open Source-Rule Engine for IoT projects
+* \*\*\*\*[**Talent Swarm**](https://talentswarm.com/)**:** Industrial Digital Tweens experts
+* \*\*\*\*[**UC3M GIAA**](http://portal.uc3m.es/portal/page/portal/grupos_investigacion/giaa)**:** Advanced Artificial Intelligence and Data Analytics experts
+* \*\*\*\*[**Fundación UNED:** ](https://www.fundacion.uned.es/actividad/idactividad/20219)complementary education for engineers
+
+**Hardware providers and manufacturers**
+
+* \*\*\*\*[**Espressif Systems:**](https://www.espressif.com/) ****designs a range of high-performance Wi-Fi+Bluetooth/BLE chipsets and modules.
+* \*\*\*\*[**Theobroma Systems**](https://www.theobroma-systems.com/)**:** High performance Hardware developers for devices, gateways and servers. 
+* \*\*\*\*[**La Siesta Tech**](http://www.lasiesta.tech/)**:** Hardware developers and IoT consultants
+* \*\*\*\*[**SeeedStudio**](https://www.seeedstudio.com/fusion_pcb.html)**:** Whether you are a developer, technical supplier, or industry player, we provide products and services for your IoT needs.
+
+### How to become a partner
 
 There are multiple ways in which we can collaborate depending on your business model and services, so do not hesitate on writing us your proposal at info@thinger.io or fill ****[**this form**](https://forms.gle/1ZPSxTuAiDvHJd4AA) ****to benefit of better contracting conditions, access to our developers community or being an active part of Thinger.io Platform contributors, that are helping us to continue growing this technology in the best direction. 
 
