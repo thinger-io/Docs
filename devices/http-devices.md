@@ -1,8 +1,10 @@
-# HTTP DEVICES
+---
+description: >-
+  To integrate any kind of third party device or third party data resource with
+  thinger.io
+---
 
-{% hint style="info" %}
-[This feature is only available on private Thinger.io Server instances. that uses the most up-to-date server. Freemium users can't use it yet, but they can integrate their HTTP devices by using the **"traditional integration"** which is explained on **this** section.](https://docs.thinger.io/hardware-devices/http-devices#traditional-http-integration)
-{% endhint %}
+# HTTP DEVICES
 
 There are some projects that require the integration of third party data sources, such as a Cloud Service, devices without Thinger.io library on it source code, or a custom program. In this section it is explained how to use the "HTTP device" profile at Thinger.io, that allows receiving data via REST API from whatever source that is able to create a connection with Thinger.io Server and send an HTTP request, taking advantage of all Thinger.io features such as display real time data in dashboards, store in data buckets or process it using a plugin. 
 
@@ -11,7 +13,7 @@ This integration provides bidirectional communication between Thinger.io and the
 ![](../.gitbook/assets/image%20%28102%29.png)
 
 {% hint style="info" %}
-Note that this integration can't explode the 100% of Thinger.io features and benefits in terms of communication efficiency, real-time data and device administration, so it is strongly recommended integrating the devices using a Thinger.io software client if it is available.
+Note that this integration can't explode the 100% of Thinger.io features and benefits in terms of communication efficiency, real-time data and device administration, so it is strongly recommended integrating the devices using the Thinger.io software client if it is available.
 {% endhint %}
 
 In the next sections it is explained how to create and configure the HTTP Device Profile at Thinger.io Platform and how to link it with the data source.
@@ -151,41 +153,4 @@ As shown in the previous image, you should receive an empty 200 OK status messag
 If the source system supports cURL instructions, there is an integration example into `Callback / Curl` tab, ready to copy and modify:
 
 ![](../.gitbook/assets/image%20%2878%29.png)
-
-## Traditional HTTP integration
-
-If the user is working traditional Thinger.io Community Server, the "HTTP" Device will not be available on the "device type" list when creating a new device \(it will, in the future, when the community server gets updated to the newest version of Thinger.io\). But it still being possible to create a similar integration by sending data directly from the device to a Data Bucket using the Open REST API. To make this just follow the next steps: 
-
-1- Go to "Data Bucket" menu section and create a new data bucket selecting and **“From Write Call”** Data source.
-
-2- Create an access token with permissions to write over the data bucket 
-
-![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/c/c7ac34097facf9c1e4e60cfcba971cc74f0d0455_2_631x500.png)
-
-3- Build an HTTP Request using [Thinger.io](http://thinger.io/) REST API and the token authorization to allow a third party device sending data to the bucket from a third party software.
-
-4- The better way to find the appropriate API is using the "Network inspector" feature of Chrome browser when opening the data bucket page. for example, in the image below we can find the next REST API:
-
-```text
-https://api.thinger.io/v1/users/jt/buckets/NodeRED_Device_Example/data 2
-```
-
-![](../.gitbook/assets/image%20%2855%29.png)
-
-5- If we add now the **?authorization=** command and the token access, we obtain the complete request that can be used with any POSTMAN service or any device to send POST request to thinger.io server: 
-
-```text
-https://api.thinger.io/v1/users/jt/buckets/NodeRED_Device_Example/data?authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJOb2RlUkVEX0RldmljZV9FeGFtcGxlIiwidXNyIjoianQifQ.1BOzYXp3UveYxGEmKThrSTIblYgc1Dp3IPBFdGAcu_0
-
-```
-
-6- note that the value needs to go in a application/json type, so the device code needs to create a valid JSON on it code. 
-
-7- Finally open the data bucket inspector and check the result:
-
-![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/f/f8b64b1a2219d80512bd8028d5904298e6356424_2_492x500.png)
-
-It is possible to send JSON with the data you need. However, the problem with this integration is that you can’t explode full [thigner.io](http://thigner.io/) features as can be made using the HTTP device, that is why wy will try to upgrade the community server as soon as possible. 
-
-### 
 
