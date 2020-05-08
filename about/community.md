@@ -1,6 +1,6 @@
 # Community
 
-## Discussion
+## Developers Network
 
 The two main places to discuss about Thinger.io are:
 
@@ -11,7 +11,27 @@ These are the best places to get started if you’re stuck on something, think y
 
 If you can't find help there, or you need professional support, please consider contracting our extended support when purchasing your license, and if you need commercial information, do not hesitate on writing at info@thinger.io. 
 
-## Social networks profiles
+## Partners Network
+
+Despite we don't have released it yet, still working on creating a large partners community directory to provide our users a way to get in touch with the best related technologies, simplifying even more the development of their projects obtaining also some privileges. of Parents in which there are already some important actors of the IoT behavior, that's why with so we continue working on creating a nice partners community.
+
+#### Thinger.io Partners
+
+* \*\*\*\*[**Sigfox** ](https://sigfox.com)global communication service provider for IoT
+* \*\*\*\*[**Node-RED**](https://nodered.org/) Open Source-Rule Engine for IoT projects
+* \*\*\*\*[**Theobroma Systems**](https://www.theobroma-systems.com/) High performance Hardware developers for devices, gateways and servers. 
+* \*\*\*\*[**La Siesta Tech**](http://www.lasiesta.tech/) Hardware developers and IoT consultants
+* \*\*\*\*[**Talent Swarm**](https://talentswarm.com/) Industrial Digital Tweens experts
+* \*\*\*\*[**UC3M GIAA**](http://portal.uc3m.es/portal/page/portal/grupos_investigacion/giaa) Advanced Artificial Intelligence and Data Analytics experts
+* \*\*\*\*[**Fundación UNED** ](https://www.fundacion.uned.es/actividad/idactividad/20219)complementary education for engineers
+
+#### How to become a partner
+
+There are multiple ways in which we can collaborate depending on your business model and services, so do not hesitate on writing us your proposal at info@thinger.io or fill ****[**this form**](https://forms.gle/1ZPSxTuAiDvHJd4AA) ****to benefit of better contracting conditions, access to our developers community or being an active part of Thinger.io Platform contributors, that are helping us to continue growing this technology in the best direction. 
+
+## Other Networks
+
+### Social networks profiles
 
 * Twitter:[ @thinger\_io](https://twitter.com/thinger_io)
 * Instagram: [@thinger.io](https://www.instagram.com/thinger.io/)
@@ -20,7 +40,7 @@ If you can't find help there, or you need professional support, please consider 
 * Youtube: [thinger.io](https://www.youtube.com/channel/UCnnGBSXMZ06CC0aun5RD41g)
 * Hackster.io: [thinger-io](https://www.hackster.io/thinger-io)
 
-## Professional network profiles
+### Professional network profiles
 
 * \*\*\*\*[**Crunchbase** a platform for finding business information about private and public companies](https://www.crunchbase.com/organization/thinger-io#section-overview)
 * \*\*\*\*[**Iotone** an advisory firm focused on industrial digitalization.](https://www.iotone.com/supplier/thinger.io/v2348)
