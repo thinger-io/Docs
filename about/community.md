@@ -30,6 +30,7 @@ Despite we don't have released it yet, still working on creating a large partner
 * \*\*\*\*[**Espressif Systems:**](https://www.espressif.com/) ****designs a range of high-performance Wi-Fi+Bluetooth/BLE chipsets and modules.
 * \*\*\*\*[**Theobroma Systems**](https://www.theobroma-systems.com/)**:** High performance Hardware developers for devices, gateways and servers. 
 * \*\*\*\*[**La Siesta Tech**](http://www.lasiesta.tech/)**:** Hardware developers and IoT consultants
+* \*\*\*\*[**Bluetronics:** ](https://bluetronics.co.in/)Industrial IoT & Robotics service provider
 * \*\*\*\*[**SeeedStudio**](https://www.seeedstudio.com/fusion_pcb.html)**:** Whether you are a developer, technical supplier, or industry player, we provide products and services for your IoT needs.
 
 ### How to become a partner
