@@ -20,50 +20,30 @@ This documentation will describe how to integrate SigFox devices and its data in
 
 This process is carried out in two parts, on the one hand, the preparation of Thinger.io to receive data from Sigfox and, on the other hand, the configuration of Sigfox cloud callback that will send the information to Thinger.io. During the next sections we will explain both parts, starting with Thinger.io side steps: 
 
-There are two ways to configure Thinger.io to work with Sigfox devices. The best option is by deploying the "Sigfox Plugin", which will manage the integration, providing advanced features such as devices auto-provisioning, Uplink/Downlink payload processing and device management, but this option is only available for subscribed developers. Freemium accounts can also integrate Sigfox devices following the "tradicional integration" section below:
+There are two ways to configure Thinger.io to work with Sigfox devices. The best option is by deploying the "Sigfox Plugin", which will manage the integration, providing advanced features such as devices auto-provisioning \(good to integrate large networks\), Uplink/Downlink payload processing and device management, but this option is only available for subscribed developers. Freemium accounts can also make individual Sigfox device integration using the "HTTP device". Both ways are explained below:
 
 ### **Advanced Integration \(with Sigfox plugin\)**
 
 {% page-ref page="../plugins/sigfox.md" %}
 
-### Traditional integration \(without plugins\)
+### Single integration \(without plugins\)
 
-We need to configure some resources in our Thinger.io account, like defining a place where the Sigfox data will be stored, and grating access to the Sigfox platform to store data in our account. The required steps are defined in the following subsections.
+When implementing little prototypes or maker projects using the free account, it is possible to integrate an individual device using the "HTTP device" that allows using almost every Thinger.io platform features including: 
 
-#### Create a Data Bucket
+* Store data in buckets
+* Show data in customizable dashboards
+* Send endpoints to post data on emails, social networks or third parties
+* Sigfox downlink processes to send configuration data to the device
 
-Data buckets are data storage that will keep the information received from the Sigfox devices. So, wee need to create a data bucket to store the information from our Sigfox device. We can use one data bucket to store data from multiple devices, but it is preferred a single data bucket for each device. This way, we can create dashboards with time-series data from each bucket representing a single device or sensed entity.
+{% hint style="info" %}
+Payload data processing is only available using plugin integration
+{% endhint %}
 
-Then, open the Buckets section in your cloud console, and create a new Data Bucket. We will need some details, like:
+To perform this integration, it is required to create a new HTTP device and configure its callback flows as it is explained at the HTTP devices section of this documentation: 
 
-1. `Bucket Id`, a unique bucket identifier in your account that will used later in the integration with Sigfox. The identifier in this example will be `SmartEverything`. Keep this identifier in hand, as it will be used in the Sigfox side.
-2. `Bucket Name`,  which can be used as a more user-friendly representation of the identifier.
-3. `Bucket Description`, where we can place anything we want to remember the bucket purpose. 
-4. `Enabled`, that needs to be true to allow bucket writing.
-5. `Data Source`, that needs to bee set to `From Write Call`, as the Sigfox devices won't be connected directly to the platform, but will push data over the REST API Interface.
+{% page-ref page="http-devices.md" %}
 
-![](../.gitbook/assets/create_sigfox_bucket.png)
-
-Once the form is filled, just click on `Add Bucket` to create you bucket.
-
-#### Create an Access Token
-
-At this moment we have created a data bucket to store our Sigfox Data, but, as any Thinger.io resource, they are protected by our account credentials. This way, we need to issue an access token that will allow Sigfox back-end to interact with our data bucket. In this example, we will create an access token that will grant access only to our data bucket, and moreover, access to the the write operation. This way, if the token is leaked in some way, we are not exposing other resources to the attacker.
-
-Then, open the Access Tokens section in your cloud console, and create a new Access Token. We will need some details, like:
-
-1. `Token Id`, a unique token identifier in your account.
-2. `Token Name`,  which can be used as a more user-friendly representation of the identifier.
-3. `Enabled`, that needs to be true to allow using the token. It can be disabled in any moment if you want.
-4. `Token permissions`, that will be configured for accessing our Bucket resource, `SmartEverything` in this case, with the `WriteBucket` action.
-
-![](../.gitbook/assets/create_sigfox_token.png)
-
-Once the form is filled, just click on Add Token to create your token. In this moment, the token value will appear. In our case, the token generated is the following. Keep this token in hand, as it will be used in the Sigfox side.
-
-```text
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJTbWFydEV2ZXJ5dGhpbmciLCJ1c3IiOiJhbHZhcm9sYiJ9.0Qb48c_ToBiIVcCOdvXU2Kn51mTnGLDcN44shVRzNls
-```
+Onces the new device has been created Thinger.io will provide a REST API callback that can be used to configure Sigfox cloud as it is explained in the section below:
 
 ## Sigfox Cloud Configuration
 
