@@ -55,7 +55,7 @@ Finally, the same logic is applied into the `Actions` section, allowing to provi
 
 ### Projects Navigation 
 
-una misma cuenta de usuario puede participar en muchos proyectos, es por eso que la consola de thinger cuenta con una herramienta en la barra superior que permite selecionar el proyecto con el que queremos trabajar en cada momento:
+The same user account can participate in many projects, that's why the thinger console has a tool on the top bar that allows you to select the project you want to work with at any time:
 
 ![](../.gitbook/assets/image%20%28219%29.png)
 
