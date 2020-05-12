@@ -26,7 +26,7 @@ There are two ways to configure Thinger.io to work with Sigfox devices. The best
 
 {% page-ref page="../plugins/sigfox.md" %}
 
-### Single integration \(without plugins\)
+### Single Device Integration \(without plugins\)
 
 When implementing little prototypes or maker projects using the free account, it is possible to integrate an individual device using the "HTTP device" that allows using almost every Thinger.io platform features including: 
 

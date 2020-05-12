@@ -42,7 +42,7 @@ To start working with Thinger.io just [**create a free account in our cloud plat
 
 Using "Devices" menu tab, just click in "New device" button, and fill the form with the device ID, description and Credentials you prefer.
 
-![](.gitbook/assets/image%20%2825%29.png)
+![](.gitbook/assets/image%20%2828%29.png)
 
 ### 2.Connect Device
 
@@ -54,7 +54,7 @@ After provisioning the device at Thinger.io cloud, it is the moment to configure
 2. Going to "File&gt;Examples&gt;Thinger.io", open the example code that fix better for the PCB
 3. Edit the example code to include your username, device ID and Thinger.io credentials. If the device use a secured networks, connection credentials needs to be written too as shown in the image below. 
 
-![](.gitbook/assets/image%20%2827%29.png)
+![](.gitbook/assets/image%20%2830%29.png)
 
 This example contains a two simple resources to send and retrieve data from Thinger.io platform, however, it can be modified with many diff
 
@@ -105,11 +105,11 @@ Complete device list can be displayed by going to "devices" menu tab. This inter
 
 Each device can be managed through the "Device Dashboard". This interface shows connection data and also allows checking the "device API" with raw device data representation.
 
-![](.gitbook/assets/image%20%287%29.png)
+![](.gitbook/assets/image%20%288%29.png)
 
 Thinger.io provides bidirectional communication, so it is possible to retrieve data into the server using "**devices output resources**" and also sending messages from server to the "**devices input resources**". Both resources are represented in the "device API" viewer.
 
-![Input &amp; Output resources in the device API inspector](.gitbook/assets/image%20%2835%29.png)
+![Input &amp; Output resources in the device API inspector](.gitbook/assets/image%20%2839%29.png)
 
 ### 4.Store, Show & Share Data
 

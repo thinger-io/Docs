@@ -26,12 +26,14 @@ Thinger.io is a platform in constant growth, our development team is continuousl
 * [x] MQTT broker
 * [x] Global device properties 
 * [x] Project & products manager
-* [ ] Shared resources manager
+* [x] Shared resources manager
+* [x] Community Server Update
+* [ ] Data analytics system
+* [ ] ARM-64 server compilation
 * [ ] ESP32 & ESP8266 OTA
 * [ ] Maps widget improvement 
-* [ ] ARM-64 server compilation 
+* [ ] Custom plugins support
 * [ ] COAP integration, NB-IoT & LTE CAT Mclient
-* [ ] Custom plugins support 
 * [ ] InfluxDB tagged data buckets
 * [ ] Instance status visualizer 
 
