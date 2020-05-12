@@ -23,11 +23,11 @@ Note that this feature is not available on Thinger.io platform freemium accounts
 
 Creating the device on Thinger.io is done like any other resource on the platform, juts accessing the device list, available in the "devices" section of the main menu and clicking on the "Add device" button: 
 
-![](../.gitbook/assets/image%20%28132%29.png)
+![](../.gitbook/assets/image%20%28138%29.png)
 
 Then the "new device form" will appear, allowing to introduce device information:
 
-![](../.gitbook/assets/image%20%28113%29.png)
+![](../.gitbook/assets/image%20%28119%29.png)
 
 * **Device Type**: MQTT device should be selected
 * **Device identifier:** Must be unique within your devices
@@ -99,11 +99,11 @@ Use **JSON** as the payload type for the device messages stored by buckets.
 
 Now that the MQTT data is being stored into the data bucket, it is possible to show it on dashboards, where multiple widgets can be used to create real-time or historical representations by selecting the bucket as the data source as it is shown in the image below: 
 
-![](../.gitbook/assets/image%20%2890%29.png)
+![](../.gitbook/assets/image%20%2894%29.png)
 
 Dashboard widgets can show data from different devices, and been configured to create flexible data representations as we have explained in the [**dashboard section of this documentation**](../console/dashboards.md). 
 
-![](../.gitbook/assets/image%20%28155%29.png)
+![](../.gitbook/assets/image%20%28161%29.png)
 
 ### Processing data with Node-RED Plugin 
 

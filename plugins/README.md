@@ -30,7 +30,7 @@ Thinger.io plugins source code are now available in our Github repository, so if
 
 Plugins Marketplace can be founded by clicking into "Plugins" main menu tab.  
 
-![](../.gitbook/assets/image%20%28179%29.png)
+![](../.gitbook/assets/image%20%28185%29.png)
 
 This interface contains a list of the existent plugins that can be installed to extend Thinger.io IoT Platform and will include some categories to filter and easily manage the collection of plugins, that at this moment is really small but it is planned to grow a lot in the next years. 
 
@@ -38,7 +38,7 @@ This interface contains a list of the existent plugins that can be installed to 
 
 Each plugin has a description page, that contains useful information to learn how to use its features and a "plugin management" context that allows managing its installation and status.
 
-![](../.gitbook/assets/image%20%28191%29.png)
+![](../.gitbook/assets/image%20%28198%29.png)
 
 That provides a graphical interface to make the next operations:
 
