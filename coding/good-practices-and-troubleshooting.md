@@ -74,6 +74,8 @@ aux=false;             //set an initial status for the aux pson
 
 There are few situations that can produce the malfunction of the software client, hampering the connection with the IoT platform or making it unstable. But Thinger.io software client has been provided with some tools to detect and avoid these kind of problems. 
 
+#### Enabling DEBUG mode
+
 If a recently programmed device is showing problems to be "online" on Thinger.io Server or even is being locked, the debug function will help to identify the issue. Include the following definition in your sketch, but make sure it comes first, before any other includes \(it was reported to cause crashes on some boards otherwise\). When using Arduino framework it is necessary to enable `Serial` communication, as all the debugging information is displayed over Serial.
 
 ```text
