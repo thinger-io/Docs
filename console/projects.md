@@ -69,11 +69,11 @@ Items that appear in the account lists with a user's icon on the left side are r
 
 ### Creating project resources 
 
-The association of device profiles, data buckets or dashboards to a specific project is done during creation. When a new resource is added with a project selected in the top bar, the resource is associated with that project. Esta situación puede visualizarse en la api del dispositivo, que mostrará el proyecto al que pertenece:
+The association of device profiles, data buckets or dashboards to a specific project is done during creation. When a new resource is added with a project selected in the top bar, the resource is associated with that project. This situation can be displayed in the device's api, which will show the project it belongs to:
 
 ![](../.gitbook/assets/image%20%28118%29.png)
 
-Nótese que en la API de un dispositivo ajeno, además del identificador del proyecto podemos visualizar la cuenta a la que pertenece de dicho dispositivo:
+Note that in the API of a third party device, in addition to the project identifier we can display the account it belongs to from that device:
 
 ![](../.gitbook/assets/image%20%2897%29.png)
 
