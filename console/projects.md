@@ -4,9 +4,9 @@ description: >-
   resources and share them with other user accounts
 ---
 
-# PROJECTS
+# PROJECTS MANAGER
 
-A "Project" on Thinger.io is an abstract concept created to create resources agrupations \(devices, dashboards, buckets, endpoints or file systems\) allowing better management of their data and configuration. The project system also allows to share these resources with other user accounts of the same Thinger.io Platform Instance, allowing them to access, show or use other user resources according to certain permissions. This means that we can authorize other users to work with our account resources as if there were their proprietaries or just with read-only access, depending on the permissions that were managed.  
+A "Project" on Thinger.io is an abstract concept created to create resources agrupations \(devices, dashboards, buckets, endpoints or file systems\) allowing better management of their data and configuration. The Project Manager is a tool that also allows to share these resources with other user accounts of the same Thinger.io Platform Instance, allowing them to access, show or use other user resources according to certain permissions. This means that we can authorize other users to work with our account resources as if there were their proprietaries or just with read-only access, depending on the permissions that were managed.  
 
 ## Creating new project
 
