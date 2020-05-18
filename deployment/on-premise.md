@@ -16,8 +16,8 @@ The next table shows the main different features that are provided by each licen
 
 |  | **MAKER** | **GROW** | **STARTUP** | **BUSINESS** |
 | :--- | :--- | :--- | :--- | :--- |
-| **Devices/Assets** | Limited | Unlimited | Unlimited | Unlimited |
-| **Performance** | Limited | Unlimited | Unlimited | Unlimited |
+| **Devices/Assets** | 10 profiles | Unlimited | Unlimited | Unlimited |
+| **Performance** | enough\* | Unlimited | Unlimited | Unlimited |
 | **Plugins** |  | 3 | 6 | Unlimited |
 | **Rebranding** | \*\*\*\* | ✓ | ✓ | Included |
 | **Custom Domain/TLS** | \*\*\*\* | ✓ | ✓ | Included |
@@ -25,6 +25,8 @@ The next table shows the main different features that are provided by each licen
 | **Extended support** | \*\*\*\* | ✓ | ✓ | ✓ |
 | **HA Cluster** | \*\*\*\* |  |  |  |
 | **Recommended network size** | Individual projects | &lt;10 user accounts. | 10 to 50 accounts |  &gt;50 user accounts |
+
+\*Single thread execution and limited memory allocation setup provides enough performance to manage common individual user IoT network requirements. 
 
 ### 2.  Configure license
 
