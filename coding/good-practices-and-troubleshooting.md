@@ -138,6 +138,17 @@ When this command is included, the program will print all the communication traz
       </td>
     </tr>
     <tr>
+      <td style="text-align:left">Error while connecting Thinger.io server</td>
+      <td style="text-align:left">SSL issue</td>
+      <td style="text-align:left">
+        <p></p>
+        <ul>
+          <li>Disable the secure TLS/SSL connection by pacing<code>#define _DISABLE_TLS_ </code>on
+            the top of the sketch</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left">Authentication Error</td>
       <td style="text-align:left">Wrong account or device credentials</td>
       <td style="text-align:left">
