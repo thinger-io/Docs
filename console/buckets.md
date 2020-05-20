@@ -30,7 +30,7 @@ The sections below explains the different data bucket data acquisition modes and
   
 __Note that this option is only compatible with devices that has been provided with Thinger.io Software client libraries \(Arduino, Linux or Raspberry\), and it will only work properly if the device keeps permanent connection with the server.
 
-* **Sampling interval:**  Configure the bucket profile to retrieve data from device resources in an specific timing, that can be changed on demand, without modifying device sketch. Other benefit is that no additional codification is needed to implement this feature and start storing data. The next basic code example will store two variables in the data bucket just setting this con
+* **Sampling interval:**  Configure the bucket profile to retrieve data from device resources in an specific timing, that can be changed on demand, without modifying device sketch. Other benefit is that no additional codification is needed to implement this feature and start storing data. The next basic code example will store two variables in the data bucket when using the "sampling interval" configuration.
 
 ```
 // define the resource just once in the setup() section
