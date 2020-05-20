@@ -109,7 +109,7 @@ In order to make bulk data upload or buckets backup processes, the data bucket s
 
 Note that using this feature has two restrictions. The user account must be able to use File Systems \(this is not available in free accounts\) and the file must be made with one variable per column and contain a variable with the Linux Timestream in microseconds.
 
-![](../.gitbook/assets/image%20%28243%29.png)
+![](../.gitbook/assets/image%20%28244%29.png)
 
 {% hint style="info" %}
 Files resulting from a data bucket export are completely suitable with the import feature, so they are perfect examples to observe a valid data frame
@@ -128,7 +128,7 @@ To execute an import, the following steps must be carried out:
 
 It is possible to export all your stored information in different file formats, so you can process the data offline, like applying Artificial Intelligence, Business Analytics, Big Data, etc. In this way, you can access your bucket and configure the export process:
 
-![](../.gitbook/assets/image%20%28244%29.png)
+![](../.gitbook/assets/image%20%28245%29.png)
 
  The data bucket download configurable parameters are:
 

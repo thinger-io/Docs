@@ -20,7 +20,7 @@ Here it is necessary to configure different parameters:
 * **Endpoint Description**: Fill here any description or detailed information you need to keep about the dashboard.
 * **Endpoint Type**: Defines the endpoint type, depending on the selected type, the endpoint will present different fields. In the following sections are described some of these types.
 
-## Endpoint types
+## Useful Endpoint types
 
 ### Email Endpoint
 
@@ -70,5 +70,15 @@ The configurable parameters are the following:
 
 ![](../.gitbook/assets/httpendpoint.png)
 
-## 
+### Telegram Bot Endpoint
+
+This endpoint is pre-configured to send data to a telegram bot in a simple way and thus use the messaging platform to get alerts or data from the IoT devices through Thinger.io.
+
+![](../.gitbook/assets/image%20%28246%29.png)
+
+The next parameters need to be configured to work with telegram bot:
+
+* **Bot Token**: Is the bot identification and authorization stream, this parameter can be left empty on this form in order to specify it directly in the device source code with the key "token".
+* **Chat Identifier**: Is a 10 digits chat identificator that can be obtained from Telegram conversation information. It can be left empty at this configuration and be called in the source code with the key "chat".
+* **Chat Message**: Is the text and device data that wants to be sent in the message, it can be specify here or hard coded in the device to be send on the endpoint call with the key "message".
 
