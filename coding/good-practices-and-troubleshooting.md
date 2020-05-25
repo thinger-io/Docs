@@ -174,7 +174,12 @@ When this command is included, the program will print all the communication traz
 
 If after following this instructions it was impossible to find a solution, we have created other resources that can be used in order to find help: 
 
-* **Community Discussion Forum:** A forum \([accessible here](https://community.thinger.io)\) in which other users and some of our experts are providing free assistance. Making proper use of this resource means using the browser in order to find old topics related to the doubt before creating a new one, but if it is required, take in consideration: 
+![](../.gitbook/assets/image%20%28254%29.png)
+
+* **Community Discussion Forum:** It is a forum \([**accessible here**](https://community.thinger.io)\) created to provide developers a place to share projects, knowledges and doubts with other Thinger.io users. It is the perfect way to obtain free assistance to development problems.  
+  
+  Making proper use of this resource means using the browser in order to find old topics related to the doubt before creating a new one, but if it is required, take in consideration:   
+
 
   * It is preferable to write in **English** language, as the more people can understand your problem, the more can help you providing different opinions or solutions.
   * Use an attractive and descriptive title and select the most accurate category
@@ -182,5 +187,5 @@ If after following this instructions it was impossible to find a solution, we ha
   * Don't forget providing all the material that will be required to replicate the problem such as: **Source code,** Libraries and PCB specification, Compiler output and **Debug connection trace**, as well as **thinger.io configuration.** 
   * Be polite, remember that other developers are not compelled to help you and if they do it is with good intentions
 
-* **Extended Support:** For those professional developers that require quick assistance on development or maintenance processes,  Thinger.io privated instance licenses can be upgraded with an extended support service. 
+* **Extended Support:** For those professional developers that require quick assistance on development or maintenance processes,  Thinger.io privated instance licenses can be complemented  with an extended support service starting from 100$ month.   There is also an SLA service available for big infrastructure customers, that can be contracted separately just contacting us at info@thinger.io.
 

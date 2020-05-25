@@ -28,6 +28,8 @@ Thinger.io is a platform in constant growth, our development team is continuousl
 * [x] Project & products manager
 * [x] Shared resources manager
 * [x] Community Server Update
+* [ ] Server configuration menu
+* [ ] New web home
 * [ ] Data analytics system
 * [ ] ARM-64 server compilation
 * [ ] ESP32 & ESP8266 OTA

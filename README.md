@@ -23,11 +23,13 @@ Sign-up ****[**HERE** ](https://console.thinger.io/#/signup)to obtain a **free a
 
 ### Thinger.io Main Features
 
+Thinger.io platform is formed by two main products a Backend \(which is the actual IoT server\) and a web based Frontend that simplifies working with all the features using any computer or smartphone. The image below shows the main features provides by this platform to create IoT projects. 
+
 ![](.gitbook/assets/thinger.io-platform-feature.png)
 
-* **Connect devices:** Fully compatible with every kind of devices, no matter the processor, the network or the manufacturer. Thinger.io allows to create **bidirectional communications** with Linux, Arduino, Raspberry PI or MQTT devices and even with edge technologies like Sigfox or LoRaWAN or other internet API data resources. 
+* **Connect devices:** Fully compatible with every kind of devices, no matter the processor, the network or the manufacturer. Thinger.io allows to create **bidirectional communications** with Linux, Arduino, Raspberry Pi or MQTT devices and even with edge technologies like Sigfox or LoRaWAN or other internet API data resources. 
 * **Store Device Data:** Just a couple clicks to create a Data Bucket a store IoT data in an scalable, efficient and affordable way, that also allows real-time data aggregation. 
-* **Show Real-time** or **Stored Data** in multiple widgets such as time series, donut charts, gauges or even custom made representations to create awesome dashboards within minutes. 
+* **Display Real-time** or **Stored Data** in multiple widgets such as time series, donut charts, gauges or even custom made representations to create awesome dashboards within minutes. 
 * **Trigger events and data values** using an embedded Node-RED rule engine 
 * **Extend with custom features** with multiple plugins to integrate IoT projects into your company's software or any other third party Internet service.  
 * **Custom the appearance** thanks to our fully rebrandeable frontend, that allows to introduce your branding colors, logotypes and web domain 
@@ -147,7 +149,7 @@ Thinger.io platform can be complemented with many different Internet services us
 
 This section will cover how to add different functionality to your devices for exposing resources, calling endpoints, or streaming data to real-time websockets.
 
-## [Cloud Consol](console/)e
+## [Cloud Consol](console.md)e
 
 The Cloud Console is related with the management front-end designed to easily manage your devices and visualize its information in the cloud. In this section you will learn how to register devices, create real-time dashboards, access the devices API, and other management operations.
 
