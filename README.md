@@ -62,13 +62,13 @@ This example contains a two simple resources to send and retrieve data from Thin
 
 
 
-erent functionalities that we have explained at the [**Firmware Coding**](coding/) ****section.  After modifying the source code, just click upload button to flash the sketch and wait for the device connection.
+erent functionalities that we have explained at the [**Firmware Coding**](quick-sart/coding/) ****section.  After modifying the source code, just click upload button to flash the sketch and wait for the device connection.
 
 {% hint style="success" %}
 Find additional information about Thinger.io devices in the next sections: 
 
-1. \*\*\*\*[**Compatible Arduino and Linux devices**](devices/)\*\*\*\*
-2. \*\*\*\*[**Zero to Hero Thinger.io Firmware Coding Guide**](coding/) ****
+1. \*\*\*\*[**Compatible Arduino and Linux devices**](quick-sart/devices/)\*\*\*\*
+2. \*\*\*\*[**Zero to Hero Thinger.io Firmware Coding Guide**](quick-sart/coding/) ****
 3. \*\*\*\*[**Connection Troubleshooting Guide**](https://docs.thinger.io/coding/good-practices-and-troubleshooting)\*\*\*\*
 {% endhint %}
 {% endtab %}
@@ -79,15 +79,15 @@ Find additional information about Thinger.io devices in the next sections:
 3\) Create a device Access Token to authorize the device sending data to the platform  
 4\) Introduce the HTTP request \(API+TOKEN\) into your device code or third party platform and start sending data to Thinger.io
 
-{% page-ref page="devices/http-devices.md" %}
+{% page-ref page="quick-sart/devices/http-devices.md" %}
 {% endtab %}
 
 {% tab title="Sigfox / TTN devices" %}
 Any individual Sigfox or LoraWAN device can be integrated using our API as HTTP devices, just setting an HTTP device callback into their callback managers, but if a big network is going to be created using these technologies, it is better to use our integration plugins:
 
-{% page-ref page="plugins/sigfox.md" %}
+{% page-ref page="features/plugins/sigfox.md" %}
 
-{% page-ref page="plugins/the-things-network.md" %}
+{% page-ref page="features/plugins/the-things-network.md" %}
 {% endtab %}
 
 {% tab title="MQTT devices" %}
@@ -97,7 +97,7 @@ Any individual Sigfox or LoraWAN device can be integrated using our API as HTTP 
 
 More details at: 
 
-{% page-ref page="devices/mqtt.md" %}
+{% page-ref page="quick-sart/devices/mqtt.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -139,17 +139,17 @@ Dashboards, Data buckets or Device resources can be easily shared with third par
 
 Thinger.io platform can be complemented with many different Internet services using **Plugins** that can be found and deployed within seconds Just going to our marketplace and selecting it.
 
-{% page-ref page="plugins/" %}
+{% page-ref page="features/plugins/" %}
 
-## [Compatible Devices](devices/)
+## [Compatible Devices](quick-sart/devices/)
 
-[Thinger.io is Hardware agnostic, so it allows connecting any kind of electronic device without matter the manufacturer, hardware architecture, network technology or operative system. However there are different ways to integrate each device type, in this section it is explained how to connect most common devices by including our software libraries or using Thinger.io API to send data with HTTP queries](devices/)
+[Thinger.io is Hardware agnostic, so it allows connecting any kind of electronic device without matter the manufacturer, hardware architecture, network technology or operative system. However there are different ways to integrate each device type, in this section it is explained how to connect most common devices by including our software libraries or using Thinger.io API to send data with HTTP queries](quick-sart/devices/)
 
-## [Software Client Coding](coding/)
+## [Software Client Coding](quick-sart/coding/)
 
 This section will cover how to add different functionality to your devices for exposing resources, calling endpoints, or streaming data to real-time websockets.
 
-## [Cloud Consol](console.md)e
+## [Cloud Consol]()e
 
 The Cloud Console is related with the management front-end designed to easily manage your devices and visualize its information in the cloud. In this section you will learn how to register devices, create real-time dashboards, access the devices API, and other management operations.
 

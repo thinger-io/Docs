@@ -48,7 +48,7 @@ The tokens defined by the user in their account, can be used just like any other
 
 This kind of tokens can be defined directly from the Thinger.io Console in the `Access Tokens` section. The following picture illustrates how to add permissions to the token for writing to a single bucket, but you can configure them for granting access to different resources and actions of your account.
 
-![](.gitbook/assets/token_permission.png)
+![](../.gitbook/assets/token_permission.png)
 
 ### Getting Tokens From User Credentials
 

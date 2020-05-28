@@ -3,7 +3,7 @@
 Thinger.io provides a flexible cloud storage system that allows uploading files to the IoT server in order to provide support to other platform features such as the HTML Widget or the OTA System. The information will be stored in a non-volatile memory of the server host, so it is important to take care about the size of the files, specially when the instance is shared with other user accounts, to prevent server local storage from becoming saturated.
 
 {% hint style="success" %}
-Note that this feature is only available for ****[**private instances**](deployment/), as it requires cloud storage system. 
+Note that this feature is only available for ****[**private instances**](../server/deployment/), as it requires cloud storage system. 
 {% endhint %}
 
 ## Create an Storage Profile
@@ -56,7 +56,7 @@ The storage explorer contains a navigator in which the data hierarchy is display
 
 when the files are no longer required in the file system, we can delete them using the file explorer. It is possible to select more than one file by pressing the "cmd" button on the keyboard and clicking on the files you want to delete. Finally, pressing the "-" icon of the top bar. 
 
-![](.gitbook/assets/image%20%2811%29.png)
+![](../.gitbook/assets/image%20%2811%29.png)
 
 ###  
 

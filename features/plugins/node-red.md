@@ -8,7 +8,7 @@ Node-RED is an Open Source project created by IBM to provide the Rule Engines ma
 
 This technology begins especially useful for IoT projects, to process and analyze data or create rules to automate behaviors in response to events produced by the IoT devices measures. It can also be used as an MQTT broker or to show data in customizable dashboards. However, its greatest potential is obtained when used in combination with an IoT platform like [Thinger.io](https://thinger.io/), leaving one in charge of data acquisition, storage, and device management and the other one for processing, automation, etc.
 
-![Thinger.io web console with Node-RED plugin and ad-hoc nodes](../.gitbook/assets/image%20%28116%29.png)
+![Thinger.io web console with Node-RED plugin and ad-hoc nodes](../../.gitbook/assets/image%20%28116%29.png)
 
 ## Thinger.io and Node-RED integration 
 
@@ -29,15 +29,15 @@ Node red essentially consist in a development tool with two basic components: a 
 
 The "Nodes" are the basic building blocks for creating flows. Each node contains its own configuration form and an specific behavior, that can be accessed by double clicking the block onces it has been introduced in the web editor canvas. There are few basic types of nodes:
 
-#### **Inject Nodes**                                        ![](../.gitbook/assets/node_inject%20%281%29.png) 
+#### **Inject Nodes**                                        ![](../../.gitbook/assets/node_inject%20%281%29.png) 
 
 This nodes allows automatically start a flow when an event is triggered, at regular interval specified in the properties form or manually over the web editor. The message sent by these nodes van have its payload and topic properties set. 
 
-**Function, Change, Switch Nodes**  ![](../.gitbook/assets/node_function.png) 
+**Function, Change, Switch Nodes**  ![](../../.gitbook/assets/node_function.png) 
 
 Node-RED counts with some nodes that allows to work with the flow's payload using pre-configured tools or coding their behavior in JavaScript functions that can be created within the editor using a rich text editor. With this proposal, this nodes are provided with both input and output connectors.
 
-**Output and Debug Nodes**              ![](../.gitbook/assets/node_debug%20%281%29.png) ****
+**Output and Debug Nodes**              ![](../../.gitbook/assets/node_debug%20%281%29.png) ****
 
 This nodes only have an input connector that allows extracting data from the flow to third parties, files or debug console in the web editor.
 
@@ -51,7 +51,7 @@ A flow is represented as a tab within the editor workspace and is the main way t
 
 The flow editor makes it easy to wire together flows using the wide range of nodes in the palette. Flows can be then deployed to the runtime just clicking into "debloy" button: 
 
-![](../.gitbook/assets/nodered_deploy-button.png)
+![](../../.gitbook/assets/nodered_deploy-button.png)
 
 ### Debug Console
 
@@ -71,7 +71,7 @@ In this section it is described **how to configure Node-RED** "Thinger.io Nodes"
 
 To make this configuration, just drag onw Thinger.io Node to the canvass and open its properties form, then go to the last input, called "Server " and click into the edition button, which will open the Thinger-Server configuration menu.
 
-![](../.gitbook/assets/nodeconfiguration.png)
+![](../../.gitbook/assets/nodeconfiguration.png)
 
 This form allows to introduce the credentials of the specific Thinger.io instance address and authorization that is going to receive your Node-RED requests. However, it is important to take care about the next considerations in order to make a proper configuration: 
 
@@ -80,43 +80,43 @@ This form allows to introduce the credentials of the specific Thinger.io instanc
 * if you want to use a different Thinger.io Server or your aren't running Node-RED from a plugin, it will be necessary to **include its URL or IP Address** in the "Host" box and also a Thinger.io **Access Token with Admin-Access** privileges in the "Token" box, finally SSL would be preferable in this case. 
 {% endhint %}
 
-![](../.gitbook/assets/server-configuration.png)
+![](../../.gitbook/assets/server-configuration.png)
 
 ## Thinger.io Nodes
 
 As it was explained on the beginning, this plugin has two purposes: Host a Node-RED server instance together with Thinger.io IoT server and inprove their integration by including a set of custom nodes to simplify extracting data from Thinger.io IoT devices or calling other platform features. The next list contains a complete description of each node and its properties configuration:
 
-### Device Read                 ![](../.gitbook/assets/device-read-node.png)
+### Device Read                 ![](../../.gitbook/assets/device-read-node.png)
 
 It is a **Function** Node that retrieves data from a specified Thinger.io device resource when an injection Node requires it. It is useful to get data from devices with a Node-RED programmed sampling interval.  
 
 To configure this node just include the `Device ID`and the `Resource Name` into the node parameters form. The input for this Node is a triggered event and the output will be a JSON format message with the device resource variables.  
 
-### Device Stream             ![](../.gitbook/assets/device-stream-node.png)   
+### Device Stream             ![](../../.gitbook/assets/device-stream-node.png)   
 
 It is an **Injection** Node that retrieves data from an specified Thinger.io Device Resource at regular interval specified in seconds into the properties form. 
 
 To configure this node just include the `Device ID`and the `Resource Name` into the node parameters form. The output of this node will be a JSON with the real time Device Resource data that was specified into the properties form.
 
-### Endpoint Call              ![](../.gitbook/assets/nodeendpoint.png) 
+### Endpoint Call              ![](../../.gitbook/assets/nodeendpoint.png) 
 
 It is an **Output** Node that allows calling the execution of a Thinger.io endpoint profile. It is able to receive a JSON that can be introduced in the endpoint in order to use that data in an e-mail, or send to third parties, so it is quite useful to create notifications or to integrating an IoT project with other systems.  
 
 The configuration of this Node just requires introducing the `Endpoint ID`, however, it is important to make a proper management of the input json in order to send the right data. It is strongly recommended to filter the JSON keys using a "Change" Node and check the result with a "Debug" Node to be sure about the data that we are sending.  
 
-### Bucket Write               ![](../.gitbook/assets/nodebucket.png)
+### Bucket Write               ![](../../.gitbook/assets/nodebucket.png)
 
 It is an **Output** Node that allows to store data into a Thinger.io Data Bucket. It is able to receive a JSON from Node-RED flow and automatically create an entry into the Bucket, so results quite useful to implement scalable data storage to any project.
 
 The configuration of this Node just requires introducing the `Bucket ID`, however, it is important to make a proper management of the input json in order to store the right data. It is strongly recommended to filter the JSON keys using a "Change" Node and check the result with a "Debug" Node to be sure about the data that we are sending.  
 
-### Device Write                ![](../.gitbook/assets/imagen1ddd%20%281%29.png) 
+### Device Write                ![](../../.gitbook/assets/imagen1ddd%20%281%29.png) 
 
 It is an **Output** Node that allows sending data to a Thinger.io connected Device. It is able to receive a JSON from Node-RED flow and automatically send it to other device in real time. So results quite useful to implement scalable data storage to any project.
 
 The configuration of this Node just requires introducing the `Device ID` and the `Resource ID` , however, it is important to make a proper management of the input json in order to store the right data. It is strongly recommended to filter the JSON keys using a "Change" Node and check the result with a "Debug" Node to be sure about the data that we are sending.  
 
-### Server Events              ![](../.gitbook/assets/imagen1sswa.png) 
+### Server Events              ![](../../.gitbook/assets/imagen1sswa.png) 
 
 It is an **Inject** Node that allows to trigger in real time any event that take places in Thinger.io IoT Server, including:
 
@@ -145,7 +145,7 @@ Using the "Device Status Change" property of the Server Event Node, it is possib
 
 The next flow uses two Thinger.io Nodes, the first one is triggering the Device Disconnection Server Event that will throw a JSON formatted message with the device ID, the status and the timestamp of the change. The second Node allows calling the Endpoint profile to send the alert with the device information JSON attached so it is possible to custom the message to easily identify the problem. 
 
-![](../.gitbook/assets/image%20%28135%29.png)
+![](../../.gitbook/assets/image%20%28135%29.png)
 
 This flow can be easily imported into your Node-RED workspace using the next JSON:
 
@@ -160,10 +160,10 @@ Note that, the `Device ID` parameter of Server Event Node is empty, in order to 
 MQTT is an extended communication protocol  in IoT that works on top of the TCP/IP protocol suite. It is designed for connections with remote locations where a "small code footprint" is required or the network bandwidth is limited. The next flow allows sending data from a device hosted by NodeRED MQTT Server to the REST API Callback of a Thinger.io HTTP device, in order to store, analyze an show that information with Thinger.io features.   
 
 {% hint style="info" %}
-[Learn how to work with Thinger.io HTTP device callback here](../devices/http-devices.md)
+[Learn how to work with Thinger.io HTTP device callback here](../../quick-sart/devices/http-devices.md)
 {% endhint %}
 
-![MQTT to Thinger.io interface flow](../.gitbook/assets/image%20%2832%29.png)
+![MQTT to Thinger.io interface flow](../../.gitbook/assets/image%20%2832%29.png)
 
 This flow can be easily imported into your Node-RED workspace using the next JSON:
 
@@ -177,7 +177,7 @@ Note that his is an easy example that only retrieves data from just one MQTT dev
 {% tab title="GPS Geofences" %}
 Geofencing is an interesting IoT use case, with many applications in asset management, fleets or package tracking. The next flow shows how to monitor the location of any device to create an alert when it leaves an area specified with a Geofence Node.  
 
-![](../.gitbook/assets/image%20%28151%29.png)
+![](../../.gitbook/assets/image%20%28151%29.png)
 
 Creating this integration with the "device\_location" property, it is possible to integrate any kind of device including Thinger.io Software Clients, Sigfox, TTN or even HTTP devices in a very simple way.
 
@@ -195,7 +195,7 @@ This flow can be easily imported into your Node-RED workspace using the next JSO
 {% tab title="Modify Incoming data" %}
 In some situations it is required to change the unit or metric of any variable, it is now possible to make this transformations before store data in a data bucket by use this Node-RED flow:
 
-![](../.gitbook/assets/image%20%28189%29.png)
+![](../../.gitbook/assets/image%20%28189%29.png)
 
  The configuration is quite simple, fist node retrieves the measurement of any device to be modified by the "function" node, that contains the codification that has been included below, and finally the "bucket write" node allows storing the transformed data. 
 

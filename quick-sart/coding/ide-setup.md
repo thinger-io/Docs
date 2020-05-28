@@ -10,7 +10,7 @@ The following sections explains how to install and prepare different IDEs to wor
 
 It is probably the most simple development environment, perfect to **learn** and start creating connected projects. It is available for Windows, Macintosh and Linux distributions, and can be downloaded for free from their official website.
 
-![](../.gitbook/assets/image%20%28252%29.png)
+![](../../.gitbook/assets/image%20%28252%29.png)
 
 #### Download Arduino IDE
 
@@ -46,7 +46,7 @@ Now **rename** the `Arduino-Library-master.zip` file to something more relevant 
 
 The final step is to **import** the `zip` library using the Arduino IDE. This step will uncompress and copy the `zip` library in the Arduino libraries folder. Which is usually under your Documents folder.
 
-![](../.gitbook/assets/add-zip-library.png)
+![](../../.gitbook/assets/add-zip-library.png)
 
 > Sketch &gt; Include Library &gt; Add .ZIP libraries
 
@@ -58,11 +58,11 @@ For advanced developers and bigger projects in which may be interesting to have 
 
 **Visual Studio Code** is a free distribution source-**code** editor developed by Microsoft for Windows, Linux and macOS. It can be extended via [extensions](https://en.wikipedia.org/wiki/Plug-in_%28computing%29), available through a central repository to add language support new [languages](https://en.wikipedia.org/wiki/Programming_language), [themes](https://en.wikipedia.org/wiki/Theme_%28computing%29), and [debuggers](https://en.wikipedia.org/wiki/Debugger), or perform [static code analysis](https://en.wikipedia.org/wiki/Static_code_analysis). It can be downloaded for free from the official website -&gt; [Download Visual Studio Code](https://code.visualstudio.com/download). 
 
-![](../.gitbook/assets/image%20%28243%29.png)
+![](../../.gitbook/assets/image%20%28243%29.png)
 
 **PlatformIO** is a cross-platform, cross-architecture, multiple framework, professional tool for embedded systems engineers and for software developers who write applications for embedded products. To acquire any extension, just navigate to Extensions \(`Ctrl` + `Shift` + `X` on Windows or `Command` + `Shift` + `X` on Mac\) in VS Code. Then search "Platformio" in the Marketplace searching bar and select **Install**.
 
-![](../.gitbook/assets/image%20%28246%29.png)
+![](../../.gitbook/assets/image%20%28246%29.png)
 
 #### Creating a new project 
 

@@ -174,7 +174,7 @@ When this command is included, the program will print all the communication traz
 
 If after following this instructions it was impossible to find a solution, we have created other resources that can be used in order to find help: 
 
-![](../.gitbook/assets/image%20%28254%29.png)
+![](../../.gitbook/assets/image%20%28254%29.png)
 
 * **Community Discussion Forum:** It is a forum \([**accessible here**](https://community.thinger.io)\) created to provide developers a place to share projects, knowledges and doubts with other Thinger.io users. It is the perfect way to obtain free assistance to development problems.  
   

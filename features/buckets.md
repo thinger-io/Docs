@@ -8,11 +8,11 @@ This information can be used to plot information in dashboards, or can be export
 
 To create a data bucket, you need to access the `Data Buckets` feature, by clicking on this section:
 
-![](.gitbook/assets/bucketstab.PNG)
+![](../.gitbook/assets/bucketstab.PNG)
 
 To create the bucket, just press in the **Add Bucket** button, which will show the following screen:
 
-![](.gitbook/assets/addbucket.PNG)
+![](../.gitbook/assets/addbucket.PNG)
 
 Here it is necessary to configure different parameters:
 
@@ -87,10 +87,10 @@ void loop() {
 
 ### **From API Request \(for 3rd parties\):**
 
-This configuration allows to store data from any other device or data source that can't be equipped with Thinger.io libraries on its codification. the data bucket will be set on passive mode waiting to receive data from any [**HTTP Device Callback**](devices/http-devices.md) that has been properly configured to send data to this data bucket. 
+This configuration allows to store data from any other device or data source that can't be equipped with Thinger.io libraries on its codification. the data bucket will be set on passive mode waiting to receive data from any [**HTTP Device Callback**](../quick-sart/devices/http-devices.md) that has been properly configured to send data to this data bucket. 
 
 {% hint style="info" %}
-This feature can be also used to store data directly from any third party platform just calling to the data bucket REST API and sending information in JSON format. But it is preferable using the[ HTTP device way.](devices/http-devices.md)
+This feature can be also used to store data directly from any third party platform just calling to the data bucket REST API and sending information in JSON format. But it is preferable using the[ HTTP device way.](../quick-sart/devices/http-devices.md)
 {% endhint %}
 
 ### **From MQTT Topic**
@@ -101,7 +101,7 @@ Private instances of Thinger.io platform has been provided with an MQTT broker, 
 
 Once the data bucket has been configured, and it started to record data from a device or from write calls, it will display the information inside a table. Every record contains the server timestamp in UTC \(but shown in local time zone in the console\), and the record value. The value stored in the data bucket can be a single value, or any other JSON document. If the JSON document is composed by key-value pairs, like in the previous examples, they will be displayed in tabular format, just like in the following screenshot.
 
-![](.gitbook/assets/iotbucketdata.png)
+![](../.gitbook/assets/iotbucketdata.png)
 
 ## Bucket Data Import
 
@@ -109,7 +109,7 @@ In order to make bulk data upload or buckets backup processes, the data bucket s
 
 Note that using this feature has two restrictions. The user account must be able to use File Systems \(this is not available in free accounts\) and the file must be made with one variable per column and contain a variable with the Linux Timestream in microseconds.
 
-![](.gitbook/assets/image%20%28255%29.png)
+![](../.gitbook/assets/image%20%28255%29.png)
 
 {% hint style="info" %}
 Files resulting from a data bucket export are completely suitable with the import feature, so they are perfect examples to observe a valid data frame
@@ -128,7 +128,7 @@ To execute an import, the following steps must be carried out:
 
 It is possible to export all your stored information in different file formats, so you can process the data offline, like applying Artificial Intelligence, Business Analytics, Big Data, etc. In this way, you can access your bucket and configure the export process:
 
-![](.gitbook/assets/image%20%28256%29.png)
+![](../.gitbook/assets/image%20%28256%29.png)
 
  The data bucket download configurable parameters are:
 
@@ -141,7 +141,7 @@ It is possible to export all your stored information in different file formats, 
 
 Onces the export data range and format has been select, the system will create a download link that will be stored in the "Export List" section below. This links can be used to provide customers of custom data reports form the IoT data.
 
-![](.gitbook/assets/image%20%2853%29.png)
+![](../.gitbook/assets/image%20%2853%29.png)
 
 The download links will be available for 3 months if the instance administrator has not specified a different interval. 
 
@@ -149,11 +149,11 @@ The download links will be available for 3 months if the instance administrator 
 
 Sometimes it can be useful to clear the bucket information without deleting the whole bucket, creating and configuring it again. Therefore, you can clear the bucket, or a part of them easily from the bucket page. In the clear process, the bucket can still record information from your devices.
 
-![](.gitbook/assets/data-bucket-clear.png)
+![](../.gitbook/assets/data-bucket-clear.png)
 
 Data bucket profiles can also be deleted from the data bucket list, by selecting the profiles to be deleted and pressing the red "Remove Bucket" button as shown in the image below:
 
-![](.gitbook/assets/image%20%2870%29.png)
+![](../.gitbook/assets/image%20%2870%29.png)
 
 ## 
 

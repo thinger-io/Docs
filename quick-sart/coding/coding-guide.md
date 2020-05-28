@@ -33,7 +33,7 @@ void loop() {
 
 You can easily start with some available example for your device after you install the client libraries.
 
-![](../.gitbook/assets/arduino-examples.png)
+![](../../.gitbook/assets/arduino-examples.png)
 
 > It is recommended to start with some of the examples available in the Arduino IDE when you install the libraries
 
@@ -353,7 +353,7 @@ loop(){
 
 If we want to communicate devices from different accounts, we can do that through calling an endpoint of type `Thinger.io Device Call`. Just register an endpoint of this type in the console, like in the following example.
 
-![](../.gitbook/assets/device_call.png)
+![](../../.gitbook/assets/device_call.png)
 
 In this case it is required to define different parameters in the endpoint:
 
@@ -534,7 +534,7 @@ In this case, you must detect when you want to stream the event, like the accele
 
 The following example will report the compass heading in real-time if the heading value changes more than 1 degree.
 
-![](../.gitbook/assets/esp8266-real-time-websockets.gif)
+![](../../.gitbook/assets/esp8266-real-time-websockets.gif)
 
 ```cpp
 void setup(){
