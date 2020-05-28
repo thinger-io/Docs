@@ -10,11 +10,11 @@ description: >-
 
 Thinger.io WiFi Button is a ready-to-go Internet of Things based dash-button that integrates ESP8266 processor with WiFi connectivity among a simple integration with Thinger.io platform events to provide a flexible support for many different use cases. 
 
-![](../.gitbook/assets/image%20%2845%29.png)
+![](../../.gitbook/assets/image%20%2845%29.png)
 
 These devices are aimed to create simple interfaces Huma-Internet, which can be used for any kind of project in education, connected industry, or home automation. Depending on the user requirements, the WiFi-Button can be used to execute functions through Thinger.io Platform, such as sending notification via email, endpoints to IFTTT, messages to other devices or even, by means of a Thinger.io Server Event, trigger the execution of a flow in Node-RED.
 
-![](../.gitbook/assets/image%20%28154%29.png)
+![](../../.gitbook/assets/image%20%28154%29.png)
 
 Our buttons have been provided with an example program that allows to configure a WiFi network and some Thinger.io credentials by means of a web server inserted in the device itself. Once the configuration is done, the device makes an instant connection with the Thinger.io Server that was configures, allowing it to perform any function programmed in the platform. After that, the hardware of the WiFi Button will change to an hibernation status that allows saving battery to extend life greater than 3000 pulsations in good conditions.
 
@@ -33,7 +33,7 @@ This section contains the deployment instruction that should be followed on devi
 
 This device has been provided with a basic program that allows creating useful functionalities using thinger.io endpoints. The next execution diagram shows how does this program and how to use the single button to move between the different program menus, that allows introducing or deleting WiFi credentials, changing the device program by using Arduino OTA feature or just making a single connection to order any functionality. 
 
-![](../.gitbook/assets/image%20%28176%29.png)
+![](../../.gitbook/assets/image%20%28176%29.png)
 
 ### **Device Sound interface**
 
@@ -67,11 +67,11 @@ In order to save battery, the configuration hotspot is hold up for 180 seconds \
 
 2\)      Using a Smartphone or Personal computer with WiFi connectivity, open WiFi configuration and look for the button device WiFi hotspot. Then connect to this network by introducing the password, which will be the same as the WiFi SSID \(wifi network name\).
 
-![](../.gitbook/assets/image%20%2815%29.png)
+![](../../.gitbook/assets/image%20%2815%29.png)
 
 3\)      When the device begins connected to the access point, a Web Browser should automatically open the configuration interface, as is shown in the image below:
 
-![](../.gitbook/assets/image%20%28113%29.png)
+![](../../.gitbook/assets/image%20%28113%29.png)
 
 {% hint style="danger" %}
 **WARNING!** If the computer is connected to the WiFi hotspot but the web browser doesn't show this interface, it is possible to manually access it by opening web browser and writing 192.168.4.1 address in the browser bar.
@@ -79,7 +79,7 @@ In order to save battery, the configuration hotspot is hold up for 180 seconds \
 
 4\)      Select **“Configure WiFi”** option by pressing this button of the main menu. This option will launch a Scan process to find the better quality WiFi signals of your home or office and show it in the next menu.
 
-![](../.gitbook/assets/image%20%2871%29.png)
+![](../../.gitbook/assets/image%20%2871%29.png)
 
 {% hint style="info" %}
 IMPORTANT: When the desired WiFi Network SSID doesn’t appears at this list, pressing “Scan” bottom text will launch a new scanning process. If the problem persist, the SSID can be manually wroten the SSID text box.
@@ -110,7 +110,7 @@ In addition to the common configuration parameters, each connected device has to
 
 As soon as a valid WiFi configuration is made, the WiFi button will create a new device profile on this platform according to the auto-provisioning process setting its device credentials with the data that was included during the button configuration. This profile can be checked at Thinger.io platform workspace, by clicking on “devices” menu tab.
 
-![](../.gitbook/assets/image%20%28223%29.png)
+![](../../.gitbook/assets/image%20%28223%29.png)
 
 Clicking on the device name it is possible to access the device dashboard that contains information related to the device connection and status, and provides a simple way to show device parameters.
 
@@ -216,22 +216,22 @@ This section covers how to setup your computer to start working with the ClimaSt
 
 1- Open File &gt; Preferences &gt; Additional\_Boards\_URL\_Manager to include the "ESP8266 boards manager link" that you can retrieve from [Github community project](https://github.com/esp8266/Arduino). It is normally `http://arduino.esp8266.com/stable/package_esp8266com_index.json`
 
-![](../.gitbook/assets/i4.PNG)
+![](../../.gitbook/assets/i4.PNG)
 
 2- Open Tools &gt; Boards &gt; Boards Manager... and search for ESP8266 package, then install the last version.
 
-![](../.gitbook/assets/i5.PNG)
+![](../../.gitbook/assets/i5.PNG)
 
 3- Now you can program almost any ESP82XX processor directly from the Arduino IDE. From the Tools &gt; Boards you should see now the new ESP8266 community boards installed.
 
 1. For program ClimaStick V1 select **NODE\_MCU V1.0 \(ESP-12E Module\)**.
 2. For program ClimaStick V2 select **WeMos D1 Mini Lite**.
 
-![](../.gitbook/assets/i6.png)
+![](../../.gitbook/assets/i6.png)
 
 4- Open Sketch &gt; Include Library &gt; Manage Libraries, and search for **Thinger.io** libraries. Then install the Thinger.io Platform and WiFi Button libraries, as shown in the following picture.
 
-![](../.gitbook/assets/climastick_libraries.png)
+![](../../.gitbook/assets/climastick_libraries.png)
 
 Now your computer is ready to start programming these devices to easily adapt their behavior to multiple use cases.
 
@@ -277,7 +277,7 @@ In order to provide an upgradeable system, these devices can be re-programed usi
 
 {% tabs %}
 {% tab title="NodeMCU as programmer" %}
-![](../.gitbook/assets/imagen1%20%282%29.png)
+![](../../.gitbook/assets/imagen1%20%282%29.png)
 {% endtab %}
 
 {% tab title="Using a UART programmer" %}
@@ -312,15 +312,15 @@ ClimaStick's processor status can be checked be opening the Serial Port inspecto
 
 ### Datasheet
 
-{% file src="../.gitbook/assets/wifibutton-datasheet.pdf" caption="Thinger.io WiFi Button Datasheet.pdf" %}
+{% file src="../../.gitbook/assets/wifibutton-datasheet.pdf" caption="Thinger.io WiFi Button Datasheet.pdf" %}
 
 ### Design files
 
-{% file src="../.gitbook/assets/button-wifi.zip" caption="Thinger.io WiFi Button Dessing Files.zip" %}
+{% file src="../../.gitbook/assets/button-wifi.zip" caption="Thinger.io WiFi Button Dessing Files.zip" %}
 
 ### Firmware files
 
-{% file src="../.gitbook/assets/wifi\_button.ino.zip" caption="Thinger.io WiFi Button Original Firmware" %}
+{% file src="../../.gitbook/assets/wifi\_button.ino.zip" caption="Thinger.io WiFi Button Original Firmware" %}
 
 ## Additional considerations
 

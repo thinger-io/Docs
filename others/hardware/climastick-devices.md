@@ -12,11 +12,11 @@ This board is a complete Internet of Things development kit, that integrates WiF
 
 #### ClimaStick V1.1:
 
-![](../.gitbook/assets/i0.PNG)
+![](../../.gitbook/assets/i0.PNG)
 
 #### ClimaStick V2:
 
-![](../.gitbook/assets/i0_7.png)
+![](../../.gitbook/assets/i0_7.png)
 
 ### Board Features
 
@@ -56,22 +56,22 @@ This section covers how to setup your computer to start working with the ClimaSt
 
 1- Open File &gt; Preferences &gt; Additional\_Boards\_URL\_Manager to include the "ESP8266 boards manager link" that you can retrieve from [Github community project](https://github.com/esp8266/Arduino). It is normally `http://arduino.esp8266.com/stable/package_esp8266com_index.json`
 
-![](../.gitbook/assets/i4.PNG)
+![](../../.gitbook/assets/i4.PNG)
 
 2- Open Tools &gt; Boards &gt; Boards Manager... and search for ESP8266 package, then install the last version.
 
-![](../.gitbook/assets/i5.PNG)
+![](../../.gitbook/assets/i5.PNG)
 
 3- Now you can program almost any ESP82XX processor directly from the Arduino IDE. From the Tools &gt; Boards you should see now the new ESP8266 community boards installed.
 
 1. For program ClimaStick V1 select **NODE\_MCU V1.0 \(ESP-12E Module\)**.
 2. For program ClimaStick V2 select **WeMos D1 Mini Lite**.
 
-![](../.gitbook/assets/i6.png)
+![](../../.gitbook/assets/i6.png)
 
 4- Open Sketch &gt; Include Library &gt; Manage Libraries, and search for **Thinger.io** libraries. Then install the Thinger.io and ClimaStick libraries, as shown in the following picture.
 
-![](../.gitbook/assets/climastick_libraries.png)
+![](../../.gitbook/assets/climastick_libraries.png)
 
 5- Connect the ClimaStick to your computer and select its serial communication port number on: Tools &gt; Port. It normally will be a COM port, or named as /dev/cu.SLAB\_USBtoUART on Mac.
 
@@ -173,11 +173,11 @@ This example is quite useful while requiring accurate temperature values. Due to
 
 After some time, your bucket should look like:
 
-![](../.gitbook/assets/climastick_bucket.png)
+![](../../.gitbook/assets/climastick_bucket.png)
 
 That will allow you to create historical dashboards like the following:
 
-![](../.gitbook/assets/climastick_dashboard.png)
+![](../../.gitbook/assets/climastick_dashboard.png)
 
 ## ClimaStick Functions
 
@@ -273,7 +273,7 @@ This section covers different considerations while using the board.
 * This device is developed for prototyping and support software development, so it is not protected to support hard weather conditions without the proper cover case.
 * Try to avoid touching the components surfaces while using the device, it can produce an electrostatic shock on the device, producing shortcuts and malfunction. It is recommended to take the board from the edges like in the following illustration.
 
-![](../.gitbook/assets/i2.PNG) 
+![](../../.gitbook/assets/i2.PNG) 
 
 * If necessary, clean the circuit using a non-damaging contact cleaner like Isopropyl alcohol and soft brush. 
 * Store in a cool, dry place. Protected from dust.
@@ -282,7 +282,7 @@ This section covers different considerations while using the board.
 
 * If you use the VIN power header, be careful to connect it in the correct position, as it is shown in the following image. Not following this directive could damage the protection diode.
 
-![](../.gitbook/assets/i1.PNG) 
+![](../../.gitbook/assets/i1.PNG) 
 
 * ⚠ Do not use VIN power supply and USB power supply at the same time! It can damage your hardware.
 
@@ -290,7 +290,7 @@ This section covers different considerations while using the board.
 
 * You can power and charge a battery directly from the board. Use the BAT power header, and take care to of the polarity, as it is shown in the following picture:
 
-![](../.gitbook/assets/i3.PNG) 
+![](../../.gitbook/assets/i3.PNG) 
 
 * BAT header is connected to a lithium battery charger that can manage 3.7Vdc, 500mah Li-Po / li-ion batteries charge and discharge process.
 * To charge a battery, connect it on BAT header and power on the ClimaStick through USB / VIN connectors. The battery charger will manage the charging voltage to increase life battery and stops charging cycle when voltage ups to 4.2Vdc.
@@ -303,7 +303,7 @@ This section covers different considerations while using the board.
 
 Click below to download lastest ClimaStick.h library:
 
-{% file src="../.gitbook/assets/climastickv2\_5.zip" %}
+{% file src="../../.gitbook/assets/climastickv2\_5.zip" %}
 
 ### Datasheets
 

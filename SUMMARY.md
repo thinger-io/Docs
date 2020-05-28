@@ -36,10 +36,13 @@
   * [On-Premise](server/deployment/on-premise.md)
 * [SERVER ADMINISTRATION](server/server-configuration.md)
 * [SERVER API](server/api.md)
-* [THINGER.IO HARDWARE](hardware/README.md)
-  * [ClimaStick](hardware/climastick-devices.md)
-  * [WiFi Button](hardware/wifi-button.md)
-* [MOBILE APP](mobile.md)
+
+## Others
+
+* [THINGER.IO HARDWARE](others/hardware/README.md)
+  * [ClimaStick](others/hardware/climastick-devices.md)
+  * [WiFi Button](others/hardware/wifi-button.md)
+* [MOBILE APP](others/mobile.md)
 * [ABOUT](about/README.md)
   * [IoT Ecosystem](about/community.md)
   * [Resources](about/resources.md)
