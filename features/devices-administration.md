@@ -213,6 +213,8 @@ if(event){    //must be flow controlled
 }
 ```
 
+Where "location" is the property\_ID, "data" the pson to be sent, and the boolean \(true/false\) to get writting confirmation. 
+
 ```text
                 /*retrieve property value*/
 void loop(){
