@@ -176,7 +176,9 @@ This section compiles all the possible operating problems and the recommendation
         <td style="text-align:left">Also, The device could be working with configuration hotspot opened</td>
     </tr>
   </tbody>
-</table>## Configuring Thinger.io Platform
+</table>
+
+## Configuring Thinger.io Platform
 
 {% tabs %}
 {% tab title="Configure Access Token" %}

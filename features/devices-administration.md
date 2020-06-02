@@ -196,27 +196,45 @@ Properties declarations and modifications are made by means of a special context
 It is also possible to create, retrieve and modify data properties from devices, however, at this point we must differentiate between HTTP devices or [thinger.io](http://thinger.io/) software client devices, which will use `set_property()` or `get_propery()` comands as shown in the examples below:
 
 ```text
-/*set property value*/
+                    /*set property value*/
+void loop(){
+thing.handle();
 
-//create a pson with new values
-pson data;
-data["longitude"]=-4.056;
-data["latitude"]=41.40;
-//sending new values to platform
-thing.set_property("location", data, true);
+if(event){    //must be flow controlled
+
+    //create a pson with new values
+    pson data;
+    data["longitude"]=-4.056;
+    data["latitude"]=41.40;
+
+    //sending new values to platform
+    thing.set_property("location", data, true);
+    }
+}
 ```
 
 ```text
-/*retrieve property value*/
+                /*retrieve property value*/
+void loop(){
+thing.handle();
 
 //creating a pson to store the property values
 pson data;
+
 //retrieving data from the platform
 thing.get_property("My_Property", data);
+
+float lng=data["longitude"];
+float lat=data["latitude"];
+Serial.print("L: ");
+Serial.print(lng);
+Serial.print(" , l: ");
+Serial.println(lat);
+}
 ```
 
 {% hint style="info" %}
-More details about property functions at the "codification" section of this documentation
+More details about property codification functions at the "codification" section of this documentation.
 {% endhint %}
 
 Using HTTP devices it's also the possible to interact with properties through callback configuration submenu tools.

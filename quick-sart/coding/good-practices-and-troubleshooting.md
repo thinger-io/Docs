@@ -170,7 +170,9 @@ When this command is included, the program will print all the communication traz
       </td>
     </tr>
   </tbody>
-</table>## Support
+</table>
+
+## Support
 
 If after following this instructions it was impossible to find a solution, we have created other resources that can be used in order to find help: 
 
