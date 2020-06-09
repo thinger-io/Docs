@@ -28,17 +28,18 @@ Thinger.io is a platform in constant growth, our development team is continuousl
 * [x] Project & products manager
 * [x] Shared resources manager
 * [x] Community Server Update
-* [ ] Server monitor and settings menu
+* [ ] Server monitor and settings menu 
 * [ ] Mid-year features revision
 * [ ] New web home
+* [ ] Alerts manager
+* [ ] Read-only user accounts 
 * [ ] Data analytics system
 * [ ] ARM-64 server compilation
 * [ ] ESP32 & ESP8266 OTA
 * [ ] Maps widget improvement 
 * [ ] Custom plugins support
 * [ ] COAP integration, NB-IoT & LTE CAT Mclient
-* [ ] InfluxDB tagged data buckets
-* [ ] Instance status visualizer 
+* [ ] InfluxDB tagged data buckets 
 
 In addition to this features, some new plugins will be added to our Marketplace in order to continue extending thinger.io integration with third parties or specific features:
 
