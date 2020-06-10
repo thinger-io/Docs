@@ -2,8 +2,9 @@
 
 * [OVERVIEW](README.md)
 
-## Quick Start <a id="quick-sart"></a>
+## INTRODUCTION <a id="quick-sart"></a>
 
+* [QUICK START](quick-sart/quick-start.md)
 * [COMPATIBLE DEVICES](quick-sart/devices/README.md)
   * [ARDUINO](quick-sart/devices/arduino.md)
   * [LINUX / RASPBERRY PI](quick-sart/devices/linux.md)
