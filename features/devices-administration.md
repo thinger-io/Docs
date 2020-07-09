@@ -2,30 +2,35 @@
 
 ## Create Device
 
-The first step to start an IoT project in Thinger.io \(except for not connected devices like Sigfox\) is by creating devices, which will grant access to connect your devices to your account. Any device in Thinger.io must be registered to get access to the cloud. Each one has its own identifier and credentials and is related to the user account. This section describes the required steps to register a new device in your account.
+The first step to start any IoT project with Thinger.io \(except for not connected devices like Sigfox\) is creating a device profile, which will relate the hardware device with the user account. Any device in Thinger.io must be registered to get access to the cloud. Each one has its own identifier and credentials and is related to the user account. This section describes the required steps to register a new device in your account.
 
-To register a new device, once you have been logged in your console dashboard, please go to the **Devices** section that appears in the left menu.
+All device creation and management processes are performed from the devices tab in the main menu
 
 ![](../.gitbook/assets/image%20%28199%29.png)
 
-This section will list your registered devices and will show some information about its connection. Something similar to the following picture.
+This section allows to show all registered devices and some information about its connection status as shown in the picture below:
 
 ![](https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/58e06f4e8771738d9a1fa7f26a53fdb2864b5937.png)
 
-If it's your first time on thinger.io this list will be empty. Next we'll show you how to create your first device. First of all, click on **Add Device** that will open a form in which you can introduce your device indentification credentials and select a **Device Type** from the drop down list, selecting one of these types: 
+If it's your first time on thinger.io this list will be empty. Next, we'll show you how to create your first device. First of all, click on **Add Device** that will open a form in which you can introduce your device identification credentials and select a **Device Type** from the drop-down list, selecting one of these types: 
 
-* **Generic device**: For devies with Thinger.io software client on it. Such as Raspberry Pi, Linux or Arduino devices. 
-* **HTTP device**: This option allows creating a virtual device to integrate data via REST API Callback, providing nice integration with third party platforms and other frameworks \(Java, Python\) and allowing to work with their data in a simple way. 
+* **Generic device**: For devices with Thinger.io software client on it. Such as Raspberry Pi, Linux or Arduino devices. 
+* **HTTP device**: This option allows creating a virtual device to integrate data via REST API Callback, providing nice integration with third-party platforms and other frameworks \(Java, Python\) and allowing them to work with their data in a simple way. 
 * **Thinger Core 32 device**: This is only for ESP32 modules with Thinger.io Core on it that will provide additional features such as security, devices auto-provisioning and OTA. 
 * **MQTT devices:** For MQTT devices that will work with the Thinger.io embedded broker \(only for private instances\).
 
-After selecting your the device type you can fill the input text form as explained below:
-
 ![](../.gitbook/assets/adddevice.PNG)
 
-Add the **device identifier** \(unique within your devices\), a **device description** that may help you to identify your device, and the **device credentials**. Each device has its own identifier/credential, so a compromised device will not affect other devices. All your passwords in the server are stored securely using `PBKDF2 SHA256` with a 32 bytes salt generated with `PRNG` and a non-depreciable amount of iterations. Keep your **device identifier** and **device credential**, as you will need them for connecting your device \(the password cannot be recovered later\).
+After selecting your the `device type` the form will adapt the device definition parameters to its specific requirements that must be provided to the system in order to create the device profile:
 
-If all goes fine, you should see some success message
+* **Device identifier** that must be unique within your devices
+* **Device description** which will help you to identify your device
+* **Device credentials**. Each device has its own identifier/credential, so a compromised device will not affect other devices. All your passwords in the server are stored securely using `PBKDF2 SHA256` with a 32 bytes salt generated with `PRNG` and a non-depreciable amount of iterations. 
+
+  
+Keep your **device identifier** and **device credential**, as you will need them for connecting your device \(the password cannot be recovered later\).
+
+If everything has been properly filed, you should see some success message when pressing "Add Device" button
 
 ![](https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/68e13f2c4df7ecb9f0261d84ba36e12b3d8498ce.png)
 
@@ -33,13 +38,13 @@ Now, you can o back to your devices list, and your device should appear as disco
 
 ![](../.gitbook/assets/device_list.png)
 
-Now you can use your new device id and the device credentials to connect the new device. Depending on your device, you will need to install the required libraries or development environment, so checkout the following sections according to your device:
+Now you can use your new device id and the device credentials to connect the new device. Depending on your device, you will need to install the required libraries or development environment, so check out the following sections according to your device:
 
 {% page-ref page="../quick-sart/devices/arduino.md" %}
 
 {% page-ref page="../quick-sart/devices/linux.md" %}
 
-Remember that Sigfox devices, does not share the concept of connected device, as they are by default offline devices that send information periodically. If you want to store information from these devices, please, checkout the following documentation.
+Remember that Sigfox devices does not share the concept of "connected devices", as they are by default offline devices that send information periodically. If you want to store information from these devices, please, check out the following documentation.
 
 {% page-ref page="../quick-sart/devices/sigfox.md" %}
 
@@ -61,7 +66,7 @@ Having the first connected device, we are ready to start discovering all the oth
 
 ## Device Explorer
 
-Each device counts with an explorer and administration interface, that allows showing and configuring different devices features. This interface is common for all device types in thinger.io but note that some features such as the "device API explorer" may not be available if the device have not an actual real-time connection with the server. 
+Each device counts with an explorer and administration interface, that allows showing and configuring different devices features. This interface is common for all device types in thinger.io but note that some features such as the "device API explorer" may not be available if the device has not an actual real-time connection with the server. 
 
 In the next sections, it is explained each different feature of the device explorer:
 
@@ -73,7 +78,7 @@ Once you have your device connected to your account, as described in the previou
 
 In the API explorer interface you will see one different box for each resource defined in your code. Each resource has an identifier, that is related with the resource name defined in your code. In the Thinger.io platform, you can define 4 different types of resources, one for input \(sending data to the device\), one for output \(the device will send information\), one for input/output \(you can send and receive information in one call\), and just a callback resource, which you can just execute without sending or receiving information. The input and output data, from the API perspective, can be any JSON document. Take a look to your library documentation in order to see how to define these different resources.
 
-For example, the default ESP8266 example in the Arduino libraries, defines two different resources. One input resource, called `led`, for controlling the `BUILTIN_LED`, and one output resource, called `millis` to extract the current millis of the device, as defined in the following code. Notice that a resource name can be any arbitrary text to identify the underlying resource, as they are not tied to any constant defined in the platform.
+For example, the default ESP8266 example in the Arduino libraries, defines two different resources. One input resource, called `led`, for controlling the `BUILTIN_LED`, and one output resource, called `millis` to extract the current "millis" value of the device, as defined in the following code. Notice that a resource name can be any arbitrary text to identify the underlying resource, as they are not tied to any constant defined in the platform.
 
 So, these are our sample resource:
 
@@ -86,11 +91,11 @@ If our device is connected to the platform, we can open our device API explorer 
 
 ![](../.gitbook/assets/deviceapi.PNG)
 
-You can see how our defined resources in the device are now available in the platform, as the device is able to report the available resources and their format \(or current state\). The idea is that you can test here your resources, that is, interacting with them in real-time. In this case, you will be able to switch the led state, or read the current milliseconds from the Arduino device. Every click in the `Run` button will execute your resource, i.e., forcing a read from a sensor, calling the `millis()` function, or sending a new state for the actuator, depending on the resource type \(input or output\).
+You can see how our defined resources in the device are now available in the platform, as the device is able to report the available resources and their format \(or current state\). The idea is that you can test here your resources, that is, interacting with them in real-time. In this case, you will be able to switch the led state or read the current milliseconds from the Arduino device. Every click in the `Run` button will execute your resource, i.e., forcing a read from a sensor, calling the `millis()` function, or sending a new state for the actuator, depending on the resource type \(input or output\).
 
-The nice idea about that, is that every device resource, can be translated to a REST API endpoint, so you can consume or interact with your devices using standard REST queries, i.e., using a `POST` method to send values to the device, or using a `GET` method to read information from the device. So, you can easily test these API endpoints before integrating them in other platforms or applications.
+Thanks to this feature, every device resource can be translated to a REST API endpoint in a very simple way, so can be consumed or interacted with any other devices or applications using standard REST queries, i.e., using a `POST` method to send values to the device, or using a `GET` method to read information from the device. 
 
-You can even test more complex inputs and outputs from the platform. In example, suppose that you have defined a resource that basically returns the sum and multiplication between two integer numbers, something like:
+It is also possible to create more complex resources with both input and output functionalities. The example below, basically returns the sum and multiplication between two integer numbers:
 
 ```cpp
 thing["in_out"] = [](pson& in, pson& out){
@@ -111,29 +116,29 @@ There is more information available about the API for interacting with your devi
 
 ### Device Tokens
 
-All the interactions with your connected devices, i.e., by using the REST API endpoints commented above, or a mobile phone, needs to be authenticated against the platform. By default, when you interact with your devices over the Thinger.io console, you are implicitly signing all your requests to the platform with an access token you obtained from your username and password. This kind of authorization grants access to all your account resources, so you can configure devices, buckets, etc. However, this authorization expires quite frequently \(but renewed automatically by your browser\), and cannot be used to grant access to our devices to other users or platforms, as you will be providing access to all your account.
+All the interactions with your connected devices, i.e., by using the REST API endpoints commented above, or mobile phone, needs to be authenticated against the platform. By default, when you interact with your devices over the Thinger.io console, you are implicitly signing all your requests to the platform with an access token you obtained from your username and password. This kind of authorization grants access to all your account resources, so you can configure devices, buckets, etc. However, this authorization expires quite frequently \(but renewed automatically by your browser\), and cannot be used to grant access to our devices to other users or platforms, as you will be providing access to all your account.
 
-In this case, it is possible to create specific access tokens for granting access to your devices, and even grant access to specific resources on your devices. Moreover, it is possible to define the token validity in time, by enabling an expiration date. This way, if you need to provide access to some of your device resources to a third party tool like IFTTT, a external web page, a mobile phone, or any other service, it is highly recommended to create a device token.
+In this case, it is possible to create specific access tokens for granting access to your devices and even grant access to specific resources on your devices. Moreover, it is possible to define the token validity in time, by enabling an expiration date. This way, if you need to provide access to some of your device resources to a third-party tool like IFTTT, an external web page, a mobile phone, or any other service, it is highly recommended to create a device token.
 
-To create a device token, open the device Dashboard and take a look to the subsection called "Device Tokens". Then, click on the green button `Add` on the right of the box. Then, a modal window will appear, were you can configure different parameters:
+To create a device token, open the device Dashboard and take a look at the subsection called "Device Tokens". Then, click on the green button `Add` on the right of the box. Then, a modal window will appear, where you can configure different parameters:
 
 * Token name: Use a representative name to remember why the token was issued, i.e., IFTTT Access, Mobile phone, etc.
-* Token access: Configure the token to allow accessing all device resources, or limit the access to a set of resources.
+* Token access: Configure the token to allow accessing all device resources, or limit access to a set of resources.
 * Token expiration: Configure the token to expire at some given date, or available indefinitely.
 
 The following figure shows a sample screenshot while configuring a device token.
 
 ![](../.gitbook/assets/addtockenform.PNG)
 
-Once the token is saved, the interface will show the access token to be used in the REST API Calls, like in the following figure. If you need help to integrate this access token in the REST API calls, checkout [this](http://docs.thinger.io/api/#authentication-api-rest-api-authentication) documentation.
+Once the token is saved, the interface will show the access token to be used in the REST API Calls, like in the following figure. If you need help to integrate this access token in the REST API calls, check out [this](http://docs.thinger.io/api/#authentication-api-rest-api-authentication) documentation.
 
 ![](../.gitbook/assets/devicetokenvalue.png)
 
 ### HTTP devices Callback <a id="http-devices-callback"></a>
 
-Because of the nature of these devices, [thinger.io](http://thinger.io/) applies a special treatment, based on the use of callbacks to make the integration. A callback is a functionality of the server that can be used to request a process with device data by means of a HTTP query, such as store it in a bucket, calling an endpoint profile or registering the information contained in a JSON that should be sended with the query.
+Because of the nature of these devices, [thinger.io](http://thinger.io/) applies a special treatment, based on the use of callbacks to make the integration. A callback is a functionality of the server that can be used to request a process with device data by means of an HTTP query, such as store it in a bucket, calling an endpoint profile or registering the information contained in a JSON that should be sent with the query.
 
-To create a callback, open the device Dashboard and take a look to the subsection called "callback", that will show different options in the context `callback details` as shown in the image below:
+To create a callback, open the device Dashboard and take a look at the subsection called "callback", that will show different options in the context `callback details` as shown in the image below:
 
 ![](../.gitbook/assets/callbackdetails.PNG)
 
@@ -143,7 +148,7 @@ This context shows the different functionalities that can be requested from the 
 * Calling [Endpoint Profiles](http://docs.thinger.io/console/#endpoints) to integrate with third parties
 * Retrieving or modifying [Device Properties](http://docs.thinger.io/api/#Device-properties) using `Set device property` or `response data` features.
 
-Note that it is not possible to create properties, data buckets or endpoints though callback request, so it is necessary to initialize then first using the web console or via REST API.
+Note that it is not possible to create properties, data buckets, or endpoints through callback requests, so it is necessary to initialize then first using the web console or via REST API.
 
 Ones you have configured the callback details, the system will be ready to receive a request. In a similar way to the "show query" feature included in the Connected device's dashboard, you can find a precise specification of the HTTP request structure and a complete cURL example by clicking in the "overview" or "cURL Example" tabs in the upper side of `Callback Details` context as shown in the image below:
 
@@ -157,9 +162,9 @@ https://<Thinger_Server>/v3/users/<Username>/devices/<Device_ID>/callback?author
 
 ### Device Tokens <a id="device-tokens"></a>
 
-All the interactions with your connected devices, i.e., by using the REST API endpoints commented above, or a mobile phone, needs to be authenticated against the platform. By default, when you interact with your devices over the [Thinger.io](http://thinger.io/) console, you are implicitly signing all your requests to the platform with an access token you obtained from your username and password. This kind of authorization grants access to all your account resources, so you can configure devices, buckets, etc. However, this authorization expires quite frequently \(but renewed automatically by your browser\), and cannot be used to grant access to our devices to other users or platforms, as you will be providing access to all your account.
+All the interactions with your connected devices, i.e., by using the REST API endpoints commented above, or mobile phone, needs to be authenticated against the platform. By default, when you interact with your devices over the [Thinger.io](http://thinger.io/) console, you are implicitly signing all your requests to the platform with an access token you obtained from your username and password. This kind of authorization grants access to all your account resources, so you can configure devices, buckets, etc. However, this authorization expires quite frequently \(but renewed automatically by your browser\), and cannot be used to grant access to our devices to other users or platforms, as you will be providing access to all your account.
 
-In this case, it is possible to create specific access tokens for granting access to your devices, and even grant access to specific resources on your devices. Moreover, it is possible to define the token validity in time, by enabling an expiration date. This way, if you need to provide access to some of your device resources to a third party tool like IFTTT, a external web page, a mobile phone, or any other service, it is highly recommended to create a device token.
+In this case, it is possible to create specific access tokens for granting access to your devices and even grant access to specific resources on your devices. Moreover, it is possible to define the token validity in time, by enabling an expiration date. This way, if you need to provide access to some of your device resources to a third-party tool like IFTTT, an external web page, a mobile phone, or any other service, it is highly recommended to create a device token.
 
 To create a device token, open the device Dashboard and take a look to the subsection called "Device Tokens".
 
@@ -181,19 +186,19 @@ Once the token is saved, the interface will show the access token to be used in 
 
 ### Device Properties <a id="device-properties"></a>
 
-[Thinger.io](http://thinger.io/) provides a simple way to store additional information related to an specific device, such as location, identificators or even configuration parameters that may be retrieved by devies using comon Json files. On this way, the platform can be used as devices persistent memory. To create a device property, open the device Dashboard and take a look to the subsection called "Properties".
+[Thinger.io](http://thinger.io/) provides a simple way to store additional information related to a specific device, such as location, identification, or even configuration parameters that may be retrieved by devices using common JSON files. In this way, the platform can be used as a device's persistent memory. To create a device property, open the device Dashboard, and take a look to the subsection called "Properties".
 
 ![](../.gitbook/assets/image%20%28261%29.png)
 
-This menu provides an easy way to create, manage or delete devices properties. Note that the property created in this example is specifying the device location. [Thinger.io](http://thinger.io/) system has been designed to detect this configuration and automatically represent it on the device dashboard map.
+This menu provides an easy way to create, manage, or delete the device's properties. Note that the property created in this example is specifying the device location. [Thinger.io](http://thinger.io/) system has been designed to detect this configuration and automatically represent it on the device dashboard map.
 
 ![](../.gitbook/assets/adddeviceproperty.PNG)
 
-Properties declarations and modifications are made by means of a special context, provided with a json validator that enhances the text and check morfologic mistakes.
+Properties declarations and modifications are made by means of a special context, provided with a JSON validator that enhances the text and checks morphologic mistakes.
 
 #### Coding with properties <a id="coding-with-properties"></a>
 
-It is also possible to create, retrieve and modify data properties from devices, however, at this point we must differentiate between HTTP devices or [thinger.io](http://thinger.io/) software client devices, which will use `set_property()` or `get_propery()` comands as shown in the examples below:
+It is also possible to create, retrieve and modify data properties from devices, however, at this point we must differentiate between HTTP devices or [thinger.io](http://thinger.io/) software client devices, which will use `set_property()` or `get_propery()` commands as shown in the examples below:
 
 ```text
                     /*set property value*/
@@ -213,7 +218,7 @@ if(event){    //must be flow controlled
 }
 ```
 
-Where "location" is the property\_ID, "data" the pson to be sent, and the boolean \(true/false\) to get writting confirmation. 
+Where "location" is the property\_ID, "data" the PSON to be sent, and the boolean \(true/false\) to get writing confirmation. 
 
 ```text
                 /*retrieve property value*/
@@ -225,13 +230,12 @@ pson data;
 
 //retrieving data from the platform
 thing.get_property("My_Property", data);
-
-float lng=data["longitude"];
-float lat=data["latitude"];
-Serial.print("L: ");
-Serial.print(lng);
-Serial.print(" , l: ");
-Serial.println(lat);
+  float lng=data["longitude"];
+  float lat=data["latitude"];
+  Serial.print("L: ");
+  Serial.print(lng);
+  Serial.print(" , l: ");
+  Serial.println(lat);
 }
 ```
 
@@ -243,7 +247,7 @@ Using HTTP devices it's also the possible to interact with properties through ca
 
 ![](../.gitbook/assets/httpgetsetproperty.PNG)
 
-Acording to this configuration, when [Thigner.io](http://thigner.io/) server receives any transmission from "SigfoxDevice1" the payload data will be stored into "data" property, creating a JSON with all variables. In the oposite situation, thanks to the "Response Data" feature, the values stored in the parameter with was called "downlink\_data" will be sent to the device thought Sigfox infrastructure.
+According to this configuration, when [Thigner.io](http://thigner.io/) server receives any transmission from "SigfoxDevice1" the payload data will be stored into "data" property, creating a JSON with all variables. In the opposite situation, thanks to the "Response Data" feature, the values stored in the parameter with was called "downlink\_data" will be sent to the device thought Sigfox infrastructure.
 
 ### Device Online Terminal <a id="device-settings"></a>
 

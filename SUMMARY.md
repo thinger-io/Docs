@@ -44,6 +44,9 @@
   * [ClimaStick](others/hardware/climastick-devices.md)
   * [WiFi Button](others/hardware/wifi-button.md)
 * [MOBILE APP](others/mobile.md)
+
+---
+
 * [ABOUT](about/README.md)
   * [IoT Ecosystem](about/community.md)
   * [Resources](about/resources.md)
