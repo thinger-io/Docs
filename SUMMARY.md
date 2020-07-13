@@ -35,7 +35,11 @@
 * [SERVER DEPLOYMENT](server/deployment/README.md)
   * [Thinger.io Cloud](server/deployment/thinger.io-cloud-server.md)
   * [On-Premise](server/deployment/on-premise.md)
-* [SERVER ADMINISTRATION](server/server-configuration.md)
+* [SERVER SETTINGS](server/server-configuration.md)
+* [USERS MANAGEMENT](server/users-management.md)
+* [BRANDING](server/branding/README.md)
+  * [WEB DOMAIN CUSTOMIZATION](server/branding/web-domain-customization.md)
+  * [WEB CONSOLE REBRANDING](server/branding/web-console-rebranding.md)
 * [SERVER API](server/api.md)
 
 ## Others
