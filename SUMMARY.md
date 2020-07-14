@@ -29,6 +29,10 @@
   * [The Things Network Plugin](features/plugins/the-things-network.md)
   * [Sigfox Plugin](features/plugins/sigfox.md)
   * [Node-RED Plugin](features/plugins/node-red.md)
+* [USERS MANAGEMENT](features/users-management.md)
+* [REBRANDING](features/branding/README.md)
+  * [WEB CONSOLE REBRANDING](features/branding/web-console-rebranding.md)
+  * [CUSTOM WEB DOMAIN](features/branding/web-domain-customization.md)
 
 ## Server
 
@@ -36,10 +40,6 @@
   * [Thinger.io Cloud](server/deployment/thinger.io-cloud-server.md)
   * [On-Premise](server/deployment/on-premise.md)
 * [SERVER SETTINGS](server/server-configuration.md)
-* [USERS MANAGEMENT](server/users-management.md)
-* [BRANDING](server/branding/README.md)
-  * [WEB DOMAIN CUSTOMIZATION](server/branding/web-domain-customization.md)
-  * [WEB CONSOLE REBRANDING](server/branding/web-console-rebranding.md)
 * [SERVER API](server/api.md)
 
 ## Others

@@ -1,9 +1,5 @@
 # SERVER SETTINGS
 
-When a new Thigner.io Private Instance is created, it is provided with a standard web domain \(similar to "https://mycompany.do.thinger.io"\) and uses a web console with standard Thinger.io brand aspect, however, it is possible to create multiple rebrands over this consoles and modify the web domain in order to custom the aspect of the platform to multiple customers branding. this feature provides support for deploying multi-tenant solutions. It is also possible to create multiple user accounts that will make use of the same private server, creating an isolated network of users for specific projects. 
-
-In this section it is explained how to use the Server Administration tools to configure the server for using these features in a simple way. 
-
 ## Web Console Rebranding
 
 Thinger.io instances support multi-tenant web console customizations. By means of a management tool that is available at the main menu "Rebranding" section, it is possible to create and manage multiple web customizations, in order to custom the aspect of the web console to different customers or projects by changing some elements such as:
