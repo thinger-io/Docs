@@ -28,8 +28,8 @@ Thinger.io is a platform in constant growth, our development team is continuousl
 * [x] Project & products manager
 * [x] Shared resources manager
 * [x] Community Server Update
-* [ ] Server monitor and settings menu 
-* [ ] Mid-year features revision
+* [x] Server monitor and settings menu 
+* [x] Mid-year features revision
 * [ ] New web home
 * [ ] Alerts manager
 * [ ] Read-only user accounts 
@@ -44,7 +44,9 @@ Thinger.io is a platform in constant growth, our development team is continuousl
 In addition to this features, some new plugins will be added to our Marketplace in order to continue extending thinger.io integration with third parties or specific features:
 
 * [x] Node-RED Plugin integration
-* [ ] Grafana
+* [x] Grafana
+* [ ] Platformio
+* [ ] Espressif IDF
 * [ ] Kibana
 * [ ] HTTP devices integration plugin
 * [ ] Python container

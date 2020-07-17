@@ -23,23 +23,31 @@
 * [DASHBOARDS](features/dashboards.md)
 * [ENDPOINTS](features/endpoints-1.md)
 * [ACCESS TOKENS](features/access-tokens.md)
-* [FILE SYSTEM](features/file-system.md)
-* [PROJECTS MANAGER](features/projects.md)
-* [PLUGINS MARKETPLACE](features/plugins/README.md)
-  * [The Things Network Plugin](features/plugins/the-things-network.md)
-  * [Sigfox Plugin](features/plugins/sigfox.md)
-  * [Node-RED Plugin](features/plugins/node-red.md)
-* [USERS MANAGEMENT](features/users-management.md)
-* [REBRANDING](features/branding/README.md)
-  * [WEB CONSOLE REBRANDING](features/branding/web-console-rebranding.md)
-  * [CUSTOM WEB DOMAIN](features/branding/web-domain-customization.md)
+
+## PREMIUM FEATURES
+
+---
+
+* [PLUGINS MARKETPLACE](plugins/README.md)
+  * [The Things Network Plugin](plugins/the-things-network.md)
+  * [Sigfox Plugin](plugins/sigfox.md)
+  * [Node-RED Plugin](plugins/node-red.md)
+  * [Grafana Plugin](plugins/grafana.md)
+* [FILE SYSTEM](file-system.md)
+* [PROJECTS MANAGER](projects.md)
+* [USERS MANAGEMENT](users-management.md)
+* [WEB CONSOLE REBRANDING](web-console-rebranding.md)
+* [CUSTOM WEB DOMAIN](web-domain-customization.md)
 
 ## Server
 
 * [SERVER DEPLOYMENT](server/deployment/README.md)
   * [Thinger.io Cloud](server/deployment/thinger.io-cloud-server.md)
   * [On-Premise](server/deployment/on-premise.md)
-* [SERVER SETTINGS](server/server-configuration.md)
+* [SERVER ADMINISTRATION](server/server-configuration/README.md)
+  * [Host Management](server/server-configuration/host-management.md)
+  * [Cluster / Host Status](server/server-configuration/cluster-host-status.md)
+  * [Server Logs](server/server-configuration/server-logs.md)
 * [SERVER API](server/api.md)
 
 ## Others

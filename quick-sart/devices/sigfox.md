@@ -24,7 +24,7 @@ There are two ways to configure Thinger.io to work with Sigfox devices. The best
 
 ### **Advanced Integration \(with Sigfox plugin\)**
 
-{% page-ref page="../../features/plugins/sigfox.md" %}
+{% page-ref page="../../plugins/sigfox.md" %}
 
 ### Single Device Integration \(without plugins\)
 

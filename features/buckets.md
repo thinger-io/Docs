@@ -105,7 +105,7 @@ Once the data bucket has been configured, and it started to record data from a d
 
 ## Bucket Data Import
 
-In order to make bulk data upload or buckets backup processes, the data bucket system has been provided with an import feature that is able to retrieve a .csv file from a Thinger.io [**File System**](file-system.md) and store it's data with the XXX timestream. 
+In order to make bulk data upload or buckets backup processes, the data bucket system has been provided with an import feature that is able to retrieve a .csv file from a Thinger.io [**File System**](../file-system.md) and store it's data with the XXX timestream. 
 
 Note that using this feature has two restrictions. The user account must be able to use File Systems \(this is not available in free accounts\) and the file must be made with one variable per column and contain a variable with the Linux Timestream in microseconds.
 
@@ -119,7 +119,7 @@ The import will allow to fill the data bucket with the same data contained in th
 
 To execute an import, the following steps must be carried out:
 
-1. Create a new File System \([following **these** instructions](file-system.md)\) ****profile with public access configuration or open an existent one and upload the .csv file to be imported into the File System. 
+1. Create a new File System \([following **these** instructions](../file-system.md)\) ****profile with public access configuration or open an existent one and upload the .csv file to be imported into the File System. 
 2. Create the new data bucket
 3. Select the source File System and place the file identifier in the "File name" section.
 4. Click on "Import Data" button.

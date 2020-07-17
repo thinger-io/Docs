@@ -18,8 +18,8 @@ Next list details every Thinger.io Private instances advantages:
 * **Unlimited** devices, Dashboards, Data Buckets, Access Token & sampling intervals
 * **Plugins** System Deployment with different extensions available. 
 * **File Storage System** that allows saving context data or any kind of files
-* **Multiple User Support** that allows to create and manage individual customer accounts in your server.  
-* **Multi Tenancy Support** with multiple web-console rebranding profiles and web domains hosted by just one server instance.  
+* **Multiple User Support** allows to create and manage individual customer accounts in your server.  
+* **Multi-Tenancy Support** with multiple web-console rebranding profiles and web domains hosted by just one server instance.  
 * Support for multiple databases with real-time **data aggregation**
 
 ## Hosting options
@@ -30,5 +30,5 @@ Private instances can be deployed within minutes over the main cloud provider ho
 
 {% page-ref page="on-premise.md" %}
 
-
+## Managing subscription
 
