@@ -38,11 +38,11 @@ This threshold can be upgraded on "Grow" or "Startup" licenses by going to the m
 
 The administration portal will show all the licenses that have been subscribed using this e-mail address, allowing to select the one that wants to be updated. Just select the one that wants to be modified and press the option "Edit Subscription", finally pressing the option "Addons", the portal will show all the available options and pricing in the Add Addons menu:
 
-![](.gitbook/assets/image%20%28267%29.png)
+![](.gitbook/assets/image%20%28272%29.png)
 
 After selecting any of them, it is possible to select the amount just before checking out, note that the price  will be fixed per each unit, but it is possible to introduce a discount coupon that will be provided by Thinger.io team if your business model is quite intensive on any of these features in order to hold a cost-effective solution 
 
-![](.gitbook/assets/image%20%28287%29.png)
+![](.gitbook/assets/image%20%28302%29.png)
 
 When the subscription begins updated, a confirmation email will be received with an extract of the subscription cost variations. 
 

@@ -8,11 +8,11 @@ This feature is only available for the instance's manager account
 
 The server monitoring terminal is accessible only to cluster/instance administrators by accessing the "Cluster Hosts" section of the Thinger.io main menu, which will display the Host List as shown in the image below:
 
-![](../../.gitbook/assets/image%20%28272%29.png)
+![](../../.gitbook/assets/image%20%28280%29.png)
 
 The server list shows all the associated instances in the same cluster. If your IoT network consists of only one server, only one profile will be shown.
 
-![](../../.gitbook/assets/image%20%28265%29.png)
+![](../../.gitbook/assets/image%20%28270%29.png)
 
 The values shown bring together the connection data of all devices and user accounts on the same server. The next parameters can be shown: 
 

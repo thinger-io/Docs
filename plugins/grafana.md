@@ -2,7 +2,7 @@
 
 _Grafana_ is an Open Source visualization and analytics software that allows to query, visualize, alert on, and explore metrics no matter where they are stored. This integration plugin allows working together with Grafana & Thinger.io, providing a lot of new tools to analyze IoT devices data with amazing graphs and visualization widgets. 
 
-![](../.gitbook/assets/image%20%28270%29.png)
+![](../.gitbook/assets/image%20%28275%29.png)
 
 {% hint style="info" %}
 [Note: Plugins are only available for premium Thinger.io serves. Check **this link** to create your own instance within minutes](https://pricing.thinger.io).
@@ -22,13 +22,13 @@ Once the standard plugin deployment process has been done \(as explained here\),
 
 When the plugin is newly installed, the first login should be done as login credentials your Thinger.io account username and "admin" into the password field. Once the first login occurs the system will ask to change the password to put a custom one. After this, it is possible to see the Grafana workspace with its different options. 
 
-![](../.gitbook/assets/image%20%28263%29.png)
+![](../.gitbook/assets/image%20%28267%29.png)
 
 ### Adding a Datasource
 
 The link between the Thinger.io data and the graphical plug-in is done by adding the buckets database as a new Data Source for Grafana, so the first step after logging in is pressing the data sources block, this will open a new context in which we can browse different technologies to obtain the data that will be displayed later in the dashboards.
 
-![](../.gitbook/assets/image%20%28274%29.png)
+![](../.gitbook/assets/image%20%28283%29.png)
 
 In this menu, select the database technology that is being used to store Thinger.io data buckets. It is by default  "InfluxDB", but the instance administrator may have selected another technology, so if you do not know the correct system you should contact the server administrator.
 
@@ -43,7 +43,7 @@ Then configure the address and the credentials to provide Grafana the required a
   * **User**: Thinger.io account username
   * **Password**: Thinger.io account password
 
-![](../.gitbook/assets/image%20%28289%29.png)
+![](../.gitbook/assets/image%20%28304%29.png)
 
 ## Working with Grafana
 
@@ -53,11 +53,11 @@ Once the data source has been configured, the most common way to start working w
 
 * **Panel Configuration**: On this step, we can choose the graphic to be used in the widget, for example time series charts, tatalalalala Es interesante que las explores todas las opciones que ofrece este menú, tanto en tipos de visualización como en otras configuraciones del panel que permiten elegir la leyenda, los ejes, etc. 
 
-![](../.gitbook/assets/image%20%28281%29.png)
+![](../.gitbook/assets/image%20%28293%29.png)
 
 * **Data source Configuration:** Select the data source you want to use by clicking on the drop-down menu to change "default" to the name of the InfluxDB database that you added in the first step \(adding a datasource\). If it was done correctly, in the section `FORM`  the complete list of Thigner.io data buckets will be available to select any of them. Then, the section `SELECT` allows to specify any of the stored device data to be represented on the panel. 
 
-![](../.gitbook/assets/image%20%28277%29.png)
+![](../.gitbook/assets/image%20%28286%29.png)
 
 * **Transform data:** Allows to filter or aggregate devices data using different tools before it will be shown in the representation pannel. 
 * **Automatic Alerts**: The graph process can be configured to work in the background evaluating the variables received to generate alerts in real-time. This panel allows the configuration of many parameters for the creation of alerts in a personalized way.
@@ -69,15 +69,15 @@ Grafana is a very flexible tool, users can add new panels as they go, retrieving
 1. The first step is to find the new element to add, the following link leads to the official Grafana plugin repository. 
 2. Access Grafana's shell, to do so click on the Plugins tab in the Thinger.io main menu, then access Grafana's profile in the Plugins Marketplace:
 
-![](../.gitbook/assets/image%20%28268%29.png)
+![](../.gitbook/assets/image%20%28273%29.png)
 
 3. Once inside click on the _&gt;\_Shell_ option and click on "connect". Then the download and installation command can be pasted into the console and executed. 
 
-![](../.gitbook/assets/image%20%28283%29.png)
+![](../.gitbook/assets/image%20%28295%29.png)
 
 4- After the installation of a new element in Grafana it is necessary to restart the plugin container. This process is done through the plugin's function bar by means of the Restart button.
 
-## Provide public access to share Grafana projects
+## Providing public access to share Grafana projects
 
 Grafana allows creating working groups to collaborate on project development. 
 

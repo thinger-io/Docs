@@ -44,7 +44,7 @@ This feature is reserved for professional uses, so only Grow, Startup, and Busin
 
 Our deployment tool allows configuring the license with multiple Add-ons such as custom web domains, custom brands, or additional user accounts. It can be added to the license before the deployment process by means of the configuration table 
 
-![](.gitbook/assets/image%20%28279%29.png)
+![](.gitbook/assets/image%20%28290%29.png)
 
 Note that more than one branding or web domain profile can be added, as it is possible to create as many brandings as needed in order to adapt the look and feel of the web console to different IoT projects or customers. When the limit is reached, the web console will show the next error message "cannot create more domains" to inform that it is required to upgrade the number of custom domain profiles as explained in the section below. 
 
@@ -58,11 +58,11 @@ If the amount of contracted brand profiles is reached, \(or if no additional bra
 
 The administration portal only can be accessed by the instance administrator using his email address to obtain a one-time password. Once logged in, the administration portal will show all the licenses that have been subscribed to this e-mail address. Just select the license that wants to be modified and press the option "Edit Subscription", finally, pressing the option "Addons", the portal will show all the available options and pricing in the Add Add-ons menu:
 
-![](.gitbook/assets/image%20%28267%29.png)
+![](.gitbook/assets/image%20%28272%29.png)
 
 After selecting any of them, it is possible to select the amount just before checking out, note that the price  will be fixed per each unit, but it is possible to introduce a discount coupon that will be provided by Thinger.io team if your business model is quite intensive on any of these features in order to hold a cost-effective solution 
 
-![](.gitbook/assets/image%20%28288%29.png)
+![](.gitbook/assets/image%20%28303%29.png)
 
 When the subscription begins updated, a confirmation email will be received with an extract of the subscription cost variations. 
 
