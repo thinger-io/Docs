@@ -79,9 +79,26 @@ Grafana is a very flexible tool, users can add new panels as they go, retrieving
 
 ## Providing public access to share Grafana projects
 
-Grafana allows creating working groups to collaborate on project development. 
+Grafana can be configured to create collaborative working groups in order to share resources with read-only or editing privileges, which is a quite useful feature to create visualization interfaces for customers. The process required to implement this feature is quite simple on Grafana, as explained below
 
-It also allows sharing dashboards with third parties or in a public way
+1. Going to the "permissions" section of the dashboard that wants to be shared, press the blue "Add permission" button. 
+2. Then in the "Add permission for" section, select the user or the team with whom the dashboard will be shared  
+3. Finally, select the privileges that want to be granted 
+
+![](../.gitbook/assets/image%20%28306%29.png)
+
+However, when Grafana is running into a Thinger.io plugin, an additional configuration needs to be done in order to provide public access to the program. 
+
+4. Going to Thinger.io Plugins marketplace section, select Grafana profile to access the plugin configuration interface  
+5. Clicking into the "Settings" tab, switch on the public access button 
+
+![](../.gitbook/assets/image%20%28307%29.png)
+
+### 
+
+
+
+
 
 
 
