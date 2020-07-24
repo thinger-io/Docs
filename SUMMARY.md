@@ -35,7 +35,7 @@
   * [Grafana Plugin](plugins/grafana.md)
 * [FILE SYSTEM](file-system.md)
 * [PROJECTS MANAGER](projects.md)
-* [USERS MANAGEMENT](users-management.md)
+* [USER ACCOUNTS](users-management.md)
 * [WEB CONSOLE REBRANDING](web-console-rebranding.md)
 * [CUSTOM WEB DOMAIN](web-domain-customization.md)
 

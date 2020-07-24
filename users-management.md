@@ -1,4 +1,4 @@
-# USERS MANAGEMENT
+# USER ACCOUNTS
 
 Thinger.io Server Instances can support multiple user accounts that can be managed from the administration account. This feature allows creating a user network in which each user account has its own resources such as devices, dashboards, data buckets or even its own plugins.
 
