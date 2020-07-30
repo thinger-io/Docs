@@ -65,6 +65,14 @@ It is important also to take care of selected colors in order to obtain a nice c
 
 ### **PWA**
 
+Thinger.io web console has been prepared with smartphone responsive features to simulate the creation of a native APP by -Creating a custom icon in the main menu -Opening animation with branding colors -Hiding the web browser navigation bar
+
+![](.gitbook/assets/image%20%28308%29.png)
+
+The PWA function parameters are automatically configured based on the settings entered in the other tabs of the web console rebranding. So it is not possible to introduce different ones.  
+
+To use the PWA on a smartphone, simply click on the "add to the main menu" option of the browser menu
+
 ## **Modify a Console Rebranding**
 
 When the Console Rebranding profile is finished, a new entry will appear into the rebranding administration list as shown in the image below:
@@ -79,7 +87,7 @@ A rebranding profile can be easily deleted just selecting it in the Brand List a
 
 ![](.gitbook/assets/image%20%28100%29.png)
 
-## Subscribe Rebranding Licenses
+## Increase Rebranding Limits 
 
 This feature is reserved for professional uses, so only Grow, Startup, and Business licenses can create custom rebranding profiles when the rebranding license is acquired during the subscription of the license or later using the subscription administration console. If the license didn't include any branding Addon, the next error will be shown during the creation of the new brand: 
 
