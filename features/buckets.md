@@ -107,7 +107,12 @@ Once the data bucket has been configured, and it started to record data from a d
 
 In order to make bulk data upload or buckets backup processes, the data bucket system has been provided with an import feature that is able to retrieve information from .csv files from a Thinger.io [**File System**](../file-system.md) and store its data using the timestream specified in the file rows. 
 
-Note that using this feature has **two restrictions**. The user account must be able to use File Systems \(which is a premium feature so freemium users can't perform these processes\) and the file must contain a column with the Linux Timestream in microseconds, that will be used to create the temporary serial. 
+Note that using this feature has **few restrictions**.
+
+1. Each row must contain just one variable and use ";" separation marc 
+2. The file must contain a column identificated as "**ts**" with the Linux Timestream in milliseconds, that will be used to create the temporary serial.
+
+Also, the user account must be able to use File Systems, which is a premium feature, so freemium users can't perform these processes.
 
 ![](../.gitbook/assets/image%20%28255%29.png)
 
