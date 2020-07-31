@@ -105,9 +105,9 @@ Once the data bucket has been configured, and it started to record data from a d
 
 ## Bucket Data Import
 
-In order to make bulk data upload or buckets backup processes, the data bucket system has been provided with an import feature that is able to retrieve a .csv file from a Thinger.io [**File System**](../file-system.md) and store it's data with the XXX timestream. 
+In order to make bulk data upload or buckets backup processes, the data bucket system has been provided with an import feature that is able to retrieve information from .csv files from a Thinger.io [**File System**](../file-system.md) and store its data using the timestream specified in the file rows. 
 
-Note that using this feature has two restrictions. The user account must be able to use File Systems \(this is not available in free accounts\) and the file must be made with one variable per column and contain a variable with the Linux Timestream in microseconds.
+Note that using this feature has **two restrictions**. The user account must be able to use File Systems \(which is a premium feature so freemium users can't perform these processes\) and the file must contain a column with the Linux Timestream in microseconds, that will be used to create the temporary serial. 
 
 ![](../.gitbook/assets/image%20%28255%29.png)
 
@@ -115,13 +115,13 @@ Note that using this feature has two restrictions. The user account must be able
 Files resulting from a data bucket export are completely suitable with the import feature, so they are perfect examples to observe a valid data frame
 {% endhint %}
 
-The import will allow to fill the data bucket with the same data contained in the CSV, ordered based on the TimeStamp in milliseconds included in the file.
+The import process allows to fill the data bucket with the same data contained in the CSV, ordered based on the TimeStamp in milliseconds included in the file.
 
 To execute an import, the following steps must be carried out:
 
-1. Create a new File System \([following **these** instructions](../file-system.md)\) ****profile with public access configuration or open an existent one and upload the .csv file to be imported into the File System. 
+1. Create a new File System \([following **these** instructions](../file-system.md)\) ****profile with public access configuration or open an existing one and upload the .csv file to be imported into the File System. 
 2. Create the new data bucket
-3. Select the source File System and place the file identifier in the "File name" section.
+3. Select the source File System and place the file identifier in the "Filename" section.
 4. Click on "Import Data" button.
 
 ## Export Bucket Data
