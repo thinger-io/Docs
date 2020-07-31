@@ -45,7 +45,7 @@
   * [Thinger.io Cloud](server/deployment/thinger.io-cloud-server.md)
   * [On-Premise](server/deployment/on-premise.md)
 * [SERVER ADMINISTRATION](server/server-configuration/README.md)
-  * [Settings](server/server-configuration/settings.md)
+  * [Server Settings](server/server-configuration/settings.md)
   * [Cluster / Server Status](server/server-configuration/cluster-server-status.md)
   * [Server Logs](server/server-configuration/server-logs.md)
 * [SERVER API](server/api.md)

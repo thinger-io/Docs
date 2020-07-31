@@ -1,4 +1,4 @@
-# Settings
+# Server Settings
 
 In order to provide the managers of private Thinger.io instances a full configuration capability of the service, the web console provides a host management tool in which different sections allow to set some criteria of its operation in a simple way.
 
