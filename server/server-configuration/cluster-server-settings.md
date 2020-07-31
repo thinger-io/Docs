@@ -1,4 +1,4 @@
-# Cluster / Host Status
+# Cluster / Server Settings
 
 The 2.7.5 release of Thinger.io private instances introduced a dashboard to overview some host status variables. This is a very useful tool when working with multiple user accounts or extensive deployments because it allows the administrator to check the computational load of the server in order to evaluate if a more powerful subscription is required or if it is oversized.
 

@@ -46,7 +46,7 @@
   * [On-Premise](server/deployment/on-premise.md)
 * [SERVER ADMINISTRATION](server/server-configuration/README.md)
   * [Host Management](server/server-configuration/host-management.md)
-  * [Cluster / Host Status](server/server-configuration/cluster-host-status.md)
+  * [Cluster / Server Settings](server/server-configuration/cluster-server-settings.md)
   * [Server Logs](server/server-configuration/server-logs.md)
 * [SERVER API](server/api.md)
 
