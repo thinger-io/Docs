@@ -39,11 +39,12 @@ Then configure the address and the credentials to provide Grafana the required a
   * **URL**: It is the IP address and socket of the database server that will listen Grafana requests. 
   * **Access**: Server \(default\)
 * **InfluxDB Details:**
-  * **Database**: Thinger.io account username 
+
+  * **Database**: &lt;empty&gt;
   * **User**: Thinger.io account username
   * **Password**: Thinger.io account password
 
-![](../.gitbook/assets/image%20%28304%29.png)
+![](../.gitbook/assets/image%20%28309%29.png)
 
 ## Working with Grafana
 
