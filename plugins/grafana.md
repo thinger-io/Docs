@@ -36,15 +36,16 @@ Then configure the address and the credentials to provide Grafana the required a
 
 * **Name**: Just for identification purposes
 * **HTTP**: 
-  * **URL**: It is the IP address and socket of the database server that will listen Grafana requests. 
+  * **URL**: It is the IP address and socket of the database server that will listen to Grafana's requests, for example http://acme.thinger.io:8086. Note that https is not required if the database belongs to the same host, as there is no internet communication.
   * **Access**: Server \(default\)
 * **InfluxDB Details:**
+  * **Database**: Thinger.io username
+  * **User**: Thinger.io username
+  * **Password**: Thinger.io password
 
-  * **Database**: &lt;empty&gt;
-  * **User**: Thinger.io account username
-  * **Password**: Thinger.io account password
+![](../.gitbook/assets/image%20%28310%29.png)
 
-![](../.gitbook/assets/image%20%28309%29.png)
+Finally, press the "save & test" button and wait for the connection confirmation  
 
 ## Working with Grafana
 

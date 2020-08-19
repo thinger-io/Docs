@@ -71,11 +71,11 @@ Thinger.io web console has been prepared with PWA Smartphone responsive features
 
 To use the PWA on a smartphone, simply click on the "add to the main menu" option of the browser menu. this functionality can be applied in any of the web console interfaces, even in shared dashboards
 
-![](.gitbook/assets/image%20%28310%29.png)
+![](.gitbook/assets/image%20%28311%29.png)
 
 The PWA function parameters will be automatically configured based on the preferences of the other tabs of the web console rebranding. So it is not possible to introduce different ones.  
 
-![](.gitbook/assets/image%20%28311%29.png)
+![](.gitbook/assets/image%20%28312%29.png)
 
 ## **Modify Console Rebranding**
 
