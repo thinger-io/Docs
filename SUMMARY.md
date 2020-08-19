@@ -36,7 +36,7 @@
 * [FILE SYSTEM](file-system.md)
 * [PROJECTS MANAGER](projects.md)
 * [USER ACCOUNTS](users-management.md)
-* [WEB CONSOLE REBRANDING](web-console-rebranding.md)
+* [REBRANDING](web-console-rebranding.md)
 * [CUSTOM WEB DOMAIN](web-domain-customization.md)
 
 ## Server

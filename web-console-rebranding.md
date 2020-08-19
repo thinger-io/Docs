@@ -4,7 +4,7 @@ description: >-
   different brand.
 ---
 
-# WEB CONSOLE REBRANDING
+# REBRANDING
 
 Thinger.io instances support multi-tenant web console customizations. By means of a management tool that is available at the main menu "Rebranding" section, it is possible to create and manage multiple web customizations, in order to custom the aspect of the web console to different customers or projects by changing some elements such as:
 
@@ -65,15 +65,19 @@ It is important also to take care of selected colors in order to obtain a nice c
 
 ### **PWA**
 
-Thinger.io web console has been prepared with smartphone responsive features to simulate the creation of a native APP by -Creating a custom icon in the main menu -Opening animation with branding colors -Hiding the web browser navigation bar
+Thinger.io web console has been prepared with PWA Smartphone responsive features, allowing to create web apps with web console custom preferences that when used on the smartphone allow a user experience very similar to a common APP thanks to the creation of a custom logo in the main menu and hiding the web browser navigation bar.
 
 ![](.gitbook/assets/image%20%28308%29.png)
 
-The PWA function parameters are automatically configured based on the settings entered in the other tabs of the web console rebranding. So it is not possible to introduce different ones.  
+To use the PWA on a smartphone, simply click on the "add to the main menu" option of the browser menu. this functionality can be applied in any of the web console interfaces, even in shared dashboards
 
-To use the PWA on a smartphone, simply click on the "add to the main menu" option of the browser menu
+![](.gitbook/assets/image%20%28310%29.png)
 
-## **Modify a Console Rebranding**
+The PWA function parameters will be automatically configured based on the preferences of the other tabs of the web console rebranding. So it is not possible to introduce different ones.  
+
+![](.gitbook/assets/image%20%28311%29.png)
+
+## **Modify Console Rebranding**
 
 When the Console Rebranding profile is finished, a new entry will appear into the rebranding administration list as shown in the image below:
 
