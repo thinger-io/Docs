@@ -125,3 +125,11 @@ After selecting any of them, it is possible to select the amount just before che
 
 When the subscription begins updated, a confirmation email will be received with an extract of the subscription cost variations. 
 
+{% hint style="warning" %}
+After modifying any of the subscription parameters Thinger.io server instance needs to be reset in order to update de configuration file values. 
+{% endhint %}
+
+This process can be executed using the server administration panel as shown in the image below: 
+
+![](.gitbook/assets/image%20%28313%29.png)
+

@@ -32,3 +32,28 @@ Private instances can be deployed within minutes over the main cloud provider ho
 
 ## Managing subscription
 
+The administrator of a private instance of Thinger.io can edit the preferences of the subscription using the management portal, for this you must access the website [https://thinger.chargebeeportal.com/](https://thinger.chargebeeportal.com/) obtaining a One Time Password that will be sent to your email when you execute the request.
+
+![](../../.gitbook/assets/image%20%28315%29.png)
+
+This portal allows you to edit the payment details and making changes in the limitations of each licence contracted with this email address through Addons:
+
+![](../../.gitbook/assets/image%20%28314%29.png)
+
+* **Additional users**: This option allows to increase the amount of accounts \(in addition to the admin account\) in order to allow other users to log-in to your instance. It is possible to add as many accounts as required if no plugins are deployed, otherwise, each user plugin will increment the server computational load so it may require high a performance host in order to support their databases, plugins, etc. 
+* **Extended Support**: This option is recommended in order to obtain Thinger.io engineers development support with a 24-48h response time. All accounts can use the [community discussion](https://community.thinger.io) forum to obtain support from other community developers.
+* **Custom Domains**: It is the amount of different web domains that can be redirected to the same Private Instance. The instance will automatically provision and renew SSL certificates to support the new defined domains. Domains are required for different brands, as they are associated to the domain name.
+* **Custom Brands**: It is the amount of different console brands that can be created over the same instance. In each brand it is possible to customize some accent colors, logos, copyrights, contact emails, title, etc. Notice that each brand requires a custom domain, as the customization is done for each domain name.
+
+Once the desired Addons have been selected, the user can indicate the quantities in which he wishes to acquire these supplements and execute the confirmation. The increases in the amount of the subscription will be prorated in the next payment.  
+
+{% hint style="warning" %}
+After modifying any of the subscription parameters Thinger.io server instance needs to be reset in order to update de configuration file values. 
+{% endhint %}
+
+This process can be executed using the server administration panel as shown in the image below: 
+
+![](../../.gitbook/assets/image%20%28313%29.png)
+
+
+
