@@ -34,11 +34,11 @@ Private instances can be deployed within minutes over the main cloud provider ho
 
 The administrator of a private instance of Thinger.io can edit the preferences of the subscription using the management portal, for this you must access the website [https://thinger.chargebeeportal.com/](https://thinger.chargebeeportal.com/) obtaining a One Time Password that will be sent to your email when you execute the request.
 
-![](../../.gitbook/assets/image%20%28315%29.png)
+![](../../.gitbook/assets/image%20%28316%29.png)
 
 This portal allows you to edit the payment details and making changes in the limitations of each licence contracted with this email address through Addons:
 
-![](../../.gitbook/assets/image%20%28314%29.png)
+![](../../.gitbook/assets/image%20%28315%29.png)
 
 * **Additional users**: This option allows to increase the amount of accounts \(in addition to the admin account\) in order to allow other users to log-in to your instance. It is possible to add as many accounts as required if no plugins are deployed, otherwise, each user plugin will increment the server computational load so it may require high a performance host in order to support their databases, plugins, etc. 
 * **Extended Support**: This option is recommended in order to obtain Thinger.io engineers development support with a 24-48h response time. All accounts can use the [community discussion](https://community.thinger.io) forum to obtain support from other community developers.

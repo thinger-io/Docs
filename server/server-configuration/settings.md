@@ -186,3 +186,5 @@ This section allows to custom the contact email to be used on the contact button
 
 Thinger.io server needs to be reset after modifying any of these parameters in order to be configured on its files. The restart section allows executing the process in a simple way. 
 
+![](../../.gitbook/assets/image%20%28314%29.png)
+
