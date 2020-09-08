@@ -8,15 +8,15 @@ _Grafana_ is an Open Source visualization and analytics software that allows to 
 [Note: Plugins are only available for premium Thinger.io serves. Check **this link** to create your own instance within minutes](https://pricing.thinger.io).
 {% endhint %}
 
-Graphics technology allows for the simple development of advanced dynamic dashboards for data visualization and analysis, create logs, metrics, or even automatic alerts. The configuration of Grafana widgets is done in a similar way to Thinger.io's dashboard widgets, with drag&drop and flexible sizes that allow us to design a custom layout according to the requirements of each project, so the adaptation to this new tool will be very fast.
+Grafana's technology allows for the simple development of advanced dynamic dashboards for data visualization and analysis, create logs, metrics, or even automatic alerts. And all these capabilities are extensible by, thanks to a large widget import repository in which we can acquire many different representation elements created by Grafana's own developers or by contributions from a large community of users. A lot of additional information can be found on the creator's website and also in their extensive documentation, available at [**this link**](https://grafana.com/docs/grafana/latest/features/datasources/add-a-data-source/?utm_source=grafana_gettingstarted)**.**
 
-Another interesting fact of Grafana is its flexibility, thanks to a large widget import repository we can acquire online new representation elements created by Grafana's own developers or by contributions from a large community of users. We can even develop our own widgets and publish them. 
+![](../.gitbook/assets/image%20%28318%29.png)
 
-A lot of additional information can be found on the creator's website and also in their extensive documentation, available at [**this link**](https://grafana.com/docs/grafana/latest/features/datasources/add-a-data-source/?utm_source=grafana_gettingstarted)**.**
+The integration of this technology becomes a very useful tool for Thinger.io users who need to take their dashboards to a professional level, perform complex analytics in a scalable way, or create visualization projects in collaboration with other developers on their team. This plug-in allows you to create an infrastructure in which Thinger.io acts as an element of administration and management of the devices. The data is stored through InfluxDB and finally, Grafana extracts the time series to create the representation.
 
 ## Starting with Grafana Plugin 
 
-Once the standard plugin deployment process has been done \(as explained here\), Grafana plugin requires few additional steps to be ready to work. In the following sections, we explain how to log in and how to complete the configuration of the plugin successfully
+Once the standard plugin deployment process has been done \([as explained here](./)\), the Grafana plugin requires few additional steps to be ready to work with Thinger.io devices data. In the following sections, we explain how to log in and how to complete the configuration of the plugin successfully
 
 ### First Login
 
@@ -26,7 +26,7 @@ When the plugin is newly installed, the first login should be done as login cred
 
 ### Adding a Datasource
 
-The link between the Thinger.io data and the graphical plug-in is done by adding the buckets database as a new Data Source for Grafana, so the first step after logging in is pressing the data sources block, this will open a new context in which we can browse different technologies to obtain the data that will be displayed later in the dashboards.
+The link between the Thinger.io data and the Grafana plug-in is done by adding the buckets database as a "new data source" for Grafana, so the first step after logging in is pressing the "data sources" block, this will open a new context in which we can browse different technologies to obtain the data that will be displayed later in the dashboards.
 
 ![](../.gitbook/assets/image%20%28283%29.png)
 
@@ -53,7 +53,7 @@ Finally, press the "save & test" button and wait for the connection confirmation
 
 Once the data source has been configured, the most common way to start working with Grafana is to create a new dashboard for data representation. To do this, click on the + button in the Grafana main menu and select "new dashboard". This will open a new empty dashboard ready to be configured with a custom layout and representation pannels by clicking on the button "+Add new pannel", that will open the panel configuration context, which is organized in two sections:
 
-* **Panel Configuration**: On this step, we can choose the graphic to be used in the widget, for example time series charts, tatalalalala Es interesante que las explores todas las opciones que ofrece este menú, tanto en tipos de visualización como en otras configuraciones del panel que permiten elegir la leyenda, los ejes, etc. 
+* **Panel Configuration**: On this step, we can choose the kind of graph to be used in the widget, for example time series charts, tatalalalala Es interesante que las explores todas las opciones que ofrece este menú, tanto en tipos de visualización como en otras configuraciones del panel que permiten elegir la leyenda, los ejes, etc. 
 
 ![](../.gitbook/assets/image%20%28293%29.png)
 
@@ -96,9 +96,7 @@ However, when Grafana is running into a Thinger.io plugin, an additional configu
 
 ![](../.gitbook/assets/image%20%28307%29.png)
 
-### 
-
-
+The result of this process is a publicly accessible dashboard that can be shared with third parties or resources that can be integrated into a Thinger.io standard dashboard as shown below.
 
 
 
