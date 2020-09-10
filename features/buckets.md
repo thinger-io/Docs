@@ -95,7 +95,17 @@ This feature can be also used to store data directly from any third party platfo
 
 ### **From MQTT Topic**
 
-Private instances of Thinger.io platform has been provided with an MQTT broker, that can be used to subscribe or publish topics, but also, the data buckets can be configured to subscribe a topic and store all the data that is being published on it.
+Data buckets can be configured to subscribe to a MQTT topic in the same way as another MQTT client can do. This feature allows to store the data that is being published in the same topic, so attention should be paid if used by more than one device. This configuration can be applied during the creation of a new data bucket as in the image below or later using the Settings tab.
+
+![](../.gitbook/assets/image%20%28321%29.png)
+
+Ones this source has been selected, the interface will show a new input text in which the topic trace can be written
+
+![](../.gitbook/assets/image%20%28322%29.png)
+
+{% hint style="info" %}
+Note that the data buckets system has been created to store JSON format messages so the data from the MQTT device must contain this encryption. 
+{% endhint %}
 
 ## Review Bucket Data
 
