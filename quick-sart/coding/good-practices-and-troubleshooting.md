@@ -9,7 +9,7 @@ description: >-
 
 ## Coding Good Practices
 
-* First of all, read the platform documentation, it is strongly recommended to use the example codes provided there when creating new firmwares.
+* First of all, read the platform documentation, it is strongly recommended to use the example codes provided there when creating new firmware.
 * Thinger resources definition code must be introduced in the `setup()` function or any other function that is executed just one time in the program source code.
 * `thing.handle()` instruction must be included in the `loop()` function or in the main recurrent execution function of the program source code.
 * Avoid using `delay()` or any other locking instructions when coding for IoT purposes. Using it will make your device losing the connection with the network, which will result in continuous reconnection processes. If the program requires timing functionalities, it is possible to use non-locking structures for example: 
@@ -21,8 +21,8 @@ if(millis()%5000==0){
 }
 ```
 
-* If an specific routine requires several time to be executed, including and additional `thing.handle()` instruction could be helpful to guarantee the connection. 
-* Avoid polling data. Thinger.io implements a resources subscription paradigm that allows the server taking the control of when does the devices send data, according a user defined sampling interval. However, there are some instructions such as `thing.call_endpoint` and `thing.write_bucket`, that has been implemented to send  asynchronous communications to the server. It is important to be careful when using these instructions in a non-controlled way or create polling situations that will decrease the efficiency of the infrastructure. Next example code shows how to properly call to an asynchronous call just when an event is detected by the device code:
+* If a specific routine requires several time to be executed, including and additional `thing.handle()` instruction could be helpful to guarantee the connection. 
+* Avoid polling data. Thinger.io implements a resources subscription paradigm that allows the server to take control of when does the devices send data, according to a user-defined sampling interval. However, there are some instructions such as `thing.call_endpoint` and `thing.write_bucket`, that has been implemented to send asynchronous communications to the server. It is important to be careful when using these instructions in a non-controlled way or create polling situations that will decrease the efficiency of the infrastructure. Next example code shows how to properly call to an asynchronous call just when an event is detected by the device code:
 
 ```text
 void loop(){
@@ -42,7 +42,7 @@ void loop(){
 ```
 
 * Use the **debug** mode when testing and prototyping to identify connection problems \(shee troubleshooting guidelines\)
-* Create consistent input resources using pson.is\_empty\(\) function. Every time Thinger server creates a new connection with any device, each resource code is executed with an empty Pson. To prevent this behavior making any runaway execution, it is useful to analyze the content of the Pson before allowing the resources to execute. The following example code implements the `pson.is_empty()` function and an auxiliar Pson to save the proper status of the resource \(arduino framework is being used\):
+* Create consistent input resources using Pson.is\_empty\(\) function. Every time Thinger server creates a new connection with any device, each resource code is executed with an empty Pson. To prevent this behavior making any runaway execution, it is useful to analyze the content of the Pson before allowing the resources to execute. The following example code implements the `pson.is_empty()` function and an auxiliary Pson to save the proper status of the resource \(Arduino framework is being used\):
 
 ```text
 pson aux;
@@ -67,8 +67,8 @@ aux=false;             //set an initial status for the aux pson
 
 | Problem | Source | Solution |
 | :--- | :--- | :--- |
-| program don't compile | errors on your code or incompatible libraries | try with basic source code example to check it is working before continue developing |
-| Example code don't compile | PCB bootloader version incompatible | Check the compiler output to find the problem or install and older version of the device bootloader.  |
+| program doesn't compile | errors on your code or incompatible libraries | try with basic source code example to check it is working before continue developing |
+| Example code don't compile | PCB bootloader version incompatible | Check the compiler output to find the problem or install an older version of the device bootloader.  |
 
 ## Connection Troubleshooting Guidelines
 
@@ -145,6 +145,7 @@ When this command is included, the program will print all the communication traz
         <ul>
           <li>Disable the secure TLS/SSL connection by pacing<code>#define _DISABLE_TLS_ </code>on
             the top of the sketch</li>
+          <li>Using MQTT try to test non SSL connection through 1883 port</li>
         </ul>
       </td>
     </tr>
@@ -182,7 +183,7 @@ If after following these instructions it was impossible to find a solution, we h
 
 It is a forum \([**accessible here**](https://community.thinger.io)\) created to provide developers a place to share projects, knowledges and doubts with other Thinger.io users. Actually is the best way to obtain fast and free assistance to development problems because most of the doubts have probably been asked and solved before by other developers. So the **first step is to use the search bar** to find a similar post:
 
-![](../../.gitbook/assets/image%20%28325%29.png)
+![](../../.gitbook/assets/image%20%28323%29.png)
 
 Making proper use of this resource means using the browser in order to find old topics related to the doubt before creating a new one, but if it is required, take in consideration:   
 
