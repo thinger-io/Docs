@@ -16,7 +16,7 @@ After provisioning the device at Thinger.io cloud, it is the moment to configure
 
 {% tabs %}
 {% tab title="Arduino/Linux Devices" %}
-
+The most suitable devices to start working with Thinger.io are the ESP8266 or ESP32, we have a library for the Arduino framework that allows to program the first device in two minutes just following the next steps:
 
 1. Install Thinger.io libraries into your Arduino IDE
 2. Going to "File&gt;Examples&gt;Thinger.io", open the example code that fix better for the PCB
@@ -24,11 +24,7 @@ After provisioning the device at Thinger.io cloud, it is the moment to configure
 
 ![](../.gitbook/assets/image%20%2831%29.png)
 
-This example contains a two simple resources to send and retrieve data from Thinger.io platform, however, it can be modified with many diff
-
-
-
-erent functionalities that we have explained at the [**Firmware Coding**](coding/) ****section.  After modifying the source code, just click upload button to flash the sketch and wait for the device connection.
+This example contains two simple resources to send and retrieve data from Thinger.io platform, however, it can be modified with many different functionalities that we have explained at the [**Firmware Coding**](coding/) ****section.  After modifying the source code, just click upload button to flash the sketch and wait for the device connection.
 
 {% hint style="success" %}
 Find additional information about Thinger.io devices in the next sections: 
@@ -65,8 +61,6 @@ Any individual Sigfox or LoraWAN device can be integrated using our API as HTTP 
 {% endtab %}
 {% endtabs %}
 
-Complete device list can be displayed by going to "devices" menu tab. This interface allows managing devices and check its connection status and accessing devices dashboard by clicking over each devices ID.
-
 ### 3.Devices & Data management <a id="3-devices-and-data-management"></a>
 
 Each device can be managed through the "Device Dashboard". This interface shows connection data and also allows checking the "device API" with raw device data representation.
@@ -94,7 +88,7 @@ Panels with **customizable widgets** that can be created within minutes using dr
 Extend the devices interoperatibility by using endpoints to interact with other services like IFTTT, custom Web Services, emails, or call other devices.
 {% endtab %}
 
-{% tab title="Access Tockens" %}
+{% tab title="Access Tokens" %}
 Dashboards, Data buckets or Device resources can be easily shared with third parties using **Access Tokens** and our **API**
 {% endtab %}
 {% endtabs %}
