@@ -30,13 +30,15 @@ Thinger.io is a platform in constant growth, our development team is continuousl
 * [x] Community Server Update
 * [x] Server monitor and settings menu 
 * [x] Mid-year features revision
+* [x] Geofencing tool
+* [x] Assets Manager
 * [ ] New web home
 * [ ] Alerts manager
 * [ ] Read-only user accounts 
 * [ ] Data analytics system
 * [ ] ARM-64 server compilation
 * [ ] ESP32 & ESP8266 OTA
-* [ ] Maps widget improvement 
+* [x] Maps widget improvement 
 * [ ] Custom plugins support
 * [ ] COAP integration, NB-IoT & LTE CAT Mclient
 * [ ] InfluxDB tagged data buckets 
