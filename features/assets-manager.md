@@ -10,7 +10,7 @@ These groupings improve the organization of projects, but also support the follo
 
 The assets section has the overview tool that allows us to visualize on the map all the devices created in the selected project, allows us to quickly check the location and connection status of each device. The green circle will be drowned if the device is connected and the red one if the device is disconnected. 
 
-![](../.gitbook/assets/image%20%28349%29.png)
+![](../.gitbook/assets/image%20%28353%29.png)
 
 This tool allows several display options to show only the connected or disconnected devices or, selecting the "clustering" option, the possible grouping by nearby locations. In the following sections, the use of asset types and groups will be explained in more detail.
 
@@ -22,11 +22,11 @@ They are devices deployed with the same objective, which perform the same functi
 
 To create a new device type go to the `Assets > Types` tab, displaying the list of previously created asset types if any. Then clicking on the green "Add Asset Type" button, will open the "new Asset Type" form, in which the identifiers must be filled in: 
 
-![](../.gitbook/assets/image%20%28340%29.png)
+![](../.gitbook/assets/image%20%28343%29.png)
 
 Once the form filled properly, clicking again on the "Add Asset Type" button will create the new Type and displays its configuration panel, in which the de overview devices map will be shown as well as Properties and Geofencing configuration tabs that can be used to define the properties and geofences for all the devices included into this Asset Type.
 
-![](../.gitbook/assets/image%20%28341%29.png)
+![](../.gitbook/assets/image%20%28344%29.png)
 
 Note that no devices will be shown until anyone begins attached to this specific device Type.
 
@@ -38,7 +38,7 @@ To start adding devices to the new Asset Type you must access the devices sectio
 
 Selecting one or several devices will display new buttons in the upper area of the list. Pressing the green "Set Type" button a new context will be displayed where the asset type can be selected by means of a drop-down list.
 
-![](../.gitbook/assets/image%20%28353%29.png)
+![](../.gitbook/assets/image%20%28358%29.png)
 
 All the devices that were checked up will be associated with the selected Type, from then on they will inherit their properties and the alert and geofences configuration, so let's explain how to configure those features.
 
@@ -60,11 +60,11 @@ They are different devices with a common semantic characteristic for example the
 
 To create a new assets group go to the `Assets > Group` tab of the main menu, this will display the list of previously created Groups if any. Then, clicking on the green "Add Asset Type" button will open the "new Group" form,  in which the data must be introduced:
 
-![](../.gitbook/assets/image%20%28339%29.png)
+![](../.gitbook/assets/image%20%28342%29.png)
 
 Once the form is completed, clicking again on the "Add Group" button will create a new Group profile and display its configuration panel in which the de devices overview map will be shown as well as Properties and Geofencing configuration tabs, that can be used to define the behavior of this features for all the devices included into this Assets Group.
 
-![](../.gitbook/assets/image%20%28341%29.png)
+![](../.gitbook/assets/image%20%28344%29.png)
 
 Note that no devices will be shown until anyone begins attached to this specific device Group profile.
 
@@ -76,11 +76,19 @@ Start adding devices to the new Assets Group just require to get access to the d
 
 Selecting one or several devices will display new buttons in the upper area of the list. Pressing the desired button allows to aggregate those devices to any of the previously created aggrupations. A new context will be displayed in order to select the Group from a drop-down list.
 
-FOTO SET ASSET GROUP
+![](../.gitbook/assets/image%20%28337%29.png)
 
 Since the moment of the association, all the devices will inherit the properties and geofences configuration.
 
 ### Deleting Devices Group
+
+Any resource can be deleted from the Asset Group by reassigning them to an empty type in the list or by accessing the settings section of the resource and checking off the box, after this, the properties and geofences inherited from the Asset Group will be deleted.
+
+![](../.gitbook/assets/image%20%28348%29.png)
+
+It is also possible to completely delete an asset type by selecting its profile in the Groups list and clicking on the "Delete Group" button but note that none of the assigned resources will be deleted, they will only cease to be associated with this category.
+
+![](../.gitbook/assets/image%20%28336%29.png)
 
 ## Asset Type Properties
 
@@ -88,11 +96,11 @@ Properties created in an Asset Type will be inherited by every associated device
 
 To create a new property on an Asset Type, go to `Asset > Types` section of the main menú, then acess the Type profile to be modified and select the properties tab on the right-side menu of the configuration panel. Then, creating a property only requires to press on `+Add` button and implement a Json file format to structure the data that wants to be included on the property.
 
-![](../.gitbook/assets/image%20%28344%29.png)
+![](../.gitbook/assets/image%20%28347%29.png)
 
 Note that, on the device properties section, each property source will be identified on the "source" column.
 
-![](../.gitbook/assets/image%20%28352%29.png)
+![](../.gitbook/assets/image%20%28357%29.png)
 
 ## Geofencing  
 
@@ -100,7 +108,7 @@ Geofencing is a technique that allows defining a virtual perimeter over geograph
 
 Thinger.io server will compare the location of the device, create alerts according to the custom configuration that can be managed below. To start creating Geofence areas, the edition switch on the right-top-side of the map must be clicked ON. Then a new menu allows selecting the geofence shape that can be drown circular, square or free. 
 
-![](../.gitbook/assets/image%20%28338%29.png)
+![](../.gitbook/assets/image%20%28341%29.png)
 
 Each defined geofence will create in the lower panel a profile that will allow to configure its behavior. The next image shows the configuration options for the geofences created above for each situation in which any device can be located:
 
