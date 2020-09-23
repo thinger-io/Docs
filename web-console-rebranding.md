@@ -4,7 +4,7 @@ description: >-
   different brand.
 ---
 
-# REBRANDING
+# WHITE-LABELING
 
 Thinger.io instances support multi-tenant web console customizations. By means of a management tool that is available at the main menu "Rebranding" section, it is possible to create and manage multiple web customizations, in order to custom the aspect of the web console to different customers or projects by changing some elements such as:
 

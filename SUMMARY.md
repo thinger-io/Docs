@@ -23,8 +23,9 @@
 * [DASHBOARDS](features/dashboards.md)
 * [ENDPOINTS](features/endpoints-1.md)
 * [ACCESS TOKENS](features/access-tokens.md)
+* [ASSET TYPES & GORUPS](features/assets-manager.md)
 
-## PREMIUM FEATURES
+## BUSINESS FEATURES
 
 ---
 
@@ -33,10 +34,10 @@
   * [Sigfox Plugin](plugins/sigfox.md)
   * [Node-RED Plugin](plugins/node-red.md)
   * [Grafana Plugin](plugins/grafana.md)
-* [FILE SYSTEM](file-system.md)
+* [FILE STORAGE](file-system.md)
 * [PROJECTS MANAGER](projects.md)
 * [USER ACCOUNTS](users-management.md)
-* [REBRANDING](web-console-rebranding.md)
+* [WHITE-LABELING](web-console-rebranding.md)
 * [CUSTOM WEB DOMAIN](web-domain-customization.md)
 
 ## Server

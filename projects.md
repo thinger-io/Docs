@@ -51,25 +51,46 @@ When a resource type is selected on the list \(for example buckets\), the interf
 
 Finally, the same logic is applied to the `Actions` section, allowing to provide full permissions to the selected resource profile `Any Action` or to select only one specific permission `Select specific action` .
 
-## Working with projects
+![](.gitbook/assets/image%20%2879%29.png)
 
 ### Projects Navigation 
 
 The same user account can participate in many projects, that's why the thinger console has a tool on the top bar that allows you to select the project you want to work with at any time:
 
-![](.gitbook/assets/image%20%28219%29.png)
+![Enabling Projects mode](.gitbook/assets/image%20%28353%29.png)
 
 This tool allows moving between different projects, displaying only the devices associated with each one. It also allows disabling the projects filtering functions, allowing to show every resource created into the user account, i.e. other users' resources will no longer be visible.
 
-#### Shared resources
 
-Items that appear in the account lists with a user's icon on the left side are resources shared by another user. In this way, it is easy to identify in a list which devices are owned and which are not. The image below shows three devices, two of them are shared devices from other accounts, being the "example\_device"  a profile created on their own account. 
 
-![](.gitbook/assets/image%20%2879%29.png)
+### Adding project resources
 
-### Creating project resources 
+Una vez creado el proyecto podremos comenzar a asociar recursos como device profiles, data buckets or representation dashboards, permitiendo que estos sean compartidos con otros desarrolladores del mismo proyecto. This process can be executed during creation of each resources or after that, just followin the instructions below:
 
-The association of device profiles, data buckets or dashboards to a specific project is done during creation. When a new resource is added with a project selected in the top bar, the resource is associated with that project. This situation can be displayed in the device's api, which will show the project it belongs to:
+#### Creating new project resources
+
+The process is quite simple, los recursos quedan asociados al proyecto activo en el momento de su creación, so just openning the project selection menú and selecting a project will begin to associate resources as they are created:
+
+1. Enabling projects as shown in the section above 
+2. Selecting a project from the drop-down list
+3. Creating a new device / data bucket / Endpoint / dashboard to be shared with project members 
+
+#### Aggregating existent resources to a new project
+
+
+
+## Working with projects
+
+#### Shared resources identification
+
+~~A Shared resource mark will also appear in the resource lists of those have been attached to any project.   
+Items that appear in the account lists with a user's icon on the left side are resources shared by another user. In this way, it is easy to identify in a list which devices are owned and which are not. The image below shows three devices, two of them are shared devices from other accounts, being the "example\_device"  a profile created on their own account.~~ 
+
+~~FALTA AÑADIR LO DE LA COLUMNA DE LA DERECHA~~
+
+![](.gitbook/assets/image%20%28345%29.png)
+
+The association of any resource to a project can be checked using the REST API, which will show the project it belongs to:
 
 ![](.gitbook/assets/image%20%28118%29.png)
 
@@ -77,7 +98,5 @@ Note that in the API of a third-party device, in addition to the project identif
 
 ![](.gitbook/assets/image%20%2897%29.png)
 
-{% hint style="info" %}
-Currently it is not possible to aggregate an existent resource to a project, it is important to take this into consideration especially in relation to Data buckets, that can't be deleted to make a new profile.
-{% endhint %}
+
 

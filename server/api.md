@@ -6,10 +6,8 @@ description: >-
 
 # SERVER API
 
-
-
-{% hint style="warning" %}
-\*\*\*\*[**New API documentation is available on Swagger! Can be checked out at** _**this link**_](https://console.thinger.io/swagger/index.html)
+{% hint style="success" %}
+\*\*\*\*[New API documentation is **available on Swagger!** Can be checked out at _this link_](https://console.thinger.io/swagger/index.html)
 {% endhint %}
 
 All the examples described in this documentation defines URL endpoints based on an relative path, assuming the host is just your server IP, domain, or just the default Thinger.io server. For all calls issued over the default Thinger.io cloud, the host address will be the following:
