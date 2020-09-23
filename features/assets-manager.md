@@ -16,15 +16,15 @@ This tool allows several display options to show only the connected or disconnec
 
 ## Asset types
 
-Asset Types: They are devices deployed with the same objective, which perform the same function and therefore we can understand that they are of a certain type in our network of devices. For example, we can create a device type "Temperature sensors", "freezers", "Smart Cars", An asset type is a way of defining properties/geofences for the same type, i.e., a cow, a car, etc.
+There are devices deployed with the same objective, which perform the same function so they match the same configuration parameters. For example, we can create a device type "Temperature sensors", "freezers", "Smart Cars". 
 
 ###  Creating Asset Types
 
-To create a new device type go to the `Assets > Types tab,` this will display the list of previously created asset types if any. By clicking on the green "Add Asset Type" button, the context of the form for creating a new type will appear, in which the identifiers must be filled in: 
+To create a new device type go to the `Assets > Types` tab, displaying the list of previously created asset types if any. Then clicking on the green "Add Asset Type" button, will open the "new Asset Type" form, in which the identifiers must be filled in: 
 
 ![](../.gitbook/assets/image%20%28340%29.png)
 
-Once the form is completed, clicking again on the "Add Asset Type" button will create the new Type and displays its configuration panel in which the de overview devices map will be shown as well as Properties and Geofencing configuration tabs that can be used to define the behavior of this features for all the devices included into this Asset Type.
+Once the form filled properly, clicking again on the "Add Asset Type" button will create the new Type and displays its configuration panel, in which the de overview devices map will be shown as well as Properties and Geofencing configuration tabs that can be used to define the properties and geofences for all the devices included into this Asset Type.
 
 ![](../.gitbook/assets/image%20%28341%29.png)
 
