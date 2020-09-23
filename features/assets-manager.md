@@ -16,7 +16,7 @@ This tool allows several display options to show only the connected or disconnec
 
 ## Asset types
 
-There are devices deployed with the same objective, which perform the same function so they match the same configuration parameters. For example, we can create a device type "Temperature sensors", "freezers", "Smart Cars". 
+They are devices deployed with the same objective, which perform the same function so they match the same configuration parameters. For example, we can create a device type "Temperature sensors", "freezers", "Smart Cars". 
 
 ###  Creating Asset Types
 
@@ -44,17 +44,17 @@ All the devices that were checked up will be associated with the selected Type, 
 
 ### Deleting an Asset Type 
 
-Any resource can be deleted from the asset type by reasignandolos a un type vacío de la lista o bien accediendo a la sección settings del recurso y checking off the box, tras esto, las properties y los geofences heredados de su asset type serán borradas.
+Any resource can be deleted from the asset type by reassigning them to an empty type in the list or by accessing the settings section of the resource and checking off the box, after this, the properties and geofences inherited from your asset type will be deleted.
 
 ![](../.gitbook/assets/image%20%28327%29.png)
 
-También es posible eliminar por completo un asset type seleccionando su perfil en la lista de Types y haciendo click en el botón "Delete Type" but note that ninguno de los recursos asignados serán eliminados, sólo dejarán de estar asociados a esta categoría. 
+It is also possible to completely delete an asset type by selecting its profile in the Types list and clicking on the "Delete Type" button but note that none of the assigned resources will be deleted, they will only cease to be associated with this category.
 
 ![](../.gitbook/assets/image%20%28330%29.png)
 
 ## Groups
 
-Asset Groups: There are different devices with a common semantic characteristic for example the devices installed in the kitchen of a smart home can be grouped under the name "kitchen devices".
+They are different devices with a common semantic characteristic for example the devices installed in the kitchen of a smart home can be grouped under the name "kitchen devices".
 
 ### Creating a new Asset Group
 
