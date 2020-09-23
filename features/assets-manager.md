@@ -38,7 +38,7 @@ To start adding devices to the new Asset Type you must access the devices sectio
 
 Selecting one or several devices will display new buttons in the upper area of the list. Pressing the green "Set Type" button a new context will be displayed where the asset type can be selected by means of a drop-down list.
 
-![](../.gitbook/assets/image%20%28352%29.png)
+![](../.gitbook/assets/image%20%28353%29.png)
 
 All the devices that were checked up will be associated with the selected Type, from then on they will inherit their properties and the alert and geofences configuration, so let's explain how to configure those features.
 
@@ -92,17 +92,29 @@ To create a new property on an Asset Type, go to `Asset > Types` section of the 
 
 Note that, on the device properties section, each property source will be identified on the "source" column.
 
-![](../.gitbook/assets/image%20%28351%29.png)
+![](../.gitbook/assets/image%20%28352%29.png)
 
 ## Geofencing  
 
-Geofencing is a technique that allows defining a virtual perimeter over geographical areas, it can be defined as a radius around a point or tracing polygons. Thinger.io server will compare the location of any device included on an Asset Type and create an alert event when the devices enter or leave the indicated area.
+Geofencing is a technique that allows defining a virtual perimeter over geographical areas, it can be defined as a radius around a point or tracing polygons. This is a very useful functionality to monitor automatically and in real-time a fleet of devices, allowing to create customized alerts based on geolocation.
+
+Thinger.io server will compare the location of the device, create alerts according to the custom configuration that can be managed below. To start creating Geofence areas, the edition switch on the right-top-side of the map must be clicked ON. Then a new menu allows selecting the geofence shape that can be drown circular, square or free. 
 
 ![](../.gitbook/assets/image%20%28338%29.png)
 
-Each defined geofence will create in the lower panel a profile that will allow to configure its behavior.
+Each defined geofence will create in the lower panel a profile that will allow to configure its behavior. The next image shows the configuration options for the geofences created above for each situation in which any device can be located:
 
 ![](../.gitbook/assets/image%20%28331%29.png)
+
+* **name**: Identification of the geofence area
+* **On Enter**: Allows selecting an endpoint that will be called automatically when the devices just **entered** the area, I.e. when the last position was out of the border and the new position is into the border. 
+* **On Exit**: Allows selecting an endpoint that will be automatically called when the devices are just **leaving** the area, i.e when the last position was into the geofence area and the new position is out. 
+* **While Inside**: This endpoint will be always called when the device is **within the area**. So it is preferable not to use this option if the device sampling interval is short
+* **While Outside**: This endpoint will be always called when the device is **out of the area**. So it is preferable not to use this option if the device sampling interval is short
+* **Color**: To select the color of the representation on the geofences map.
+* **Enabled**: Each geofence can be disabled/enabled using the right-side switch. 
+
+
 
 
 

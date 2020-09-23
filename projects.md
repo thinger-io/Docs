@@ -57,7 +57,7 @@ Finally, the same logic is applied to the `Actions` section, allowing to provide
 
 The same user account can participate in many projects, that's why the thinger console has a tool on the top bar that allows you to select the project you want to work with at any time:
 
-![Enabling Projects mode](.gitbook/assets/image%20%28353%29.png)
+![Enabling Projects mode](.gitbook/assets/image%20%28354%29.png)
 
 This tool allows moving between different projects, displaying only the devices associated with each one. It also allows disabling the projects filtering functions, allowing to show every resource created into the user account, i.e. other users' resources will no longer be visible.
 
