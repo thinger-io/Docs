@@ -23,6 +23,7 @@
 * [DASHBOARDS](features/dashboards.md)
 * [ENDPOINTS](features/endpoints-1.md)
 * [ACCESS TOKENS](features/access-tokens.md)
+* [GEOFENCING](features/geofencing.md)
 * [ASSET TYPES & GORUPS](features/assets-manager.md)
 
 ## BUSINESS FEATURES
