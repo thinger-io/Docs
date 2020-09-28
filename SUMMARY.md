@@ -11,10 +11,9 @@
   * [SIGFOX](quick-sart/devices/sigfox.md)
   * [HTTP DEVICES](quick-sart/devices/http-devices.md)
   * [MQTT CLIENTS](quick-sart/devices/mqtt.md)
-* [FIRMWARE CODING](quick-sart/coding/README.md)
-  * [IDE Setup](quick-sart/coding/ide-setup.md)
-  * [Coding Guide](quick-sart/coding/coding-guide.md)
-  * [Good Practices & Troubleshooting](quick-sart/coding/good-practices-and-troubleshooting.md)
+* [CODING GUIDE](quick-sart/coding-guide/README.md)
+  * [IDE Setup](quick-sart/coding-guide/ide-setup.md)
+  * [Good Practices & Troubleshooting](quick-sart/coding-guide/good-practices-and-troubleshooting.md)
 
 ## FEATURES
 

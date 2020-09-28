@@ -1,4 +1,4 @@
-# Coding Guide
+# CODING GUIDE
 
 ## Sketch Overview
 

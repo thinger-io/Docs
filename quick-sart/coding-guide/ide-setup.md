@@ -20,7 +20,7 @@ Link-&gt; [Download Arduino IDE](https://www.arduino.cc/en/Main/Software) from t
 
 #### Obtain Thinger.io libraries
 
-The thinger.h libraries contains a Software Client that provides the easiest way to integrate with Tinger.io platform obtaining the best performance from all its features with just a couple code lines that has been explained in the [**Coding Guide**](./) ****section of this documentation. 
+The thinger.h libraries contains a Software Client that provides the easiest way to integrate with Tinger.io platform obtaining the best performance from all its features with just a couple code lines that has been explained in the [**Coding Guide**]() ****section of this documentation. 
 
 The library can be obtained from the Arduino  `Library Manager`, which simplifies searching and installing new libraries and also supports updating libraries when new versions are released, so actually it is preferable using this method:
 

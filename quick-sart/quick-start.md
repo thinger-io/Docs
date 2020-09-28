@@ -24,13 +24,13 @@ The most suitable devices to start working with Thinger.io are the ESP8266 or ES
 
 ![](../.gitbook/assets/image%20%2831%29.png)
 
-This example contains two simple resources to send and retrieve data from Thinger.io platform, however, it can be modified with many different functionalities that we have explained at the [**Firmware Coding**](coding/) ****section.  After modifying the source code, just click upload button to flash the sketch and wait for the device connection.
+This example contains two simple resources to send and retrieve data from Thinger.io platform, however, it can be modified with many different functionalities that we have explained at the [**Firmware Coding**]() ****section.  After modifying the source code, just click upload button to flash the sketch and wait for the device connection.
 
 {% hint style="success" %}
 Find additional information about Thinger.io devices in the next sections: 
 
 1. \*\*\*\*[**Compatible Arduino and Linux devices**](devices/)\*\*\*\*
-2. \*\*\*\*[**Zero to Hero Thinger.io Firmware Coding Guide**](coding/) ****
+2. \*\*\*\*[**Zero to Hero Thinger.io Firmware Coding Guide**]() ****
 3. \*\*\*\*[**Connection Troubleshooting Guide**](https://docs.thinger.io/coding/good-practices-and-troubleshooting)\*\*\*\*
 {% endhint %}
 {% endtab %}
