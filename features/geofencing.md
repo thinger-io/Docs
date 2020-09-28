@@ -34,7 +34,7 @@ Geofences output can be configured for each of the four possible states \(in, ou
 
 To configure a geofence in a certain state you only need to click on the checkbox located on the left side and display the menu to choose the desired endpoint profile.
 
-### Configuring devices to work with Geofences
+### Configuring Devices to work with Geofences
 
 El código de los dispositivos debe ser preparado para hacer uso de los servicios de localización de la plataforma. Sólo es neccesairo incluir entre las variables enviadas a la plataforma los correspondientes con las coordenadas cardinales con los identificadores en su  payload `"lat", "lng"` , `"lat", "long"` or `"latitude", "longitude"`  como se muestra en el ejemplo del callback de los dispositivos HTTP:
 
