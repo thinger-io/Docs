@@ -24,13 +24,13 @@ Each defined geofence will create in the lower panel a profile that will allow t
 
 Note that, when a new geofence is created, the device \(or each device of the type/group\) will obtain two properties with the geofences configuration. These properties can be checked or edited in the device \(Asset/group\) properties section as shown below:
 
-![](../.gitbook/assets/image%20%28362%29.png)
+![](../.gitbook/assets/image%20%28363%29.png)
 
 ### Configuring Geofence output
 
 Geofences output can be configured for each of the four possible states \(in, out, in, out\) through the lower menu, where the endpoint profiles created in the account can be selected. The endpoints are very versatile tools that allow configuring messages that leave the platform in a simple way, being able to program automatic behaviors. You can learn much more about the endpoints feature on the [Endpoints section](endpoints-1.md) of this documentation. 
 
-![](../.gitbook/assets/image%20%28360%29.png)
+![](../.gitbook/assets/image%20%28361%29.png)
 
 To configure a geofence in a certain state you only need to click on the checkbox located on the left side and display the menu to choose the desired endpoint profile.
 
@@ -38,7 +38,7 @@ To configure a geofence in a certain state you only need to click on the checkbo
 
 El código de los dispositivos debe ser preparado para hacer uso de los servicios de localización de la plataforma. Sólo es neccesairo incluir entre las variables enviadas a la plataforma los correspondientes con las coordenadas cardinales con los identificadores en su  payload `"lat", "lng"` , `"lat", "long"` or `"latitude", "longitude"`  como se muestra en el ejemplo del callback de los dispositivos HTTP:
 
-![](../.gitbook/assets/image%20%28361%29.png)
+![](../.gitbook/assets/image%20%28362%29.png)
 
 
 

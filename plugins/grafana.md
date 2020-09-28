@@ -57,9 +57,9 @@ Once the data source has been configured, the most common way to start working w
 
 ![](../.gitbook/assets/image%20%28293%29.png)
 
-* **Data source Configuration:** Select the data source you want to use by clicking on the drop-down menu to change "default" to the name of the InfluxDB database that you added in the first step \(adding a datasource\). If it was done correctly, in the section `FORM`  the complete list of Thigner.io data buckets will be available to select any of them. Then, the section `SELECT` allows to specify any of the stored device data to be represented on the panel. 
+* **Data source Configuration:** Select the data source you want to use by clicking on the drop-down menu to change "default" to the name of the InfluxDB database input that you added in the first step \(adding a datasource\). Then click into the FROM "Select measurement" option. **If everything was is has been configurated properly it will shows the complete list of Thigner.io data buckets** in order to specify the data to be represented on the panel. 
 
-![](../.gitbook/assets/image%20%28286%29.png)
+![](../.gitbook/assets/image%20%28360%29.png)
 
 * **Transform data:** Allows to filter or aggregate devices data using different tools before it will be shown in the representation pannel. 
 * **Automatic Alerts**: The graph process can be configured to work in the background evaluating the variables received to generate alerts in real-time. This panel allows the configuration of many parameters for the creation of alerts in a personalized way.
