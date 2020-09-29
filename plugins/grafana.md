@@ -57,7 +57,7 @@ Once the data source has been configured, the most common way to start working w
 
 ![](../.gitbook/assets/image%20%28293%29.png)
 
-* **Data source Configuration:** Select the data source you want to use by clicking on the drop-down menu to change "default" to the name of the InfluxDB database input that you added in the first step \(adding a datasource\). Then click into the FROM "Select measurement" option. **If everything was is has been configurated properly it will shows the complete list of Thigner.io data buckets** in order to specify the data to be represented on the panel. 
+* **Data configuration:** The "Query" configuration panel allows selecting the variables to be shown in the new panel. This process can be done in three steps:    1\) Select the Datasource using the left-side drop-down menú \(IngluxDB-1 in our example\)   2\) Select a Data Bucket profile from those created on Thinger.io with the FROM field   3\)Using the SELECT field it can be selected one or more specific variables from the Data Bucket.
 
 ![](../.gitbook/assets/image%20%28360%29.png)
 
@@ -68,16 +68,17 @@ Once the data source has been configured, the most common way to start working w
 
 Grafana is a very flexible tool, users can add new panels as they go, retrieving it from different repositories. These panels are developed by the Grafana team but also by community contributors, allowing this technology to grow very quickly thanks to the group effort. The process to add new elements in the Grafana Plugin of Thigner.io is through the command console of the docker container in which the program is executed locally. In it, a command is introduced that allows you to quickly download and install components as explained below:
 
-1. The first step is to find the new element to add, the following link leads to the official Grafana plugin repository. 
-2. Access Grafana's shell, to do so click on the Plugins tab in the Thinger.io main menu, then access Grafana's profile in the Plugins Marketplace:
+1. The first step is to find the new element to add, the following link leads to the official Grafana plugin repository: [https://grafana.com/grafana/plugins](https://grafana.com/grafana/plugins)  
+2. Obtain the CLI installation command of any new panel or plugin that wants to be added.    
+3. Access Grafana's shell, to do so, just click on the Plugins tab in the Thinger.io main menu, then access Grafana's profile in the Plugins Marketplace.
 
 ![](../.gitbook/assets/image%20%28273%29.png)
 
-3. Once inside click on the _&gt;\_Shell_ option and click on "connect". Then the download and installation command can be pasted into the console and executed. 
+4. Once inside click on the _&gt;\_Shell_ option and click on "connect". Then the download and installation command can be pasted into the console and executed. 
 
 ![](../.gitbook/assets/image%20%28295%29.png)
 
-4- After the installation of a new element in Grafana it is necessary to restart the plugin container. This process is done through the plugin's function bar by means of the Restart button.
+5. After the installation of any new element in Grafana it is necessary to restart the plugin-container. This process is done through the plugin's function bar by means of the Restart button.
 
 ## Providing public access to share Grafana projects
 
