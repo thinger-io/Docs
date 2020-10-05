@@ -10,33 +10,43 @@ This documentation provides information about the mobile app of the Thinger.io I
 
 ## Usage
 
-### Add Device
+### Logging in 
 
-First of all, you need to scan a token QR of one of your devices. Read **Device Tokens** section [here](http://docs.thinger.io/console/#devices-device-tokens) to learn how to generate your tokens in the Thinger.io console. Keep in mind that also you can add a device from other users if you have the appropriate token. If you haven't a token device yet you can try the app with this one:
+Using this application it is possible to access the user account of the web console, this way all the devices registered automatically will be imported. Note that by entering the user credentials it is also possible to set the web domain of the instance you are working with, thus allowing access to accounts of private Thinger.io instances
+
+![](../.gitbook/assets/image%20%28365%29.png)
+
+Working in this mode we can obtain useful information such as the connection status of the devices or the time when the last keep alive was received.
+
+### Add Device with Device Token
+
+It is also possible to import individual devices without logging into any user account by means of the "Device Tocken" feature, which allows sharing authorization privileges to work with the API of any device even if it belongs to another user account or it's connected to a different server instance. [The **Device Tokens** section of the documentation](https://docs.thinger.io/features/devices-administration#device-tokens) explains how to create and manage the permissions in the web console, and how to create a QR token that allows a simple and fast way to import devices into the Smartphone APP. 
 
 ![deviceC token QR](../.gitbook/assets/devicec.png)
 
-You can scan your tokens pressing the QR icon on the top of main screen and aiming with your camera to your QR. Now you can view the scanned devices on the main screen.
-
- ![scanner](../.gitbook/assets/scan.jpeg) ![device list](../.gitbook/assets/devices_list.jpg)
+To import devices using Tokens, go to the "Scanned" section of the APP by selecting it in the bottom of the interface. Then press the blue  `"+" Add button` and select one the way to introduce the device token from both options: Clipboard if the Device Token has been copied in textual mode or QR Scanner if is possible to show the QR image on another screen.  
 
 ### Receive and send data
 
 With the Thinger.io app is very easy to check the status of your devices. All resources of the device are divided in different cards with all the available information. You can visualize and update output resources, edit and post input resources and call run resources.
 
-It is possible to **update** a resource pressing the blue button or all of them dragging the screen downward \(pull-to-refresh\).
+A specific resource value can be updated by pressing the blue `Update` button, also dragging the screen downward \(pull-to-refresh\) will update all of them.
 
-For **post** a resource you must fill the input fields and press the green button. If you don't fill some field, the post is done with the latest value \(in grey\).
+![pull to refresh](../.gitbook/assets/refresh.jpg)
+
+**Posting** a resource just requires to fill the input fields and press the green button. If you don't fill some field, the post is done with the latest value \(in grey\).
+
+![input resource](../.gitbook/assets/input.jpg)
 
 For call to **run** resources just press the paper plane icon.
 
- ![input resource](../.gitbook/assets/input.jpg) ![run resource](../.gitbook/assets/run.jpg) ![pull to refresh](../.gitbook/assets/refresh.jpg)
+![run resource](../.gitbook/assets/run.jpg)
 
 ### Charts
 
-A cool function of the Thinger.io app is how easy is monitor your resources in real time with three different charts types: lines, bars and pie chart.
+A cool function of the Thinger.io app is how easy becames to monitor real-time devices data with three different charts types: lines, bars and pie chart.
 
-If you select the option _**Charts**_ of a resource, you can visualize it. And it is very easy select which items you want to plot. Behind the chart there is the legend. Pressing on every item you can select/unselect them. Keep in mind that you can represent numbers, but no strings o booleans. Additionally, the pie chart just works with positive numbers.
+By pressing the _**Charts**_ button of any resource opens a simple mobile-optimized dashboard that plots device data using dynamic scales. Behind the chart there is the legend. Pressing on every item you can select/unselect them. Keep in mind that you can represent numbers, but no strings o booleans. Additionally, the pie chart just works with positive numbers.
 
 Do you want to try another amazing function? Rotate your device and watch the charts in full screen.
 
@@ -44,15 +54,17 @@ Do you want to try another amazing function? Rotate your device and watch the ch
 
 ### Settings
 
-For every device added to your smartphone you can edit some settings. For access to the device settings, you must press the wheel button on the top of the screen.
+Each imported device can be configured using the device settings button, which is accessible using the wheel chain button on the top of the screen.
 
- ![settings](../.gitbook/assets/settings.jpeg) ![deviceC token QR](../.gitbook/assets/token.jpeg)
+  
 
-**Name** is an alias for your added devices. It is very useful if you want to identify devices from another person.
+![settings](../.gitbook/assets/settings.jpeg)
 
-If you are not using the Thinger.io server, you must change **Server** element to point to your server. Read the [deployment](http://docs.thinger.io/deployment/) section for more information if you are interested in use your own server.
+This interface allows to show or custom:
 
-Inside the **Token QR** section you can visualize the token for share with a friend.
+* **Name** is an alias for each added device. It is very useful in order to hide the identity of devices to third people. 
+* Inside the **Token QR** section, the token authorization can be visualized in order to share with a friend.
+* The button **Remove** deletes the device from the smartphone.
 
-The button **Remove** deletes the device from the smartphone.
+![deviceC token QR](../.gitbook/assets/token.jpeg)
 
