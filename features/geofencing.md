@@ -36,9 +36,11 @@ To configure a geofence in a certain state you only need to click on the checkbo
 
 ### Configuring Devices to work with Geofences
 
-El código de los dispositivos debe ser preparado para hacer uso de los servicios de localización de la plataforma. Sólo es neccesairo incluir entre las variables enviadas a la plataforma los correspondientes con las coordenadas cardinales con los identificadores en su  payload `"lat", "lng"` , `"lat", "long"` or `"latitude", "longitude"`  como se muestra en el ejemplo del callback de los dispositivos HTTP:
+The device code must be prepared to make use of the platform's location services. It is only necessary to include among the variables sent to the platform the corresponding cardinal coordinates with the identifiers in their payload `"lat", "lng"`, `"lat", "long"` or `"latitude", "longitude"` as shown in the example of the callback of the HTTP devices:
 
 ![](../.gitbook/assets/image%20%28362%29.png)
 
-
+{% hint style="warning" %}
+The first release of this feature doesn't work with Thinger.io software client devices and MQTT devices. 
+{% endhint %}
 
