@@ -1,30 +1,91 @@
 # USER ACCOUNTS
 
-Thinger.io Server Instances can support multiple user accounts that can be managed from the administration account. This feature allows creating a user network in which each user account has its own resources such as devices, dashboards, data buckets or even its own plugins.
+Professional and Enterprise Thinger.io Server Instances han sido dotadas de un support para multiple user accounts with different authorization levels, that can be managed from the administration account. This feature has been developed to allow organizations to create project working groups and provide support for B2C or B2B2C products in which is necessary to create a network of end user accounts with read-only permissions.
+
+Each user account is isolated from the rest of the accounts of the instance. This means that they will not share devices or other resources that have not been explicitly shared through a project. The different roles explained below only limit the action capabilities of each account.
 
 {% hint style="info" %}
-Note that each additional account increases the RAM occupation and CPU load, so it is important to supervise the remaining computational resources when creating new user accounts, especially when using Node-RED plugin.
+Note that the use of user accounts is closely related to project management. If you are not familiar with this feature, please go to [**Projects Manager**](projects.md) section of the documentation. 
 {% endhint %}
 
-![](.gitbook/assets/image%20%28168%29.png)
+## User Roles
 
-The first step to manage the user's network is clicking on the "User Accounts" tab of the main menu. This interface allows showing user accounts list and manages each profile individually as explained in the next sections.
+Depending on the usage priviledges you wish to grant a user, there are three different user account roles. This section describes each of them and the considerations to be taken into account when deploying them.
 
-## Create new User Account
+### Administrator account
 
-Pressing "Add User" button of the user administration list opens a form context in which the new user parameters can be introduced:
+Each instance can have more than one administrator account. Only the original account indicated during the subscription will have permission to modify the parameters of the subscription or the Addons amount, but the administrator accounts will have full permissions to:
 
-![](.gitbook/assets/image%20%28208%29.png)
+* [x] Create and manage IoT resources
+* [x] Work with server plugins
+* [x] Projects and Assets aggrupation
+* [x] Accounts Administration
+* [x] Domains or Rebrandings
+
+An Administrator user must be someone the main developer trusts, since he will be able to perform all kinds of operations on the branding and other resources of the instance. In order to deploy these accounts, the subscription must be extended with an additional Addon.
+
+### **Developer account**
+
+This account is aimed for other collaborators of the organization to develop on the instance with full developement capacities but some limitations on administration priviledges:
+
+* [x] Create and manage IoT resources
+* [x] Work with server plugins
+* [x] Projects and Assets aggrupation
+* [ ] Accounts Administration
+* [ ] Domains or Rebrandings
+
+### **User account**
+
+Guest accounts created for displaying data or work only with the IoT resources that has been specifically shared with him  by an administrator or developer account. They will not be able to create new resources or use the plugins. 
+
+* [ ] Create and manage IoT resources
+* [ ] Work with server plugins
+* [ ] Projects and Assets aggrupation
+* [ ] Accounts Administration
+* [ ] Domains or Rebrandings
+
+The creation of this User accounts are free of charge for Thinger.io privated instances, as they have been included to allow the creation of large B2C and B2B2C projects. As they are lightweight accounts, they do not place a high load on the server, so a large network of users can be created without overloading the host.
+
+## Create new user accounts
+
+To start working with user's network, scroll down to the "Administration" section of the main menu and click the "User Accounts" tab to access the accounts management interface, that will display each user account profile and the `Add User` button that allows to create them as explained in the sections below.
+
+![](.gitbook/assets/image%20%28369%29.png)
+
+Then, pressing the **`+ Add User`** button of the user administration list opens the `User details` form context in which the new user properties can be introduced:
+
+![](.gitbook/assets/image%20%28371%29.png)
 
 * **Username**: Account username, this parameter also works as user identificator. 
+* **Role**: Allows to set the new profile as administrator, User or Project member.
 * **Email**: needs to be a valid email account. Only emails introduced on this list can create a user account in order to prevent intruders.
-* **Pasword**: Is the security key for login into this new user account.
-* **Enabled**: Each user account can be enabled/disabled just clicking this switch
-* **Email Verified**: Put this off will send a mail verification to the user when sign up in order to confirm the authenticity of the email.
+* **Password**: Is the security key for login into this new user account.
+* **Enabled**: Each user account can be enabled/disabled just by clicking this switch
+* **Email Verified**: Put this off will send a mail verification to the user when signing up in order to confirm the authenticity of the email.
 
-When the form is completed, a new user profile will be added to the IoT server by pressing "add user" button.
+When the form is completed, a new user profile will be added to the IoT server by pressing the `+ Add user` button.
 
-### User accounts limit
+### Managing project member authorizations: 
+
+Project members are light accounts created to share IoT resources with customers or other kind of  guests that only requires read or display capacities. That way, once a new member profile has been created, it is required to associate it with at least one project using the projects manager and set the priviledges that it will obtain. 
+
+![](.gitbook/assets/image%20%28367%29.png)
+
+1\) go to **`Projects`** menu tab and select a previously created project to open the project details panel. 
+
+![](.gitbook/assets/image%20%28370%29.png)
+
+2\)Then click the  blue  **`Project Members`**   button to show the project member list. Next image shows an empty project list in which a new member can be added: 
+
+![](.gitbook/assets/image%20%28366%29.png)
+
+3\) Clicking the green **`+ Add member`** button allows selecting a user account profile from the server users network list. 
+
+![](.gitbook/assets/image%20%28368%29.png)
+
+4\) Once a project member has been associated to the project, select the profile and then using the **`Allow`** section to provide permissions to the user or the **`Deny`** section to manage explicit forbidden actions, it is possible to select the specific resources and operations that can be used by each account. 
+
+### Subscribe developer accounts amount
 
 The amount of user accounts that can be created in an instance is defined during the contracting and deployment of the server. If this value is reached \(or if no additional user account was contracted\) an error message will appear as shown in the image below:
 
