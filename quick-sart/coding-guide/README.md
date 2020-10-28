@@ -123,7 +123,7 @@ thing["resource"] << [](pson& in){
     else{
         currentState = in;
     }
-}
+};
 ```
 
 This sample code basically returns the current state \(like a boolean, a number, etc\) if there is no input control, or use the incoming data to update the current state. This can be easily adapted for controlling a led, while showing its current state in the dashboard once opened or updated.
@@ -136,7 +136,7 @@ thing["led"] << [](pson& in){
     else{
         digitalWrite(pin, in ? HIGH : LOW);
     }
-}
+};
 ```
 
 Note: for controlling a digital pin just use the method explained in the Easier Resources Section.
@@ -285,7 +285,7 @@ In Thinger.io, it is possible that devices can communicate between them. There a
 
 ### Same account communication
 
-For this use case, in which both devices belongs to the same user account, there is an specific method that allows devices to communicate with other devices with low latency and simple codification. this communication can contain data or not \(it is possible to make an empty call\). lets Suppose that we have two devices: `deviceA` and `deviceB`, and we want to communicate both calling from `deviceB`to an specific `deviceA` input resource. We can use "thing.call\_device\(,\);" as shown in the example below:
+For this use case, in which both devices belong to the same user account, there is a specific method that allows devices to communicate with other devices with low latency and simple codification. this communication can contain data or not \(it is possible to make an empty call\). let's Suppose that we have two devices: `deviceA` and `deviceB`, and we want to communicate both calling from `deviceB`to a specific `deviceA` input resource. We can use "thing.call\_device\(,\);" as shown in the example below:
 
 The `deviceA` defines a resource like in the following example.
 
@@ -379,9 +379,11 @@ Calling an endpoint is so easy from the Arduino sketch, as it is only required t
 thing.call_endpoint("endpoint_id");
 ```
 
-You can simply call an endpoint to make some action like sending a predefined email, or also call the endpoint with some data, which is specially useful when you are using third party services that consume your devices data.
+Endpoints can be called from the device code in order to execute any action like sending a predefined email. The call can also include some reading values, which is specially useful to send device's data to  third-party services.
 
-**You should take extra attention while calling resources, and call them at an appropriate rate. Otherwise you can consume easily your available data, receive hundred of emails, or consume your API calls in third-party services.**
+{% hint style="warning" %}
+**Extra attention must be taken while calling resources, in order to avoid uncontrolled recurrency. If the interval is too short the server will lock the device connection**
+{% endhint %}
 
 ### Calling Endpoints
 
