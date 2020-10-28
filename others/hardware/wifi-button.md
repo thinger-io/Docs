@@ -8,7 +8,7 @@ description: >-
 
 ## Introduction
 
-Thinger.io WiFi Button is a ready-to-go Internet of Things based dash-button that integrates ESP8266 processor with WiFi connectivity among a simple integration with Thinger.io platform events to provide a flexible support for many different use cases. 
+Thinger.io WiFi Button is a ready-to-go Internet of Things based dash-button that integrates ESP8266 processor with WiFi connectivity among a simple integration with Thinger.io platform events to provide  flexible support for many different use cases. 
 
 ![](../../.gitbook/assets/image%20%2845%29.png)
 
