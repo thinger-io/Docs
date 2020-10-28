@@ -1,4 +1,4 @@
-# ASSET TYPES & GORUPS
+# ASSET TYPES & GROUPS
 
 This section allows you to define sets of IoT devices, in order to group those that have common characteristics or purposes, so we will distinguish types of devices for those that are units with the same purpose and Groups to associate devices for OTHER REASONS. Note that a device can be of one type and belong to a group at the same time. 
 

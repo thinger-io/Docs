@@ -83,7 +83,7 @@ Project members are light accounts created to share IoT resources with customers
 
 ![](.gitbook/assets/image%20%28368%29.png)
 
-4\) Once a project member has been associated to the project, select the profile and then using the **`Allow`** section to provide permissions to the user or the **`Deny`** section to manage explicit forbidden actions, it is possible to select the specific resources and operations that can be used by each account. 
+4\) Once a project member has been associated to the project, select the profile and then using the **`Allow`** section to provide permissions to the user or the **`Deny`** section to manage explicitly forbidden actions, it is possible to select the specific resources and operations that can be used by each account. 
 
 ### Subscribe developer accounts amount
 

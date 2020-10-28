@@ -389,9 +389,12 @@ In this case we will see a simple example to send an email alert based on a temp
 
 ```cpp
 unsigned long lastCheck = 0;
+
 loop(){
     thing.handle(); // required thing handle
+   
     unsigned long currentTs = millis();
+    
     if(currentTs-lastCheck>=60*60*1000){
         lastCheck = currentTs;
         if(dht.readTemperature()>30){
