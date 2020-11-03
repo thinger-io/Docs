@@ -16,11 +16,11 @@ After provisioning the device at Thinger.io cloud, it is the moment to configure
 
 {% tabs %}
 {% tab title="Arduino/Linux Devices" %}
-The most suitable devices to start working with Thinger.io are the ESP8266 or ESP32, we have a library for the Arduino framework that allows to program the first device in two minutes just following the next steps:
+The most suitable devices to start working with Thinger.io are the ESP8266 or ESP32, we have a library for the Arduino framework that allows programing the first device in two minutes just following the next steps:
 
 1. Install Thinger.io libraries into your Arduino IDE
 2. Going to "File&gt;Examples&gt;Thinger.io", open the example code that fix better for the PCB
-3. Edit the example code to include your username, device ID and Thinger.io credentials. If the device use a secured networks, connection credentials needs to be written too as shown in the image below. 
+3. Edit the example code to include your username, device ID and Thinger.io credentials. If the device use secured networks, connection credentials need to be written too as shown in the image below. 
 
 ![](../.gitbook/assets/image%20%2831%29.png)
 
@@ -30,7 +30,7 @@ This example contains two simple resources to send and retrieve data from Thinge
 Find additional information about Thinger.io devices in the next sections: 
 
 1. \*\*\*\*[**Compatible Arduino and Linux devices**](devices/)\*\*\*\*
-2. \*\*\*\*[**Zero to Hero Thinger.io Firmware Coding Guide**]() ****
+2. \*\*\*\*[**Zero to Hero Thinger.io Firmware Coding Guide** ](coding-guide/#sketch-overview)\*\*\*\*
 3. \*\*\*\*[**Connection Troubleshooting Guide**](https://docs.thinger.io/coding/good-practices-and-troubleshooting)\*\*\*\*
 {% endhint %}
 {% endtab %}
@@ -77,7 +77,7 @@ Thinger.io provides three essential tools to work with devices data that are the
 
 {% tabs %}
 {% tab title="Data Buckets" %}
-To **store** **device data** in an scalable way, programming different sampling intervals or recording events raised by devices.
+To **store** **device data** in a scalable way, programming different sampling intervals or recording events raised by devices.
 {% endtab %}
 
 {% tab title="Dashboards" %}

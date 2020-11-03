@@ -6,9 +6,9 @@ description: >-
 
 # HTTP DEVICES
 
-There are some projects that require the integration of third party data sources, such as a Cloud Service, devices without Thinger.io library on it source code, or a custom program. In this section it is explained how to use the "HTTP device" profile at Thinger.io, that allows receiving data via REST API from whatever source that is able to create a connection with Thinger.io Server and send an HTTP request, taking advantage of all Thinger.io features such as display real time data in dashboards, store in data buckets or process it using a plugin. 
+There are some projects that require the integration of third-party data sources, such as a Cloud Service, devices without Thinger.io library on it source code, or a custom program. In this section it is explained how to use the "HTTP device" profile at Thinger.io, that allows receiving data via REST API from whatever source that is able to create a connection with Thinger.io Server and send an HTTP request, taking advantage of all Thinger.io features such as display real-time data in dashboards, store in data buckets or process it using a plugin. 
 
-This integration provides bidirectional communication between Thinger.io and the data source by making use of HTTP request and response data, that consist on basic HTTP POST messages with JSON codificated data. 
+This integration provides bidirectional communication between Thinger.io and the data source by making use of HTTP request and response data, which consist of basic HTTP POST messages with JSON codified data. 
 
 ![](../../.gitbook/assets/image%20%28112%29.png)
 
@@ -16,11 +16,11 @@ This integration provides bidirectional communication between Thinger.io and the
 Note that this integration can't explode the 100% of Thinger.io features and benefits in terms of communication efficiency, real-time data and device administration, so it is strongly recommended integrating the devices using the Thinger.io software client if it is available.
 {% endhint %}
 
-In the next sections it is explained how to create and configure the HTTP Device Profile at Thinger.io Platform and how to link it with the data source.
+In the next sections, it is explained how to create and configure the HTTP Device Profile at Thinger.io Platform and how to link it with the data source.
 
 ## Creating HTTP Device Profile
 
-First step to work with this interface consist on creating the device profile at the "devices" main menu tab and clicking on "new device" button. Then, select "HTTP Device \(Sigfox, Lora, cURL\)" type and fill `Device ID` and `Description` slots as required.  
+First step to work with this interface consists of creating the device profile at the "devices" main menu tab and clicking on "new device" button. Then, select "HTTP Device \(Sigfox, Lora, cURL\)" type and fill `Device ID` and `Description` slots as required.  
 
 ![](../../.gitbook/assets/image%20%28191%29.png)
 
@@ -36,7 +36,7 @@ However, when time this page is first accessed \(before making the first call to
 
 ## Building the HTTP request
 
-It is necessary to obtain the HTTP request and the authorization that allows interacting with Thinger.io and start sending data from an external system. Clicking into "Callback" tab, it is possible show all callback details and build the request in a simple way, as explained in the next steps:
+It is necessary to obtain the HTTP request and the authorization that allows interacting with Thinger.io and start sending data from an external system. Clicking into "Callback" tab, it is possible to show all callback details and builds the request in a simple way, as explained in the next steps:
 
 1\) Going to `Callback / Settings` tab, check the "authorization" box. A bearer token will appear into this section.  
 
@@ -62,14 +62,14 @@ Ones the callback has been integrated with the system,  the developer will be ab
 
 ### **Store data in Buckets**
 
-Thinger.io data Buckets is an scalable system that allows to store devices data in a simple way. Allowing support for historical data analysis or download IoT data into a file. The Callback manager allows to associate an existent data bucket to the HTTP Device data in order to store it as is retrieved. 
+Thinger.io data Buckets is a scalable system that allows storing devices data in a simple way. Allowing support for historical data analysis or download IoT data into a file. The Callback manager allows associating an existent data bucket to the HTTP Device data in order to store it as is retrieved. 
 
 ![](../../.gitbook/assets/image%20%282%29.png)
 
 To make this assignment, just check the checkbox and click into the text entry to select or search a previously defined data bucket as shown in the previous image. 
 
 {% hint style="success" %}
-[Click here to find additional documentation about data buckets definition and management click here to open Data Buckets documentation](https://docs.thinger.io/console#data-buckets)
+[Click here to find additional documentation about data buckets definition and management click here to open Data Buckets documentation](../../features/buckets.md)
 {% endhint %}
 
 ### **Call Endpoints**
@@ -134,7 +134,7 @@ https://trincado.do.thinger.io/v3/users/jt/devices/Example_Device/callback/data?
 
 ### Using Postman / HTTP request manager
 
-This services provide a useful way to test HTTP integrations in a simply way. It is only necessary to follow the next steps to configure a request:
+This services provide a useful way to test HTTP integrations in a simple way. It is only necessary to follow the next steps to configure a request:
 
 ![](../../.gitbook/assets/image%20%28237%29.png)
 
