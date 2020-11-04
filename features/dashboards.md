@@ -1,16 +1,18 @@
 # DASHBOARDS
 
-A dashboard is a graphical user interface that allows displaying your information in different figures and charts. You can configure the dashboards with different widgets, configure its layout, dimension, color, and data sources to generate valuable information for your business or processes.
+Thinger.io dashboard system is a feature that allows creating nice data representation interfaces within minutes in a very simple way. No coding is required, just selecting different widgets from a list and using drag&drop technology to configure the layout of the dashboard, then using the configuration forms it is possible to set the data sources, sampling interval, and other behaviors of each widget. The main types of these widgets are: 
 
-The dashboards can **display information in real-time** from your devices \(using websockets over the server for minimum latency\), or use historic information stored in data buckets that is polled periodically. It is possible to configure the data source for each dashboard widget independently. For devices connected to the platform, it is even possible to dynamically configure the sampling interval for each resource, i.e., in a resource defined from sensor readings, it will allow adjust its physical sampling interval and transmission over the wire. The dashboards are not just only for displaying data, but can also **actuate in real-time** over your connected devices, so you can use some control widgets like on/off values or sliders.
+* **Real-time** data representation
+* **Historical** data representation from buckets 
+* **Control** device functions or change values with On/Off buttons or sliders
 
-Here is a sample dashboard with some widgets defined, like time series charts, donut charts, maps, or single values, but you can use many other ones
+Here is an example dashboard with some widgets defined, like time series charts, donut charts, maps, or single values, but you can use many other ones
 
 ![](https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/c05197985d9ee92a9e12aaa71ab7508682bc3fbc.gif)
 
-Ready to create your own dashboard?
+Una vez creados, los dashboards pueden ser compartidos con terceros por medio de un link o configurados como tempates para analizar los datos de diferentes dispositivos de un mismo tipo. En las siguientes secciones explicaremos paso a paso cómo hacer uso de este sistema y de cada uno de sus widgets. Are you ready to create your own dashboard?
 
-## Create Dashboard
+## Create a Dashboard
 
 To manage all your dashboards, it is necessary to access to the `Dashboards` section, by clicking in the following menu item:
 
