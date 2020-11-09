@@ -40,6 +40,8 @@ This portal allows to manage every subscription preferences such as **changing t
 
 ![](../../.gitbook/assets/image%20%28372%29.png)
 
+### Addons contracting
+
 The image below shows the different Addons that can be contracted for a Grow License. Note that Maker subscriptions will not be able to select these options:
 
 ![](../../.gitbook/assets/image%20%28315%29.png)
@@ -59,5 +61,9 @@ This process can be executed using the server administration panel as shown in t
 
 ![](../../.gitbook/assets/image%20%28313%29.png)
 
+#### Manage Payment Methods
 
+It is possible to modify the payment method by accessing the section "Payment Methods" where you can choose to make payments with a Credit Card or Direct Debit that allows the domiciliation of the payment with SEPA transferences.
+
+![](../../.gitbook/assets/image%20%28374%29.png)
 
