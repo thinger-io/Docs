@@ -357,13 +357,30 @@ The configurable parameters are the following:
 * **Max Value**: Minimum value of the slider.
 * **Step Width**: Slider precision.
 
-## Share Dashboard
+## Dashboard Settings
+
+El sistema de dashboards permite setear algunos parametros de la configuración de los tableros. Para acceder al menú de settings es necesario activar el switch de edición del dashboard y entonces hacer click en el botón azul "Settings" de la zona superior del dashboard. 
+
+![](../.gitbook/assets/image%20%28373%29.png)
+
+The Settings menu allows to custom the next parameters of a dashboard:
+
+* **Name**: Dashboard name that will be shown on the header and browser tab
+* **Description**: Dashboard description for additional information 
+* **Columns**: This number allows selecting the logical amount of horizontal places that can be used to insert widgets on the dashboard. Each widget can be scaled to fill more than one position. 
+* **Background image**: The background image can be selected in order to custom dashboard appearance 
+* **Border radius**: widget corners will be rounded according to this parameter
+* **Hide Header**: Shared dashboards have been provided with a header that shows the dashboard name, but this header can be hidden if the developer switches this option on. 
+* **Make template**: To enable template feature \(as explained below\)
+* **Share Dashboard**: To create a dashboard link and authorization in order to share it with thirds
+
+### Share Dashboard
 
 By default, any dashboard is private to the account owner. However, it is possible to share the dashboard so others can access your information. To share a dashboard, just enter in the dashboard config and enable the `Share` switch. After enabling the dashboard sharing, an URL will be generated, which can be publicly shared.
 
-**Note:** The generated authorization \(appended to the end of the URL\) can be used to partially access your resources, like devices or buckets used to feed the charts. Review the generated access token for more details.
-
-**Note:** If you change your dashboards by adding new data sources \(devices or buckets\), it is necessary to disable an re-enable the dashboard sharing to update the authorization. It will not share new data sources automatically for security reasons.
+{% hint style="info" %}
+Any modification on a shared dashboard widget that includes new device or data bucket resources must be updated in the authorization by means of the Access Tokens menu or by re-generating the link by turning the shared dashboard option off and on again. 
+{% endhint %}
 
 ![](../.gitbook/assets/sharedashboard.png)
 

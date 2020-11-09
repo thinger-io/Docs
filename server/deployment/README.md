@@ -36,7 +36,11 @@ The administrator of a private instance of Thinger.io can edit the preferences o
 
 ![](../../.gitbook/assets/image%20%28316%29.png)
 
-This portal allows you to edit the payment details and making changes in the limitations of each licence contracted with this email address through Addons:
+This portal allows to manage every subscription preferences such as **changing the administration email** account**, modify payment details** and also editing the **subscription Addons** for each license that has been contracted on Thinger.io system:
+
+![](../../.gitbook/assets/image%20%28372%29.png)
+
+The image below shows the different Addons that can be contracted for a Grow License. Note that Maker subscriptions will not be able to select these options:
 
 ![](../../.gitbook/assets/image%20%28315%29.png)
 
