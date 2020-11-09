@@ -34,7 +34,7 @@ Clicking again on the "Add Dashboard" button, the new dashboard will be added to
 
 By default, the dashboard appears empty and in view mode, so it is not possible to make modifications, so, to start working, the first step will be switching on the button on the upper-right corner of the dashboard that will change to the edition mode.
 
-![](../.gitbook/assets/image%20%28378%29.png)
+![](../.gitbook/assets/image%20%28379%29.png)
 
 The dashboard edition mode allows moving, or resizing existing widgets, but also enables different options using the left-side buttons such as:
 
@@ -371,13 +371,17 @@ A Dashboard Tab is an additional work page that can be added to a dashboard to o
 
 This feature also has the advantage of keeping all the tabs of a dashboard open even if they are not being visualized, so the data of the devices shown in real-time will not be lost when changing from one tab to another.
 
-![](../.gitbook/assets/image%20%28377%29.png)
+![](../.gitbook/assets/image%20%28378%29.png)
 
 ### Adding a new tab
 
-To add a tab to a dashboard you only need to click on the blue "add tab" button, this button can be clicked as many times as tabs are desired to create, they will be labeled as "new tab" and will show a generic icon. The label can be modified just by typing a new name, but the icon can also be customized by pressing over the existent one, deploying a menu with every available icon.
+To add a tab to a dashboard you only need to click on the blue "add tab" button, this button can be clicked as many times as tabs are desired to create, they will be labeled as "new tab" and will show a generic icon. The label can be modified just by typing a new name, but the icon can also be customized by pressing over the existent one, deploying a menu with all available icons.
 
-![](../.gitbook/assets/image%20%28375%29.png)
+![](../.gitbook/assets/image%20%28376%29.png)
+
+Note that, when the editing mode is enabled, the tabs order can also be customized by dragging to the desired position. 
+
+![](../.gitbook/assets/image%20%28374%29.png)
 
 ## Dashboard Settings
 
