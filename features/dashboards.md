@@ -10,7 +10,7 @@ Here is an example dashboard with some widgets defined, like time series charts,
 
 ![](https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/c05197985d9ee92a9e12aaa71ab7508682bc3fbc.gif)
 
-Una vez creados, los dashboards pueden ser compartidos con terceros por medio de un link o configurados como tempates para analizar los datos de diferentes dispositivos de un mismo tipo. En las siguientes secciones explicaremos paso a paso cómo hacer uso de este sistema y de cada uno de sus widgets. Are you ready to create your own dashboard?
+Once created, dashboards can be shared with third parties through a link or configured as templates to analyze data from different devices of the same type. In the following sections, we will explain how to create awesome dashboards in a few and very easy steps. Are you ready to create your own dashboard?
 
 ## Create a Dashboard
 
@@ -22,19 +22,27 @@ Then click on the `Add Dashboard` button that will open a new interface for ente
 
 ![](../.gitbook/assets/createdashboard.png)
 
-Here it is necessary to configure different parameters:
+It is necessary to configure different parameters:
 
 * **Dashboard Id**: Unique identifier for your dashboard. 
 * **Dashboard name**: A representative name of your dashboard, in a more friendly way than its identifier.
 * **Dashboard description**: Fill here any description or detailed information you need to keep about the dashboard.
 
-After this process, it is possible to access to the new dashboard, that will appear empty by default.
+Clicking again on the "Add Dashboard" button, the new dashboard will be added to the account, and the browser will be automatically redirected to the empty board in order to start adding widgets as explained in the sections below.
 
 ## Edit Dashboard
 
-By default, the dashboard appears in viewing mode, where you cannot modify or configure he dashboard, however, there is an edit mode that can be easily enabled by clicking on the upper-right switch of the dashboard. So, enable the edit mode every time you need to add, move, or resize a widget. The edit mode also enables different options like sharing dashboards.
+By default, the dashboard appears empty and in view mode, so it is not possible to make modifications, so, to start working, the first step will be switching on the button on the upper-right corner of the dashboard that will change to the edition mode.
 
-![](../.gitbook/assets/emptydashboard.PNG)
+![](../.gitbook/assets/image%20%28378%29.png)
+
+The dashboard edition mode allows moving, or resizing existing widgets, but also enables different options using the left-side buttons such as:
+
+* **Add Widgets**:  To create new elements from the list. There are two different widget types depending on their objective: **Display widgets** allow to show real-time data from devices or historical data from buckets, and **Control Widgets** allows to connect the dashboard with devices functionalities in order to control them in real-time. 
+* **Add Tab**: This button allows to create an additional dashboard tab that will appear associated to the original one in order to provide simple navigation over related boards. 
+* **Settings**: There are multiple parameters that can be configured in order to set the dashboard behavior, such as the number of columns, the background image or the sharing options.  
+
+These three options have been explained in more detail in the sections below.
 
 ## Add a Display Widget
 
@@ -328,7 +336,7 @@ The configurable parameters are the following:
 
 ![](../.gitbook/assets/deviceresource.png)
 
-This widgect has te posibility to be shown in two different appearances, that can be specified in the **Switch Style** parameter: **Switch** is the standard configuration with a little non-configurable switch, and **Button** which is an improved face that can be configured with different colors and icons. When this option is selected, next paremeters will be shown:
+This widget has the possibility to be shown in two different appearances, that can be specified in the **Switch Style** parameter: **Switch** is the standard configuration with a little non-configurable switch, and **Button** which is an improved face that can be configured with different colors and icons. When this option is selected, next paremeters will be shown:
 
 ![](../.gitbook/assets/image%20%28235%29.png)
 
@@ -356,6 +364,20 @@ The configurable parameters are the following:
 * **Min Value**: Maximum value of the slider.
 * **Max Value**: Minimum value of the slider.
 * **Step Width**: Slider precision.
+
+## Dashboard Tabs
+
+A Dashboard Tab is an additional work page that can be added to a dashboard to organize the visualization of data and simplify navigation between related pannels. The widgets and data sources of each tab can be completely independent of the others but all the tabs will share the same configuration settings \(column number, background image, widgets border-radius, etc\). 
+
+This feature also has the advantage of keeping all the tabs of a dashboard open even if they are not being visualized, so the data of the devices shown in real-time will not be lost when changing from one tab to another.
+
+![](../.gitbook/assets/image%20%28377%29.png)
+
+### Adding a new tab
+
+To add a tab to a dashboard you only need to click on the blue "add tab" button, this button can be clicked as many times as tabs are desired to create, they will be labeled as "new tab" and will show a generic icon. The label can be modified just by typing a new name, but the icon can also be customized by pressing over the existent one, deploying a menu with every available icon.
+
+![](../.gitbook/assets/image%20%28375%29.png)
 
 ## Dashboard Settings
 
