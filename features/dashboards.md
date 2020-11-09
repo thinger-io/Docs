@@ -34,7 +34,7 @@ Clicking again on the "Add Dashboard" button, the new dashboard will be added to
 
 By default, the dashboard appears empty and in view mode, so it is not possible to make modifications, so, to start working, the first step will be switching on the button on the upper-right corner of the dashboard that will change to the edition mode.
 
-![](../.gitbook/assets/image%20%28379%29.png)
+![](../.gitbook/assets/image%20%28380%29.png)
 
 The dashboard edition mode allows moving, or resizing existing widgets, but also enables different options using the left-side buttons such as:
 
@@ -385,11 +385,13 @@ Note that, when the editing mode is enabled, the tabs order can also be customiz
 
 ## Dashboard Settings
 
-El sistema de dashboards permite setear algunos parametros de la configuración de los tableros. Para acceder al menú de settings es necesario activar el switch de edición del dashboard y entonces hacer click en el botón azul "Settings" de la zona superior del dashboard. 
+Thinger.io allows setting some parameters of the dashboard behavior. Accessing the settings menu just requires to activate the dashboard edit mode and then click on the blue "Settings" button in the upper area of the dashboard. The next context will appear, which has three main tabs to organize the work that can be made with this menu:
 
-![](../.gitbook/assets/image%20%28373%29.png)
+![](../.gitbook/assets/image%20%28379%29.png)
 
-The Settings menu allows to custom the next parameters of a dashboard:
+### Layout configuration
+
+This section allows to custom the main dashboard configuration parameters, such as:
 
 * **Name**: Dashboard name that will be shown on the header and browser tab
 * **Description**: Dashboard description for additional information 
@@ -408,7 +410,7 @@ By default, any dashboard is private to the account owner. However, it is possib
 Any modification on a shared dashboard widget that includes new device or data bucket resources must be updated in the authorization by means of the Access Tokens menu or by re-generating the link by turning the shared dashboard option off and on again. 
 {% endhint %}
 
-![](../.gitbook/assets/sharedashboard.png)
+### Developer section:
 
-## 
+
 
