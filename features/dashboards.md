@@ -34,7 +34,7 @@ Clicking again on the "Add Dashboard" button, the new dashboard will be added to
 
 By default, the dashboard appears empty and in view mode, so it is not possible to make modifications, so, to start working, the first step will be switching on the button on the upper-right corner of the dashboard that will change to the edition mode.
 
-![](../.gitbook/assets/image%20%28381%29.png)
+![](../.gitbook/assets/image%20%28382%29.png)
 
 The dashboard edition mode allows moving, or resizing existing widgets, but also enables different options using the left-side buttons such as:
 
@@ -377,13 +377,13 @@ A Dashboard Tab is an additional work page that can be added to a dashboard to o
 
 This feature also has the advantage of keeping all the tabs of a dashboard open even if they are not being visualized, so the data of the devices shown in real-time will not be lost when changing from one tab to another.
 
-![](../.gitbook/assets/image%20%28379%29.png)
+![](../.gitbook/assets/image%20%28380%29.png)
 
 ### Adding a new tab
 
 To add a tab to a dashboard you only need to click on the blue "add tab" button, this button can be clicked as many times as tabs are desired to create, they will be labeled as "new tab" and will show a generic icon. The label can be modified just by typing a new name, but the icon can also be customized by pressing over the existent one, deploying a menu with all available icons.
 
-![](../.gitbook/assets/image%20%28377%29.png)
+![](../.gitbook/assets/image%20%28378%29.png)
 
 Note that, when the editing mode is enabled, the tabs order can also be customized by dragging to the desired position. 
 
@@ -393,7 +393,7 @@ Note that, when the editing mode is enabled, the tabs order can also be customiz
 
 Thinger.io allows setting some parameters of the dashboard behavior. Accessing the settings menu just requires to activate the dashboard edit mode and then click on the blue "Settings" button in the upper area of the dashboard. The next context will appear, which has three main tabs to organize the work that can be made with this menu:
 
-![](../.gitbook/assets/image%20%28380%29.png)
+![](../.gitbook/assets/image%20%28381%29.png)
 
 ### Layout configuration
 
@@ -412,7 +412,7 @@ This section allows to custom the main dashboard configuration parameters, such 
 
 By default, any dashboard is private to the account owner. However, it is possible to share the dashboard so others can access your information. To share a dashboard, just enter in the dashboard config and enable the `Share` switch. After enabling the dashboard sharing, an URL will be generated, which can be publicly shared.
 
-![](../.gitbook/assets/image%20%28382%29.png)
+![](../.gitbook/assets/image%20%28383%29.png)
 
 {% hint style="info" %}
 Any modification on a shared dashboard widget that includes new device or data bucket resources must be updated in the authorization by means of the Access Tokens menu or by re-generating the link by turning the shared dashboard option off and on again. 

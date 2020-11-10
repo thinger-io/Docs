@@ -65,5 +65,5 @@ This process can be executed using the server administration panel as shown in t
 
 It is possible to modify the payment method by accessing the section "Payment Methods" where you can choose to make payments with a Credit Card or Direct Debit that allows the domiciliation of the payment with SEPA transferences.
 
-![](../../.gitbook/assets/image%20%28376%29.png)
+![](../../.gitbook/assets/image%20%28377%29.png)
 
