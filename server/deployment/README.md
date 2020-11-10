@@ -38,7 +38,7 @@ The administrator of a private instance of Thinger.io can edit the preferences o
 
 This portal allows to manage every subscription preferences such as **changing the administration email** account**, modify payment details** and also editing the **subscription Addons** for each license that has been contracted on Thinger.io system:
 
-![](../../.gitbook/assets/image%20%28372%29.png)
+![](../../.gitbook/assets/image%20%28373%29.png)
 
 ### Addons contracting
 
@@ -65,5 +65,5 @@ This process can be executed using the server administration panel as shown in t
 
 It is possible to modify the payment method by accessing the section "Payment Methods" where you can choose to make payments with a Credit Card or Direct Debit that allows the domiciliation of the payment with SEPA transferences.
 
-![](../../.gitbook/assets/image%20%28375%29.png)
+![](../../.gitbook/assets/image%20%28376%29.png)
 

@@ -34,7 +34,7 @@ Clicking again on the "Add Dashboard" button, the new dashboard will be added to
 
 By default, the dashboard appears empty and in view mode, so it is not possible to make modifications, so, to start working, the first step will be switching on the button on the upper-right corner of the dashboard that will change to the edition mode.
 
-![](../.gitbook/assets/image%20%28380%29.png)
+![](../.gitbook/assets/image%20%28381%29.png)
 
 The dashboard edition mode allows moving, or resizing existing widgets, but also enables different options using the left-side buttons such as:
 
@@ -50,11 +50,11 @@ When the edit mode is enabled in the dashboard, a new button called `Add Widget`
 
 ![](../.gitbook/assets/widgettypes.PNG)
 
-The following subsections describes the different parameters for each widget type.
+The following subsections describe the different parameters for each widget type.
 
 ### Time Series Chart
 
-A time series chart is a graph that can display values over time. In this sense, this is quite useful when it is required to display time series data, like temperature variable that changes over time. It is possible to plot a single variable or multiple values in the same chart. The initial configuration of this widget is like shown in the following figure:
+A time-series chart is a graph that can display values over time. In this sense, this is quite useful when it is required to display time-series data, like temperature variable that changes over time. It is possible to plot a single variable or multiple values in the same chart. The initial configuration of this widget is like shown in the following figure:
 
 ![](../.gitbook/assets/timeserieschart.png)
 
@@ -317,11 +317,11 @@ This is work in progress, we will add more documentation soon. Sorry for the inc
 
 ## Add a Control Widget
 
-In Thinger.io it is possible to not just display information in dashboard, but also control devices in real-time. In this section are described some available widgets that can be used control connected devices.
+In Thinger.io it is possible to not just display information in the dashboard, but also control devices in real-time. In this section are described some available widgets that can be used to control connected devices.
 
 ### On/Off State
 
-The On/Off widget allows controlling a boolean state of a connected device, like turning on/off a light, a motor, a relay, or any other element. The device should expose a boolean input, just like those examples for controlling a led. The resource is then mapped to this widget, that can change the device state in real-time. If the input resource is defined properly [implemented](http://docs.thinger.io/arduino/#coding-adding-resources-input-resources), this widget is also able to show the current device state.
+The On/Off widget allows controlling a boolean state of a connected device, like turning on/off a light, a motor, a relay, or any other element. The device should expose a boolean input, just like those examples for controlling a led. The resource is then mapped to this widget, which can change the device state in real-time. If the input resource is defined properly [implemented](http://docs.thinger.io/arduino/#coding-adding-resources-input-resources), this widget is also able to show the current device state.
 
  ![](../.gitbook/assets/switchbutton.png) 
 
@@ -336,16 +336,22 @@ The configurable parameters are the following:
 
 ![](../.gitbook/assets/deviceresource.png)
 
-This widget has the possibility to be shown in two different appearances, that can be specified in the **Switch Style** parameter: **Switch** is the standard configuration with a little non-configurable switch, and **Button** which is an improved face that can be configured with different colors and icons. When this option is selected, next paremeters will be shown:
+This widget has the possibility to be shown on different appearances, that can be specified in the **Switch Style** menu:
+
+1. [x] **Switch** is the standard configuration with a little horizontal switch
+2. [x] **Button** which is an improved face that can be configured with different colors and icons
+3. [x] **Push button** it configurates the button to be automatically switched off when it is not being clicked. This option is perfect to implement toggle switches behavior on the devices.
+
+Using Button or Push button configuration, it is possible to configure the next parameters:
 
 ![](../.gitbook/assets/image%20%28235%29.png)
 
 * **On Color**: The color that will be displayed when the boolean value of this resource is true.
-* **Off Color**: The color that will be displayed when the boolean value of this reource is false.
-* **Icon**: This button is able to show a customizable icon from favicon library or any other icon library URL.
-* **Icon Color**: Icon color is also configurable with an hexadecimal value. Note that there are different color options for both button status, so you can customize it as you want.
+* **Off Color**: The color that will be displayed when the boolean value of this resource is false.
+* **Icon**: This button is able to show a customizable icon from a favicon library or any other icon library URL.
+* **Icon Color**: Icon color is also configurable with a hexadecimal value. Note that there are different color options for both button status, so you can customize it as you want.
 
-  ![](../.gitbook/assets/image%20%28144%29.png)
+![](../.gitbook/assets/image%20%28144%29.png)
 
 ### Slider
 
@@ -371,23 +377,23 @@ A Dashboard Tab is an additional work page that can be added to a dashboard to o
 
 This feature also has the advantage of keeping all the tabs of a dashboard open even if they are not being visualized, so the data of the devices shown in real-time will not be lost when changing from one tab to another.
 
-![](../.gitbook/assets/image%20%28378%29.png)
+![](../.gitbook/assets/image%20%28379%29.png)
 
 ### Adding a new tab
 
 To add a tab to a dashboard you only need to click on the blue "add tab" button, this button can be clicked as many times as tabs are desired to create, they will be labeled as "new tab" and will show a generic icon. The label can be modified just by typing a new name, but the icon can also be customized by pressing over the existent one, deploying a menu with all available icons.
 
-![](../.gitbook/assets/image%20%28376%29.png)
+![](../.gitbook/assets/image%20%28377%29.png)
 
 Note that, when the editing mode is enabled, the tabs order can also be customized by dragging to the desired position. 
 
-![](../.gitbook/assets/image%20%28374%29.png)
+![](../.gitbook/assets/image%20%28375%29.png)
 
 ## Dashboard Settings
 
 Thinger.io allows setting some parameters of the dashboard behavior. Accessing the settings menu just requires to activate the dashboard edit mode and then click on the blue "Settings" button in the upper area of the dashboard. The next context will appear, which has three main tabs to organize the work that can be made with this menu:
 
-![](../.gitbook/assets/image%20%28379%29.png)
+![](../.gitbook/assets/image%20%28380%29.png)
 
 ### Layout configuration
 
@@ -406,11 +412,17 @@ This section allows to custom the main dashboard configuration parameters, such 
 
 By default, any dashboard is private to the account owner. However, it is possible to share the dashboard so others can access your information. To share a dashboard, just enter in the dashboard config and enable the `Share` switch. After enabling the dashboard sharing, an URL will be generated, which can be publicly shared.
 
+![](../.gitbook/assets/image%20%28382%29.png)
+
 {% hint style="info" %}
 Any modification on a shared dashboard widget that includes new device or data bucket resources must be updated in the authorization by means of the Access Tokens menu or by re-generating the link by turning the shared dashboard option off and on again. 
 {% endhint %}
 
-### Developer section:
+### Developer section
+
+Finalmente, para los usuarios más avanzados, la sección dashboards settings permite acceder al fichero JSON en el que se configuran todos los parámetros de la interfaz. Esto permite personalizar cada elemento de forma flexible, pero también es la mejor forma de copiar un dashboard para replicarlo o publicarlo en la comunidad. 
+
+![](../.gitbook/assets/image%20%28372%29.png)
 
 
 
