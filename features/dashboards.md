@@ -408,6 +408,16 @@ This section allows to custom the main dashboard configuration parameters, such 
 * **Make template**: To enable template feature \(as explained below\)
 * **Share Dashboard**: To create a dashboard link and authorization in order to share it with thirds
 
+### Dashboard Templates
+
+This feature allows using one dashboard configuration over different data sources \(devices or buckets\) that can be changed dynamically, allowing to display their data over the same widgets. This way the same layout can be used to show information of devices with the same behavior in an agile way.  &lt;
+
+&lt;gift - changing a template data source&gt;
+
+The only restriction that must be taken when setting up a template is using devices with the same resource names, as the template system works by changing the device ID. So this feature is perfect to be used over devices from the same Asset Type.
+
+ 
+
 ### Share Dashboard
 
 By default, any dashboard is private to the account owner. However, it is possible to share the dashboard so others can access your information. To share a dashboard, just enter in the dashboard config and enable the `Share` switch. After enabling the dashboard sharing, an URL will be generated, which can be publicly shared.
@@ -420,7 +430,7 @@ Any modification on a shared dashboard widget that includes new device or data b
 
 ### Developer section
 
-Finalmente, para los usuarios más avanzados, la sección dashboards settings permite acceder al fichero JSON en el que se configuran todos los parámetros de la interfaz. Esto permite personalizar cada elemento de forma flexible, pero también es la mejor forma de copiar un dashboard para replicarlo o publicarlo en la comunidad. 
+Finally, for more advanced users, the dashboard settings section allows access to the JSON file where all interface parameters are configured. This allows you to customize each element in a flexible way, but it is also the best way to copy a dashboard for replication or post it in the community discussion forum.
 
 ![](../.gitbook/assets/image%20%28372%29.png)
 

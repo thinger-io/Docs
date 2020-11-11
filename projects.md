@@ -22,7 +22,7 @@ After creating a new project it will not be selected by default, so before start
 
 ### Adding project members
 
-Ones a new project profile has been created, it is possible to include project members with which all resources will be shared according to specific authorizations provided by the project creator. To start adding members, open the configuration menu by pressing project's identification on the list, then press into the blue `Project Members` button as shown in the image below:
+Once a new project profile has been created, it is possible to include project members with which all resources will be shared according to specific authorizations provided by the project creator. To start adding members, open the configuration menu by pressing project's identification on the list, then press into the blue `Project Members` button as shown in the image below:
 
 ![](.gitbook/assets/image%20%28122%29.png)
 
@@ -65,7 +65,7 @@ This tool allows moving between different projects, displaying only the devices 
 
 ### Adding project resources
 
-Una vez creado el proyecto podremos comenzar a asociar recursos como device profiles, data buckets or representation dashboards, permitiendo que estos sean compartidos con otros desarrolladores del mismo proyecto. This process can be executed during creation of each resources or after that, just followin the instructions below:
+Once the project is created we can start to associate resources such as device profiles, data buckets or representation dashboards, allowing them to be shared with other developers of the same project. This process can be executed during creation of each resources or after that, just followin the instructions below:
 
 #### Creating new project resources
 
@@ -83,10 +83,7 @@ The process is quite simple, los recursos quedan asociados al proyecto activo en
 
 #### Shared resources identification
 
-~~A Shared resource mark will also appear in the resource lists of those have been attached to any project.   
-Items that appear in the account lists with a user's icon on the left side are resources shared by another user. In this way, it is easy to identify in a list which devices are owned and which are not. The image below shows three devices, two of them are shared devices from other accounts, being the "example\_device"  a profile created on their own account.~~ 
-
-~~FALTA AÑADIR LO DE LA COLUMNA DE LA DERECHA~~
+~~~~
 
 ![](.gitbook/assets/image%20%28349%29.png)
 
