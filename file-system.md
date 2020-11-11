@@ -1,6 +1,6 @@
 # FILE STORAGE
 
-Thinger.io provides a flexible cloud storage system that allows uploading files to the IoT server in order to provide support to other platform features such as the HTML Widget or the OTA System. The information will be stored in a non-volatile memory of the server host, so it is important to take care about the size of the files, specially when the instance is shared with other user accounts, to prevent server local storage from becoming saturated.
+Thinger.io provides a flexible cloud storage system that allows uploading files to the IoT server in order to provide support to other platform features such as the HTML Widget or the OTA System. The information will be stored in a non-volatile memory of the server host, so it is important to take care about the size of the files, especially when the instance is shared with other user accounts, to prevent server local storage from becoming saturated.
 
 {% hint style="success" %}
 Note that this feature is only available for ****[**private instances**](server/deployment/), as it requires cloud storage system. 
@@ -14,10 +14,10 @@ Each storage profile will create an isolated directory with different access per
 
 * **Storage ID:** Enter here a unique ID for the Storage profile
 * **Storage name:** Each Storage can have also a mnemonic name
-* **Storage Description:** Additional information for an easy identification of the storage profile proposals.
-* **Public Read:** This switch provides public read only permissions to third parties using an HTTP path that will be created automatically using the Storage ID.
+* **Storage Description:** Additional information for easy identification of the storage profile proposals.
+* **Public Read:** This switch provides public read-only permissions to third parties using an HTTP path that will be created automatically using the Storage ID.
 
-Onces the form is completed, pressing the "Add Storage" button will create a new Storage Profile.
+Once the form is completed, pressing the "Add Storage" button will create a new Storage Profile.
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LpXqB3J1BMD5s4OpYSg%2F-LucqRxhetQ1epw8c0rM%2F-LugaRt3C0OAQRYEPjUu%2Fimage.png?alt=media&token=c01e5a95-6d26-4a58-bdee-79edd01be338)
 
@@ -48,7 +48,7 @@ Thinger.io's file explorer has a upload manager that can be accessed by pressing
 
 ### Edit Files
 
-The storage explorer contains a navigator in which the data hierarchy is displayed. Each file is represented under it's hierarchy context. an enhanced text editor is also included, allowing yo show and modify files in the cloud.
+The storage explorer contains a navigator in which the data hierarchy is displayed. Each file is represented under its hierarchy context. an enhanced text editor is also included, allowing yo show and modify files in the cloud.
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LpXqB3J1BMD5s4OpYSg%2F-LugngoLxkMv8Jes9uZR%2F-LugopLGYysSswo2P4VS%2Fimage.png?alt=media&token=ace67590-ec66-4f73-b28e-2284e37cf75e)
 
