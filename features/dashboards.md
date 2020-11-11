@@ -410,13 +410,19 @@ This section allows to custom the main dashboard configuration parameters, such 
 
 ### Dashboard Templates
 
-This feature allows using one dashboard configuration over different data sources \(devices or buckets\) that can be changed dynamically, allowing to display their data over the same widgets. This way the same layout can be used to show information of devices with the same behavior in an agile way.  &lt;
+This feature allows using one dashboard configuration over different data sources \(devices or buckets\) that can be changed dynamically, allowing them to display their data over the same widgets. This way the same layout can be used to show information of many devices with the same resource name in an agile way.
 
 &lt;gift - changing a template data source&gt;
 
-The only restriction that must be taken when setting up a template is using devices with the same resource names, as the template system works by changing the device ID. So this feature is perfect to be used over devices from the same Asset Type.
+{% hint style="info" %}
+Note that the template system only is able to show data from different devices when they have the same resource ID, as it works replacing the device ID. 
+{% endhint %}
 
- 
+To enable the Dashboard Template feature just switch the edition mode on, open the settings menu and click into the "template" option of "layout" section. Then, a new top bar will show the devices and data buckets that are being currently displayed:
+
+![](../.gitbook/assets/image%20%28385%29.png)
+
+Clicking over each data source box allows to change it with another resource from the devices or dashboard lists. 
 
 ### Share Dashboard
 
