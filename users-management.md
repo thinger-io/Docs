@@ -87,9 +87,9 @@ Project members are light accounts created to share IoT resources with customers
 
 ### Subscribe developer accounts amount
 
-The amount of user accounts that can be created in an instance is defined during the contracting and deployment of the server. If this value is reached \(or if no additional user account was contracted\) an error message will appear as shown in the image below:
+Only Admin accounts are able to create other user accounts. The amount of user accounts that can be created in an instance is defined during the contracting and deployment of the server. If this value is reached \(or if no additional user account was contracted\) an error message will appear as shown in the image below:
 
-![](.gitbook/assets/image%20%2854%29.png)
+![](.gitbook/assets/image%20%28386%29.png)
 
 This threshold can be upgraded on "Grow" or "Startup" licenses by going to the management portal, which is only accessible with the administration account using the link below. To access this portal a one-time password will be required. It can be obtained by introducing the appropriate administration e-mail account in the text box.
 
@@ -97,7 +97,7 @@ This threshold can be upgraded on "Grow" or "Startup" licenses by going to the m
 \*\*\*\*[**Click here to access the subscription administration portal**](https://thinger.chargebeeportal.com/)\*\*\*\*
 {% endhint %}
 
-The administration portal will show all the licenses that have been subscribed using this e-mail address, allowing to select the one that wants to be updated. Just select the one that wants to be modified and press the option "Edit Subscription", finally pressing the option "Addons", the portal will show all the available options and pricing in the Add Addons menu:
+The administration portal will show all the licenses that have been subscribed using this e-mail address, allowing to select the one that wants to be updated. Just select the one that wants to be modified and press the option "Edit Subscription", finally pressing the option "Addons", the portal will show all the available options and pricing in the Add Add-ons menu:
 
 ![](.gitbook/assets/image%20%28272%29.png)
 

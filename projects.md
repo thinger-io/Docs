@@ -61,7 +61,7 @@ The same user account can participate in many projects, that's why the thinger c
 
 This tool allows moving between different projects, displaying only the devices associated with each one. It also allows disabling the projects filtering functions, allowing to show every resource created into the user account, i.e. other users' resources will no longer be visible.
 
-![project &quot;ExampleProject&quot; selected](.gitbook/assets/image%20%28386%29.png)
+![project &quot;ExampleProject&quot; selected](.gitbook/assets/image%20%28387%29.png)
 
 ### Adding project resources
 
@@ -79,7 +79,7 @@ The resources are associated with the project in which they were created. So if 
 
 The lists allow the administration of resources to associate them to projects, asset types or groups. It is possible to assign previously created resources to a new project by selecting it in the list and pressing the black `Set Projects` button that will be shown on the top of the list: 
 
-![](.gitbook/assets/image%20%28388%29.png)
+![](.gitbook/assets/image%20%28389%29.png)
 
 ## Working with projects
 
