@@ -61,15 +61,15 @@ The same user account can participate in many projects, that's why the thinger c
 
 This tool allows moving between different projects, displaying only the devices associated with each one. It also allows disabling the projects filtering functions, allowing to show every resource created into the user account, i.e. other users' resources will no longer be visible.
 
-
+![project &quot;ExampleProject&quot; selected](.gitbook/assets/image%20%28386%29.png)
 
 ### Adding project resources
 
-Once the project is created we can start to associate resources such as device profiles, data buckets or representation dashboards, allowing them to be shared with other developers of the same project. This process can be executed during creation of each resources or after that, just followin the instructions below:
+Once the project is created we can start to associate resources such as device profiles, data buckets or representation dashboards, allowing them to be shared with other developers of the same project. There are two different ways to attach resources to a specific project:
 
-#### Creating new project resources
+#### Attach when creating new resources
 
-The process is quite simple, los recursos quedan asociados al proyecto activo en el momento de su creación, so just openning the project selection menú and selecting a project will begin to associate resources as they are created:
+The resources are associated with the project in which they were created. So if a project is selected during the creation of any resource, this new profile will be automatically attached to the project:
 
 1. Enabling projects as shown in the section above 
 2. Selecting a project from the drop-down list
@@ -77,13 +77,17 @@ The process is quite simple, los recursos quedan asociados al proyecto activo en
 
 #### Aggregating existent resources to a new project
 
+The lists allow the administration of resources to associate them to projects, asset types or groups. It is possible to assign previously created resources to a new project by selecting it in the list and pressing the black `Set Projects` button that will be shown on the top of the list: 
 
+![](.gitbook/assets/image%20%28388%29.png)
 
 ## Working with projects
 
 #### Shared resources identification
 
-~~~~
+The "project" column of the resources list \(devices, dashboards, endpoints or data buckets\) allows to identify the project in which the resource has been atached. Those items that appear in the lists with a user icon together with the name are resources shared by another user. 
+
+The image below shows some devices, most of them are shared devices from other accounts, and two of them have been created by their own account.
 
 ![](.gitbook/assets/image%20%28349%29.png)
 

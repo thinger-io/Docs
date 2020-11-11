@@ -420,11 +420,11 @@ Note that the template system only is able to show data from different devices w
 
 To enable the Dashboard Template feature just switch the edition mode on, open the settings menu and click into the "template" option of "layout" section. Then, a new top bar will show the devices and data buckets that are being currently displayed:
 
-![](../.gitbook/assets/image%20%28387%29.png)
+![](../.gitbook/assets/image%20%28389%29.png)
 
 Clicking over each data source box allows to change it with another resource from the devices or dashboard lists. 
 
-![](../.gitbook/assets/image%20%28388%29.png)
+![](../.gitbook/assets/image%20%28390%29.png)
 
 ### Share Dashboard
 
