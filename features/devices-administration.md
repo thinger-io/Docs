@@ -200,6 +200,8 @@ Properties declarations and modifications are made by means of a special context
 
 It is also possible to create, retrieve and modify data properties from devices, however, at this point we must differentiate between HTTP devices or [thinger.io](http://thinger.io/) software client devices, which will use `set_property()` or `get_propery()` commands as shown in the examples below:
 
+* **Setting a property**
+
 ```text
                     /*set property value*/
 void loop(){
@@ -217,6 +219,8 @@ if(event){    //must be flow controlled
     }
 }
 ```
+
+* **Reading a property**
 
 Where "location" is the property\_ID, "data" the PSON to be sent, and the boolean \(true/false\) to get writing confirmation. 
 
@@ -240,10 +244,10 @@ thing.get_property("My_Property", data);
 ```
 
 {% hint style="info" %}
-More details about property codification functions at the "codification" section of this documentation.
+More details about property codification functions at the **"**[**codification**](../quick-sart/coding-guide/)**"** section of this documentation.
 {% endhint %}
 
-Using HTTP devices it's also the possible to interact with properties through callback configuration submenu tools.
+Using HTTP devices it's also possible to interact with properties through callback configuration submenu tools.
 
 ![](../.gitbook/assets/httpgetsetproperty.PNG)
 
