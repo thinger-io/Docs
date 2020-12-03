@@ -63,6 +63,12 @@ This tool allows moving between different projects, displaying only the devices 
 
 ![project &quot;ExampleProject&quot; selected](.gitbook/assets/image%20%28387%29.png)
 
+{% hint style="warning" %}
+NOTE that by default, the member does not log in with any project opened, so it is necessary to select after the first login \(we are working on it, so a default project can be established for members\)
+{% endhint %}
+
+### 
+
 ### Adding project resources
 
 Once the project is created we can start to associate resources such as device profiles, data buckets or representation dashboards, allowing them to be shared with other developers of the same project. There are two different ways to attach resources to a specific project:
