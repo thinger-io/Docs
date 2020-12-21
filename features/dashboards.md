@@ -315,9 +315,9 @@ For more complex developments over the HTML Widget where several source code fil
 This is work in progress, we will add more documentation soon. Sorry for the inconveniences 
 {% endhint %}
 
-## Add a Control Widget
+## Control Widgets
 
-In Thinger.io it is possible to not just display information in the dashboard, but also control devices in real-time. In this section are described some available widgets that can be used to control connected devices.
+Thinger.io has been provided with some widgets that allow controlling device functions, sending data or requests in real-time when the devices have been programmed with [**Input Resources**](https://docs.thinger.io/quick-sart/coding-guide#input-resources). This widgets can be also used to set the value of device properties, allowing also to set the response data that will be sent to Sigfox, HTTP, or Lora devices.
 
 ### On/Off State
 
