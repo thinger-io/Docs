@@ -2,25 +2,19 @@
 
 ## Subscribing and Deploying a Cloud Instance
 
-This section describres the proccess to deploy a private Thinger.io Cloud instance within minutes by just accessing the [**Pricing Page**](https://pricing.thinger.io) \(Cloud Pricing section\) in the "PRICING" link from our [Web Home](https://thinger.io). Just follow the next steps:
+This section describes the process to deploy a private Thinger.io Cloud instance within minutes by just accessing the [**Pricing Page**](https://pricing.thinger.io) \(Cloud Pricing section\) in the "PRICING" link from our [Web Home](https://thinger.io). This pricing is also a deployment system that allows to setup a private IoT Server instance within minutes, just following the next three steps: 
 
-### 1. Select a cloud provider
+### 1. Select a license
 
-Private instances can be deployed in different cloud providers like Digital Ocean, Amazon Web Services, Google Cloud, or Azure in different availability zones. In that order, if our customer has already been using any of these providers for their company cloud infrastructure, it is possible to run Thinger.io Private server in the same location. 
+Private cloud instances can be deployed with different licenses, depending on the project requirements, like host performance, bandwidth; or platform features like rebrands, custom domains, additional support,  plugins, etc. Once the cloud provider is selected, then it is necessary to select the desired license, as shown in the image below:
 
-![Cloud provider selection between Digital Ocean, Amazon Web Services, Google Cloud and Azure](../../.gitbook/assets/image%20%28173%29.png)
+![](../../.gitbook/assets/image%20%28392%29.png)
 
-### 2. Select a license
+This pricing includes the software license and all cloud expenses. Note that it is possible to select a monthly or yearly license with a great discount. 
 
-Private cloud instances can be deployed with different licenses, depending on the project requriements, like host performance, bandwidth; or platform features like rebrands, custom domains, additional suppport,  plugins, etc. Once the cloud provider is selected, then it is necessary to select required license, as shown in the image below:
+The next table shows all the different features provided by each license as well as a desirable purpose specification. It is possible to select one license and change it in the future using the [subscription management portal](https://thinger.chargebeeportal.com). 
 
-![](../../.gitbook/assets/image%20%28126%29.png)
-
-This pricing includes the software license and all cloud expenses. Note that it is possible to select monthly or yearly license with a great discount. 
-
-The next table shows all different features that are provided by each license as well as a desirable purpose specification. It is possible to select one license and change it in the future using the [subscription management portal](https://thinger.chargebeeportal.com). 
-
-|  | **MAKER** | **GROW** | **STARTUP** | **BUSINESS** |
+|  | **SMALL** | **MEDIUM** | **LARGE** | **UNLIMITED** |
 | :--- | :--- | :--- | :--- | :--- |
 | **Devices** | Unlimited | Unlimited | Unlimited | Unlimited |
 | **Plugins** | 1 | 3 | 6 | Unlimited |
@@ -31,7 +25,7 @@ The next table shows all different features that are provided by each license as
 | **HA Cluster** | \*\*\*\* |  |  |  |
 | **Recommended network size** | Individual projects | &lt;10 user accounts. | 10 to 50 accounts |  &gt;50 user accounts |
 
-### 3.  Configure license
+### 2.  Configure license
 
 Once the license has been selected, it is possible to customize the service with some options like additional users, support, custom domains, brands, etc. These options appers after selecting a plan, like shown in the figure below:
 
@@ -47,7 +41,7 @@ These options are described in more detail in the following:
 * **Custom Domains**: It is the amount of different web domains that can be redirected to the same Private Instance. The instance will automatically provision and renew SSL certificates to support the new defined domains. Domains are required for different brands, as they are associated to the domain name.
 * **Custom Brands**: It is the amount of different console brands that can be created over the same instance. In each brand it is possible to customize some accent colors, logos, copyrights, contact emails, title, etc. Notice that each brand requires a custom domain, as the customization is done for each domain name.
 
-### 4. Checkout and payment options
+### 3. Checkout and payment options
 
 After configuring the selected license, the checkout process is really simple, just click on the "Deploy Instance" button, and wait for the checkout pop-up. In the new form, it is necessary to introduce your billing email \(it can be different from the admin email\) where the invoices will be sent: 
 
@@ -57,11 +51,11 @@ After introducing the billing email, it is necessary to set the billing address.
 
 ![Billing address configuration](../../.gitbook/assets/image%20%28114%29.png)
 
-Finally, it is necessary to select the payment method between Credit Card or Direct Debit, that allows the domiciliation of the payment with SEPA tansferences. Once the payment process is finished, Thinger.io customer management system will automatically configure the cloud host and deploy the private server instance. 
+Finally, it is necessary to select the payment method between Credit Card or Direct Debit, which allows the domiciliation of the payment with SEPA transferences. Once the payment process is finished, Thinger.io customer management system will automatically configure the cloud host and deploy the private server instance. 
 
 ## Steps After Cloud Deployment
 
-The deployment process delays few minutes. As soon as it has been completed, a confirmation email will be sent to the `Admin Email`configured in the checkout process, meaning that the server is completely ready to be used. To start working with it, just follow the next steps:
+The deployment process delays a few minutes. As soon as it has been completed, a confirmation email will be sent to the `Admin Email`configured in the checkout process, meaning that the server is completely ready to be used. To start working with it, just follow the next steps:
 
 ### First Login
 

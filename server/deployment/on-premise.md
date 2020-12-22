@@ -6,27 +6,24 @@ This section describes the process to deploy a private Thinger.io On-premise ins
 
 ### 1. Select the right licence
 
-On-premise instances can be deployed with different licenses, depending on the project requirements, mainly in terms of platform features like rebrands, custom domains, additional support, plugins, etc. On-premise licenses starts from free during first month with the Maker license \(4,95€/mo after\), which is limited in some advanced features, most notably, custom domains with automatic SSL support, rebranding, plugins, multiple server accounts, multi-threading support, or extend the server capabilities with plugins like Node-Red. So, the first step is to select the required license, as shown in the image below:
+On-premise instances can be deployed with different licenses, depending on the project requirements, mainly in terms of platform features like rebrands, custom domains, additional support, plugins, etc. On-premise licenses start from free during first month with the Maker license \(4,95€/mo after\), which is limited in some advanced features, most notably, custom domains with automatic SSL support, rebranding, plugins, multiple server accounts, multi-threading support, or extend the server capabilities with plugins like Node-Red. So, the first step is to select the required license from the different ones that are offered in our pricing page.
 
-![](../../.gitbook/assets/image%20%28146%29.png)
-
-This pricing includes the software license to deploy an on-premise instance. Note that it is possible to select monthly or yearly license with a great discount. 
+All these subscriptions include the software license to deploy an on-premise instance on the host of your preference. Note that it is possible to select monthly or yearly license with a great discount. 
 
 The next table shows the main different features that are provided by each license as well as a desirable purpose specification. It is possible to select one license and change it in the future using the [subscription management portal](https://thinger.chargebeeportal.com). 
 
-|  | **MAKER** | **GROW** | **STARTUP** | **BUSINESS** |
+|  | SMALL | MEDIUM | **LARGE** | **UNLIMITED** |
 | :--- | :--- | :--- | :--- | :--- |
-| **Devices/Assets** | 10 profiles | Unlimited | Unlimited | Unlimited |
-| **Performance** | enough\* | Unlimited | Unlimited | Unlimited |
-| **Plugins** |  | 3 | 6 | Unlimited |
-| **Rebranding** | \*\*\*\* | ✓ | ✓ | Included |
-| **Custom Domain/TLS** | \*\*\*\* | ✓ | ✓ | Included |
-| **Multiple Account** | \*\*\*\* | ✓ | ✓ | Included |
-| **Extended support** | \*\*\*\* | ✓ | ✓ | ✓ |
-| **HA Cluster** | \*\*\*\* |  |  |  |
-| **Recommended network size** | Individual projects | &lt;10 user accounts. | 10 to 50 accounts |  &gt;50 user accounts |
-
-\*Single thread execution and limited memory allocation setup provides enough performance to manage common individual user IoT network requirements. 
+| **Devices/Assets** | Unlimited | Unlimited | Unlimited | Unlimited |
+| **Performance** | Unlimited | Unlimited | Unlimited | Unlimited |
+| **Plugins** | 1 | 3 | 5 | Unlimited |
+| **Rebranding** | \*\*\*\* | 1 | 5 | Unlimited |
+| **Custom Domain/TLS** | \*\*\*\* | 1 | 5 | Unlimited |
+| **Developer accounts** | \*\*\*\* | 5 | ✓ | Unlimited |
+| **Guest accounts** |  | Unlimited | Unlimited | Unlimited |
+| **Extended support** | \*\*\*\* | ✓ | ✓ | Available |
+| **HA Cluster** | \*\*\*\* |  |  | Available |
+| **Recommended use**  | Individual projects, testing | Business B2B or B2B2C IoT product  | Consultancies with multiple projects | Companies without limits |
 
 ### 2.  Configure license
 
