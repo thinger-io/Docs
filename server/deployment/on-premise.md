@@ -6,7 +6,7 @@ Thinger.io IoT server can be deployed on any Linux and Docker system equipped ho
 
 ### 1. Select the right licence
 
-On-premise instances can be deployed with different licenses, depending on the project requirements, mainly in terms of platform features like rebrands, custom domains, additional support, plugins, etc. On-premise licenses start from free during first month with the Maker license \(4,95€/mo after\), which is limited in some advanced features, most notably, custom domains with automatic SSL support, rebranding, plugins, multiple server accounts, multi-threading support, or extend the server capabilities with plugins like Node-Red. So, the first step is to select the required license from the different ones that are offered in our pricing page.
+On-premise instances can be deployed with different licenses, depending on the project requirements, mainly in terms of platform features like rebrands, custom domains, additional support, plugins, etc. On-premise licenses start from free during the first month with the Maker license \(4,95€/mo after\), which is limited in some advanced features, most notably, custom domains with automatic SSL support, rebranding, plugins, multiple server accounts, multi-threading support, or extend the server capabilities with plugins like Node-Red. So, the first step is to select the required license from the different ones that are offered in our pricing page.
 
 All these subscriptions include the software license to deploy an on-premise instance on the host of your preference. Note that it is possible to select monthly or yearly license with a great discount. 
 
@@ -27,7 +27,7 @@ The next table shows the main different features that are provided by each licen
 
 ### 2.  Configure license
 
-Once the license has been selected, it is possible to customize the service with some options like additional users, support, custom domains, brands, etc. These options appears after selecting any plan, like shown in the figure below:
+Once the license has been selected, it is possible to customize the service with some options like additional users, support, custom domains, brands, etc. These options appear after selecting any plan as shown in the figure below:
 
 ![Instance license preferences](../../.gitbook/assets/image%20%28124%29.png)
 
@@ -53,7 +53,7 @@ After introducing the billing email, it is necessary to set the billing address.
 
 ![Billing address](../../.gitbook/assets/image%20%28114%29.png)
 
-Finally, it is necessary to select the payment method between Credit Card or Direct Debit \(if subscribed to a paid plan\), that allows the domiciliation of the payment with SEPA tansferences. Once the payment process is finished, Thinger.io customer management system will automatically generate a server license that will be emailed to the admin email.
+Finally, it is necessary to select the payment method between Credit Card or Direct Debit \(if subscribed to a paid plan\), that allows the domiciliation of the payment with SEPA transferences. Once the payment process is finished, Thinger.io customer management system will automatically generate a server license that will be emailed to the admin email.
 
 ### 4.  On-premise install
 
@@ -275,7 +275,7 @@ eee1b9479368        pyouroboros/ouroboros   "ouroboros"              47 minutes 
 Then, you can access your on-premise instance by pointing your browser to your host IP address.
 
 {% hint style="info" %}
-The latest versions of Ubuntu comes with ufw \(the default firewall configuration tool for Ubuntu\). It may be blocking Thinger.io ports by default. Configure it properly or disable it \(not recommended\)  with `sudo ufw disable`
+The latest versions of Ubuntu come with `UFW` \(the default firewall configuration tool for Ubuntu\). It may be blocking Thinger.io ports by default. Configure it properly or disable it \(not recommended\)  with `sudo ufw disable`
 {% endhint %}
 
 
