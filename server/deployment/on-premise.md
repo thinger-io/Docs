@@ -2,7 +2,7 @@
 
 ## Subscribing and Deploying On-premise Instances
 
-This section describes the process to deploy a private Thinger.io On-premise instance within minutes by just accessing the [**Pricing Page**](https://pricing.thinger.io) \(On-premise section\) in the "PRICING" link from our [Web Home](https://thinger.io). Just follow the next steps:
+Thinger.io IoT server can be deployed on any Linux and Docker system equipped host if the project requirements require it. This way the user has full control over the entire infrastructure. This section describes the process to deploy a private Thinger.io On-premise instance within minutes by just accessing the [**Pricing Page**](https://pricing.thinger.io) \(On-premise section\) in the "PRICING" link from our [Web Home](https://thinger.io). Just follow the next steps:
 
 ### 1. Select the right licence
 
