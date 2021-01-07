@@ -20,7 +20,7 @@ Once the standard plugin deployment process has been done \([as explained here](
 
 ### First Login
 
-When the plugin is newly installed, the first login should be done as login credentials your Thinger.io account username and "admin" into the password field. Once the first login occurs the system will ask to change the password to put a custom one. After this, it is possible to see the Grafana workspace with its different options. 
+When the plugin is newly installed, the first login should be done using your Thinger.io account username and the password "**admin**". Once the first login occurs the system will ask to change the password to put a custom one. After this, it is possible to see the Grafana workspace with its different options. 
 
 ![](../.gitbook/assets/image%20%28267%29.png)
 
@@ -53,7 +53,7 @@ Finally, press the "save & test" button and wait for the connection confirmation
 
 Once the data source has been configured, the most common way to start working with Grafana is to create a new dashboard for data representation. To do this, click on the + button in the Grafana main menu and select "new dashboard". This will open a new empty dashboard ready to be configured with a custom layout and representation pannels by clicking on the button "+Add new pannel", that will open the panel configuration context, which is organized in two sections:
 
-* **Panel Configuration**: On this step, we can choose the kind of graph to be used in the widget, for example time series charts, tatalalalala Es interesante que las explores todas las opciones que ofrece este menú, tanto en tipos de visualización como en otras configuraciones del panel que permiten elegir la leyenda, los ejes, etc. 
+* **Panel Configuration**: On this step, we can choose the kind of graph to be used in the widget, for example time series charts, It is interesting to you explore all the options offered by this menu, both in display types and in other panel configurations that allow you to choose the legend, the axes, etc.
 
 ![](../.gitbook/assets/image%20%28293%29.png)
 
@@ -66,7 +66,7 @@ Once the data source has been configured, the most common way to start working w
 
 ### Adding new widget types
 
-Grafana is a very flexible tool, users can add new panels as they go, retrieving it from different repositories. These panels are developed by the Grafana team but also by community contributors, allowing this technology to grow very quickly thanks to the group effort. The process to add new elements in the Grafana Plugin of Thigner.io is through the command console of the docker container in which the program is executed locally. In it, a command is introduced that allows you to quickly download and install components as explained below:
+Grafana is a very flexible tool, users can add new panels as they go, retrieving them from different repositories. These panels are developed by the Grafana team but also by community contributors, allowing this technology to grow very quickly thanks to the group effort. The process to add new elements in the Grafana Plugin of Thigner.io is through the command console of the docker container in which the program is executed locally. In it, a command is introduced that allows you to quickly download and install components as explained below:
 
 1. The first step is to find the new element to add, the following link leads to the official Grafana plugin repository: [https://grafana.com/grafana/plugins](https://grafana.com/grafana/plugins)  
 2. Obtain the CLI installation command of any new panel or plugin that wants to be added.    
