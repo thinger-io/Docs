@@ -58,6 +58,7 @@ Thinger.io is a platform in constant growth, our development team is continuousl
 * [ ] HTTP devices Integration plugin
 * [ ] OPC-UA integration Plugin
 * [ ] Python Plugin
+* [ ] Reporting tool
 * [ ] ARM-64 server compilation
 * [ ] ESP32 & ESP8266 OTA
 * [ ] Custom plugins support
