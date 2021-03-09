@@ -47,6 +47,8 @@ The second part of the integration is configure any device or program as a clien
 * **Password**: Must be the same key that was placed on Thinger.io "Device Credentials" parameter
 * **MQTT version**: Currently Thinger.io supports 3.1 or 3.1.1 versions of the protocol
 
+![example using MQTT.fx client](../../.gitbook/assets/image%20%28395%29.png)
+
 {% hint style="info" %}
 It is recommended to use SSL/TLS communication using the port 8883
 {% endhint %}
