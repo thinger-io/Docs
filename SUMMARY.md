@@ -30,6 +30,7 @@
 ---
 
 * [PLUGINS MARKETPLACE](plugins/README.md)
+  * [The Things Stack](plugins/the-things-stack.md)
   * [The Things Network Plugin](plugins/the-things-network.md)
   * [Sigfox Plugin](plugins/sigfox.md)
   * [Node-RED Plugin](plugins/node-red.md)
