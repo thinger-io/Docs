@@ -1,15 +1,19 @@
 ---
-description: Plugin for automatically integrating TTN devices in Thinger.io platform.
+description: Plugin for improve TTN and Thinger.io platform integration.
 ---
 
 # The Things Network Plugin
 
 ![](../.gitbook/assets/image%20%284%29.png)
 
-The Things Network \(TTN\) plugin is a solution for using The Things Network HTTP integration in an optimized way, providing features like both uplink and downlink processing, or automatic device and data storage provisioning, so it is not required to configure TTN devices in both places. 
+The Things Network is a LoRaWAN Network solution that simplifies the deployment of large IoT applications over a collaborative Internet of Things network that spans many countries around the world. From thinger.io we wanted to offer an improved integration to TTN users by providing easy to configure tools for the storage, analyze and show devices data in a simple way. This plugin allows to retrieve TTN webhook messages to enhance the integration with some intereting features such as: 
+
+* Uplink data payload processing 
+* Downlink data payload processing
+* automatic device and data buckets provisioning. 
 
 {% hint style="info" %}
-[Note: Plugins are only available for premium Thinger.io servers. Check **this link** to create your own instance within minutes](https://pricing.thinger.io)
+[Note: Plugins are only available for premium Thinger.io servers. Check **this link** to create your own privated IoT instance within minutes](https://pricing.thinger.io)
 {% endhint %}
 
 ## Plugin Features
