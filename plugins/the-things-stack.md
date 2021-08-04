@@ -195,9 +195,5 @@ To create a new downlink process make sure to follow the next steps:
 3[- Create an API Key and introduce it in the TTN Stack Webhook configuration](https://docs.thinger.io/plugins/the-things-stack#downlink-settings)  
 4- Modify the value of the property to launch the execution of the downlink process.  
 
-
-
-
-
-\*\*\*\*
+After this, the plugin will execute the payload processing and send it in response of the next TTN API request to your server. It is possible to follow the trace of this communication by accessing the plugin's log going to Plugins&gt;Plugin profile&gt;log.
 

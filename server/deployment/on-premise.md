@@ -2,58 +2,28 @@
 
 ## Subscribing and Deploying On-premise Instances
 
-Thinger.io IoT server can be deployed on any Linux and Docker system equipped host if the project requirements require it. This way the user has full control over the entire infrastructure. This section describes the process to deploy a private Thinger.io On-premise instance within minutes by just accessing the [**Pricing Page**](https://pricing.thinger.io) \(On-premise section\) in the "PRICING" link from our [Web Home](https://thinger.io). Just follow the next steps:
+Thinger.io IoT instances can be deployed on-premise over any kind of cloud or local host, that way the user will have full control over the hole infrastructure. This section describes how to obtain an On-premise license and how to deploy a private Thinger.io On-premise instance within minutes. Just follow the next steps:
 
-### 1. Select the right licence
+### 1. Select the right license
 
-On-premise instances can be deployed with different licenses, depending on the project requirements, mainly in terms of platform features like rebrands, custom domains, additional support, plugins, etc. On-premise licenses start from free during the first month with the Maker license \(4,95€/mo after\), which is limited in some advanced features, most notably, custom domains with automatic SSL support, rebranding, plugins, multiple server accounts, multi-threading support, or extend the server capabilities with plugins like Node-Red. So, the first step is to select the required license from the different ones that are offered in our pricing page.
+On-premise instances can be deployed with different licenses, depending on the project requirements, mainly in terms of platform features like rebrands, custom domains, additional support, plugins, etc. To obtain your license code**,** [**contact Thinger.io sales team using this link,**](https://thinger.io/request-a-demo) ****we will help you to select the best option according to your project requirements. 
 
-All these subscriptions include the software license to deploy an on-premise instance on the host of your preference. Note that it is possible to select monthly or yearly license with a great discount. 
+|  | MEDIUM | **LARGE** | **UNLIMITED** |
+| :--- | :--- | :--- | :--- |
+| **Devices/Assets** | Unlimited | Unlimited | Unlimited |
+| **Performance** | Unlimited | Unlimited | Unlimited |
+| **Plugins** | 3 | 5 | Unlimited |
+| **Rebranding** | 1 | 5 | Unlimited |
+| **Custom Domain/TLS** | 1 | 5 | Unlimited |
+| **Developer accounts** | 5 | ✓ | Unlimited |
+| **Guest accounts** | Unlimited | Unlimited | Unlimited |
+| **Extended support** | ✓ | ✓ | Available |
+| **HA Cluster** |  |  | Available |
+| **Recommended use**  | Business B2B or B2B2C IoT product  | Consultancies with multiple projects | Companies without limits |
 
-The next table shows the main different features that are provided by each license as well as a desirable purpose specification. It is possible to select one license and change it in the future using the [subscription management portal](https://thinger.chargebeeportal.com). 
+### 2.  Checkout and payment options
 
-|  | SMALL | MEDIUM | **LARGE** | **UNLIMITED** |
-| :--- | :--- | :--- | :--- | :--- |
-| **Devices/Assets** | Unlimited | Unlimited | Unlimited | Unlimited |
-| **Performance** | Unlimited | Unlimited | Unlimited | Unlimited |
-| **Plugins** | 1 | 3 | 5 | Unlimited |
-| **Rebranding** | \*\*\*\* | 1 | 5 | Unlimited |
-| **Custom Domain/TLS** | \*\*\*\* | 1 | 5 | Unlimited |
-| **Developer accounts** | \*\*\*\* | 5 | ✓ | Unlimited |
-| **Guest accounts** |  | Unlimited | Unlimited | Unlimited |
-| **Extended support** | \*\*\*\* | ✓ | ✓ | Available |
-| **HA Cluster** | \*\*\*\* |  |  | Available |
-| **Recommended use**  | Individual projects, testing | Business B2B or B2B2C IoT product  | Consultancies with multiple projects | Companies without limits |
-
-### 2.  Configure license
-
-Once the license has been selected, it is possible to customize the service with some options like additional users, support, custom domains, brands, etc. These options appear after selecting any plan as shown in the figure below:
-
-![Instance license preferences](../../.gitbook/assets/image%20%28124%29.png)
-
-These options are described in more detail in the following:
-
-* **Admin Email**: This is the email address that must be used when creating the Thinger.io account in the private instance deployed. It will be the main account with admin privileges, allowing to create \(if contracted\) new users, domains, brands, etc.
-* **Additional users**: This option allows to increase the amount of accounts \(in addition to the admin account\) in order to allow other users to log-in to your instance. It is possible to add as many accounts as required, however, a large user base will require a better host to support their databases, plugins, etc. 
-* **Extended Support**: This option is recommended in order to obtain Thinger.io engineers development support with a 24-48h response time. All accounts can use the [community discussion](https://community.thinger.io) forum to obtain support from other community developers.
-* **Custom Domains**: It is the amount of different web domains that can be redirected to the same Private Instance. The instance will automatically provision and renew SSL certificates to support the new defined domains. Domains are required for different brands, as they are associated to the domain name.
-* **Custom Brands**: It is the amount of different console brands that can be created over the same instance. In each brand it is possible to customize some accent colors, logos, copyrights, contact emails, title, etc. Notice that each brand requires a custom domain, as the customization is done for each domain name.
-
-{% hint style="warning" %}
-Note that Maker Plan is a limited freemium service that is not configurable and do not allow adding extended support. 
-{% endhint %}
-
-### 3.  Checkout and payment options
-
-After configuring the selected license, the checkout process is really simple, just click on the "Deploy Instance" button, and wait for the checkout pop-up. In the new form, it is necessary to introduce your billing email \(it can be different from the admin email\) where the invoices \(if subscribed to a paid plan\) will be sent:
-
-![Billing email](../../.gitbook/assets/image%20%28238%29.png)
-
-After introducing the billing email, it is necessary to set the billing address. It is possible to set a VAT number if you are a registered company from the European Union in order to calculate the right taxes and build the invoice.
-
-![Billing address](../../.gitbook/assets/image%20%28114%29.png)
-
-Finally, it is necessary to select the payment method between Credit Card or Direct Debit \(if subscribed to a paid plan\), that allows the domiciliation of the payment with SEPA transferences. Once the payment process is finished, Thinger.io customer management system will automatically generate a server license that will be emailed to the admin email.
+After contacting our team you will receive an email with the link to set up the payment method using our subscription management tool that is always available [**on this link.**](https://thinger.chargebeeportal.com/portal/v2/login?forward=portal_main) in order to make modifications to the subscription or the payment method.
 
 ### 4.  On-premise install
 
