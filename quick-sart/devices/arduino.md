@@ -471,7 +471,7 @@ This devices can be directly programmed from the Arduino IDE by including the ES
 
 ![](../../.gitbook/assets/esp32_preferences.PNG)
 
-Next, go to the Boards manager to install the ESP8266 package. Search for the esp8266 and install the package **esp8266 by ESP8266 Community**
+Next, go to the Boards manager to install the ESP32 package. Search for the esp32 and install the package **esp32 by Espressif Systems**
 
 ![](../../.gitbook/assets/esp32_boardsmanager.PNG)
 
