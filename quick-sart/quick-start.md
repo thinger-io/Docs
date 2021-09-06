@@ -6,7 +6,7 @@ description: Connecting a IoT device in minutes
 
 ## Quick Start Guide <a id="quick-start-guide"></a>
 
-To start working with Thinger.io just [**create a free account in our cloud platform**](https://console.thinger.io/#/signup) and follow the next steps to configure and connect your first IoT device.
+To start working with Thinger.io just [**create a free account in our cloud platform**](https://console.thinger.io/#!/signup) and follow the next steps to configure and connect your first IoT device.
 
 ### 1. Create Device <a id="1-create-device"></a>
 
