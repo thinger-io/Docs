@@ -1,6 +1,6 @@
 # FILE STORAGE
 
-Thinger.io provides a flexible cloud storage system that allows uploading files to the IoT server in order to provide support to other platform features such as the HTML Widget or the OTA System. The information will be stored in a non-volatile memory of the server host, so it is important to take care about the size of the files, especially when the instance is shared with other user accounts, to prevent server local storage from becoming saturated.
+Thinger.io provides a flexible cloud storage system that allows uploading files to the IoT server in order to provide support to other platform features such as the HTML Widget or the OTA System. The information will be stored in a non-volatile memory of the server host
 
 {% hint style="success" %}
 Note that this feature is only available for ****[**private instances**](server/deployment/), as it requires cloud storage system. 

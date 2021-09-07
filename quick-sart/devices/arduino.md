@@ -1,14 +1,38 @@
-# ARDUINO
+---
+description: Connecting Arduino Compatible devices to IoT
+---
+
+# ARDUINO COMPATIBLE
 
 ## Overview
 
-This documentation is related with the Arduino client library version of the Thinger.io platform. With this library you will be able to connect almost any Arduino board using Ethernet, Wifi, GSM, or other supported boards like ESP8266, NodeMCU, and TI CC3200.
+This documentation is related with the [Arduino Client library](https://github.com/thinger-io/Arduino-Library) version of the Thinger.io platform. With this library you will be able to connect almost any Arduino board using Ethernet, Wifi, GSM, or other supported boards like ESP8266, ESP32, and TI CC3200.
 
-The client library allows connecting your IoT devices to the [Thinger.io](http://thinger.io) cloud platform. This is a library specifically designed for the Arduino IDE, so you can easily program your devices and connect them within minutes by creating `Input` and `Output` resources. Ones the data is online it is possible to show in customizable dashboards, store in data buckets or send to third parties via endpoint.
+The client library allows connecting your IoT devices to the [Thinger.io](http://thinger.io) cloud platform. This is a library specifically designed for the Arduino IDE, or PlatformIO, so you can easily program your devices and connect them within minutes by creating `Input` and `Output` resources. Once the data is online it is possible to show it in customizable dashboards, store in data buckets or send to another cloud services via endpoints.
 
 ![](../../.gitbook/assets/thingerio-architecture.png)
 
-This library supports multiple network interfaces and boards, like Ethernet Shield, Wifi Shield, and GSM. It also supports other boards like ESP8266 \(or NodeMCU\), Texas Instruments CC3200 Launchpad, and Adafruit CC3000 board. It requires a modern Arduino IDE version, starting at 1.6.3.
+This library supports multiple network interfaces and boards:
+
+* Espressif ESP8266 \(OTA Support\)
+* Espressif ESP32 \(OTA Support\)
+* Arduino Nano RP2040 Connect \(OTA Support\)
+* Arduino Nano 33 IoT \(OTA Support\)
+* Arduino Portenta H7 \(OTA Support\)
+* Arduino MKR 1010 \(OTA Support\)
+* Arduino MKR NB 1500 \(OTA Support\)
+* Arduino MKR 1000
+* Arduino GSM1400 \(MKRGSM\)
+* Arduino + Ethernet
+* Arduino + Wifi
+* Arduino + Adafruit CC3000
+* Arduino + ENC28J60
+* Arduino Yun
+* Arduino + GPRS Shield
+* Arduino + TinyGSM library for GSM modems using GPRS \(SIM800, SIM900, AI-THINKER A6, A6C, A7, Neoway M590\)
+* Arduino + ESP8266 as WiFi Modem via AT commands \(using TinyGSM library\)
+* Texas Instruments CC3200
+* SeeedStudio LinkIt ONE \(Both GPRS and WiFi\)
 
 ## Installation
 
@@ -20,7 +44,7 @@ If you do not have the Arduino IDE installed yet, then it is a good moment to st
 
 It is required a modern version of Arduino supporting `Library Manager` and some other features. Please install a version starting form **1.6.3** from the official Arduino download page. This step is not required if you already have a modern version.
 
-[Download Arduino IDE &gt;](https://www.arduino.cc/en/Main/Software)
+[Download Arduino IDE](https://www.arduino.cc/en/Main/Software)
 
 There are two ways of installing the library. The preferred way is by using the Arduino `Library Manager`, which simplifies searching and installing new libraries. It also supports updating libraries when new versions are released. So use this method when possible. The other way to install the library is by using the traditional method of download and import the `zip` library.
 
@@ -28,11 +52,9 @@ There are two ways of installing the library. The preferred way is by using the 
 
 The most easy way to install new libraries is by using the `Library Manager` available in the Arduino IDE. For installing the thinger.io library please follow the following steps:
 
-Open the **Library Manager**
-
-![](https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/30a5f56c8917f8a26b03efb2438bfa444d531b2f.png)
-
 > Open the **Library Manager** in the Arduino menu in `Sketch` &gt; `Include Library` &gt; `Manage Libraries`
+
+![Thinger.io Install over Arduino Library Manager](../../.gitbook/assets/image%20%28413%29.png)
 
 **Search** and install the thinger.io library
 

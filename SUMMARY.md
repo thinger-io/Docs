@@ -5,17 +5,18 @@
 ## INTRODUCTION <a id="quick-sart"></a>
 
 * [QUICK START](quick-sart/quick-start.md)
-* [COMPATIBLE DEVICES](quick-sart/devices/README.md)
-  * [ARDUINO](quick-sart/devices/arduino.md)
+* [DEVICES](quick-sart/devices/README.md)
+  * [ARDUINO COMPATIBLE](quick-sart/devices/arduino.md)
   * [LINUX / RASPBERRY PI](quick-sart/devices/linux.md)
   * [SIGFOX](quick-sart/devices/sigfox.md)
+  * [THE THINGS STACK](quick-sart/devices/the-things-stack.md)
   * [HTTP DEVICES](quick-sart/devices/http-devices.md)
   * [MQTT CLIENTS](quick-sart/devices/mqtt.md)
 * [CODING GUIDE](quick-sart/coding-guide/README.md)
   * [IDE Setup](quick-sart/coding-guide/ide-setup.md)
   * [Good Practices & Troubleshooting](quick-sart/coding-guide/good-practices-and-troubleshooting.md)
 
-## FEATURES
+## COMMUNITY FEATURES <a id="features"></a>
 
 * [DEVICES ADMINISTRATION](features/devices-administration.md)
 * [DATA BUCKETS](features/buckets.md)

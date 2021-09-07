@@ -4,23 +4,23 @@ description: >-
   platform.
 ---
 
-# COMPATIBLE DEVICES
+# DEVICES
 
 As there are many different IoT hardware available nowadays, this section is divided in different categories: 
 
-**Arduino compatible devices** such as Arduino MKR,  Ethernet hats + Arduino classic boards, ESP8266, NodeMCU, TI CC3200, etc. 
+**Arduino compatible devices** such as Arduino MKR,  Ethernet hats + Arduino classic boards, ESP8266, ESP32, etc. 
 
 {% page-ref page="arduino.md" %}
 
-**Linux** **devices**, including **Raspberry Pi**, Intel Edison and any other Linux computer running Linux or MacOs
+**Linux** **devices**, including **Raspberry Pi**, Intel Edison and any other Linux computer running Linux or MacOs.
 
 {% page-ref page="linux.md" %}
 
-**MQTT Devices** or software clients can also be integrated with Thinger.io's builtin MQTT broker
+**MQTT Devices** or software clients can also be integrated with Thinger.io's builtin MQTT broker.
 
 {% page-ref page="mqtt.md" %}
 
-**Low-Power Devices** or "Edge devices" such as **Sigfox**, **LoraWAN**, **TheThingsNetwork** or any other infrastructure with gateways:
+**Low-Power Devices** or "Edge devices" such as **Sigfox**, **The Things Network or TTN Stack,** or any other infrastructure with gateways:
 
 {% page-ref page="sigfox.md" %}
 
