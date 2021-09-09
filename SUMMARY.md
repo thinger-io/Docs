@@ -9,7 +9,7 @@
   * [ARDUINO COMPATIBLE](quick-sart/devices/arduino.md)
   * [LINUX / RASPBERRY PI](quick-sart/devices/linux.md)
   * [SIGFOX](quick-sart/devices/sigfox.md)
-  * [THE THINGS STACK](quick-sart/devices/the-things-stack.md)
+  * [LoRaWAN DEVICES](quick-sart/devices/the-things-stack.md)
   * [HTTP DEVICES](quick-sart/devices/http-devices.md)
   * [MQTT CLIENTS](quick-sart/devices/mqtt.md)
 * [CODING GUIDE](quick-sart/coding-guide/README.md)
