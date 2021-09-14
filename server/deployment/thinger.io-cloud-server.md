@@ -65,7 +65,7 @@ The deployment process delays a few minutes. As soon as it has been completed, a
 
 ### Device Connection
 
-When working with a private Thinger.io Cloud Instance, it is necessary to point your devices to the newly created hostname. If you are using the [Arduino](../../quick-sart/devices/arduino.md) or [Linux](../../quick-sart/devices/linux.md) client libraries, i.e., for Arduino, ESP8266, ESP32, Raspberry Pi, etc., you should add a definition on top of your code to point to your host. So, modify your sketch like this:
+When working with a private Thinger.io Cloud Instance, it is necessary to point your devices to the newly created hostname. If you are using the [Arduino](../../arduino/) or [Linux](../../linux.md) client libraries, i.e., for Arduino, ESP8266, ESP32, Raspberry Pi, etc., you should add a definition on top of your code to point to your host. So, modify your sketch like this:
 
 ```text
 #define THINGER_SERVER "acme.do.thinger.io"

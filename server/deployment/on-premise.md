@@ -262,7 +262,7 @@ To start working with your on-premise installation, just follow the next steps:
 
 ### Device Connection
 
-When working with a private Thinger.io instance, it is necessary to point your devices to the newly created server. If you are using the [Arduino](../../quick-sart/devices/arduino.md) or [Linux](../../quick-sart/devices/linux.md) client libraries, i.e., for Arduino, ESP8266, ESP32, Raspberry Pi, etc., you should add a definition on top of your code to point to your host. So, modify your sketch like this:
+When working with a private Thinger.io instance, it is necessary to point your devices to the newly created server. If you are using the [Arduino](../../arduino/) or [Linux](../../linux.md) client libraries, i.e., for Arduino, ESP8266, ESP32, Raspberry Pi, etc., you should add a definition on top of your code to point to your host. So, modify your sketch like this:
 
 ```text
 #define THINGER_SERVER "192.168.1.100"

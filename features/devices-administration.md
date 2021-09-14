@@ -40,13 +40,13 @@ Now, you can o back to your devices list, and your device should appear as disco
 
 Now you can use your new device id and the device credentials to connect the new device. Depending on your device, you will need to install the required libraries or development environment, so check out the following sections according to your device:
 
-{% page-ref page="../quick-sart/devices/arduino.md" %}
+{% page-ref page="../arduino/" %}
 
-{% page-ref page="../quick-sart/devices/linux.md" %}
+{% page-ref page="../linux.md" %}
 
 Remember that Sigfox devices does not share the concept of "connected devices", as they are by default offline devices that send information periodically. If you want to store information from these devices, please, check out the following documentation.
 
-{% page-ref page="../quick-sart/devices/sigfox.md" %}
+{% page-ref page="../lpwan/sigfox.md" %}
 
 For the following example, we will be using the Arduino IDE along with an ESP8266 device, like the NodeMCU. In this case, you can open the example code for the ESP8266, and fill the device details: your username, the device ID, and the device credentials established while creating the device. The following picture represents the relation between the code and the device created in your account.
 
@@ -244,7 +244,7 @@ thing.get_property("My_Property", data);
 ```
 
 {% hint style="info" %}
-More details about property codification functions at the **"**[**codification**](../quick-sart/coding-guide/)**"** section of this documentation.
+More details about property codification functions at the **"**[**codification**](../coding-guide/)**"** section of this documentation.
 {% endhint %}
 
 Using HTTP devices it's also possible to interact with properties through callback configuration submenu tools.

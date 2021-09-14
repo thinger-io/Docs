@@ -79,7 +79,7 @@ There are few situations that can produce the malfunction of the software client
 If a recently programmed device is showing problems to be "online" on Thinger.io Server or even is being locked, the debug function will help to identify the issue. Include the following definition in your sketch, but make sure it comes first, before any other includes \(it was reported to cause crashes on some boards otherwise\). When using Arduino framework it is necessary to enable `Serial` communication, as all the debugging information is displayed over Serial.
 
 ```text
-#define _DEBUG_
+#define THINGER_SERIAL_DEBUG
 
 #include "Thinger.h" //use the proper thinger.io library for each processor
 
@@ -177,13 +177,13 @@ When this command is included, the program will print all the communication traz
 
 If after following these instructions it was impossible to find a solution, we have created other resources that can be used in order to find help: 
 
-![](../../.gitbook/assets/image%20%28254%29.png)
+![](../.gitbook/assets/image%20%28254%29.png)
 
 ### **Community Discussion Forum**
 
 It is a forum \([**accessible here**](https://community.thinger.io)\) created to provide developers a place to share projects, knowledges and doubts with other Thinger.io users. Actually is the best way to obtain fast and free assistance to development problems because most of the doubts have probably been asked and solved before by other developers. So the **first step is to use the search bar** to find a similar post:
 
-![](../../.gitbook/assets/image%20%28323%29.png)
+![](../.gitbook/assets/image%20%28323%29.png)
 
 Making proper use of this resource means using the browser in order to find old topics related to the doubt before creating a new one, but if it is required, take in consideration:   
 
@@ -196,7 +196,7 @@ Making proper use of this resource means using the browser in order to find old 
 
 ### **Extended Support**
 
-For those professional developers that require quick assistance on development or maintenance processes,  Thinger.io privated instance licenses can be complemented  with an extended support service starting from 100$ month.   
+For those professional developers that require quick assistance on development or maintenance processes, Thinger.io private instance licenses can be complemented with an extended support service.  
   
 There is also an SLA service available for big infrastructure customers, that can be contracted separately just contacting us at info@thinger.io.
 

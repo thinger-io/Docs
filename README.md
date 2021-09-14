@@ -36,5 +36,3 @@ Thinger.io platform is formed by two main products a Backend \(which is the actu
 
 Are you ready to start creating IoT projects? [**Create here your free account**](https://console.thinger.io/#/signup) and learn below how to use all this technology.
 
-
-

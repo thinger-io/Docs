@@ -1,22 +1,45 @@
 # Table of contents
 
 * [OVERVIEW](README.md)
+* [QUICK START](quick-start.md)
+* [CONNECT A DEVICE](devices.md)
 
-## INTRODUCTION <a id="quick-sart"></a>
+## ARDUINO COMPATIBLE DEVICES <a id="arduino-compatible"></a>
 
-* [QUICK START](quick-sart/quick-start.md)
-* [DEVICES](quick-sart/devices/README.md)
-  * [ARDUINO COMPATIBLE](quick-sart/devices/arduino.md)
-  * [LINUX / RASPBERRY PI](quick-sart/devices/linux.md)
-  * [SIGFOX](quick-sart/devices/sigfox.md)
-  * [LoRaWAN DEVICES](quick-sart/devices/the-things-stack.md)
-  * [HTTP DEVICES](quick-sart/devices/http-devices.md)
-  * [MQTT CLIENTS](quick-sart/devices/mqtt.md)
-* [CODING GUIDE](quick-sart/coding-guide/README.md)
-  * [IDE Setup](quick-sart/coding-guide/ide-setup.md)
-  * [Good Practices & Troubleshooting](quick-sart/coding-guide/good-practices-and-troubleshooting.md)
+---
 
-## COMMUNITY FEATURES <a id="features"></a>
+* [OVERVIEW](overview.md)
+* [SDK SETUP](sdk-setup/README.md)
+  * [Arduino IDE](sdk-setup/arduino-ide.md)
+  * [Visual Studio Code](sdk-setup/visual-studio-code.md)
+* [DEVICES](arduino/README.md)
+  * [ESPRESSIF ESP32](arduino/espressif-esp32.md)
+  * [ESPRESSIF ESP8266](arduino/espressif-esp8266.md)
+  * [ARDUINO ETHERNET](arduino/arduino-ethernet.md)
+  * [ARDUINO WIFI](arduino/arduino-wifi.md)
+  * [ARDUINO GSM](arduino/arduino-gsm.md)
+  * [OTHER DEVICES](arduino/other-devices.md)
+* [CODING GUIDE](coding-guide/README.md)
+  * [Good Practices & Troubleshooting](coding-guide/good-practices-and-troubleshooting.md)
+* [EXTENDED FEATURES](extended-features/README.md)
+  * [OTA](extended-features/ota.md)
+  * [REMOTE CONSOLE](extended-features/remote-console.md)
+  * [REMOTE FILESYSTEM](extended-features/remote-filesystem.md)
+
+## LPWAN DEVICES <a id="lpwan"></a>
+
+* [SIGFOX](lpwan/sigfox.md)
+* [LoRaWAN DEVICES](lpwan/the-things-stack.md)
+
+## OTHER DEVICES <a id="other-clients"></a>
+
+---
+
+* [HTTP DEVICES](http-devices.md)
+* [MQTT CLIENTS](mqtt.md)
+* [LINUX / RASPBERRY PI](linux.md)
+
+## PLATFORM FEATURES <a id="features"></a>
 
 * [DEVICES ADMINISTRATION](features/devices-administration.md)
 * [DATA BUCKETS](features/buckets.md)
@@ -41,16 +64,16 @@
 * [USER ACCOUNTS](users-management.md)
 * [WHITE-LABELING](web-console-rebranding.md)
 * [CUSTOM WEB DOMAIN](web-domain-customization.md)
+* [SERVER ADMINISTRATION](server-configuration/README.md)
+  * [Server Settings](server-configuration/settings.md)
+  * [Cluster / Server Status](server-configuration/cluster-server-status.md)
+  * [Server Logs](server-configuration/server-logs.md)
 
 ## Server
 
 * [SERVER DEPLOYMENT](server/deployment/README.md)
   * [Thinger.io Cloud](server/deployment/thinger.io-cloud-server.md)
   * [On-Premise](server/deployment/on-premise.md)
-* [SERVER ADMINISTRATION](server/server-configuration/README.md)
-  * [Server Settings](server/server-configuration/settings.md)
-  * [Cluster / Server Status](server/server-configuration/cluster-server-status.md)
-  * [Server Logs](server/server-configuration/server-logs.md)
 * [SERVER API](server/api.md)
 
 ## Others

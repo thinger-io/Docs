@@ -87,10 +87,10 @@ void loop() {
 
 ### **From API Request \(for 3rd parties\):**
 
-This configuration allows to store data from any other device or data source that can't be equipped with Thinger.io libraries on its codification. the data bucket will be set on passive mode waiting to receive data from any [**HTTP Device Callback**](../quick-sart/devices/http-devices.md) that has been properly configured to send data to this data bucket. 
+This configuration allows to store data from any other device or data source that can't be equipped with Thinger.io libraries on its codification. the data bucket will be set on passive mode waiting to receive data from any [**HTTP Device Callback**](../http-devices.md) that has been properly configured to send data to this data bucket. 
 
 {% hint style="info" %}
-This feature can be also used to store data directly from any third party platform just calling to the data bucket REST API and sending information in JSON format. But it is preferable using the[ HTTP device way.](../quick-sart/devices/http-devices.md)
+This feature can be also used to store data directly from any third party platform just calling to the data bucket REST API and sending information in JSON format. But it is preferable using the[ HTTP device way.](../http-devices.md)
 {% endhint %}
 
 ### **From MQTT Topic**

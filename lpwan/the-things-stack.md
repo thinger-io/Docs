@@ -6,7 +6,7 @@ description: This section describes how to integrate the Things Stack with Thing
 
 ## Integrating TTN devices
 
-When using our TTN or TTN Stack \(v3\) platform, it is possible to integrate LoRaWAN devices with Thinger.io using our "the things stack integration plugin", which simplifies the connection of both platform and also provides some interesting features such as devices auto-provisioning, payload data processing and gateway data filtering**, f**[**ollow this link to read the how to guide**](../../plugins/the-things-stack.md) ****\(this is the option we recommend\). 
+When using our TTN or TTN Stack \(v3\) platform, it is possible to integrate LoRaWAN devices with Thinger.io using our "the things stack integration plugin", which simplifies the connection of both platform and also provides some interesting features such as devices auto-provisioning, payload data processing and gateway data filtering**, f**[**ollow this link to read the how to guide**](../plugins/the-things-stack.md) ****\(this is the option we recommend\). 
 
 {% embed url="https://www.youtube.com/watch?v=8jn7ACmjnvM" %}
 

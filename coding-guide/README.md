@@ -4,16 +4,14 @@
 
 Almost all Arduino Sketches looks the same. There is a setup method, and there is a loop method. Nothing changes here while integrating with Thinger.io. However you must know where you should define your device resources, or where it is possible to interact with external services. In general terms, any device resource \(led, relay, sensor, servo, etc.\) must be defined inside the `setup()` method. As well as you initialize your devices, set the input/output direction of a digital pin, or initialize the Serial port speed, you also need to initialize here your resources. This basically consists on configuring what values or resources you want to expose over the Internet.
 
-The `loop()` is the place to always call to the `thing.handle()` method, so the thinger libraries can handle the connection with the platform. This is the place also for calling your endpoints, or streaming real-time data to an open WebSocket. Please, take into account to **do not add any delay inside the `loop()`** except if you know what you are doing, like working with deep sleep modes or so in your device. Any other delay will condition the proper functioning of Thinger in your device. Also it can be bad to read a sensor value in every loop if the sensor takes too much time to complete a read. This will result in a device with a noticeable lag while attending to our commands.
+The `loop()` is the place to always call to the `thing.handle()` method, so the thinger libraries can handle the connection with the platform. This is the place also for calling your endpoints, or streaming real-time data to a dashboard. Please, take into account to **do not add any delay inside the `loop()`** except if you know what you are doing, like working with deep sleep modes or so in your device. Any other delay will condition the proper functioning of Thinger in your device. Also it can be bad to read a sensor value in every loop if the sensor takes too much time to complete a read. This will result in a device with a noticeable lag while attending to our commands.
 
 ```cpp
 // add required headers according to your device
-#include <SPI.h>
-#include <Ethernet.h>
-#include <ThingerEthernet.h>
+#include <ThingerESP32.h>
 
 // initialize Thinger instance (type can change depending on your device)
-ThingerEthernet thing("username", "deviceId", "deviceCredential");
+ThingerESP32 thing("username", "deviceId", "deviceCredential");
 
 void setup() {
     // initialize your sensors and pins
@@ -31,18 +29,12 @@ void loop() {
 }
 ```
 
-You can easily start with some available example for your device after you install the client libraries.
-
-![](../../.gitbook/assets/arduino-examples.png)
-
-> It is recommended to start with some of the examples available in the Arduino IDE when you install the libraries
-
 ## Setting Credentials
 
-All the devices connected to the platform needs to be authenticated against the server. When you create a [device in the console](https://link_to_console) you are basically creating a new device identifier and setting a device credential. Therefore, you need to setup this credentials also in your Arduino code so the device can be recognized and associated to your account. This is normally done while initializing the Thinger instance in the code. That is, when you define the `thing` instance. Replace here your `username`, `deviceId`, and `deviceCredential` with the values you have registered in the cloud.
+All the devices connected to the platform needs to be authenticated against the server. When you create a [device in the console](https://link_to_console) you are basically creating a new device identifier and setting a device credential. Therefore, you need to setup this credentials also in your Arduino code so the device can be recognized and associated to your account. This is normally done while initializing the Thinger instance in the code. That is, when you define the `thing` instance. Replace the your `username`, `deviceId`, and `deviceCredential` with the values you have registered in the cloud. Note that credentials uses to be defined inside `arduino_secrets.h`
 
 ```cpp
-ThingerWifi thing("username", "deviceId", "deviceCredential");
+ ThingerESP32 thing("username", "deviceId", "deviceCredential");
 ```
 
 ## Adding Resources
@@ -353,7 +345,7 @@ loop(){
 
 If we want to communicate devices from different accounts, we can do that through calling an endpoint of type `Thinger.io Device Call`. Just register an endpoint of this type in the console, like in the following example.
 
-![](../../.gitbook/assets/device_call.png)
+![](../.gitbook/assets/device_call.png)
 
 In this case it is required to define different parameters in the endpoint:
 
@@ -539,7 +531,7 @@ In this case, you must detect when you want to stream the event, like the accele
 
 The following example will report the compass heading in real-time if the heading value changes more than 1 degree.
 
-![](../../.gitbook/assets/esp8266-real-time-websockets.gif)
+![](../.gitbook/assets/esp8266-real-time-websockets.gif)
 
 ```cpp
 void setup(){
@@ -564,7 +556,7 @@ void loop() {
 Thinger.io library provides extensive logging of its activities, which is especially useful when one needs to troubleshoot authentication and Wi-Fi connectivity issues. Include the following definition in your sketch, but _make sure it comes first, before any other includes_ \(it was reported to cause crashes on some boards otherwise\).
 
 ```text
-#define _DEBUG_
+#define THINGER_SERIAL_DEBUG
 
 // the rest of your sketch goes here
 ```

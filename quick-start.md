@@ -1,5 +1,5 @@
 ---
-description: Connecting a IoT device in minutes
+description: Connecting IoT devices in minutes
 ---
 
 # QUICK START
@@ -22,18 +22,18 @@ After provisioning the device at Thinger.io cloud, it is the moment to configure
 {% tab title="Arduino Compatible Devices" %}
 The most suitable devices to start working with Thinger.io are the ESP8266 or ESP32. Our [Thinger.io library](https://github.com/thinger-io/Arduino-Library) for the Arduino framework allows programing the first device in two minutes just following the next steps:
 
-1. [Install Thinger.io libraries into your Arduino IDE](devices/arduino.md#installation)
+1. [Install Thinger.io libraries into your Arduino IDE](arduino/#installation)
 2. Going to "File&gt;Examples&gt;Thinger.io", open the example code that fits better with your board, i.e., ESP8266
 3. Edit the example code to include your `USERNAME`, `DEVICE_ID` and `DEVICE_CREDENTIALS`stablished in previous step.
 
-![](../.gitbook/assets/image%20%2831%29.png)
+![](.gitbook/assets/image%20%2831%29.png)
 
 The basic example contains two simple resources to send and retrieve to your device, i.e., controlling a digital pin, or reading a value from the device.  It can be modified with many different functionalities that we have explained at the [**Coding**](coding-guide/) **Guide** section.  After modifying the source code, just flash your device again and wait for the device connection.
 
 {% hint style="success" %}
 Find additional information about Thinger.io devices in the next sections: 
 
-1. \*\*\*\*[**Compatible Arduino and Linux devices**](devices/)\*\*\*\*
+1. \*\*\*\*[**Compatible Arduino and Linux devices**](devices.md)\*\*\*\*
 2. \*\*\*\*[**Zero to Hero Thinger.io Firmware Coding Guide** ](coding-guide/#sketch-overview)\*\*\*\*
 3. \*\*\*\*[**Connection Troubleshooting Guide**](https://docs.thinger.io/coding/good-practices-and-troubleshooting)\*\*\*\*
 {% endhint %}
@@ -45,15 +45,15 @@ Find additional information about Thinger.io devices in the next sections:
 3\) Create a device Access Token to authorize the device sending data to the platform   
 4\) Introduce the HTTP request \(API+TOKEN\) into your device code or third party platform and start sending data to Thinger.io
 
-{% page-ref page="devices/http-devices.md" %}
+{% page-ref page="http-devices.md" %}
 {% endtab %}
 
-{% tab title="Sigfox / TTN Devices" %}
+{% tab title="LPWAN Devices" %}
 Any individual Sigfox or LoraWAN device can be integrated using our API as HTTP devices, just setting an HTTP device callback into their callback managers, but if a big network is going to be created using these technologies, it is better to use our integration plugins:
 
-{% page-ref page="devices/sigfox.md" %}
+{% page-ref page="lpwan/sigfox.md" %}
 
-{% page-ref page="../plugins/the-things-network.md" %}
+{% page-ref page="plugins/the-things-network.md" %}
 {% endtab %}
 
 {% tab title="MQTT Devices" %}
@@ -61,7 +61,7 @@ Any individual Sigfox or LoraWAN device can be integrated using our API as HTTP 
 2\) Configure device credentials a secret password  
 3\) Configure the MQTT client to send data to the embedded broker
 
-{% page-ref page="devices/mqtt.md" %}
+{% page-ref page="mqtt.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -83,25 +83,25 @@ Thinger.io provides three essential tools to work with devices data that are the
 {% tab title="Data Buckets" %}
 To **store** **device data** in a scalable way, programming different sampling intervals or recording events raised by devices.
 
-{% page-ref page="../features/buckets.md" %}
+{% page-ref page="features/buckets.md" %}
 {% endtab %}
 
 {% tab title="Dashboards" %}
 Panels with **customizable widgets** that can be created within minutes using drag'n drop technology, to show real-time and stored data.
 
-{% page-ref page="../features/dashboards.md" %}
+{% page-ref page="features/dashboards.md" %}
 {% endtab %}
 
 {% tab title="Endpoints" %}
 Extend the devices interoperatibility by using endpoints to interact with other services like IFTTT, custom Web Services, emails, or call other devices.
 
-{% page-ref page="../features/endpoints-1.md" %}
+{% page-ref page="features/endpoints-1.md" %}
 {% endtab %}
 
 {% tab title="Access Tokens" %}
 Dashboards, Data buckets or Device resources can be easily shared with third parties using **Access Tokens** and our **API.**
 
-{% page-ref page="../features/access-tokens.md" %}
+{% page-ref page="features/access-tokens.md" %}
 {% endtab %}
 {% endtabs %}
 
@@ -109,5 +109,5 @@ Dashboards, Data buckets or Device resources can be easily shared with third par
 
 Thinger.io platform can be complemented with many different Internet services using **Plugins** that can be found and deployed within seconds Just going to our marketplace and selecting it.
 
-{% page-ref page="../plugins/" %}
+{% page-ref page="plugins/" %}
 

@@ -160,7 +160,7 @@ Note that, the `Device ID` parameter of the Server Event Node is empty, in order
 MQTT is an extended communication protocol  in IoT that works on top of the TCP/IP protocol suite. It is designed for connections with remote locations where a "small code footprint" is required or the network bandwidth is limited. The next flow allows sending data from a device hosted by NodeRED MQTT Server to the REST API Callback of a Thinger.io HTTP device, in order to store, analyze an show that information with Thinger.io features.   
 
 {% hint style="info" %}
-[Learn how to work with Thinger.io HTTP device callback here](../quick-sart/devices/http-devices.md)
+[Learn how to work with Thinger.io HTTP device callback here](../http-devices.md)
 {% endhint %}
 
 ![MQTT to Thinger.io interface flow](../.gitbook/assets/image%20%2832%29.png)
