@@ -4,7 +4,7 @@ description: Remote console for IoT devices
 
 # REMOTE CONSOLE
 
-Remote console is an unique Thinger.io feature to allow remote access on your devices. It allows to create web terminals to interact with the device like in a serial interface. It also provides features to create interactive terminals on any Arduino compatible device. 
+Remote console is a unique Thinger.io feature to allow remote access on your devices. It allows to create web terminals to interact with the device like in a serial interface. It also provides features to create interactive terminals on any Arduino compatible device. 
 
 This feature is specially useful for remote diagnosis, show logs on devices, manage device configuration, or any other functionality, as the console can be easily extended to include new commands.
 
