@@ -22,7 +22,7 @@
 * [CODING GUIDE](coding-guide/README.md)
   * [Good Practices & Troubleshooting](coding-guide/good-practices-and-troubleshooting.md)
 * [EXTENDED FEATURES](extended-features/README.md)
-  * [OTA](extended-features/ota.md)
+  * [OTA PROGRAMMING](extended-features/ota.md)
   * [REMOTE CONSOLE](extended-features/remote-console.md)
   * [REMOTE FILESYSTEM](extended-features/remote-filesystem.md)
 
