@@ -31,6 +31,7 @@ unsigned long last_log = 0;
 void loop() {
   thing.handle();
   auto current = millis();
+  
   if(current-last_log>=1000){
     last_log = current;
     console.printf("printing on serial interface: %lu\r\n", current);
@@ -111,7 +112,7 @@ void loop() {
 }
 ```
 
-This will result on a prompt with an interactive terminal in the console, with the ability to execute the `millis` function defined above.
+This will result in a prompt with an interactive terminal in the console, with the ability to execute the `millis` function defined above.
 
 ![Millis Command Example](../.gitbook/assets/millis.gif)
 
@@ -121,7 +122,7 @@ The function definition with the syntax `[&](int argc, char* argv[]{}`is a C++ l
 
 #### Log Command Example 
 
-There are some cases where commands require to be running during long periods, i.e., to print an ongoing log. In the following example, the command will print a sample log until the command is cancelled or the console is closed.
+There are some cases where commands require to be running during long periods, i.e., to print an ongoing log. In the following example, the command will print a sample log until the command is canceled or the console is closed.
 
 ```cpp
 void setup() {
