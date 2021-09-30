@@ -69,7 +69,7 @@ The general requirement to start working with OTA updates for a specific device 
 
 If everything is configured correctly it will be possible to start working with the Thinger.io extension via the new elements added to the bottom toolbar. There are two buttons that allow to select the target device to be flashed, and then compile and upload new firmware binaries.
 
-![Thinger.io Buttons on Visual Studio Code Toolbar](../.gitbook/assets/image%20%28445%29.png)
+![Thinger.io Buttons on Visual Studio Code Toolbar](../.gitbook/assets/image%20%28446%29.png)
 
 **Select Target Device** 🚀
 
@@ -91,9 +91,15 @@ This button compiles and uploads the code to the selected device. In the process
 To update your device over OTA, the first time it must be flashed from a serial com port.
 {% endhint %}
 
+**Clean Target Device** 🗑️
+
+It is possible to clean the selected target device accessing the Visual Studio command Palette with `Ctrl` + `Shift` + `P`, and searching for `Thinger.io`
+
+![Clean Target Device](../.gitbook/assets/image%20%28445%29.png)
+
 ### ESP32 OTA
 
-To add OTA functionality for ESP32 it is only required to include the `ThingerESP32OTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
+To add OTA functionality for **ESP32** it is only required to include the `ThingerESP32OTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
 
 {% tabs %}
 {% tab title="main.cpp" %}
@@ -144,7 +150,7 @@ void loop() {
 
 ### ESP8266 OTA
 
-To add OTA functionality for ESP8266 it is only required to include the `ThingerESP8266OTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
+To add OTA functionality for **ESP8266** it is only required to include the `ThingerESP8266OTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
 
 {% tabs %}
 {% tab title="main.cpp" %}
@@ -197,7 +203,7 @@ void loop() {
 
 ### Arduino Nano 33 IOT OTA
 
-To add OTA functionality for Arduino Nano 33 IOT it is required to include the `ThingerWiFiNINAOTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
+To add OTA functionality for **Arduino Nano 33 IOT** it is required to include the `ThingerWiFiNINAOTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
 
 {% tabs %}
 {% tab title="main.cpp" %}
@@ -265,7 +271,7 @@ lib_deps = thinger.io
 
 ### Arduino MKR WiFi 1010 OTA
 
-To add OTA functionality for Arduino MKR WiFi 1010 it is required to include the `ThingerWiFiNINAOTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
+To add OTA functionality for Arduino **MKR WiFi 1010** it is required to include the `ThingerWiFiNINAOTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
 
 {% tabs %}
 {% tab title="main.cpp" %}
@@ -331,7 +337,7 @@ lib_deps = thinger.io
 
 ### Arduino RPI2040 Connect OTA
 
-To add OTA functionality for Arduino RPI2040 Connect it is only required to include the `ThingerMbedOTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
+To add OTA functionality for **Arduino RPI2040 Connect** it is only required to include the `ThingerMbedOTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
 
 {% tabs %}
 {% tab title="main.cpp" %}
@@ -387,7 +393,7 @@ void loop() {
 
 ### Arduino MKR NB 1500 OTA
 
-To add OTA functionality for MKR NB 1500 it is only required to include the `ThingerMKRNBOTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
+To add OTA functionality for **MKR NB 1500** it is only required to include the `ThingerMKRNBOTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
 
 {% tabs %}
 {% tab title="main.cpp" %}
