@@ -144,7 +144,7 @@ void loop() {
 
 ### ESP8266 OTA
 
-To add OTA functionality for ESP8266 it is only required to include the `ThingerESP8266.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
+To add OTA functionality for ESP8266 it is only required to include the `ThingerESP8266OTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
 
 {% tabs %}
 {% tab title="main.cpp" %}
