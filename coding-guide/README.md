@@ -2,7 +2,7 @@
 
 ## Sketch Overview
 
-Almost all Arduino Sketches looks the same. There is a setup method, and there is a loop method. Nothing changes here while integrating with Thinger.io. However you must know where you should define your device resources, or where it is possible to interact with external services. In general terms, any device resource \(led, relay, sensor, servo, etc.\) must be defined inside the `setup()` method. As well as you initialize your devices, set the input/output direction of a digital pin, or initialize the Serial port speed, you also need to initialize here your resources. This basically consists on configuring what values or resources you want to expose over the Internet.
+Almost all Arduino Sketches looks the same. There is a setup method, and there is a loop method. Nothing changes here while integrating with Thinger.io. However you must know where you should define your device resources, or where it is possible to interact with external services. In general terms, any device resource (led, relay, sensor, servo, etc.) must be defined inside the `setup()` method. As well as you initialize your devices, set the input/output direction of a digital pin, or initialize the Serial port speed, you also need to initialize here your resources. This basically consists on configuring what values or resources you want to expose over the Internet.
 
 The `loop()` is the place to always call to the `thing.handle()` method, so the thinger libraries can handle the connection with the platform. This is the place also for calling your endpoints, or streaming real-time data to a dashboard. Please, take into account to **do not add any delay inside the `loop()`** except if you know what you are doing, like working with deep sleep modes or so in your device. Any other delay will condition the proper functioning of Thinger in your device. Also it can be bad to read a sensor value in every loop if the sensor takes too much time to complete a read. This will result in a device with a noticeable lag while attending to our commands.
 
@@ -59,7 +59,7 @@ The following subsections will show how to define different input resources for 
 
 This kind of resources only requires an on/off state so it can be enabled or disabled as required. As the `pson` type can hold multiple data types, we can think that the `pson` parameter of the input function is like a boolean.
 
-So, inside the `setup` function you can place a resource called `led` \(but you can use any other name\), of input type \(using the operator `<<`\), that takes a reference to a `pson` parameter. This example will turn on/off the digital pin 10 using a ternary operator over the `in` parameter.
+So, inside the `setup` function you can place a resource called `led` (but you can use any other name), of input type (using the operator `<<`), that takes a reference to a `pson` parameter. This example will turn on/off the digital pin 10 using a ternary operator over the `in` parameter.
 
 ```cpp
 thing["led"] << [](pson& in){
@@ -101,9 +101,9 @@ thing["location"] << [](pson& in){
 
 #### _**Show Input Resources State in Dashboards and API**_
 
-The Dashboards or API works in a way that when you open them, they query the associated resources to correctly print its current state, i.e., the switch is on or off. In this way, when the API or a Dashboard is open, each associated input resource is called, receiving empty data in the call, as there is no intention to control the resource \(the pson input will be empty\).
+The Dashboards or API works in a way that when you open them, they query the associated resources to correctly print its current state, i.e., the switch is on or off. In this way, when the API or a Dashboard is open, each associated input resource is called, receiving empty data in the call, as there is no intention to control the resource (the pson input will be empty).
 
-So, how the Dashboards or the API knows what is the current state of an input resource? The resource must set its current state in the input parameter, if it is empty, or use the input value if there is one. This way, we can obtain three different things: query the current resource state \(without modifying it\), modify the current resource state, and obtain the expected input on the resource \(this is how the API explorer on the device works\).
+So, how the Dashboards or the API knows what is the current state of an input resource? The resource must set its current state in the input parameter, if it is empty, or use the input value if there is one. This way, we can obtain three different things: query the current resource state (without modifying it), modify the current resource state, and obtain the expected input on the resource (this is how the API explorer on the device works).
 
 Therefore, a correct input resource definition that actually allows to display the current state of the resource in a Dashboard or in the API, will be like this example code.
 
@@ -118,7 +118,7 @@ thing["resource"] << [](pson& in){
 };
 ```
 
-This sample code basically returns the current state \(like a boolean, a number, etc\) if there is no input control, or use the incoming data to update the current state. This can be easily adapted for controlling a led, while showing its current state in the dashboard once opened or updated.
+This sample code basically returns the current state (like a boolean, a number, etc) if there is no input control, or use the incoming data to update the current state. This can be easily adapted for controlling a led, while showing its current state in the dashboard once opened or updated.
 
 ```cpp
 thing["led"] << [](pson& in){
@@ -277,7 +277,7 @@ In Thinger.io, it is possible that devices can communicate between them. There a
 
 ### Same account communication
 
-For this use case, in which both devices belong to the same user account, there is a specific method that allows devices to communicate with other devices with low latency and simple codification. this communication can contain data or not \(it is possible to make an empty call\). let's Suppose that we have two devices: `deviceA` and `deviceB`, and we want to communicate both calling from `deviceB`to a specific `deviceA` input resource. We can use "thing.call\_device\(,\);" as shown in the example below:
+For this use case, in which both devices belong to the same user account, there is a specific method that allows devices to communicate with other devices with low latency and simple codification. this communication can contain data or not (it is possible to make an empty call). let's Suppose that we have two devices: `deviceA` and `deviceB`, and we want to communicate both calling from `deviceB`to a specific `deviceA` input resource. We can use "thing.call_device(,);" as shown in the example below:
 
 The `deviceA` defines a resource like in the following example.
 
@@ -363,7 +363,7 @@ thing.call_endpoint("DeviceACall");
 
 ## Using Endpoints
 
-In Thinger.io, an endpoint is defined as some kind of external resource that can be accessed by the device. With the endpoints feature, devices can easily send emails, SMS, push data to external Web Services, interact with IFTTT, and any general action that can be made by using WebHooks \(Calling HTTP/HTTPS URLs\).
+In Thinger.io, an endpoint is defined as some kind of external resource that can be accessed by the device. With the endpoints feature, devices can easily send emails, SMS, push data to external Web Services, interact with IFTTT, and any general action that can be made by using WebHooks (Calling HTTP/HTTPS URLs).
 
 Calling an endpoint is so easy from the Arduino sketch, as it is only required to call the `call_endpoint` method over the `thing` variable.
 
@@ -402,7 +402,7 @@ You can be so creative here and call your endpoints when the presence sensor mak
 
 ### Sending Data to Endpoints
 
-Sending data to an endpoint \(in JSON format\) is also quite easy. We need to call also the `call_endpoint` method, but in this case adding some information based on the `pson` data format, which will be automatically converted to JSON. For example, if we want to report data to a third party service like Keen.io, we can create such kind of endpoints in the console. Once configured, we can call the endpoint with our readings, for example with humidity and temperature values from a DHT sensor.
+Sending data to an endpoint (in JSON format) is also quite easy. We need to call also the `call_endpoint` method, but in this case adding some information based on the `pson` data format, which will be automatically converted to JSON. For example, if we want to report data to a third party service like Keen.io, we can create such kind of endpoints in the console. Once configured, we can call the endpoint with our readings, for example with humidity and temperature values from a DHT sensor.
 
 ```cpp
 // be careful of sending data at an appropriate rate!
@@ -448,7 +448,7 @@ loop()
 }
 ```
 
-Notice that there are a variable that limitates the run of this "if" just once, its important to define any condition or method to warrantee that this kind of enpoint call is executed just once \(or at appropiate rate\), because it can get a lot of emails generated by the microcontroller across thinger.io platform.
+Notice that there are a variable that limitates the run of this "if" just once, its important to define any condition or method to warrantee that this kind of enpoint call is executed just once (or at appropiate rate), because it can get a lot of emails generated by the microcontroller across thinger.io platform.
 
 At endpoint configuration, in the custom body email, must add double brackets "" to invoke the variable sent by the microcontroller, in our example, we used the following body
 
@@ -464,13 +464,13 @@ Thinger.io provides an easy to use and extremely scalable virtual storage system
 
 ### From Device Resource
 
-It is not necessary to implement specific codification in your device firmware to start storing data in a data bucket, because they will retrieve information from your output resources, just configure your Data Bucket to set the source and sampling interval as it is explained in our Console documentation at: [http://docs.thinger.io/console/\#data-buckets](http://docs.thinger.io/console/#data-buckets)
+It is not necessary to implement specific codification in your device firmware to start storing data in a data bucket, because they will retrieve information from your output resources, just configure your Data Bucket to set the source and sampling interval as it is explained in our Console documentation at: [http://docs.thinger.io/console/#data-buckets](http://docs.thinger.io/console/#data-buckets)
 
 ### Streaming Resource Data
 
 It is also possible to let he device stream the information when required, i.e., by raising an event when detected. In this case, we can use the "Update by Device" option while configuring the bucket, and we will use the streaming resource instruction as described here:
 
-Using a previous defined Output Resource, that was called for example \["location"\], it could be done like in the following code snippet.
+Using a previous defined Output Resource, that was called for example \["location"], it could be done like in the following code snippet.
 
 ```cpp
  void loop() {
@@ -484,9 +484,9 @@ Using a previous defined Output Resource, that was called for example \["locatio
 
 ### From Write Call
 
-This option will allow setting the bucket in a state that it will not register any information by default, but it will just wait for writing calls, both from the Arduino library using the write\_bucket method, as shown here, or calling the REST API directly like done with Sigfox. This feature opens the option to register information in the same bucket from different devices, or store information from devices that are not connected permanently with the server, that are in sleep mode, or use a different technology like Sigfox.
+This option will allow setting the bucket in a state that it will not register any information by default, but it will just wait for writing calls, both from the Arduino library using the write_bucket method, as shown here, or calling the REST API directly like done with Sigfox. This feature opens the option to register information in the same bucket from different devices, or store information from devices that are not connected permanently with the server, that are in sleep mode, or use a different technology like Sigfox.
 
-Here is an example of an ESP8266 device writing information to a bucket using the write\_bucket function:
+Here is an example of an ESP8266 device writing information to a bucket using the write_bucket function:
 
 ```cpp
 void setup() {
@@ -508,7 +508,7 @@ void loop() {
 }
 ```
 
-Note that this instruction will retrieve the \["door\_status"\] resource PSON, so it is also possible to call this function by attaching a custom PSON, as shown down below:
+Note that this instruction will retrieve the \["door_status"] resource PSON, so it is also possible to call this function by attaching a custom PSON, as shown down below:
 
 ```cpp
 void loop(){
@@ -527,7 +527,7 @@ void loop(){
 
 In Thinger.io you can open WebSockets connections against your devices, so you can receive sensor values, events, or any other information in real-time. The WebSockets are mainly used in the Dashboard feature of the Console, and are normally used for streaming resources at a fixed configurable interval. This functionality is available right out of the box when you define an output resource. However, if you want to transmit the information right when it is required, like when your device detects a movement, presence, etc., you must program some code, that is quite similar to calling an endpoint.
 
-In this case, you must detect when you want to stream the event, like the accelerometer value is over some threshold, your presence sensor is making a detection, or the compass heading is changing. This is up to you when it is necessary to stream new data. Streaming resources also requires that another endpoint is connected listening for them \(i.e., from a WebSocket connection\), so if there is no one listening for this data, the data is not sent. This is handled automatically by the client library and the server, therefore it is safe to stream data always, as the device will transmit the information only when there is a destination.
+In this case, you must detect when you want to stream the event, like the accelerometer value is over some threshold, your presence sensor is making a detection, or the compass heading is changing. This is up to you when it is necessary to stream new data. Streaming resources also requires that another endpoint is connected listening for them (i.e., from a WebSocket connection), so if there is no one listening for this data, the data is not sent. This is handled automatically by the client library and the server, therefore it is safe to stream data always, as the device will transmit the information only when there is a destination.
 
 The following example will report the compass heading in real-time if the heading value changes more than 1 degree.
 
@@ -553,9 +553,9 @@ void loop() {
 
 ## Enabling Debug Output
 
-Thinger.io library provides extensive logging of its activities, which is especially useful when one needs to troubleshoot authentication and Wi-Fi connectivity issues. Include the following definition in your sketch, but _make sure it comes first, before any other includes_ \(it was reported to cause crashes on some boards otherwise\).
+Thinger.io library provides extensive logging of its activities, which is especially useful when one needs to troubleshoot authentication and Wi-Fi connectivity issues. Include the following definition in your sketch, but _make sure it comes first, before any other includes_ (it was reported to cause crashes on some boards otherwise).
 
-```text
+```
 #define THINGER_SERIAL_DEBUG
 
 // the rest of your sketch goes here
@@ -563,9 +563,70 @@ Thinger.io library provides extensive logging of its activities, which is especi
 
 It is also necessary to enable `Serial` communication, as all the debugging information is displayed over Serial. So enable it in your sketch in the setup method.
 
-```text
+```
 void setup() {
   Serial.begin(115200);
 }
 ```
 
+## Listen for Connection State
+
+Sometimes it can be useful for your application to know what is the current connection status with Thinger.io, i.e., to notify disconnected status with a led, request device configuration after authentication, or any other internal control flow according to connection state.
+
+In order to create a listener for such connection states, it can be done with the `set_state_listener` function in the `setup()` method. For example, itis possible to define a listener that will receive the different connection states for the network, server, or authentication: 
+
+```cpp
+void setup(){
+    
+    // your setup code here..
+    
+    thing.set_state_listener([&](ThingerClient::THINGER_STATE state){
+        switch(state){
+            case ThingerClient::NETWORK_CONNECTING:
+                break;
+            case ThingerClient::NETWORK_CONNECTED:
+                break;
+            case ThingerClient::NETWORK_CONNECT_ERROR:
+                break;
+            case ThingerClient::SOCKET_CONNECTING:
+                break;
+            case ThingerClient::SOCKET_CONNECTED:
+                break;
+            case ThingerClient::SOCKET_CONNECTION_ERROR:
+                break;
+            case ThingerClient::SOCKET_DISCONNECTED:
+                break;
+            case ThingerClient::SOCKET_ERROR:
+                break;
+            case ThingerClient::SOCKET_TIMEOUT:
+                break;
+            case ThingerClient::THINGER_AUTHENTICATING:
+                break;
+            case ThingerClient::THINGER_AUTHENTICATED:
+                break;
+            case ThingerClient::THINGER_AUTH_FAILED:
+                break;
+            case ThingerClient::THINGER_STOP_REQUEST:
+                break;
+        }
+      });
+  }
+```
+
+In the following table it is detailed the different values and its description.
+
+| State                   | Description                                                                                                               |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| NETWORK_CONNECTING      | The underlying network is being connected, i.e., initializing ethernet, wifi, gsm, etc.                                   |
+| NETWORK_CONNECTED       | The network is connected and ready to be used.                                                                            |
+| NETWORK_CONNECT_ERROR   | The network cannot be initialized, i.e., bad WiFi credentials, cannot reach GSM, etc.                                     |
+| SOCKET_CONNECTING       | After the network is connected, it means that the client is connecting to Thinger.io servers.                             |
+| SOCKET_CONNECTED        | The socket has been connected to the server.                                                                              |
+| SOCKET_CONNECTION_ERROR | The socket cannot be connected to Thinger.io. If often means a bad Internet connection.                                   |
+| SOCKET_DISCONNECTED     | The connection with Thinger.io has been closed.                                                                           |
+| SOCKET_ERROR            | An error happened with the socket, i.e, bad read or write, which will cause a disconnect.                                 |
+| SOCKET_TIMEOUT          | The socket timed out while reading or writing, so the connection will be closed.                                          |
+| THINGER_AUTHENTICATING  | Thinger.io client is connected and it is being authenticated.                                                             |
+| THINGER_AUTHENTICATED   | Thinger.io client is connected and authenticated, so it can use Thinger.io, i.e., call an endpoint, read a property, etc. |
+| THINGER_AUTH_FAILED     | Thinger.io client authentication failed. Please, review your server, username, device id, and password.                   |
+| THINGER_STOP_REQUEST    | Thinger.io client was requested to stop, i.e., from the source code, or by the server.                                    |
