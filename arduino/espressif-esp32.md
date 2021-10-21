@@ -8,15 +8,15 @@ ESP32 is a series of low-cost, low-power system on a chip microcontrollers with 
 
 ## Install On Arduino IDE
 
-This device can be programmed directly from the Arduino IDE by including the ESP32 core libraries with Arduino Boards Manager. For this step, you will need first to include [https://dl.espressif.com/dl/package\_esp32\_index.json](https://dl.espressif.com/dl/package_esp32_index.json) into `Additional Board Manager URLs` field in the Arduino preferences.
+This device can be programmed directly from the Arduino IDE by including the ESP32 core libraries with Arduino Boards Manager. For this step, you will need first to include [https://dl.espressif.com/dl/package\_esp32\_index.json](https://dl.espressif.com/dl/package\_esp32\_index.json) into `Additional Board Manager URLs` field in the Arduino preferences.
 
-![](../.gitbook/assets/esp32_preferences.PNG)
+![](../.gitbook/assets/esp32\_preferences.PNG)
 
 Next, go to the Boards manager to install the ESP32 package. Search for the `esp32` and install the package **esp32 by Espressif Systems**
 
-![](../.gitbook/assets/esp32_boardsmanager.PNG)
+![](../.gitbook/assets/esp32\_boardsmanager.PNG)
 
-After this process you should be able to select this board on your Arduino IDE and start creating your IoT projects with Thinger.io. 
+After this process you should be able to select this board on your Arduino IDE and start creating your IoT projects with Thinger.io.&#x20;
 
 ## ESP32 WiFi
 
@@ -55,7 +55,7 @@ void loop() {
 ```
 {% endtab %}
 
-{% tab title="arduino\_secrets.h" %}
+{% tab title="arduino_secrets.h" %}
 ```cpp
 #define USERNAME "your_user_name"
 #define DEVICE_ID "your_device_id"
@@ -119,7 +119,7 @@ void loop() {
 ```
 {% endtab %}
 
-{% tab title="arduino\_secrets.h" %}
+{% tab title="arduino_secrets.h" %}
 ```cpp
 #define USERNAME "your_user_name"
 #define DEVICE_ID "your_device_id"
@@ -135,4 +135,3 @@ Coming soon
 ## ESP32 WiFi SmartConfig
 
 Coming soon
-

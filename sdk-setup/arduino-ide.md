@@ -4,7 +4,7 @@ Arduino is currently the best framework for learning, prototyping and even devel
 
 The following sections explains how to install and prepare Arduino IDE to work with Thinger.io client libraries.
 
-![](../.gitbook/assets/image%20%28252%29.png)
+![](<../.gitbook/assets/image (252).png>)
 
 ## Install Arduino IDE
 
@@ -18,9 +18,9 @@ Thinger.io Client libraries contains the software for connecting Arduino compati
 
 The library can be obtained from the Arduino  `Library Manager`, which simplifies searching and installing new libraries and also supports updating libraries when new versions are released, so actually it is preferable using this method:
 
-> Open the **Library Manager** in the Arduino menu in `Sketch` &gt; `Include Library` &gt; `Manage Libraries`
+> Open the **Library Manager** in the Arduino menu in `Sketch` > `Include Library` > `Manage Libraries`
 
-![Arduino Library Manager](../.gitbook/assets/image%20%28419%29.png)
+![Arduino Library Manager](<../.gitbook/assets/image (419).png>)
 
 > Search the library with name **thinger.io** and then click `Install`. You can update the library also from this manager when it is updated.
 
@@ -38,17 +38,17 @@ The final step is to **import** the `zip` library using the Arduino IDE. This st
 
 ![](../.gitbook/assets/add-zip-library.png)
 
-> `Sketch` &gt; `Include Library` &gt; `Add .ZIP libraries`, and select the `thinger.zip` file created in the previous step.
+> `Sketch` > `Include Library` > `Add .ZIP libraries`, and select the `thinger.zip` file created in the previous step.
 
 ## Starting a Project
 
 Once Thinger.io Library has been installed, it is possible to start a new project by using some of the default examples provided. There are examples for different boards, so, choose the one that matches your device.
 
-> Open `File` &gt; `Examples` &gt; `thinger.io` and start with an example for your device.
+> Open `File` > `Examples` > `thinger.io` and start with an example for your device.
 
-![Open Thinger.io example for an Arduino Compatible Device](../.gitbook/assets/image%20%28420%29.png)
+![Open Thinger.io example for an Arduino Compatible Device](<../.gitbook/assets/image (420).png>)
 
- A basic example for an ESP32 device will look like the following:
+&#x20;A basic example for an ESP32 device will look like the following:
 
 {% tabs %}
 {% tab title="ESP32.ino" %}
@@ -83,7 +83,7 @@ void loop() {
 ```
 {% endtab %}
 
-{% tab title="arduino\_secrets.h" %}
+{% tab title="arduino_secrets.h" %}
 ```cpp
 #define USERNAME "your_user_name"
 #define DEVICE_ID "your_device_id"
@@ -94,4 +94,3 @@ void loop() {
 ```
 {% endtab %}
 {% endtabs %}
-

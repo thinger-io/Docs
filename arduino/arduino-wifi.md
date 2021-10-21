@@ -49,7 +49,7 @@ void loop() {
 ```
 {% endtab %}
 
-{% tab title="arduino\_secrets.h" %}
+{% tab title="arduino_secrets.h" %}
 ```cpp
 #define USERNAME "your_user_name"
 #define DEVICE_ID "your_device_id"
@@ -63,13 +63,13 @@ void loop() {
 
 ## Arduino with CC3000
 
-The CC3000 chip from Texas Instruments was one of the first low-cost WiFi chips that revolutionized the IoT maker ecosystem. In contrary to the other available WiFi alternatives, like the WiFi shield, the CC3000 appeared at a low cost \(about 10$\) for their time. It is a powerful chip as it integrates the whole TCP/IP stack and many other protocols. Some vendors like Adadruit started to build modules and libraries for integrating this chip with the Arduino ecosystem. Thanks to the libraries provided by Adafruit is then possible to build connected device with a few lines of code.
+The CC3000 chip from Texas Instruments was one of the first low-cost WiFi chips that revolutionized the IoT maker ecosystem. In contrary to the other available WiFi alternatives, like the WiFi shield, the CC3000 appeared at a low cost (about 10$) for their time. It is a powerful chip as it integrates the whole TCP/IP stack and many other protocols. Some vendors like Adadruit started to build modules and libraries for integrating this chip with the Arduino ecosystem. Thanks to the libraries provided by Adafruit is then possible to build connected device with a few lines of code.
 
 ![Texas Instruments CC3000 WiFi module](../.gitbook/assets/adafruit-cc3000.png)
 
 So for this module is required to have installed the **Adafruit CC3000 Libraries**, as they are directly used by the thinger client. You can install it directly from the Arduino Library Manager by searching `cc3000`.
 
-![Install CC3000 Arduino Libraries](../.gitbook/assets/image%20%28423%29.png)
+![Install CC3000 Arduino Libraries](<../.gitbook/assets/image (423).png>)
 
 The following example will allow connecting your Arduino device with the CC3000 module to the cloud platform in a few lines. Just modify the `arduino_secrets.h` file with your own information.
 
@@ -107,7 +107,7 @@ void loop() {
 ```
 {% endtab %}
 
-{% tab title="arduino\_secrets.h" %}
+{% tab title="arduino_secrets.h" %}
 ```cpp
 #define USERNAME "your_user_name"
 #define DEVICE_ID "your_device_id"
@@ -121,7 +121,7 @@ void loop() {
 
 ## Arduino Yun
 
-The Arduino Yún is a microcontroller board based on the ATmega32u4 and the Atheros AR9331. The Atheros processor supports a Linux distribution based on OpenWrt named OpenWrt-Yun. The board has built-in Ethernet and WiFi support, a USB-A port, micro-SD card slot, 20 digital input/output pins \(of which 7 can be used as PWM outputs and 12 as analog inputs\), a 16 MHz crystal oscillator, a micro USB connection, an ICSP header, and 3 reset buttons. This board let the programmable ATmega32u4 communicate with Internet by using the Bridge Library that expose some functions running in the Linux distribution.
+The Arduino Yún is a microcontroller board based on the ATmega32u4 and the Atheros AR9331. The Atheros processor supports a Linux distribution based on OpenWrt named OpenWrt-Yun. The board has built-in Ethernet and WiFi support, a USB-A port, micro-SD card slot, 20 digital input/output pins (of which 7 can be used as PWM outputs and 12 as analog inputs), a 16 MHz crystal oscillator, a micro USB connection, an ICSP header, and 3 reset buttons. This board let the programmable ATmega32u4 communicate with Internet by using the Bridge Library that expose some functions running in the Linux distribution.
 
 ![Arduino Yun Board](../.gitbook/assets/arduino-yun.png)
 
@@ -155,7 +155,7 @@ void loop() {
 ```
 {% endtab %}
 
-{% tab title="arduino\_secrets.h" %}
+{% tab title="arduino_secrets.h" %}
 ```cpp
 #define USERNAME "your_user_name"
 #define DEVICE_ID "your_device_id"
@@ -168,13 +168,13 @@ void loop() {
 For using Arduino Yun, the device must be connected to a network with Internet, just with Ethernet or a Wifi connection. It can be configured in the Arduino Yun web configuration.
 {% endhint %}
 
-![Arduino Yun network configuration](../.gitbook/assets/arduino_yun_network.png)
+![Arduino Yun network configuration](../.gitbook/assets/arduino\_yun\_network.png)
 
 ## Arduino MKR1000
 
-The Arduino MKR1000 is a microcontroller based on the Atmel ATSAMW25 SoC \(System on Chip\), that is part of the SmartConnect family of Atmel Wireless devices, specifically designed for IoT projects and devices. A good 32 bit computational power similar to the Zero board, the usual rich set of I/O interfaces, low power WiFi with a Cryptochip for secure communication, and the ease of use of the Arduino Software \(IDE\) for code development and programming. All these features make this board the preferred choice for the emerging IoT battery-powered projects in a compact form factor.
+The Arduino MKR1000 is a microcontroller based on the Atmel ATSAMW25 SoC (System on Chip), that is part of the SmartConnect family of Atmel Wireless devices, specifically designed for IoT projects and devices. A good 32 bit computational power similar to the Zero board, the usual rich set of I/O interfaces, low power WiFi with a Cryptochip for secure communication, and the ease of use of the Arduino Software (IDE) for code development and programming. All these features make this board the preferred choice for the emerging IoT battery-powered projects in a compact form factor.
 
-![](../.gitbook/assets/arduino_mkr1000.png)
+![](../.gitbook/assets/arduino\_mkr1000.png)
 
 The following example will allow connecting the MKR1000 device to the cloud platform in a few lines using the WiFi interface. Just modify the `arduino_secrets.h` file with your own information.
 
@@ -215,7 +215,7 @@ void loop() {
 ```
 {% endtab %}
 
-{% tab title="arduino\_secrets.h" %}
+{% tab title="arduino_secrets.h" %}
 ```
 #define USERNAME "your_user_name"
 #define DEVICE_ID "your_device_id"
@@ -231,13 +231,13 @@ void loop() {
 For using MKR1000 over the default TLS/SSL connection it is required to install the Thinger.io server certificate in the board with the Wifi101 Firmware Updater located in the Tools menu.
 {% endhint %}
 
-![WiFi 101 Certificates Updater](../.gitbook/assets/mkr1000_ssl_certificate.png)
+![WiFi 101 Certificates Updater](../.gitbook/assets/mkr1000\_ssl\_certificate.png)
 
 ## Arduino MKR1010
 
 The Arduino MKR WiFi 1010 is the easiest point of entry to basic IoT and pico-network application design. Whether you are looking at building a sensor network connected to your office or home router, or if you want to create a BLE device sending data to a cellphone, the MKR WiFi 1010 is your one-stop-solution for many of the basic IoT application scenarios. The board's main processor is a low power Arm® Cortex®-M0 32-bit SAMD21, like in the other boards within the Arduino MKR family. The WiFi and Bluetooth® connectivity is performed with a module from u-blox, the NINA-W10, a low power chipset operating in the 2.4GHz range. On top of those, secure communication is ensured through the Microchip® ECC508 crypto chip. Besides that, you can find a battery charger, and a directionable RGB LED on-board.
 
-![Arduino MKR1010](../.gitbook/assets/image%20%28426%29.png)
+![Arduino MKR1010](<../.gitbook/assets/image (426).png>)
 
 The following example will allow connecting the MKR1010 device to the cloud platform in a few lines using the WiFi interface. Just modify the `arduino_secrets.h` file with your own information.
 
@@ -283,7 +283,7 @@ void loop() {
 ```
 {% endtab %}
 
-{% tab title="arduino\_secrets.h" %}
+{% tab title="arduino_secrets.h" %}
 ```cpp
 #define USERNAME "your_user_name"
 #define DEVICE_ID "your_device_id"
@@ -299,11 +299,11 @@ void loop() {
 For using MKR1010 over the default TLS/SSL connection it is required to install the Thinger.io server certificate in the board with the Wifi101 Firmware Updater located in the Tools menu.
 {% endhint %}
 
-![WiFiNINA Certificates Updater](../.gitbook/assets/mkr1000_ssl_certificate.png)
+![WiFiNINA Certificates Updater](../.gitbook/assets/mkr1000\_ssl\_certificate.png)
 
 ## Arduino Nano 33 IoT
 
-In the same iconic size of the Arduino Nano, the Arduino Nano 33 IoT hosts an Arm Cortex-M0+ SAMD21 processor, a WiFi and Bluetooth module based on ESP32, a 6 axis Inertial Measurement Unit \(IMU\) and a crypto chip which can securely store certificates and pre shared keys.
+In the same iconic size of the Arduino Nano, the Arduino Nano 33 IoT hosts an Arm Cortex-M0+ SAMD21 processor, a WiFi and Bluetooth module based on ESP32, a 6 axis Inertial Measurement Unit (IMU) and a crypto chip which can securely store certificates and pre shared keys.
 
 ![](../.gitbook/assets/33iot.png)
 
@@ -369,7 +369,7 @@ void loop() {
 ```
 {% endtab %}
 
-{% tab title="arduino\_secrets.h" %}
+{% tab title="arduino_secrets.h" %}
 ```cpp
 #define USERNAME "your_user_name"
 #define DEVICE_ID "your_device_id"
@@ -385,13 +385,13 @@ void loop() {
 For using Arduino 33 IoT over the default TLS/SSL connection it is required to install the Thinger.io server certificate in the board with the Wifi101 Firmware Updater located in the Tools menu.
 {% endhint %}
 
-![WiFiNINA Certificates Updater](../.gitbook/assets/mkr1000_ssl_certificate.png)
+![WiFiNINA Certificates Updater](../.gitbook/assets/mkr1000\_ssl\_certificate.png)
 
 ## Arduino Nano RP2040
 
 The brain of the board is the Raspberry Pi RP2040 silicon; a dual-core Arm Cortex M0+ running at 133MHz. It has 264KB of SRAM, and the 16MB of flash memory is off-chip to give you extra storage. But what’s really exciting is the on-board connectivity options. The hugely popular and highly adaptable u-blox NINA-W102 radio module is on there to make this a true IoT champion. It’s got on-board, built-in sensors to turn your builds into powerhouse projects, too. Microphone and motion sensing add a depth of possibilities that’s almost impossible to find in a board of this size. The Arduino Nano RP2040 Connect is the premium choice for RP2040 devices, and the perfect option for upgrading your projects and unlocking the potential of new ones.
 
-![Arduino Nano RP2040](../.gitbook/assets/image%20%28418%29.png)
+![Arduino Nano RP2040](<../.gitbook/assets/image (418).png>)
 
 {% hint style="warning" %}
 The integration with Thinger.io requires downloading an additional library called "Arduino WiFiNINA" that allows communicating with the U-BLOX WiFi module.
@@ -441,7 +441,7 @@ void loop() {
 ```
 {% endtab %}
 
-{% tab title="arduino\_secrets.h" %}
+{% tab title="arduino_secrets.h" %}
 ```cpp
 #define USERNAME "your_user_name"
 #define DEVICE_ID "your_device_id"
@@ -457,15 +457,15 @@ void loop() {
 For using Arduino Nano RP2040 over the default TLS/SSL connection it is required to install the Thinger.io server certificate in the board with the Wifi101 Firmware Updater located in the Tools menu.
 {% endhint %}
 
-![WiFiNINA Certificates Updater](../.gitbook/assets/mkr1000_ssl_certificate.png)
+![WiFiNINA Certificates Updater](../.gitbook/assets/mkr1000\_ssl\_certificate.png)
 
 ## Arduino Portenta H7
 
-Portenta H7 simultaneously runs high level code along with real time tasks. The design includes two processors that can run tasks in parallel. For example, is possible to execute Arduino compiled code along with MicroPython one, and have both cores to communicate with one another. The Portenta functionality is two-fold, it can either be running like any other embedded microcontroller board, or as the main processor of an embedded computer. 
+Portenta H7 simultaneously runs high level code along with real time tasks. The design includes two processors that can run tasks in parallel. For example, is possible to execute Arduino compiled code along with MicroPython one, and have both cores to communicate with one another. The Portenta functionality is two-fold, it can either be running like any other embedded microcontroller board, or as the main processor of an embedded computer.&#x20;
 
 H7's main processor is the dual core STM32H747 including a Cortex® M7 running at 480 MHz and a Cortex® M4 running at 240 MHz. The two cores communicate via a _Remote Procedure Call_ mechanism that allows calling functions on the other processor seamlessly.
 
-![Arduino Portenta H7](../.gitbook/assets/image%20%28421%29.png)
+![Arduino Portenta H7](<../.gitbook/assets/image (421).png>)
 
 {% tabs %}
 {% tab title="ArduinoPortentaH7.ino" %}
@@ -502,7 +502,7 @@ void loop() {
 ```
 {% endtab %}
 
-{% tab title="arduino\_secrets.h" %}
+{% tab title="arduino_secrets.h" %}
 ```cpp
 #define USERNAME "your_user_name"
 #define DEVICE_ID "your_device_id"
@@ -516,7 +516,7 @@ void loop() {
 
 ## Arduino Uno WiFi Rev2
 
-The Arduino Uno WiFi is functionally the same as the Arduino Uno Rev3, but with the addition of WiFi and some other enhancements. It incorporates a brand new 8-bit microprocessor from Microchip and has an onboard IMU \(Inertial Measurement Unit\). The WiFi Module is a self-contained SoC with integrated TCP/IP protocol stack that can provide access to a WiFi network, or act as an access point.
+The Arduino Uno WiFi is functionally the same as the Arduino Uno Rev3, but with the addition of WiFi and some other enhancements. It incorporates a brand new 8-bit microprocessor from Microchip and has an onboard IMU (Inertial Measurement Unit). The WiFi Module is a self-contained SoC with integrated TCP/IP protocol stack that can provide access to a WiFi network, or act as an access point.
 
 {% hint style="warning" %}
 The integration with Thinger.io requires downloading an additional library called "Arduino WiFiNINA" that allows communicating with the U-BLOX WiFi module.
@@ -562,9 +562,8 @@ void loop() {
 ```
 {% endtab %}
 
-{% tab title="arduino\_secrets.h" %}
+{% tab title="arduino_secrets.h" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -573,7 +572,6 @@ void loop() {
 For using this board with he default TLS/SSL connection it is required to install the Thinger.io server certificate in the board with the Wifi101 Firmware Updater located in the Tools menu.
 {% endhint %}
 
-![](../.gitbook/assets/mkr1000_ssl_certificate.png)
+![](../.gitbook/assets/mkr1000\_ssl\_certificate.png)
 
-### 
-
+###

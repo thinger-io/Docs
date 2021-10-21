@@ -4,35 +4,35 @@ For advanced developers and more complex projects it can be interesting to have 
 
 ## Install Visual Studio Code
 
-**Visual Studio Code** is a free distribution source-code editor developed by Microsoft for Windows, Linux and macOS. It can be extended via [extensions](https://en.wikipedia.org/wiki/Plug-in_%28computing%29), available through a central repository to add language support, new programming languages, [themes](https://en.wikipedia.org/wiki/Theme_%28computing%29), and [debuggers](https://en.wikipedia.org/wiki/Debugger), or perform [static code analysis](https://en.wikipedia.org/wiki/Static_code_analysis). It can be downloaded for free from the official website.
+**Visual Studio Code** is a free distribution source-code editor developed by Microsoft for Windows, Linux and macOS. It can be extended via [extensions](https://en.wikipedia.org/wiki/Plug-in\_\(computing\)), available through a central repository to add language support, new programming languages, [themes](https://en.wikipedia.org/wiki/Theme\_\(computing\)), and [debuggers](https://en.wikipedia.org/wiki/Debugger), or perform [static code analysis](https://en.wikipedia.org/wiki/Static\_code\_analysis). It can be downloaded for free from the official website.
 
- [**Download Visual Studio Code**](https://code.visualstudio.com/download)\*\*\*\*
+&#x20;[**Download Visual Studio Code**](https://code.visualstudio.com/download)****
 
-![](../.gitbook/assets/image%20%28243%29.png)
+![](<../.gitbook/assets/image (243).png>)
 
 ## **Install PlatformIO**
 
-**PlatformIO** is a cross-platform, cross-architecture, multiple framework, professional tool for embedded systems engineers and for software developers who write applications for embedded products. PlatformIO can be installed as a Visual Studio extension. To install the extension,  just navigate to Extensions in Visual Studio Code \(`Ctrl` + `Shift` + `X` on Windows or `Command` + `Shift` + `X` on Mac\) in VS Code. Then, search for`PlatformIO`, click on `PlatformIO IDE` result, and click on **Install** button.
+**PlatformIO** is a cross-platform, cross-architecture, multiple framework, professional tool for embedded systems engineers and for software developers who write applications for embedded products. PlatformIO can be installed as a Visual Studio extension. To install the extension,  just navigate to Extensions in Visual Studio Code (`Ctrl` + `Shift` + `X` on Windows or `Command` + `Shift` + `X` on Mac) in VS Code. Then, search for`PlatformIO`, click on `PlatformIO IDE` result, and click on **Install **button.
 
-![](../.gitbook/assets/image%20%28246%29.png)
+![](<../.gitbook/assets/image (246).png>)
 
 ## Starting a Project
 
 Once Visual Studio code with PlatformIO is installed, it is possible to create a new project for our specific board. For this purpose, we can access PIO Home, and click on the `New Project` button:
 
-![Create a new Project from PIO Home.](../.gitbook/assets/image%20%28415%29.png)
+![Create a new Project from PIO Home.](<../.gitbook/assets/image (415).png>)
 
 For this example, we will be using the ESP32 board, so, in the `Project Wizard` pop-up we enter a `Project Name`, select the `Espressif ESP32 Dev Module`, as a generic ESP32 board, and the `Arduino` Framework. Once done, click on `Finish` and wait PlatformIO to download the required toolchains for the device.
 
-![PlatformIO project Wizard](../.gitbook/assets/image%20%28414%29.png)
+![PlatformIO project Wizard](<../.gitbook/assets/image (414).png>)
 
 After the project initialization is done, PlatformIO generates a file structure like the following:
 
-![PlatformIO default project structure](../.gitbook/assets/image%20%28417%29.png)
+![PlatformIO default project structure](<../.gitbook/assets/image (417).png>)
 
-As shown in the above picture, each PlatformIO project has a configuration file named `platformio.ini` in the root directory for the project. This is a [INI-style](http://en.wikipedia.org/wiki/INI_file)file.
+As shown in the above picture, each PlatformIO project has a configuration file named `platformio.ini` in the root directory for the project. This is a [INI-style](http://en.wikipedia.org/wiki/INI\_file)file.
 
-`platformio.ini` has sections \(each denoted by a `[header]`\) and key / value pairs within the sections. Lines beginning with `;`are ignored and may be used to provide comments.
+`platformio.ini` has sections (each denoted by a `[header]`) and key / value pairs within the sections. Lines beginning with `;`are ignored and may be used to provide comments.
 
 In our default `ESP32` project looks like the following:
 
@@ -88,7 +88,7 @@ void loop() {
 ```
 {% endtab %}
 
-{% tab title="arduino\_secrets.h" %}
+{% tab title="arduino_secrets.h" %}
 ```cpp
 #define USERNAME "your_user_name"
 #define DEVICE_ID "your_device_id"
@@ -99,4 +99,3 @@ void loop() {
 ```
 {% endtab %}
 {% endtabs %}
-

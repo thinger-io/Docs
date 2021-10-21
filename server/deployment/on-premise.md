@@ -6,28 +6,28 @@ Thinger.io IoT instances can be deployed on-premise over any kind of cloud or lo
 
 ### 1. Select the right license
 
-On-premise instances can be deployed with different licenses, depending on the project requirements, mainly in terms of platform features like rebrands, custom domains, additional support, plugins, etc. To obtain your license code**,** [**contact Thinger.io sales team using this link,**](https://thinger.io/request-a-demo) ****we will help you to select the best option according to your project requirements. 
+On-premise instances can be deployed with different licenses, depending on the project requirements, mainly in terms of platform features like rebrands, custom domains, additional support, plugins, etc. To obtain your license code**, **[**contact Thinger.io sales team using this link,**](https://thinger.io/request-a-demo)** **we will help you to select the best option according to your project requirements.&#x20;
 
-|  | MEDIUM | **LARGE** | **UNLIMITED** |
-| :--- | :--- | :--- | :--- |
-| **Devices/Assets** | Unlimited | Unlimited | Unlimited |
-| **Performance** | Unlimited | Unlimited | Unlimited |
-| **Plugins** | 3 | 5 | Unlimited |
-| **Rebranding** | 1 | 5 | Unlimited |
-| **Custom Domain/TLS** | 1 | 5 | Unlimited |
-| **Developer accounts** | 5 | ✓ | Unlimited |
-| **Guest accounts** | Unlimited | Unlimited | Unlimited |
-| **Extended support** | ✓ | ✓ | Available |
-| **HA Cluster** |  |  | Available |
-| **Recommended use**  | Business B2B or B2B2C IoT product  | Consultancies with multiple projects | Companies without limits |
+|                        | MEDIUM                             | **LARGE**                            | **UNLIMITED**            |
+| ---------------------- | ---------------------------------- | ------------------------------------ | ------------------------ |
+| **Devices/Assets**     | Unlimited                          | Unlimited                            | Unlimited                |
+| **Performance**        | Unlimited                          | Unlimited                            | Unlimited                |
+| **Plugins**            | 3                                  | 5                                    | Unlimited                |
+| **Rebranding**         | 1                                  | 5                                    | Unlimited                |
+| **Custom Domain/TLS**  | 1                                  | 5                                    | Unlimited                |
+| **Developer accounts** | 5                                  | ✓                                    | Unlimited                |
+| **Guest accounts**     | Unlimited                          | Unlimited                            | Unlimited                |
+| **Extended support**   | ✓                                  | ✓                                    | Available                |
+| **HA Cluster**         |                                    |                                      | Available                |
+| **Recommended use **   | Business B2B or B2B2C IoT product  | Consultancies with multiple projects | Companies without limits |
 
 ### 2.  Checkout and payment options
 
-After contacting our team you will receive an email with the link to set up the payment method using our subscription management tool that is always available [**on this link.**](https://thinger.chargebeeportal.com/portal/v2/login?forward=portal_main) in order to make modifications to the subscription or the payment method.
+After contacting our team you will receive an email with the link to set up the payment method using our subscription management tool that is always available [**on this link.**](https://thinger.chargebeeportal.com/portal/v2/login?forward=portal\_main) in order to make modifications to the subscription or the payment method.
 
 ### 4.  On-premise install
 
-Once you have received the license token by email, it is possible to easily deploy Thinger.io on your host with a few commands. Before starting this guide, please, install [Docker Engine](https://docs.docker.com/install/) and [Docker Compose](https://docs.docker.com/compose/install/) in your computer or server. 
+Once you have received the license token by email, it is possible to easily deploy Thinger.io on your host with a few commands. Before starting this guide, please, install [Docker Engine](https://docs.docker.com/install/) and [Docker Compose](https://docs.docker.com/compose/install/) in your computer or server.&#x20;
 
 {% hint style="success" %}
 Install [Docker Engine](https://docs.docker.com/install/) and [Docker Compose ](https://docs.docker.com/compose/install/)before following this guide.
@@ -42,7 +42,7 @@ curl https://subscriptions.thinger.io/v1/docker-compose.yml?token={LICENSE} -o d
 ```
 
 {% hint style="warning" %}
-Never share or publish your LICENSE key as it may consist on a security risk for your host. License keys are issued per host, so do not reuse them between hosts.  
+Never share or publish your LICENSE key as it may consist on a security risk for your host. License keys are issued per host, so do not reuse them between hosts. &#x20;
 {% endhint %}
 
 Ensure that your `docker-compose` file has been downloaded correctly:
@@ -164,7 +164,7 @@ Then, if everything seems to be correct, just run the following command to start
 docker-compose up -d
 ```
 
-If everything goes fine, it should show something like the following information \(it may take several minutes to complete depending on your network connection\):
+If everything goes fine, it should show something like the following information (it may take several minutes to complete depending on your network connection):
 
 ```bash
 root@docker-s-1vcpu-1gb-fra1-01:~# docker-compose up -d
@@ -245,7 +245,7 @@ eee1b9479368        pyouroboros/ouroboros   "ouroboros"              47 minutes 
 Then, you can access your on-premise instance by pointing your browser to your host IP address.
 
 {% hint style="info" %}
-The latest versions of Ubuntu come with `UFW` \(the default firewall configuration tool for Ubuntu\). It may be blocking Thinger.io ports by default. Configure it properly or disable it \(not recommended\)  with `sudo ufw disable`
+The latest versions of Ubuntu come with `UFW` (the default firewall configuration tool for Ubuntu). It may be blocking Thinger.io ports by default. Configure it properly or disable it (not recommended)  with `sudo ufw disable`
 {% endhint %}
 
 
@@ -256,21 +256,20 @@ To start working with your on-premise installation, just follow the next steps:
 
 ### First Login
 
-1. Access the server by writing the local IP address of your host, for example: [https://1](https://acme.do.thinger.io)92.168.1.100. This step should show the Thinger.io login screen after accepting to use a self-signed certificate \(the browser will ask you about a security issue with the certificate\).
-2. Note that this server has never been accessed before, and it is a completely isolated instance so there is not any user account created. Then, it is necessary to click on `Create an account`button, and fill the form to create a new user profile using the `Admin Email` address provided in the license configuration \(any other address will not be authorized to sign up\).
+1. Access the server by writing the local IP address of your host, for example: [https://1](https://acme.do.thinger.io)92.168.1.100. This step should show the Thinger.io login screen after accepting to use a self-signed certificate (the browser will ask you about a security issue with the certificate).
+2. Note that this server has never been accessed before, and it is a completely isolated instance so there is not any user account created. Then, it is necessary to click on `Create an account`button, and fill the form to create a new user profile using the `Admin Email` address provided in the license configuration (any other address will not be authorized to sign up).
 3. After creating the new account it is possible to access the new server. It is not necessary to confirm the mail address.
 
 ### Device Connection
 
 When working with a private Thinger.io instance, it is necessary to point your devices to the newly created server. If you are using the [Arduino](../../arduino/) or [Linux](../../linux.md) client libraries, i.e., for Arduino, ESP8266, ESP32, Raspberry Pi, etc., you should add a definition on top of your code to point to your host. So, modify your sketch like this:
 
-```text
+```
 #define THINGER_SERVER "192.168.1.100"
 
 // the rest of your code goes here
 ```
 
 {% hint style="info" %}
-If this host definition is not provided, your devices will try to connect with the public instance. 
+If this host definition is not provided, your devices will try to connect with the public instance.&#x20;
 {% endhint %}
-

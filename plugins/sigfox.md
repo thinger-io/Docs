@@ -4,34 +4,34 @@ description: Plugin to improve the integration of Sigfox devices
 
 # Sigfox Plugin
 
-![](../.gitbook/assets/image%20%28101%29.png)
+![](<../.gitbook/assets/image (101).png>)
 
-This plugin is an interface for using Sigfox HTTP Callback feature in an optimized way, providing features to easily integratie these devices with Thinger.io Platform such as automatic device and storage provisioning and both uplink and downlink cloud processing. 
+This plugin is an interface for using Sigfox HTTP Callback feature in an optimized way, providing features to easily integratie these devices with Thinger.io Platform such as automatic device and storage provisioning and both uplink and downlink cloud processing.&#x20;
 
 {% hint style="info" %}
-[Note: Plugins are only available for premium Thinger.io servers. Check **this link** to create your own instance within minutes](https://pricing.thinger.io)
+[Note: Plugins are only available for premium Thinger.io servers. Check** this link** to create your own instance within minutes](https://pricing.thinger.io)
 {% endhint %}
 
 ## Plugin Features
 
-* Automatic device and bucket provisioning for every new device that is included in the same Sigfox "Device Type".  
-* Store Sigfox device metadata: device location, signal quality, hardware serial, etc. 
+* Automatic device and bucket provisioning for every new device that is included in the same Sigfox "Device Type". &#x20;
+* Store Sigfox device metadata: device location, signal quality, hardware serial, etc.&#x20;
 * Store device data automatically in data buckets so it can be easily used from the console.
 * Custom **uplink data processing with NodeJS,** for both `payload_raw` or  `payload_fields` .
-* Support for **defining custom downlink** **callbacks** in NodeJS, so it is possible to configure downlink data in an user-friendly format \(JSON\), and then convert it to `payload_raw` or `payload_fields`, as required by TTN network.
+* Support for **defining custom downlink** **callbacks** in NodeJS, so it is possible to configure downlink data in an user-friendly format (JSON), and then convert it to `payload_raw` or `payload_fields`, as required by TTN network.
 
 ## Sigfox Concepts
 
 For a better understanding of the following sections, here is described some basic Sigfox concepts:
 
 * Device: It is a hardware device with a oficial Sigfox interface.
-* Gateway: It is Sigfox infrastructure hardware interface that basically receives messages from multiple edje devices, and push them to Sigfox server over IP communication. These gateways are exclusively property of Sigfox company. 
-* Uplink: It is a data flow which represents messages sent from a device to the sigfox cloud. There are two different uplink processes: unidirectional uplink \(single data communication from the device to Sigfox network\) and bidirectional uplink, that also allows to Sigfox system sending a Downlink to the device.  
+* Gateway: It is Sigfox infrastructure hardware interface that basically receives messages from multiple edje devices, and push them to Sigfox server over IP communication. These gateways are exclusively property of Sigfox company.&#x20;
+* Uplink: It is a data flow which represents messages sent from a device to the sigfox cloud. There are two different uplink processes: unidirectional uplink (single data communication from the device to Sigfox network) and bidirectional uplink, that also allows to Sigfox system sending a Downlink to the device. &#x20;
 * Downlink: It is a data flow which represents messages sent from the Sigfox cloud to a device.
-* Device Type: It is a concept that defines a group of devices of the same type, normally sending the same kind of data both in uplink and downlink\). 
+* Device Type: It is a concept that defines a group of devices of the same type, normally sending the same kind of data both in uplink and downlink).&#x20;
 
 {% hint style="info" %}
-[Learn how to configure Sigfox Callback to send data to Thinger.io platform **here** ](https://docs.thinger.io/hardware-devices/sigfox#create-sigfox-callback)\*\*\*\*
+[Learn how to configure Sigfox Callback to send data to Thinger.io platform** here **](https://docs.thinger.io/hardware-devices/sigfox#create-sigfox-callback)****
 {% endhint %}
 
 ## Plugin Configuration
@@ -52,18 +52,18 @@ Always create the Device Type with the same identifier as defined in Sigfox clou
 
 ### Callback Config
 
-The uplink behaviour allows to configure how the plugin will react on new information received from Sigfox. 
+The uplink behaviour allows to configure how the plugin will react on new information received from Sigfox.&#x20;
 
-![](../.gitbook/assets/sigfoxplugincallbackconfir%20%282%29.png)
+![](<../.gitbook/assets/sigfoxplugincallbackconfir (2).png>)
 
 The configurable parameters are the following:
 
-* **Auto provision resources:** Enable or disable automatic resource provisioning while receiving messages for non created devices of the same Sigfox "Device Type". 
-* **Device connection timeout:** When creating a new device, establish the device connection timeout in minutes, so the platform can consider the device as disconnected after a fixed time without receiving a message. 
-* **Device identifier prefix:** When creating a new device, create it with a custom prefix + the original device id.
-* **Bucket identifier prefix:** When creating a new data bucket associated to the device, create it with a custom prefix + the original device id.
-* **Update device location:** Use the location provided in the gateways information to update de current device location.
-* **Initialize downlink data:** When creating a new device, initialize a custom downlink data, that can be modified and processed in further downlink requests.
+* **Auto provision resources:** Enable or disable automatic resource provisioning while receiving messages for non created devices of the same Sigfox "Device Type".&#x20;
+* **Device connection timeout: **When creating a new device, establish the device connection timeout in minutes, so the platform can consider the device as disconnected after a fixed time without receiving a message.&#x20;
+* **Device identifier prefix: **When creating a new device, create it with a custom prefix + the original device id.
+* **Bucket identifier prefix: **When creating a new data bucket associated to the device, create it with a custom prefix + the original device id.
+* **Update device location: **Use the location provided in the gateways information to update de current device location.
+* **Initialize downlink data: **When creating a new device, initialize a custom downlink data, that can be modified and processed in further downlink requests.
 
 ### Payload Processing
 
@@ -71,7 +71,7 @@ In this section it is possible to configure the payload processors that will tra
 
 The interface provides a code editor for NodeJS, where it is possible to define the `uplink` and `downlink`processors. It is also possible to test the code by providing a sample input data both for `uplink` and `downlink`.
 
-![](../.gitbook/assets/image%20%2848%29.png)
+![](<../.gitbook/assets/image (48).png>)
 
 In the following, there is information about the uplink and downlink methods.
 
@@ -103,10 +103,10 @@ The downlink method will be only called when the Sigfox device uplinks a bidirec
 
 This function will receive different inputs depending on how the plugin is called over its REST API.
 
-* **JSON Object**: If the downlink call is done for a Thinger.io device that defines a `downlink` property \(that is automatically initialized if `Initialize Downlink Data` is configured in the plugin\), this method will receive the JSON content of this property. It usually consists on a user-friendly device configuration that should be later encoded to binary in base64. 
-* **JSON Object**: If the plugin downlink request contains a JSON payload in the POST call, this function will receive this payload instead of the one configured in the device `downlink` property. 
+* **JSON Object**: If the downlink call is done for a Thinger.io device that defines a `downlink` property (that is automatically initialized if `Initialize Downlink Data` is configured in the plugin), this method will receive the JSON content of this property. It usually consists on a user-friendly device configuration that should be later encoded to binary in base64.&#x20;
+* **JSON Object**: If the plugin downlink request contains a JSON payload in the POST call, this function will receive this payload instead of the one configured in the device `downlink` property.&#x20;
 
-The output of this method will be a **Base64 String** with the binary information that is going to be sent to Sigfox network.
+The output of this method will be a **Base64 String **with the binary information that is going to be sent to Sigfox network.
 
 {% hint style="warning" %}
 When working with Downlink processes the`Initialize Downlink Data`parameter must be initialized with any data otherwise the processing of the downlink payload will fail
@@ -132,69 +132,69 @@ module.exports.downlink = function(payload){
 {% endtabs %}
 
 {% hint style="info" %}
-Use the interface tester to see if your code is correctly procesing the payloads. 
+Use the interface tester to see if your code is correctly procesing the payloads.&#x20;
 {% endhint %}
 
 ## Sigfox Cloud Configuration
 
-After getting Thinger.io Plugin ready for receiving data, the next step is to configure the Sigfox Backend for pushing messages on it. This process has been simplified by the "Sigfox Integration" section of the plugin settings menu, that automatically builds the **HTTP query** and the **Authorization token** that needs to be included into Sigfox Callbacks Manager:
+After getting Thinger.io Plugin ready for receiving data, the next step is to configure the Sigfox Backend for pushing messages on it. This process has been simplified by the "Sigfox Integration" section of the plugin settings menu, that automatically builds the **HTTP query **and the **Authorization token **that needs to be included into Sigfox Callbacks Manager:
 
-![](../.gitbook/assets/image%20%28204%29.png)
+![](<../.gitbook/assets/image (204).png>)
 
-Note that Sigfox Cloud provides three different API, depending on the kind of interaction that it's going to be created, Thinger.io Platform allows integrating with all of them: Uplink, Advanced Data and Downlink callback type. Each callback configuration can be created to work with a single device or over all the devices that belongs to the same Device Type.   
+Note that Sigfox Cloud provides three different API, depending on the kind of interaction that it's going to be created, Thinger.io Platform allows integrating with all of them: Uplink, Advanced Data and Downlink callback type. Each callback configuration can be created to work with a single device or over all the devices that belongs to the same Device Type.  &#x20;
 
 These are all the parameters that needs to be configured when creating a new callback:
 
-* Callback Type: to define the callback behaviour. 
-* Custom Payload Config: \(optional\) to define how the device's message is going to be decoded.
+* Callback Type: to define the callback behaviour.&#x20;
+* Custom Payload Config: (optional) to define how the device's message is going to be decoded.
 * Url Pattern: place here the autogenerated Thinger.io URL pattern
 * HTTP Method: POST for Uplink or GET for Downlink process.
-* Authorization Header: must contain the autogenerated authorization to provide Sigfox Cloud the permission to send data to Thinger.io.  
-* Body: Configurable message payload with the specified content type. 
+* Authorization Header: must contain the autogenerated authorization to provide Sigfox Cloud the permission to send data to Thinger.io. &#x20;
+* Body: Configurable message payload with the specified content type.&#x20;
 
 ### Basic Uplink Integration
 
-This callback configuration is the most common one, it just send devices data to Thinger.io in an unidirectional way to be stored, aggregate and show   
+This callback configuration is the most common one, it just send devices data to Thinger.io in an unidirectional way to be stored, aggregate and show  &#x20;
 
-![](../.gitbook/assets/image%20%2856%29.png)
+![](<../.gitbook/assets/image (56).png>)
 
-### Uplink with computed location \(Data Advanced\)
+### Uplink with computed location (Data Advanced)
 
 This callback configuration allows to retrieve additional information, such as geolocation, and infrastructure metadata like the computed over the different base stations which received the messages. However, working with this callback requires a delay of approximately 30s.
 
-![](../.gitbook/assets/image%20%2878%29.png)
+![](<../.gitbook/assets/image (78).png>)
 
 ### Uplink & Downlink
 
 Finally, selecting DATA/BIDIR Callback, it is possible to send uplink messages to configure Sigfox Cloud to send data to Thinger.io and waits for a downlink message that can be sent to the device in order to make any configuration or remote controlling processes. downlink payload processing
 
-![](../.gitbook/assets/image%20%2846%29.png)
+![](<../.gitbook/assets/image (46).png>)
 
 The configuration of the Downlink message payload can be made in Thinger.io Platform,  using the Callback Config section of Sigfox Plugin or modifying each individual Downlink device property in the device dashboard:
 
-![](../.gitbook/assets/image%20%2821%29.png)
+![](<../.gitbook/assets/image (21).png>)
 
 ## Using platform features with Sigfox devices
 
-congratulations now you can retrieve data from all your Sigfox devices into Thinger.io platform and benefit from all its management, analysis and representation features to create amazing IoT projects in a very simple way. Here you have some basics about thinger.io capacities for Sigfox devices: 
+congratulations now you can retrieve data from all your Sigfox devices into Thinger.io platform and benefit from all its management, analysis and representation features to create amazing IoT projects in a very simple way. Here you have some basics about thinger.io capacities for Sigfox devices:&#x20;
 
 ### Checking device status
 
-As these devices are not real-time connected to the platform, it is hard to know if everything is running well in the long term, specially in large devices networks. But thanks to the timeout feature that is configurable using the "device connection timeout" of the plugin callback configuration menu, it is possible to know if a device is sending data in proper time frame or if otherwise it has stopped working  due to any problem by checking the "device status" that is available at its dashboard.  
+As these devices are not real-time connected to the platform, it is hard to know if everything is running well in the long term, specially in large devices networks. But thanks to the timeout feature that is configurable using the "device connection timeout" of the plugin callback configuration menu, it is possible to know if a device is sending data in proper time frame or if otherwise it has stopped working  due to any problem by checking the "device status" that is available at its dashboard. &#x20;
 
-![Checking Sigfox device status and location with Thinger.io](../.gitbook/assets/image%20%28221%29.png)
+![Checking Sigfox device status and location with Thinger.io](<../.gitbook/assets/image (221).png>)
 
-It is also possible to check the status of a large amount of devices from the device list, but note that this page is not showing real-time data so it is necessary to refresh it to know the current status.  
+It is also possible to check the status of a large amount of devices from the device list, but note that this page is not showing real-time data so it is necessary to refresh it to know the current status. &#x20;
 
 ### Storing data in scalable buckets
 
-One of the most used features of Thigner.io is the data buckets, which allows storing thousands of data in a scalable and easy way. The integration with sigfox through this new plugin allows to store data after the payload has been processed instead of storing it in raw or constraint format. 
+One of the most used features of Thigner.io is the data buckets, which allows storing thousands of data in a scalable and easy way. The integration with sigfox through this new plugin allows to store data after the payload has been processed instead of storing it in raw or constraint format.&#x20;
 
-![Storing Sigfox data in scalable Buckets](../.gitbook/assets/image%20%289%29.png)
+![Storing Sigfox data in scalable Buckets](<../.gitbook/assets/image (9).png>)
 
-Once stored in a data bucket, it is possible to work with these data points by downloading them in CSV and creating widgets to show data in customizable dashboards that can be easily shared with colleagues or customers. 
+Once stored in a data bucket, it is possible to work with these data points by downloading them in CSV and creating widgets to show data in customizable dashboards that can be easily shared with colleagues or customers.&#x20;
 
-![Showing IoT data with Thinger.io Dashboards ](../.gitbook/assets/image%20%2824%29.png)
+![Showing IoT data with Thinger.io Dashboards ](<../.gitbook/assets/image (24).png>)
 
 ### Sending Data to Third Parties with Endpoints
 
@@ -204,7 +204,7 @@ Thinger.io is part of a large ecosystem of technologies and platforms that enabl
 
 at thinger.io we continue to work to extend the platform's integration capabilities with technologies that can help create more advanced IoT projects in the easiest way. We have other plugins such as NodeRED that allow working with IoT data in almost unlimited ways, such as creating alerts on the data, geofencing, reporting, etc.
 
-![](../.gitbook/assets/image%20%28188%29.png)
+![](<../.gitbook/assets/image (188).png>)
 
 ## Plugin Development Details
 
@@ -212,7 +212,7 @@ at thinger.io we continue to work to extend the platform's integration capabilit
 
 In this section it is described how the uplink data flow works, from its source in the Sigfox network, to its final destination in Thinger.io.
 
-![](../.gitbook/assets/image%20%28239%29.png)
+![](<../.gitbook/assets/image (239).png>)
 
 In the following subsections are described the elements shown in the figure.
 
@@ -236,16 +236,16 @@ Here is an example of the raw information received by the plugin:
 
 Once this information is received by the plugin, it is processed in order to execute the following actions in Thinger.io:
 
-1. Auto provision new device and its associated data bucket if the device does not exists on the platform. It is based on the `dev_id` field. 
+1. Auto provision new device and its associated data bucket if the device does not exists on the platform. It is based on the `dev_id` field.&#x20;
 2. Call device callback that will actually push processed data to its associated data bucket, but could do any other action like forwarding data to other endpoints.
 
 #### Uplink Processor
 
 This plugin allows to configure custom code for processing incoming data. The information sent by Sigfox devices is normally encoded in small binary payloads that cannot be directly used for representation, as they should not contain tags, JSON, ascii text, etc., in order to minimize transmission time. So, it is required to process the data sent by devices in some point of the cloud.
 
-This plugin also allows to create custom decoders if necessary. The advantage of using the Thinger.io payload processing \(if necessary\), is that it is using NodeJS runtime instead of plain Javascript, so it is possible to use NodeJS modules like Buffer, that simplifies the condig of the processing functions.
+This plugin also allows to create custom decoders if necessary. The advantage of using the Thinger.io payload processing (if necessary), is that it is using NodeJS runtime instead of plain Javascript, so it is possible to use NodeJS modules like Buffer, that simplifies the condig of the processing functions.
 
-Internaly, payload processors are precompiled after its configuration in the plugin, and executed with the payload data received from Sigfox. The output from this function \(if it gets executed\), is then transmitted to the next final step, which is the device callback.
+Internaly, payload processors are precompiled after its configuration in the plugin, and executed with the payload data received from Sigfox. The output from this function (if it gets executed), is then transmitted to the next final step, which is the device callback.
 
 #### Device Callback
 
@@ -258,4 +258,3 @@ In this case, the plugin interacts with the platform over such REST interface, p
 After the device callback is done, it will appear as a connected device, showing also its location if it was configured in the plugin options.
 
 ### Downlink Data Flow
-

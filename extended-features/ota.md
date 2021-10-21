@@ -4,21 +4,21 @@ description: Over The Air Device Updates
 
 # OTA PROGRAMMING
 
-Over the Air \(OTA\) Programing is a method that allows to **remotely send new firmware to IoT devices over the Internet**, no matter where they are as it works with Thinger.io Cloud to deliver the new firrmware binaries.
+Over the Air (OTA) Programing is a method that allows to **remotely send new firmware to IoT devices over the Internet**, no matter where they are as it works with Thinger.io Cloud to deliver the new firrmware binaries.
 
 This feature allow us to keep the devices updated with new security patches and code improvements in a fast and scalable way. It is an essential tool for the maintenance of IoT products that will prevent us from traveling to the location of the devices.
 
-The update process is done over a **Visual Studio Code extension** that integrates with the Thinger.io cloud to upload new firmware binaries to the target device. So, it integrates with the IDE to streamline the development process, **just compile and upload** as if the device where connected to the computer. 
+The update process is done over a **Visual Studio Code extension** that integrates with the Thinger.io cloud to upload new firmware binaries to the target device. So, it integrates with the IDE to streamline the development process, **just compile and upload **as if the device where connected to the computer.&#x20;
 
 ![OTA Programming Example for ESP8266 over Visual Studio Code](../.gitbook/assets/iot-ota.gif)
 
 ## IDE Configuration
 
-Before working with this tool it is necessary to install and configure Visual Studio Code and the PlatformIO extension as explained on the [SDK SETUP](../sdk-setup/#visual-studio-code) section of the documentation. Then it is required to **install Thinger.io VSCode extension** directly from the Extension manager. Search for "Thinger.io" or [Checkout on Microsoft Marketplace](https://marketplace.visualstudio.com/items?itemName=thinger-io.thinger-io). 
+Before working with this tool it is necessary to install and configure Visual Studio Code and the PlatformIO extension as explained on the [SDK SETUP](../sdk-setup/#visual-studio-code) section of the documentation. Then it is required to **install Thinger.io VSCode extension** directly from the Extension manager. Search for "Thinger.io" or [Checkout on Microsoft Marketplace](https://marketplace.visualstudio.com/items?itemName=thinger-io.thinger-io).&#x20;
 
-![Visual Studio Code Thinger.io Extension for MCU OTA ](../.gitbook/assets/image%20%28435%29.png)
+![Visual Studio Code Thinger.io Extension for MCU OTA ](<../.gitbook/assets/image (435).png>)
 
-This extension will manage the OTA processes with some interesting features such as: 
+This extension will manage the OTA processes with some interesting features such as:&#x20;
 
 * OTA updates directly from the Internet over Thinger.io
 * Device switcher to search & select the target device for the update
@@ -32,11 +32,11 @@ This extension will manage the OTA processes with some interesting features such
 
 Before running the OTA it is necessary to configure the extension by accessing the VScode Extensions Manager and selecting the Extensions Settings option.
 
-![Thinger.io Visual Studio Code Extension for OTA updates](../.gitbook/assets/image%20%28439%29.png)
+![Thinger.io Visual Studio Code Extension for OTA updates](<../.gitbook/assets/image (439).png>)
 
-* **Thinger.io Host**: Place here the URL of the Thinger.io Instance you are working with \(if using a private instance, otherwise by default it will be backend.thinger.io\).
-* **Thinger.io Port**: Specifies the connection port \(443 by default\).
-* **Thinger.io Secure**: Enable/disable SSL/TLS connection \(enabled by default\).
+* **Thinger.io Host**: Place here the URL of the Thinger.io Instance you are working with (if using a private instance, otherwise by default it will be backend.thinger.io).
+* **Thinger.io Port**: Specifies the connection port (443 by default).
+* **Thinger.io Secure**: Enable/disable SSL/TLS connection (enabled by default).
 * **Thinger.io Token**: Place here a Thinger.io `Access Token`with the following permissions:
   * ListDevices
   * AccessDeviceResources
@@ -44,7 +44,7 @@ Before running the OTA it is necessary to configure the extension by accessing t
 
 The following image provides a token configuration example with the required permissions.
 
-![Example Thinger.io Token Configuration for Visual Studio Code Extension](../.gitbook/assets/image%20%28444%29.png)
+![Example Thinger.io Token Configuration for Visual Studio Code Extension](<../.gitbook/assets/image (444).png>)
 
 ## Firmware Upload via OTA
 
@@ -69,13 +69,13 @@ The general requirement to start working with OTA updates for a specific device 
 
 If everything is configured correctly it will be possible to start working with the Thinger.io extension via the new elements added to the bottom toolbar. There are two buttons that allow to select the target device to be flashed, and then compile and upload new firmware binaries.
 
-![Thinger.io Buttons on Visual Studio Code Toolbar](../.gitbook/assets/image%20%28446%29.png)
+![Thinger.io Buttons on Visual Studio Code Toolbar](<../.gitbook/assets/image (446).png>)
 
 **Select Target Device** 🚀
 
 This button is a device selector, when you click it, it will prompt to search and select a target device from your Thinger.io account.
 
-![Device Selector for OTA Updates over Visual Studio Code](../.gitbook/assets/ota_device_selector.gif)
+![Device Selector for OTA Updates over Visual Studio Code](../.gitbook/assets/ota\_device\_selector.gif)
 
 {% hint style="info" %}
 When the target device is disconnected, the target device button background color will be red.
@@ -83,9 +83,9 @@ When the target device is disconnected, the target device button background colo
 
 **Compile and Update ▶️**
 
-This button compiles and uploads the code to the selected device. In the process it will show a window with the OTA progress. 
+This button compiles and uploads the code to the selected device. In the process it will show a window with the OTA progress.&#x20;
 
-![Compile and upload example for ESP8266](../.gitbook/assets/iot-ota%20%281%29.gif)
+![Compile and upload example for ESP8266](<../.gitbook/assets/iot-ota (1).gif>)
 
 {% hint style="info" %}
 To update your device over OTA, the first time it must be flashed from a serial com port.
@@ -95,7 +95,7 @@ To update your device over OTA, the first time it must be flashed from a serial 
 
 It is possible to clean the selected target device accessing the Visual Studio command Palette with `Ctrl` + `Shift` + `P`, and searching for `Thinger.io`
 
-![Clean Target Device](../.gitbook/assets/image%20%28445%29.png)
+![Clean Target Device](<../.gitbook/assets/image (445).png>)
 
 ### ESP32 OTA
 
@@ -136,7 +136,7 @@ void loop() {
 ```
 {% endtab %}
 
-{% tab title="ardunio\_secrets.h" %}
+{% tab title="ardunio_secrets.h" %}
 ```cpp
 #define USERNAME "your_user_name"
 #define DEVICE_ID "your_device_id"
@@ -189,7 +189,7 @@ void loop() {
 ```
 {% endtab %}
 
-{% tab title="arduino\_secrets.h" %}
+{% tab title="arduino_secrets.h" %}
 ```cpp
 #define USERNAME "your_user_name"
 #define DEVICE_ID "your_device_id"
@@ -242,7 +242,7 @@ void loop() {
 ```
 {% endtab %}
 
-{% tab title="arduino\_secrets.h" %}
+{% tab title="arduino_secrets.h" %}
 ```cpp
 #define USERNAME "your_user_name"
 #define DEVICE_ID "your_device_id"
@@ -271,7 +271,7 @@ lib_deps = thinger.io
 
 ### Arduino MKR WiFi 1010 OTA
 
-To add OTA functionality for Arduino **MKR WiFi 1010** it is required to include the `ThingerWiFiNINAOTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
+To add OTA functionality for Arduino **MKR WiFi 1010 **it is required to include the `ThingerWiFiNINAOTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
 
 {% tabs %}
 {% tab title="main.cpp" %}
@@ -309,7 +309,7 @@ void loop() {
 ```
 {% endtab %}
 
-{% tab title="arduino\_secrets.h" %}
+{% tab title="arduino_secrets.h" %}
 ```cpp
 #define DEVICE_ID "your_device_id"
 #define DEVICE_CREDENTIAL "your_device_credential"
@@ -337,7 +337,7 @@ lib_deps = thinger.io
 
 ### Arduino RPI2040 Connect OTA
 
-To add OTA functionality for **Arduino RPI2040 Connect** it is only required to include the `ThingerMbedOTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
+To add OTA functionality for **Arduino RPI2040 Connect **it is only required to include the `ThingerMbedOTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
 
 {% tabs %}
 {% tab title="main.cpp" %}
@@ -380,7 +380,7 @@ void loop() {
 ```
 {% endtab %}
 
-{% tab title="arduino\_secrets.h" %}
+{% tab title="arduino_secrets.h" %}
 ```cpp
 #define DEVICE_ID "your_device_id"
 #define DEVICE_CREDENTIAL "your_device_credential"
@@ -393,7 +393,7 @@ void loop() {
 
 ### Arduino MKR NB 1500 OTA
 
-To add OTA functionality for **MKR NB 1500** it is only required to include the `ThingerMKRNBOTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
+To add OTA functionality for **MKR NB 1500 **it is only required to include the `ThingerMKRNBOTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
 
 {% tabs %}
 {% tab title="main.cpp" %}
@@ -439,7 +439,7 @@ void loop() {
 ```
 {% endtab %}
 
-{% tab title="arduino\_secrets.h" %}
+{% tab title="arduino_secrets.h" %}
 ```cpp
 #define USERNAME "your_user_name"
 #define DEVICE_ID "your_device_id"
@@ -472,4 +472,3 @@ lib_deps = thinger.io
 {% hint style="warning" %}
 At this moment, it seems that MKR NB 1500 requires pressing the reset button to apply the OTA update.
 {% endhint %}
-
