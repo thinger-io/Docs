@@ -81,4 +81,4 @@ To cancel a subscription perform the following steps:&#x20;
 2. Select the subscription you wish to cancel
 3. In the subscription administration panel click on the `cancel subscription` option.
 
-![](<../../.gitbook/assets/image (448).png>)
+![](<../../.gitbook/assets/image (448) (1).png>)

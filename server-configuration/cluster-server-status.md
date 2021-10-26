@@ -6,7 +6,7 @@ The 2.7.5 release of Thinger.io private instances introduced a dashboard to over
 This feature is only available for the instance's manager account
 {% endhint %}
 
-The server monitoring terminal is accessible only to cluster/instance administrators by accessing the "Cluster Hosts" section of the Thinger.io main menu, which will display the Host List as shown in the image below:
+The server monitoring terminal is accessible only to cluster/instance administrators by accessing the "**Cluster Hosts**" section of the Thinger.io main menu, which will display the Host List as shown in the image below:
 
 ![](<../.gitbook/assets/image (280).png>)
 
