@@ -4,6 +4,8 @@ In order to provide the managers of private Thinger.io instances a full configur
 
 ![](<../.gitbook/assets/image (448).png>)
 
+After selecting a server profile, in the top-right corner of the server status dashboard, it is possible to select the option "Settings" in which the next configuration options will be displayed:
+
 ## IoT Server Settings
 
 This platform allows the connection of devices of different types, for which it has been equipped with different data entry engines. Each section explained below allows to set up the IP address and the ports through which each device type is connected.
