@@ -1,8 +1,8 @@
 ---
 description: >-
-  This section contains the supplementary provisions on availability,
+  This document contains the supplementary provisions on availability,
   maintenance, and response and recovery times for the platform as a service
-  (PaaS) provided by THINGER.IO. Please read this SLA caref
+  (PaaS) provided by THINGER.IO. Please read this SLA care
 ---
 
 # Service Level Agreement
