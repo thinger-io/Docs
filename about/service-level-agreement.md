@@ -2,7 +2,7 @@
 description: >-
   This document contains the supplementary provisions on availability,
   maintenance, and response and recovery times for the platform as a service
-  (PaaS) provided by THINGER.IO. Please read this SLA care
+  (PaaS) provided by THINGER.IO.
 ---
 
 # Service Level Agreement
@@ -20,7 +20,7 @@ Note that Thinger.io offers multiple subscriptions to suit the needs of each cli
 
 System recovery time depends on the criticality of the issue and the service level, Thinger.io provides the following recovery attributes:&#x20;
 
-|                | Basic | Professional |
+| Fail type      | Basic | Professional |
 | -------------- | ----- | ------------ |
 | Instance event | 3-8 h | 1-3h         |
 | Host event     | 6-12h | 2-6h         |
@@ -43,9 +43,9 @@ The customer’s remedy and the procedure shall be applied when the customer fac
 
 Any customer who faces a Service Availability below those indicated in the table may request termination of the service. Such termination will be effective as of the end of the then-current billing period and no additional fees will be charged.
 
-|                                 | Single Server | Cluster Server |
+| Timing                          | Single Server | Cluster Server |
 | ------------------------------- | ------------- | -------------- |
-| Signle calendar month           | 90.0 %        | 95%            |
+| Single calendar month           | 90.0 %        | 95%            |
 | Two consecutive calendar months | 95.0 %        | 99%            |
 
 Downtime hours can be also be redeemed by credits at a 1:1 ratio.
