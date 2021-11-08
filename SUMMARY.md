@@ -4,9 +4,9 @@
 * [QUICK START](quick-start.md)
 * [CONNECT A DEVICE](devices.md)
 
-## ARDUINO COMPATIBLE DEVICES <a id="arduino-compatible"></a>
+## ARDUINO COMPATIBLE DEVICES <a href="arduino-compatible" id="arduino-compatible"></a>
 
----
+***
 
 * [OVERVIEW](overview.md)
 * [SDK SETUP](sdk-setup/README.md)
@@ -26,20 +26,20 @@
   * [REMOTE CONSOLE](extended-features/remote-console.md)
   * [REMOTE FILESYSTEM](extended-features/remote-filesystem.md)
 
-## LPWAN DEVICES <a id="lpwan"></a>
+## LPWAN DEVICES <a href="lpwan" id="lpwan"></a>
 
 * [SIGFOX](lpwan/sigfox.md)
 * [LoRaWAN DEVICES](lpwan/the-things-stack.md)
 
-## OTHER DEVICES <a id="other-clients"></a>
+## OTHER DEVICES <a href="other-clients" id="other-clients"></a>
 
----
+***
 
 * [HTTP DEVICES](http-devices.md)
 * [MQTT CLIENTS](mqtt.md)
 * [LINUX / RASPBERRY PI](linux.md)
 
-## PLATFORM FEATURES <a id="features"></a>
+## PLATFORM FEATURES <a href="features" id="features"></a>
 
 * [DEVICES ADMINISTRATION](features/devices-administration.md)
 * [DATA BUCKETS](features/buckets.md)
@@ -51,7 +51,7 @@
 
 ## BUSINESS FEATURES
 
----
+***
 
 * [PLUGINS MARKETPLACE](plugins/README.md)
   * [The Things Stack](plugins/the-things-stack.md)
@@ -83,9 +83,9 @@
   * [WiFi Button](others/hardware/wifi-button.md)
 * [MOBILE APP](others/mobile.md)
 
----
+***
 
 * [ABOUT](about/README.md)
   * [IoT Ecosystem](about/community.md)
   * [Resources](about/resources.md)
-
+  * [Service Level Agreement](about/service-level-agreement.md)
