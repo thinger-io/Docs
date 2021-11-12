@@ -257,4 +257,128 @@ In this case, the plugin interacts with the platform over such REST interface, p
 
 After the device callback is done, it will appear as a connected device, showing also its location if it was configured in the plugin options.
 
-### Downlink Data Flow
+## Vendor Integrations
+
+### Simple Hardware
+
+#### Downlinks
+
+[SimpleHw](https://simplehw.eu) device settings are stored in downlink registers as values and changing these values will change the settings and also device behavior. Register values can be changed via downlink over the air and up to 4 register values can be changed with one downlink - 4 bytes are **register pointers** from 0x00 to 0xFF and 4 bytes are **register values** from 0x00 to 0xFF for a total of **8 bytes** (sigfox downlink limit). More details [here](https://simplehw.atlassian.net/wiki/spaces/DOC/pages/23396404/API+6+Downlink+Information#Chaining-multiple-downlink-payloads).&#x20;
+
+So, it is possible to update up to 0xFF registers from any device, at any moment by using downlinks. However, updating more than 4 registers involves several downlink requests where different registers at downloaded at each time.  With the Sigfox plugin extension it is possible to create the required flows to update any amount of registers by using the chaining feature from [SimpleHw](https://simplehw.eu) devices.
+
+The following code is a template with a set of features to correctly work with [SimpleHw](https://simplehw.eu) devices:
+
+* Downlink sequence processing to affect how the device behaves: If the received register bytes are ascending from left to right, the device will automatically request another downlink.
+* Acknowledgement from devices is processed to confirm that downlinks has been received correctly in the device.
+* Selective register downlink synchronization based on register changes and confirmed registers.&#x20;
+
+```javascript
+/// state object to handle per-device registers and its acks
+let state = {};
+
+// confirm downlink is received on the device state
+function confirmDownlink(device){
+    if(!state.hasOwnProperty(device)) return;
+    
+    // get elements to ack
+    let toAck = state[device].toAck;
+    if(toAck===undefined) return;
+    
+    // initialize acks if not already defined
+    if(state[device].ack===undefined) state[device].ack = {};
+    
+    // update acknowledged
+    for(let key in toAck){
+        state[device].ack[key] = toAck[key];
+    }
+    
+    // clear pending elements
+    delete state[device].toAck;
+}
+
+// selects the registers that are required to send
+function getRegistersToSend(device, target){
+    if(!state.hasOwnProperty(device)) return target;
+    let current = state[device].ack;
+    if(!current) return target;
+    let modified = {};
+    for (var key in target) {
+        if(!current.hasOwnProperty(key)){
+            modified[key] = target[key];
+        }else if(current[key]!==target[key]){
+            modified[key] = target[key];
+        }
+    }
+    return modified;
+} 
+
+// convert JSON device downlink data to register configuration
+function getRegistersConfig(payload){
+    // should return an object with register number & its value
+    let example = {
+        "2c" : 3,
+        "aa" : 217,
+        "3f" : 99,
+        "0c" : 1
+    }
+    return example;
+}
+
+// uplink method definition
+module.exports.uplink = function(payload, meta){
+    let deviceId = meta.device;
+    
+    // acks to downlink
+    if(payload==="15"|| payload==="16"){
+        confirmDownlink(deviceId);
+        // return undefined so nothing is stored in bucket
+        return undefined;
+    }
+    
+    // normal payload procesing here
+    // ...
+    return payload;
+};
+
+// downlink method definition
+module.exports.downlink = function(payload, meta){
+    let deviceId = meta.device;
+
+    // get device registers
+    let deviceRegisters = getRegistersConfig(payload);
+    let changedRegisters = getRegistersToSend(deviceId, deviceRegisters);
+    
+    // compute registers to send and its order
+    let registers = Object.keys(changedRegisters);
+    if(registers.length>4){
+        // ascending -> device will request more
+        registers = registers.sort().slice(0,4); 
+    }else{
+        // desdencing -> no more downlinks
+        registers = registers.sort().reverse(); 
+    }
+    
+    // init toAck state on device
+    if(!state.hasOwnProperty(deviceId)) state[deviceId] = {};
+    state[deviceId].toAck = {};
+    
+    // generate downlink output
+    let bytes = [], written = 0;
+    registers.forEach(function(v) {
+      // write register number and its value  
+      bytes[written++] = parseInt(v, 16);
+      bytes[written++] = changedRegisters[v];
+      
+      // add register to pending ack
+      state[deviceId].toAck[v] = changedRegisters[v];
+    });
+    
+    // convert buffer to hex for sigfox processing
+    return Buffer.from(bytes).toString('hex');
+};
+```
+
+
+
+\
