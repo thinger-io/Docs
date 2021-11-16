@@ -44,7 +44,7 @@ The dashboard edition mode allows moving, or resizing existing widgets, but also
 
 These three options have been explained in more detail in the sections below.
 
-## Add a Display Widget
+## Display Widgets
 
 When the edit mode is enabled in the dashboard, a new button called `Add Widget` will appear. Clicking on it will show a popup where it is possible to select the widget type to add in the dashboard. There are different widgets both for displaying information, or control connected devices, just like in the following picture:
 
@@ -431,7 +431,7 @@ angular.module('helloWidget', [])
 
 * Create a new widget pointing to to the `helloWidget.js` file. Note that we are loading the file with the `.js` extension, that will load the counterpart `.html` file as specified in `templateUrl` function.&#x20;
 
-![Configure the HTML widget to load the directive from File Storage](<../.gitbook/assets/image (456).png>)
+![Configure the HTML widget to load the directive from File Storage](<../.gitbook/assets/image (456) (1).png>)
 
 * Now it will be displayed a similar widget to the Basic Code Snippet example. However, there are many differences from basic example, as now we have Javascript file where we can add more values to the scope, process incoming value changes, detect source changes, and more interesting, we can inject dependencies to other Thinger.io console components, like UI widgets, or API methods to update configurations, call devices, etc.
 
@@ -681,7 +681,7 @@ svg {
 
 In this example it is created an advanced widget that will allow both display and configure device properties from the dashboard.
 
-![Custom HTML Widget to update device propertiesuC](<../.gitbook/assets/image (457).png>)
+![Custom HTML Widget to update device propertiesuC](<../.gitbook/assets/image (457) (1).png>)
 
 This directive has been created with the following two files from a [File Storage](../file-system.md). The interesting part on this example is how it interacts with the API to update the property values. Internally, the console exposes different classes witch represents different resources on a user account, i.e., buckets, devices, properties, etc. In this example, it is used the `DeviceProperty` class, which takes two parameters: `device`and `property`, which can be obtained from the source parameter passed to the directive:
 
@@ -913,6 +913,20 @@ The configurable parameters are the following:
 * **Min Value**: Maximum value of the slider.
 * **Max Value**: Minimum value of the slider.
 * **Step Width**: Slider precision.
+
+## Dashboard Control Widgets
+
+There are some widgets that allow modifying the Dashboard behaviour, i.e., modifying data sources.
+
+### Source Switcher
+
+The Source Switcher widget allows to modify the data source from a dashboard. This way, it is possible to create a single dashboard for all devices or buckets of the same type or within a project.
+
+![Source switcher allows to change the dashboard source, i.e., a device or bucket.](<../.gitbook/assets/image (456).png>)
+
+The widget will appear as a dropdown with the current device or bucket being used by the dashboard. When clicked, it is possible to select or search a new data source, which will update the dashboard automatically.
+
+![Source Switcher widget example when used to switch a device source in a dashboard.](<../.gitbook/assets/image (457).png>)
 
 ## Dashboard Tabs
 
