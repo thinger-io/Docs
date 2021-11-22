@@ -14,20 +14,22 @@ This technology begins especially useful for IoT projects, to process and analyz
 
 We have made a great effort to simplify the integration between Thinger.io and Node-RED, which is materialized in the following elements:&#x20;
 
-* A **contribution to Node-RED** repositories, called "node-red-contrib-thinger" that contains some nodes that has been specifically created to simplify the integration of Node-RED flows with Thinger.io features, allowing to interact with the IoT platform in the next ways:\
-  \
-  1\) Create buckets when an event occurs (bucket create node).\
-  2\) Read from data buckets (bucket read node).\
-  3\) Writing to data buckets (bucket write node).\
-  4\) Calling devices callbacks with autoprovisioning (device callback node).\
-  5\) Creating any type of devices (device create node).\
-  6\) Reading a device resource when an event occurs (device read node).\
-  7\) Subscribing to device resources at a given interval (device stream node).\
-  8\) Sending data to a connected device (device write node).\
-  9\) Calling endpoints (endpoint call node).\
-  10\) Reading properties of devices, types or groups (property read node).\
-  11\) Writing and modifying properties of devices, types or groups (property write node).\
-  12\) Detecting different events of devices, buckets and endpoints (server events node).\
+*   A **contribution to Node-RED** repositories, called "node-red-contrib-thinger" that contains some nodes that has been specifically created to simplify the integration of Node-RED flows with Thinger.io features, allowing to interact with the IoT platform in the next ways:\
+
+
+    1\) Iterate over the assets from the Thinger.io Platform (asset iterator node).\
+    2\) Create buckets when an event occurs (bucket create node).\
+    3\) Read from data buckets (bucket read node).\
+    4\) Writing to data buckets (bucket write node).\
+    5\) Calling devices callbacks with autoprovisioning (device callback node).\
+    6\) Creating any type of devices (device create node).\
+    7\) Reading a device resource when an event occurs (device read node).\
+    8\) Subscribing to device resources at a given interval (device stream node).\
+    9\) Sending data to a connected device (device write node).\
+    10\) Calling endpoints (endpoint call node).\
+    11\) Reading properties of devices, types or groups (property read node).\
+    12\) Writing and modifying properties of devices, types or groups (property write node).\
+    13\) Detecting different events of devices, buckets, endpoints and others (server events node).\
 
 * A **Node-RED Plugin** that allows deploying Node-RED server into the same host as Thinger.io IoT platform instance, running 24x7 without any kind of limitation. This way the problem of hosting the node-RED on another machine disappears
 
@@ -101,6 +103,14 @@ This form allows you to introduce the credentials of the specific Thinger.io ins
 
 As it was explained in the beginning, this plugin has two purposes: Host a Node-RED server instance together with Thinger.io IoT server and improve their integration by including a set of custom nodes to simplify the extraction of data from Thinger.io IoT devices or calling other platform features. The next list contains a complete description of each node and its properties configuration:
 
+### Asset Iterator              ![](../.gitbook/assets/asset-iterator.png)
+
+It is a **Function** Node that iterates over all the desired assets avaible on Thinger.io Platform given a filter. It is able to receive a JSON from Node-RED flow and automatically query the backend. This node is useful to execute operations over multiple assets at the same time.
+
+The configuration of this Node requires introducing of at least the `Asset`.
+
+There will be as many output messages as assets retrieved, each containing the information to only one asset.
+
 ### Bucket Create            ![](../.gitbook/assets/bucket\_create.png)
 
 It is a **Function** Node that creates a Data Bucket into a Thinger.io Platform. It is able to receive a JSON from Node-RED flow and automatically create the Bucket, so results quite useful to implement scalable and on demand data storage to any project.
@@ -109,13 +119,13 @@ The configuration of this Node requires introducing of at least the `Bucket ID` 
 
 The output message will contain the result and details of the operation.
 
-### Bucket Read               ![](../.gitbook/assets/bucket\_read.png)
+### Bucket Read                 ![](../.gitbook/assets/bucket\_read.png)
 
 It is a **Function **Node that retrieves data from a specific Thinger.io Data Bucket when an injection Node requires it. It is useful to get data from buckets with a Node-RED programmed sampling interval. &#x20;
 
 To configure this node just include the `Bucket ID`, `Filter` and `Sorting` into the node parameters form. The input for this Node is a triggered event and the output will be a JSON format message with the buckets stored data. &#x20;
 
-### Bucket Write               ![](../.gitbook/assets/bucket\_write.png)
+### Bucket Write                  ![](../.gitbook/assets/bucket\_write.png)
 
 It is an **Output** Node that allows to store data into the Thinger.io Data Bucket. It is able to receive a JSON from Node-RED flow and automatically create an entry into the Bucket, so results quite useful to implement scalable data storage to any project.
 
@@ -135,52 +145,45 @@ The configuration of this Node requires introducing of at least the `Bucket ID`,
 
 The output message will contain the result and details of the operation.
 
-### Device Read                  ![](../.gitbook/assets/device\_read.png)
+### Device Read                       ![](../.gitbook/assets/device\_read.png)
 
 It is a **Function **Node that retrieves data from a specific Thinger.io device resource when an injection Node requires it. It is useful to get data from devices with a Node-RED programmed sampling interval. &#x20;
 
 To configure this node just include the `Device ID`and the `Resource Name` into the node parameters form. The input for this Node is a triggered event and the output will be a JSON format message with the device resource variables.
 
-### Device Stream               ![](../.gitbook/assets/device\_stream.png)  &#x20;
+### Device Stream                    ![](../.gitbook/assets/device\_stream.png)  &#x20;
 
 It is an **Injection **Node that retrieves data from a specific Thinger.io Device Resource on regular defined interval expressed in seconds into the properties form.&#x20;
 
 To configure this node just include the `Device ID`and the `Resource Name` into the node parameters form. The output of this node will be a JSON with the real-time Device Resource data that was defined in the properties form.
 
-### Device Write                  ![](../.gitbook/assets/device\_write.png)&#x20;
+### Device Write                        ![](../.gitbook/assets/device\_write.png)&#x20;
 
 It is a **Function** Node that allows sending data to a Thinger.io connected Device. It is able to receive a JSON from Node-RED flow and automatically send it to other devices in real-time. So results quite useful to implement scalable device communication for any project.
 
 The configuration of this Node just requires introducing the `Device ID` and the `Resource ID` , however, it is important to make proper management of the input JSON in order to store the right data. It is strongly recommended to filter the JSON keys using a "Change" Node and check the result with a "Debug" Node to be sure about the data that we are sending. &#x20;
 
-### Endpoint Call              ![](../.gitbook/assets/endpoint\_call.png)&#x20;
+### Endpoint Call                       ![](../.gitbook/assets/endpoint\_call.png)&#x20;
 
 It is a **Function** Node that allows calling the execution of a Thinger.io endpoint profile. It is able to receive a JSON that can be introduced in the endpoint in order to use that data in an e-mail or send it to third parties, so it is quite useful to create notifications or to integrating an IoT project with other systems. &#x20;
 
 The configuration of this Node just requires introducing the `Endpoint ID`, however, it is important to make a proper management of the input JSON in order to send the right data. It is strongly recommended to filter the JSON keys using a "Change" Node and check the result with a "Debug" Node to be sure about the data that we are sending. &#x20;
 
-### Property Read                  ![](../.gitbook/assets/property\_read.png)
+### Property Read                    ![](../.gitbook/assets/property\_read.png)
 
 It is a **Function **Node that retrieves data from a specific Thinger.io device, type or group property when an injection Node requires it. It is useful to get data from assets with a Node-RED programmed sampling interval. &#x20;
 
 To configure this node just include the `Asset Type`, `Asset ID`and `Property Name` into the node parameters form. The input for this Node is a triggered event and the output will be a JSON format message with the asset's property value.
 
-### Property Write                  ![](../.gitbook/assets/property\_write.png)
+### Property Write                      ![](../.gitbook/assets/property\_write.png)
 
 It is a **Function **Node that writes data into a specific Thinger.io device, type or group property when an injection Node requires it. It is useful to save data into assets in order to manage different configurations and act accordingly. &#x20;
 
 To configure this node just include the `Asset Type`, `Asset ID`and `Property Name` into the node parameters form. The input for this Node is a triggered event and the output will be a JSON format message with the operation's result and details.
 
-### Server Events              ![](../.gitbook/assets/server\_events.png)&#x20;
+### Server Events                          ![](../.gitbook/assets/server\_events.png)&#x20;
 
-It is an **Inject **Node that allows triggering in real-time any event that takes places in Thinger.io IoT Server, including:
-
-1. Bucket Write
-2. Device Status Change
-3. Device Callback Call
-4. Device Property Update
-5. Device Location Update
-6. Endpoint Call
+It is an **Inject **Node that allows triggering in real-time any event that takes places in Thinger.io IoT Server over all existing assets, like device, types, groups or buckets. Some events contain also additional filter fields to filter from.
 
 The configuration of each type requires to include the ID of the element that wants to be supervised. It is also possible to monitor every element leaving the identifier field empty.
 
@@ -198,7 +201,7 @@ In this section, you can find our own cookbook with some useful flows that you c
 {% tab title="Device Disconnection Alert" %}
 Using the "Device Status Change" property of the Server Event Node, it is possible to detect the disconnection of any device of your IoT network and execute a flow in Node-RED to notify the incidence using an endpoint sending an email for example.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 [Learn how to create an email endpoint here. ](https://docs.thinger.io/console#email-endpoint)
 {% endhint %}
 
