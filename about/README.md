@@ -32,9 +32,7 @@ Thinger.io is a platform in constant growth, our development team is continuousl
 * [x] Project & products manager
 * [x] Shared resources manager
 * [x] Node-RED Plugin integration
-* [x] Community Server Update
 * [x] Server monitor and settings menu&#x20;
-* [x] Mid-year features revision
 * [x] Grafana Plugin
 * [x] Geofencing tool
 * [x] Assets Manager
@@ -49,20 +47,30 @@ Thinger.io is a platform in constant growth, our development team is continuousl
 * [x] New web home
 * [x] Assets Map Widget
 * [x] Improved Guest member features
+* [x] Extended Node-RED Integration
+* [x] Customizable Login&#x20;
+* [x] Platformio Plugin
+* [x] HTTP devices Integration plugin
+* [x] ESP32 & ESP8266 OTA
+* [x] Centralized instances monitoring system
+* [x] ASIO Linux software client
+* [x] Projects & users manager revision
+* [x] OAuth2 Clients
+* [x] NB-IoT integration Client (TCP/UDP)
+
+### 2022
+
+* [ ] Custom plugins support
+* [ ] COAP integration
+* [ ] NB-IoT integration client (COAP)
 * [ ] MQTT integration improvement&#x20;
 * [ ] Java Script IoT client
 * [ ] InfluxDB tagged data buckets
+* [ ] Projects hierarchization
+* [ ] Product Manager&#x20;
 * [ ] Python IoT Client
 * [ ] Alerts manager&#x20;
-* [x] Platformio Plugin
-* [ ] HTTP devices Integration plugin
-* [ ] OPC-UA integration Plugin
-* [ ] Python Plugin
 * [ ] Reporting tool
-* [ ] ARM-64 server compilation
-* [ ] ESP32 & ESP8266 OTA
-* [ ] Custom plugins support
-* [ ] COAP integration, NB-IoT & LTE CAT-M client
 
 
 
