@@ -4,7 +4,7 @@
 * [QUICK START](quick-start.md)
 * [CONNECT A DEVICE](devices.md)
 
-## ARDUINO COMPATIBLE DEVICES <a href="arduino-compatible" id="arduino-compatible"></a>
+## ARDUINO COMPATIBLE DEVICES <a href="#arduino-compatible" id="arduino-compatible"></a>
 
 ***
 
@@ -26,12 +26,12 @@
   * [REMOTE CONSOLE](extended-features/remote-console.md)
   * [REMOTE FILESYSTEM](extended-features/remote-filesystem.md)
 
-## LPWAN DEVICES <a href="lpwan" id="lpwan"></a>
+## LPWAN DEVICES <a href="#lpwan" id="lpwan"></a>
 
 * [SIGFOX](lpwan/sigfox.md)
 * [LoRaWAN DEVICES](lpwan/the-things-stack.md)
 
-## OTHER DEVICES <a href="other-clients" id="other-clients"></a>
+## OTHER DEVICES <a href="#other-clients" id="other-clients"></a>
 
 ***
 
@@ -39,7 +39,7 @@
 * [MQTT CLIENTS](mqtt.md)
 * [LINUX / RASPBERRY PI](linux.md)
 
-## PLATFORM FEATURES <a href="features" id="features"></a>
+## PLATFORM FEATURES <a href="#features" id="features"></a>
 
 * [DEVICES ADMINISTRATION](features/devices-administration.md)
 * [DATA BUCKETS](features/buckets.md)
@@ -89,3 +89,4 @@
   * [IoT Ecosystem](about/community.md)
   * [Resources](about/resources.md)
   * [Service Level Agreement](about/service-level-agreement.md)
+  * [Terms & Conditions of use](about/terms-and-conditions-of-use.md)
