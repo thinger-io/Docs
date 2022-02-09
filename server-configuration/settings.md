@@ -12,13 +12,13 @@ This platform allows the connection of devices of different types, for which it 
 
 ### HTTP Server configuration
 
-To set the connection parameters of the** **[**HTTP devices integration**](../http-devices.md)** **module on Thinger.io private instances
+To set the connection parameters of the **** [**HTTP devices integration**](../http-devices.md) **** module on Thinger.io private instances
 
 ![](<../.gitbook/assets/image (288).png>)
 
 The configurable parameters are:&#x20;
 
-* **Enabled: **Allows to disable the functionality of this ingest module&#x20;
+* **Enabled:** Allows to disable the functionality of this ingest module&#x20;
 * **Listen Address:** Allows to indicate the fixed IP address of the server, leaving it at 0.0.0.0 will use the default IP of the host.
 * **TCP Port:** To configure the standard HTTP communications port with a customized value.
 * **TLS Port:** To configure the standard TLS request collection port with a customized value.
@@ -31,20 +31,20 @@ It allows to set up the parameters for connecting Thinger.io to devices running 
 
 The configurable parameters are:&#x20;
 
-* **Enabled: **Allows to disable the functionality of this ingest module&#x20;
+* **Enabled:** Allows to disable the functionality of this ingest module&#x20;
 * **Listen Address:** Allows to indicate the fixed IP address of the server, leaving it at 0.0.0.0 will use the default IP of the host.
 * **TCP Port:** To configure the standard TCP communications port with a customized value.
 * **TLS Port:** To configure the standard TLS request connection port with a customized value.
 
 ### MQTT Server configuration
 
-This section allows setting the connection and data entry parameters of** **[**MQTT devices**](../mqtt.md) with Thinger.io's builtin MQTT broker.
+This section allows setting the connection and data entry parameters of **** [**MQTT devices**](../mqtt.md) with Thinger.io's builtin MQTT broker.
 
 ![](<../.gitbook/assets/image (278).png>)
 
 The configurable parameters are:&#x20;
 
-* **Enabled: **Allows to disable the functionality of this ingest module&#x20;
+* **Enabled:** Allows to disable the functionality of this ingest module&#x20;
 * **Listen Address:** Allows to indicate the fixed IP address of the server, leaving it at 0.0.0.0 will use the default IP of the host.
 * **TCP Port:** To configure the standard MQTT communications port with a customized value.
 * **TLS Port:** To configure the standard MQTT TLS connection request port with a customized value.
@@ -71,7 +71,7 @@ The **Simple Mail Transfer Protocol**, better known as SMTP, is a protocol used 
 
 ### AWS SES configuration
 
-The integration with Amazon SES provides a much simple and scalable mailing tool. It can be selected instead of the common SMTP by selecting it on Email Type, and placing the credentials on its appropriate section. These credentials can be obtained on the AWS SES configuration section as explained on[** this link**](https://ongage.atlassian.net/wiki/spaces/HELP/pages/13795743/Amazon+SES+Setup+Tutorial)****
+The integration with Amazon SES provides a much simple and scalable mailing tool. It can be selected instead of the common SMTP by selecting it on Email Type, and placing the credentials on its appropriate section. These credentials can be obtained on the AWS SES configuration section as explained on[ **this link**](https://ongage.atlassian.net/wiki/spaces/HELP/pages/13795743/Amazon+SES+Setup+Tutorial)****
 
 ![](<../.gitbook/assets/image (265).png>)
 
@@ -89,10 +89,10 @@ The default configuration of Thinger.io's storage engine uses InfluxDB system, a
 
 ![](<../.gitbook/assets/image (291).png>)
 
-* **InfluxDB Host: **Place here the web domain or IP of the InfluxDB server
-* **InfluxDB Port: **Place here te standard or custom InfluxDB port number
-* **InfluxDB Username: **Is the username used to create the influxDB database
-* **InfluxDB Password: **An authorization tocken obtained from InfluxDB configuration console** **
+* **InfluxDB Host:** Place here the web domain or IP of the InfluxDB server
+* **InfluxDB Port:** Place here te standard or custom InfluxDB port number
+* **InfluxDB Username:** Is the username used to create the influxDB database
+* **InfluxDB Password:** An authorization tocken obtained from InfluxDB configuration console ****&#x20;
 
 To obtain this information about an InfluxDB server it is required to go to InfluxDB configuration tool as it is explained on: &#x20;
 
@@ -102,10 +102,10 @@ DynamoDB is a highly scalable and consistent storage system provided by AWS that
 
 ![](<../.gitbook/assets/image (263).png>)
 
-* **Table Name: **It is the identification of the DynamoDB table&#x20;
-* **AWS Access Key ID: **
+* **Table Name:** It is the identification of the DynamoDB table&#x20;
+* **AWS Access Key ID:**&#x20;
 * **AWS Secret Access Key:**
-* **Region:  **Enter here the AWS region in which the database is placed&#x20;
+* **Region:**  Enter here the AWS region in which the database is placed&#x20;
 
 DynamoDB database configuration parameters can be obtained from the server as explained on AWS documentation page.
 
@@ -115,8 +115,8 @@ Mongo DB is one of the most widespread database systems due to its robust operat
 
 ![](<../.gitbook/assets/image (264).png>)
 
-* **MongoDB URI: **Paste here the uniform resource identification obtained from MongoDB configuration console
-* **MongoDB Database: **Enter here the MongoDB database identificator
+* **MongoDB URI:** Paste here the uniform resource identification obtained from MongoDB configuration console
+* **MongoDB Database:** Enter here the MongoDB database identificator
 * **MongoDB Table:** Enter here the MongoDB table name in which the data will be stored
 
 The server URI can be obtained from the "connect" context of the Mongo DB or Atlas service as explained at this link.
@@ -131,10 +131,10 @@ To implement AWS S3 option, it must be selected on the General section and then 
 
 ![](<../.gitbook/assets/image (289).png>)
 
-* **Bucket ID: **It is the identification of the AWS S3 data bucket&#x20;
-* **AWS Access Key ID: **
+* **Bucket ID:** It is the identification of the AWS S3 data bucket&#x20;
+* **AWS Access Key ID:**&#x20;
 * **AWS Secret Access Key:**
-* **Region:  **Enter here the AWS region in which the database is placed&#x20;
+* **Region:**  Enter here the AWS region in which the database is placed&#x20;
 
 DynamoDB database configuration parameters can be obtained from the server as explained on AWS documentation page.
 

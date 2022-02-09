@@ -12,7 +12,7 @@ For advanced developers and more complex projects it can be interesting to have 
 
 ## **Install PlatformIO**
 
-**PlatformIO** is a cross-platform, cross-architecture, multiple framework, professional tool for embedded systems engineers and for software developers who write applications for embedded products. PlatformIO can be installed as a Visual Studio extension. To install the extension,  just navigate to Extensions in Visual Studio Code (`Ctrl` + `Shift` + `X` on Windows or `Command` + `Shift` + `X` on Mac) in VS Code. Then, search for`PlatformIO`, click on `PlatformIO IDE` result, and click on **Install **button.
+**PlatformIO** is a cross-platform, cross-architecture, multiple framework, professional tool for embedded systems engineers and for software developers who write applications for embedded products. PlatformIO can be installed as a Visual Studio extension. To install the extension,  just navigate to Extensions in Visual Studio Code (`Ctrl` + `Shift` + `X` on Windows or `Command` + `Shift` + `X` on Mac) in VS Code. Then, search for`PlatformIO`, click on `PlatformIO IDE` result, and click on **Install** button.
 
 ![](<../.gitbook/assets/image (246).png>)
 

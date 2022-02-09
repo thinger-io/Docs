@@ -95,7 +95,7 @@ IMPORTANT: When the desired WiFi Network SSID doesn’t appears at this list, pr
 If everything goes right and the device manage to connect the WiFi network properly, a confirmation sound will be emitted. After sending the first message, the device switch to a low power mode, however, it is possible to turn off the bottom hardware switch to avoid accidental executions without affecting the configuration.
 
 {% hint style="danger" %}
-**WARNING!** If the connection wasn’t possible, **the WiFi hotspot will be launched again** in order to provide the user another chance to make the configuration. If, after 3 minutes, the device is not receiving interaction from the user, an alert signal will be emitted and the device will power off the WiFi hotspot. ** **
+**WARNING!** If the connection wasn’t possible, **the WiFi hotspot will be launched again** in order to provide the user another chance to make the configuration. If, after 3 minutes, the device is not receiving interaction from the user, an alert signal will be emitted and the device will power off the WiFi hotspot. ****&#x20;
 {% endhint %}
 
 ### **Device Credentials Configuration**

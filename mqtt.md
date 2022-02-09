@@ -30,9 +30,9 @@ Then the "new device form" will appear, allowing to introduce device information
 ![](<.gitbook/assets/image (119).png>)
 
 * **Device Type**: MQTT device should be selected
-* **Device identifier: **Must be unique within your devices
-* **Device description: **Additional information that may help to identify each device
-* **Device credentials: **Is the device security password, it can be random created using the bottom button.
+* **Device identifier:** Must be unique within your devices
+* **Device description:** Additional information that may help to identify each device
+* **Device credentials:** Is the device security password, it can be random created using the bottom button.
 
 When all the information has been introduced, pressing "Add Device" button will create a new device profile in the device list. If everything is right a confirmation message will appear, meaning that Thinger.io Platform is ready to receive data from your MQTT devices. &#x20;
 

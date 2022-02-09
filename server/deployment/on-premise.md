@@ -6,7 +6,7 @@ Thinger.io IoT instances can be deployed on-premise over any kind of cloud or lo
 
 ### 1. Select the right license
 
-On-premise instances can be deployed with different licenses, depending on the project requirements, mainly in terms of platform features like rebrands, custom domains, additional support, plugins, etc. To obtain your license code**, **[**contact Thinger.io sales team using this link,**](https://thinger.io/request-a-demo)** **we will help you to select the best option according to your project requirements.&#x20;
+On-premise instances can be deployed with different licenses, depending on the project requirements, mainly in terms of platform features like rebrands, custom domains, additional support, plugins, etc. To obtain your license code**,** [**contact Thinger.io sales team using this link,**](https://thinger.io/request-a-demo) **** we will help you to select the best option according to your project requirements.&#x20;
 
 |                        | MEDIUM                             | **LARGE**                            | **UNLIMITED**            |
 | ---------------------- | ---------------------------------- | ------------------------------------ | ------------------------ |
@@ -19,7 +19,7 @@ On-premise instances can be deployed with different licenses, depending on the p
 | **Guest accounts**     | Unlimited                          | Unlimited                            | Unlimited                |
 | **Extended support**   | ✓                                  | ✓                                    | Available                |
 | **HA Cluster**         |                                    |                                      | Available                |
-| **Recommended use **   | Business B2B or B2B2C IoT product  | Consultancies with multiple projects | Companies without limits |
+| **Recommended use**    | Business B2B or B2B2C IoT product  | Consultancies with multiple projects | Companies without limits |
 
 ### 2.  Checkout and payment options
 

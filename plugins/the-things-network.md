@@ -13,7 +13,7 @@ The Things Network is a LoRaWAN Network solution that simplifies the deployment 
 * automatic device and data buckets provisioning.&#x20;
 
 {% hint style="info" %}
-[Note: Plugins are only available for premium Thinger.io servers. Check** this link** to create your own privated IoT instance within minutes](https://pricing.thinger.io)
+[Note: Plugins are only available for premium Thinger.io servers. Check **this link** to create your own privated IoT instance within minutes](https://pricing.thinger.io)
 {% endhint %}
 
 ## Plugin Features
@@ -60,12 +60,12 @@ The uplink behaviour allows to configure how the plugin will react on new inform
 The configurable parameters are the following:
 
 * **Auto provision resources:** Enable or disable automatic resource provisioning while receiving messages for non created devices.
-* **Device connection timeout: **When creating a new device, establish the device connection timeout in minutes, so the platform can consider the device as disconnected after a fixed time without receiving a message.&#x20;
-* **Device identifier prefix: **When creating a new device, create it with a custom prefix + the original device id.
-* **Bucket identifier prefix: **When creating a new data bucket associated to the device, create it with a custom prefix + the original device id.
-* **Update device location: **Use the location provided in the gateways information to update de current device location.
-* **Save metadata: **Store the metadata information provided by TTN as a device property that can be retrieved later.
-* **Initialize downlink data: **When creating a new device, initialize a custom downlink data, that can be modified and processed in further downlink requests.
+* **Device connection timeout:** When creating a new device, establish the device connection timeout in minutes, so the platform can consider the device as disconnected after a fixed time without receiving a message.&#x20;
+* **Device identifier prefix:** When creating a new device, create it with a custom prefix + the original device id.
+* **Bucket identifier prefix:** When creating a new data bucket associated to the device, create it with a custom prefix + the original device id.
+* **Update device location:** Use the location provided in the gateways information to update de current device location.
+* **Save metadata:** Store the metadata information provided by TTN as a device property that can be retrieved later.
+* **Initialize downlink data:** When creating a new device, initialize a custom downlink data, that can be modified and processed in further downlink requests.
 
 ### Payload Processing
 
@@ -83,7 +83,7 @@ The uplink method will be called after a gateway sends a new message over the TT
 
 * **Base64 String**: If the TTN application defines `Custom`payload format but does not provide a `decoder` function, this method will receive the raw payload encoded in base64. In this case, it will be necessary to write a function to transform this base64 data to a JSON object.
 * **JSON Object from Cayene LPP**: If the TTN application defines a `Cayene LPP` payload format, TTN will automatically convert the binary data to a JSON object that can be used directly by the platform. In this case, it is not necessary to define custom uplink method unless you want to do some extra processing like incorporate calculated fields.
-* **JSON Object from custom decoder: **If the TTN application defines `Custom`payload format and provides a `decoder` function, this function will receive the output from TTN function. In this case, creating a custom uplink method will be redundant, so create the funtion in TTN, or in the plugin.
+* **JSON Object from custom decoder:** If the TTN application defines `Custom`payload format and provides a `decoder` function, this function will receive the output from TTN function. In this case, creating a custom uplink method will be redundant, so create the funtion in TTN, or in the plugin.
 
 The output of this method must be always a JSON object containing the information that is necessary to be used by the platform. In the following, there is an uplink method that converts base64 data into a JSON object with `temperature` and `humidity` parsed from the binary data.
 

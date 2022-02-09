@@ -76,7 +76,7 @@ Thinger.io is a platform in constant growth, our development team is continuousl
 
 If you have identified any feature that is not included on this list, please feel free to send us your request to info@thinger.io.&#x20;
 
-**What if my company already needs one of these future features? **
+**What if my company already needs one of these future features?**&#x20;
 
 The features that are on this list will be developed soon, the order has been set according to priorities and in an incremental logic, that optimizes our resources, however, it is possible to anticipate the development of some features if there are required to create any project, if you are in this situation, you can contact us and we will study how to collaborate to reorganize resources and anticipate the feature development.&#x20;
 

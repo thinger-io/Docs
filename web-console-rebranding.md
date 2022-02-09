@@ -36,14 +36,14 @@ If the Domain Name is valid, the form context will expand allowing to complete t
 
 All the next elements are non-mandatory, so can be left empty and the system will remove their buttons from the main menu:
 
-* **Domain Name: **Is the URL of the new rebranded web console. This Web Domain needs to be introduced in the system as is explained in the "Custom Web Domain" section.&#x20;
-* **Description: **Place here some additional information about the rebranding profile in order to identify it from the others.
+* **Domain Name:** Is the URL of the new rebranded web console. This Web Domain needs to be introduced in the system as is explained in the "Custom Web Domain" section.&#x20;
+* **Description:** Place here some additional information about the rebranding profile in order to identify it from the others.
 * **Page title:** Identificator for the web browser tabs
-* **Page URL: **To introduce link to the company, customer or project website
+* **Page URL:** To introduce link to the company, customer or project website
 * **Company Name:** Name of the project, customer or company this rebranding belongs to.&#x20;
-* **Contact Email:** address for the main menu"Email" button** **that the users are going to contact for support.
-* **Twitter Account:  **Social media profile can be added by placing here the complete URL of the twitter profile.
-* **Copyright: **The bottom of the website includes a copyright declaration that can be customized here to protect the rebranding rights. &#x20;
+* **Contact Email:** address for the main menu"Email" button **** that the users are going to contact for support.
+* **Twitter Account:**  Social media profile can be added by placing here the complete URL of the twitter profile.
+* **Copyright:** The bottom of the website includes a copyright declaration that can be customized here to protect the rebranding rights. &#x20;
 
 ### Custom Logotypes
 

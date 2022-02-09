@@ -4,17 +4,17 @@ description: Connecting IoT devices in minutes
 
 # QUICK START
 
-## Quick Start Guide <a href="quick-start-guide" id="quick-start-guide"></a>
+## Quick Start Guide <a href="#quick-start-guide" id="quick-start-guide"></a>
 
 To start working with Thinger.io just [**create a free account in our cloud platform**](https://console.thinger.io/#!/signup) and follow the next steps to configure and connect your first IoT device.
 
-### 1. Create Device <a href="1-create-device" id="1-create-device"></a>
+### 1. Create Device <a href="#1-create-device" id="1-create-device"></a>
 
 Using `Devices` menu tab, just click in `Add Device`button. We recommend starting with a compatible Arduino Framework device (ESP2666, ESP32, MKR1010, etc), so, chose Generic Device in `Device Type`and fill the form with the `Device Id`, `Name`, `Description` and `Credentials` you prefer.&#x20;
 
 ![](https://gblobscdn.gitbook.com/assets%2F-LpXqB3J1BMD5s4OpYSg%2F-LsN7P6PowUddTLYvGOA%2F-LsN9gb0xOpK0UNdi-vR%2Fimage.png?alt=media\&token=0771fea4-13c3-4fdc-b419-a42dbe1e63cd)
 
-### 2. Connect Device <a href="2-connect-device" id="2-connect-device"></a>
+### 2. Connect Device <a href="#2-connect-device" id="2-connect-device"></a>
 
 After provisioning the device at Thinger.io cloud, it is the moment to configure it in the Hardware device. there are many different hardware supports and communication technologies but Thinger.io allows using all of them:
 
@@ -28,13 +28,13 @@ The most suitable devices to start working with Thinger.io are the ESP8266 or ES
 
 ![](<.gitbook/assets/image (31).png>)
 
-The basic example contains two simple resources to send and retrieve to your device, i.e., controlling a digital pin, or reading a value from the device.  It can be modified with many different functionalities that we have explained at the [**Coding**](coding-guide/)** Guide **section.  After modifying the source code, just flash your device again and wait for the device connection.
+The basic example contains two simple resources to send and retrieve to your device, i.e., controlling a digital pin, or reading a value from the device.  It can be modified with many different functionalities that we have explained at the [**Coding**](coding/coding-guide.md) **Guide** section.  After modifying the source code, just flash your device again and wait for the device connection.
 
 {% hint style="success" %}
 Find additional information about Thinger.io devices in the next sections:&#x20;
 
 1. ****[**Compatible Arduino and Linux devices**](devices.md)****
-2. ****[**Zero to Hero Thinger.io Firmware Coding Guide **](coding-guide/#sketch-overview)****
+2. ****[**Zero to Hero Thinger.io Firmware Coding Guide** ](coding/coding-guide.md#sketch-overview)****
 3. ****[**Connection Troubleshooting Guide**](https://docs.thinger.io/coding/good-practices-and-troubleshooting)****
 {% endhint %}
 {% endtab %}
@@ -73,7 +73,7 @@ Any individual Sigfox or LoraWAN device can be integrated using our API as HTTP 
 {% endtab %}
 {% endtabs %}
 
-### 3. Devices & Data management <a href="3-devices-and-data-management" id="3-devices-and-data-management"></a>
+### 3. Devices & Data management <a href="#3-devices-and-data-management" id="3-devices-and-data-management"></a>
 
 Each device can be managed through the "Device Dashboard". This interface shows connection data and also allows checking the "device API" with raw device data representation.
 
@@ -83,7 +83,7 @@ Thinger.io provides bidirectional communication, so it is possible to retrieve d
 
 ![](https://gblobscdn.gitbook.com/assets%2F-LpXqB3J1BMD5s4OpYSg%2F-Lt5gEwTpqNw9VtvwFCV%2F-Lt5hV2FIioDNOVvDr0o%2Fimage.png?alt=media\&token=409ed146-1d4e-45dd-812c-531ce4d25d6d)
 
-### 4. Store, Show & Share Data <a href="4-store-show-and-share-data" id="4-store-show-and-share-data"></a>
+### 4. Store, Show & Share Data <a href="#4-store-show-and-share-data" id="4-store-show-and-share-data"></a>
 
 Thinger.io provides three essential tools to work with devices data that are the basis for creating any IoT project, next tabs shows each tool introduction:
 
@@ -97,7 +97,7 @@ To **store** **device data** in a scalable way, programming different sampling i
 {% endtab %}
 
 {% tab title="Dashboards" %}
-Panels with **customizable widgets **that can be created within minutes using drag'n drop technology, to show real-time and stored data.
+Panels with **customizable widgets** that can be created within minutes using drag'n drop technology, to show real-time and stored data.
 
 {% content-ref url="features/dashboards.md" %}
 [dashboards.md](features/dashboards.md)
@@ -113,7 +113,7 @@ Extend the devices interoperatibility by using endpoints to interact with other 
 {% endtab %}
 
 {% tab title="Access Tokens" %}
-Dashboards, Data buckets or Device resources can be easily shared with third parties using **Access Tokens **and our **API.**
+Dashboards, Data buckets or Device resources can be easily shared with third parties using **Access Tokens** and our **API.**
 
 {% content-ref url="features/access-tokens.md" %}
 [access-tokens.md](features/access-tokens.md)
@@ -121,7 +121,7 @@ Dashboards, Data buckets or Device resources can be easily shared with third par
 {% endtab %}
 {% endtabs %}
 
-### 5. Extend Thinger.io <a href="5-extend-thinger-io" id="5-extend-thinger-io"></a>
+### 5. Extend Thinger.io <a href="#5-extend-thinger-io" id="5-extend-thinger-io"></a>
 
 Thinger.io platform can be complemented with many different Internet services using **Plugins** that can be found and deployed within seconds Just going to our marketplace and selecting it.
 

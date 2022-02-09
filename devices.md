@@ -8,7 +8,7 @@ description: >-
 
 As there are many different IoT hardware available nowadays, this section is divided in different categories:&#x20;
 
-**Arduino compatible devices **such as Arduino MKR WiFi 1010, Arduino GSM 1400, ESP8266, ESP32, etc. In general, any hardware with Internet connectivity that can be programmed on Arduino IDE.
+**Arduino compatible devices** such as Arduino MKR WiFi 1010, Arduino GSM 1400, ESP8266, ESP32, etc. In general, any hardware with Internet connectivity that can be programmed on Arduino IDE.
 
 {% content-ref url="broken-reference" %}
 [Broken link](broken-reference)

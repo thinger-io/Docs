@@ -35,9 +35,9 @@ To include the first member, just press the green `Add Member` button, that will
 ![](<.gitbook/assets/image (20).png>)
 
 * **User ID:** Note that it must necessarily belong to a user account of the same Thinger.io instance. It is not possible to share projects with users from other instances or from the community server, since they are not in the same database.
-* **Enabled: **This switch allows to enable or disable the user on the project without destroying it's shared configuration.&#x20;
-* **Allow: **This section allows assigning specific permissions to the selected user account and also displays current permissions.&#x20;
-* **Deny: **This section denies specific permissions to the selected user account, so for example if in the `Allow` section we provided full authorization to device capacities, this ones can be used to deny only the ability to delete the device.
+* **Enabled:** This switch allows to enable or disable the user on the project without destroying it's shared configuration.&#x20;
+* **Allow:** This section allows assigning specific permissions to the selected user account and also displays current permissions.&#x20;
+* **Deny:** This section denies specific permissions to the selected user account, so for example if in the `Allow` section we provided full authorization to device capacities, this ones can be used to deny only the ability to delete the device.
 
 #### Managing member permissions&#x20;
 

@@ -18,12 +18,12 @@ The values shown bring together the connection data of all devices and user acco
 
 * **HTTP Client Connections:** Connections made by devices that call the server's REST API.
 * **HTTP Server Connections:** Made by running plugins.
-* **Device Connections: **Is the number of Thinger.io software client devices connected.
+* **Device Connections:** Is the number of Thinger.io software client devices connected.
 * **HTTP Websockets:** Can be both thinger.io software client devices or web consoles opened.
 * **HTTP SSE:** This is the number of server events that have been sent.
 * **CPU Usage:** Is the load of the microprocessor, it increases with intensive data processing uses
-* **RAM Usage: **Amount of ram memory consumption, is actually the most critical variable, as increases a lot with the number deployed plugins.&#x20;
-* **Disk Usage: **Amount of SSD consumed&#x20;
+* **RAM Usage:** Amount of ram memory consumption, is actually the most critical variable, as increases a lot with the number deployed plugins.&#x20;
+* **Disk Usage:** Amount of SSD consumed&#x20;
 
 Thinger.io IoT server has been developed with a great effort to improve computational efficiency, allowing to create large device networks and ingest thousands of data points per second with minimum overhead in the host. However, there are some factors that can increase the load on the server and cause malfunctions or data losses, such as:
 

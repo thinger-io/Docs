@@ -10,7 +10,7 @@ description: >-
 ## Coding Good Practices
 
 * First of all, read the platform documentation, it is strongly recommended to use the example codes provided there when creating new firmware.
-* Thinger resources definition code must be introduced in the` setup()` function or any other function that is executed just one time in the program source code.
+* Thinger resources definition code must be introduced in the `setup()` function or any other function that is executed just one time in the program source code.
 * `thing.handle()` instruction must be included in the `loop()` function or in the main recurrent execution function of the program source code.
 * Avoid using `delay()` or any other locking instructions when coding for IoT purposes. Using it will make your device losing the connection with the network, which will result in continuous reconnection processes. If the program requires timing functionalities, it is possible to use non-locking structures for example:&#x20;
 
@@ -111,9 +111,9 @@ When this command is included, the program will print all the communication traz
 | ---------------------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Can't connect to network                 | Wrong network credentials           | <ul><li>Check the network credentials as WiFi SSID, PASSWORD, or GSM configuration has been properly introduced </li><li>Check network signal</li></ul>                                                 |
 | Can't connect to Thinger.io Server       | Wrong Thinger.io server instance ID | <ul><li>The device is trying to connect to standard Thinger.io server, set your server IP/web domain by using the definition #define THINGER_SERVER "&#x3C;instance_URL>"</li></ul>                     |
-| Error while connecting Thinger.io server | SSL issue                           | <p></p><ul><li>Disable the secure TLS/SSL connection by pacing<code>#define _DISABLE_TLS_ </code>on the top of the sketch</li><li>Using MQTT try to test non SSL connection through 1883 port</li></ul> |
+| Error while connecting Thinger.io server | SSL issue                           | <p></p><ul><li>Disable the secure TLS/SSL connection by pacing<code>#define _DISABLE_TLS_</code> on the top of the sketch</li><li>Using MQTT try to test non SSL connection through 1883 port</li></ul> |
 | Authentication Error                     | Wrong account or device credentials | <ul><li>Check the username, Device ID and Device Credentials are the same as the platform configuration</li></ul>                                                                                       |
-| No debug trace                           | Coding problem                      | <ul><li>Delete delay() instructions</li><li>Verify sensors connection and other libraries behavior</li><li>Identify and delete<code> while(1)</code> loops</li></ul>                                    |
+| No debug trace                           | Coding problem                      | <ul><li>Delete delay() instructions</li><li>Verify sensors connection and other libraries behavior</li><li>Identify and delete <code>while(1)</code> loops</li></ul>                                    |
 
 ## Support / find help
 
@@ -123,7 +123,7 @@ If after following these instructions it was impossible to find a solution, we h
 
 ### **Community Discussion Forum**
 
-It is a forum ([**accessible here**](https://community.thinger.io)) created to provide developers a place to share projects, knowledges and doubts with other Thinger.io users. Actually is the best way to obtain fast and free assistance to development problems because most of the doubts have probably been asked and solved before by other developers. So the **first step is to use the search bar **to find a similar post:
+It is a forum ([**accessible here**](https://community.thinger.io)) created to provide developers a place to share projects, knowledges and doubts with other Thinger.io users. Actually is the best way to obtain fast and free assistance to development problems because most of the doubts have probably been asked and solved before by other developers. So the **first step is to use the search bar** to find a similar post:
 
 ![](<../.gitbook/assets/image (323).png>)
 
@@ -133,7 +133,7 @@ Making proper use of this resource means using the browser in order to find old 
 * It is preferable to write in **English** language, as the more people can understand your problem, the more can help you providing different opinions or solutions.
 * Use an attractive and descriptive title and select the most accurate category
 * Write a proper description of your problem, including some **description of the context**, use case or objectives or the project in order to help other people to understand the situation.&#x20;
-* Don't forget to provide all the material that will be required to replicate the problem such as: **Source code,** Libraries and PCB specification, Compiler output and** Debug connection trace**, as well as** thinger.io configuration. **
+* Don't forget to provide all the material that will be required to replicate the problem such as: **Source code,** Libraries and PCB specification, Compiler output and **Debug connection trace**, as well as **thinger.io configuration.**&#x20;
 * Be polite, remember that other developers are not compelled to help you and if they do it is with good intentions
 
 ### **Extended Support**

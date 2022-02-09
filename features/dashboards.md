@@ -38,7 +38,7 @@ By default, the dashboard appears empty and in view mode, so it is not possible 
 
 The dashboard edition mode allows moving, or resizing existing widgets, but also enables different options using the left-side buttons such as:
 
-* **Add Widgets**:  To create new elements from the list. There are two different widget types depending on their objective: **Display widgets** allow to show real-time data from devices or historical data from buckets, and **Control Widgets **allows to connect the dashboard with devices functionalities in order to control them in real-time.&#x20;
+* **Add Widgets**:  To create new elements from the list. There are two different widget types depending on their objective: **Display widgets** allow to show real-time data from devices or historical data from buckets, and **Control Widgets** allows to connect the dashboard with devices functionalities in order to control them in real-time.&#x20;
 * **Add Tab**: This button allows to create an additional dashboard tab that will appear associated to the original one in order to provide simple navigation over related boards.&#x20;
 * **Settings**: There are multiple parameters that can be configured in order to set the dashboard behavior, such as the number of columns, the background image or the sharing options. &#x20;
 
@@ -89,7 +89,7 @@ The next image shows four different representations of the same dataset and time
 ![](<../.gitbook/assets/image (170).png>)
 
 {% hint style="warning" %}
-Note that Data Aggregation system is only available in **private server** instances with **InfluxDB **
+Note that Data Aggregation system is only available in **private server** instances with **InfluxDB**&#x20;
 {% endhint %}
 
 ### Tachometer Chart
@@ -114,7 +114,7 @@ This image is representing an example in which the measured variable is reaching
 
 * **Chart Input**: Configure how to feed the values to the tachometer chart. It is possible to feed the information from a connected **device** or from a **data bucket**
   * **From Device Resource**: With this option it is necessary to select a device (that must be connected to provide information) and specify the resources to plot. The following figure is an example that is selecting the device `deviceA`, and the resource `millis` from the device. Notice that when a time series widget is feed from a device, it will not keep the information if the dashboard is closed or refreshed, as it is just real-time data from your device to your dashboard. You can also select between different refresh modes, like sampling at different intervals (that can be updated online), or the chart is updated by the device.
-  * **From Device Property: **This option allows retrieving data from device properties, which is really useful to show device configuration data, but also is the better way to show real time (or last received) data from HTTP devices.&#x20;
+  * **From Device Property:** This option allows retrieving data from device properties, which is really useful to show device configuration data, but also is the better way to show real time (or last received) data from HTTP devices.&#x20;
   * **From Data Bucket**: With this option, the widget will take the information from a given bucket to plot the historic information on it. So, it is necessary to just select the bucket identifier created in your account. If the bucket is composed by multiple variables, it will allow selecting the variables to plot, like in the following picture. When the information is selected from the data bucket, you will require to establish a data timeframe to be displayed, that can be relative to the current time, or an absolute period between two dates.
   * **Manual Data**: It is always possible to manually introduce values in order to create simulate the behavior of the widget.
 
@@ -147,7 +147,7 @@ Then, the Led indicator menu tab allows selecting the data source, that can be a
 
 * **Chart Input**: Configure how to feed the values to the tachometer chart. It is possible to feed the information from a connected **device** or from a **data bucket**
   * **From Device Resource**: With this option it is necessary to select a device (that must be connected to provide information) and specify the resources to plot. The following figure is an example that is selecting the device `deviceA`, and the resource `millis` from the device. Notice that when a time series widget is feed from a device, it will not keep the information if the dashboard is closed or refreshed, as it is just real-time data from your device to your dashboard. You can also select between different refresh modes, like sampling at different intervals (that can be updated online), or the chart is updated by the device.
-  * **From Device Property: **This option allows retrieving data from device properties, which is really useful to show device configuration data, but also is the better way to show real time (or last received) data from HTTP devices.&#x20;
+  * **From Device Property:** This option allows retrieving data from device properties, which is really useful to show device configuration data, but also is the better way to show real time (or last received) data from HTTP devices.&#x20;
   * **From Data Bucket**: With this option, the widget will take the information from a given bucket to plot the historic information on it. So, it is necessary to just select the bucket identifier created in your account. If the bucket is composed by multiple variables, it will allow selecting the variables to plot, like in the following picture. When the information is selected from the data bucket, you will require to establish a data timeframe to be displayed, that can be relative to the current time, or an absolute period between two dates.
   * **Manual Data**: It is always possible to manually introduce values in order to create simulate the behavior of the widget.
 
@@ -156,7 +156,7 @@ Finally, the "Display Options" tab allows to custom the led behavior in the next
 * **Led Size**: Configure the diameter of the led spot pixels
 * **Color**: configures the led default color, and also allows creating color ranges by pressing the green "+" button on the right side.
   * **Color ranges**: Each time that the "+" button is pressed, a new color range is included, allowing to define a new range and the color that will be shown when the selected input value belongs to this range. &#x20;
-  * **Blinking led option: **The right side switches allows adding a blinking behavior to the led when this range profile begins active. It is also possible to disable the blinking by pressing over the led widget.&#x20;
+  * **Blinking led option:** The right side switches allows adding a blinking behavior to the led when this range profile begins active. It is also possible to disable the blinking by pressing over the led widget.&#x20;
 
 ![](<../.gitbook/assets/image (10).png>)
 
@@ -282,7 +282,7 @@ To start using the HTML widget, first step is configure the common Thinger.io wi
 * **Subtitle**: Optional subtitle for the widget.
 * **Background**: Optional color for the widget background (defaults to white).
 
-Then, selecting HTML widget type, it is possible to introduce the data source, that can be a manual value, a [**Device Resource**](https://docs.thinger.io/coding#adding-resources)**, **a Device Property, or a [**Data Bucket**](buckets.md). And finally, it is possible to define custom HTML code to be displayed.
+Then, selecting HTML widget type, it is possible to introduce the data source, that can be a manual value, a [**Device Resource**](https://docs.thinger.io/coding#adding-resources)**,** a Device Property, or a [**Data Bucket**](buckets.md). And finally, it is possible to define custom HTML code to be displayed.
 
 #### From Code Snippet
 
@@ -881,7 +881,7 @@ This widget has the possibility to be shown on different appearances, that can b
 
 * [x] **Switch** is the standard configuration with a little horizontal switch
 * [x] **Button** which is an improved face that can be configured with different colors and icons
-* [x] **Push button **it configurates the button to be automatically switched off when it is not being clicked. This option is perfect to implement toggle switches behavior on the devices.
+* [x] **Push button** it configurates the button to be automatically switched off when it is not being clicked. This option is perfect to implement toggle switches behavior on the devices.
 
 Using Button or Push button configuration, it is possible to configure the next parameters:
 

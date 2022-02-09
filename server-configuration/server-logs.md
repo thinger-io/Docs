@@ -21,11 +21,11 @@ Follow the next steps to start logging the events of the server instance:
 
 The structure of the log entries consists of six columns in which the following data is specified:
 
-* **Date: **YYYY-MM-DD
+* **Date:** YYYY-MM-DD
 * **Hour:** HH:MM:SS.SSS
 * **PC**: Program Counter in seconds
 * **Working Thread:** Thinger.io program has been created to optimize host architecture with multithread execution. This column identifies the thread that managed each event.
-* **Program Module: **This column informs about the feature that is being used by each event.
+* **Program Module:** This column informs about the feature that is being used by each event.
 * **Message:** Is the log content including a message type identification and a description
 
 \

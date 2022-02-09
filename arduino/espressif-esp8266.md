@@ -14,7 +14,7 @@ This device can be directly programmed from the Arduino IDE. You can follow the 
 
 ![Arduino Preferences - Additional Boards Manager](https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/b9ef9df0c95c1bff0e9d7db258a355bb44374b06.png)
 
-> Next, go to the Boards manager to install the ESP8266 package.** Tools** > **Boards** > **Board manager...** Then search and install the esp8266 package.
+> Next, go to the Boards manager to install the ESP8266 package. **Tools** > **Boards** > **Board manager...** Then search and install the esp8266 package.
 
 ![](https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/efdec170e35cb296b895dd92b9868f8e0a9d3cd9.png)
 

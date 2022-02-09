@@ -34,7 +34,7 @@ A specific resource value can be updated by pressing the blue `Update` button, a
 
 ![pull to refresh](../.gitbook/assets/refresh.jpg)
 
-**Posting **a resource just requires to fill the input fields and press the green button. If you don't fill some field, the post is done with the latest value (in grey).
+**Posting** a resource just requires to fill the input fields and press the green button. If you don't fill some field, the post is done with the latest value (in grey).
 
 ![input resource](../.gitbook/assets/input.jpg)
 

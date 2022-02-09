@@ -20,7 +20,7 @@ They are devices deployed with the same objective, which perform the same functi
 
 ### &#x20;Creating Asset Types
 
-To create a new device type go to the `Assets > Types `tab, displaying the list of previously created asset types if any. Then clicking on the green "Add Asset Type" button, will open the "new Asset Type" form, in which the identifiers must be filled in:&#x20;
+To create a new device type go to the `Assets > Types` tab, displaying the list of previously created asset types if any. Then clicking on the green "Add Asset Type" button, will open the "new Asset Type" form, in which the identifiers must be filled in:&#x20;
 
 ![](<../.gitbook/assets/image (343).png>)
 
@@ -94,7 +94,7 @@ It is also possible to completely delete an asset type by selecting its profile 
 
 Properties created in an Asset Type will be inherited by every associated device. This establishes a scalable way to configure large networks of devices in a short time and easily. The properties allow you to enter configuration parameters or any other context information you want to make available to the devices or other resources of the platform.
 
-To create a new property on an Asset Type, go to `Asset > Types` section of the main menú, then acess the Type profile to be modified and select the properties tab on the right-side menu of the configuration panel. Then, creating a property only requires to press on `+Add `button and implement a Json file format to structure the data that wants to be included on the property.
+To create a new property on an Asset Type, go to `Asset > Types` section of the main menú, then acess the Type profile to be modified and select the properties tab on the right-side menu of the configuration panel. Then, creating a property only requires to press on `+Add` button and implement a Json file format to structure the data that wants to be included on the property.
 
 ![](<../.gitbook/assets/image (347).png>)
 
@@ -115,10 +115,10 @@ Each defined geofence will create in the lower panel a profile that will allow t
 ![](<../.gitbook/assets/image (331).png>)
 
 * **name**: Identification of the geofence area
-* **On Enter**: Allows selecting an endpoint that will be called automatically when the devices just **entered **the area, I.e. when the last position was out of the border and the new position is into the border.&#x20;
-* **On Exit**: Allows selecting an endpoint that will be automatically called when the devices are just **leaving **the area, i.e when the last position was into the geofence area and the new position is out.&#x20;
-* **While Inside**: This endpoint will be always called when the device is** within the area**. So it is preferable not to use this option if the device sampling interval is short
-* **While Outside**: This endpoint will be always called when the device is** out of the area**. So it is preferable not to use this option if the device sampling interval is short
+* **On Enter**: Allows selecting an endpoint that will be called automatically when the devices just **entered** the area, I.e. when the last position was out of the border and the new position is into the border.&#x20;
+* **On Exit**: Allows selecting an endpoint that will be automatically called when the devices are just **leaving** the area, i.e when the last position was into the geofence area and the new position is out.&#x20;
+* **While Inside**: This endpoint will be always called when the device is **within the area**. So it is preferable not to use this option if the device sampling interval is short
+* **While Outside**: This endpoint will be always called when the device is **out of the area**. So it is preferable not to use this option if the device sampling interval is short
 * **Color**: To select the color of the representation on the geofences map.
 * **Enabled**: Each geofence can be disabled/enabled using the right-side switch.&#x20;
 

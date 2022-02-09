@@ -20,7 +20,7 @@ Here it is necessary to configure different parameters:
 * **Bucket name**: Use a representative name to remember the bucket scope, like `WeatherData`.
 * **Bucket description**: Fill here any description with more details, like Temperature and humidity in house.
 * **Enabled**: Data bucket recording can be enabled or disabled. Just switch it on to enable it.
-* **Data source: **This parameter allows setting the behavior of the data bucket by selecting the data source and also the sampling method. As there are many different options, this feature is detailed in the section below:&#x20;
+* **Data source:** This parameter allows setting the behavior of the data bucket by selecting the data source and also the sampling method. As there are many different options, this feature is detailed in the section below:&#x20;
 
 The sections below explains the different data bucket data acquisition modes and timing configurations:&#x20;
 
@@ -30,7 +30,7 @@ The sections below explains the different data bucket data acquisition modes and
 __\
 __Note that this option is only compatible with devices that has been provided with Thinger.io Software client libraries (Arduino, Linux or Raspberry), and it will only work properly if the device keeps permanent connection with the server.
 
-* **Sampling interval:  **Configure the bucket profile to retrieve data from device resources in an specific timing, that can be changed on demand, without modifying device sketch. Other benefit is that no additional codification is needed to implement this feature and start storing data. The next basic code example will store two variables in the data bucket when using the "sampling interval" configuration.
+* **Sampling interval:**  Configure the bucket profile to retrieve data from device resources in an specific timing, that can be changed on demand, without modifying device sketch. Other benefit is that no additional codification is needed to implement this feature and start storing data. The next basic code example will store two variables in the data bucket when using the "sampling interval" configuration.
 
 ```
 // define the resource just once in the setup() section
@@ -41,7 +41,7 @@ thing["TempHum"] >> [](pson &out){
 };
 ```
 
-* **Update by Device: ** This options allows the device to stream the information when required, i.e., by raising an event when detected. In this case, refresh mode must be set at the `Update by Device` option while configuring the bucket, and the device source code will contain an streaming instruction for the resources as shown below (also described in more detail [**here**](http://docs.thinger.io/arduino/#coding-streaming-resources)). This way, the data bucket will be listening  to a device resource, and its information is registered in every stream call.
+* **Update by Device:** This options allows the device to stream the information when required, i.e., by raising an event when detected. In this case, refresh mode must be set at the `Update by Device` option while configuring the bucket, and the device source code will contain an streaming instruction for the resources as shown below (also described in more detail [**here**](http://docs.thinger.io/arduino/#coding-streaming-resources)). This way, the data bucket will be listening  to a device resource, and its information is registered in every stream call.
 
 ```cpp
 /*"TempHum" resource was declared in the setup() function
@@ -62,7 +62,7 @@ This instruction should NEVER be called each loop execution or in lower than 60s
 
 ### **From device Write Call**
 
-&#x20;This option sets the bucket in passive mode, waiting to be called by any Thinger.io "Generic Device" (with Thinger.h libraries on it)** **by means of the the `write_bucket()` method, as shown in the example code below. The special feature of this mode is that it allows to store data from different devices in the same data bucket.
+&#x20;This option sets the bucket in passive mode, waiting to be called by any Thinger.io "Generic Device" (with Thinger.h libraries on it) **** by means of the the `write_bucket()` method, as shown in the example code below. The special feature of this mode is that it allows to store data from different devices in the same data bucket.
 
 Here is an example of an ESP8266 device writing information to a bucket using the `write_bucket` function:
 
@@ -117,7 +117,7 @@ Once the data bucket has been configured, and it started to record data from a d
 
 In order to make bulk data upload or buckets backup processes, the data bucket system has been provided with an import feature that is able to retrieve information from .csv files from a Thinger.io [**File System**](../file-system.md) and store its data using the timestream specified in the file rows.&#x20;
 
-Note that using this feature has** few restrictions**.
+Note that using this feature has **few restrictions**.
 
 1. Each row must contain just one variable and use ";" separation marc&#x20;
 2. The file must contain a column identificated as "**ts**" with the Linux Timestream in milliseconds, that will be used to create the temporary serial.
@@ -134,7 +134,7 @@ The import process allows to fill the data bucket with the same data contained i
 
 To execute an import, the following steps must be carried out:
 
-1. Create a new File System ([following **these** instructions](../file-system.md))** **profile with public access configuration or open an existing one and upload the .csv file to be imported into the File System.&#x20;
+1. Create a new File System ([following **these** instructions](../file-system.md)) **** profile with public access configuration or open an existing one and upload the .csv file to be imported into the File System.&#x20;
 2. Create the new data bucket
 3. Select the source File System and place the file identifier in the "Filename" section.
 4. Click on "Import Data" button.
@@ -147,10 +147,10 @@ It is possible to export all your stored information in different file formats, 
 
 &#x20;The data bucket download configurable parameters are:
 
-* **Data format: **To obtain CSV, ARFF or JSON format file
-* **Time format: ** Timestamp or ISO date format
-* **Export range: **This section allows downloading the complete data bucket or selecting a custom range.&#x20;
-* **Callback: **To set how the ending of the data bucket export process will be notified. Currently there are two ways:&#x20;
+* **Data format:** To obtain CSV, ARFF or JSON format file
+* **Time format:** Timestamp or ISO date format
+* **Export range:** This section allows downloading the complete data bucket or selecting a custom range.&#x20;
+* **Callback:** To set how the ending of the data bucket export process will be notified. Currently there are two ways:&#x20;
   * Sending an email to the account associated address&#x20;
   * Calling to an endpoint. This option allows sending the download link to third parties using an [**Endpoint profile**](endpoints-1.md)**.**
 

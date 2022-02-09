@@ -19,7 +19,7 @@ Despite we don't have released it yet, still working on creating a large partner
 
 #### IoT service providers
 
-* ****[**Sigfox: **](https://sigfox.com)global communication service provider for IoT
+* ****[**Sigfox:** ](https://sigfox.com)global communication service provider for IoT
 * ****[**Node-RED**](https://nodered.org)**:** Open Source-Rule Engine for IoT projects
 * ****[**Talent Swarm**](https://talentswarm.com)**:** Industrial Digital Tweens experts
 * ****[**UC3M GIAA**](http://portal.uc3m.es/portal/page/portal/grupos\_investigacion/giaa)**:** Advanced Artificial Intelligence and Data Analytics experts
@@ -27,14 +27,14 @@ Despite we don't have released it yet, still working on creating a large partner
 
 **Hardware providers and manufacturers**
 
-* ****[**Espressif Systems:**](https://www.espressif.com)** **designs a range of high-performance Wi-Fi+Bluetooth/BLE chipsets and modules.
+* ****[**Espressif Systems:**](https://www.espressif.com) **** designs a range of high-performance Wi-Fi+Bluetooth/BLE chipsets and modules.
 * ****[**Theobroma Systems**](https://www.theobroma-systems.com)**:** High performance Hardware developers for devices, gateways and servers.&#x20;
 * ****[**La Siesta Tech**](http://www.lasiesta.tech)**:** Hardware developers and IoT consultants
-* ****[**SeeedStudio**](https://www.seeedstudio.com/fusion\_pcb.html)**: **Whether you are a developer, technical supplier, or industry player, we provide products and services for your IoT needs.
+* ****[**SeeedStudio**](https://www.seeedstudio.com/fusion\_pcb.html)**:** Whether you are a developer, technical supplier, or industry player, we provide products and services for your IoT needs.
 
 ### How to become a partner
 
-There are multiple ways in which we can collaborate depending on your business model and services, so do not hesitate on writing us your proposal at info@thinger.io or fill** **[**this form**](https://forms.gle/1ZPSxTuAiDvHJd4AA)** **to benefit of better contracting conditions, access to our developers community or being an active part of Thinger.io Platform contributors, that are helping us to continue growing this technology in the best direction.&#x20;
+There are multiple ways in which we can collaborate depending on your business model and services, so do not hesitate on writing us your proposal at info@thinger.io or fill **** [**this form**](https://forms.gle/1ZPSxTuAiDvHJd4AA) **** to benefit of better contracting conditions, access to our developers community or being an active part of Thinger.io Platform contributors, that are helping us to continue growing this technology in the best direction.&#x20;
 
 ## Other Networks
 
@@ -51,7 +51,7 @@ There are multiple ways in which we can collaborate depending on your business m
 
 * ****[**Crunchbase** a platform for finding business information about private and public companies](https://www.crunchbase.com/organization/thinger-io#section-overview)
 * ****[**Iotone** an advisory firm focused on industrial digitalization.](https://www.iotone.com/supplier/thinger.io/v2348)
-* ****[**Angellist **Search tech & startup jobs, find new tech products, and invest in startups](https://angel.co/company/thinger-io)
+* ****[**Angellist** Search tech & startup jobs, find new tech products, and invest in startups](https://angel.co/company/thinger-io)
 
 ## Community survey&#x20;
 

@@ -15,10 +15,10 @@ Each defined geofence will create in the lower panel a profile that will allow t
 ![](<../.gitbook/assets/image (331).png>)
 
 * **name**: Identification of the geofence area
-* **On Enter**: Allows selecting an endpoint that will be called automatically when the devices just **entered **the area, I.e. when the last position was out of the border and the new position is into the border.&#x20;
-* **On Exit**: Allows selecting an endpoint that will be automatically called when the devices are just **leaving **the area, i.e when the last position was into the geofence area and the new position is out.&#x20;
-* **While Inside**: This endpoint will be always called when the device is** within the area**. So it is preferable not to use this option if the device sampling interval is short
-* **While Outside**: This endpoint will be always called when the device is** out of the area**. So it is preferable not to use this option if the device sampling interval is short
+* **On Enter**: Allows selecting an endpoint that will be called automatically when the devices just **entered** the area, I.e. when the last position was out of the border and the new position is into the border.&#x20;
+* **On Exit**: Allows selecting an endpoint that will be automatically called when the devices are just **leaving** the area, i.e when the last position was into the geofence area and the new position is out.&#x20;
+* **While Inside**: This endpoint will be always called when the device is **within the area**. So it is preferable not to use this option if the device sampling interval is short
+* **While Outside**: This endpoint will be always called when the device is **out of the area**. So it is preferable not to use this option if the device sampling interval is short
 * **Color**: To select the color of the representation on the geofences map.
 * **Enabled**: Each geofence can be disabled/enabled using the right-side switch.&#x20;
 
@@ -36,7 +36,7 @@ To configure a geofence in a certain state you only need to click on the checkbo
 
 ### Configuring Devices to work with Geofences
 
-The device code must be prepared to make use of the platform's location services. It is only necessary to include among the variables sent to the platform the corresponding cardinal coordinates with the identifiers in their payload `"lat", "lng"`, `"lat", "long"` or` "latitude", "longitude"` as shown in the example of the callback of the HTTP devices:
+The device code must be prepared to make use of the platform's location services. It is only necessary to include among the variables sent to the platform the corresponding cardinal coordinates with the identifiers in their payload `"lat", "lng"`, `"lat", "long"` or `"latitude", "longitude"` as shown in the example of the callback of the HTTP devices:
 
 ![](<../.gitbook/assets/image (362).png>)
 

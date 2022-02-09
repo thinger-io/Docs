@@ -9,7 +9,7 @@ description: Plugin to improve the integration of Sigfox devices
 This plugin is an interface for using Sigfox HTTP Callback feature in an optimized way, providing features to easily integratie these devices with Thinger.io Platform such as automatic device and storage provisioning and both uplink and downlink cloud processing.&#x20;
 
 {% hint style="info" %}
-[Note: Plugins are only available for premium Thinger.io servers. Check** this link** to create your own instance within minutes](https://pricing.thinger.io)
+[Note: Plugins are only available for premium Thinger.io servers. Check **this link** to create your own instance within minutes](https://pricing.thinger.io)
 {% endhint %}
 
 ## Plugin Features
@@ -31,7 +31,7 @@ For a better understanding of the following sections, here is described some bas
 * Device Type: It is a concept that defines a group of devices of the same type, normally sending the same kind of data both in uplink and downlink).&#x20;
 
 {% hint style="info" %}
-[Learn how to configure Sigfox Callback to send data to Thinger.io platform** here **](https://docs.thinger.io/hardware-devices/sigfox#create-sigfox-callback)****
+[Learn how to configure Sigfox Callback to send data to Thinger.io platform **here** ](https://docs.thinger.io/hardware-devices/sigfox#create-sigfox-callback)****
 {% endhint %}
 
 ## Plugin Configuration
@@ -59,11 +59,11 @@ The uplink behaviour allows to configure how the plugin will react on new inform
 The configurable parameters are the following:
 
 * **Auto provision resources:** Enable or disable automatic resource provisioning while receiving messages for non created devices of the same Sigfox "Device Type".&#x20;
-* **Device connection timeout: **When creating a new device, establish the device connection timeout in minutes, so the platform can consider the device as disconnected after a fixed time without receiving a message.&#x20;
-* **Device identifier prefix: **When creating a new device, create it with a custom prefix + the original device id.
-* **Bucket identifier prefix: **When creating a new data bucket associated to the device, create it with a custom prefix + the original device id.
-* **Update device location: **Use the location provided in the gateways information to update de current device location.
-* **Initialize downlink data: **When creating a new device, initialize a custom downlink data, that can be modified and processed in further downlink requests.
+* **Device connection timeout:** When creating a new device, establish the device connection timeout in minutes, so the platform can consider the device as disconnected after a fixed time without receiving a message.&#x20;
+* **Device identifier prefix:** When creating a new device, create it with a custom prefix + the original device id.
+* **Bucket identifier prefix:** When creating a new data bucket associated to the device, create it with a custom prefix + the original device id.
+* **Update device location:** Use the location provided in the gateways information to update de current device location.
+* **Initialize downlink data:** When creating a new device, initialize a custom downlink data, that can be modified and processed in further downlink requests.
 
 ### Payload Processing
 
@@ -106,7 +106,7 @@ This function will receive different inputs depending on how the plugin is calle
 * **JSON Object**: If the downlink call is done for a Thinger.io device that defines a `downlink` property (that is automatically initialized if `Initialize Downlink Data` is configured in the plugin), this method will receive the JSON content of this property. It usually consists on a user-friendly device configuration that should be later encoded to binary in base64.&#x20;
 * **JSON Object**: If the plugin downlink request contains a JSON payload in the POST call, this function will receive this payload instead of the one configured in the device `downlink` property.&#x20;
 
-The output of this method will be a **Base64 String **with the binary information that is going to be sent to Sigfox network.
+The output of this method will be a **Base64 String** with the binary information that is going to be sent to Sigfox network.
 
 {% hint style="warning" %}
 When working with Downlink processes the`Initialize Downlink Data`parameter must be initialized with any data otherwise the processing of the downlink payload will fail
@@ -137,7 +137,7 @@ Use the interface tester to see if your code is correctly procesing the payloads
 
 ## Sigfox Cloud Configuration
 
-After getting Thinger.io Plugin ready for receiving data, the next step is to configure the Sigfox Backend for pushing messages on it. This process has been simplified by the "Sigfox Integration" section of the plugin settings menu, that automatically builds the **HTTP query **and the **Authorization token **that needs to be included into Sigfox Callbacks Manager:
+After getting Thinger.io Plugin ready for receiving data, the next step is to configure the Sigfox Backend for pushing messages on it. This process has been simplified by the "Sigfox Integration" section of the plugin settings menu, that automatically builds the **HTTP query** and the **Authorization token** that needs to be included into Sigfox Callbacks Manager:
 
 ![](<../.gitbook/assets/image (204).png>)
 

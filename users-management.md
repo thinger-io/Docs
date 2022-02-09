@@ -52,7 +52,7 @@ To start working with user's network, scroll down to the "Administration" sectio
 
 ![](<.gitbook/assets/image (369).png>)
 
-Then, pressing the **`+ Add User`** button of the user administration list opens the `User details `form context in which the new user properties can be introduced:
+Then, pressing the **`+ Add User`** button of the user administration list opens the `User details` form context in which the new user properties can be introduced:
 
 ![](<.gitbook/assets/image (371).png>)
 
@@ -75,7 +75,7 @@ Project members are light accounts created to share IoT resources with customers
 
 ![](<.gitbook/assets/image (370).png>)
 
-2\)Then click the  blue  **`Project Members`   **button to show the project member list. Next image shows an empty project list in which a new member can be added:&#x20;
+2\)Then click the  blue  **`Project Members`   **   button to show the project member list. Next image shows an empty project list in which a new member can be added:&#x20;
 
 ![](<.gitbook/assets/image (366).png>)
 
@@ -83,7 +83,7 @@ Project members are light accounts created to share IoT resources with customers
 
 ![](<.gitbook/assets/image (368).png>)
 
-4\) Once a project member has been associated to the project, select the profile and then using the **`Allow`** section to provide permissions to the user or the **`Deny `**section to manage explicitly forbidden actions, it is possible to select the specific resources and operations that can be used by each account.&#x20;
+4\) Once a project member has been associated to the project, select the profile and then using the **`Allow`** section to provide permissions to the user or the **`Deny`** section to manage explicitly forbidden actions, it is possible to select the specific resources and operations that can be used by each account.&#x20;
 
 ### Subscribe developer accounts amount
 

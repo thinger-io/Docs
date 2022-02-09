@@ -18,9 +18,9 @@ Next list details every Thinger.io Private instances advantages:&#x20;
 * **Unlimited** devices, Dashboards, Data Buckets, Access Token & sampling intervals
 * **Plugins** System Deployment with different extensions available.&#x20;
 * **File Storage System** that allows saving context data or any kind of files
-* **Multiple User Support **allows to create and manage individual customer accounts in your server. &#x20;
+* **Multiple User Support** allows to create and manage individual customer accounts in your server. &#x20;
 * **Multi-Tenancy Support** with multiple web-console rebranding profiles and web domains hosted by just one server instance. &#x20;
-* Support for multiple databases with real-time** data aggregation**
+* Support for multiple databases with real-time **data aggregation**
 
 ## Hosting options
 
@@ -36,7 +36,7 @@ Private instances can be deployed within minutes over the main cloud provider ho
 
 ## Managing subscription
 
-The administrator of a private instance of Thinger.io can edit the preferences of the subscription using the management portal, for this you must access the website [**https://thinger.chargebeeportal.com/**](https://thinger.chargebeeportal.com)** **obtaining a One Time Password that will be sent to your email when you execute the request.
+The administrator of a private instance of Thinger.io can edit the preferences of the subscription using the management portal, for this you must access the website [**https://thinger.chargebeeportal.com/**](https://thinger.chargebeeportal.com) **** obtaining a One Time Password that will be sent to your email when you execute the request.
 
 ![](<../../.gitbook/assets/image (316).png>)
 
