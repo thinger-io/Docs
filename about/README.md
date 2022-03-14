@@ -55,24 +55,24 @@ Thinger.io is a platform in constant growth, our development team is continuousl
 * [x] Centralized instances monitoring system
 * [x] ASIO Linux software client
 * [x] Projects & users manager revision
-* [x] OAuth2 Clients
-* [x] NB-IoT integration Client (TCP/UDP)
+* [x] OAuth2 Clients\*
+* [x] NB-IoT integration Client (TCP/UDP)\*
 
 ### 2022
 
-* [ ] Custom plugins support
+* [x] MQTT integration improvement&#x20;
+* [x] InfluxDB tagged data buckets
+* [x] Product Manager
+* [x] Java Script IoT client\*
+* [x] Custom plugins support\*
 * [ ] COAP integration
 * [ ] NB-IoT integration client (COAP)
-* [ ] MQTT integration improvement&#x20;
-* [ ] Java Script IoT client
-* [ ] InfluxDB tagged data buckets
 * [ ] Projects hierarchization
-* [ ] Product Manager&#x20;
 * [ ] Python IoT Client
 * [ ] Alerts manager&#x20;
 * [ ] Reporting tool
 
-
+\*Released but not yet documented
 
 If you have identified any feature that is not included on this list, please feel free to send us your request to info@thinger.io.&#x20;
 
