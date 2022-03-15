@@ -67,8 +67,8 @@ Thinger.io is a platform in constant growth, our development team is continuousl
 * [x] Custom plugins support\*
 * [ ] COAP integration
 * [ ] NB-IoT integration client (COAP)
-* [ ] Projects hierarchization
 * [ ] Python IoT Client
+* [ ] Projects Manager 2.0 with individual groups
 * [ ] Alerts manager&#x20;
 * [ ] Reporting tool
 
