@@ -77,6 +77,39 @@ The PWA function parameters will be automatically configured based on the prefer
 
 ![](<.gitbook/assets/image (312).png>)
 
+### Email Templates
+
+When working on multi-user projects, the platform has a series of communications that allows basic communication with users to verify email, create a new password, Forgot Password and Device Disabled. These emails can also be customized by the developer, being able to modify the following parameters:
+
+* From: Is the sender mail address that will be sent in the mail. Leave it empty to use the default configured address configured in the SMTP section
+* Name: Sender contact mail. Levar it empty to use the default name configured in the STMP section
+* Subject: Email subject
+* Template:  Configure the email template workinng directly with the text or with the HTML code
+
+### Email Settings
+
+This section allows to custom the email server for this specific brand, note that it is also posible to modify it in the Server Settings to create a default configuration for the hole host, that will be applied to all the rebrands.&#x20;
+
+![](<.gitbook/assets/image (458).png>)
+
+#### SMTP Configuration
+
+The **Simple Mail Transfer Protocol**, better known as SMTP, is a protocol used to transmit email messages over the internet. Thinger.io server instances contains an SMTP server that allows sending notifications to the instance users, that has been configured by default to use the same web domain as the IoT server host and the standard parameters, however,  these parameters can be customized by changing the server:
+
+![](<.gitbook/assets/image (297).png>)
+
+* **Host:** Is the SMTP address or web domain
+* **Port:** Custom port to be used in order to send the notifications
+* **Username**: SMTP username credentials&#x20;
+* **Password:** SMTP username password
+* **SSL/TLS** **Connection:** should be enabled if the SMTP has been installed in a different host but can be disabled if it is running in the same one.
+
+#### Amazon SES Configuration
+
+The integration with Amazon SES provides a much simple and scalable mailing tool. It can be selected instead of the common SMTP by selecting it on Email Type, and placing the credentials on its appropriate section. These credentials can be obtained on the AWS SES configuration section as explained on[ **this link**](https://ongage.atlassian.net/wiki/spaces/HELP/pages/13795743/Amazon+SES+Setup+Tutorial)****
+
+![](<.gitbook/assets/image (265).png>)
+
 ## **Modify Console Rebranding**
 
 When the Console Rebranding profile is finished, a new entry will appear into the rebranding administration list as shown in the image below:
