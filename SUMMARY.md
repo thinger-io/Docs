@@ -90,5 +90,5 @@
   * [IoT Ecosystem](about/community.md)
   * [Resources](about/resources.md)
   * [Terms & Conditions of use](about/terms-and-conditions-of-use.md)
-  * [Security Considerations](about/security-considerations.md)
   * [Service Level Agreement](about/service-level-agreement.md)
+  * [Security Considerations](about/security-considerations.md)

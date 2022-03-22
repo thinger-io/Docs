@@ -53,7 +53,7 @@ Thinger.io provides to the User a technologic**al** platform accessible via priv
 6. **Any use of this content requires to identify the author:** Modification of this content is not allowed to create a derivative work. Neither the content published by User, nor the contents to which he could link will be reviewed by Thinger.io. However, in the event that any User would denounce those contents or Thinger.io would detect they violate these Terms and Conditions of use, Thinger.io shall proceed in accordance with the provisions for the Suspension of Users.\
    Regarding all of the Services, the User agrees to: When a User detects any violation of the requirements of this section may notify Thinger.io according to the Notification or Complaint Procedure.
 
-### PAYMENT TERMS
+### F) PAYMENT TERMS
 
 1. By subscribing the service, the customer agrees to pay the recurring monthly fee for the use (“Service fee”). While using the Service you consent to pay by card or Paypal.&#x20;
 2. Customer's obligation to pay is non-cancellable while and for use of Service. Thinger.io's measurement of Customer's use of the Service is final.
@@ -63,7 +63,7 @@ Thinger.io provides to the User a technologic**al** platform accessible via priv
 6. **Disputes**: Invoice disputes must be submitted before the payment due date. If the disputed invoice has not yet been paid, Thinger.io may apply the credit memo amount to the disputed invoice and Customer will be responsible for paying the resulting net balance due on that invoice. To the fullest extent permitted by law, Customer waives all claims relating to Service fee unless claimed within 60 (sixty) days after the invoice date. ThingsBoard, Inc. does not refund the Service fee. Refunds (if any) are at our discretion and will only be in the form of credit for the Service. Nothing in this Agreement obligates Thinger.io, Inc. to extend credit to any party.
 7. **Late payments**: Delays on payment will cause the customer account suspension and further termination for breach of this Agreement. Unless otherwise agreed with the Customer, all applicable Service fees should be paid without any requirement to provide a purchase order number on ThingsBoard's invoice (or otherwise).
 
-### GENERAL
+### G) GENERAL
 
 **Relationship of Parties:** Nothing herein contained shall be deemed or construed by the parties hereto, nor by any third party, as creating the relationship of principal and agent or of partnership or of joint venture between the parties hereto, it being understood and agreed that no provision contained herein, nor any acts of the parties hereto shall be deemed to create the relationship between the parties hereto other than the relationship of seller and buyer.
 
@@ -77,13 +77,13 @@ Thinger.io provides to the User a technologic**al** platform accessible via priv
 6. **Force Majeure:** No party shall be liable for failure or defective performance or delay of its obligations under these Terms and Conditions of use if such failure or defective performance or delay stems from events that could not be foreseen, or which, foreseen, were inevitable, such as cases of force majeure such as natural disasters, war, siege, disturbances of public order, power outage or failure on the electronic communications service, or any other exceptional measure taken by the administrative authorities or government. The occurrence of an event of force majeure or fortuitous event entails the suspension of the Services until the restoration of normalcy.
 7. **Auditing**: Thinger.io agrees to perform external security auditing processes that allow the customer to ensure its requirements for data quality, availability and security. However, the costs arising from this process will be borne by the customer, likewise, Thinger.io reserves the right to pass on to the customer the internal costs incurred by the audit process.
 
-### PRODUCTS & SERVICES CREATED WITH THINGER.IO
+### H) PRODUCTS & SERVICES CREATED WITH THINGER.IO
 
 1. **Product Policy:** The customer is solely responsible and liable for all the product his Products, and for supporting his Products. Customer represents and warrants that his Products will not: (i) violate any third-party right, including any copyright, trademark, patent, trade secret, moral right, privacy right, right of publicity, or any other intellectual property or proprietary right; (ii) violate any laws or regulations (including any privacy laws) or any obligations or restrictions imposed by any third party; (iii) be harassing, abusive, tortious, threatening, harmful, invasive of another's privacy, vulgar, defamatory, false, intentionally misleading, trade libelous, pornographic, obscene, or patently offensive, or promote racism, bigotry, hatred, or physical harm of any kind against any group or individual, or be otherwise objectionable; (iv) be harmful to minors in any way; (v) contain any computer viruses, worms, or any software intended to damage or alter a computer system or data; (vi) send unsolicited or unauthorized advertising, promotional materials, junk mail, spam, text messages, chain letters, pyramid schemes, or any other form of duplicative or unsolicited messages, whether commercial or otherwise; or (vii) offer or promote services that may be damaging to, disparaging of, or otherwise detrimental to Thinger.io or its licensors, licensees, affiliates and partners.
 2. _Refusal of Products_. Thinger.io will have the right, in its sole discretion, to refuse to permit your use of the Thinger.io Platform with a particular Product.
 3. _Monitoring_. You agree to provide us with access to Your Products and other materials related to Your use of the Thinger.io Platform as reasonably requested by us to verify Your compliance with this Agreement.
 
-### DATA CONSIDERATIONS
+### I) DATA CONSIDERATIONS
 
 1. **Data**: Will be considered as "data" all the information introduced in the server by the client for the development of its networks of devices and users, context and business information will be considered data. As well as data automatically uploaded to the platform by any of its IoT connectors.&#x20;
 2. **Data Property:** Ownership of all data stored or transmitted through the private instance belongs to the customer. The data will only be processed to the extent that the user programs the behavior of the platform. According to this ownership, the user can freely download, export or delete his data from the platform.&#x20;
@@ -91,19 +91,15 @@ Thinger.io provides to the User a technologic**al** platform accessible via priv
 4. **Security on communications:** Communications between devices and IoT servers can be performed using TLS/SSL encryption protocols. The interaction of any consumer client with the server will use OAuth2 technology. Thinger is not responsible for loss or interception of data in transit over public or private networks.&#x20;
 5. **Data Backups**: Customer is the one responsible for creating backup copies of any of the data except when automatic backup rights are subscribed to, which will be performed at set periods on a daily or weekly basis. Deletion of Data. Thinger.io will use reasonable efforts to delete your salted and hashed password, name, credit card information and all related information associated with or inside your Self-Service Account (or any part thereof), excluding data related to past transactions, upon the termination of this Agreement or upon Your request.
 
-### CONFIDENTIALITY
+### J) CONFIDENTIALITY
 
-Every written and oral information, disclosed by either Party to the other, related to the operations of either Party or a third party that has been identified as confidential or that by the nature of the information or the circumstances surrounding disclosure ought reasonably to be treated as confidential.&#x20;
+1. Every written and oral information, disclosed by either Party to the other, related to the operations of either Party or a third party that has been identified as confidential or that by the nature of the information or the circumstances surrounding disclosure ought reasonably to be treated as confidential.&#x20;
+2. Each Party agrees as follows: (i) to use the Confidential Information only for the purposes described herein; (ii) that such Party will not reproduce the Confidential Information and will hold in confidence and protect the Confidential Information from dissemination to, and use by, any third party; (iii) that, except as required in performance of a Party's obligations under this Agreement, neither Party will create any derivative work from Confidential Information disclosed to such Party by the other Party; (iv) to restrict access to the Confidential Information to such of its personnel, agents and consultants, if any, who have a need to have access and who have been advised of and have agreed in writing or are otherwise bound to treat such information in accordance with the terms of this Agreement; and (v) to return or destroy all Confidential Information of the other Party in its possession upon termination or expiration of this Agreement. In the event of any unauthorized disclosure or loss of Confidential Information, the receiving Party will notify the disclosing Party as soon as possible.
 
-Each Party agrees as follows: (i) to use the Confidential Information only for the purposes described herein; (ii) that such Party will not reproduce the Confidential Information and will hold in confidence and protect the Confidential Information from dissemination to, and use by, any third party; (iii) that, except as required in performance of a Party's obligations under this Agreement, neither Party will create any derivative work from Confidential Information disclosed to such Party by the other Party; (iv) to restrict access to the Confidential Information to such of its personnel, agents and consultants, if any, who have a need to have access and who have been advised of and have agreed in writing or are otherwise bound to treat such information in accordance with the terms of this Agreement; and (v) to return or destroy all Confidential Information of the other Party in its possession upon termination or expiration of this Agreement. In the event of any unauthorized disclosure or loss of Confidential Information, the receiving Party will notify the disclosing Party as soon as possible.
+### **K) DISCLAIMER**
 
-### **DISCLAIMER**
-
-Thinger.io declines any responsibility for the User damages that may arise as a result of his use of the Private Area, unless they are directly attributable to Thinger.io, expressly excluding any liability arising from acts or omissions of Users, Developers or third parties such as providers of electronic communications services, hosting, etc.\
-\
-Also, except in the case of liability arising from malice, Thinger.io shall not be liable in any way for any indirect damages such as lost profits, loss of business, expectations, income or profit, loss of data or programs.\
-\
-Thinger.io shall not be liable either specifically or implicitly of the adequacy of the Services provided to the real needs of the user.\
-\
-Users, Developers and Thinger.io, expressly waiving their own jurisdiction to the extent that applicable law so permits, submit all interpretations or conflicts that could arise from these Terms and Conditions of use to the Courts of Madrid city.
+1. Thinger.io declines any responsibility for the User damages that may arise as a result of his use of the Private Area, unless they are directly attributable to Thinger.io, expressly excluding any liability arising from acts or omissions of Users, Developers or third parties such as providers of electronic communications services, hosting, etc.
+2. Also, except in the case of liability arising from malice, Thinger.io shall not be liable in any way for any indirect damages such as lost profits, loss of business, expectations, income or profit, loss of data or programs.
+3. Thinger.io shall not be liable either specifically or implicitly of the adequacy of the Services provided to the real needs of the user.
+4. Users, Developers and Thinger.io, expressly waiving their own jurisdiction to the extent that applicable law so permits, submit all interpretations or conflicts that could arise from these Terms and Conditions of use to the Courts of Madrid city.
 
