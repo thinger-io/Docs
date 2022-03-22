@@ -435,7 +435,7 @@ angular.module('helloWidget', [])
 
 * Now it will be displayed a similar widget to the Basic Code Snippet example. However, there are many differences from basic example, as now we have Javascript file where we can add more values to the scope, process incoming value changes, detect source changes, and more interesting, we can inject dependencies to other Thinger.io console components, like UI widgets, or API methods to update configurations, call devices, etc.
 
-![HTML Widget with a simple AngularJS directive](<../.gitbook/assets/image (450).png>)
+![HTML Widget with a simple AngularJS directive](<../.gitbook/assets/image (450) (1).png>)
 
 {% hint style="success" %}
 Ensure your widgets use a `camelCase` name for file names.&#x20;

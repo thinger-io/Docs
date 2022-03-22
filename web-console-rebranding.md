@@ -79,12 +79,14 @@ The PWA function parameters will be automatically configured based on the prefer
 
 ### Email Templates
 
-When working on multi-user projects, the platform has a series of communications that allows basic communication with users to verify email, create a new password, Forgot Password and Device Disabled. These emails can also be customized by the developer, being able to modify the following parameters:
+When working on multi-user projects, the platform has a series of communications that allows basic communication with users to `verify email`, `create a new password`, `Forgot Password` and `Device Disabled`. These emails can also be customized by the developer, being able to modify the following parameters:
 
-* From: Is the sender mail address that will be sent in the mail. Leave it empty to use the default configured address configured in the SMTP section
-* Name: Sender contact mail. Levar it empty to use the default name configured in the STMP section
-* Subject: Email subject
-* Template:  Configure the email template workinng directly with the text or with the HTML code
+* **From**: Is the sender mail address that will be sent in the mail. Leave it empty to use the default configured address configured in the SMTP section
+* **Name**: Sender contact mail. Levar it empty to use the default name configured in the STMP section
+* **Subject**: Email subject
+* **Template**:  Configure the email template workinng directly with the text or with the HTML code
+
+![](<.gitbook/assets/image (450).png>)
 
 ### Email Settings
 
