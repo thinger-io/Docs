@@ -1,6 +1,6 @@
 # Terms & Conditions of use
 
-### A**)** **DEFINITIONS:**
+### A**)** **DEFINITIONS**
 
 For the purposes of these terms and conditions the following definitions apply:
 
@@ -13,7 +13,7 @@ For the purposes of these terms and conditions the following definitions apply:
 7. Data source: Any other source of information whose data may be acquired by Thinger.io.
 8. Cloud Platform: A set of Internet enabled resources managed by Thinger.io used to provide the service to the developers.
 
-### **B) SCOPE OF APPLICATION:**
+### **B) SCOPE OF APPLICATION**
 
 This document sets out the terms and conditions applicable to the services provided by Thinger.io through the Private Area and which have been requested and contracted by the User when signing in as a user of this area.
 
@@ -24,7 +24,7 @@ By using the Platform, you acknowledge that you have read and accepted these Ter
 
 We recommend that you print a copy of these T\&C for future reference.
 
-### **C) WHO WE ARE AND HOW TO CONTACT US:**&#x20;
+### **C) WHO WE ARE AND HOW TO CONTACT US**&#x20;
 
 The Thinger.io Platform (hereinafter, “the Platform”) is owned and managed by INTERNET OF THINGER, S.L. (hereinafter, We or “Thinger.io”).\
 \
@@ -32,13 +32,13 @@ Thinger.io is registered in Spain under company number B-88230602, with register
 \
 You can contact us through the following email address: info@thinger.io
 
-### **D) CONTRACTUAL FRAMEWORK:**
+### **D) CONTRACTUAL FRAMEWORK**
 
 1. The contractual framework that establishes the parties rights and obligations is the following: All these documents are published on the Web and in the Private Area and must be expressly accepted by the User at the time of the creation of his user account.
 2. Any subsequent amendments to these documents shall be notified to the User. Upon such notification, if the User continues to use the services, Thinger.io shall understand that he accepts such amendments and the new documents will replace the previous ones.
 3. In case of conflict or inconsistency between these documents, the following order of priority is established: The User, by accepting these Terms and Conditions of use, warrants he has enough capacity to do so and, therefore, to engage the services.
 
-### **E) SERVICES:**
+### **E) SERVICES**
 
 Thinger.io provides to the User a technologic**al** platform accessible via private area. In addition, Thinger.io will offer the following services to its customers from the moment a private instance is deployed:
 
