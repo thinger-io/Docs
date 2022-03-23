@@ -91,4 +91,3 @@
   * [Resources](about/resources.md)
   * [Terms & Conditions of use](about/terms-and-conditions-of-use.md)
   * [Service Level Agreement](about/service-level-agreement.md)
-  * [Security Considerations](about/security-considerations.md)
