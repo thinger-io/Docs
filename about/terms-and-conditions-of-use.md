@@ -101,5 +101,5 @@ Thinger.io provides to the User a technologic**al** platform accessible via priv
 1. Thinger.io declines any responsibility for the User damages that may arise as a result of his use of the Private Area, unless they are directly attributable to Thinger.io, expressly excluding any liability arising from acts or omissions of Users, Developers or third parties such as providers of electronic communications services, hosting, etc.
 2. Also, except in the case of liability arising from malice, Thinger.io shall not be liable in any way for any indirect damages such as lost profits, loss of business, expectations, income or profit, loss of data or programs.
 3. Thinger.io shall not be liable either specifically or implicitly of the adequacy of the Services provided to the real needs of the user.
-4. Users, Developers and Thinger.io, expressly waiving their own jurisdiction to the extent that applicable law so permits, submit all interpretations or conflicts that could arise from these Terms and Conditions of use to the Courts of Madrid city.
+4. Users, Developers and Thinger.io, expressly waiving their own jurisdiction to the extent that applicable law so permits, submit all interpretations or conflicts that could arise from these Terms and Conditions of use to the Chamber of Commerce of Madrid city.
 
