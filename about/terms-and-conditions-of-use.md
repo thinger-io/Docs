@@ -4,9 +4,9 @@
 
 For the purposes of these terms and conditions the following definitions apply:
 
-1. Web: The set of web pages that make up the website published under the domain name Thinger.io and its sub domains.
+1. Web: The set of web pages that make up the website published under the domain name Thinger.io and its subdomains.
 2. User: Physical person that has provided personal information through any web form.
-3. Thinger.io: THINK BIG LABS, S.L.
+3. Thinger.io: INTERNET OF THINGER S.L.
 4. Private Area: Pages of the Web which access is limited to the Users. Through this Area Users access to services provided by Thinger.io which are regulated in the relevant Terms and Conditions of use and partially in the Legal Notice.
 5. User, Developer or Customer: Companies or developers that subscribe to a Thinger.io platform license, either in one of its cloud or on-premise versions.
 6. Device or Object: Electronic device that has been made and programmed to collect, send and transmit information over the Internet.
@@ -59,9 +59,9 @@ Thinger.io provides to the User a technologic**al** platform accessible via priv
 2. Customer's obligation to pay is non-cancellable while and for use of Service. Thinger.io's measurement of Customer's use of the Service is final.
 3. Subscriptions to Thinger.io Platform service can be made on a monthly or yearly basis. The service will be charged at the same intervals according to the price indicated in our pricing list. The initial charge will be made at the time you create your private instance. subscription will automatically renew for additional period until terminated.&#x20;
 4. All Subscription Fees are non-refundable.&#x20;
-5. Customer is responsible for any taxes, and the customer will pay for the Services without any reduction in taxes. If required ThingsBoard, Inc. may provide the Certificate of Tax Residency to avoid double taxation.
-6. **Disputes**: Invoice disputes must be submitted before the payment due date. If the disputed invoice has not yet been paid, Thinger.io may apply the credit memo amount to the disputed invoice and Customer will be responsible for paying the resulting net balance due on that invoice. To the fullest extent permitted by law, Customer waives all claims relating to Service fee unless claimed within 60 (sixty) days after the invoice date. ThingsBoard, Inc. does not refund the Service fee. Refunds (if any) are at our discretion and will only be in the form of credit for the Service. Nothing in this Agreement obligates Thinger.io, Inc. to extend credit to any party.
-7. **Late payments**: Delays on payment will cause the customer account suspension and further termination for breach of this Agreement. Unless otherwise agreed with the Customer, all applicable Service fees should be paid without any requirement to provide a purchase order number on ThingsBoard's invoice (or otherwise).
+5. Customer is responsible for any taxes, and the customer will pay for the Services without any reduction in taxes. If required Thinger.io, Inc. may provide the Certificate of Tax Residency to avoid double taxation.
+6. **Disputes**: Invoice disputes must be submitted before the payment due date. If the disputed invoice has not yet been paid, Thinger.io may apply the credit memo amount to the disputed invoice and Customer will be responsible for paying the resulting net balance due on that invoice. To the fullest extent permitted by law, Customer waives all claims relating to Service fee unless claimed within 60 (sixty) days after the invoice date. Thinger.io, Inc. does not refund the Service fee. Refunds (if any) are at our discretion and will only be in the form of credit for the Service. Nothing in this Agreement obligates Thinger.io, Inc. to extend credit to any party.
+7. **Late payments**: Delays on payment will cause the customer account suspension and further termination for breach of this Agreement. Unless otherwise agreed with the Customer, all applicable Service fees should be paid without any requirement to provide a purchase order number on thinger.io's invoice (or otherwise).
 
 ### G) GENERAL
 
