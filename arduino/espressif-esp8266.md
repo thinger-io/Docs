@@ -114,6 +114,17 @@ Once this sketch is loaded in the device, it is possible to follow the next step
 3. Configure the wifi where the ESP8266 will be connected, and your thinger.io device credentials
 4. Your device should be now connected to the platform.
 
+The WebConfig interface includes different methods to control the captive portal:
+
+* **clean\_credentials**: It clean all credentials from the device (WiFi/user parameters). This way, the next time the device is booted will create the captive portal again to request the WiFi configuration. It can be executed after a long press on a button.&#x20;
+* **set\_user**: Initializes the default user for connecting the device to the platform (if set, this parameter is not requested to the user in the captive portal).
+* **set\_device**: Initializes the default device for connecting the device to the platform (if set, this parameter is not requested to the user in the captive portal).
+* **set\_password**: Initializes the default device password for connecting the device to the platform (if set, this parameter is not requested to the user in the captive portal).
+* **add\_setup\_parameter**: Add additional parameters to be requested in the captive portal, for example, any other configuration required for the execution: sampling intervals, meta-data, thresholds, etc.
+* **set\_on\_config\_callback**: Set a callback to receive configuration provided by the user in the captive portal, i.e., user, device, password, or any additional parameter configured.
+* **set\_on\_wifi\_config**: Set a callback to receive the result of the WiFi configuration. If the connection did not succeed, it can be used to clean credentials, so, the captive portal runs again.
+* **set\_on\_captive\_portal\_run**: Set a callback to receive the WiFiManager instance before the captive portal is shown. It can be used to add any other customization over the WebConfig interface.
+
 ## ESP8266 WiFi SmartConfig
 
 The SmartConfig (or recently named [ESP-Touch](https://www.espressif.com/en/products/software/esp-touch/overview)) is a provisioning technology developed by TI to connect a new Wi-Fi device to a Wi-Fi network. It uses a mobile app to broadcast the network credentials from a smartphone, or a tablet, to an un-provisioned Wi-Fi device.
