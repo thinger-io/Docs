@@ -75,7 +75,7 @@ void loop() {
 
 ## ESP8266 WiFi WebConfig
 
-It is possible to configure all parameters required for connection via a web Interface. The device will create an access point where the user can connect to establish required information, like username, device identifier, credentials, and access point to connect.
+It is possible to configure all parameters required for connection via a web Interface (captive portal). The device will create an access point where the user can connect to establish required information, like username, device identifier, credentials, and access point to connect.
 
 {% tabs %}
 {% tab title="ESP8266WebConfig.ino" %}
@@ -83,9 +83,9 @@ It is possible to configure all parameters required for connection via a web Int
 #define THINGER_SERIAL_DEBUG
 
 // Requires WifiManager from Library Manager or https://github.com/tzapu/WiFiManager
-#include <ThingerWebConfig.h>
+#include <ThingerESP8266WebConfig.h>
 
-ThingerWebConfig thing;
+ThingerESP8266WebConfig thing;
 
 void setup() {
   // open serial for debugging

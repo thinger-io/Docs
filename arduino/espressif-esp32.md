@@ -130,8 +130,48 @@ void loop() {
 
 ## ESP32 WiFi WebConfig
 
-Coming soon
+It is possible to configure all parameters required for connection via a web Interface (captive portal). The device will create an access point where the user can connect to establish required information, like username, device identifier, credentials, and access point to connect.
+
+{% tabs %}
+{% tab title="ESP32WebConfig.ino" %}
+```cpp
+#define THINGER_SERIAL_DEBUG
+
+// Requires WifiManager from Library Manager or https://github.com/tzapu/WiFiManager
+#include <ThingerESP32WebConfig.h>
+
+ThingerESP32WebConfig thing;
+
+void setup() {
+  // open serial for debugging
+  Serial.begin(115200);
+
+  pinMode(27, OUTPUT);
+
+  // digital pin control example (i.e. turning on/off a light, a relay, configuring a parameter, etc)
+  thing["relay"] << digitalPin(27);
+
+  // resource output example (i.e. reading a sensor value)
+  thing["millis"] >> outputValue(millis());
+}
+
+void loop() {
+  thing.handle();
+}
+```
+{% endtab %}
+{% endtabs %}
+
+Once this sketch is loaded in the device, it is possible to follow the next steps to connect it to the platform:
+
+1. Connect to Thinger-Device WiFi with your computer or phone, using `thinger.io` as WiFi password
+2. Wait for the configuration window, or navigate to [http://192.168.4.1](http://192.168.4.1) if it does not appear
+3. Configure the wifi where the ESP32 will be connected, and your thinger.io device credentials
+4. Your device should be now connected to the platform.
 
 ## ESP32 WiFi SmartConfig
 
 Coming soon
+
+
+
