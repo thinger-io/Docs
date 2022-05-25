@@ -22,9 +22,9 @@ Thinger.io plugins source code is now available in our Github repository, so if 
 
 ## Default Plugins
 
-| [![](../.gitbook/assets/imagen1sas.png)](node-red.md)          |                 | [![](../.gitbook/assets/imagen12.png)](sigfox.md) |
-| -------------------------------------------------------------- | --------------- | ------------------------------------------------- |
-| [![](../.gitbook/assets/imagen123.png)](the-things-network.md) |                 | ![](<../.gitbook/assets/imagen12 (1).png>)        |
+| [<img src="../.gitbook/assets/imagen1sas.png" alt="" data-size="original">](node-red.md)          |                 | [<img src="../.gitbook/assets/imagen12.png" alt="" data-size="original">](sigfox.md) |
+| ------------------------------------------------------------------------------------------------- | --------------- | ------------------------------------------------------------------------------------ |
+| [<img src="../.gitbook/assets/imagen123.png" alt="" data-size="original">](the-things-network.md) |                 | <img src="../.gitbook/assets/imagen12 (1).png" alt="" data-size="original">          |
 
 ## Managing Plugins
 

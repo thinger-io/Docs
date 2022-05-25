@@ -8,7 +8,7 @@ _Grafana_ is an Open Source visualization and analytics software that allows to 
 [Note: Plugins are only available for premium Thinger.io serves. Check **this link** to create your own instance within minutes](https://pricing.thinger.io).
 {% endhint %}
 
-Grafana's technology allows for the simple development of advanced dynamic dashboards for data visualization and analysis, create logs, metrics, or even automatic alerts. And all these capabilities are extensible by, thanks to a large widget import repository in which we can acquire many different representation elements created by Grafana's own developers or by contributions from a large community of users. A lot of additional information can be found on the creator's website and also in their extensive documentation, available at [**this link**](https://grafana.com/docs/grafana/latest/features/datasources/add-a-data-source/)**.**
+Grafana's technology allows for the simple development of advanced dynamic dashboards for data visualization and analysis, create logs, metrics, or even automatic alerts. And all these capabilities are extensible by, thanks to a large widget import repository in which we can acquire many different representation elements created by Grafana's own developers or by contributions from a large community of users. A lot of additional information can be found on the creator's website and also in their extensive documentation, available at [**this link**](https://grafana.com/docs/grafana/latest/features/datasources/add-a-data-source/?utm\_source=grafana\_gettingstarted)**.**
 
 ![](<../.gitbook/assets/image (318).png>)
 

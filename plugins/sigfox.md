@@ -263,11 +263,11 @@ After the device callback is done, it will appear as a connected device, showing
 
 #### Downlinks
 
-[SimpleHw](https://simplehw.eu) device settings are stored in downlink registers as values and changing these values will change the settings and also device behavior. Register values can be changed via downlink over the air and up to 4 register values can be changed with one downlink - 4 bytes are **register pointers** from 0x00 to 0xFF and 4 bytes are **register values** from 0x00 to 0xFF for a total of **8 bytes** (sigfox downlink limit). More details [here](https://simplehw.atlassian.net/wiki/spaces/DOC/pages/23396404/API+6+Downlink+Information#Chaining-multiple-downlink-payloads).&#x20;
+[SimpleHw](https://simplehw.eu/) device settings are stored in downlink registers as values and changing these values will change the settings and also device behavior. Register values can be changed via downlink over the air and up to 4 register values can be changed with one downlink - 4 bytes are **register pointers** from 0x00 to 0xFF and 4 bytes are **register values** from 0x00 to 0xFF for a total of **8 bytes** (sigfox downlink limit). More details [here](https://simplehw.atlassian.net/wiki/spaces/DOC/pages/23396404/API+6+Downlink+Information#Chaining-multiple-downlink-payloads).&#x20;
 
-So, it is possible to update up to 0xFF registers from any device, at any moment by using downlinks. However, updating more than 4 registers involves several downlink requests where different registers at downloaded at each time.  With the Sigfox plugin extension it is possible to create the required flows to update any amount of registers by using the chaining feature from [SimpleHw](https://simplehw.eu) devices.
+So, it is possible to update up to 0xFF registers from any device, at any moment by using downlinks. However, updating more than 4 registers involves several downlink requests where different registers at downloaded at each time.  With the Sigfox plugin extension it is possible to create the required flows to update any amount of registers by using the chaining feature from [SimpleHw](https://simplehw.eu/) devices.
 
-The following code is a template with a set of features to correctly work with [SimpleHw](https://simplehw.eu) devices:
+The following code is a template with a set of features to correctly work with [SimpleHw](https://simplehw.eu/) devices:
 
 * Downlink sequence processing to affect how the device behaves: If the received register bytes are ascending from left to right, the device will automatically request another downlink.
 * Acknowledgement from devices is processed to confirm that downlinks has been received correctly in the device.

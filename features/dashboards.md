@@ -8,7 +8,7 @@ Thinger.io dashboard system is a feature that allows creating nice data represen
 
 Here is an example dashboard with some widgets defined, like time series charts, donut charts, maps, or single values, but you can use many other ones
 
-![](https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/c05197985d9ee92a9e12aaa71ab7508682bc3fbc.gif)
+<img src="https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/c05197985d9ee92a9e12aaa71ab7508682bc3fbc.gif" alt="" data-size="original">
 
 Once created, dashboards can be shared with third parties through a link or configured as templates to analyze data from different devices of the same type. In the following sections, we will explain how to create awesome dashboards in a few and very easy steps. Are you ready to create your own dashboard?
 
@@ -864,7 +864,7 @@ Thinger.io has been provided with some widgets that allow controlling device fun
 
 The On/Off widget allows controlling a boolean state of a connected device, like turning on/off a light, a motor, a relay, or any other element. The device should expose a boolean input, just like those examples for controlling a led. The resource is then mapped to this widget, which can change the device state in real-time. If the input resource is defined properly [implemented](http://docs.thinger.io/arduino/#coding-adding-resources-input-resources), this widget is also able to show the current device state.
 
-&#x20;![](../.gitbook/assets/switchbutton.png)&#x20;
+&#x20;<img src="../.gitbook/assets/switchbutton.png" alt="" data-size="original">&#x20;
 
 The configurable parameters are the following:
 

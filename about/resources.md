@@ -6,9 +6,10 @@ description: >-
 
 # Resources
 
-![thinger.io logotype PNG format](../.gitbook/assets/thinger-logo.jpg)
+![](../.gitbook/assets/thinger\_logo\_white.png)
 
-{% file src="../.gitbook/assets/thinger\_io\_platform\_logo.ai" caption="Thinger.io Logo .ai" %}
+![](../.gitbook/assets/thinger\_logo\_black.png)
 
-{% file src="../.gitbook/assets/thinger\_io\_platform\_logo\_v2.eps" caption="Thinger.io Logo . eps" %}
+{% file src="../.gitbook/assets/1.eps" %}
 
+{% file src="../.gitbook/assets/1.ai" %}

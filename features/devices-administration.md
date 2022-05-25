@@ -142,7 +142,7 @@ Once the token is saved, the interface will show the access token to be used in 
 
 ### HTTP devices Callback <a href="#http-devices-callback" id="http-devices-callback"></a>
 
-Because of the nature of these devices, [thinger.io](http://thinger.io) applies a special treatment, based on the use of callbacks to make the integration. A callback is a functionality of the server that can be used to request a process with device data by means of an HTTP query, such as store it in a bucket, calling an endpoint profile or registering the information contained in a JSON that should be sent with the query.
+Because of the nature of these devices, [thinger.io](http://thinger.io/) applies a special treatment, based on the use of callbacks to make the integration. A callback is a functionality of the server that can be used to request a process with device data by means of an HTTP query, such as store it in a bucket, calling an endpoint profile or registering the information contained in a JSON that should be sent with the query.
 
 To create a callback, open the device Dashboard and take a look at the subsection called "callback", that will show different options in the context `callback details` as shown in the image below:
 
@@ -168,7 +168,7 @@ https://<Thinger_Server>/v3/users/<Username>/devices/<Device_ID>/callback?author
 
 ### Device Tokens <a href="#device-tokens" id="device-tokens"></a>
 
-All the interactions with your connected devices, i.e., by using the REST API endpoints commented above, or mobile phone, needs to be authenticated against the platform. By default, when you interact with your devices over the [Thinger.io](http://thinger.io) console, you are implicitly signing all your requests to the platform with an access token you obtained from your username and password. This kind of authorization grants access to all your account resources, so you can configure devices, buckets, etc. However, this authorization expires quite frequently (but renewed automatically by your browser), and cannot be used to grant access to our devices to other users or platforms, as you will be providing access to all your account.
+All the interactions with your connected devices, i.e., by using the REST API endpoints commented above, or mobile phone, needs to be authenticated against the platform. By default, when you interact with your devices over the [Thinger.io](http://thinger.io/) console, you are implicitly signing all your requests to the platform with an access token you obtained from your username and password. This kind of authorization grants access to all your account resources, so you can configure devices, buckets, etc. However, this authorization expires quite frequently (but renewed automatically by your browser), and cannot be used to grant access to our devices to other users or platforms, as you will be providing access to all your account.
 
 In this case, it is possible to create specific access tokens for granting access to your devices and even grant access to specific resources on your devices. Moreover, it is possible to define the token validity in time, by enabling an expiration date. This way, if you need to provide access to some of your device resources to a third-party tool like IFTTT, an external web page, a mobile phone, or any other service, it is highly recommended to create a device token.
 
@@ -192,11 +192,11 @@ Once the token is saved, the interface will show the access token to be used in 
 
 ### Device Properties <a href="#device-properties" id="device-properties"></a>
 
-[Thinger.io](http://thinger.io) provides a simple way to store additional information related to a specific device, such as location, identification, or even configuration parameters that may be retrieved by devices using common JSON files. In this way, the platform can be used as a device's persistent memory. To create a device property, open the device Dashboard, and take a look to the subsection called "Properties".
+[Thinger.io](http://thinger.io/) provides a simple way to store additional information related to a specific device, such as location, identification, or even configuration parameters that may be retrieved by devices using common JSON files. In this way, the platform can be used as a device's persistent memory. To create a device property, open the device Dashboard, and take a look to the subsection called "Properties".
 
 ![](<../.gitbook/assets/image (261).png>)
 
-This menu provides an easy way to create, manage, or delete the device's properties. Note that the property created in this example is specifying the device location. [Thinger.io](http://thinger.io) system has been designed to detect this configuration and automatically represent it on the device dashboard map.
+This menu provides an easy way to create, manage, or delete the device's properties. Note that the property created in this example is specifying the device location. [Thinger.io](http://thinger.io/) system has been designed to detect this configuration and automatically represent it on the device dashboard map.
 
 ![](../.gitbook/assets/adddeviceproperty.PNG)
 
@@ -204,7 +204,7 @@ Properties declarations and modifications are made by means of a special context
 
 #### Coding with properties <a href="#coding-with-properties" id="coding-with-properties"></a>
 
-It is also possible to create, retrieve and modify data properties from devices, however, at this point we must differentiate between HTTP devices or [thinger.io](http://thinger.io) software client devices, which will use `set_property()` or `get_propery()` commands as shown in the examples below:
+It is also possible to create, retrieve and modify data properties from devices, however, at this point we must differentiate between HTTP devices or [thinger.io](http://thinger.io/) software client devices, which will use `set_property()` or `get_propery()` commands as shown in the examples below:
 
 * **Setting a property**
 
@@ -257,7 +257,7 @@ Using HTTP devices it's also possible to interact with properties through callba
 
 ![](../.gitbook/assets/httpgetsetproperty.PNG)
 
-According to this configuration, when [Thigner.io](http://thigner.io) server receives any transmission from "SigfoxDevice1" the payload data will be stored into "data" property, creating a JSON with all variables. In the opposite situation, thanks to the "Response Data" feature, the values stored in the parameter with was called "downlink\_data" will be sent to the device thought Sigfox infrastructure.
+According to this configuration, when [Thigner.io](http://thigner.io/) server receives any transmission from "SigfoxDevice1" the payload data will be stored into "data" property, creating a JSON with all variables. In the opposite situation, thanks to the "Response Data" feature, the values stored in the parameter with was called "downlink\_data" will be sent to the device thought Sigfox infrastructure.
 
 ### Device Online Terminal <a href="#device-settings" id="device-settings"></a>
 

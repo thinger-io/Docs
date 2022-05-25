@@ -147,7 +147,7 @@ Note that more than one branding or web domain profile can be added, as it is po
 If the amount of contracted brand profiles is reached, (or if no additional brands were contracted), it is possible to upgrade the threshold by going to the management portal using the link below.&#x20;
 
 {% hint style="success" %}
-****[**Click here to access the subscription administration portal**](https://thinger.chargebeeportal.com)****
+****[**Click here to access the subscription administration portal**](https://thinger.chargebeeportal.com/)****
 {% endhint %}
 
 The administration portal only can be accessed by the instance administrator using his email address to obtain a one-time password. Once logged in, the administration portal will show all the licenses that have been subscribed to this e-mail address. Just select the license that wants to be modified and press the option "Edit Subscription", finally, pressing the option "Addons", the portal will show all the available options and pricing in the Add Add-ons menu:

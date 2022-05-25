@@ -20,16 +20,16 @@ Despite we don't have released it yet, still working on creating a large partner
 #### IoT service providers
 
 * ****[**Sigfox:** ](https://sigfox.com)global communication service provider for IoT
-* ****[**Node-RED**](https://nodered.org)**:** Open Source-Rule Engine for IoT projects
-* ****[**Talent Swarm**](https://talentswarm.com)**:** Industrial Digital Tweens experts
+* ****[**Node-RED**](https://nodered.org/)**:** Open Source-Rule Engine for IoT projects
+* ****[**Talent Swarm**](https://talentswarm.com/)**:** Industrial Digital Tweens experts
 * ****[**UC3M GIAA**](http://portal.uc3m.es/portal/page/portal/grupos\_investigacion/giaa)**:** Advanced Artificial Intelligence and Data Analytics experts
 * ****[**Fundación UNED:** ](https://www.fundacion.uned.es/actividad/idactividad/20219)complementary education for engineers
 
 **Hardware providers and manufacturers**
 
-* ****[**Espressif Systems:**](https://www.espressif.com) **** designs a range of high-performance Wi-Fi+Bluetooth/BLE chipsets and modules.
-* ****[**Theobroma Systems**](https://www.theobroma-systems.com)**:** High performance Hardware developers for devices, gateways and servers.&#x20;
-* ****[**La Siesta Tech**](http://www.lasiesta.tech)**:** Hardware developers and IoT consultants
+* ****[**Espressif Systems:**](https://www.espressif.com/) **** designs a range of high-performance Wi-Fi+Bluetooth/BLE chipsets and modules.
+* ****[**Theobroma Systems**](https://www.theobroma-systems.com/)**:** High performance Hardware developers for devices, gateways and servers.&#x20;
+* ****[**La Siesta Tech**](http://www.lasiesta.tech/)**:** Hardware developers and IoT consultants
 * ****[**SeeedStudio**](https://www.seeedstudio.com/fusion\_pcb.html)**:** Whether you are a developer, technical supplier, or industry player, we provide products and services for your IoT needs.
 
 ### How to become a partner
