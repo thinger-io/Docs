@@ -12,7 +12,7 @@ In this case, we want to send a command to the Shelly Device, so, it is required
 shellies/{{device}}/relay/0/command
 ```
 
-Then we must set the message payload, that must be 'on' or 'off' depending on the desired state. If we configure `{{payload}}` as the Request payload, then, any body sent to the the API will be transmitted to the device. The standard 'on'/'off' representation in JSON is true/false, so, we can configure a processing function to convert an input JSON boolean to required values by the device. In the Product Script section we can add a function like:
+Then we must set the message payload, that must be 'on' or 'off' depending on the desired state. If we configure `{{payload}}` as the Request payload, then, any body sent to the API will be transmitted to the device. The standard 'on'/'off' representation in JSON is true/false, so, we can configure a processing function to convert an input JSON boolean to the required values by the device. In the Product Script section can be coded a function function like this:
 
 ```javascript
 function toOnOff(value){
@@ -20,17 +20,17 @@ function toOnOff(value){
 }
 ```
 
-As we did on [Properties](properties.md) and [Buckets](buckets.md), we can configure the API Resource payload to call this function to transform the incoming payload.
+As described on [Properties](properties.md) and [Buckets](buckets.md) sections, it is possible to configure the API Resource payload to call this function to transform the incoming payload.
 
 ```
 {{payload:toOnOff}}
 ```
 
-After saving the new API Resource, we can go to the device API, and the new resource will appear.
+After saving the new API Resource, we can go to the device API, and the new `relay`resource will appear.
 
 ![Device API for resource created over Product ](<../.gitbook/assets/image (462).png>)
 
-However, there seems to be something wrong there! The API can detect that the resource is expecting an input (Resource Input), but nothing more appears. We are expecting here a true/false input, or just a switch to turn the relay on and off.&#x20;
+However, there seems to be something wrong there! The API can detect that the resource is expecting an input (`Resource Input` header is present), but nothing more appears. We are expecting here a true/false input, or just a switch to turn the relay on and off.&#x20;
 
 This can be solved by assigning a default payload value on the API definition, which let the API explorer know the expected values by default. This can be done changing the API Resource payload to something like this:
 
@@ -48,4 +48,7 @@ However, this use case can be improved a little bit. For example, suppose that i
 {{payload:toOnOff=property.relay}}
 ```
 
-Then, the next time the API explorer, or a dashboard, 'inspect' the device resource, will obtain the value stored on the property. In this case, the property is updated periodically with the current relay status, or when the status is changed, even with the psychical button.
+Then, the next time the API explorer, or a dashboard, 'inspect' the device resource, will obtain the value stored on the property. In this case, the property is updated periodically with the current relay status, or even if the status is changed with the device psychical on/off button. Now we can use the API resource on a dashboard easily, just as any other device. Here are some sample dashboard widgets created for our MQTT Shelly Plug S device, allowing power switch and plotting some device information like real-time power consumption, total consumption, temperature, etc.&#x20;
+
+![](<../.gitbook/assets/image (460).png>)
+

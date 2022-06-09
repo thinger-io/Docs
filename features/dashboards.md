@@ -312,7 +312,7 @@ The widget code is the following:
 {% tab title="Table Code Snippet" %}
 Using the HTML Time Series widget, it is possible to plot information in a given timespan, i.e., latest values from a data bucket. The following example represents an HTML widget holding a list of values from bucket:
 
-![HTML Widget with a table](<../.gitbook/assets/image (455) (1).png>)
+![HTML Widget with a table](<../.gitbook/assets/image (455) (1) (1).png>)
 
 The code to represent this table is like the following:&#x20;
 

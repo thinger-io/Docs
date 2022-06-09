@@ -49,7 +49,7 @@ In this example it is defined a placeholder with the notation \{{<mark style="co
 
 The configuration for this bucket will look like the following capture:
 
-![](<../.gitbook/assets/image (455).png>)
+![](<../.gitbook/assets/image (455) (1).png>)
 
 #### Storing device energy and power
 
