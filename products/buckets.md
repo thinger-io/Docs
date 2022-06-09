@@ -149,6 +149,6 @@ In addition, it is possible to define a custom payload, i.e., using different fi
 
 That will store the information according to our definition:
 
-![MQTT Data sample modified before bucket insert](<../.gitbook/assets/image (462) (1).png>)
+![MQTT Data sample modified before bucket insert](<../.gitbook/assets/image (462) (1) (1).png>)
 
 ###

@@ -1,8 +1,17 @@
 # API Resources
 
-One of the most interesting features of products is the possibility to create custom API resources for devices, that is, create custom API endpoints associated to each device. This is specially useful for MQTT devices, as they will behave exactly the same as IOTMP devices, so they can be used directly on dashboards, use the API explorer, etc.
+One of the most interesting features of products is the possibility to create custom API resources for devices. This is specially useful for MQTT devices, as they will behave exactly the same as IOTMP devices, so they can be used directly on dashboards, use the API explorer, etc.
+
+Using API Resources has several advantages, like:
+
+* Unified API access for different devices, brands, and protocols
+* Payload processing to adapt standard REST JSON to/from custom payloads required by the devices
+* MQTT support, including request-response schemas (publish to a topic, and wait for the response on another topic)
+* Device API Explorer compatibility, simplifying tests and integrations with other systems
 
 Following our previous examples with the Shelly Smart Plug S, makes sense to create an endpoint to switch on/off the relay. The approach for building the API Resources is quite similar to the previous sections regarding properties and buckets. Just click on the 'Add' button on the API Resources section and start setting an identifier, like `relay`.
+
+![](<../.gitbook/assets/image (462).png>)
 
 Then, there are two sections inside the API Resource. The first one is the `Request`, where it is configured the request that will be sent to the device, and the other one is the `Response`, that configures the response that will be sent to the API Rest client that originates the request.
 
@@ -28,7 +37,7 @@ As described on [Properties](properties.md) and [Buckets](buckets.md) sections, 
 
 After saving the new API Resource, we can go to the device API, and the new `relay`resource will appear.
 
-![Device API for resource created over Product ](<../.gitbook/assets/image (462).png>)
+![Device API for resource created over Product ](<../.gitbook/assets/image (462) (1).png>)
 
 However, there seems to be something wrong there! The API can detect that the resource is expecting an input (`Resource Input` header is present), but nothing more appears. We are expecting here a true/false input, or just a switch to turn the relay on and off.&#x20;
 
