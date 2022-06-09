@@ -60,6 +60,7 @@
   * [Sigfox Plugin](plugins/sigfox.md)
   * [Node-RED Plugin](plugins/node-red.md)
   * [Grafana Plugin](plugins/grafana.md)
+* [PRODUCTS](products.md)
 * [FILE STORAGE](file-system.md)
 * [PROJECTS MANAGER](projects.md)
 * [USER ACCOUNTS](users-management.md)

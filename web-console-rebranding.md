@@ -86,13 +86,13 @@ When working on multi-user projects, the platform has a series of communications
 * **Subject**: Email subject
 * **Template**:  Configure the email template workinng directly with the text or with the HTML code
 
-![](<.gitbook/assets/image (450).png>)
+![](<.gitbook/assets/image (450) (1).png>)
 
 ### Email Settings
 
 This section allows to custom the email server for this specific brand, note that it is also posible to modify it in the Server Settings to create a default configuration for the hole host, that will be applied to all the rebrands.&#x20;
 
-![](<.gitbook/assets/image (458).png>)
+![](<.gitbook/assets/image (458) (1).png>)
 
 #### SMTP Configuration
 

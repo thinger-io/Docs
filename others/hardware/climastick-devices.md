@@ -274,7 +274,7 @@ This section covers different considerations while using the board.
 * This device is developed for prototyping and support software development, so it is not protected to support hard weather conditions without the proper cover case.
 * Try to avoid touching the components surfaces while using the device, it can produce an electrostatic shock on the device, producing shortcuts and malfunction. It is recommended to take the board from the edges like in the following illustration.
 
-![](../../.gitbook/assets/i2.PNG)&#x20;
+<img src="../../.gitbook/assets/i2.PNG" alt="" data-size="original">&#x20;
 
 * If necessary, clean the circuit using a non-damaging contact cleaner like Isopropyl alcohol and soft brush.&#x20;
 * Store in a cool, dry place. Protected from dust.
@@ -283,7 +283,7 @@ This section covers different considerations while using the board.
 
 * If you use the VIN power header, be careful to connect it in the correct position, as it is shown in the following image. Not following this directive could damage the protection diode.
 
-![](../../.gitbook/assets/i1.PNG)&#x20;
+<img src="../../.gitbook/assets/i1.PNG" alt="" data-size="original">&#x20;
 
 * ⚠ Do not use VIN power supply and USB power supply at the same time! It can damage your hardware.
 
@@ -291,7 +291,7 @@ This section covers different considerations while using the board.
 
 * You can power and charge a battery directly from the board. Use the BAT power header, and take care to of the polarity, as it is shown in the following picture:
 
-![](../../.gitbook/assets/i3.PNG)&#x20;
+<img src="../../.gitbook/assets/i3.PNG" alt="" data-size="original">&#x20;
 
 * BAT header is connected to a lithium battery charger that can manage 3.7Vdc, 500mah Li-Po / li-ion batteries charge and discharge process.
 * To charge a battery, connect it on BAT header and power on the ClimaStick through USB / VIN connectors. The battery charger will manage the charging voltage to increase the life battery and stop the charging cycle when the voltage drops up to 4.2Vdc.
@@ -302,7 +302,7 @@ This section covers different considerations while using the board.
 
 When using Deep-sleep function, it is necessary to weld together the two connectors of the WKUP port in order to close the WKUP circuitry (GPIO16-RESET). this port is not originally soldered to avoid malfunctions of the programming process. It is normal that by enabling this option it is necessary to force the flash mode before each reprogramming.
 
-![](<../../.gitbook/assets/image (449) (1).png>)
+![](<../../.gitbook/assets/image (449) (1) (1).png>)
 
 ## Device Files
 
