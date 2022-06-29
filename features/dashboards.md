@@ -377,8 +377,12 @@ The most interesting option is to create a custom AngularJS directive for custom
 
 Similar to the Basic Code Snippet example, in this example it is created a simple directive that will display basic information captured in the widget, i.e., the timestamp, the value, and the source configuration. For working with this example it is required to:
 
-* Create a new `File Storage` to store your widgets
-* Set public read access to the storage so the widgets can be retrieved when sharing your dashboard via Projects or shared links.
+* Create a new `File Storage` to store your widgets.
+
+{% hint style="info" %}
+Set public read access to the storage so the widgets can be retrieved when sharing your dashboard via Projects or shared links.
+{% endhint %}
+
 * Create two files named `htmlWidget.js`, and `htmlWidget.html` inside the storage. The Javascript file is the place where you will set your widget code and logic. In the other side, the HTML widget will hold your widget view.
 * Initialize the code of both files from the following code:
 
