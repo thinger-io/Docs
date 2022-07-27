@@ -30,6 +30,8 @@ We have made a great effort to simplify the integration between Thinger.io and N
     11\) Reading properties of devices, types or groups (property read node).\
     12\) Writing and modifying properties of devices, types or groups (property write node).\
     13\) Detecting different events of devices, buckets, endpoints and others (server events node).\
+    14\) Reading file contents of file storages (read storage node).\
+    15\) Writing new files or appending o existing files in file storages (write storage node).\
 
 * A **Node-RED Plugin** that allows deploying Node-RED server into the same host as Thinger.io IoT platform instance, running 24x7 without any kind of limitation. This way the problem of hosting the node-RED on another machine disappears
 
