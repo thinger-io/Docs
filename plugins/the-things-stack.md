@@ -188,3 +188,16 @@ To create a new downlink process make sure to follow the next steps:
 3. Modify the value of the property to launch the execution of the downlink process
 
 After this, the plugin will execute the payload processing and send it in response of the next The Things Stack API request to your server. It is possible to follow the trace of this communication by accessing the plugin's log going to `Plugins>Plugin profile>Logs`.
+
+## Monitor Your Data
+
+There are multiple ways to view the data sent by the device in [Thinger.io](https://thinger.io/).
+
+As long as the uplink messages are being sent by The Things Stack, the raw data will be available in the [Thinger.io](https://thinger.io/) **Data Bucket** configured or auto provisioned by the [The Things Stack Plugin](https://docs.thinger.io/plugins/the-things-stack), without any further configuration.
+
+<figure><img src="../.gitbook/assets/thingerio_data_bucket.png" alt=""><figcaption><p>Thinger.io data bucket showing raw data sent by The Things Stack device</p></figcaption></figure>
+
+Nevertheless, it is recommended to create a [Dashboard](https://docs.thinger.io/features/dashboards) in [Thinger.io](https://thinger.io/) to be able to view the data in a more comprehensive way.
+
+<figure><img src="../.gitbook/assets/thingerio_data_dashboard.png" alt=""><figcaption><p>Thinger.io dashboard showing data from The Things Stack device</p></figcaption></figure>
+
