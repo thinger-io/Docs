@@ -685,7 +685,7 @@ svg {
 
 In this example it is created an advanced widget that will allow both display and configure device properties from the dashboard.
 
-![Custom HTML Widget to update device propertiesuC](<../.gitbook/assets/image (457) (1) (1).png>)
+![Custom HTML Widget to update device properties](<../.gitbook/assets/image (457) (1) (1).png>)
 
 This directive has been created with the following two files from a [File Storage](../file-system.md). The interesting part on this example is how it interacts with the API to update the property values. Internally, the console exposes different classes witch represents different resources on a user account, i.e., buckets, devices, properties, etc. In this example, it is used the `DeviceProperty` class, which takes two parameters: `device`and `property`, which can be obtained from the source parameter passed to the directive:
 
