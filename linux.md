@@ -6,155 +6,117 @@ This how-to will cover how to get the first steps while using the thinger.io pla
 
 ## Requirements
 
-* A raspberry running with Raspbian, and a terminal or SSH access. Other OS like Ubuntu may work, but has not been tested yet.
+* A Raspberry Pi running with Raspbian, and a terminal or SSH access. Other OS like Ubuntu or Debian may work, but has not been tested yet. This tutorial has been tester with buster version.
 * Register a device in the thinger.io console and keep the credentials by hand. If you need help with this part, please check this other [how-to](https://community.thinger.io/t/register-a-device-in-the-console/23).
 
-## Installing a newer GCC Version
+## Install development dependencies
 
-**Note: Not required for Raspbian Jessie or newer versions.**
+Thinger.io implementation for Linux requires some tools and libraries for its compiling:
 
-It is necessary to use a modern compiler to build thinger.io examples. The latest Raspbian version already provides a modern compiler, starting with Jessie, but you may install a newer compiler if you are using older Raspbian versions. It is required **at least GCC 4.8.2**. Please type `gcc -`v in a terminal to check if you need to update your compiler.
+* A C++ compiler (GCC or Clang)
+* CMake to guide the compiling and search installed libraries
+* OpenSSL for using secure connections with the platform
+* Boost Libraries used for high performance async input/output&#x20;
 
-It is necessary to keep all your system updated, so please start by upgrading all the installed packages by typing the following commands. It may take some time depending on your Internet connection
+To install this dependencies, update the apt repository and installed packages first.
 
-```text
-sudo apt-get update
-sudo apt-get upgrade
+```
+sudo apt update
+sudo apt upgrade
 ```
 
-Next, open `/etc/apt/sources.list` in a editor and replace the name `wheezy` with `jessie`.
+Then, install the described packages:
 
-```text
-sudo nano /etc/apt/sources.list
+```bash
+sudo apt install gcc g++ cmake libssl-dev libboost-system-dev libboost-thread-dev libboost-program-options-dev libboost-regex-dev
 ```
-
-Then we are going to update the package list again, so we can access to newer jessie packages:
-
-```text
-sudo apt-get update
-```
-
-now we can finally install install GCC 4.9
-
-```text
-sudo apt-get install gcc-4.9 g++-4.9
-```
-
-Last step is to revert back from `Jessie` to `Wheezy`, open `/etc/apt/sources.list` again and replace `jessie` with `wheezy`, after that do an update of your package list:
-
-```text
-sudo nano /etc/apt/sources.list
-sudo apt-get update
-```
-
-If we type `gcc -v` at this moment, the default version is still 4.7. So we are going to change that to make the newer gcc 4.9 the default version. First remove all `gcc` alternatives.
-
-```text
-sudo update-alternatives --remove-all gcc
-sudo update-alternatives --remove-all g++
-```
-
-And now add both gcc alternatives with more priority to GCC 4.9 version.
-
-```text
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.6 40 --slave /usr/bin/g++ g++ /usr/bin/g++-4.6
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.9
-```
-
-At this stage, if you type `gcc-v` it should show version 4.9.2 or greater. You can always change the default compiler with the following command.
-
-```text
-sudo update-alternatives --config gcc
-```
-
-## Install additional dependencies
-
-It is necessary use CMake for compiling the examples and install thinger as daemon if you want. It is also required to install Open SSL if we want to securely connect to the platform trhough TLS.
-
-Update the apt repository first:
-
-```text
-sudo apt-get update
-```
-
-Install Dependencies \(CMake and OpenSSL\)
-
-```text
-sudo apt-get install cmake libssl-dev
-```
-
-## Starting with the platform
 
 Download the latest Linux Client version from GitHub.
 
-```text
-git clone https://github.com/thinger-io/Linux-Client.git
+```bash
+git clone https://github.com/thinger-io/IOTMP-Linux.git
 ```
 
-Enter in the Linux-Client folder we just cloned.
+Enter in the IOTMP-Linux folder we just cloned.
 
-```text
-cd Linux-Client
+```bash
+cd IOTMP-Linux
 ```
 
-And now it is time to enter the credentials in the main project file. So we are going to edit the `main.cpp` file from `src` folder. You can use any editor you want. We will use here `nano`.
+Create a build folder and enter into it:
 
-```text
-nano src/main.cpp
+```bash
+mkdir build
+cd build
 ```
 
-In this case you must edit the fields `USER_ID`, `DEVICE_ID`, and `DEVICE_CREDENTIAL` with the information you provided while registering your device in the platform. Here is an example screenshot of how the `main.cpp` file should look like before editing these fields.  When you are done editing the parameters, exit the nano editor pressing `Ctrl+X` and then type '`y`' to save the changes.
+Run CMake
 
-![](https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/2697e5c757b23eec7537fc9ac232544f5923d583.png)
-
-If you are executing the script on a Raspberry Pi, make sure the `run.sh` contains the `-DRASPBERRY=ON` commandline parameter as follows -
-
-```text
-cmake -DCMAKE_BUILD_TYPE=Release -DDAEMON=OFF -DRASPBERRY=ON
+```bash
+cmake ../
 ```
 
-Now you must add execute permissions to the `run.sh` script.
+If everything goes fine, it should display something like:
 
-```text
-chmod +x run.sh
+```bash
+pi@RevPi20679:~/thinger_iotmp_linux_client/build $ cmake ../
+-- The C compiler identification is GNU 8.3.0
+-- The CXX compiler identification is GNU 8.3.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test COMPILER_SUPPORTS_CXX17
+-- Performing Test COMPILER_SUPPORTS_CXX17 - Success
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found OpenSSL: /usr/lib/arm-linux-gnueabihf/libcrypto.a (found version "1.1.1n")  
+-- OpenSSL Version: 1.1.1n /usr/include /usr/lib/arm-linux-gnueabihf/libssl.a;-lpthread;dl /usr/lib/arm-linux-gnueabihf/libcrypto.a;-lpthread;dl
+-- Found Boost: /usr/include (found version "1.67.0") found components: system thread regex program_options date_time chrono atomic 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/pi/thinger_iotmp_linux_client/build
 ```
 
-And now you can run it to test that everything is working.
+Then, run make to generate the binary.&#x20;
 
-```text
-./run.sh
+```bash
+make
 ```
 
-If everything is going fine you should see how the program is compiled and executed automatically. The program actually reports some debug text that can help us to check if we have configured the credentials well. The expected result you should see is something like the following picture.  Now you can go to your thinger.io console and check that the Raspberry appears as connected. You can even try to execute the `sum` resource defined in the `main.cpp` that simply performs a sum. For test the device resources, please go to the API Explorer that appears in the device dashboard.
+After it compiles, it is possible to execute&#x20;
 
-![](https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/e321714a8b9fcac120cb1dafae8502cca65e9b39.png)
-
-![](https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/7b3bf8846f66eb57b422a803ac157560ea608e19.png)
-
-## Installing the client as daemon
-
-At this moment, the client you have running will be stopped if you close the terminal or end the SSH connection. You can however install the client as a daemon service, so it is started automatically even if your Raspberry reboot.
-
-To install the client you have already run as a service, please go to the Raspberry install folder:
-
-```text
-cd install/raspberry/
+```bash
+pi@RevPi20679:~/thinger_iotmp_linux_client/build $ ./thinger -u username -d device -p credential --host "perf.aws.thinger.io" &
+[1] 2442
+pi@RevPi20679:~/thinger_iotmp_linux_client/build $ date       time         ( uptime  ) [ thread name/id ]                   file:line     v| 
+2022-09-06 19:54:46.635 (   0.001s) [main thread     ]             loguru.cpp:647   INFO| arguments: ./thinger -u alvarolb -d macbook -p macbook --host perf.aws.thinger.io
+2022-09-06 19:54:46.636 (   0.001s) [main thread     ]             loguru.cpp:650   INFO| Current dir: /home/pi/thinger_iotmp_linux_client/build
+2022-09-06 19:54:46.636 (   0.002s) [main thread     ]             loguru.cpp:652   INFO| stderr verbosity: 0
+2022-09-06 19:54:46.636 (   0.002s) [main thread     ]             loguru.cpp:653   INFO| -----------------------------------
+2022-09-06 19:54:46.643 (   0.009s) [main thread     ]        asio_client.hpp:97    INFO| [CLIENT] Starting ASIO client...
+2022-09-06 19:54:46.644 (   0.009s) [main thread     ]              thinger.h:242   INFO| [SOCKET] Connecting to perf.aws.thinger.io:25206 (TLS: 1)
+2022-09-06 19:54:46.763 (   0.129s) [main thread     ]              thinger.h:251   INFO| [SOCKET] Connected!
+2022-09-06 19:54:46.763 (   0.129s) [main thread     ]              thinger.h:263   INFO| [THINGER] Authenticating. user: '', device: ''
+2022-09-06 19:54:46.764 (   0.130s) [main thread     ]              thinger.h:719   INFO| [MSG_OUT] (CONNECT) (2:1) (3:["username","device","password"]) (1:17767) 
+2022-09-06 19:54:46.793 (   0.159s) [main thread     ]              thinger.h:677   INFO| [MSG__IN] (OK) (1:17767) 
+2022-09-06 19:54:46.794 (   0.160s) [main thread     ]              thinger.h:266   INFO| [THINGER] Authenticated!
+2022-09-06 19:54:47.795 (   1.161s) [main thread     ]              thinger.h:719   INFO| [MSG_OUT] (KEEP_ALIVE) 
+2022-09-06 19:54:47.818 (   1.184s) [main thread     ]              thinger.h:677   INFO| [MSG__IN] (KEEP_ALIVE) 
+2022-09-06 19:54:47.818 (   1.184s) [main thread     ]              thinger.h:278   INFO| [THINGER] Keep alive received
 ```
-
-And then run the `install.sh` script, that will compile and install the client as a service. This step will copy a init script file to `/etc/init.d/thinger`, and also will copy the compiled binary file to `/usr/local/bin/thinger`. So if you want to remove the daemon client you can stop the service and remove those files.
-
-```text
-chmod +x install.sh
-./install.sh 
-```
-
-Notice that this command will install and run the thinger.io client in background as a daemon, so if you call again the `run.sh` script, which run the standalone client, both clients will be connecting to the platform and disconnecting each other continuously. If you need to stop the background client, please use this command.
-
-```text
-sudo service thinger stop
-```
-
-## What's next?
-
-Now you have to integrate your desired resources in the main.cpp file, like the `sum` example is already present. You can try to define a resource for turning on and off a led, read a sensor value, execute a system command, and so on. Some tutorials will be available soon for covering this basic functionality.
-
