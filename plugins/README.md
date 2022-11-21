@@ -53,16 +53,12 @@ That provides a graphical interface to make the next operations:
 
 ## Custom Plugins Development&#x20;
 
-In order to provide a highly extensive system we are working to make it easy for community developers to contribute through Open Source plugins. This section will provide deeply information about the infrastructure that is supporting plugins system and how to build, test and deploy custom ones.&#x20;
+In order to provide a highly extensive system we are working to make it easy for community developers to contribute through Open Source plugins. Therefore, we have created a dedicated repository and wiki that provides deeply information about the infrastructure that is supporting plugins system and how to build, test and deploy custom ones.
 
-{% hint style="danger" %}
-This is work in progress, but hopefully will be ready by mid-2020
-{% endhint %}
+{% embed url="https://github.com/thinger-io/plugins" %}
+Plugins Repository
+{% endembed %}
 
-### Plugins System Infrastructure
-
-### Plugins Repository
-
-### Writing a Plugin
-
-### Deploying a Custom Plugin
+{% embed url="https://github.com/thinger-io/plugins/wiki" %}
+Plugins Development Wiki
+{% endembed %}
