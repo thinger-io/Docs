@@ -65,11 +65,23 @@ Thinger.io is a platform in constant growth, our development team is continuousl
 * [x] Product Manager
 * [x] Java Script IoT client\*
 * [x] Custom plugins support\*
+* [x] IoTMP Proxys
+* [x] Reverse Proxy for Linux software client
+* [x] MQTT-REST API interface in Products feature
+* [x] Project member and global roles
+* [x] Influx2 integration and plugin
+* [x] Bucket tags
+* [ ] Mobile console with Capacitor
+* [ ] Plugins repository
+
+2023
+
+* [ ] Alerts manager&#x20;
+* [ ] Automation scheduler
 * [ ] COAP integration
 * [ ] NB-IoT integration client (COAP)
 * [ ] Python IoT Client
 * [ ] Projects Manager 2.0 with individual groups
-* [ ] Alerts manager&#x20;
 * [ ] Reporting tool
 
 \*Released but not yet documented
