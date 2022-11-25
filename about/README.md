@@ -9,11 +9,11 @@ description: >-
 
 ## History
 
-Thinger.io Platform project started life in early 2015 despite firsts source code lines was made on 2014, as a side-project by Phd. Alvaro Luis Bustamante when he was working as researcher at the University Carlos III of Madrid (Spain), when he was studying different solutions to work online with cheap electronic devices, and he found that all the existent platforms were very difficult to use, unefficient or doesn't had enough capacities to create IoT projects in a simple way.&#x20;
+Thinger.io Platform project started life in early 2015 despite firsts source code lines was made on 2014, as a side-project by Phd. Alvaro Luis Bustamante when he was working as a researcher at the University Carlos III of Madrid (Spain). After studying different solutions to work online with cheap electronic devices, he realized that all the existing platforms were very difficult to use, inefficient or doesn't have enough capacities to create professional IoT projects in a simple way.&#x20;
 
 > _"Why I have to select a compatible vendor hardware? Why I need to use an Operating System just for my toaster? Why my device must run a scripting language that burn the batteries? Why I have to rely on a specific vendor and its closed platform? These are some questions I made myself before starting to work in the thinger.io platform."_
 
-What began as a backend project to retrieve data and controlling devices in real-time,  quickly became a much more general tool that could be easily extended in any direction. In 2018 the project was turned into a loyalty-founded company and released an enterprise version of Thinger.io platform technology to provide professional support for IoT projects with the original vision of a perfect balance between simple but powerful technology.  &#x20;
+What began as a backend project to retrieve data and control devices in real-time,  quickly became a much more general tool that could be easily extended in any direction. In 2018 the project was turned into a loyalty-founded company and released an enterprise version of Thinger.io platform technology to provide professional support for IoT projects with the original vision of a perfect balance between simple but powerful technology.  &#x20;
 
 
 
@@ -21,7 +21,7 @@ For some more of the history and highlights check out blog: [https://thinger.io/
 
 ## Development roadmap&#x20;
 
-Thinger.io is a platform in constant growth, our development team is continuously analyzing the requirements of the IoT market to identify the best features to be included in the platform. There is still a long way to go to have a platform as complete as we would like it to be. Moreover, thanks to the plugin marketplace we can integrate with a great number of third party platforms. The following list, details the most important expansion projects that will be developed soon:
+Thinger.io is a platform in constant growth, our development team is continuously analyzing the requirements of the IoT market to identify the best features to be included in the platform. There is still a long way to go to have a platform as complete as we would like it to be. Moreover, thanks to the plugin marketplace we can integrate with a great number of third-party platforms. The following list details the most important expansion projects that will be developed soon:
 
 ### 2020
 
@@ -49,7 +49,7 @@ Thinger.io is a platform in constant growth, our development team is continuousl
 * [x] Improved Guest member features
 * [x] Extended Node-RED Integration
 * [x] Customizable Login&#x20;
-* [x] Platformio Plugin
+* [x] PlatformIO Plugin
 * [x] HTTP devices Integration plugin
 * [x] ESP32 & ESP8266 OTA
 * [x] Centralized instances monitoring system
