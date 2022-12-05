@@ -71,8 +71,8 @@ Thinger.io is a platform in constant growth, our development team is continuousl
 * [x] Project member and global roles
 * [x] Influx2 integration and plugin
 * [x] Bucket tags
-* [ ] Mobile console with Capacitor
-* [ ] Plugins repository
+* [x] Plugins repository
+* [ ] New APP console
 
 2023
 
