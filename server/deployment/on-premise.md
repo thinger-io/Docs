@@ -25,7 +25,7 @@ On-premise instances can be deployed with different licenses, depending on the p
 
 After contacting our team you will receive an email with the link to set up the payment method using our subscription management tool that is always available [**on this link.**](https://thinger.chargebeeportal.com/portal/v2/login?forward=portal\_main) in order to make modifications to the subscription or the payment method.
 
-### 4.  On-premise install
+### 3.  On-premise install
 
 Once you have received the license token by email, it is possible to easily deploy Thinger.io on your host with a few commands. Before starting this guide, please, install [Docker Engine](https://docs.docker.com/install/) and [Docker Compose](https://docs.docker.com/compose/install/) in your computer or server.&#x20;
 
@@ -33,7 +33,7 @@ Once you have received the license token by email, it is possible to easily depl
 Install [Docker Engine](https://docs.docker.com/install/) and [Docker Compose ](https://docs.docker.com/compose/install/)before following this guide.
 {% endhint %}
 
-This guide assumes you are installing Thinger.io on a fresh Linux host with Docker support, as it will run databases like `MongoDB` and `InfluxDB`, and will start listening on several ports: `80`, `443`, `25200`, `25202`, `1883`, and`8883`. It will also create a root directory in `/data` where all the Thinger.io data and database information will be stored.
+This guide assumes you are installing Thinger.io on a fresh Linux host with Docker support, as it will run databases like `MongoDB` and `InfluxDB`, and will start listening on several ports: `80`, `443`, `1883`,`8883`, `25200`, `25202`, `25204` and `25206` . It will also create a root directory in `/data` where all the Thinger.io data and database information will be stored.
 
 To start, just launch the following command that will download the `docker-compose` file associated to your license:
 
@@ -70,10 +70,11 @@ services:
       - /data/thinger:/data
     entrypoint:
       - thinger
-      - -v1
+      - -v0
       - --runpath=/data
     environment:
       - TOKEN=ce84fc9f089227a4828f66c470d9319533611ee37adc41676ba1ef5a92bd1dca0f2258962d19627010525e437c2cbf48a
+      - HOST_VOLUME=/data/thinger
     network_mode: host
     restart: always
     logging:
@@ -87,6 +88,9 @@ services:
       timeout: 5s
       retries: 3
       start_period: 2m
+    depends_on:
+      - mongodb
+      - influxdb
 
   # mongodb
   mongodb:
@@ -95,13 +99,13 @@ services:
     environment:
       - MONGO_DATA_DIR=/data/db
       - MONGO_LOG_DIR=/dev/null
-      - MONGODB_USER=thinger
-      - MONGODB_DATABASE=thinger
-      - MONGODB_PASS=PiIcgpUcl0r5xUb/cXP8WS5G
+      - MONGO_INITDB_ROOT_USERNAME=thinger
+      - MONGO_INITDB_ROOT_PASSWORD=PiIcgpUcl0r5xUb/cXP8WS5G
+      - MONGO_INITDB_DATABASE=thinger
     volumes:
       - /data/mongodb:/data/db
     ports:
-        - 127.0.0.1:27017:27017
+      - 127.0.0.1:27017:27017
     command: mongod --quiet
     restart: always
     logging:
@@ -110,24 +114,22 @@ services:
         max-size: "200k"
         max-file: "10"
 
-  # influxdb 
+  # influxdb
   influxdb:
-    image: influxdb:1.7
-    container_name: influxdb
+    image: influxdb:2.4
+    container_name: influxdb2
     ports:
       # The API for InfluxDB is served on port 8086
-      - 127.0.0.1:8086:8086
-      - 127.0.0.1:8082:8082
-      # UDP Port
-      - 127.0.0.1:8089:8089/udp
+      - 8086:8086
     volumes:
-      # Data & Config Volumes
-      - /data/influxdb/data:/var/lib/influxdb
-      - /data/influxdb/config:/etc/influxdb/
+      - /data/influxdb2:/var/lib/influxdb2
     environment:
-      - INFLUXDB_HTTP_AUTH_ENABLED=true
-      - INFLUXDB_ADMIN_USER=thinger
-      - INFLUXDB_ADMIN_PASSWORD=PiIcgpUcl0r5xUb/cXP8WS5G
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=thinger
+      - DOCKER_INFLUXDB_INIT_PASSWORD=PiIcgpUcl0r5xUb/cXP8WS5G
+      - DOCKER_INFLUXDB_INIT_ORG=thinger
+      - DOCKER_INFLUXDB_INIT_BUCKET=thinger
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=ce84fc9f089227a4828f66c470d9319533611ee37adc41676ba1ef5a92bd1dca0f2258962d19627010525e437c2cbf48a
       - INFLUXDB_REPORTING_DISABLED=true
     restart: always
     logging:
@@ -154,11 +156,13 @@ services:
       driver: "json-file"
       options:
         max-size: "200k"
-        max-file: "10"                       
+        max-file: "10"
+    depends_on:
+      - thinger
 ```
 {% endcode %}
 
-Then, if everything seems to be correct, just run the following command to start all the processes defined in `docker-compose.yml` and run them in dettached mode with `-d` option:
+Then, if everything seems to be correct, just run the following command to start all the processes defined in `docker-compose.yml` and run them in detached mode with `-d` option:
 
 ```yaml
 docker-compose up -d
@@ -237,7 +241,7 @@ Then, the Thinger.io instance and the associated databases will be running:
 root@docker-s-1vcpu-1gb-fra1-01:~# docker ps
 CONTAINER ID        IMAGE                   COMMAND                  CREATED             STATUS                    PORTS                                                                          NAMES
 c7075dd45e5d        mongo:4                 "docker-entrypoint.s…"   43 minutes ago      Up 43 minutes             127.0.0.1:27017->27017/tcp                                                     mongodb
-ff9d6178773b        influxdb:1.7            "/entrypoint.sh infl…"   43 minutes ago      Up 43 minutes             127.0.0.1:8082->8082/tcp, 127.0.0.1:8086->8086/tcp, 127.0.0.1:8089->8089/udp   influxdb
+ff9d6178773b        influxdb:2.4            "/entrypoint.sh infl…"   43 minutes ago      Up 43 minutes             127.0.0.1:8082->8082/tcp, 127.0.0.1:8086->8086/tcp, 127.0.0.1:8089->8089/udp   influxdb
 8ee8b4c924dd        thinger/server:latest   "thinger -v1 --runpa…"   47 minutes ago      Up 43 minutes (healthy)                                                                                  thinger
 eee1b9479368        pyouroboros/ouroboros   "ouroboros"              47 minutes ago      Up 47 minutes                                                                                            ouroboros
 ```
@@ -247,8 +251,6 @@ Then, you can access your on-premise instance by pointing your browser to your h
 {% hint style="info" %}
 The latest versions of Ubuntu come with `UFW` (the default firewall configuration tool for Ubuntu). It may be blocking Thinger.io ports by default. Configure it properly or disable it (not recommended)  with `sudo ufw disable`
 {% endhint %}
-
-
 
 ## Steps After On-premise Deployment
 
