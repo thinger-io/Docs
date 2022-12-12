@@ -8,18 +8,20 @@ Thinger.io IoT instances can be deployed on-premise over any kind of cloud or lo
 
 On-premise instances can be deployed with different licenses, depending on the project requirements, mainly in terms of platform features like rebrands, custom domains, additional support, plugins, etc. To obtain your license code**,** [**contact Thinger.io sales team using this link,**](https://thinger.io/request-a-demo) **** we will help you to select the best option according to your project requirements.&#x20;
 
-|                        | MEDIUM                             | **LARGE**                            | **UNLIMITED**            |
-| ---------------------- | ---------------------------------- | ------------------------------------ | ------------------------ |
-| **Devices/Assets**     | Unlimited                          | Unlimited                            | Unlimited                |
-| **Performance**        | Unlimited                          | Unlimited                            | Unlimited                |
-| **Plugins**            | 3                                  | 5                                    | Unlimited                |
-| **Rebranding**         | 1                                  | 5                                    | Unlimited                |
-| **Custom Domain/TLS**  | 1                                  | 5                                    | Unlimited                |
-| **Developer accounts** | 5                                  | ✓                                    | Unlimited                |
-| **Guest accounts**     | Unlimited                          | Unlimited                            | Unlimited                |
-| **Extended support**   | ✓                                  | ✓                                    | Available                |
-| **HA Cluster**         |                                    |                                      | Available                |
-| **Recommended use**    | Business B2B or B2B2C IoT product  | Consultancies with multiple projects | Companies without limits |
+|                       | **MEDIUM**                         | **LARGE**                            | **UNLIMITED**            |
+| --------------------- | ---------------------------------- | ------------------------------------ | ------------------------ |
+| **Hardware Limits**   | 2 Cores, 4GB RAM                   | 4 Cores, 8GB RAM                     | Unlimited                |
+| **Devices/Assets**    | Unlimited                          | Unlimited                            | Unlimited                |
+| **Plugins**           | 3                                  | 5                                    | Unlimited                |
+| **Multitenant**       | Up to 5                            | Up to 5                              | Unlimited                |
+| **Business Features** | ✓                                  | ✓                                    | ✓                        |
+| **Rebranding**        | 1                                  | 5                                    | Unlimited                |
+| **Custom Domain**     | 1                                  | 5                                    | Unlimited                |
+| **MQTT Support**      | ✓                                  | ✓                                    | ✓                        |
+| **Guest accounts**    | Unlimited                          | Unlimited                            | Unlimited                |
+| **Extended support**  | Available                          | Available                            | ✓                        |
+| **HA Cluster**        |                                    |                                      | Available                |
+| **Recommended use**   | Business B2B or B2B2C IoT product  | Consultancies with multiple projects | Companies without limits |
 
 ### 2.  Checkout and payment options
 
