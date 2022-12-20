@@ -129,7 +129,7 @@ Thinger.io data bucket feature has been created using time series databases, The
 }
 ```
 
-The time must be expressed with a standard Epoch Timestamp expressed in milliseconds.
+The time must be expressed with a standard Epoch Timestamp expressed in milliseconds. This functionality allows storing data by the time they were produced instead of stored. It also allows to correct or modify data already stored in the platform.
 
 {% hint style="warning" %}
 Note that, if the TS of a new datapoint matches with an old data bucket entry, it will be overwritten.
