@@ -113,6 +113,28 @@ Once the data bucket has been configured, and it started to record data from a d
 
 ![](../.gitbook/assets/iotbucketdata.png)
 
+## Custom data timestamp&#x20;
+
+Thinger.io data bucket feature has been created using time series databases, The system has been programmed to store the data points using the timestamp of the instant they are stored in the database as the indexing variable, however, it is possible to customize this variable by entering a timestamp in the payload using the following key-value structure:
+
+```
+// example of datapoint with custom timestamp
+
+{
+  "ts":1671536877360
+  "lat": 40.416775,
+  "lng": -3.70379,
+  "temperature": 23.33,
+  "humidity": 32.44
+}
+```
+
+The time must be expressed with a standard Epoch Timestamp expressed in milliseconds.
+
+{% hint style="warning" %}
+Note that, if the TS of a new datapoint matches with an old data bucket entry, it will be overwritten.
+{% endhint %}
+
 ## Bucket Data Import
 
 In order to make bulk data upload or buckets backup processes, the data bucket system has been provided with an import feature that is able to retrieve information from .csv files from a Thinger.io [**File System**](../file-system.md) and store its data using the timestream specified in the file rows.&#x20;
