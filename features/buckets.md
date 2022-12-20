@@ -107,12 +107,6 @@ Ones this source has been selected, the interface will show a new input text in 
 Note that the data buckets system has been created to store JSON format messages so the data from the MQTT device must contain this encryption.&#x20;
 {% endhint %}
 
-## Review Bucket Data
-
-Once the data bucket has been configured, and it started to record data from a device or from write calls, it will display the information inside a table. Every record contains the server timestamp in UTC (but shown in local time zone in the console), and the record value. The value stored in the data bucket can be a single value, or any other JSON document. If the JSON document is composed by key-value pairs, like in the previous examples, they will be displayed in tabular format, just like in the following screenshot.
-
-![](../.gitbook/assets/iotbucketdata.png)
-
 ## Custom data timestamp&#x20;
 
 Thinger.io data bucket feature has been created using time series databases, The system has been programmed to store the data points using the timestamp of the instant they are stored in the database as the indexing variable, however, it is possible to customize this variable by entering a timestamp in the payload using the following key-value structure:
@@ -134,6 +128,12 @@ The time must be expressed with a standard Epoch Timestamp expressed in millisec
 {% hint style="warning" %}
 Note that, if the TS of a new datapoint matches with an old data bucket entry, it will be overwritten.
 {% endhint %}
+
+## Review Bucket Data
+
+Once the data bucket has been configured, and it started to record data from a device or from write calls, it will display the information inside a table. Every record contains the server timestamp in UTC (but shown in local time zone in the console), and the record value. The value stored in the data bucket can be a single value, or any other JSON document. If the JSON document is composed by key-value pairs, like in the previous examples, they will be displayed in tabular format, just like in the following screenshot.
+
+![](../.gitbook/assets/iotbucketdata.png)
 
 ## Bucket Data Import
 
