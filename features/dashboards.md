@@ -948,13 +948,13 @@ To add a tab to a dashboard you only need to click on the blue "add tab" button,
 
 Note that, when the editing mode is enabled, the tabs order can also be customized by dragging to the desired position.&#x20;
 
-![](<../.gitbook/assets/image (375).png>)
+![](<../.gitbook/assets/image (375) (1).png>)
 
 ## Dashboard Settings
 
 Thinger.io allows setting some parameters of the dashboard behavior. Accessing the settings menu just requires to activate the dashboard edit mode and then click on the blue "Settings" button in the upper area of the dashboard. The next context will appear, which has three main tabs to organize the work that can be made with this menu:
 
-![](<../.gitbook/assets/image (381).png>)
+![](<../.gitbook/assets/image (381) (1).png>)
 
 ### Layout configuration
 
@@ -1001,5 +1001,5 @@ Any modification on a shared dashboard widget that includes new device or data b
 
 Finally, for more advanced users, the dashboard settings section allows access to the JSON file where all interface parameters are configured. This allows you to customize each element in a flexible way, but it is also the best way to copy a dashboard for replication or post it in the community discussion forum.
 
-![](<../.gitbook/assets/image (372).png>)
+![](<../.gitbook/assets/image (372) (1).png>)
 
