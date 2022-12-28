@@ -157,12 +157,13 @@ Note that the REST API does not define the application ID, this parameter will b
 To create a new webhook integration follow the next steps in The Things Stack web console:
 
 1. Select the Application to be integrated.
-2.  In the main menu open the "Integrations" section and click the "Webhooks" option. The webhooks list will be shown.\
+2. In the main menu open the "Integrations" section and click the "Webhooks" option. The webhooks list will be shown.
 
 
-    3\. Clicking the `+Add webhook` blue button in the right top corner of the interface allows choosing between different webhooks integration templates. Select Thinger.io template. Then, configure the webhook only requires filling the form with the information provided by Thinger.io "webhook settings" tab and selecting JSON webhook format.
 
-    <figure><img src="../.gitbook/assets/image (375).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (375).png" alt=""><figcaption></figcaption></figure>
+
+3\. Clicking the `+Add webhook` blue button in the right top corner of the interface allows choosing between different webhooks integration templates. Select Thinger.io template. Then, configure the webhook only requires filling the form with the information provided by Thinger.io "webhook settings" tab and selecting JSON webhook format.
 
 <figure><img src="../.gitbook/assets/ttn-webhook.png" alt=""><figcaption><p>The Things Stack webhook template for Thinger.io</p></figcaption></figure>
 
