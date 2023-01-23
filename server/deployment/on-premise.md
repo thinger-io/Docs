@@ -2,30 +2,31 @@
 
 ## Subscribing and Deploying On-premise Instances
 
-Thinger.io IoT instances can be deployed on-premise over any kind of cloud or local host, that way the user will have full control over the hole infrastructure. This section describes how to obtain an On-premise license and how to deploy a private Thinger.io On-premise instance within minutes. Just follow the next steps:
+Thinger.io IoT instances can be deployed on-premise over any kind of cloud or local host, that way the user will have full control over the whole infrastructure. This section describes how to obtain an On-premise license and how to deploy a private Thinger.io On-premise instance within minutes. Just follow the next steps:
 
 ### 1. Select the right license
 
-On-premise instances can be deployed with different licenses, depending on the project requirements, mainly in terms of platform features like rebrands, custom domains, additional support, plugins, etc. To obtain your license code**,** [**contact Thinger.io sales team using this link,**](https://thinger.io/request-a-demo) **** we will help you to select the best option according to your project requirements.&#x20;
+On-premise instances can be deployed with different licenses, depending on the project requirements, mainly in terms of platform features like rebrands, custom domains, additional support, plugins, etc. License codes can be purchased [here](https://pricing.thinger.io).\
 
-|                       | **MEDIUM**                         | **LARGE**                            | **UNLIMITED**            |
-| --------------------- | ---------------------------------- | ------------------------------------ | ------------------------ |
-| **Hardware Limits**   | 2 Cores, 4GB RAM                   | 4 Cores, 8GB RAM                     | Unlimited                |
-| **Devices/Assets**    | Unlimited                          | Unlimited                            | Unlimited                |
-| **Plugins**           | 3                                  | 5                                    | Unlimited                |
-| **Multitenant**       | Up to 5                            | Up to 5                              | Unlimited                |
-| **Business Features** | ✓                                  | ✓                                    | ✓                        |
-| **Rebranding**        | 1                                  | 5                                    | Unlimited                |
-| **Custom Domain**     | 1                                  | 5                                    | Unlimited                |
-| **MQTT Support**      | ✓                                  | ✓                                    | ✓                        |
-| **Guest accounts**    | Unlimited                          | Unlimited                            | Unlimited                |
-| **Extended support**  | Available                          | Available                            | ✓                        |
-| **HA Cluster**        |                                    |                                      | Available                |
-| **Recommended use**   | Business B2B or B2B2C IoT product  | Consultancies with multiple projects | Companies without limits |
+
+|                           | **MEDIUM**                         | **LARGE**                            | **UNLIMITED**            |
+| ------------------------- | ---------------------------------- | ------------------------------------ | ------------------------ |
+| **Hardware requirements** | 1 Cores, 1GB RAM                   | 2 Cores, 4GB RAM                     | Unlimited                |
+| **Devices/Assets**        | 1000                               | 2000                                 | Unlimited                |
+| **Plugins**               | 3                                  | 5                                    | Unlimited                |
+| **Multitenant**           | Up to 5                            | Up to 5                              | Unlimited                |
+| **Business Features**     | ✓                                  | ✓                                    | ✓                        |
+| **Rebranding**            | 1                                  | 5                                    | Unlimited                |
+| **Custom Domain**         | 1                                  | 5                                    | Unlimited                |
+| **MQTT Support**          | ✓                                  | ✓                                    | ✓                        |
+| **Guest accounts**        | Unlimited                          | Unlimited                            | Unlimited                |
+| **Extended support**      | Available                          | Available                            | ✓                        |
+| **HA Cluster**            |                                    |                                      | Available                |
+| **Recommended use**       | Business B2B or B2B2C IoT product  | Consultancies with multiple projects | Companies without limits |
 
 ### 2.  Checkout and payment options
 
-After contacting our team you will receive an email with the link to set up the payment method using our subscription management tool that is always available [**on this link.**](https://thinger.chargebeeportal.com/portal/v2/login?forward=portal\_main) in order to make modifications to the subscription or the payment method.
+After contacting our team you will receive an email with the link to set up the payment method using our subscription management tool which is always available [**on this link.**](https://thinger.chargebeeportal.com/portal/v2/login?forward=portal\_main) in order to make modifications to the subscription or the payment method.
 
 ### 3.  On-premise install
 
@@ -44,7 +45,7 @@ curl https://subscriptions.thinger.io/v1/docker-compose.yml?token={LICENSE} -o d
 ```
 
 {% hint style="warning" %}
-Never share or publish your LICENSE key as it may consist on a security risk for your host. License keys are issued per host, so do not reuse them between hosts. &#x20;
+Never share or publish your LICENSE key as it may consist of a security risk for your host. License keys are issued per host, so do not reuse them between hosts. &#x20;
 {% endhint %}
 
 Ensure that your `docker-compose` file has been downloaded correctly:
