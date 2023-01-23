@@ -16,7 +16,7 @@ Thinger.io instances support multi-tenant web console customizations. By means o
 Note that each web console rebrand needs to be supported by an individual web domain, which can be managed in the "Domain" section of the main menu.
 {% endhint %}
 
-## Create a new Web Console Rebranding Profile
+## New console rebranding
 
 Clicking into "Add Brand" button of the "Rebranding" section allows creating a new branding profile. The process starts by introducing a web domain name, that will be the identification for the brand profile:
 
