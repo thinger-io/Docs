@@ -99,7 +99,7 @@ Then, run make to generate the binary.&#x20;
 make
 ```
 
-After it compiles, it is possible to execute&#x20;
+After it compiles, it is possible to execute the binary by providing the username, device, and credentials parameters.
 
 ```bash
 pi@RevPi20679:~/thinger_iotmp_linux_client/build $ ./thinger -u username -d device -p credential --host "perf.aws.thinger.io" &
