@@ -56,8 +56,8 @@ Thinger.io provides to the User a technologic**al** platform accessible via priv
 
 ### F) PAYMENT TERMS
 
-1. By subscribing the service, the customer agrees to pay the recurring monthly fee for the use (“Service fee”). While using the Service you consent to pay by card or Paypal.&#x20;
-2. Customer's obligation to pay is non-cancellable while and for use of Service. Thinger.io's measurement of Customer's use of the Service is final.
+1. By subscribing to the service, the customer agrees to pay the recurring monthly fee for the use (“Service fee”). While using the Service you consent to pay by card or Paypal.&#x20;
+2. Customer's obligation to pay is non-cancellable while and for use of the service. Thinger.io's measurement of Customer's use of the service is final and never can be considered as partial.
 3. Subscriptions to Thinger.io Platform service can be made on a monthly or yearly basis. The service will be charged at the same intervals according to the price indicated in our pricing list. The initial charge will be made at the time you create your private instance. subscription will automatically renew for additional period until terminated.&#x20;
 4. All Subscription Fees are non-refundable.&#x20;
 5. Taxes: Customer is responsible for any taxes, and the customer will pay for the Services without any reduction in taxes. If required, Thinger.io may provide the Certificate of Tax Residency to avoid double taxation.
