@@ -132,7 +132,7 @@ The configuration fields are:
 * **Function**: Used to specify the target function name to be called.
 * **Payload**: Used to configure the resulting value that will be used in the function call. The value that arrives from the API request becomes available at the `{{payload}}` placeholder, which is the default configuration. Take a look at the [Payloads](payloads.md) section to know more about the possibilities when defining payloads, like using Product Scripts for data conversion.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Product - API Resource configuration for Product Function target </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (2).png" alt=""><figcaption><p>Product - API Resource configuration for Product Function target </p></figcaption></figure>
 
 #### Available Payload Placeholders
 
@@ -173,7 +173,7 @@ The configuration fields are:
 * **Resource Name**: Used to specify the device resource name that will be called inside the device.
 * **Payload**: Used to configure the final payload that will be returned to the API caller. The value that arrives from the Device resource becomes available at the `{{payload}}` placeholder, which is the default configuration. Take a look at the [Payloads](payloads.md) section to know more about the possibilities when defining payloads, like using Product Scripts for data conversion.
 
-<figure><img src="../../.gitbook/assets/image (83).png" alt=""><figcaption><p>Product - API Resource configuration for Device Resource source</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (83) (1).png" alt=""><figcaption><p>Product - API Resource configuration for Device Resource source</p></figcaption></figure>
 
 #### Available Payload Placeholders
 
@@ -207,7 +207,7 @@ The configuration fields are:
 * **Topic**: Used to specify the topic that will be used as the source value for the response. Use topic placeholders like `{{device}}` or MQTT single-level wildcards `+` to capture data from multiple devices. For example, devices providing information on the topic `my_product/device_aabbccdd/response` can be configured both as `my_product/{{device}}/response` or `my_product/+/response`.
 * **Payload**: Used to configure the final payload that will be returned to the API caller. The value that arrives from the topic becomes available at the `{{payload}}` placeholder, which is the default configuration. Take a look at the [Payloads](payloads.md) section to know more about the possibilities when defining payloads, like using Product Scripts for data conversion.
 
-<figure><img src="../../.gitbook/assets/image (58).png" alt=""><figcaption><p>Product - API Resource configuration for Device Topic source</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (58) (1).png" alt=""><figcaption><p>Product - API Resource configuration for Device Topic source</p></figcaption></figure>
 
 #### Available Payload Placeholders
 
@@ -235,4 +235,4 @@ The placeholders that are available for the Payload configuration are:
 
 Each API Resource defined inside a Product can be enabled or disabled independently, for example, to temporarily disable an API endpoint. It can also include a description for a better understanding of its purpose, usage, or source.
 
-<figure><img src="../../.gitbook/assets/image (88).png" alt=""><figcaption><p>Product - API Resource configuration</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (88) (2).png" alt=""><figcaption><p>Product - API Resource configuration</p></figcaption></figure>

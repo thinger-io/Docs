@@ -43,7 +43,7 @@ In this section it is described the different interfaces that can be used to con
 
 Every TTN application that is integrated over this plugin, should define a new application with the same application identifier as defined in TTN. Each application defined in this way will allow to customize the plugin behaviour based on the application type.
 
-![TTN aplication configuration ](<../.gitbook/assets/image (60) (1).png>)
+![TTN aplication configuration ](<../.gitbook/assets/image (60) (1) (1).png>)
 
 It is possible to create as many applications as required. To configure a particular application, just select the application id from the `Application Id` dropdown, and then navigate to the other plugin sections.
 
@@ -147,7 +147,7 @@ Use the interface tester to see if your code is correctly procesing the payloads
 
 ## Plugin Development Details
 
-<img src="../.gitbook/assets/image (240) (1).png" alt="" data-size="line">[Github source code](https://github.com/thinger-io/ttn-plugin)
+<img src="../.gitbook/assets/image (240) (1) (1).png" alt="" data-size="line">[Github source code](https://github.com/thinger-io/ttn-plugin)
 
 ### Uplink Data Flow
 
@@ -218,7 +218,7 @@ Once this information is received by the plugin, it is processed in order to exe
 
 This plugin stores some basic information about the device that is sending data. This information is mainly used for keeping some information necessary for the downlink, like the original device identifier used in TTN; the associated application identifier to handle its downlink processor properly; and the most important, the downlink url the platform should use to issue a downlink request to the TTN network.
 
-![Sample device information stored in Thinger.io for every TTN device](<../.gitbook/assets/image (58) (1).png>)
+![Sample device information stored in Thinger.io for every TTN device](<../.gitbook/assets/image (58) (1) (1).png>)
 
 #### Uplink Processor
 

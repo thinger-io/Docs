@@ -28,7 +28,7 @@ sudo apt upgrade
 Then, install the described packages:
 
 ```bash
-sudo apt install gcc g++ cmake libssl-dev libboost-system-dev libboost-thread-dev libboost-program-options-dev libboost-regex-dev
+sudo apt install gcc g++ cmake libssl-dev libboost-system-dev libboost-filesystem-dev libboost-thread-dev libboost-program-options-dev libboost-regex-dev
 ```
 
 Download the latest Linux Client version from GitHub.

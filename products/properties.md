@@ -117,4 +117,4 @@ When a device is configured within a Product, it will automatically inherit the 
 
 Each property defined inside a Product can be enabled or disabled independently, for example, to temporarily disable the automatic update from a topic or a device resource. It can include a description for a better understanding of its purpose, usage, or source.
 
-<figure><img src="../.gitbook/assets/image (60).png" alt=""><figcaption><p>Product Property - Property configuration</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (60) (1).png" alt=""><figcaption><p>Product Property - Property configuration</p></figcaption></figure>

@@ -27,7 +27,7 @@ Defining a Bucket inside a Product Profile allows scaling the buckets management
 
 By default, the Product profile presents a Buckets table that is empty. Like in the following image:
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption><p>Product Bucket - Buckets section on a Product Profile</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12) (1).png" alt=""><figcaption><p>Product Bucket - Buckets section on a Product Profile</p></figcaption></figure>
 
 To create a new Bucket, click on `Add` button from the table, and a popup will appear for its configuration. It is quite similar to the process of configuring a [Property](../properties.md).
 
