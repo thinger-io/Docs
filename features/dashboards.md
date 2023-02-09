@@ -110,7 +110,7 @@ The configurable parameters are the following:
 
 This image is representing an example in which the measured variable is reaching dangerous pressure values. According to this situation, the background color is changing to red, so it will be easier to identify and manage the event if there is not any automatic system in the product. &#x20;
 
-![](<../.gitbook/assets/image (68).png>)
+![](<../.gitbook/assets/image (68) (1).png>)
 
 * **Chart Input**: Configure how to feed the values to the tachometer chart. It is possible to feed the information from a connected **device** or from a **data bucket**
   * **From Device Resource**: With this option it is necessary to select a device (that must be connected to provide information) and specify the resources to plot. The following figure is an example that is selecting the device `deviceA`, and the resource `millis` from the device. Notice that when a time series widget is feed from a device, it will not keep the information if the dashboard is closed or refreshed, as it is just real-time data from your device to your dashboard. You can also select between different refresh modes, like sampling at different intervals (that can be updated online), or the chart is updated by the device.

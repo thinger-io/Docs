@@ -14,23 +14,23 @@ Have an IoT product and want to simplify its management at scale? Configure data
 A product inside Thinger.io is a way to define behaviors for a set of devices of the same type. At this moment it is able to offer different capabilities:
 
 * ****[**Product Profile**](product-profile/)**:** The product profile in Thinger.io serves as the central hub for configuring a product, providing access to various tools such as setting device properties, time series data storage, custom API creation, and custom scripts for tailored payloads and functionalities.
-  * ****[**Properties**](product-profile/properties.md): Store and manage various metadata related to the devices in a fleet, including the latest device state, owner information, device information, location, custom configuration, and more. This helps organizations to keep track of their devices and make quick updates when needed.
+  * ****[**Properties**](properties.md): Store and manage various metadata related to the devices in a fleet, including the latest device state, owner information, device information, location, custom configuration, and more. This helps organizations to keep track of their devices and make quick updates when needed.
   * [**Buckets**](product-profile/buckets.md): Automatic storage of time-series data for a specified resource name/interval or MQTT topic. This helps organizations effectively manage and analyze data from large numbers of IoT devices.
   * ****[**API Resources**](product-profile/api-resources.md): Unified API access for various devices and protocols, payload processing capabilities, and compatibility with MQTT and the Device API Explorer. These features simplify the integration of different devices and systems, making it easier to test and manage them.
   * ****[**Scripts**](product-profile/scripts.md): All data related to a Product can be handled and processed over Scripts for processing payloads in different formats, converting units, creating virtual functions to generate calculated data, etc. There are endless possibilities.
 * ****[**Product Dashboard**](product-dashboard.md): Create a single dashboard layout for each Product. Each device will display this dashboard automatically with its own set of data from properties, and data buckets, and will be able to interact with the device using the unified API Resources. Example of a Shelly Plug S dashboard:
 
-<figure><img src="../.gitbook/assets/image (490).png" alt=""><figcaption><p>Product Dashboard example over a Shelly Plug S device</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (112).png" alt=""><figcaption><p>Product Dashboard example over a Shelly Plug S device</p></figcaption></figure>
 
 * [**Product Services**](product-dashboard.md): Devices using the IOTMP protocol can provide extended features aside from remote sensing and actuation. At this moment, it includes the possibility to access remotely to web services (using Linux Clients). For example, it will allow controlling the router/gateway admin panel; 3D Printer monitoring page; or any other Industrial product which includes a web frontend for its management. All without using any VPN. Here is an example of remote PLCs management, using in this case PiCtory from [Revolution Pi](https://revolutionpi.com/).
 
-<figure><img src="../.gitbook/assets/image (482).png" alt=""><figcaption><p>Product Remote Web Services - Kunbus Revolutiion Pi Example</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (288).png" alt=""><figcaption><p>Product Remote Web Services - Kunbus Revolutiion Pi Example</p></figcaption></figure>
 
 ## Examples
 
 Don´t want to read the whole documentation? Take a look at some of the available examples:
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><strong>Shelly Plug S</strong></td><td>Wi-Fi smart plug with power metering</td><td><a href="examples/shelly-plug-s.md">shelly-plug-s.md</a></td><td><a href="../.gitbook/assets/image (1).png">image (1).png</a></td></tr><tr><td><strong>Kunbus RevPi</strong></td><td>Open Source IPC based on Raspberry Pi</td><td></td><td><a href="../.gitbook/assets/RevPi-Connect-SE-0000.png">RevPi-Connect-SE-0000.png</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><strong>Shelly Plug S</strong></td><td>Wi-Fi smart plug with power metering</td><td><a href="examples/shelly-plug-s.md">shelly-plug-s.md</a></td><td><a href="../.gitbook/assets/image (319).png">image (319).png</a></td></tr><tr><td><strong>Kunbus RevPi</strong></td><td>Open Source IPC based on Raspberry Pi</td><td></td><td><a href="../.gitbook/assets/RevPi-Connect-SE-0000.png">RevPi-Connect-SE-0000.png</a></td></tr><tr><td>Shelly Plus 1 PM</td><td></td><td></td><td><a href="../.gitbook/assets/ShellyPlus1PM_9_1051x700.webp">ShellyPlus1PM_9_1051x700.webp</a></td></tr></tbody></table>
 
 ## Marketplace
 

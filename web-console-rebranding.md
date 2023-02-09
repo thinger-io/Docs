@@ -110,13 +110,13 @@ The **Simple Mail Transfer Protocol**, better known as SMTP, is a protocol used 
 
 The integration with Amazon SES provides a much simple and scalable mailing tool. It can be selected instead of the common SMTP by selecting it on Email Type, and placing the credentials on its appropriate section. These credentials can be obtained on the AWS SES configuration section as explained on[ **this link**](https://ongage.atlassian.net/wiki/spaces/HELP/pages/13795743/Amazon+SES+Setup+Tutorial)****
 
-![](<.gitbook/assets/image (265).png>)
+![](<.gitbook/assets/image (265) (1).png>)
 
 ## **Modify Console Rebranding**
 
 When the Console Rebranding profile is finished, a new entry will appear into the rebranding administration list as shown in the image below:
 
-![](<.gitbook/assets/image (1) (1).png>)
+![](<.gitbook/assets/image (1).png>)
 
 It is possible to access the configuration form and edit all parameters by clicking into the brand profile identificator, which is the associated web domain.
 

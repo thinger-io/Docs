@@ -1,6 +1,10 @@
+---
+description: WiFi Smart Plug with Power Metering
+---
+
 # Shelly Plug S
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Shelly Plug S</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (319).png" alt=""><figcaption><p>Shelly Plug S</p></figcaption></figure>
 
 Shelly Plug S is a WiFi Smart Plug with power metering, that can be easily integrated into the platform. As it supports the MQTT protocol by default, it is not required to re-flash the device, keeping the device warranty.
 
@@ -235,7 +239,7 @@ function toOnOff(value){
 }
 ```
 
-As described on [Properties](../product-profile/properties.md) and [Buckets](broken-reference) sections, it is possible to configure the API Resource payload to call this function to transform the incoming payload.
+As described on [Properties](../properties.md) and [Buckets](broken-reference) sections, it is possible to configure the API Resource payload to call this function to transform the incoming payload.
 
 ```
 {{payload:toOnOff}}
@@ -257,7 +261,7 @@ Now, refreshing the API explorer will display the relay resource expecting a boo
 
 ![Device API for resource created over Product ](<../../.gitbook/assets/image (453).png>)
 
-However, this use case can be improved a little bit. For example, suppose that it is required to display the current relay state to avoid showing always the default 'false' value set before. For this purpose we can reference other properties, or even API responses. To reference a property, i.e., the 'relay' one configured on the [Properties](../product-profile/properties.md) section, we can set a default value with `=property.<property_name>` like in the following example:
+However, this use case can be improved a little bit. For example, suppose that it is required to display the current relay state to avoid showing always the default 'false' value set before. For this purpose we can reference other properties, or even API responses. To reference a property, i.e., the 'relay' one configured on the [Properties](../properties.md) section, we can set a default value with `=property.<property_name>` like in the following example:
 
 ```
 {{payload:toOnOff=property.relay}}
@@ -265,4 +269,4 @@ However, this use case can be improved a little bit. For example, suppose that i
 
 Then, the next time the API explorer, or a dashboard, 'inspect' the device resource, will obtain the value stored on the property. In this case, the property is updated periodically with the current relay status, or even if the status is changed with the device psychical on/off button. Now we can use the API resource on a dashboard easily, just as any other device. Here are some sample dashboard widgets created for our MQTT Shelly Plug S device, allowing power switch and plotting some device information like real-time power consumption, total consumption, temperature, etc.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Shelly Plug S - Dashboard</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (328).png" alt=""><figcaption><p>Shelly Plug S - Dashboard</p></figcaption></figure>

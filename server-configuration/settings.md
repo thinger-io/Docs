@@ -14,7 +14,7 @@ This platform allows the connection of devices of different types, for which it 
 
 To set the connection parameters of the **** [**HTTP devices integration**](../http-devices.md) **** module on Thinger.io private instances
 
-![](<../.gitbook/assets/image (288).png>)
+![](<../.gitbook/assets/image (288) (1).png>)
 
 The configurable parameters are:&#x20;
 
@@ -27,7 +27,7 @@ The configurable parameters are:&#x20;
 
 It allows to set up the parameters for connecting Thinger.io to devices running the Thinger.io software client.
 
-![](<../.gitbook/assets/image (266).png>)
+![](<../.gitbook/assets/image (266) (1).png>)
 
 The configurable parameters are:&#x20;
 
@@ -40,7 +40,7 @@ The configurable parameters are:&#x20;
 
 This section allows setting the connection and data entry parameters of **** [**MQTT devices**](../mqtt.md) with Thinger.io's builtin MQTT broker.
 
-![](<../.gitbook/assets/image (278).png>)
+![](<../.gitbook/assets/image (278) (1).png>)
 
 The configurable parameters are:&#x20;
 
@@ -53,7 +53,7 @@ The configurable parameters are:&#x20;
 
 This section allows configuring the mail server in charge of sending notifications to the users of the IoT instance. A standard SMTP server can be used, but if the client has an AWS SES (Simple Email Service), which is more scalable and easier to use, it can be configured here to be used instead.
 
-![](<../.gitbook/assets/image (276).png>)
+![](<../.gitbook/assets/image (276) (1).png>)
 
 In both cases, domain and sender parameters can be configured from the main section, then depending on the selecting service some specific parameters need to be specified:
 
@@ -73,7 +73,7 @@ The **Simple Mail Transfer Protocol**, better known as SMTP, is a protocol used 
 
 The integration with Amazon SES provides a much simple and scalable mailing tool. It can be selected instead of the common SMTP by selecting it on Email Type, and placing the credentials on its appropriate section. These credentials can be obtained on the AWS SES configuration section as explained on[ **this link**](https://ongage.atlassian.net/wiki/spaces/HELP/pages/13795743/Amazon+SES+Setup+Tutorial)****
 
-![](<../.gitbook/assets/image (265).png>)
+![](<../.gitbook/assets/image (265) (1).png>)
 
 ## Buckets Database Settings
 
@@ -100,7 +100,7 @@ To obtain this information about an InfluxDB server it is required to go to Infl
 
 DynamoDB is a highly scalable and consistent storage system provided by AWS that performs really well on IoT projects. It is possible to configure a DynamoDB system to be used by Thinger.io server to store data by selecting DynamoDB on the General section and introducing the next data into the system
 
-![](<../.gitbook/assets/image (263).png>)
+![](<../.gitbook/assets/image (263) (1).png>)
 
 * **Table Name:** It is the identification of the DynamoDB table&#x20;
 * **AWS Access Key ID:**&#x20;
@@ -113,7 +113,7 @@ DynamoDB database configuration parameters can be obtained from the server as ex
 
 Mongo DB is one of the most widespread database systems due to its robust operation and because it is an open-source project that offers free storage services for developers (companies that wish to make premium use of MongoDB can use the Atlas version). This database system can be used to store Thigner.io bucket data by entering a URI and some credentials:
 
-![](<../.gitbook/assets/image (264).png>)
+![](<../.gitbook/assets/image (264) (1).png>)
 
 * **MongoDB URI:** Paste here the uniform resource identification obtained from MongoDB configuration console
 * **MongoDB Database:** Enter here the MongoDB database identificator
@@ -129,7 +129,7 @@ When a specific bucket is requested to be exported, the system creates a file to
 
 To implement AWS S3 option, it must be selected on the General section and then configured to include the parameters shown below:
 
-![](<../.gitbook/assets/image (289).png>)
+![](<../.gitbook/assets/image (289) (1).png>)
 
 * **Bucket ID:** It is the identification of the AWS S3 data bucket&#x20;
 * **AWS Access Key ID:**&#x20;
@@ -168,7 +168,7 @@ The following parameters can be configured
 
 Para permitir el control de las funcionalidades quedespliegan los usuarios de una instancia privada, el apartado "Limits" de "User Account Settings" ofrece una interfaz gráfica en la que cada privilegio puede ser configurado de forma independiente. Los valores introducidos en este menú se aplicarán a todos los usuarios por igual pero no restringirán las capacidades de la cuenta de administración de la instancia
 
-![](<../.gitbook/assets/image (268).png>)
+![](<../.gitbook/assets/image (268) (1).png>)
 
 The amount of the following features can be configured using this interface:
 

@@ -80,7 +80,7 @@ Thinger.io data buckets are a virtual storage where any kind of time series data
 \
 Configure a data bucket to store data from an specific MQTT topic just requires going to bucket section of the main menu and pressing the "Add Bucket" button to access the "new bucket form" in which introduce the topic configuration, as has been made in the image below: &#x20;
 
-![](<.gitbook/assets/image (5) (1).png>)
+![](<.gitbook/assets/image (5).png>)
 
 The next parameters needs to be configured:&#x20;
 

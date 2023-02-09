@@ -70,7 +70,7 @@ Grafana is a very flexible tool, users can add new panels as they go, retrieving
 2\. Obtain the CLI installation command of any new panel or plugin that wants to be added.  \
 3\. Access Grafana's shell, to do so, just click on the Plugins tab in the Thinger.io main menu, then access Grafana's profile in the Plugins Marketplace.
 
-![](<../.gitbook/assets/image (273).png>)
+![](<../.gitbook/assets/image (273) (1).png>)
 
 4\. Once inside click on the _>\_Shell_ option and click on "connect". Then the download and installation command can be pasted into the console and executed.&#x20;
 

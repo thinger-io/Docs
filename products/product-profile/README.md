@@ -12,7 +12,7 @@ It looks like in the following picture:
 
 The next subsections describe the different configurable options inside the Product Profile:
 
-* [Properties](properties.md)
+* [Properties](../properties.md)
 * [Buckets](buckets.md)
 * [API Resources](api-resources.md)
 * [Product Scripts](scripts.md)
