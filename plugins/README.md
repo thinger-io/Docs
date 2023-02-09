@@ -1,5 +1,8 @@
 ---
 description: This section explains how to deploy and to use the platform Plugins System
+cover: >-
+  https://images.unsplash.com/photo-1554098415-788601c80aef?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHw3fHxwbHVnaW5zfGVufDB8fHx8MTY3NTg4NjM3NQ&ixlib=rb-4.0.3&q=80
+coverY: -207
 ---
 
 # PLUGINS MARKETPLACE

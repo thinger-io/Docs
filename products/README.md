@@ -1,20 +1,47 @@
 ---
-description: >-
-  Have an IoT product and want to simplify its management at scale? Configure
-  data to be stored, create dashboard templates, set custom data processors, or
-  build REST APIs for MQTT devices.
+description: Streamlined Management and Analysis of Large IoT Fleets
+cover: >-
+  https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHw1fHxpb3R8ZW58MHx8fHwxNjc1ODY3Nzky&ixlib=rb-4.0.3&q=80
+coverY: 0
 ---
 
 # PRODUCTS
 
-A product inside Thinger.io is a way to define behaviors for a set of devices of the same type. Suppose you have a fleet of a hundred or thousand devices and want to configure them at scale, for example, storing certain device data in a data bucket. With a product, it is possible to specify the resource name/interval, i.e., temperature every 1 minute, and all the devices associated with the product will start to store the information automatically. But this is not the only option, as it can be used to update device properties, define device APIs (even for MQTT), add custom data processors, and design dashboard templates.
+Have an IoT product and want to simplify its management at scale? Configure data to be stored, create dashboard templates, set custom data processors, or build custom REST APIs for them, including MQTT devices.
 
-These options are described in more detail in the following subsections.
+## Features
 
-## Product Profile
+A product inside Thinger.io is a way to define behaviors for a set of devices of the same type. At this moment it is able to offer different capabilities:
 
-The product profile is the main page where a product is configured. It can be used for setting device properties, data buckets, API resources, and custom product scripts. It looks like in the following picture:
+* ****[**Product Profile**](product-profile/)**:** The product profile in Thinger.io serves as the central hub for configuring a product, providing access to various tools such as setting device properties, time series data storage, custom API creation, and custom scripts for tailored payloads and functionalities.
+  * ****[**Properties**](product-profile/properties.md): Store and manage various metadata related to the devices in a fleet, including the latest device state, owner information, device information, location, custom configuration, and more. This helps organizations to keep track of their devices and make quick updates when needed.
+  * [**Buckets**](product-profile/buckets.md): Automatic storage of time-series data for a specified resource name/interval or MQTT topic. This helps organizations effectively manage and analyze data from large numbers of IoT devices.
+  * ****[**API Resources**](product-profile/api-resources.md): Unified API access for various devices and protocols, payload processing capabilities, and compatibility with MQTT and the Device API Explorer. These features simplify the integration of different devices and systems, making it easier to test and manage them.
+  * ****[**Scripts**](product-profile/scripts.md): All data related to a Product can be handled and processed over Scripts for processing payloads in different formats, converting units, creating virtual functions to generate calculated data, etc. There are endless possibilities.
+* ****[**Product Dashboard**](product-dashboard.md): Create a single dashboard layout for each Product. Each device will display this dashboard automatically with its own set of data from properties, and data buckets, and will be able to interact with the device using the unified API Resources. Example of a Shelly Plug S dashboard:
 
-![Product Profile Overview](<../.gitbook/assets/image (456).png>)
+<figure><img src="../.gitbook/assets/image (490).png" alt=""><figcaption><p>Product Dashboard example over a Shelly Plug S device</p></figcaption></figure>
 
-The next subsections describe the different configurable options inside the product profile. For describing the product features, it is used a real device for the examples. In this case, it is used a Shelly Plug S device, which is a WiFi Smart Plug with power metering, that can be easily integrated into the platform. As it supports the MQTT protocol by default, it is not required to re-flash the device, keeping the device warranty.
+* [**Product Services**](product-dashboard.md): Devices using the IOTMP protocol can provide extended features aside from remote sensing and actuation. At this moment, it includes the possibility to access remotely to web services (using Linux Clients). For example, it will allow controlling the router/gateway admin panel; 3D Printer monitoring page; or any other Industrial product which includes a web frontend for its management. All without using any VPN. Here is an example of remote PLCs management, using in this case PiCtory from [Revolution Pi](https://revolutionpi.com/).
+
+<figure><img src="../.gitbook/assets/image (482).png" alt=""><figcaption><p>Product Remote Web Services - Kunbus Revolutiion Pi Example</p></figcaption></figure>
+
+## Examples
+
+Don´t want to read the whole documentation? Take a look at some of the available examples:
+
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><strong>Shelly Plug S</strong></td><td>Wi-Fi smart plug with power metering</td><td><a href="examples/shelly-plug-s.md">shelly-plug-s.md</a></td><td><a href="../.gitbook/assets/image (1).png">image (1).png</a></td></tr><tr><td><strong>Kunbus RevPi</strong></td><td>Open Source IPC based on Raspberry Pi</td><td></td><td><a href="../.gitbook/assets/RevPi-Connect-SE-0000.png">RevPi-Connect-SE-0000.png</a></td></tr></tbody></table>
+
+## Marketplace
+
+Want to integrate your Product into our Plugin Marketplace? Just [**become a Partner**](https://thinger.io/become-a-partner)!
+
+Some of its benefits are:
+
+* The product is directly available as a Plugin from the Thinger.io Marketplace.&#x20;
+* Zero-pain integration for your customers. Just a few clicks to have hundreds of devices managed at scale.
+* Your products and brand are featured on our web and marketplace. It provides broad visibility in one of the largest IoT Communities.
+* Best-in-class integration for your products. On-demand training and integration development by Thinger.io experts.
+* Private Cloud for demos and POCs with your customers.
+
+{% embed url="https://thinger.io/become-a-partner" %}

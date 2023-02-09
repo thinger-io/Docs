@@ -116,7 +116,7 @@ The integration with Amazon SES provides a much simple and scalable mailing tool
 
 When the Console Rebranding profile is finished, a new entry will appear into the rebranding administration list as shown in the image below:
 
-![](<.gitbook/assets/image (1).png>)
+![](<.gitbook/assets/image (1) (1).png>)
 
 It is possible to access the configuration form and edit all parameters by clicking into the brand profile identificator, which is the associated web domain.
 
