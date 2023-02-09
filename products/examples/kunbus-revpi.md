@@ -12,6 +12,10 @@ Revolution Pi is an open, modular, and inexpensive industrial PC based on the we
 
 To achieve real industrial suitability according to EN 61131-2 or IEC 61131-2, the rather unknown Raspberry Pi Compute Module was used as a basis. The module, which looks like a notebook RAM bar, is limited to the essentials and does not have any external interfaces. With the Raspberry Pi Compute Module, the foundation has been laid for equipping the Raspberry Pi with a robust and industry-compatible periphery developed by us, which meets all important industrial standards. On the software side, the Revolution Pi has a specially adapted Raspberry Pi OS (formerly known as Raspbian) operating system, which is equipped with a real-time patch. The use of Raspberry Pi OS ensures that most of the applications developed for the Raspberry Pi can also be used on the Revolution Pi.
 
+## Thinger.io Integration
+
+To integrate Thinger.io inside the Raspberry Pi, just connect it to a server instance with the [Linux/Raspberry Pi client](../../linux.md).
+
 ## Product Services
 
 ### PiCtory
@@ -24,9 +28,9 @@ The main functions of a configuration file are:
 * Communicating mutually the basic settings of your RevPi and connected devices
 * Using the configuration values of your RevPi in other applications
 
-To let access to Pictory over thinger.
-
 <figure><img src="../../.gitbook/assets/image (288).png" alt=""><figcaption><p>Pictory Running on Kunbus RevPi and managed from Thinger.io</p></figcaption></figure>
+
+To access Pictory from Thinger.io, it is required to create a [Product Service](kunbus-revpi.md#product-services) with the following configuration:
 
 <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
