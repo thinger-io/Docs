@@ -4,9 +4,9 @@ description: Open Source IPC based on Raspberry Pi
 
 # Kunbus RevPi
 
-<figure><img src="../../.gitbook/assets/RevPi-Connect-SE-0000.png" alt=""><figcaption><p>Open Source IPC based on Raspberry Pi</p></figcaption></figure>
-
 ## Product Description
+
+<figure><img src="../../.gitbook/assets/RevPi-Connect-SE-0000.png" alt=""><figcaption><p>Open Source IPC based on Raspberry Pi</p></figcaption></figure>
 
 Revolution Pi is an open, modular, and inexpensive industrial PC based on the well-known Raspberry Pi. Housed in a slim DIN-rail housing, the three available base modules can be seamlessly expanded by a variety of suitable I/O modules and fieldbus gateways. The 24V powered modules are connected via an overhead connector in seconds and can be easily configured via a graphical configuration tool.
 
@@ -32,7 +32,7 @@ The main functions of a configuration file are:
 
 To access Pictory from Thinger.io, it is required to create a [Product Service](kunbus-revpi.md#product-services) with the following configuration:
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Node-RED
 

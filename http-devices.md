@@ -64,7 +64,7 @@ Ones the callback has been integrated with the system,  the developer will be ab
 
 Thinger.io data Buckets is a scalable system that allows storing devices data in a simple way. Allowing support for historical data analysis or download IoT data into a file. The Callback manager allows associating an existent data bucket to the HTTP Device data in order to store it as is retrieved.&#x20;
 
-![](<.gitbook/assets/image (2) (1).png>)
+![](<.gitbook/assets/image (2) (1) (1).png>)
 
 To make this assignment, just check the checkbox and click into the text entry to select or search a previously defined data bucket as shown in the previous image.&#x20;
 

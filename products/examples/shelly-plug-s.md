@@ -4,11 +4,32 @@ description: WiFi Smart Plug with Power Metering
 
 # Shelly Plug S
 
+## Product Description
+
 <figure><img src="../../.gitbook/assets/image (319).png" alt=""><figcaption><p>Shelly Plug S</p></figcaption></figure>
 
 Shelly Plug S is a WiFi Smart Plug with power metering, that can be easily integrated into the platform. As it supports the MQTT protocol by default, it is not required to re-flash the device, keeping the device warranty.
 
+It can control a wide range of home appliances and office equipment (lights, power lines, security systems, space heaters, radiators, air conditioners, etc.) from anywhere.
 
+* Allows you to manage and power monitor electrical supplies with power up to 2500W (10A)
+* Easy control through the Shelly app, or various protocols, platforms, and voice assistants.
+* Has an embedded web server and connects to your Wi-Fi network
+
+## Integration
+
+To Integrate Shelly Plug S into the platform it is not required to flash a custom firmware. By default, Shelly PLUG S supports connecting to external MQTT servers.
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Shelly Plug S Configuration Options</p></figcaption></figure>
+
+Under the "Internet & Security" menu, it is possible to configure "Advanced - Developer Settings". The configuration parameters are the following:
+
+* Username: The username of the Thinger.io account.
+* Password: The password for the device
+* Server: Thinger.io hostname + port. Example: `acme.aws.thinger.io:1883`
+* The device identifier (MQTT client id) can be observed under the Will Topic. In this case, it is "`shellyplug-s-C18B12`"
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Shelly Plug S - Advanced MQTT server configuration</p></figcaption></figure>
 
 ## Product Profile
 

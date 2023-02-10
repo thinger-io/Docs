@@ -24,7 +24,7 @@ After creating a new project it will not be selected by default, so before start
 
 Once a new project profile has been created, it is possible to include project members with which all resources will be shared according to specific authorizations provided by the project creator. To start adding members, open the configuration menu by pressing project's identification on the list, then press into the blue `Project Members` button as shown in the image below:
 
-![](<.gitbook/assets/image (122).png>)
+![](<.gitbook/assets/image (122) (1).png>)
 
 This will open the project's member list, in which the user accounts that belong to the same project will be displayed allowing to modify permissions in the future. It will be empty the first time we access to a recently created project as shown in the image below:
 
