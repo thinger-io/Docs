@@ -20,7 +20,7 @@ It can control a wide range of home appliances and office equipment (lights, pow
 
 To Integrate Shelly Plug S into the platform it is not required to flash a custom firmware. By default, Shelly PLUG S supports connecting to external MQTT servers.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Shelly Plug S Configuration Options</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Shelly Plug S Configuration Options</p></figcaption></figure>
 
 Under the "Internet & Security" menu, it is possible to configure "Advanced - Developer Settings". The configuration parameters are the following:
 
@@ -29,7 +29,7 @@ Under the "Internet & Security" menu, it is possible to configure "Advanced - De
 * Server: Thinger.io hostname + port. Example: `acme.aws.thinger.io:1883`
 * The device identifier (MQTT client id) can be observed under the Will Topic. In this case, it is "`shellyplug-s-C18B12`"
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Shelly Plug S - Advanced MQTT server configuration</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Shelly Plug S - Advanced MQTT server configuration</p></figcaption></figure>
 
 ## Product Profile
 

@@ -1,7 +1,5 @@
 ---
-description: >-
-  This section explains what Sigfox infrastructure is and how to integrate their
-  devices with the Thinger.io platform in a very simple way.
+description: 0G Technology. LPWAN dedicated to Massive IoT.
 ---
 
 # SIGFOX
