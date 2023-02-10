@@ -29,7 +29,7 @@ Under the "Internet & Security" menu, it is possible to configure "Advanced - De
 * Server: Thinger.io hostname + port. Example: `acme.aws.thinger.io:1883`
 * The device identifier (MQTT client id) can be observed under the Will Topic. In this case, it is "`shellyplug-s-C18B12`"
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Shelly Plug S - Advanced MQTT server configuration</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Shelly Plug S - Advanced MQTT server configuration</p></figcaption></figure>
 
 ## Product Profile
 
