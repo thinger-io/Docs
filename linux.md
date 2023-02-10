@@ -1,24 +1,29 @@
+---
+description: IOTMP Client for Linux Devices
+cover: >-
+  https://images.unsplash.com/photo-1610812388300-cd1e9cf28b54?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHw3fHxyYXNwYmVycnklMjBwaXxlbnwwfHx8fDE2NzYwMTUwNjU&ixlib=rb-4.0.3&q=80
+coverY: 0
+---
+
 # LINUX / RASPBERRY PI
 
-![](.gitbook/assets/linux-versions.png)
-
-This how-to will cover how to get the first steps while using the thinger.io platform in the Raspberry Pi. This includes how to download, compile and execute the main example available in the [GitHub Repository](https://github.com/thinger-io/Linux-Client).
+This how-to will cover how to get the first steps while using the thinger.io platform in the Raspberry Pi or any other Linux device. This includes how to install dependencies, clone the source code, and compile and execute the main example available in the [GitHub Repository](https://github.com/thinger-io/IOTMP-Linux).
 
 ## Requirements
 
-* A Raspberry Pi running with Raspbian, and a terminal or SSH access. Other OS like Ubuntu or Debian may work, but has not been tested yet. This tutorial has been tester with buster version.
+* A Raspberry Pi running with Raspbian, and a terminal or SSH access. Other OS like Ubuntu or Debian may work but have not been tested yet. This tutorial has been tested with Debian buster version.
 * Register a device in the thinger.io console and keep the credentials by hand. If you need help with this part, please check this other [how-to](https://community.thinger.io/t/register-a-device-in-the-console/23).
 
-## Install development dependencies
+## Install Dependencies
 
 Thinger.io implementation for Linux requires some tools and libraries for its compiling:
 
 * A C++ compiler (GCC or Clang)
 * CMake to guide the compiling and search installed libraries
 * OpenSSL for using secure connections with the platform
-* Boost Libraries used for high performance async input/output&#x20;
+* Boost Libraries used for high-performance async input/output&#x20;
 
-To install this dependencies, update the apt repository and installed packages first.
+To install these dependencies, update the apt repository and installed packages first.
 
 ```
 sudo apt update
@@ -30,6 +35,8 @@ Then, install the described packages:
 ```bash
 sudo apt install gcc g++ cmake libssl-dev libboost-system-dev libboost-filesystem-dev libboost-thread-dev libboost-program-options-dev libboost-regex-dev
 ```
+
+## Compile Client
 
 Download the latest Linux Client version from GitHub.
 
@@ -93,16 +100,20 @@ pi@RevPi20679:~/thinger_iotmp_linux_client/build $ cmake ../
 -- Build files have been written to: /home/pi/thinger_iotmp_linux_client/build
 ```
 
-Then, run make to generate the binary.&#x20;
+Then, run make to generate the binary.
 
 ```bash
 make
 ```
 
+&#x20;Take a coffee now ☕️. It can take some minutes to complete.
+
+## Run Client
+
 After it compiles, it is possible to execute the binary by providing the username, device, and credentials parameters.
 
 ```bash
-pi@RevPi20679:~/thinger_iotmp_linux_client/build $ ./thinger -u username -d device -p credential --host "perf.aws.thinger.io" &
+pi@RevPi20679:~/thinger_iotmp_linux_client/build $ ./thinger -u username -d device -p credential --host "perf.aws.thinger.io"
 [1] 2442
 pi@RevPi20679:~/thinger_iotmp_linux_client/build $ date       time         ( uptime  ) [ thread name/id ]                   file:line     v| 
 2022-09-06 19:54:46.635 (   0.001s) [main thread     ]             loguru.cpp:647   INFO| arguments: ./thinger -u alvarolb -d macbook -p macbook --host perf.aws.thinger.io
