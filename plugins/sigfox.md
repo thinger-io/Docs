@@ -4,7 +4,7 @@ description: Plugin to improve the integration of Sigfox devices
 
 # Sigfox Plugin
 
-![](<../.gitbook/assets/image (101).png>)
+<figure><img src="../.gitbook/assets/imageSFN.png" alt=""><figcaption></figcaption></figure>
 
 This plugin is an interface for using Sigfox HTTP Callback feature in an optimized way, providing features to easily integratie these devices with Thinger.io Platform such as automatic device and storage provisioning and both uplink and downlink cloud processing.&#x20;
 
