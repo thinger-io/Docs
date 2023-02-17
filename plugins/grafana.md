@@ -10,7 +10,7 @@ _Grafana_ is an Open Source visualization and analytics software that allows to 
 
 Grafana's technology allows for the simple development of advanced dynamic dashboards for data visualization and analysis, create logs, metrics, or even automatic alerts. And all these capabilities are extensible thanks to a large widget import repository, in which we can acquire many different representation elements created by Grafana's own developers or by contributions from a large community of users. A lot of additional information can be found on the creator's website and also in their extensive documentation, available at [**this link**](https://grafana.com/docs/grafana/v8.5/getting-started/?src=grafana\_gettingstarted).
 
-![](<../.gitbook/assets/image (318).png>)
+<figure><img src="../.gitbook/assets/imageGFN.png" alt=""><figcaption></figcaption></figure>
 
 The integration of this technology becomes a very useful tool for Thinger.io users who need to take their dashboards to a professional level, perform complex analytics in a scalable way, or create visualization projects in collaboration with other developers on their team. This plugin allows you to create an infrastructure in which Thinger.io acts as an element of administration and management of the devices. The data is stored through InfluxDB and finally, Grafana extracts the time series to create the representation.
 
