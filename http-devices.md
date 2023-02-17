@@ -10,7 +10,7 @@ There are some projects that require the integration of third-party data sources
 
 This integration provides bidirectional communication between Thinger.io and the data source by making use of HTTP request and response data, which consist of basic HTTP POST messages with JSON codified data.&#x20;
 
-![](<.gitbook/assets/image (112) (1).png>)
+<figure><img src=".gitbook/assets/imageN.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Note that this integration can't explode the 100% of Thinger.io features and benefits in terms of communication efficiency, real-time data and device administration, so it is strongly recommended integrating the devices using the Thinger.io software client if it is available.
