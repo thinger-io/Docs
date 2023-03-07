@@ -402,7 +402,7 @@ angular.module('helloWidget', [])
             let url = document.querySelector("script[src*='helloWidget.js']");
             return url.src.replace('.js','.html');
         },
-        controller: function($scope){
+        controller: ["$scope", function($scope){
             console.log("controller initialized! scope is", $scope);
             
             // listeners for process source changes (if required)
@@ -415,7 +415,7 @@ angular.module('helloWidget', [])
                 console.log("Value has changed:", newVal, oldVal);
             });
             
-        }
+        }]
     }
 });
 ```
@@ -469,7 +469,7 @@ angular.module('supplyChainWidget', [])
             let url = document.querySelector("script[src*='supplyChainWidget.js']");
             return url.src.replace('.js','.html');
         },
-        controller: function($scope, DeviceProperty){
+        controller: ["$scope", "DeviceProperty", function($scope, DeviceProperty){
             function animate(){
                 var animElement = document.getElementById('Sprint_Card');
                 var ribbonOne = document.getElementById('Ribbon_1');
@@ -489,7 +489,7 @@ angular.module('supplyChainWidget', [])
             $scope.$watch('value', function(newValue, oldValue) {
                 animate();
             });
-        }
+        }]
     };
 });
 ```
@@ -713,7 +713,7 @@ angular.module('devicePropertyWidget', [])
             let url = document.querySelector("script[src*='devicePropertyWidget.js']");
             return url.src.replace('.js','.html');
         },
-        controller: function($scope, DeviceProperty){
+        controller: ["$scope", "DeviceProperty", function($scope, DeviceProperty){
             console.log("controller initialized!", $scope);
             
             // if we require to listen for value changes...
@@ -734,7 +734,7 @@ angular.module('devicePropertyWidget', [])
 
                 });
             };
-        }
+        }]
     };
 });
 ```
@@ -807,7 +807,7 @@ angular.module('deviceControlWidget', [])
             let url = document.querySelector("script[src*='deviceControlWidget.js']");
             return url.src.replace('.js','.html');
         },
-        controller: function($scope, DeviceResource){
+        controller: ["$scope", "DeviceResource" function($scope, DeviceResource){
             
             $scope.center = function(){
                 console.log("center clicked");
@@ -840,7 +840,7 @@ angular.module('deviceControlWidget', [])
                 $scope.api = new DeviceResource({device: $scope.source.device.id});
 
             });
-        }
+        }]
     };
 });
 ```
