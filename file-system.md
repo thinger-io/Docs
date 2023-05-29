@@ -56,6 +56,6 @@ The storage explorer contains a navigator in which the data hierarchy is display
 
 when the files are no longer required in the file system, we can delete them using the file explorer. It is possible to select more than one file by pressing the "cmd" button on the keyboard and clicking on the files you want to delete. Finally, pressing the "-" icon of the top bar.&#x20;
 
-![](<.gitbook/assets/image (11).png>)
+![](<.gitbook/assets/image (11) (1).png>)
 
 ### &#x20;

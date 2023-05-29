@@ -54,7 +54,7 @@ After follow the first step, the authorization token that is shown on this inter
 
 3\) Now the system is ready to start sending data to Thinger.io via HTTP request, however, note that this system is aimed to receive application/JSON data codified messages. If the system messages do not contain JSON data the server will answer with a 200 OK message to the communication but no data will be stored. The image below shows an example of well defined JSON in the bottom of this tab:
 
-![](<.gitbook/assets/image (3).png>)
+![](<.gitbook/assets/image (3) (1).png>)
 
 ## Managing Callback Functionalities&#x20;
 

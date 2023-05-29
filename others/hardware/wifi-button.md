@@ -68,7 +68,7 @@ In order to save battery, the configuration hotspot is hold up for 180 seconds (
 
 2\)      Using a Smartphone or Personal computer with WiFi connectivity, open WiFi configuration and look for the button device WiFi hotspot. Then connect to this network by introducing the password, which will be the same as the WiFi SSID (wifi network name).
 
-![](<../../.gitbook/assets/image (15).png>)
+![](<../../.gitbook/assets/image (15) (1).png>)
 
 3\)      When the device begins connected to the access point, a Web Browser should automatically open the configuration interface, as is shown in the image below:
 

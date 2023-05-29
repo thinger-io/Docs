@@ -19,7 +19,7 @@ Note that this feature is reserved for Admin role accounts, so other users with 
 
 To configure a new proxy, just click the "Add Proxy" button and fill out the form according to the next instructions:&#x20;
 
-<figure><img src=".gitbook/assets/image (473).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
 Starting from top, the Proxy Settings section contains the parameters that will help to identify the specific proxy profile, and configure it's behavior to be adapted to each particular use case:&#x20;
 
@@ -31,9 +31,9 @@ Starting from top, the Proxy Settings section contains the parameters that will 
 
 The source configuration section allows specifying the port that will receive the connection from the external system.&#x20;
 
-<figure><img src=".gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
-The \<Target configuration> shows the destiny of the data received at the source port. Note that depending on the selected protocol, these parameters will change:&#x20;
+The `Target configuration` shows the destiny of the data received at the source port. Note that depending on the selected protocol, these parameters will change:&#x20;
 
 ### TCP/UDP
 
@@ -43,22 +43,23 @@ Data from `Source Port` will be sent to another TCP or UDP port accessible by th
 
 Data from the raw port will be sent to a third-party internet server:
 
-<figure><img src=".gitbook/assets/image (472).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
-* Target type: Host IP Address that will receive data from Thinger.io instance
-* Target Port: Host port that will receive data from Thinger.io instance
-* SSL/TLS (only with TCP): Allows to secure the comunication between Thinger.io instance and the target host. IT is not required for localhost destinies, but strongly recomendable when data is being sent to external internet host.&#x20;
+* **Target type** `Host Address`
+* **Target Address:** Host IP Address that will receive data from Thinger.io instance
+* **Target Port:** Host port that will receive data from Thinger.io instance
+* **SSL/TLS (only with TCP):** Allows to secure the comunication between Thinger.io instance and the target host. IT is not required for localhost destinies, but strongly recomendable when data is being sent to external internet host.&#x20;
 
 #### Plugin target type
 
-Data from raw port will be sent to a plugin port
+the Data from raw port will be sent to a plugin port
 
-<figure><img src=".gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
-* Target type plugin
-* Target Plugin: To select one of the deployed plugins that is being executed in the server
-* Target Port: Write here the port of that plugin that will receive de data from thinger.io
-* SSL/TLS: Allows to secure the comunication between Thinger.io instance and the target host. IT is not mandatory for plugins communication, as they are in the same host.&#x20;
+* **Target type** `plugin`
+* **Target Plugin:** To select one of the deployed plugins that is being executed in the server
+* **Target Port:** Write here the port of that plugin that will receive de data from thinger.io
+* **SSL/TLS (only with TCP):** Allows to secure the comunication between Thinger.io instance and the target host. IT is not mandatory for plugins communication, as they are in the same host.&#x20;
 
 ### TCP over IoTMP
 
@@ -78,5 +79,5 @@ After applying the required changes don't forget to press the blue "Uptade Proxy
 
 To delete one o multiple proxy profiles, select them from the list and click the remove button. Once a profile is deleted, it is not possible to restore it, so if in doubt, please consider using the "enable" switch located at the proxy settings menu.&#x20;
 
-<figure><img src=".gitbook/assets/image (60).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
