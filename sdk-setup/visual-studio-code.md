@@ -6,7 +6,7 @@ For advanced developers and more complex projects it can be interesting to have 
 
 **Visual Studio Code** is a free distribution source-code editor developed by Microsoft for Windows, Linux and macOS. It can be extended via [extensions](https://en.wikipedia.org/wiki/Plug-in\_\(computing\)), available through a central repository to add language support, new programming languages, [themes](https://en.wikipedia.org/wiki/Theme\_\(computing\)), and [debuggers](https://en.wikipedia.org/wiki/Debugger), or perform [static code analysis](https://en.wikipedia.org/wiki/Static\_code\_analysis). It can be downloaded for free from the official website.
 
-&#x20;[**Download Visual Studio Code**](https://code.visualstudio.com/download)****
+&#x20;[**Download Visual Studio Code**](https://code.visualstudio.com/download)
 
 ![](<../.gitbook/assets/image (243).png>)
 

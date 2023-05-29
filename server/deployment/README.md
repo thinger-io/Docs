@@ -36,7 +36,7 @@ Private instances can be deployed within minutes over the main cloud provider ho
 
 ## Managing subscription
 
-The administrator of a private instance of Thinger.io can edit the preferences of the subscription using the management portal, for this you must access the website [**https://thinger.chargebeeportal.com/**](https://thinger.chargebeeportal.com/) **** obtaining a One Time Password that will be sent to your email when you execute the request.
+The administrator of a private instance of Thinger.io can edit the preferences of the subscription using the management portal, for this you must access the website [**https://thinger.chargebeeportal.com/**](https://thinger.chargebeeportal.com/) obtaining a One Time Password that will be sent to your email when you execute the request.
 
 ![](<../../.gitbook/assets/image (316).png>)
 

@@ -44,7 +44,11 @@ Before running the OTA it is necessary to configure the extension by accessing t
 
 The following image provides a token configuration example with the required permissions.
 
-![Example Thinger.io Token Configuration for Visual Studio Code Extension](<../.gitbook/assets/image (444).png>)
+<div align="center">
+
+<img src="../.gitbook/assets/image (444).png" alt="Example Thinger.io Token Configuration for Visual Studio Code Extension">
+
+</div>
 
 ## Firmware Upload via OTA
 

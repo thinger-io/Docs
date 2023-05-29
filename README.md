@@ -18,7 +18,7 @@ Thinger.io is a cloud IoT Platform that provides every needed tool to prototype,
 * **Open-Source**: most of the platform modules, libraries and APP source code are available in our Github repository to be downloaded and modified with MIT license.&#x20;
 
 {% hint style="success" %}
-Sign-up **** [**HERE** ](https://console.thinger.io/#/signup)to obtain a **free account** and start creating IoT projects within minutes!
+Sign-up [**HERE** ](https://console.thinger.io/#/signup)to obtain a **free account** and start creating IoT projects within minutes!
 {% endhint %}
 
 ### Thinger.io Main Features

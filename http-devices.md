@@ -49,7 +49,7 @@ It is necessary to obtain the HTTP request and the authorization that allows int
 After follow the first step, the authorization token that is shown on this interface will be fixed, being also the same as the one shown at "settings" tab, so it can be copied too in order to create the HTTP Request. &#x20;
 
 {% hint style="success" %}
-[Click here to find additional documentation about how to implement HTTP request over different systems in the section **"building the HTTP request in the data source"**](https://docs.thinger.io/hardware-devices/http-devices#building-the-http-request-in-the-data-source)****
+[Click here to find additional documentation about how to implement HTTP request over different systems in the section **"building the HTTP request in the data source"**](https://docs.thinger.io/hardware-devices/http-devices#building-the-http-request-in-the-data-source)
 {% endhint %}
 
 3\) Now the system is ready to start sending data to Thinger.io via HTTP request, however, note that this system is aimed to receive application/JSON data codified messages. If the system messages do not contain JSON data the server will answer with a 200 OK message to the communication but no data will be stored. The image below shows an example of well defined JSON in the bottom of this tab:

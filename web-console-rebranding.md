@@ -41,7 +41,7 @@ All the next elements are non-mandatory, so can be left empty and the system wil
 * **Page title:** Identificator for the web browser tabs
 * **Page URL:** To introduce link to the company, customer or project website
 * **Company Name:** Name of the project, customer or company this rebranding belongs to.&#x20;
-* **Contact Email:** address for the main menu"Email" button **** that the users are going to contact for support.
+* **Contact Email:** address for the main menu"Email" button that the users are going to contact for support.
 * **Twitter Account:**  Social media profile can be added by placing here the complete URL of the twitter profile.
 * **Copyright:** The bottom of the website includes a copyright declaration that can be customized here to protect the rebranding rights. &#x20;
 
@@ -108,7 +108,7 @@ The **Simple Mail Transfer Protocol**, better known as SMTP, is a protocol used 
 
 #### Amazon SES Configuration
 
-The integration with Amazon SES provides a much simple and scalable mailing tool. It can be selected instead of the common SMTP by selecting it on Email Type, and placing the credentials on its appropriate section. These credentials can be obtained on the AWS SES configuration section as explained on[ **this link**](https://ongage.atlassian.net/wiki/spaces/HELP/pages/13795743/Amazon+SES+Setup+Tutorial)****
+The integration with Amazon SES provides a much simple and scalable mailing tool. It can be selected instead of the common SMTP by selecting it on Email Type, and placing the credentials on its appropriate section. These credentials can be obtained on the AWS SES configuration section as explained on[ **this link**](https://ongage.atlassian.net/wiki/spaces/HELP/pages/13795743/Amazon+SES+Setup+Tutorial)
 
 ![](<.gitbook/assets/image (265) (1).png>)
 
@@ -147,7 +147,7 @@ Note that more than one branding or web domain profile can be added, as it is po
 If the amount of contracted brand profiles is reached, (or if no additional brands were contracted), it is possible to upgrade the threshold by going to the management portal using the link below.&#x20;
 
 {% hint style="success" %}
-****[**Click here to access the subscription administration portal**](https://thinger.chargebeeportal.com/)****
+[**Click here to access the subscription administration portal**](https://thinger.chargebeeportal.com/)
 {% endhint %}
 
 The administration portal only can be accessed by the instance administrator using his email address to obtain a one-time password. Once logged in, the administration portal will show all the licenses that have been subscribed to this e-mail address. Just select the license that wants to be modified and press the option "Edit Subscription", finally, pressing the option "Addons", the portal will show all the available options and pricing in the Add Add-ons menu:

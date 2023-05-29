@@ -46,9 +46,9 @@ Choose a property identifier that represents its purpose, i.e., "config", "locat
 
 A property can be updated automatically from different sources:
 
-* ****[**None**](properties.md#none)**:** Used if the property should not be updated from any source.
-* ****[**Device Resource**](properties.md#device-resource): Used if the property value must be updated from an IOTMP device resource.
-* ****[**Device Topic**](properties.md#device-topic): Used if the property value must be updated from a topic (MQTT).
+* [**None**](properties.md#none)**:** Used if the property should not be updated from any source.
+* [**Device Resource**](properties.md#device-resource): Used if the property value must be updated from an IOTMP device resource.
+* [**Device Topic**](properties.md#device-topic): Used if the property value must be updated from a topic (MQTT).
 
 <figure><img src="../.gitbook/assets/image (265).png" alt=""><figcaption><p>Product Property - Property Source Configuration: </p></figcaption></figure>
 

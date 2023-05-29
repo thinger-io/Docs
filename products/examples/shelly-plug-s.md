@@ -29,7 +29,7 @@ Under the "Internet & Security" menu, it is possible to configure "Advanced - De
 * Server: Thinger.io hostname + port. Example: `acme.aws.thinger.io:1883`
 * The device identifier (MQTT client id) can be observed under the Will Topic. In this case, it is "`shellyplug-s-C18B12`"
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Shelly Plug S - Advanced MQTT server configuration</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (2).png" alt=""><figcaption><p>Shelly Plug S - Advanced MQTT server configuration</p></figcaption></figure>
 
 ## Product Profile
 
@@ -46,7 +46,11 @@ Both properties are updated from the following device topics:
 
 To configure the properties in the product profile, just click  `Add` on the properties section. On the dialog, enter the property identifier (i.e., power or relay), select the `Device Topic` source, fill the `Topic`, and configure the payload, as shown in the following picture:
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/image (463).png" alt=""><figcaption><p>Shelly Plug S - Property configuration for storing current power</p></figcaption></figure>
+
+</div>
 
 By default, the payload established on the property is`{{payload}}`, which is a placeholder that will be replaced with the contents received from the configured source. In this case, from the MQTT topic configured. So, any information that is received there is saved automatically in each device property. Cool!
 

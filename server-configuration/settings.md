@@ -12,7 +12,7 @@ This platform allows the connection of devices of different types, for which it 
 
 ### HTTP Server configuration
 
-To set the connection parameters of the **** [**HTTP devices integration**](../http-devices.md) **** module on Thinger.io private instances
+To set the connection parameters of the [**HTTP devices integration**](../http-devices.md) module on Thinger.io private instances
 
 ![](<../.gitbook/assets/image (288) (1).png>)
 
@@ -38,7 +38,7 @@ The configurable parameters are:&#x20;
 
 ### MQTT Server configuration
 
-This section allows setting the connection and data entry parameters of **** [**MQTT devices**](../mqtt.md) with Thinger.io's builtin MQTT broker.
+This section allows setting the connection and data entry parameters of [**MQTT devices**](../mqtt.md) with Thinger.io's builtin MQTT broker.
 
 ![](<../.gitbook/assets/image (278) (1).png>)
 
@@ -71,7 +71,7 @@ The **Simple Mail Transfer Protocol**, better known as SMTP, is a protocol used 
 
 ### AWS SES configuration
 
-The integration with Amazon SES provides a much simple and scalable mailing tool. It can be selected instead of the common SMTP by selecting it on Email Type, and placing the credentials on its appropriate section. These credentials can be obtained on the AWS SES configuration section as explained on[ **this link**](https://ongage.atlassian.net/wiki/spaces/HELP/pages/13795743/Amazon+SES+Setup+Tutorial)****
+The integration with Amazon SES provides a much simple and scalable mailing tool. It can be selected instead of the common SMTP by selecting it on Email Type, and placing the credentials on its appropriate section. These credentials can be obtained on the AWS SES configuration section as explained on[ **this link**](https://ongage.atlassian.net/wiki/spaces/HELP/pages/13795743/Amazon+SES+Setup+Tutorial)
 
 ![](<../.gitbook/assets/image (265) (1).png>)
 
@@ -92,7 +92,7 @@ The default configuration of Thinger.io's storage engine uses InfluxDB system, a
 * **InfluxDB Host:** Place here the web domain or IP of the InfluxDB server
 * **InfluxDB Port:** Place here te standard or custom InfluxDB port number
 * **InfluxDB Username:** Is the username used to create the influxDB database
-* **InfluxDB Password:** An authorization tocken obtained from InfluxDB configuration console ****&#x20;
+* **InfluxDB Password:** An authorization tocken obtained from InfluxDB configuration console&#x20;
 
 To obtain this information about an InfluxDB server it is required to go to InfluxDB configuration tool as it is explained on: &#x20;
 

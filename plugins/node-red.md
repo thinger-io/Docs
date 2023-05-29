@@ -55,7 +55,7 @@ This node allows to automatically start a flow when an event is triggered, at re
 
 Node-RED counts with some nodes that allows working with the flow's payload using pre-configured tools or coding their behavior in JavaScript functions that can be created within the editor using a rich text editor. With this proposal, these nodes are provided with both input and output connectors.
 
-**Output and Debug Nodes**              <img src="../.gitbook/assets/node_debug (1).png" alt="" data-size="original"> ****&#x20;
+**Output and Debug Nodes**              <img src="../.gitbook/assets/node_debug (1).png" alt="" data-size="original">&#x20;
 
 These nodes only have an input connector that allows extracting data from the flow to third parties, files, or debugs console in the web editor.
 

@@ -6,7 +6,11 @@ description: Open Source IPC based on Raspberry Pi
 
 ## Product Description
 
+<div align="center">
+
 <figure><img src="../../.gitbook/assets/RevPi-Connect-SE-0000.png" alt=""><figcaption><p>Open Source IPC based on Raspberry Pi</p></figcaption></figure>
+
+</div>
 
 Revolution Pi is an open, modular, and inexpensive industrial PC based on the well-known Raspberry Pi. Housed in a slim DIN-rail housing, the three available base modules can be seamlessly expanded by a variety of suitable I/O modules and fieldbus gateways. The 24V powered modules are connected via an overhead connector in seconds and can be easily configured via a graphical configuration tool.
 
@@ -42,7 +46,7 @@ It provides a browser-based editor that makes it easy to wire together flows usi
 
 Kunbus Rev-PI integrates Node-RED. The [node-red-contrib-revpi-nodes](https://flows.nodered.org/node/node-red-contrib-revpi-nodes) provides a set of nodes in [Node-RED](https://nodered.org/) to read and write to I/O Pins of your [Revolution Pi](https://revolution.kunbus.de/).
 
-<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption><p>Node-RED Running on Kunbus RevPi and managed from Thinger.io</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (26) (2).png" alt=""><figcaption><p>Node-RED Running on Kunbus RevPi and managed from Thinger.io</p></figcaption></figure>
 
 To access Node-RED from Thinger.io, it is required to create a [Product Service](kunbus-revpi.md#product-services) with the following configuration:
 

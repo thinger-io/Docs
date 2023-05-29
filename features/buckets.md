@@ -27,8 +27,8 @@ The sections below explains the different data bucket data acquisition modes and
 ### **From Device Resource**
 
 &#x20;This option subscrives Thinger.io Server to an specific device resource (such as temperature, motion, and so on). It can be configured to retrieve data from the device in an specific sampling interval, or wait asynchronous communications from devices by means of the "Refresh mode" parameter.\
-__\
-__Note that this option is only compatible with devices that has been provided with Thinger.io Software client libraries (Arduino, Linux or Raspberry), and it will only work properly if the device keeps permanent connection with the server.
+\
+Note that this option is only compatible with devices that has been provided with Thinger.io Software client libraries (Arduino, Linux or Raspberry), and it will only work properly if the device keeps permanent connection with the server.
 
 * **Sampling interval:**  Configure the bucket profile to retrieve data from device resources in an specific timing, that can be changed on demand, without modifying device sketch. Other benefit is that no additional codification is needed to implement this feature and start storing data. The next basic code example will store two variables in the data bucket when using the "sampling interval" configuration.
 
@@ -62,7 +62,7 @@ This instruction should NEVER be called each loop execution or in lower than 60s
 
 ### **From device Write Call**
 
-&#x20;This option sets the bucket in passive mode, waiting to be called by any Thinger.io "Generic Device" (with Thinger.h libraries on it) **** by means of the the `write_bucket()` method, as shown in the example code below. The special feature of this mode is that it allows to store data from different devices in the same data bucket.
+&#x20;This option sets the bucket in passive mode, waiting to be called by any Thinger.io "Generic Device" (with Thinger.h libraries on it) by means of the the `write_bucket()` method, as shown in the example code below. The special feature of this mode is that it allows to store data from different devices in the same data bucket.
 
 Here is an example of an ESP8266 device writing information to a bucket using the `write_bucket` function:
 
@@ -156,7 +156,7 @@ The import process allows to fill the data bucket with the same data contained i
 
 To execute an import, the following steps must be carried out:
 
-1. Create a new File System ([following **these** instructions](../file-system.md)) **** profile with public access configuration or open an existing one and upload the .csv file to be imported into the File System.&#x20;
+1. Create a new File System ([following **these** instructions](../file-system.md)) profile with public access configuration or open an existing one and upload the .csv file to be imported into the File System.&#x20;
 2. Create the new data bucket
 3. Select the source File System and place the file identifier in the "Filename" section.
 4. Click on "Import Data" button.

@@ -75,7 +75,7 @@ Project members are light accounts created to share IoT resources with customers
 
 ![](<.gitbook/assets/image (370).png>)
 
-2\)Then click the  blue  **`Project Members`   **   button to show the project member list. Next image shows an empty project list in which a new member can be added:&#x20;
+2\)Then click the  blue  **`Project Members`**   button to show the project member list. Next image shows an empty project list in which a new member can be added:&#x20;
 
 ![](<.gitbook/assets/image (366).png>)
 
@@ -94,7 +94,7 @@ Only Admin accounts are able to create other user accounts. The amount of user a
 This threshold can be upgraded on "Grow" or "Startup" licenses by going to the management portal, which is only accessible with the administration account using the link below. To access this portal a one-time password will be required. It can be obtained by introducing the appropriate administration e-mail account in the text box.
 
 {% hint style="success" %}
-****[**Click here to access the subscription administration portal**](https://thinger.chargebeeportal.com/)****
+[**Click here to access the subscription administration portal**](https://thinger.chargebeeportal.com/)
 {% endhint %}
 
 The administration portal will show all the licenses that have been subscribed using this e-mail address, allowing to select the one that wants to be updated. Just select the one that wants to be modified and press the option "Edit Subscription", finally pressing the option "Addons", the portal will show all the available options and pricing in the Add Add-ons menu:

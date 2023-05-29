@@ -45,11 +45,11 @@ Each API Resource can define a target destination, where the incoming request pa
 
 The target options available are the following:
 
-* ****[**None**](api-resources.md#none)**:** The request will not reach any destination.
-* ****[**Device Resource**](api-resources.md#device-resource): The request will be forwarded to an IOTMP device resource.&#x20;
-* ****[**Device Property**](api-resources.md#device-property): The request will be forwarded to a Device Property.
-* ****[**Device Topic**](api-resources.md#device-topic): The request will be published on a given topic (MQTT).
-* ****[**Product Function**](api-resources.md#product-function): The request will be forwarded to a Product Function.
+* [**None**](api-resources.md#none)**:** The request will not reach any destination.
+* [**Device Resource**](api-resources.md#device-resource): The request will be forwarded to an IOTMP device resource.&#x20;
+* [**Device Property**](api-resources.md#device-property): The request will be forwarded to a Device Property.
+* [**Device Topic**](api-resources.md#device-topic): The request will be published on a given topic (MQTT).
+* [**Product Function**](api-resources.md#product-function): The request will be forwarded to a Product Function.
 
 <figure><img src="../../.gitbook/assets/image (276).png" alt=""><figcaption><p>Product - APi Request Configuration</p></figcaption></figure>
 

@@ -51,7 +51,7 @@ The bucket must **NOT** be created manually, as the product is able to initializ
 
 Any bucket with a fixed identifier, i.e., "productA\_temperature", will be created with two tags on it: `device` and `group`. As multiple devices can be writing to the same bucket simultaneously, tags let the platform differentiate all different sources (and groups) that are writing to the bucket:
 
-``<img src="../../.gitbook/assets/image (23).png" alt="" data-size="original">``
+<img src="../../.gitbook/assets/image (23) (2).png" alt="" data-size="original">
 
 * **device**: This will contain the device identifier where the data has been originated, i.e., the one that has published on a specific topic. It is automatically filled by the product, and should not arrive in the payload.
 * **group**: This will contain the device group, as it can be useful for creating dashboards with aggregated data by groups, i.e., average consumptions of devices on floor 1. It is automatically filled by the product, and should not arrive in the payload.
@@ -74,9 +74,9 @@ Note that if the bucket identifier on the Product contains the `{{device}}` plac
 
 A bucket can fetch time series data automatically from different sources:
 
-* ****[**None**](buckets.md#none)**:** Used if the bucket should not be updated from any source.
-* ****[**Device Resource**](buckets.md#device-resource): Used if the value to insert in a bucket must be taken from an IOTMP device resource.
-* ****[**Device Topic**](buckets.md#device-topic): Used if the value to insert in a bucket must be taken from a topic (MQTT).
+* [**None**](buckets.md#none)**:** Used if the bucket should not be updated from any source.
+* [**Device Resource**](buckets.md#device-resource): Used if the value to insert in a bucket must be taken from an IOTMP device resource.
+* [**Device Topic**](buckets.md#device-topic): Used if the value to insert in a bucket must be taken from a topic (MQTT).
 
 <figure><img src="../../.gitbook/assets/image (85).png" alt=""><figcaption><p>Product Bucket - Bucket Source Configuration</p></figcaption></figure>
 
@@ -135,4 +135,4 @@ The placeholders that are available for the Payload configuration are all values
 
 Each bucket defined inside a Product can be enabled or disabled independently, for example, to temporarily disable the automatic data insertion from a topic or a device resource. It can include a description for a better understanding of its purpose, usage, or source.
 
-<figure><img src="../../.gitbook/assets/image (67).png" alt=""><figcaption><p>Product Bucket - Bucket configuration</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (67) (2).png" alt=""><figcaption><p>Product Bucket - Bucket configuration</p></figcaption></figure>

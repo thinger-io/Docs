@@ -83,6 +83,7 @@
   * [Cluster / Server Status](server-configuration/cluster-server-status.md)
   * [Server Logs](server-configuration/server-logs.md)
 * [OAUTH2 CLIENTS](oauth2-clients.md)
+* [PROXIES](proxies.md)
 
 ## Server
 
