@@ -21,7 +21,7 @@ To configure a new proxy, just click the "Add Proxy" button and fill out the for
 
 <figure><img src=".gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
-Starting from top, the Proxy Settings section contains the parameters that will help to identify the specific proxy profile, and configure it's behavior to be adapted to each particular use case:&#x20;
+Starting from top, the Proxy Settings section contains the parameters that will help to identify the specific proxy profile, and configure its behavior to be adapted to each particular use case:&#x20;
 
 * **Proxy ID:** Unique identification, must not contain special characters&#x20;
 * **Proxy name:** Mnemonic identification name for the proxy profile
@@ -31,7 +31,7 @@ Starting from top, the Proxy Settings section contains the parameters that will 
 
 The source configuration section allows specifying the port that will receive the connection from the external system.&#x20;
 
-<figure><img src=".gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 The `Target configuration` shows the destiny of the data received at the source port. Note that depending on the selected protocol, these parameters will change:&#x20;
 
@@ -48,26 +48,57 @@ Data from the raw port will be sent to a third-party internet server:
 * **Target type** `Host Address`
 * **Target Address:** Host IP Address that will receive data from Thinger.io instance
 * **Target Port:** Host port that will receive data from Thinger.io instance
-* **SSL/TLS (only with TCP):** Allows to secure the comunication between Thinger.io instance and the target host. IT is not required for localhost destinies, but strongly recomendable when data is being sent to external internet host.&#x20;
+* **SSL/TLS (only with TCP):** Allows to secure the communication between Thinger.io instance and the target host. It is not required for localhost destinies, but strongly recommendable when data is being sent to an external internet host.&#x20;
 
 #### Plugin target type
 
 the Data from raw port will be sent to a plugin port
 
-<figure><img src=".gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 * **Target type** `plugin`
 * **Target Plugin:** To select one of the deployed plugins that is being executed in the server
 * **Target Port:** Write here the port of that plugin that will receive de data from thinger.io
-* **SSL/TLS (only with TCP):** Allows to secure the comunication between Thinger.io instance and the target host. IT is not mandatory for plugins communication, as they are in the same host.&#x20;
+* **SSL/TLS (only with TCP):** Allows securing the communication between Thinger.io instance and the target host. IT is not mandatory for plugin communication, as they are in the same host.&#x20;
 
 ### TCP over IoTMP
 
+\*\*purpose\*\*
+
 <figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+* **Target type** `Host Address`
+* **Target Username:** Account username that will own the connection
+* **Target Device:** ID of the device that will host the connection
+* **Target Address:** IP Address of the device that will receive data from Thinger.io instance
+* **Target Port:** The communication port of the device that will host the connection
+* **SSL/TLS (only with TCP):** Allows to secure the comunication between Thinger.io instance and the target host. IT is not required for localhost destinies, but strongly recomendable when data is being sent to external internet host.&#x20;
 
 ### HTTP over IoTMP
 
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+\*\*purpose\*\*
+
+#### Host Address target type with HTTP over IoTMP
+
+\*\*purpose\*\*
+
+<figure><img src=".gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+
+* **Target type** `Host Address`
+* **Target Address:** Host IP Address that will receive data from Thinger.io instance
+* **Target Port:** Host port that will receive data from Thinger.io instance
+* **SSL/TLS (only with TCP):** Allows to secure the communication between Thinger.io instance and the target host. It is not required for localhost destinies, but strongly recommendable when data is being sent to an external internet host.&#x20;
+
+#### Plugin target type  with HTTP over IoTMP
+
+\*\*purpose\*\*
+
+<figure><img src=".gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+
+* **Target type** `plugin`
+* **Target Plugin:** To select one of the deployed plugins that is being executed in the server
+* **Target Port:** Write here the port of that plugin that will receive de data from thinger.io
+* **SSL/TLS (only with TCP):** Allows securing the communication between Thinger.io instance and the target host. IT is not mandatory for plugin communication, as they are in the same host.&#x20;
 
 ## Edit Proxies
 
