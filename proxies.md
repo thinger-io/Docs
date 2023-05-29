@@ -72,15 +72,15 @@ the Data from raw port will be sent to a plugin port
 * **Target Device:** ID of the device that will host the connection
 * **Target Address:** IP Address of the device that will receive data from Thinger.io instance
 * **Target Port:** The communication port of the device that will host the connection
-* **SSL/TLS (only with TCP):** Allows to secure the comunication between Thinger.io instance and the target host. IT is not required for localhost destinies, but strongly recomendable when data is being sent to external internet host.&#x20;
+* **SSL/TLS (only with TCP):** Allows to secure the communication between Thinger.io instance and the target host. IT is not required for localhost destinies, but strongly recommendable when data is being sent to an external internet host.&#x20;
 
 ### HTTP over IoTMP
 
-\*\*purpose\*\*
+This proxy configuration allows connecting HTTP servers hosted on a remote device, making it possible to access to its web portal, then this trafic may be redirect.... NPI
 
 #### Host Address target type with HTTP over IoTMP
 
-\*\*purpose\*\*
+
 
 <figure><img src=".gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
@@ -91,7 +91,7 @@ the Data from raw port will be sent to a plugin port
 
 #### Plugin target type  with HTTP over IoTMP
 
-\*\*purpose\*\*
+
 
 <figure><img src=".gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
