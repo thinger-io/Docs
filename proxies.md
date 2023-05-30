@@ -63,7 +63,7 @@ the Data from raw port will be sent to a plugin port
 
 ### TCP over IoTMP
 
-\*\*purpose\*\*
+This option allows to retrieve data from a third-party service that is accessible by an IoTMP device vía TCP communication. This means that we can extract data from SQL, files or any other resource that is not supported by an HTTP connection. &#x20;
 
 <figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
@@ -76,9 +76,7 @@ the Data from raw port will be sent to a plugin port
 
 ### HTTP over IoTMP
 
-This proxy configuration allows connecting HTTP servers hosted on a remote device, making it possible to access to its web portal, then this trafic may be redirect.... NPI
-
-#### Host Address target type with HTTP over IoTMP
+This proxy configuration allows connecting HTTP servers in the same network as the IoTMP device. Hosted itself or by other machines. The HTTP integration allows access to its web portal, by means of an Iframe on the device profile.
 
 
 
@@ -88,17 +86,6 @@ This proxy configuration allows connecting HTTP servers hosted on a remote devic
 * **Target Address:** Host IP Address that will receive data from Thinger.io instance
 * **Target Port:** Host port that will receive data from Thinger.io instance
 * **SSL/TLS (only with TCP):** Allows to secure the communication between Thinger.io instance and the target host. It is not required for localhost destinies, but strongly recommendable when data is being sent to an external internet host.&#x20;
-
-#### Plugin target type  with HTTP over IoTMP
-
-
-
-<figure><img src=".gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
-
-* **Target type** `plugin`
-* **Target Plugin:** To select one of the deployed plugins that is being executed in the server
-* **Target Port:** Write here the port of that plugin that will receive de data from thinger.io
-* **SSL/TLS (only with TCP):** Allows securing the communication between Thinger.io instance and the target host. IT is not mandatory for plugin communication, as they are in the same host.&#x20;
 
 ## Edit Proxies
 
