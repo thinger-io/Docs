@@ -48,7 +48,7 @@ coverY: 0
 * Resource list and navigation:
   * It is possible to change the maximum number of elements to display per page.
   * Page navigation/sorting is not reset after entering one element and going back to the list.
-* Changelog is now available at https://docs.thinger.io/server/changelog
+* Changelog is now available at https://docs.thinger.io/server/changelog.
 
 **Fixed**
 
@@ -56,6 +56,7 @@ coverY: 0
 * The bucket field selector now displays an input text for manually selecting the fields if the latest values cannot be queried, i.e., when they are older than one week.
 * Double loading of HTML widgets when the dashboard is open.&#x20;
 * Proxy configuration was not displayed correctly if the source was different than TCP.
+* Bucket export list not being displayed under some circumstances.
 
 ## 5.2.2
 
