@@ -91,6 +91,7 @@
   * [Thinger.io Cloud](server/deployment/thinger.io-cloud-server.md)
   * [On-Premise](server/deployment/on-premise.md)
 * [SERVER API](server/api.md)
+* [CHANGELOG](server/changelog.md)
 
 ## Others
 
