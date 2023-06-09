@@ -32,7 +32,7 @@ coverY: 0
 
 * Support for cloning almost any thinger.io resource, from dashboards to data buckets, file storages, and projects!
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>Clone Resource Functionality</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>Clone Resource Functionality</p></figcaption></figure>
 
 * HTTP endpoints now support embedded NodeJS scripts for custom payload processing when calling third-party services.
 
@@ -44,7 +44,7 @@ coverY: 0
 * Resource list and navigation:
   * It is possible to change the maximum number of elements to display per page.
   * Page navigation/sorting is not reset after entering one element.
-* Changelog is now available at https://docs.thinger.io/changelog
+* Changelog is now available at https://docs.thinger.io/server/changelog
 
 **Fixed**
 

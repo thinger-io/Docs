@@ -31,7 +31,7 @@ Starting from top, the Proxy Settings section contains the parameters that will 
 
 The source configuration section allows specifying the port that will receive the connection from the external system.&#x20;
 
-<figure><img src=".gitbook/assets/image (6) (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 The `Target configuration` shows the destiny of the data received at the source port. Note that depending on the selected protocol, these parameters will change:&#x20;
 
@@ -54,7 +54,7 @@ Data from the raw port will be sent to a third-party internet server:
 
 the Data from raw port will be sent to a plugin port
 
-<figure><img src=".gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (4) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 * **Target type** `plugin`
 * **Target Plugin:** To select one of the deployed plugins that is being executed in the server
