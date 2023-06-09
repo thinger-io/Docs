@@ -9,6 +9,8 @@ coverY: 0
 
 **Release Date: 19-06-2023**
 
+**Discussion Topic:** [**Thinger.io Community**](https://community.thinger.io/t/thinger-io-iot-platform-version-5-3-0/4784)&#x20;
+
 **Added**
 
 *   New Alarms feature ⏰ (BETA)! A completely new solution for managing IoT alarms, which includes rule definitions, and alarm instances management. Some key features of the new solution:
