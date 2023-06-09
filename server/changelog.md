@@ -11,9 +11,9 @@ coverY: 0
 
 **Added**
 
-*   New Alarms feature (BETA)! A completely new solution for managing IoT alarms, which includes rule definitions, and alarm instances management. Some key features of the new solution:
+*   New Alarms feature ⏰ (BETA)! A completely new solution for managing IoT alarms, which includes rule definitions, and alarm instances management. Some key features of the new solution:
 
-    * Multiple data sources for configuring alarms triggering, including data buckets, device properties, or device state.
+    * Multiple data sources for configuring alarms triggering include data buckets, device properties, and device state.
     * Multiple severities: High, medium, low, none.
     * Independent activation and normalization conditions, including confirmations based on timespan or a number of consecutive events.
 
@@ -30,20 +30,22 @@ coverY: 0
 
 </div>
 
-* Support for cloning almost any thinger.io resource, from dashboards to data buckets, file storages, and projects!
+* Support for cloning almost any thinger.io resource, from dashboards to data buckets, file storages, and projects.
 
 <figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>Clone Resource Functionality</p></figcaption></figure>
 
-* HTTP endpoints now support embedded NodeJS scripts for custom payload processing when calling third-party services.
+* HTTP endpoints now support embedded NodeJS 🧑‍💻 scripts for custom payload processing when calling third-party services.
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>HTTP Endpoints with custom NodeJS Payload processor</p></figcaption></figure>
 
 **Improved**
 
 * The bucket list automatically refreshes the bucket state, i.e., when finish exporting or importing, which happens on a clone operation.
+* IOTMP proxies now work correctly with TLS endpoints.
+* HTTP over IOTMP now correctly supports WebSockets.
 * Resource list and navigation:
   * It is possible to change the maximum number of elements to display per page.
-  * Page navigation/sorting is not reset after entering one element.
+  * Page navigation/sorting is not reset after entering one element and going back to the list.
 * Changelog is now available at https://docs.thinger.io/server/changelog
 
 **Fixed**
@@ -51,6 +53,7 @@ coverY: 0
 * Remove project properties and project roles from the database on project deletion.
 * The bucket field selector now displays an input text for manually selecting the fields if the latest values cannot be queried, i.e., when they are older than one week.
 * Double loading of HTML widgets when the dashboard is open.&#x20;
+* Proxy configuration was not displayed correctly if the source was different than TCP.
 
 ## 5.2.2
 
