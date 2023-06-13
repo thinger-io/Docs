@@ -57,6 +57,9 @@ coverY: 0
 * Double loading of HTML widgets when the dashboard is open.&#x20;
 * Proxy configuration was not displayed correctly if the source was different than TCP.
 * Bucket export list not being displayed under some circumstances.
+* Resource lists on the front-end not showing correct permissions on members.
+* Prevent members navigate to specific resources if no permissions are available.
+* UpdateDevice permission on front-end.
 
 ## 5.2.2
 
