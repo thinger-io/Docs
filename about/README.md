@@ -71,18 +71,22 @@ Thinger.io is a platform in constant growth, our development team is continuousl
 * [x] Project member and global roles
 * [x] Influx2 integration and plugin
 * [x] Bucket tags
-* [x] Plugins repository
-* [ ] New APP console
+* [x] Plugins common repository
 
 2023
 
-* [ ] Alerts manager&#x20;
+* [x] Alerts manager&#x20;
+* [x] Devices claim process
+* [ ] Custom form creator
 * [ ] Automation scheduler
 * [ ] COAP integration
-* [ ] NB-IoT integration client (COAP)
-* [ ] Python IoT Client
+* [ ] Python software client
 * [ ] Projects Manager 2.0 with individual groups
 * [ ] Reporting tool
+* [ ] New web-APP console
+* [ ] Devices integration for our marketplace strategy&#x20;
+
+
 
 \*Released but not yet documented
 
