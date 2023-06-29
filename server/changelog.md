@@ -5,6 +5,36 @@ coverY: 0
 
 # CHANGELOG
 
+## 5.3.1
+
+**Release Date: 30-06-2023**
+
+**Added**
+
+* Widgets now have a "Show Offline" parameter to "turn off" the widget if the data is not recent.
+
+<figure><img src="../.gitbook/assets/image (339).png" alt=""><figcaption><p>Show Offline Configuration based on Timespan.</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/alarm.gif" alt=""><figcaption><p>Widget displayed as "Disconnected".</p></figcaption></figure>
+
+* Product API Response can now be sourced directly from a function.
+* Product API Response can now be sourced directly from an IOTMP resource.
+
+**Improved**
+
+* Internal HTTP client stability.
+
+**Fixed**
+
+* Problem while counting active alarm instances on the menu.
+* Alarms not triggering notifications on creation when it has immediate activation.
+* Alarms not allowing to select hours as reminder intervals.
+* IOTMP with multiple property stream subscriptions.
+* Products not processing API Responses payload configuration, but returning just the original payload.
+* Input template params to Product API Request targeting functions not being correctly processed.
+* Plugins that require a MongodDB user to interact with the database fail to upgrade.
+* Dashboard widget settings being closed when removing widget background.
+
 ## 5.3.0
 
 **Release Date: 19-06-2023**
