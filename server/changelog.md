@@ -5,9 +5,9 @@ coverY: 0
 
 # CHANGELOG
 
-## 5.3.1
+## 5.3.2
 
-**Release Date: 30-06-2023**
+**Release Date: 04-07-2023**
 
 **Added**
 
