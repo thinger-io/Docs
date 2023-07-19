@@ -6,10 +6,10 @@ description: >-
 
 # Resources
 
-![](../.gitbook/assets/thinger\_logo\_white.png)
+<figure><img src="../.gitbook/assets/thinger logo white.png" alt="thinger.io logo"><figcaption></figcaption></figure>
 
-![](../.gitbook/assets/thinger\_logo\_black.png)
+<figure><img src="../.gitbook/assets/thinger logo black.png" alt="thinger.io logo dark"><figcaption></figcaption></figure>
 
-{% file src="../.gitbook/assets/1.eps" %}
+{% file src="../.gitbook/assets/thinger.io logo.eps" %}
 
-{% file src="../.gitbook/assets/1.ai" %}
+{% file src="../.gitbook/assets/thinger.io logo.ai" %}
