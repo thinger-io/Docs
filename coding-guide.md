@@ -1,3 +1,9 @@
+---
+cover: >-
+  https://images.unsplash.com/photo-1555066931-4365d14bab8c?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw0fHxDT0RJTkd8ZW58MHx8fHwxNjkxMDU4NzczfDA&ixlib=rb-4.0.3&q=85
+coverY: 0
+---
+
 # CODING GUIDE
 
 ## Sketch Overview
@@ -31,7 +37,7 @@ void loop() {
 
 ## Setting Credentials
 
-All the devices connected to the platform needs to be authenticated against the server. When you create a [device in the console](https://link_to_console) you are basically creating a new device identifier and setting a device credential. Therefore, you need to setup this credentials also in your Arduino code so the device can be recognized and associated to your account. This is normally done while initializing the Thinger instance in the code. That is, when you define the `thing` instance. Replace the your `username`, `deviceId`, and `deviceCredential` with the values you have registered in the cloud. Note that credentials uses to be defined inside `arduino_secrets.h`
+All the devices connected to the platform needs to be authenticated against the server. When you create a [device in the console](https://link\_to\_console) you are basically creating a new device identifier and setting a device credential. Therefore, you need to setup this credentials also in your Arduino code so the device can be recognized and associated to your account. This is normally done while initializing the Thinger instance in the code. That is, when you define the `thing` instance. Replace the your `username`, `deviceId`, and `deviceCredential` with the values you have registered in the cloud. Note that credentials uses to be defined inside `arduino_secrets.h`
 
 ```cpp
  ThingerESP32 thing("username", "deviceId", "deviceCredential");
@@ -277,7 +283,7 @@ In Thinger.io, it is possible that devices can communicate between them. There a
 
 ### Same account communication
 
-For this use case, in which both devices belong to the same user account, there is a specific method that allows devices to communicate with other devices with low latency and simple codification. this communication can contain data or not (it is possible to make an empty call). let's Suppose that we have two devices: `deviceA` and `deviceB`, and we want to communicate both calling from `deviceB`to a specific `deviceA` input resource. We can use "thing.call_device(,);" as shown in the example below:
+For this use case, in which both devices belong to the same user account, there is a specific method that allows devices to communicate with other devices with low latency and simple codification. this communication can contain data or not (it is possible to make an empty call). let's Suppose that we have two devices: `deviceA` and `deviceB`, and we want to communicate both calling from `deviceB`to a specific `deviceA` input resource. We can use "thing.call\_device(,);" as shown in the example below:
 
 The `deviceA` defines a resource like in the following example.
 
@@ -345,7 +351,7 @@ loop(){
 
 If we want to communicate devices from different accounts, we can do that through calling an endpoint of type `Thinger.io Device Call`. Just register an endpoint of this type in the console, like in the following example.
 
-![](../.gitbook/assets/device_call.png)
+![](.gitbook/assets/device\_call.png)
 
 In this case it is required to define different parameters in the endpoint:
 
@@ -484,9 +490,9 @@ Using a previous defined Output Resource, that was called for example \["locatio
 
 ### From Write Call
 
-This option will allow setting the bucket in a state that it will not register any information by default, but it will just wait for writing calls, both from the Arduino library using the write_bucket method, as shown here, or calling the REST API directly like done with Sigfox. This feature opens the option to register information in the same bucket from different devices, or store information from devices that are not connected permanently with the server, that are in sleep mode, or use a different technology like Sigfox.
+This option will allow setting the bucket in a state that it will not register any information by default, but it will just wait for writing calls, both from the Arduino library using the write\_bucket method, as shown here, or calling the REST API directly like done with Sigfox. This feature opens the option to register information in the same bucket from different devices, or store information from devices that are not connected permanently with the server, that are in sleep mode, or use a different technology like Sigfox.
 
-Here is an example of an ESP8266 device writing information to a bucket using the write_bucket function:
+Here is an example of an ESP8266 device writing information to a bucket using the write\_bucket function:
 
 ```cpp
 void setup() {
@@ -508,7 +514,7 @@ void loop() {
 }
 ```
 
-Note that this instruction will retrieve the \["door_status"] resource PSON, so it is also possible to call this function by attaching a custom PSON, as shown down below:
+Note that this instruction will retrieve the \["door\_status"] resource PSON, so it is also possible to call this function by attaching a custom PSON, as shown down below:
 
 ```cpp
 void loop(){
@@ -531,7 +537,7 @@ In this case, you must detect when you want to stream the event, like the accele
 
 The following example will report the compass heading in real-time if the heading value changes more than 1 degree.
 
-![](../.gitbook/assets/esp8266-real-time-websockets.gif)
+![](.gitbook/assets/esp8266-real-time-websockets.gif)
 
 ```cpp
 void setup(){
@@ -573,7 +579,7 @@ void setup() {
 
 Sometimes it can be useful for your application to know what is the current connection status with Thinger.io, i.e., to notify disconnected status with a led, request device configuration after authentication, or any other internal control flow according to connection state.
 
-In order to create a listener for such connection states, it can be done with the `set_state_listener` function in the `setup()` method. For example, itis possible to define a listener that will receive the different connection states for the network, server, or authentication: 
+In order to create a listener for such connection states, it can be done with the `set_state_listener` function in the `setup()` method. For example, itis possible to define a listener that will receive the different connection states for the network, server, or authentication:&#x20;
 
 ```cpp
 void setup(){
@@ -615,18 +621,18 @@ void setup(){
 
 In the following table it is detailed the different values and its description.
 
-| State                   | Description                                                                                                               |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| NETWORK_CONNECTING      | The underlying network is being connected, i.e., initializing ethernet, wifi, gsm, etc.                                   |
-| NETWORK_CONNECTED       | The network is connected and ready to be used.                                                                            |
-| NETWORK_CONNECT_ERROR   | The network cannot be initialized, i.e., bad WiFi credentials, cannot reach GSM, etc.                                     |
-| SOCKET_CONNECTING       | After the network is connected, it means that the client is connecting to Thinger.io servers.                             |
-| SOCKET_CONNECTED        | The socket has been connected to the server.                                                                              |
-| SOCKET_CONNECTION_ERROR | The socket cannot be connected to Thinger.io. If often means a bad Internet connection.                                   |
-| SOCKET_DISCONNECTED     | The connection with Thinger.io has been closed.                                                                           |
-| SOCKET_ERROR            | An error happened with the socket, i.e, bad read or write, which will cause a disconnect.                                 |
-| SOCKET_TIMEOUT          | The socket timed out while reading or writing, so the connection will be closed.                                          |
-| THINGER_AUTHENTICATING  | Thinger.io client is connected and it is being authenticated.                                                             |
-| THINGER_AUTHENTICATED   | Thinger.io client is connected and authenticated, so it can use Thinger.io, i.e., call an endpoint, read a property, etc. |
-| THINGER_AUTH_FAILED     | Thinger.io client authentication failed. Please, review your server, username, device id, and password.                   |
-| THINGER_STOP_REQUEST    | Thinger.io client was requested to stop, i.e., from the source code, or by the server.                                    |
+| State                     | Description                                                                                                               |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| NETWORK\_CONNECTING       | The underlying network is being connected, i.e., initializing ethernet, wifi, gsm, etc.                                   |
+| NETWORK\_CONNECTED        | The network is connected and ready to be used.                                                                            |
+| NETWORK\_CONNECT\_ERROR   | The network cannot be initialized, i.e., bad WiFi credentials, cannot reach GSM, etc.                                     |
+| SOCKET\_CONNECTING        | After the network is connected, it means that the client is connecting to Thinger.io servers.                             |
+| SOCKET\_CONNECTED         | The socket has been connected to the server.                                                                              |
+| SOCKET\_CONNECTION\_ERROR | The socket cannot be connected to Thinger.io. If often means a bad Internet connection.                                   |
+| SOCKET\_DISCONNECTED      | The connection with Thinger.io has been closed.                                                                           |
+| SOCKET\_ERROR             | An error happened with the socket, i.e, bad read or write, which will cause a disconnect.                                 |
+| SOCKET\_TIMEOUT           | The socket timed out while reading or writing, so the connection will be closed.                                          |
+| THINGER\_AUTHENTICATING   | Thinger.io client is connected and it is being authenticated.                                                             |
+| THINGER\_AUTHENTICATED    | Thinger.io client is connected and authenticated, so it can use Thinger.io, i.e., call an endpoint, read a property, etc. |
+| THINGER\_AUTH\_FAILED     | Thinger.io client authentication failed. Please, review your server, username, device id, and password.                   |
+| THINGER\_STOP\_REQUEST    | Thinger.io client was requested to stop, i.e., from the source code, or by the server.                                    |

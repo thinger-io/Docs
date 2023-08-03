@@ -59,7 +59,7 @@ Setting the target API Request to `None` indicates that the API resource is not 
 
 ### Device Resource
 
-Setting the target API Request to `Device Resource` configures the Product to automatically forward the incoming request to a Device Resource. A device resource should be any [input resource](../../coding/coding-guide.md#input-resources) defined inside the device (i.e., using Thinger.io Arduino or Linux client).
+Setting the target API Request to `Device Resource` configures the Product to automatically forward the incoming request to a Device Resource. A device resource should be any [input resource](../../coding-guide.md#input-resources) defined inside the device (i.e., using Thinger.io Arduino or Linux client).
 
 The configuration fields are:
 

@@ -28,14 +28,14 @@ The most suitable devices to start working with Thinger.io are the ESP8266 or ES
 
 ![](<.gitbook/assets/image (31).png>)
 
-The basic example contains two simple resources to send and retrieve to your device, i.e., controlling a digital pin, or reading a value from the device.  It can be modified with many different functionalities that we have explained at the [**Coding**](coding/coding-guide.md) **Guide** section.  After modifying the source code, just flash your device again and wait for the device connection.
+The basic example contains two simple resources to send and retrieve to your device, i.e., controlling a digital pin, or reading a value from the device.  It can be modified with many different functionalities that we have explained at the [**Coding**](coding-guide.md) **Guide** section.  After modifying the source code, just flash your device again and wait for the device connection.
 
 {% hint style="success" %}
 Find additional information about Thinger.io devices in the next sections:&#x20;
 
-1. ****[**Compatible Arduino and Linux devices**](devices.md)****
-2. ****[**Zero to Hero Thinger.io Firmware Coding Guide** ](coding/coding-guide.md#sketch-overview)****
-3. ****[**Connection Troubleshooting Guide**](https://docs.thinger.io/coding/good-practices-and-troubleshooting)****
+1. [**Compatible Arduino and Linux devices**](devices.md)
+2. [**Zero to Hero Thinger.io Firmware Coding Guide** ](coding-guide.md#sketch-overview)
+3. [**Connection Troubleshooting Guide**](https://docs.thinger.io/coding/good-practices-and-troubleshooting)
 {% endhint %}
 {% endtab %}
 

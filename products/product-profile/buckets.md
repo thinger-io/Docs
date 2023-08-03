@@ -86,12 +86,12 @@ Setting the bucket source to `None` will prevent the bucket to be updated automa
 
 ### Device Resource
 
-Setting the bucket source to `Device Resource` will configure the Product to automatically insert new data in the Bucket from a given Device Resource. A device resource is any [output resource](../../coding/coding-guide.md#output-resources) defined inside the IOTMP protocol (i.e., using Thinger.io Arduino or Linux client). As with any resource in IOTMP, it can be configured to be updated at a given sampling interval, or by letting the device update the value by itself.
+Setting the bucket source to `Device Resource` will configure the Product to automatically insert new data in the Bucket from a given Device Resource. A device resource is any [output resource](../../coding-guide.md#output-resources) defined inside the IOTMP protocol (i.e., using Thinger.io Arduino or Linux client). As with any resource in IOTMP, it can be configured to be updated at a given sampling interval, or by letting the device update the value by itself.
 
 The configuration fields are:
 
 * **Resource Name**: Used to specify the device resource name that will be used as a source for inserting new values in the bucket.
-* **Sampling Interval**: Used to specify the resource sampling interval (in seconds). The default is 0, which means that the device should update the value by itself via [stream](../../coding/coding-guide.md#streaming-resource-data) calls. Any other value greater than 0 will configure the Product to fetch the resource value at the provided interval. &#x20;
+* **Sampling Interval**: Used to specify the resource sampling interval (in seconds). The default is 0, which means that the device should update the value by itself via [stream](../../coding-guide.md#streaming-resource-data) calls. Any other value greater than 0 will configure the Product to fetch the resource value at the provided interval. &#x20;
 * **Payload**: Used to configure the resulting value that will be stored in the bucket. The value that arrives from the device resource becomes available at the `{{payload}}` placeholder, which is the default configuration. Take a look at the [Payloads](payloads.md) section to know more about the possibilities when defining payloads, like using Product Scripts for data conversion.
 
 <figure><img src="../../.gitbook/assets/image (271).png" alt=""><figcaption><p>Product Bucket - Device Resource configured as Bucket source</p></figcaption></figure>

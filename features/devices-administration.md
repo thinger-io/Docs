@@ -250,7 +250,7 @@ thing.get_property("My_Property", data);
 ```
 
 {% hint style="info" %}
-More details about property codification functions at the **"**[**codification**](../coding/coding-guide.md)**"** section of this documentation.
+More details about property codification functions at the **"**[**codification**](../coding-guide.md)**"** section of this documentation.
 {% endhint %}
 
 Using HTTP devices it's also possible to interact with properties through callback configuration submenu tools.
