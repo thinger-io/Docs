@@ -6,10 +6,10 @@ description: Plugin to improve the integration of Sigfox devices
 
 <figure><img src="../.gitbook/assets/imageSFN.png" alt=""><figcaption></figcaption></figure>
 
-This plugin is an interface for using Sigfox HTTP Callback feature in an optimized way, providing features to easily integratie these devices with Thinger.io Platform such as automatic device and storage provisioning and both uplink and downlink cloud processing.&#x20;
+This plugin is an interface for using Sigfox HTTP Callback feature in an optimized way, providing features to easily integrate these devices with Thinger.io Platform, such as automatic device and storage provisioning and both uplink and downlink cloud processing.&#x20;
 
 {% hint style="info" %}
-[Note: Plugins are only available for premium Thinger.io servers. Check **this link** to create your own instance within minutes](https://pricing.thinger.io)
+[Note: Plugins are only available for premium Thinger.io servers. Check **this link** to create your own instance within minutes](https://thinger.io/pricing)
 {% endhint %}
 
 ## Plugin Features
@@ -24,14 +24,14 @@ This plugin is an interface for using Sigfox HTTP Callback feature in an optimiz
 
 For a better understanding of the following sections, here is described some basic Sigfox concepts:
 
-* Device: It is a hardware device with a oficial Sigfox interface.
-* Gateway: It is Sigfox infrastructure hardware interface that basically receives messages from multiple edje devices, and push them to Sigfox server over IP communication. These gateways are exclusively property of Sigfox company.&#x20;
+* Device: It is a hardware device with an official Sigfox interface.
+* Gateway: It is Sigfox infrastructure hardware interface that basically receives messages from multiple edge devices and pushes them to Sigfox server over IP communication. These gateways are exclusively property of Sigfox company.&#x20;
 * Uplink: It is a data flow which represents messages sent from a device to the sigfox cloud. There are two different uplink processes: unidirectional uplink (single data communication from the device to Sigfox network) and bidirectional uplink, that also allows to Sigfox system sending a Downlink to the device. &#x20;
 * Downlink: It is a data flow which represents messages sent from the Sigfox cloud to a device.
 * Device Type: It is a concept that defines a group of devices of the same type, normally sending the same kind of data both in uplink and downlink).&#x20;
 
 {% hint style="info" %}
-[Learn how to configure Sigfox Callback to send data to Thinger.io platform **here** ](https://docs.thinger.io/hardware-devices/sigfox#create-sigfox-callback)
+[Learn how to configure Sigfox Callback to send data to Thinger.io platform **here** ](https://docs.thinger.io/lpwan/sigfox#creating-sigfox-callback)
 {% endhint %}
 
 ## Plugin Configuration
@@ -59,10 +59,10 @@ The uplink behaviour allows to configure how the plugin will react on new inform
 The configurable parameters are the following:
 
 * **Auto provision resources:** Enable or disable automatic resource provisioning while receiving messages for non created devices of the same Sigfox "Device Type".&#x20;
-* **Device connection timeout:** When creating a new device, establish the device connection timeout in minutes, so the platform can consider the device as disconnected after a fixed time without receiving a message.&#x20;
+* **Device connection timeout:** When creating a new device, establish the device connection timeout in minutes, so the platform can consider the device as disconnected after a fixed time without receiving a message.
 * **Device identifier prefix:** When creating a new device, create it with a custom prefix + the original device id.
 * **Bucket identifier prefix:** When creating a new data bucket associated to the device, create it with a custom prefix + the original device id.
-* **Update device location:** Use the location provided in the gateways information to update de current device location.
+* **Update device location:** Use the location provided in the gateways information to update thee current device location.
 * **Initialize downlink data:** When creating a new device, initialize a custom downlink data, that can be modified and processed in further downlink requests.
 
 ### Payload Processing

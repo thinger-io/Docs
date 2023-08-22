@@ -8,6 +8,8 @@ description: 0G Technology. LPWAN dedicated to Massive IoT.
 
 ## Introduction
 
+
+
 Sigfox is a company founded in 2009 that builds wireless networks to connect low-energy objects such as electricity meters, smartwatches, and washing machines, which need to be continuously on and emitting small amounts of data. Sigfox employs a proprietary technology that enables communication using the Industrial, Scientific and Medical ISM radio band which uses 868MHz in Europe and 902MHz in the US. It utilizes a wide-reaching signal that passes freely through solid objects, called "ultra narrowband" and requires little energy, being termed "Low-power Wide-area network (LPWAN)". The network is based on one-hop star topology and requires a mobile operator to carry the generated traffic. The signal can also be used to easily cover large areas and to reach underground objects.
 
 Sigfox has partnered with a number of firms in the LPWAN industry such as Texas Instruments, or Silicon Labs. The ISM radio band support bidirectional communication. The existing standard for Sigfox communications supports up to **140 uplink messages a day**, each of which can carry a payload of **12 Bytes** (Excluding message header and transmission information), and up to 4 downlink messages per day, each of which can carry a payload of 8 Bytes. If you want more details about Sigfox, please visit the [Sigfox Developer Portal](https://www.sigfox.com/developers/).
@@ -88,7 +90,7 @@ The configuration in our example is the following:
        ```
        Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJTbWFydEV2ZXJ5dGhpbmciLCJ1c3IiOiJhbHZhcm9sYiJ9.0Qb48c_ToBiIVcCOdvXU2Kn51mTnGLDcN44shVRzNls
        ```
-8.  The final step is to configure the `Body` and its `Content type`. For content type, we well set `application/json` as de bucket can store arbitrary JSON data. The body then will contain all the information we want to store formatted in JSON format. In Sigfox you can define your body according to available variables, both defined by the platform itself (like device id, link quality, or device location), or defined by your payload config. In our case, we defined variables `temp`, and `hum`, that will be included with other Sigfox variables. For this example, our payload will look like the following:
+8.  The final step is to configure the `Body` and its `Content type`. For content type, we well set `application/json` as the bucket can store arbitrary JSON data. The body then will contain all the information we want to store formatted in JSON format. In Sigfox you can define your body according to available variables, both defined by the platform itself (like device id, link quality, or device location), or defined by your payload config. In our case, we defined variables `temp`, and `hum`, that will be included with other Sigfox variables. For this example, our payload will look like the following:
 
     ```javascript
      {
