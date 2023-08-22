@@ -86,13 +86,13 @@ When working on multi-user projects, the platform has a series of communications
 * **Subject**: Email subject
 * **Template**:  Configure the email template workinng directly with the text or with the HTML code
 
-![](<.gitbook/assets/image (450) (1).png>)
+![](<.gitbook/assets/image (450) (2).png>)
 
 ### Email Settings
 
 This section allows to custom the email server for this specific brand, note that it is also posible to modify it in the Server Settings to create a default configuration for the hole host, that will be applied to all the rebrands.&#x20;
 
-![](<.gitbook/assets/image (458) (1).png>)
+![](<.gitbook/assets/image (458).png>)
 
 #### SMTP Configuration
 
@@ -116,7 +116,7 @@ The integration with Amazon SES provides a much simple and scalable mailing tool
 
 When the Console Rebranding profile is finished, a new entry will appear into the rebranding administration list as shown in the image below:
 
-![](<.gitbook/assets/image (1) (1) (1).png>)
+![](<.gitbook/assets/image (1) (3).png>)
 
 It is possible to access the configuration form and edit all parameters by clicking into the brand profile identificator, which is the associated web domain.
 

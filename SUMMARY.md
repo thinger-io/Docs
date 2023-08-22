@@ -94,6 +94,8 @@
 
 ## Others
 
+* [OTHER SOFTWARE](others/other-software/README.md)
+  * [Server Monitoring Client](others/other-software/server-monitoring-client.md)
 * [THINGER.IO HARDWARE](others/hardware/README.md)
   * [ClimaStick](others/hardware/climastick-devices.md)
   * [WiFi Button](others/hardware/wifi-button.md)

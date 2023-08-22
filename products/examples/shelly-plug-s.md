@@ -37,7 +37,7 @@ Under the "Internet & Security" menu, it is possible to configure "Advanced - De
 
 For the Shelly Plug S device example, we will define two different properties to store the latest device state. Shelly Plug S can connect to an MQTT broker, and once connected, it periodically sends information like temperature, relay state, real-time power consumption, available updates, etc. In this example, we will use the current power consumption and the rely on state, so, <mark style="color:purple;">power</mark> and <mark style="color:green;">relay</mark>, are defined as device properties, as shown in the following picture:
 
-![Properties definition for Shelly Plug S SmartPlug](<../../.gitbook/assets/image (452).png>)
+![Properties definition for Shelly Plug S SmartPlug](<../../.gitbook/assets/image (452) (1).png>)
 
 Both properties are updated from the following device topics:
 
@@ -88,7 +88,7 @@ To use this function it is only required to reference it when configuring the pa
 
 This way, the `toBoolean` function is called with the payload contents, and the final payload will be replaced with the value returned by the function. This configuration must be placed inside the `Payload` configuration on the Property dialog, as shown in the following picture:
 
-<figure><img src="../../.gitbook/assets/image (449).png" alt=""><figcaption><p>Shelly Plug S - Property configuration for storing relay state</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (449) (2).png" alt=""><figcaption><p>Shelly Plug S - Property configuration for storing relay state</p></figcaption></figure>
 
 If your device transmits its payload directly on JSON, then, it is not required to create processing functions, unless you want to customize the fields, change measurement units, etc. In the Shelly device used in the example, the power consumption is sent just as a number, i.e., '6.6', it is a valid JSON value. So, it will display normally on the device inspector. In this case, the payload does not require processing.
 
@@ -140,7 +140,7 @@ In this example, it is defined a placeholder with the notation \{{<mark style="c
 
 The configuration for this bucket will look like the following capture:
 
-<figure><img src="../../.gitbook/assets/image (455) (1).png" alt=""><figcaption><p>Shelly Plug S - Bucket Configuration for storing temperature</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (455) (1) (1).png" alt=""><figcaption><p>Shelly Plug S - Bucket Configuration for storing temperature</p></figcaption></figure>
 
 #### Storing device energy and power
 
@@ -211,7 +211,7 @@ Bucket tags can be only defined on bucket creation. Remove the bucket and let th
 
 Shelly devices auto-announce themselves periodically or after requesting them to 'announce' over the `sellies/command` topic. It is possible to see the reported information directly on the inspector. In this case, the device is sending a JSON payload with information like firmware version, identifier, local IP address, mac, or a flag to indicate if there are software updates available. In the following picture there is an example of the event captured on the MQTT inspector:
 
-![Shelly announce with information about the device](<../../.gitbook/assets/image (447).png>)
+![Shelly announce with information about the device](<../../.gitbook/assets/image (447) (2).png>)
 
 Storing this information is quite straightforward. It is only required to create a new bucket in the product profile, pointing to the following source MQTT topic:
 
@@ -272,7 +272,7 @@ As described on [Properties](../properties.md) and [Buckets](broken-reference) s
 
 After saving the new API Resource, we can go to the device API, and the new `relay`resource will appear.
 
-![Device API for resource created over Product ](<../../.gitbook/assets/image (462) (1).png>)
+![Device API for resource created over Product ](<../../.gitbook/assets/image (462) (1) (2).png>)
 
 However, there seems to be something wrong there! The API can detect that the resource is expecting an input (`Resource Input` header is present), but nothing more appears. We are expecting here a true/false input, or just a switch to turn the relay on and off.&#x20;
 
@@ -284,7 +284,7 @@ This can be solved by assigning a default payload value on the API definition, w
 
 Now, refreshing the API explorer will display the relay resource expecting a boolean that can be easily changed over the GUI. At this moment, it is possible to turn on and off the switch button. It will call the API Resource on the product, that will convert the incoming payload to 'on' and 'off', and then will be transmitted to the required topic for the Shelly Plug S device. Cool! :sunglasses:
 
-![Device API for resource created over Product ](<../../.gitbook/assets/image (453).png>)
+![Device API for resource created over Product ](<../../.gitbook/assets/image (453) (1).png>)
 
 However, this use case can be improved a little bit. For example, suppose that it is required to display the current relay state to avoid showing always the default 'false' value set before. For this purpose we can reference other properties, or even API responses. To reference a property, i.e., the 'relay' one configured on the [Properties](../properties.md) section, we can set a default value with `=property.<property_name>` like in the following example:
 

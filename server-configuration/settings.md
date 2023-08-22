@@ -2,7 +2,7 @@
 
 In order to provide the managers of private Thinger.io instances a full configuration capability of the service, the web console provides a host management tool in which different sections allow to set some criteria of its operation in a simple way. It is accessible in the "**Cluster Hosts**" tab of the main menu, which will display the Host List as shown in the image below:
 
-![](<../.gitbook/assets/image (448) (1) (1).png>)
+![](<../.gitbook/assets/image (448).png>)
 
 After selecting a server profile, in the top-right corner of the server status dashboard, it is possible to select the option "Settings" in which the next configuration options will be displayed:
 

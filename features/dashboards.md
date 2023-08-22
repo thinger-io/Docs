@@ -312,7 +312,7 @@ The widget code is the following:
 {% tab title="Table Code Snippet" %}
 Using the HTML Time Series widget, it is possible to plot information in a given timespan, i.e., latest values from a data bucket. The following example represents an HTML widget holding a list of values from bucket:
 
-![HTML Widget with a table](<../.gitbook/assets/image (455) (1) (1).png>)
+![HTML Widget with a table](<../.gitbook/assets/image (455).png>)
 
 The code to represent this table is like the following:&#x20;
 
@@ -439,7 +439,7 @@ angular.module('helloWidget', [])
 
 * Now it will be displayed a similar widget to the Basic Code Snippet example. However, there are many differences from basic example, as now we have Javascript file where we can add more values to the scope, process incoming value changes, detect source changes, and more interesting, we can inject dependencies to other Thinger.io console components, like UI widgets, or API methods to update configurations, call devices, etc.
 
-![HTML Widget with a simple AngularJS directive](<../.gitbook/assets/image (450) (1) (1).png>)
+![HTML Widget with a simple AngularJS directive](<../.gitbook/assets/image (450) (1).png>)
 
 {% hint style="success" %}
 Ensure your widgets use a `camelCase` name for file names.&#x20;
@@ -685,7 +685,7 @@ svg {
 
 In this example it is created an advanced widget that will allow both display and configure device properties from the dashboard.
 
-![Custom HTML Widget to update device properties](<../.gitbook/assets/image (457) (1) (1).png>)
+![Custom HTML Widget to update device properties](<../.gitbook/assets/image (457) (1).png>)
 
 This directive has been created with the following two files from a [File Storage](../file-system.md). The interesting part on this example is how it interacts with the API to update the property values. Internally, the console exposes different classes witch represents different resources on a user account, i.e., buckets, devices, properties, etc. In this example, it is used the `DeviceProperty` class, which takes two parameters: `device`and `property`, which can be obtained from the source parameter passed to the directive:
 
@@ -930,7 +930,7 @@ The Source Switcher widget allows to modify the data source from a dashboard. Th
 
 The widget will appear as a dropdown with the current device or bucket being used by the dashboard. When clicked, it is possible to select or search a new data source, which will update the dashboard automatically.
 
-![Source Switcher widget example when used to switch a device source in a dashboard.](<../.gitbook/assets/image (457) (1).png>)
+![Source Switcher widget example when used to switch a device source in a dashboard.](<../.gitbook/assets/image (457) (2).png>)
 
 ## Dashboard Tabs
 

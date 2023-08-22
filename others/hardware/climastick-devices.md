@@ -302,7 +302,7 @@ This section covers different considerations while using the board.
 
 When using Deep-sleep function, it is necessary to weld together the two connectors of the WKUP port in order to close the WKUP circuitry (GPIO16-RESET). this port is not originally soldered to avoid malfunctions of the programming process. It is normal that by enabling this option it is necessary to force the flash mode before each reprogramming.
 
-![](<../../.gitbook/assets/image (449) (1) (1).png>)
+![](<../../.gitbook/assets/image (449) (1).png>)
 
 ## Device Files
 
