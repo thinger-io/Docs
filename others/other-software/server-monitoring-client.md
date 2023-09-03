@@ -142,7 +142,7 @@ It is also capable of creating a system service so the monitor is always running
 Download the installation script from the [last software release](https://github.com/thinger-io/monitoring-client/releases/latest), and run the software as:
 
 ```
-./install_thinger_monitor.sh -t <create_device token> -u <user_id>
+./install_thinger_monitor.sh -t '<create_device token>'
 ```
 
 {% hint style="info" %}
