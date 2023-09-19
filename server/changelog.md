@@ -5,6 +5,23 @@ coverY: 0
 
 # CHANGELOG
 
+## 5.3.6
+
+**Release Date: 19-09-2023**
+
+**Added**
+
+* Support for HTTP\_HOST and HTTPS\_HOST environment variables for HTTP requests over a proxy.
+
+**Improved**
+
+* Prevent large navigation breadcrumb overlapping the right menu button.
+
+**Fixed**
+
+* Device link to a Product web page not working on mobile devices (on the aside menu).
+* Error while updating account limits.
+
 ## 5.3.2
 
 **Release Date: 04-07-2023**
