@@ -22,6 +22,7 @@ coverY: 0
 
 * Device link to a Product web page not working on mobile devices (on the aside menu).
 * Error while updating account limits.
+* Support for 303 HTTP See Other status.
 
 ## 5.3.2
 
