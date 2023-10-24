@@ -43,7 +43,7 @@ In this section it is described the different interfaces that can be used to con
 
 Every TTN application that is integrated over this plugin, should define a new application with the same application identifier as defined in TTN. Each application defined in this way will allow to customize the plugin behaviour based on the application type.
 
-![TTN aplication configuration ](<../.gitbook/assets/image (60) (2).png>)
+![TTN aplication configuration ](<../.gitbook/assets/image (431).png>)
 
 It is possible to create as many applications as required. To configure a particular application, just select the application id from the `Application Id` dropdown, and then navigate to the other plugin sections.
 
@@ -55,7 +55,7 @@ Always create applications with the same application identifier as defined in TT
 
 The uplink behaviour allows to configure how the plugin will react on new information received from TTN.&#x20;
 
-![Uplink behaviour configuration](../.gitbook/assets/captura-de-pantalla-2019-10-02-a-las-10.58.12.png)
+![Uplink behaviour configuration](<../.gitbook/assets/Captura de pantalla 2019-10-02 a las 10.58.12.png>)
 
 The configurable parameters are the following:
 
@@ -73,7 +73,7 @@ In this section it is possible to configure the payload processors that will tra
 
 The interface provides a code editor for NodeJS, where it is possible to define the `uplink` and `downlink`processors. It is also possible to test the code by providing a sample input data both for `uplink` and `downlink`.
 
-![TTN Payload processing configuration](<../.gitbook/assets/image (76) (1).png>)
+![TTN Payload processing configuration](<../.gitbook/assets/image (428).png>)
 
 In the following, there is information about the uplink and downlink methods.
 
@@ -147,13 +147,13 @@ Use the interface tester to see if your code is correctly procesing the payloads
 
 ## Plugin Development Details
 
-<img src="../.gitbook/assets/image (240) (2).png" alt="" data-size="line">[Github source code](https://github.com/thinger-io/ttn-plugin)
+<img src="../.gitbook/assets/image (430).png" alt="" data-size="line">[Github source code](https://github.com/thinger-io/ttn-plugin)
 
 ### Uplink Data Flow
 
 In this section it is described how the uplink data flow works, from its source in the TTN network, to its final destination in Thinger.io.
 
-![](<../.gitbook/assets/image (64) (1).png>)
+![](<../.gitbook/assets/image (427).png>)
 
 In the following subsections are described the elements shown in the figure.
 
@@ -218,7 +218,7 @@ Once this information is received by the plugin, it is processed in order to exe
 
 This plugin stores some basic information about the device that is sending data. This information is mainly used for keeping some information necessary for the downlink, like the original device identifier used in TTN; the associated application identifier to handle its downlink processor properly; and the most important, the downlink url the platform should use to issue a downlink request to the TTN network.
 
-![Sample device information stored in Thinger.io for every TTN device](<../.gitbook/assets/image (58) (2).png>)
+![Sample device information stored in Thinger.io for every TTN device](<../.gitbook/assets/image (469).png>)
 
 #### Uplink Processor
 
@@ -240,10 +240,10 @@ The last step of this plugin is to call the device callback in Thinger.io. This 
 
 In this case, the plugin interacts with the platform over such REST interface, pushing data received from TTN, and processed by the custom uplink method. By default, the plugin initializes an HTTP device to write to a data bucket that is also automatically created. So, every message sent by a TTN device, will write finally write to a specific data bucket. As shown in the following picture:
 
-![HTTP Device created by the TTN Plugin](<../.gitbook/assets/image (159) (1).png>)
+![HTTP Device created by the TTN Plugin](<../.gitbook/assets/image (468).png>)
 
 After the device callback is done, it will appear as a connected device, showing also its location if it was configured in the plugin options.
 
 ### Downlink Data Flow
 
-![The Things Network Downlink Flow Overview](<../.gitbook/assets/image (155) (1).png>)
+![The Things Network Downlink Flow Overview](<../.gitbook/assets/image (424).png>)

@@ -4,7 +4,7 @@ Arduino is currently the best framework for learning, prototyping and even devel
 
 The following sections explains how to install and prepare Arduino IDE to work with Thinger.io client libraries.
 
-![](<../.gitbook/assets/image (252).png>)
+![](<../.gitbook/assets/image (488).png>)
 
 ## Install Arduino IDE
 
@@ -20,7 +20,7 @@ The library can be obtained from the Arduino  `Library Manager`, which simplifie
 
 > Open the **Library Manager** in the Arduino menu in `Sketch` > `Include Library` > `Manage Libraries`
 
-![Arduino Library Manager](<../.gitbook/assets/image (419).png>)
+![Arduino Library Manager](<../.gitbook/assets/image (274).png>)
 
 > Search the library with name **thinger.io** and then click `Install`. You can update the library also from this manager when it is updated.
 
@@ -46,7 +46,7 @@ Once Thinger.io Library has been installed, it is possible to start a new projec
 
 > Open `File` > `Examples` > `thinger.io` and start with an example for your device.
 
-![Open Thinger.io example for an Arduino Compatible Device](<../.gitbook/assets/image (420).png>)
+![Open Thinger.io example for an Arduino Compatible Device](<../.gitbook/assets/image (267).png>)
 
 &#x20;A basic example for an ESP32 device will look like the following:
 

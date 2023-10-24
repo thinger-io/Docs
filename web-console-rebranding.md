@@ -20,11 +20,11 @@ Note that each web console rebrand needs to be supported by an individual web do
 
 Clicking into "Add Brand" button of the "Rebranding" section allows creating a new branding profile. The process starts by introducing a web domain name, that will be the identification for the brand profile:
 
-![](<.gitbook/assets/image (178).png>)
+![](<.gitbook/assets/image (148).png>)
 
 If the instance subscription doesn't include any rebranding addon, the next message will be shown in the web console: &#x20;
 
-![](<.gitbook/assets/image (277).png>)
+![](<.gitbook/assets/image (486).png>)
 
 To solve this situation visit "Subscribe Rebranding License" below on this documentation
 
@@ -32,7 +32,7 @@ To solve this situation visit "Subscribe Rebranding License" below on this docum
 
 If the Domain Name is valid, the form context will expand allowing to complete the branding details sections by editing the standard thinger.io values:
 
-![](<.gitbook/assets/image (25).png>)
+![](<.gitbook/assets/image (149).png>)
 
 All the next elements are non-mandatory, so can be left empty and the system will remove their buttons from the main menu:
 
@@ -49,7 +49,7 @@ All the next elements are non-mandatory, so can be left empty and the system wil
 
 What really makes the difference when creating a rebranding is the use of custom logotypes. The second section of the branding editor allows changing each web console logotype separately. To obtain nice results, it is important to take care about the background color of each logotype in order to obtain enough contrast.
 
-![](<.gitbook/assets/image (102).png>)
+![](<.gitbook/assets/image (84).png>)
 
 {% hint style="info" %}
 Logotypes need to be introduced in SVG or PNG file format with transparent background&#x20;
@@ -59,7 +59,7 @@ Logotypes need to be introduced in SVG or PNG file format with transparent backg
 
 The top bar has also a big impact on the website aspect. The branding menu allows changing it aspect in two ways: the Top Bar Color and the text color:
 
-![](<.gitbook/assets/image (80).png>)
+![](<.gitbook/assets/image (112).png>)
 
 It is important also to take care of selected colors in order to obtain a nice contrast between the texts and background.&#x20;
 
@@ -67,15 +67,15 @@ It is important also to take care of selected colors in order to obtain a nice c
 
 Thinger.io web console has been prepared with PWA Smartphone responsive features, allowing to create web apps with web console custom preferences that when used on the smartphone allow a user experience very similar to a common APP thanks to the creation of a custom logo in the main menu and hiding the web browser navigation bar.
 
-![](<.gitbook/assets/image (308).png>)
+![](<.gitbook/assets/image (552).png>)
 
 To use the PWA on a smartphone, simply click on the "add to the main menu" option of the browser menu. this functionality can be applied in any of the web console interfaces, even in shared dashboards
 
-![](<.gitbook/assets/image (311).png>)
+![](<.gitbook/assets/image (361).png>)
 
 The PWA function parameters will be automatically configured based on the preferences of the other tabs of the web console rebranding. So it is not possible to introduce different ones. &#x20;
 
-![](<.gitbook/assets/image (312).png>)
+![](<.gitbook/assets/image (384).png>)
 
 ### Email Templates
 
@@ -86,19 +86,19 @@ When working on multi-user projects, the platform has a series of communications
 * **Subject**: Email subject
 * **Template**:  Configure the email template workinng directly with the text or with the HTML code
 
-![](<.gitbook/assets/image (450) (2).png>)
+![](<.gitbook/assets/image (577).png>)
 
 ### Email Settings
 
 This section allows to custom the email server for this specific brand, note that it is also posible to modify it in the Server Settings to create a default configuration for the hole host, that will be applied to all the rebrands.&#x20;
 
-![](<.gitbook/assets/image (458).png>)
+![](<.gitbook/assets/image (573).png>)
 
 #### SMTP Configuration
 
 The **Simple Mail Transfer Protocol**, better known as SMTP, is a protocol used to transmit email messages over the internet. Thinger.io server instances contains an SMTP server that allows sending notifications to the instance users, that has been configured by default to use the same web domain as the IoT server host and the standard parameters, however,  these parameters can be customized by changing the server:
 
-![](<.gitbook/assets/image (297).png>)
+![](<.gitbook/assets/image (539).png>)
 
 * **Host:** Is the SMTP address or web domain
 * **Port:** Custom port to be used in order to send the notifications
@@ -110,13 +110,13 @@ The **Simple Mail Transfer Protocol**, better known as SMTP, is a protocol used 
 
 The integration with Amazon SES provides a much simple and scalable mailing tool. It can be selected instead of the common SMTP by selecting it on Email Type, and placing the credentials on its appropriate section. These credentials can be obtained on the AWS SES configuration section as explained on[ **this link**](https://ongage.atlassian.net/wiki/spaces/HELP/pages/13795743/Amazon+SES+Setup+Tutorial)
 
-![](<.gitbook/assets/image (265) (1).png>)
+![](<.gitbook/assets/image (584).png>)
 
 ## **Modify Console Rebranding**
 
 When the Console Rebranding profile is finished, a new entry will appear into the rebranding administration list as shown in the image below:
 
-![](<.gitbook/assets/image (1) (3).png>)
+![](<.gitbook/assets/image (142).png>)
 
 It is possible to access the configuration form and edit all parameters by clicking into the brand profile identificator, which is the associated web domain.
 
@@ -124,13 +124,13 @@ It is possible to access the configuration form and edit all parameters by click
 
 A rebranding profile can be easily deleted just selecting it in the Brand List and clicking into the red "Remove Brand" button.
 
-![](<.gitbook/assets/image (100).png>)
+![](<.gitbook/assets/image (125).png>)
 
 ## Increase Rebranding Limits&#x20;
 
 This feature is reserved for professional uses, so only Grow, Startup, and Business licenses can create custom rebranding profiles when the rebranding license is acquired during the subscription of the license or later using the subscription administration console. If the license didn't include any branding Addon, the next error will be shown during the creation of the new brand:&#x20;
 
-![](<.gitbook/assets/image (282).png>)
+![](<.gitbook/assets/image (439).png>)
 
 The next sections explain how to include the rebranding Addon with a Thinger.io private instance in both situations:  &#x20;
 
@@ -138,7 +138,7 @@ The next sections explain how to include the rebranding Addon with a Thinger.io 
 
 Our deployment tool allows configuring the license with multiple Add-ons such as custom web domains, custom brands, or additional user accounts. It can be added to the license before the deployment process by means of the configuration table&#x20;
 
-![](<.gitbook/assets/image (290).png>)
+![](<.gitbook/assets/image (476).png>)
 
 Note that more than one branding or web domain profile can be added, as it is possible to create as many brandings as needed in order to adapt the look and feel of the web console to different IoT projects or customers. When the limit is reached, the web console will show the next error message "cannot create more domains" to inform that it is required to upgrade the number of custom domain profiles as explained in the section below.&#x20;
 
@@ -152,11 +152,11 @@ If the amount of contracted brand profiles is reached, (or if no additional bran
 
 The administration portal only can be accessed by the instance administrator using his email address to obtain a one-time password. Once logged in, the administration portal will show all the licenses that have been subscribed to this e-mail address. Just select the license that wants to be modified and press the option "Edit Subscription", finally, pressing the option "Addons", the portal will show all the available options and pricing in the Add Add-ons menu:
 
-![](<.gitbook/assets/image (272).png>)
+![](<.gitbook/assets/image (480).png>)
 
 After selecting any of them, it is possible to select the amount just before checking out, note that the price  will be fixed per each unit, but it is possible to introduce a discount coupon that will be provided by Thinger.io team if your business model is quite intensive on any of these features in order to hold a cost-effective solution&#x20;
 
-![](<.gitbook/assets/image (303).png>)
+![](<.gitbook/assets/image (421).png>)
 
 When the subscription begins updated, a confirmation email will be received with an extract of the subscription cost variations.&#x20;
 
@@ -166,4 +166,4 @@ After modifying any of the subscription parameters Thinger.io server instance ne
 
 This process can be executed using the server administration panel as shown in the image below:&#x20;
 
-![](<.gitbook/assets/image (313).png>)
+![](<.gitbook/assets/image (408).png>)

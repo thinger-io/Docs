@@ -4,7 +4,7 @@ description: 0G Technology. LPWAN dedicated to Massive IoT.
 
 # SIGFOX
 
-## ![](<../.gitbook/assets/image (8).png>)
+## ![](<../.gitbook/assets/image (47).png>)
 
 ## Introduction
 

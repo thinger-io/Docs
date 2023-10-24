@@ -2,7 +2,7 @@
 
 In order to provide the managers of private Thinger.io instances a full configuration capability of the service, the web console provides a host management tool in which different sections allow to set some criteria of its operation in a simple way. It is accessible in the "**Cluster Hosts**" tab of the main menu, which will display the Host List as shown in the image below:
 
-![](<../.gitbook/assets/image (448).png>)
+![](<../.gitbook/assets/image (286).png>)
 
 After selecting a server profile, in the top-right corner of the server status dashboard, it is possible to select the option "Settings" in which the next configuration options will be displayed:
 
@@ -14,7 +14,7 @@ This platform allows the connection of devices of different types, for which it 
 
 To set the connection parameters of the [**HTTP devices integration**](../http-devices.md) module on Thinger.io private instances
 
-![](<../.gitbook/assets/image (288) (1).png>)
+![](<../.gitbook/assets/image (550).png>)
 
 The configurable parameters are:&#x20;
 
@@ -27,7 +27,7 @@ The configurable parameters are:&#x20;
 
 It allows to set up the parameters for connecting Thinger.io to devices running the Thinger.io software client.
 
-![](<../.gitbook/assets/image (266) (1).png>)
+![](<../.gitbook/assets/image (558).png>)
 
 The configurable parameters are:&#x20;
 
@@ -40,7 +40,7 @@ The configurable parameters are:&#x20;
 
 This section allows setting the connection and data entry parameters of [**MQTT devices**](../mqtt.md) with Thinger.io's builtin MQTT broker.
 
-![](<../.gitbook/assets/image (278) (1).png>)
+![](<../.gitbook/assets/image (520).png>)
 
 The configurable parameters are:&#x20;
 
@@ -53,7 +53,7 @@ The configurable parameters are:&#x20;
 
 This section allows configuring the mail server in charge of sending notifications to the users of the IoT instance. A standard SMTP server can be used, but if the client has an AWS SES (Simple Email Service), which is more scalable and easier to use, it can be configured here to be used instead.
 
-![](<../.gitbook/assets/image (276) (1).png>)
+![](<../.gitbook/assets/image (413).png>)
 
 In both cases, domain and sender parameters can be configured from the main section, then depending on the selecting service some specific parameters need to be specified:
 
@@ -61,7 +61,7 @@ In both cases, domain and sender parameters can be configured from the main sect
 
 The **Simple Mail Transfer Protocol**, better known as SMTP, is a protocol used to transmit email messages over the internet. Thinger.io server instances contains an SMTP server that allows sending notifications to the instance users, that has been configured by default to use the same web domain as the IoT server host and the standard parameters, however,  these parameters can be customized by changing the server:
 
-![](<../.gitbook/assets/image (297).png>)
+![](<../.gitbook/assets/image (539).png>)
 
 * **Host:** Is the SMTP address or web domain
 * **Port:** Custom port to be used in order to send the notifications
@@ -73,7 +73,7 @@ The **Simple Mail Transfer Protocol**, better known as SMTP, is a protocol used 
 
 The integration with Amazon SES provides a much simple and scalable mailing tool. It can be selected instead of the common SMTP by selecting it on Email Type, and placing the credentials on its appropriate section. These credentials can be obtained on the AWS SES configuration section as explained on[ **this link**](https://ongage.atlassian.net/wiki/spaces/HELP/pages/13795743/Amazon+SES+Setup+Tutorial)
 
-![](<../.gitbook/assets/image (265) (1).png>)
+![](<../.gitbook/assets/image (584).png>)
 
 ## Buckets Database Settings
 
@@ -87,7 +87,7 @@ Thinger.io's data bucket storage engine can be configured to use different datab
 
 The default configuration of Thinger.io's storage engine uses InfluxDB system, as it provides some interesting features as data aggregation or using data tags to classify data over specific criteria. To set a different configuration of InfluxDB, the next four parameters need to be introduced, as shown in the image below:
 
-![](<../.gitbook/assets/image (291).png>)
+![](<../.gitbook/assets/image (395).png>)
 
 * **InfluxDB Host:** Place here the web domain or IP of the InfluxDB server
 * **InfluxDB Port:** Place here te standard or custom InfluxDB port number
@@ -100,7 +100,7 @@ To obtain this information about an InfluxDB server it is required to go to Infl
 
 DynamoDB is a highly scalable and consistent storage system provided by AWS that performs really well on IoT projects. It is possible to configure a DynamoDB system to be used by Thinger.io server to store data by selecting DynamoDB on the General section and introducing the next data into the system
 
-![](<../.gitbook/assets/image (263) (1).png>)
+![](<../.gitbook/assets/image (414).png>)
 
 * **Table Name:** It is the identification of the DynamoDB table&#x20;
 * **AWS Access Key ID:**&#x20;
@@ -113,7 +113,7 @@ DynamoDB database configuration parameters can be obtained from the server as ex
 
 Mongo DB is one of the most widespread database systems due to its robust operation and because it is an open-source project that offers free storage services for developers (companies that wish to make premium use of MongoDB can use the Atlas version). This database system can be used to store Thigner.io bucket data by entering a URI and some credentials:
 
-![](<../.gitbook/assets/image (264) (1).png>)
+![](<../.gitbook/assets/image (387).png>)
 
 * **MongoDB URI:** Paste here the uniform resource identification obtained from MongoDB configuration console
 * **MongoDB Database:** Enter here the MongoDB database identificator
@@ -125,11 +125,11 @@ The server URI can be obtained from the "connect" context of the Mongo DB or Atl
 
 When a specific bucket is requested to be exported, the system creates a file to be stored in the instance's database. The export system allows to select the database system where the resulting files will be stored in the same MongoDB used to manage Thinger.io's user accounts, in the filesystem of the server instance or using Amazon S3 (more scalable option and used by default in the public Thigner.io instances).
 
-![](<../.gitbook/assets/image (298).png>)
+![](<../.gitbook/assets/image (324).png>)
 
 To implement AWS S3 option, it must be selected on the General section and then configured to include the parameters shown below:
 
-![](<../.gitbook/assets/image (289) (1).png>)
+![](<../.gitbook/assets/image (562).png>)
 
 * **Bucket ID:** It is the identification of the AWS S3 data bucket&#x20;
 * **AWS Access Key ID:**&#x20;
@@ -150,7 +150,7 @@ Thinger.io private instances offer the ability to create user accounts, where ea
 
 This section manages all the parameters related to the registration of new users in an instance. By default this configuration is set in private mode, that is, no public user will be able to register without the express authorization of the instance administrator, who will have to enter the email in the system manually, however, it is possible to enable the public signup and configure exclusion criteria through the "Registration" section as shown in the following image
 
-![](<../.gitbook/assets/image (305).png>)
+![](<../.gitbook/assets/image (371).png>)
 
 The following parameters can be configured
 
@@ -168,7 +168,7 @@ The following parameters can be configured
 
 Para permitir el control de las funcionalidades quedespliegan los usuarios de una instancia privada, el apartado "Limits" de "User Account Settings" ofrece una interfaz gráfica en la que cada privilegio puede ser configurado de forma independiente. Los valores introducidos en este menú se aplicarán a todos los usuarios por igual pero no restringirán las capacidades de la cuenta de administración de la instancia
 
-![](<../.gitbook/assets/image (268) (1).png>)
+![](<../.gitbook/assets/image (564).png>)
 
 The amount of the following features can be configured using this interface:
 
@@ -190,4 +190,4 @@ This section allows to custom the contact email to be used on the contact button
 
 Thinger.io server needs to be reset after modifying any of these parameters in order to be configured on its files. The restart section allows executing the process in a simple way.&#x20;
 
-![](<../.gitbook/assets/image (314).png>)
+![](<../.gitbook/assets/image (420).png>)

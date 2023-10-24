@@ -1,6 +1,6 @@
 # The Things Stack
 
-<figure><img src="../.gitbook/assets/image (381).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (76).png" alt=""><figcaption></figcaption></figure>
 
 The Things Network is a LoRaWAN Network solution that simplifies the deployment of large IoT applications over a collaborative Internet of Things network that spans many countries around the world. From thinger.io we wanted to offer an improved integration to The Things Stack users by providing easy-to-configure tools for storing, analyzing, and showing device data in a simple way. This plugin allows retrieving The Things Stack webhook messages to enhance the integration with some interesting features such as:&#x20;
 
@@ -39,7 +39,7 @@ This section describes the different interfaces that can be used to configure Th
 
 The first step to perform the integration is to create a new plugin configuration. It is possible to create multiple configuration profiles with custom behavior for each application deployed in The Things Stack. To create a new application profile, just type the application ID and press the green Add Application button. Note that the ID must be exactly the same identifier defined in The Things Stack application.
 
-![](<../.gitbook/assets/image (407).png>)
+![](<../.gitbook/assets/image (308).png>)
 
 The `Application Id` dropdown allows to select and configure a particular application profile, but if the "default" profile is selected, the configuration will be applied to all the applications integrated with the plugin.
 
@@ -49,7 +49,7 @@ Always create applications with the same application identifier as defined in Th
 
 ### Uplink Settings
 
-![](<../.gitbook/assets/image (405).png>)
+![](<../.gitbook/assets/image (296).png>)
 
 As shown in the image above, the parameters can be used to configure the plugin's behavior:
 
@@ -66,7 +66,7 @@ As shown in the image above, the parameters can be used to configure the plugin'
 
 The Things Stack Downlink processes can be configured from Thinger.io in order to select the behavior in some parameters as shown below:
 
-![](<../.gitbook/assets/image (403).png>)
+![](<../.gitbook/assets/image (311).png>)
 
 * **Confirmed Downlink:** Set to enabled if downlink messages must be confirmed by the device.
 * **Push To Downlink Queue:** Enable to push downlink messages instead of replace previous ones.
@@ -78,7 +78,7 @@ This tab is used to configure the payload data treatment in order to transform f
 
 The interface provides a code editor for Node.js scripts, where it is possible to define the codification / decodification processes and also provides a testing tool that allows to verify the behavior of both  `uplink` and `downlink` processes.
 
-![](<../.gitbook/assets/image (410).png>)
+![](<../.gitbook/assets/image (260).png>)
 
 The following sections provide additional information about how to configure the uplink and downlink methods.
 
@@ -148,7 +148,7 @@ The downlink method should return a base64 string if The Things Stack applicatio
 
 The last tab of the plugin configuration interface is called "Webhook settings", it has been created to help the developers to complete the integration in The Things Stack Console, by providing all the information required to set up the webhook profile.&#x20;
 
-![](<../.gitbook/assets/image (398).png>)
+![](<../.gitbook/assets/image (309).png>)
 
 {% hint style="info" %}
 Note that the REST API does not define the application ID, this parameter will be checked by the plugin software to manage the payload according to the configuration.
@@ -161,7 +161,7 @@ To create a new webhook integration follow the next steps in The Things Stack we
 
 
 
-<figure><img src="../.gitbook/assets/image (375).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (75).png" alt=""><figcaption></figcaption></figure>
 
 3\. Clicking the `+Add webhook` blue button in the right top corner of the interface allows choosing between different webhooks integration templates. Select Thinger.io template. Then, configure the webhook only requires filling the form with the information provided by Thinger.io "webhook settings" tab and selecting JSON webhook format.
 

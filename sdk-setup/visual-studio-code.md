@@ -8,27 +8,27 @@ For advanced developers and more complex projects it can be interesting to have 
 
 &#x20;[**Download Visual Studio Code**](https://code.visualstudio.com/download)
 
-![](<../.gitbook/assets/image (243).png>)
+![](<../.gitbook/assets/image (386).png>)
 
 ## **Install PlatformIO**
 
 **PlatformIO** is a cross-platform, cross-architecture, multiple framework, professional tool for embedded systems engineers and for software developers who write applications for embedded products. PlatformIO can be installed as a Visual Studio extension. To install the extension,  just navigate to Extensions in Visual Studio Code (`Ctrl` + `Shift` + `X` on Windows or `Command` + `Shift` + `X` on Mac) in VS Code. Then, search for`PlatformIO`, click on `PlatformIO IDE` result, and click on **Install** button.
 
-![](<../.gitbook/assets/image (246).png>)
+![](<../.gitbook/assets/image (329).png>)
 
 ## Starting a Project
 
 Once Visual Studio code with PlatformIO is installed, it is possible to create a new project for our specific board. For this purpose, we can access PIO Home, and click on the `New Project` button:
 
-![Create a new Project from PIO Home.](<../.gitbook/assets/image (415).png>)
+![Create a new Project from PIO Home.](<../.gitbook/assets/image (263).png>)
 
 For this example, we will be using the ESP32 board, so, in the `Project Wizard` pop-up we enter a `Project Name`, select the `Espressif ESP32 Dev Module`, as a generic ESP32 board, and the `Arduino` Framework. Once done, click on `Finish` and wait PlatformIO to download the required toolchains for the device.
 
-![PlatformIO project Wizard](<../.gitbook/assets/image (414).png>)
+![PlatformIO project Wizard](<../.gitbook/assets/image (290).png>)
 
 After the project initialization is done, PlatformIO generates a file structure like the following:
 
-![PlatformIO default project structure](<../.gitbook/assets/image (417).png>)
+![PlatformIO default project structure](<../.gitbook/assets/image (301).png>)
 
 As shown in the above picture, each PlatformIO project has a configuration file named `platformio.ini` in the root directory for the project. This is a [INI-style](http://en.wikipedia.org/wiki/INI\_file)file.
 

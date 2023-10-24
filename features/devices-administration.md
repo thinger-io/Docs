@@ -6,7 +6,7 @@ The first step to start any IoT project with Thinger.io (except for not connecte
 
 All device creation and management processes are performed from the devices tab in the main menu
 
-![](<../.gitbook/assets/image (199).png>)
+![](<../.gitbook/assets/image (85).png>)
 
 This section allows to show all registered devices and some information about its connection status as shown in the picture below:
 
@@ -19,7 +19,7 @@ If it's your first time on thinger.io this list will be empty. Next, we'll show 
 * **Thinger Core 32 device**: This is only for ESP32 modules with Thinger.io Core on it that will provide additional features such as security, devices auto-provisioning and OTA.&#x20;
 * **MQTT devices:** For MQTT devices that will work with the Thinger.io embedded broker (only for private instances).
 
-![](../.gitbook/assets/adddevice.PNG)
+![](../.gitbook/assets/AddDevice.PNG)
 
 After selecting your the `device type` the form will adapt the device definition parameters to its specific requirements that must be provided to the system in order to create the device profile:
 
@@ -36,7 +36,7 @@ If everything has been properly filed, you should see some success message when 
 
 Now, you can o back to your devices list, and your device should appear as disconnected.
 
-![](../.gitbook/assets/device\_list.png)
+![](../.gitbook/assets/Device\_list.png)
 
 Now you can use your new device id and the device credentials to connect the new device. Depending on your device, you will need to install the required libraries or development environment, so check out the following sections according to your device:
 
@@ -56,15 +56,15 @@ Remember that Sigfox devices does not share the concept of "connected devices", 
 
 For the following example, we will be using the Arduino IDE along with an ESP8266 device, like the NodeMCU. In this case, you can open the example code for the ESP8266, and fill the device details: your username, the device ID, and the device credentials established while creating the device. The following picture represents the relation between the code and the device created in your account.
 
-![](../.gitbook/assets/adddevice2.PNG)
+![](../.gitbook/assets/AddDevice2.PNG)
 
 Once we have established in the code our account identifier, device identifier, and device credentials, we can compile and flash the program. Meanwhile, we can open our device in the cloud console, just by clicking its identifier in the devices list. In the device screen, you will be able to see some information about your device, like its IP address, connection status, or sent/received information in real time. By default, our device will appear as disconnected, as shown in the picture below.
 
-![](<../.gitbook/assets/image (251).png>)
+![](<../.gitbook/assets/image (347).png>)
 
 Once the device gets connected to the account, the interface will change its status, showing "Online" status, and some connection data like the IP address or the upload/download data amount:
 
-![](<../.gitbook/assets/image (253).png>)
+![](<../.gitbook/assets/image (363).png>)
 
 Note that the connected device dashboard is able to show an estimated location of the device, that can be customized when modifying the "location" property as explained int the [**properties**](https://docs.thinger.io/console/devices-administration#device-properties) section of this documentation.&#x20;
 
@@ -95,7 +95,7 @@ thing["millis"] >> outputValue(millis());
 
 If our device is connected to the platform, we can open our device API explorer and see the defined resources in the platform, like in the following picture.
 
-![](../.gitbook/assets/deviceapi.PNG)
+![](../.gitbook/assets/deviceApi.PNG)
 
 You can see how our defined resources in the device are now available in the platform, as the device is able to report the available resources and their format (or current state). The idea is that you can test here your resources, that is, interacting with them in real-time. In this case, you will be able to switch the led state or read the current milliseconds from the Arduino device. Every click in the `Run` button will execute your resource, i.e., forcing a read from a sensor, calling the `millis()` function, or sending a new state for the actuator, depending on the resource type (input or output).
 
@@ -112,11 +112,11 @@ thing["in_out"] = [](pson& in, pson& out){
 
 This resource definition will be translated to the following resource in the platform, where it is possible to both test input values, and view the output result. So, you can try entering some values, click on `Run`, and see the output reported by the device. This example also emphasizes how the resources work, as they are not just static values, but callbacks you can call with any input or output value.
 
-![](../.gitbook/assets/inoutresource.PNG)
+![](<../.gitbook/assets/inOutResource (1).PNG>)
 
 In addition to this useful device API explorer where you can interact with your devices, you can also obtain specific information about the REST API endpoint by clicking on the `Show Query` button. This provides information about the method type, URL, content type, request body, and response body. You can also click on `Curl`, so you can copy the command to interact with your device directly from your console. The above example is translated to the following REST API call:
 
-![](../.gitbook/assets/showquery.PNG)
+![](<../.gitbook/assets/showQuery (1).PNG>)
 
 There is more information available about the API for interacting with your devices [here](http://docs.thinger.io/api/#devices-api-access-device-resources).
 
@@ -134,11 +134,11 @@ To create a device token, open the device Dashboard and take a look at the subse
 
 The following figure shows a sample screenshot while configuring a device token.
 
-![](../.gitbook/assets/addtockenform.PNG)
+![](../.gitbook/assets/addTockenForm.PNG)
 
 Once the token is saved, the interface will show the access token to be used in the REST API Calls, like in the following figure. If you need help to integrate this access token in the REST API calls, check out [this](http://docs.thinger.io/api/#authentication-api-rest-api-authentication) documentation.
 
-![](../.gitbook/assets/devicetokenvalue.png)
+![](../.gitbook/assets/deviceTokenValue.png)
 
 ### HTTP devices Callback <a href="#http-devices-callback" id="http-devices-callback"></a>
 
@@ -146,7 +146,7 @@ Because of the nature of these devices, [thinger.io](http://thinger.io/) applies
 
 To create a callback, open the device Dashboard and take a look at the subsection called "callback", that will show different options in the context `callback details` as shown in the image below:
 
-![](../.gitbook/assets/callbackdetails.PNG)
+![](../.gitbook/assets/CallbackDetails.PNG)
 
 This context shows the different functionalities that can be requested from the server using a callback, by just clicking in the checkbox and selecting the resource that will receive the data, such as:
 
@@ -158,7 +158,7 @@ Note that it is not possible to create properties, data buckets, or endpoints th
 
 Ones you have configured the callback details, the system will be ready to receive a request. In a similar way to the "show query" feature included in the Connected device's dashboard, you can find a precise specification of the HTTP request structure and a complete cURL example by clicking in the "overview" or "cURL Example" tabs in the upper side of `Callback Details` context as shown in the image below:
 
-![](<../.gitbook/assets/image (248).png>)
+![](<../.gitbook/assets/image (419).png>)
 
 Finally, to create a Callback HTTP request, take in count that the `Authorization Header` must be included 9in your HTTP request as shown in the example below:
 
@@ -174,7 +174,7 @@ In this case, it is possible to create specific access tokens for granting acces
 
 To create a device token, open the device Dashboard and take a look to the subsection called "Device Tokens".
 
-![](<../.gitbook/assets/image (257).png>)
+![](<../.gitbook/assets/image (492).png>)
 
 Then, click on the green button \`Add\` on the right of the box. Then, a modal window will appear, were you can configure different parameters:
 
@@ -184,7 +184,7 @@ Then, click on the green button \`Add\` on the right of the box. Then, a modal w
 
 The image below shows a sample screenshot while configuring a device token.
 
-![](<../.gitbook/assets/addtockenform (1).PNG>)
+![](<../.gitbook/assets/addTockenForm (1).PNG>)
 
 Once the token is saved, the interface will show the access token to be used in the REST API Calls, like in the following figure. If you need help to integrate this access token in the REST API calls, checkout [this](http://docs.thinger.io/api/#authentication-api-rest-api-authentication) documentation.
 
@@ -194,11 +194,11 @@ Once the token is saved, the interface will show the access token to be used in 
 
 [Thinger.io](http://thinger.io/) provides a simple way to store additional information related to a specific device, such as location, identification, or even configuration parameters that may be retrieved by devices using common JSON files. In this way, the platform can be used as a device's persistent memory. To create a device property, open the device Dashboard, and take a look to the subsection called "Properties".
 
-![](<../.gitbook/assets/image (261).png>)
+![](<../.gitbook/assets/image (490).png>)
 
 This menu provides an easy way to create, manage, or delete the device's properties. Note that the property created in this example is specifying the device location. [Thinger.io](http://thinger.io/) system has been designed to detect this configuration and automatically represent it on the device dashboard map.
 
-![](../.gitbook/assets/adddeviceproperty.PNG)
+![](../.gitbook/assets/AddDeviceProperty.PNG)
 
 Properties declarations and modifications are made by means of a special context, provided with a JSON validator that enhances the text and checks morphologic mistakes.
 
@@ -255,7 +255,7 @@ More details about property codification functions at the **"**[**codification**
 
 Using HTTP devices it's also possible to interact with properties through callback configuration submenu tools.
 
-![](../.gitbook/assets/httpgetsetproperty.PNG)
+![](../.gitbook/assets/HTTPGetSetProperty.PNG)
 
 According to this configuration, when [Thigner.io](http://thigner.io/) server receives any transmission from "SigfoxDevice1" the payload data will be stored into "data" property, creating a JSON with all variables. In the opposite situation, thanks to the "Response Data" feature, the values stored in the parameter with was called "downlink\_data" will be sent to the device thought Sigfox infrastructure.
 
@@ -267,12 +267,12 @@ This feature has been designed to work as a common program terminal, allowing to
 This feature is only available for generic devices equipped with thinger.io software client code library
 {% endhint %}
 
-![](<../.gitbook/assets/image (250).png>)
+![](<../.gitbook/assets/image (390).png>)
 
 ### Device Settings <a href="#device-settings" id="device-settings"></a>
 
 It is possible to adjust some device details like its description or credentials going to the "Settings" subsection of the device dashboard. This way, you can change the device credentials by a new one of your choice in case you forgot it (the password cannot be recovered from database as it is encrypted). Notice that changing the device password, will not disconnect the device, but will prevent its reconnection once disconnected.
 
-![](<../.gitbook/assets/deviceedit (1).png>)
+![](<../.gitbook/assets/deviceEdit (1).png>)
 
 If you need to change the device identifier it is necessary to delete the device and register a new one with the desired one.

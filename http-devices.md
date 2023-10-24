@@ -22,11 +22,11 @@ In the next sections, it is explained how to create and configure the HTTP Devic
 
 First step to work with this interface consists of creating the device profile at the "devices" main menu tab and clicking on "new device" button. Then, select "HTTP Device (Sigfox, Lora, cURL)" type and fill `Device ID` and `Description` slots as required. &#x20;
 
-![](<.gitbook/assets/image (191).png>)
+![](<.gitbook/assets/image (217).png>)
 
 Ones the profile has been created it is possible to found it at the devices list, then, clicking the device identificator will open the "device dashboard", which is an interface that show device status and connection information and also allows working with the callback configuration and properties.&#x20;
 
-![](<.gitbook/assets/image (236).png>)
+![](<.gitbook/assets/image (243).png>)
 
 However, when time this page is first accessed (before making the first call to the REST API) there won't be any information to show o it will have the same aspect as the previous image. Note that this interface contains two additional tabs: the "Callback" tab allows managing the device behavior and capacities, each of these features will be explained in the "[**Managing Callback Functionalities**](https://docs.thinger.io/hardware-devices/http-devices#managing-callback-functionalities)" section of this document.  On the other hand, the "Properties" tab allows to create and manage device properties, which are variables related with this device stored in Thinger.io Server, that can be edited, displayed, or forwarded to the device using callback menu functionalities.
 
@@ -40,11 +40,11 @@ It is necessary to obtain the HTTP request and the authorization that allows int
 
 1\) Going to `Callback / Settings` tab, check the "authorization" box. A bearer token will appear into this section. &#x20;
 
-![](<.gitbook/assets/image (193).png>)
+![](<.gitbook/assets/image (233).png>)
 
 2\) Then, going to `Callback/Overview` tab, an specification of the REST API that provides access to this device will be shown, ready to be copied into the program or HTTP request entry.&#x20;
 
-![](<.gitbook/assets/image (69).png>)
+![](<.gitbook/assets/image (236).png>)
 
 After follow the first step, the authorization token that is shown on this interface will be fixed, being also the same as the one shown at "settings" tab, so it can be copied too in order to create the HTTP Request. &#x20;
 
@@ -54,7 +54,7 @@ After follow the first step, the authorization token that is shown on this inter
 
 3\) Now the system is ready to start sending data to Thinger.io via HTTP request, however, note that this system is aimed to receive application/JSON data codified messages. If the system messages do not contain JSON data the server will answer with a 200 OK message to the communication but no data will be stored. The image below shows an example of well defined JSON in the bottom of this tab:
 
-![](<.gitbook/assets/image (3) (1).png>)
+![](<.gitbook/assets/image (227).png>)
 
 ## Managing Callback Functionalities&#x20;
 
@@ -64,7 +64,7 @@ Ones the callback has been integrated with the system,  the developer will be ab
 
 Thinger.io data Buckets is a scalable system that allows storing devices data in a simple way. Allowing support for historical data analysis or download IoT data into a file. The Callback manager allows associating an existent data bucket to the HTTP Device data in order to store it as is retrieved.&#x20;
 
-![](<.gitbook/assets/image (2) (3).png>)
+![](<.gitbook/assets/image (190).png>)
 
 To make this assignment, just check the checkbox and click into the text entry to select or search a previously defined data bucket as shown in the previous image.&#x20;
 
@@ -76,7 +76,7 @@ To make this assignment, just check the checkbox and click into the text entry t
 
 Thinger.io allows defining endpoint profiles that simplifies the execution of a service such as sending an email, send a SMS, call a REST API, interact with IFTTT, call a device from a different account, or call any other HTTP endpoint.
 
-![](<.gitbook/assets/image (47).png>)
+![](<.gitbook/assets/image (184).png>)
 
 The Callback Manager allows to easy associate the device data with a previously defined Endpoint profile that will be called in real time when the data is processed by Thinger.io server.&#x20;
 
@@ -88,11 +88,11 @@ The Callback Manager allows to easy associate the device data with a previously 
 
 This feature provides an easy way to select a property of this device in order to store just the last-received data from a device or set an specific attribute such as location data. This feature allows using Thinger.io server as a persistent memory for the device. To select the property that will be modified just select the checkbox and find it's ID in the text entry.
 
-![](<.gitbook/assets/image (82).png>)
+![](<.gitbook/assets/image (207).png>)
 
 The device properties can also be shown and managed by just going to "Device Properties" tab of the device dashboard. &#x20;
 
-![](<.gitbook/assets/image (210).png>)
+![](<.gitbook/assets/image (195).png>)
 
 ### HTTP Response Data
 
@@ -100,7 +100,7 @@ HTTP communications allows sending data to the device in the confirmation messag
 
 To start sending response data, just click over the Check-box and select a device property from the list as shown in the image blelow:
 
-![](<.gitbook/assets/image (41).png>)
+![](<.gitbook/assets/image (169).png>)
 
 This feature is aimed to introduce an existent device's property into the HTTP response, so if there is not any previously created property, the first step will be adding a new one using the "Properties" menu.&#x20;
 
@@ -114,13 +114,13 @@ Note that there device properties will be sent using JSON content type, so the d
 
 This parameter allows to establish a device connection timeout in minutes, so the platform can consider the device as "disconnected" after a fixed time without receiving messages.&#x20;
 
-![](<.gitbook/assets/image (38).png>)
+![](<.gitbook/assets/image (210).png>)
 
 ## Building the HTTP request in the data source
 
 Finally it is necessary to introduce the API given in the "callback overview" section in the system or device, allowing to connect with the platform and start sending data. If everything is done correctly the device dashboard will start displaying information as shown in the image below:
 
-![](<.gitbook/assets/image (143) (1).png>)
+![](<.gitbook/assets/image (245).png>)
 
 As there are different ways to make this integration, in this section it is explained how to properly implement the request over different supports. &#x20;
 
@@ -136,7 +136,7 @@ https://trincado.do.thinger.io/v3/users/jt/devices/Example_Device/callback/data?
 
 This services provide a useful way to test HTTP integrations in a simple way. It is only necessary to follow the next steps to configure a request:
 
-![](<.gitbook/assets/image (237).png>)
+![](<.gitbook/assets/image (199).png>)
 
 1. Select \<POST> message type
 2. Introduce the device callback into the main textbox
@@ -144,7 +144,7 @@ This services provide a useful way to test HTTP integrations in a simple way. It
 4. Create a Content-type header with application/json type
 5. Write some valid JSON data and send your query
 
-![](<.gitbook/assets/image (22).png>)
+![](<.gitbook/assets/image (191).png>)
 
 As shown in the previous image, you should receive an empty 200 OK status message.&#x20;
 
@@ -152,4 +152,4 @@ As shown in the previous image, you should receive an empty 200 OK status messag
 
 If the source system supports cURL instructions, there is an integration example into `Callback / Curl` tab, ready to copy and modify:
 
-![](<.gitbook/assets/image (87).png>)
+![](<.gitbook/assets/image (238).png>)

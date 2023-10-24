@@ -88,13 +88,13 @@ Enable DEBUG traces for a better troubleshooting. Don't forget to open the Seria
 
 If you're unable to find a solution even after following these instructions, we've established additional resources to assist you:
 
-<figure><img src=".gitbook/assets/image (472).png" alt=""><figcaption><p>Ask our community</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (78).png" alt=""><figcaption><p>Ask our community</p></figcaption></figure>
 
 ### **Community Discussion Forum**
 
 [Community Discussion Forum](https://community.thinger.io) is a forum, designed to provide developers a platform to exchange ideas, share their projects, and seek advice among fellow Thinger.io users. It is currently the best avenue for quick and free assistance with development issues, as many queries have likely been previously asked and resolved by other developers. So, your first step should be to use the search bar to locate a similar post:
 
-<figure><img src=".gitbook/assets/image (473).png" alt=""><figcaption><p>Thinger.io community forum</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (79).png" alt=""><figcaption><p>Thinger.io community forum</p></figcaption></figure>
 
 Optimizing the use of this resource involves browsing for existing topics related to your query before starting a new one. However, if creating a new topic is necessary, please consider the following:
 
@@ -105,7 +105,7 @@ Optimizing the use of this resource involves browsing for existing topics relate
 * Always be polite, remember that other developers are under no obligation to assist you, and if they do, it is out of goodwill.
 * If you wish to share some source code, kindly utilize the Preformatted text option for optimal display.
 
-<figure><img src=".gitbook/assets/image (474).png" alt=""><figcaption><p>Use preformatted text when sharing source code</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (80).png" alt=""><figcaption><p>Use preformatted text when sharing source code</p></figcaption></figure>
 
 ### **Extended Support**
 

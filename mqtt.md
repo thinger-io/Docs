@@ -23,11 +23,11 @@ Note that this feature is not available on Thinger.io platform freemium accounts
 
 Creating the device on Thinger.io is done like any other resource on the platform, juts accessing the device list, available in the "devices" section of the main menu and clicking on the "Add device" button:&#x20;
 
-![](<.gitbook/assets/image (138).png>)
+![](<.gitbook/assets/image (343).png>)
 
 Then the "new device form" will appear, allowing to introduce device information:
 
-![](<.gitbook/assets/image (119).png>)
+![](<.gitbook/assets/image (474).png>)
 
 * **Device Type**: MQTT device should be selected
 * **Device identifier:** Must be unique within your devices
@@ -47,7 +47,7 @@ The second part of the integration is configure any device or program as a clien
 * **Password**: Must be the same key that was placed on Thinger.io "Device Credentials" parameter
 * **MQTT version**: Currently Thinger.io supports 3.1 or 3.1.1 versions of the protocol
 
-![example using MQTT.fx client](<.gitbook/assets/image (395).png>)
+![example using MQTT.fx client](<.gitbook/assets/image (276).png>)
 
 {% hint style="info" %}
 It is recommended to use SSL/TLS communication using the port 8883
@@ -80,7 +80,7 @@ Thinger.io data buckets are a virtual storage where any kind of time series data
 \
 Configure a data bucket to store data from an specific MQTT topic just requires going to bucket section of the main menu and pressing the "Add Bucket" button to access the "new bucket form" in which introduce the topic configuration, as has been made in the image below: &#x20;
 
-![](<.gitbook/assets/image (5) (1).png>)
+![](<.gitbook/assets/image (494).png>)
 
 The next parameters needs to be configured:&#x20;
 
@@ -101,11 +101,11 @@ Use **JSON** as the payload type for the device messages stored by buckets.
 
 Now that the MQTT data is being stored into the data bucket, it is possible to show it on dashboards, where multiple widgets can be used to create real-time or historical representations by selecting the bucket as the data source as it is shown in the image below:&#x20;
 
-![](<.gitbook/assets/image (94).png>)
+![](<.gitbook/assets/image (457).png>)
 
 Dashboard widgets can show data from different devices, and been configured to create flexible data representations as we have explained in the [**dashboard section of this documentation**](features/dashboards.md).&#x20;
 
-![](<.gitbook/assets/image (161).png>)
+![](<.gitbook/assets/image (444).png>)
 
 ### Processing data with Node-RED Plugin&#x20;
 

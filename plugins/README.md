@@ -25,15 +25,15 @@ Thinger.io plugins source code is now available in our Github repository, so if 
 
 ## Default Plugins
 
-| [<img src="../.gitbook/assets/imagen1sas.png" alt="" data-size="original">](node-red.md)          |                 | [<img src="../.gitbook/assets/imagen12.png" alt="" data-size="original">](sigfox.md) |
+| [<img src="../.gitbook/assets/Imagen1sas.png" alt="" data-size="original">](node-red.md)          |                 | [<img src="../.gitbook/assets/Imagen12.png" alt="" data-size="original">](sigfox.md) |
 | ------------------------------------------------------------------------------------------------- | --------------- | ------------------------------------------------------------------------------------ |
-| [<img src="../.gitbook/assets/imagen123.png" alt="" data-size="original">](the-things-network.md) |                 | <img src="../.gitbook/assets/imagen12 (1).png" alt="" data-size="original">          |
+| [<img src="../.gitbook/assets/Imagen123.png" alt="" data-size="original">](the-things-network.md) |                 | <img src="../.gitbook/assets/Imagen12 (1).png" alt="" data-size="original">          |
 
 ## Managing Plugins
 
 Plugins Marketplace can be founded by clicking into "Plugins" main menu tab. &#x20;
 
-![](<../.gitbook/assets/image (185).png>)
+![](<../.gitbook/assets/image (242).png>)
 
 This interface contains a list of the existent plugins that can be installed to extend Thinger.io IoT Platform and will include some categories to filter and easily manage the collection of plugins, that at this moment is really small but it is planned to grow a lot in the next years.&#x20;
 
@@ -41,7 +41,7 @@ This interface contains a list of the existent plugins that can be installed to 
 
 Each plugin has a description page, that contains useful information to learn how to use its features and a "plugin management" context that allows managing its installation and status.
 
-![](<../.gitbook/assets/image (198).png>)
+![](<../.gitbook/assets/image (241).png>)
 
 That provides a graphical interface to make the next operations:
 

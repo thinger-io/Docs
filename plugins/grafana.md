@@ -2,7 +2,7 @@
 
 _Grafana_ is an Open Source visualization and analytics software that allows to query, visualize, alert on, and explore metrics no matter where they are stored. This integration plugin allows working together with Grafana & Thinger.io, providing a lot of new tools to analyze IoT devices data with amazing graphs and visualization widgets.&#x20;
 
-![](<../.gitbook/assets/image (275).png>)
+![](<../.gitbook/assets/image (471).png>)
 
 {% hint style="info" %}
 [Note: Plugins are only available for premium Thinger.io serves. Check **this link** to create your own instance within minutes](https://pricing.thinger.io).
@@ -10,7 +10,7 @@ _Grafana_ is an Open Source visualization and analytics software that allows to 
 
 Grafana's technology allows for the simple development of advanced dynamic dashboards for data visualization and analysis, create logs, metrics, or even automatic alerts. And all these capabilities are extensible thanks to a large widget import repository, in which we can acquire many different representation elements created by Grafana's own developers or by contributions from a large community of users. A lot of additional information can be found on the creator's website and also in their extensive documentation, available at [**this link**](https://grafana.com/docs/grafana/v8.3/getting-started/?src=grafana\_gettingstarted)**.**
 
-![](<../.gitbook/assets/image (318).png>)
+![](<../.gitbook/assets/image (326).png>)
 
 The integration of this technology becomes a very useful tool for Thinger.io users who need to take their dashboards to a professional level, perform complex analytics in a scalable way, or create visualization projects in collaboration with other developers on their team. This plugin allows you to create an infrastructure in which Thinger.io acts as an element of administration and management of the devices. The data is stored through InfluxDB and finally, Grafana extracts the time series to create the representation.
 
@@ -44,7 +44,7 @@ Once the data source has been configured, the most common way to start working w
 
 * **Panel Configuration**: On this step, we can choose the kind of graph to be used in the widget, for example time series charts, It is interesting to you explore all the options offered by this menu, both in display types and in other panel configurations that allow you to choose the legend, the axes, etc.
 
-![](<../.gitbook/assets/image (293).png>)
+![](<../.gitbook/assets/image (332).png>)
 
 * **Data configuration in InfluxQL:** The "Query" configuration panel allows selecting the variables to be shown in the new panel. This process can be done in three steps: \
   &#x20; 1\) Select the Datasource using the left-side drop-down menú (InfluxDB2-InfluxQL in our example)\
@@ -70,11 +70,11 @@ Grafana is a very flexible tool, users can add new panels as they go, retrieving
 2\. Obtain the CLI installation command of any new panel or plugin that wants to be added.  \
 3\. Access Grafana's shell, to do so, just click on the Plugins tab in the Thinger.io main menu, then access Grafana's profile in the Plugins Marketplace.
 
-![](<../.gitbook/assets/image (273) (1).png>)
+![](<../.gitbook/assets/image (541).png>)
 
 4\. Once inside click on the _>\_Shell_ option and click on "connect". Then the download and installation command can be pasted into the console and executed.&#x20;
 
-![](<../.gitbook/assets/image (295).png>)
+![](<../.gitbook/assets/image (346).png>)
 
 5\. After the installation of any new element in Grafana it is necessary to restart the plugin-container. This process is done through the plugin's function bar by means of the Restart button.
 
@@ -86,14 +86,14 @@ Grafana can be configured to create collaborative working groups in order to sha
 2. Then in the "Add permission for" section, select the user or the team with whom the dashboard will be shared &#x20;
 3. Finally, select the privileges that want to be granted&#x20;
 
-![](<../.gitbook/assets/image (306).png>)
+![](<../.gitbook/assets/image (365).png>)
 
 However, when Grafana is running into a Thinger.io plugin, an additional configuration needs to be done in order to provide public access to the program.&#x20;
 
 4\. Going to Thinger.io Plugins marketplace section, select Grafana profile to access the plugin configuration interface\
 5\. Clicking into the "Settings" tab, switch on the public access button&#x20;
 
-![](<../.gitbook/assets/image (307).png>)
+![](<../.gitbook/assets/image (511).png>)
 
 The result of this process is a publicly accessible dashboard that can be shared with third parties or resources that can be integrated into a Thinger.io standard dashboard as shown below.
 

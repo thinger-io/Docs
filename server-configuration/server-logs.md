@@ -10,14 +10,14 @@ This feature is only available for the instance's manager account&#x20;
 
 Follow the next steps to start logging the events of the server instance:
 
-![](<../.gitbook/assets/image (284) (1).png>)
+![](<../.gitbook/assets/image (410).png>)
 
 1. Go to "Cluster Hosts" section of Thinger.io main menu. The Host list will display all the server instances that have been connected in the same cluster classified by its web domain.&#x20;
 2. Click the desired instance to access the server administration panel&#x20;
 3. On the right top corner, choose "Logs" tab to open the logging console
 4. Press "Connect" button to start the log sampling
 
-![](<../.gitbook/assets/image (285) (1).png>)
+![](<../.gitbook/assets/image (570).png>)
 
 The structure of the log entries consists of six columns in which the following data is specified:
 

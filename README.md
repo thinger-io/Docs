@@ -25,7 +25,7 @@ Sign-up [**HERE** ](https://console.thinger.io/#/signup)to obtain a **free accou
 
 Thinger.io platform is formed by two main products a Backend (which is the actual IoT server) and a web-based Frontend that simplifies working with all the features using any computer or smartphone. The image below shows the main features provides by this platform to create IoT projects.&#x20;
 
-![](.gitbook/assets/thinger.io-platform-feature.png)
+![](<.gitbook/assets/Thinger.io Platform Feature.png>)
 
 * **Connect devices:** Fully compatible with every kind of device, no matter the processor, the network or the manufacturer. Thinger.io allows to create **bidirectional communications** with Linux, Arduino, Raspberry Pi, or MQTT devices and even with edge technologies like Sigfox or LoRaWAN or other internet API data resources.&#x20;
 * **Store Device Data:** Just a couple clicks to create a Data Bucket a store IoT data in a scalable, efficient and affordable way, that also allows real-time data aggregation.&#x20;

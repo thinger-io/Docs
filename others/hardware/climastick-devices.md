@@ -60,7 +60,7 @@ This section covers how to setup your computer to start working with the ClimaSt
 
 2- Open Tools > Boards > Boards Manager... and search for ESP8266 package, then install the last version.
 
-![](../../.gitbook/assets/i5.PNG)
+![](<../../.gitbook/assets/i5 (1).PNG>)
 
 3- Now you can program almost any ESP82XX processor directly from the Arduino IDE. From the Tools > Boards you should see now the new ESP8266 community boards installed.
 
@@ -302,7 +302,7 @@ This section covers different considerations while using the board.
 
 When using Deep-sleep function, it is necessary to weld together the two connectors of the WKUP port in order to close the WKUP circuitry (GPIO16-RESET). this port is not originally soldered to avoid malfunctions of the programming process. It is normal that by enabling this option it is necessary to force the flash mode before each reprogramming.
 
-![](<../../.gitbook/assets/image (449) (1).png>)
+![](<../../.gitbook/assets/image (515).png>)
 
 ## Device Files
 
@@ -310,7 +310,7 @@ When using Deep-sleep function, it is necessary to weld together the two connect
 
 Click below to download lastest ClimaStick.h library:
 
-{% file src="../../.gitbook/assets/climastickv2_5.zip" %}
+{% file src="../../.gitbook/assets/ClimaStickV2_5.zip" %}
 
 ### Datasheets
 

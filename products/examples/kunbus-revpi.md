@@ -32,11 +32,11 @@ The main functions of a configuration file are:
 * Communicating mutually the basic settings of your RevPi and connected devices
 * Using the configuration values of your RevPi in other applications
 
-<figure><img src="../../.gitbook/assets/image (288).png" alt=""><figcaption><p>Pictory Running on Kunbus RevPi and managed from Thinger.io</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (54).png" alt=""><figcaption><p>Pictory Running on Kunbus RevPi and managed from Thinger.io</p></figcaption></figure>
 
 To access Pictory from Thinger.io, it is required to create a [Product Service](kunbus-revpi.md#product-services) with the following configuration:
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
 
 ### Node-RED
 
@@ -46,15 +46,15 @@ It provides a browser-based editor that makes it easy to wire together flows usi
 
 Kunbus Rev-PI integrates Node-RED. The [node-red-contrib-revpi-nodes](https://flows.nodered.org/node/node-red-contrib-revpi-nodes) provides a set of nodes in [Node-RED](https://nodered.org/) to read and write to I/O Pins of your [Revolution Pi](https://revolution.kunbus.de/).
 
-<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption><p>Node-RED Running on Kunbus RevPi and managed from Thinger.io</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (65).png" alt=""><figcaption><p>Node-RED Running on Kunbus RevPi and managed from Thinger.io</p></figcaption></figure>
 
 To access Node-RED from Thinger.io, it is required to create a [Product Service](kunbus-revpi.md#product-services) with the following configuration:
 
-<figure><img src="../../.gitbook/assets/image (240).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
 
 ## Terminal
 
 To access the system terminal of the Kunbus RevPi, it is not required to do any additional setup. Once the device is connected with Thinger.io, just access the Terminal section on the device and click "Connect".
 
-<figure><img src="../../.gitbook/assets/image (58).png" alt=""><figcaption><p>Kunus RevPi terminal managed from Thinger.io</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (34).png" alt=""><figcaption><p>Kunus RevPi terminal managed from Thinger.io</p></figcaption></figure>
 

@@ -16,11 +16,11 @@ Once created, dashboards can be shared with third parties through a link or conf
 
 To manage all your dashboards, it is necessary to access to the `Dashboards` section, by clicking in the following menu item:
 
-![](../.gitbook/assets/dashboardtab.PNG)
+![](../.gitbook/assets/dashboardTab.PNG)
 
 Then click on the `Add Dashboard` button that will open a new interface for entering the dashboard details, like in the following screenshot:
 
-![](../.gitbook/assets/createdashboard.png)
+![](../.gitbook/assets/CreateDashboard.png)
 
 It is necessary to configure different parameters:
 
@@ -34,7 +34,7 @@ Clicking again on the "Add Dashboard" button, the new dashboard will be added to
 
 By default, the dashboard appears empty and in view mode, so it is not possible to make modifications, so, to start working, the first step will be switching on the button on the upper-right corner of the dashboard that will change to the edition mode.
 
-![](<../.gitbook/assets/image (382).png>)
+![](<../.gitbook/assets/image (340).png>)
 
 The dashboard edition mode allows moving, or resizing existing widgets, but also enables different options using the left-side buttons such as:
 
@@ -48,7 +48,7 @@ These three options have been explained in more detail in the sections below.
 
 When the edit mode is enabled in the dashboard, a new button called `Add Widget` will appear. Clicking on it will show a popup where it is possible to select the widget type to add in the dashboard. There are different widgets both for displaying information, or control connected devices, just like in the following picture:
 
-![](../.gitbook/assets/widgettypes.PNG)
+![](../.gitbook/assets/widgetTypes.PNG)
 
 The following subsections describe the different parameters for each widget type.
 
@@ -56,11 +56,11 @@ The following subsections describe the different parameters for each widget type
 
 A time-series chart is a graph that can display values over time. In this sense, this is quite useful when it is required to display time-series data, like temperature variable that changes over time. It is possible to plot a single variable or multiple values in the same chart. The initial configuration of this widget is like shown in the following figure:
 
-![](../.gitbook/assets/timeserieschart.png)
+![](../.gitbook/assets/TimeSeriesChart.png)
 
 The configurable parameters are the following:
 
-![](../.gitbook/assets/timeserieschartwidget.png)
+![](../.gitbook/assets/TimeSeriesChartWidget.png)
 
 * **Title**: Optional title for the widget.&#x20;
 * **Subtitle**: Optional subtitle for the widget.
@@ -71,22 +71,22 @@ The configurable parameters are the following:
 
   * **From Data Bucket**: With this option, the widget will take the information from a given bucket to plot the historic information on it. So, it is necessary to just select the bucket identifier created in your account. If the bucket is composed by multiple variables, it will allow selecting the variables to plot, like in the following picture. When the information is selected from the data bucket, you will require to establish a data timeframe to be displayed, that can be relative to the current time, or an absolute period between two dates.
 
-![](../.gitbook/assets/datasource.PNG)
+![](../.gitbook/assets/dataSource.PNG)
 
 * **Options**: It is possible to configure some graph features like splines, legends, axis, etc.
 * **Chart Color**: Both on data selected from a device or from a data bucket, it is possible to configure series colors, depending on the information available in the resource, it will show only one configurable color, or a color for each series, like in the previous screenshot.
 
-![](../.gitbook/assets/multiplevariable.PNG)
+![](../.gitbook/assets/multipleVariable.PNG)
 
 * **Data Aggregation**:&#x20;
 
 Show raw data directly from a Bucket could be tricky when there is a lot of data-points, specially if the measures are very noisy or irregular. This feature allows aggregating data using different statistics such as medians, means, minimum and maximum values, a counter of data points per period and a data sumatory. The aggregation can be applied over different intervals that goes from five minutes to one week, by using the next configuration inputs in the widget form, and also using the upside right parameters on each time series chart widgets.
 
-![](../.gitbook/assets/iot-data-aggregation.PNG)
+![](<../.gitbook/assets/IoT data aggregation.PNG>)
 
 The next image shows four different representations of the same dataset and time interval, aggregated using different algorithms: &#x20;
 
-![](<../.gitbook/assets/image (170).png>)
+![](<../.gitbook/assets/image (174).png>)
 
 {% hint style="warning" %}
 Note that Data Aggregation system is only available in **private server** instances with **InfluxDB**&#x20;
@@ -96,21 +96,21 @@ Note that Data Aggregation system is only available in **private server** instan
 
 It is a quite visual widget that allows showing device data in a traditional "dial gauge" representation, that can be customized with different value ranges and color marcs, making it more accurate or simplifying the simpection with just a glance.
 
-![](../.gitbook/assets/iot-tachometer.PNG)
+![](<../.gitbook/assets/IoT tachometer.PNG>)
 
 The configurable parameters are the following:
 
-![](<../.gitbook/assets/image (77).png>)
+![](<../.gitbook/assets/image (219).png>)
 
 * **Title**: Optional title for the widget.&#x20;
 * **Subtitle**: Optional subtitle for the widget.
 * **Background**: Optional color for the widget background (defaults to white). This widget has a particularity behavior in relation to this parameter. Pressing into the green "+" button, It is possible to select different background colors depending on the real time value that is being shown:&#x20;
 
-![](<../.gitbook/assets/image (86).png>)
+![](<../.gitbook/assets/image (214).png>)
 
 This image is representing an example in which the measured variable is reaching dangerous pressure values. According to this situation, the background color is changing to red, so it will be easier to identify and manage the event if there is not any automatic system in the product. &#x20;
 
-![](<../.gitbook/assets/image (68) (1).png>)
+![](<../.gitbook/assets/image (222).png>)
 
 * **Chart Input**: Configure how to feed the values to the tachometer chart. It is possible to feed the information from a connected **device** or from a **data bucket**
   * **From Device Resource**: With this option it is necessary to select a device (that must be connected to provide information) and specify the resources to plot. The following figure is an example that is selecting the device `deviceA`, and the resource `millis` from the device. Notice that when a time series widget is feed from a device, it will not keep the information if the dashboard is closed or refreshed, as it is just real-time data from your device to your dashboard. You can also select between different refresh modes, like sampling at different intervals (that can be updated online), or the chart is updated by the device.
@@ -120,7 +120,7 @@ This image is representing an example in which the measured variable is reaching
 
 The last tab shows all the display options. This is probably the most customizable widget of Thinger.io Platform. It allows selecting a lot of different parameters as shown in the image below:&#x20;
 
-![](<../.gitbook/assets/image (213).png>)
+![](<../.gitbook/assets/image (201).png>)
 
 * **Display options:**
   * **Units**: Optional information that will display the variable unit, like ºC.
@@ -135,7 +135,7 @@ The last tab shows all the display options. This is probably the most customizab
 
 Using LED spots is a common way  to create simple graphical interfaces in electronic projects in order to represent system status, alerts, etc. This widget has been included in Thinger.io Platform with the same purpose, so it can be used to show binary status by changing its color, create alerts by setting blink behavior or show multiple data by including more than one color range in a kind of RGB simulation.&#x20;
 
-![](<../.gitbook/assets/image (234).png>)
+![](<../.gitbook/assets/image (122).png>)
 
 This widget can be configured in many different ways though the three steps form. first of all selecting "Led indicator" in the Widget menu tab, and then indicating:
 
@@ -158,17 +158,17 @@ Finally, the "Display Options" tab allows to custom the led behavior in the next
   * **Color ranges**: Each time that the "+" button is pressed, a new color range is included, allowing to define a new range and the color that will be shown when the selected input value belongs to this range. &#x20;
   * **Blinking led option:** The right side switches allows adding a blinking behavior to the led when this range profile begins active. It is also possible to disable the blinking by pressing over the led widget.&#x20;
 
-![](<../.gitbook/assets/image (10) (1).png>)
+![](<../.gitbook/assets/image (192).png>)
 
 ### Donut Chart
 
 A donut chart is a graph that can display a value, normally in form of a rounded percentage. In this sense, this is quite useful when you have a know variable that oscillates between a maximum and minimum value. In this case, it is only possible to only represent a single variable, that can be both updated in real-time from a device, or from a data bucket.
 
-![](../.gitbook/assets/donutchart.png)
+![](../.gitbook/assets/DonutChart.png)
 
 The configurable parameters are the following:
 
-![](../.gitbook/assets/donutchartwidget.png)
+![](../.gitbook/assets/DonutChartWidget.png)
 
 * **Title**: Optional title for the widget.&#x20;
 * **Subtitle**: Optional subtitle for the widget.
@@ -183,11 +183,11 @@ The configurable parameters are the following:
 
 A progressbar is a graph that can easily represent a progress on some action or process. In this sense, this is quite useful when you have any process that is being completed over time and needs to be monitored. In this case, it is only possible to only represent a single variable, that can be both updated in real-time from a device, or from a data bucket.
 
-![](../.gitbook/assets/progressbar.png)
+![](../.gitbook/assets/ProgressBar.png)
 
 The configurable parameters are the following:
 
-![](../.gitbook/assets/progressbarwidget.png)
+![](../.gitbook/assets/ProgressbarWidget.png)
 
 * **Title**: Optional title for the widget.&#x20;
 * **Subtitle**: Optional subtitle for the widget.
@@ -201,7 +201,7 @@ The configurable parameters are the following:
 
 A map can be used to represent, at this moment, a single location in a map. It is quite convenient to track devices in real-time as the chart can be feed in real-time from a connected device, like over a GPRS connection. It is also possible to plot locations from a data bucket, so devices like Sigfox can be also be tracked.
 
-![](../.gitbook/assets/googlemap.png)
+![](../.gitbook/assets/GoogleMap.png)
 
 Here is an example of this widget working in real-time with a connected device:
 
@@ -209,14 +209,14 @@ Here is an example of this widget working in real-time with a connected device:
 
 The configurable parameters are the following:
 
-![](../.gitbook/assets/googlemapwidget.png)
+![](../.gitbook/assets/GoogleMapWidget.png)
 
 * **Title**: Optional title for the widget.&#x20;
 * **Subtitle**: Optional subtitle for the widget.
 * **Background**: Optional color for the widget background (defaults to white).
 * **Location**: Configure how to feed the location in the map. It is possible to feed the information from a connected **device** or from a **data bucket**. When feeding the plot from a data bucket or a device, it is required to match the required latitude and longitude (in degrees) with the variables present in the bucket, or in the device resource.
 
-![](../.gitbook/assets/locationvalue.png)
+![](../.gitbook/assets/LocationValue.png)
 
 * **Center**: Force the map to automatically keep the location in the center.
 
@@ -224,11 +224,11 @@ The configurable parameters are the following:
 
 The image/MJPEG widget can be used to represent both a still image, like your business logo, or a live stream from a MJPEG source, like a surveillance camera. To feed this widget it is necessary the image/MJPEG url.
 
-![](../.gitbook/assets/cameramjpeg.png)
+![](../.gitbook/assets/CameraMJPEG.png)
 
 The configurable parameters are the following:
 
-![](../.gitbook/assets/imagewidget.png)
+![](../.gitbook/assets/ImageWidget.png)
 
 * **Title**: Optional title for the widget.&#x20;
 * **Subtitle**: Optional subtitle for the widget.
@@ -237,17 +237,17 @@ The configurable parameters are the following:
 
 
 
-![](../.gitbook/assets/mjpegcamera.png)
+![](../.gitbook/assets/MJPEGCamera.png)
 
 ### Text/Value
 
 The text/value widget is an useful widget to display any arbitrary data, specially text values that cannot be represented with other widgets. As any other widget, can display data both from connected devices or data buckets.
 
-![](../.gitbook/assets/textvalue.png)
+![](../.gitbook/assets/TextValue.png)
 
 The configurable parameters are the following:
 
-![](../.gitbook/assets/textwidget.png)
+![](../.gitbook/assets/TextWidget.png)
 
 * **Title**: Optional title for the widget.&#x20;
 * **Subtitle**: Optional subtitle for the widget.
@@ -260,11 +260,11 @@ The configurable parameters are the following:
 
 This widget is just a clock widget that can display the current time both in the local time zone or in UTC, which can be useful when monitoring processes in real-time. Note that this widget takes the current time just from your computer.
 
-![](../.gitbook/assets/clock.png)
+![](../.gitbook/assets/Clock.png)
 
 The configurable parameters are the following:
 
-![](../.gitbook/assets/clockwidget.png)
+![](../.gitbook/assets/ClockWidget.png)
 
 * **Title**: Optional title for the widget.&#x20;
 * **Subtitle**: Optional subtitle for the widget.
@@ -297,7 +297,7 @@ Those values can be used in the HTML content with the AngularJS two-way data bin
 {% tab title="Basic Code Snippet" %}
 Example hello world displaying timestamp, timestamp formatted as a date, and the selected value.
 
-![Simple HTML widget displaying data timestamp and its value.](<../.gitbook/assets/image (451) (1).png>)
+![Simple HTML widget displaying data timestamp and its value.](<../.gitbook/assets/image (572).png>)
 
 The widget code is the following:
 
@@ -312,7 +312,7 @@ The widget code is the following:
 {% tab title="Table Code Snippet" %}
 Using the HTML Time Series widget, it is possible to plot information in a given timespan, i.e., latest values from a data bucket. The following example represents an HTML widget holding a list of values from bucket:
 
-![HTML Widget with a table](<../.gitbook/assets/image (455).png>)
+![HTML Widget with a table](<../.gitbook/assets/image (497).png>)
 
 The code to represent this table is like the following:&#x20;
 
@@ -347,7 +347,7 @@ It is possible to insert any other code snippet, i.e., those offered by third pa
 
 
 
-![Widget example with weather conditions](<../.gitbook/assets/image (152).png>)
+![Widget example with weather conditions](<../.gitbook/assets/image (473).png>)
 
 Next script can be used as example to create an HTML widget with another weather forecast provider:
 
@@ -361,7 +361,7 @@ Will result on a widget with the following forecast information.
 
 
 
-![Widget example with weather forecast](<../.gitbook/assets/image (233).png>)
+![Widget example with weather forecast](<../.gitbook/assets/image (353).png>)
 {% endtab %}
 {% endtabs %}
 
@@ -435,11 +435,11 @@ angular.module('helloWidget', [])
 
 * Create a new widget pointing to to the `helloWidget.js` file. Note that we are loading the file with the `.js` extension, that will load the counterpart `.html` file as specified in `templateUrl` function.&#x20;
 
-![Configure the HTML widget to load the directive from File Storage](<../.gitbook/assets/image (456) (1) (1).png>)
+![Configure the HTML widget to load the directive from File Storage](<../.gitbook/assets/image (568).png>)
 
 * Now it will be displayed a similar widget to the Basic Code Snippet example. However, there are many differences from basic example, as now we have Javascript file where we can add more values to the scope, process incoming value changes, detect source changes, and more interesting, we can inject dependencies to other Thinger.io console components, like UI widgets, or API methods to update configurations, call devices, etc.
 
-![HTML Widget with a simple AngularJS directive](<../.gitbook/assets/image (450) (1).png>)
+![HTML Widget with a simple AngularJS directive](<../.gitbook/assets/image (559).png>)
 
 {% hint style="success" %}
 Ensure your widgets use a `camelCase` name for file names.&#x20;
@@ -685,7 +685,7 @@ svg {
 
 In this example it is created an advanced widget that will allow both display and configure device properties from the dashboard.
 
-![Custom HTML Widget to update device properties](<../.gitbook/assets/image (457) (1).png>)
+![Custom HTML Widget to update device properties](<../.gitbook/assets/image (523).png>)
 
 This directive has been created with the following two files from a [File Storage](../file-system.md). The interesting part on this example is how it interacts with the API to update the property values. Internally, the console exposes different classes witch represents different resources on a user account, i.e., buckets, devices, properties, etc. In this example, it is used the `DeviceProperty` class, which takes two parameters: `device`and `property`, which can be obtained from the source parameter passed to the directive:
 
@@ -868,18 +868,18 @@ Thinger.io has been provided with some widgets that allow controlling device fun
 
 The On/Off widget allows controlling a boolean state of a connected device, like turning on/off a light, a motor, a relay, or any other element. The device should expose a boolean input, just like those examples for controlling a led. The resource is then mapped to this widget, which can change the device state in real-time. If the input resource is defined properly [implemented](http://docs.thinger.io/arduino/#coding-adding-resources-input-resources), this widget is also able to show the current device state.
 
-&#x20;<img src="../.gitbook/assets/switchbutton.png" alt="" data-size="original">&#x20;
+&#x20;<img src="../.gitbook/assets/SwitchButton.png" alt="" data-size="original">&#x20;
 
 The configurable parameters are the following:
 
-![](../.gitbook/assets/booleanwidget.png)
+![](../.gitbook/assets/BooleanWidget.png)
 
 * **Title**: Optional title for the widget.&#x20;
 * **Subtitle**: Optional subtitle for the widget.
 * **Background**: Optional color for the widget background (defaults to white).
 * **Device Resource**: Determines the specific device and resource to control. Use a connected device for an easy config, as you can automatically select the device and resource.
 
-![](../.gitbook/assets/deviceresource.png)
+![](../.gitbook/assets/DeviceResource.png)
 
 This widget has the possibility to be shown on different appearances, that can be specified in the **Switch Style** menu:
 
@@ -889,7 +889,7 @@ This widget has the possibility to be shown on different appearances, that can b
 
 Using Button or Push button configuration, it is possible to configure the next parameters:
 
-![](<../.gitbook/assets/image (235).png>)
+![](<../.gitbook/assets/image (196).png>)
 
 * **On Color**: The color that will be displayed when the boolean value of this resource is true.
 * **Off Color**: The color that will be displayed when the boolean value of this resource is false.
@@ -898,17 +898,17 @@ Using Button or Push button configuration, it is possible to configure the next 
 
 
 
-![](<../.gitbook/assets/image (144).png>)
+![](<../.gitbook/assets/image (234).png>)
 
 ### Slider
 
 The slider widget allows controlling a numeric state of a connected device, like setting a threshold, a target temperature, or any other internal device state that is likely to be controlled remotely. The device should expose a numeric input. The resource is then mapped to this widget, that can change the target value in real-time. If the input resource is defined properly [implemented](http://docs.thinger.io/arduino/#coding-adding-resources-input-resources), this widget is also able to show the current device state.
 
-![](../.gitbook/assets/slider.png)
+![](../.gitbook/assets/Slider.png)
 
 The configurable parameters are the following:
 
-![](../.gitbook/assets/sliderwidget.png)
+![](../.gitbook/assets/SliderWidget.png)
 
 * **Title**: Optional title for the widget.&#x20;
 * **Subtitle**: Optional subtitle for the widget.
@@ -926,11 +926,11 @@ There are some widgets that allow modifying the Dashboard behaviour, i.e., modif
 
 The Source Switcher widget allows to modify the data source from a dashboard. This way, it is possible to create a single dashboard for all devices or buckets of the same type or within a project.
 
-![Source switcher allows to change the dashboard source, i.e., a device or bucket.](<../.gitbook/assets/image (456) (1).png>)
+![Source switcher allows to change the dashboard source, i.e., a device or bucket.](<../.gitbook/assets/image (536).png>)
 
 The widget will appear as a dropdown with the current device or bucket being used by the dashboard. When clicked, it is possible to select or search a new data source, which will update the dashboard automatically.
 
-![Source Switcher widget example when used to switch a device source in a dashboard.](<../.gitbook/assets/image (457) (2).png>)
+![Source Switcher widget example when used to switch a device source in a dashboard.](<../.gitbook/assets/image (548).png>)
 
 ## Dashboard Tabs
 
@@ -938,23 +938,23 @@ A Dashboard Tab is an additional work page that can be added to a dashboard to o
 
 This feature also has the advantage of keeping all the tabs of a dashboard open even if they are not being visualized, so the data of the devices shown in real-time will not be lost when changing from one tab to another.
 
-![](<../.gitbook/assets/image (380).png>)
+![](<../.gitbook/assets/image (342).png>)
 
 ### Adding a new tab
 
 To add a tab to a dashboard you only need to click on the blue "add tab" button, this button can be clicked as many times as tabs are desired to create, they will be labeled as "new tab" and will show a generic icon. The label can be modified just by typing a new name, but the icon can also be customized by pressing over the existent one, deploying a menu with all available icons.
 
-![](<../.gitbook/assets/image (378).png>)
+![](<../.gitbook/assets/image (292).png>)
 
 Note that, when the editing mode is enabled, the tabs order can also be customized by dragging to the desired position.&#x20;
 
-![](<../.gitbook/assets/image (375) (1).png>)
+![](<../.gitbook/assets/image (271).png>)
 
 ## Dashboard Settings
 
 Thinger.io allows setting some parameters of the dashboard behavior. Accessing the settings menu just requires to activate the dashboard edit mode and then click on the blue "Settings" button in the upper area of the dashboard. The next context will appear, which has three main tabs to organize the work that can be made with this menu:
 
-![](<../.gitbook/assets/image (381) (1).png>)
+![](<../.gitbook/assets/image (273).png>)
 
 ### Layout configuration
 
@@ -981,17 +981,17 @@ Note that the template system only is able to show data from different devices w
 
 To enable the Dashboard Template feature just switch the edition mode on, open the settings menu and click into the "template" option of "layout" section. Then, a new top bar will show the devices and data buckets that are being currently displayed:
 
-![](<../.gitbook/assets/image (390).png>)
+![](<../.gitbook/assets/image (320).png>)
 
 Clicking over each data source box allows to change it with another resource from the devices or dashboard lists.&#x20;
 
-![](<../.gitbook/assets/image (391).png>)
+![](<../.gitbook/assets/image (295).png>)
 
 ### Share Dashboard
 
 By default, any dashboard is private to the account owner. This feature allows to share an isolated read-only version of the dashboard so others can display the information. To share a dashboard, just enter in the dashboard config and enable the `Share` switch. After enabling the dashboard sharing, an URL will be generated, which can be publicly shared.
 
-![](<../.gitbook/assets/image (383).png>)
+![](<../.gitbook/assets/image (264).png>)
 
 {% hint style="info" %}
 Any modification on a shared dashboard widget that includes new device or data bucket resources must be updated in the authorization by means of the Access Tokens menu or by re-generating the link by turning the shared dashboard option off and on again.&#x20;
@@ -1001,5 +1001,5 @@ Any modification on a shared dashboard widget that includes new device or data b
 
 Finally, for more advanced users, the dashboard settings section allows access to the JSON file where all interface parameters are configured. This allows you to customize each element in a flexible way, but it is also the best way to copy a dashboard for replication or post it in the community discussion forum.
 
-![](<../.gitbook/assets/image (372) (1).png>)
+![](<../.gitbook/assets/image (284).png>)
 

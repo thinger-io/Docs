@@ -8,11 +8,11 @@ This information can be used to plot information in dashboards, or can be export
 
 To create a data bucket, you need to access the `Data Buckets` feature, by clicking on this section:
 
-![](../.gitbook/assets/bucketstab.PNG)
+![](../.gitbook/assets/bucketsTab.PNG)
 
 To create the bucket, just press in the **Add Bucket** button, which will show the following screen:
 
-![](../.gitbook/assets/addbucket.PNG)
+![](../.gitbook/assets/AddBucket.PNG)
 
 Here it is necessary to configure different parameters:
 
@@ -97,11 +97,11 @@ This feature can be also used to store data directly from any third party platfo
 
 Data buckets can be configured to subscribe to a MQTT topic in the same way as another MQTT client can do. This feature allows to store the data that is being published in the same topic, so attention should be paid if used by more than one device. This configuration can be applied during the creation of a new data bucket as in the image below or later using the Settings tab.
 
-![](<../.gitbook/assets/image (321).png>)
+![](<../.gitbook/assets/image (352).png>)
 
 Ones this source has been selected, the interface will show a new input text in which the topic trace can be written
 
-![](<../.gitbook/assets/image (322).png>)
+![](<../.gitbook/assets/image (385).png>)
 
 {% hint style="info" %}
 Note that the data buckets system has been created to store JSON format messages so the data from the MQTT device must contain this encryption.&#x20;
@@ -133,7 +133,7 @@ Note that, if the TS of a new datapoint matches with an old data bucket entry, i
 
 Once the data bucket has been configured, and it started to record data from a device or from write calls, it will display the information inside a table. Every record contains the server timestamp in UTC (but shown in local time zone in the console), and the record value. The value stored in the data bucket can be a single value, or any other JSON document. If the JSON document is composed by key-value pairs, like in the previous examples, they will be displayed in tabular format, just like in the following screenshot.
 
-![](../.gitbook/assets/iotbucketdata.png)
+![](../.gitbook/assets/IoTBucketData.png)
 
 ## Bucket Data Import
 
@@ -146,7 +146,7 @@ Note that using this feature has **few restrictions**.
 
 Also, the user account must be able to use File Systems, which is a premium feature, so freemium users can't perform these processes.
 
-![](<../.gitbook/assets/image (255).png>)
+![](<../.gitbook/assets/image (465).png>)
 
 {% hint style="info" %}
 Files resulting from a data bucket export are completely suitable with the import feature, so they are perfect examples to observe a valid data frame
@@ -165,7 +165,7 @@ To execute an import, the following steps must be carried out:
 
 It is possible to export all your stored information in different file formats, so you can process the data offline, like applying Artificial Intelligence, Business Analytics, Big Data, etc. In this way, you can access your bucket and configure the export process:
 
-![](<../.gitbook/assets/image (256).png>)
+![](<../.gitbook/assets/image (451).png>)
 
 &#x20;The data bucket download configurable parameters are:
 
@@ -178,7 +178,7 @@ It is possible to export all your stored information in different file formats, 
 
 Onces the export data range and format has been select, the system will create a download link that will be stored in the "Export List" section below. This links can be used to provide customers of custom data reports form the IoT data.
 
-![](<../.gitbook/assets/image (53).png>)
+![](<../.gitbook/assets/image (478).png>)
 
 The download links will be available for 3 months if the instance administrator has not specified a different interval.&#x20;
 
@@ -186,10 +186,10 @@ The download links will be available for 3 months if the instance administrator 
 
 Sometimes it can be useful to clear the bucket information without deleting the whole bucket, creating and configuring it again. Therefore, you can clear the bucket, or a part of them easily from the bucket page. In the clear process, the bucket can still record information from your devices.
 
-![](../.gitbook/assets/data-bucket-clear.png)
+![](../.gitbook/assets/Data-Bucket-Clear.png)
 
 Data bucket profiles can also be deleted from the data bucket list, by selecting the profiles to be deleted and pressing the red "Remove Bucket" button as shown in the image below:
 
-![](<../.gitbook/assets/image (70).png>)
+![](<../.gitbook/assets/image (446).png>)
 
 ##

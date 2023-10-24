@@ -8,15 +8,15 @@ Calling those endpoints directly by devices can be complex in small microcontrol
 
 To manage all your endpoints, it is necessary to access to the Endpoints section, by clicking in the following menu item:
 
-![](../.gitbook/assets/endpointtab.PNG)
+![](../.gitbook/assets/EndpointTab.PNG)
 
 Then click on the Add Endpoint button that will open a new interface for entering the endpoint details, like in the following screenshot:
 
-![](../.gitbook/assets/addendpoint.png)
+![](../.gitbook/assets/AddEndpoint.png)
 
 Here it is necessary to configure different parameters:
 
-* **Endpoint Id**: Unique identifier for your endpoint \(_the device must use this identifier for activating the endpoint_\). 
+* **Endpoint Id**: Unique identifier for your endpoint (_the device must use this identifier for activating the endpoint_).&#x20;
 * **Endpoint Description**: Fill here any description or detailed information you need to keep about the dashboard.
 * **Endpoint Type**: Defines the endpoint type, depending on the selected type, the endpoint will present different fields. In the following sections are described some of these types.
 
@@ -34,9 +34,9 @@ The configurable parameters are the following:
 
 In the following screenshot, there is an example of an email endpoint that contains some text and variables that are filled when the device calls the endpoint, adding the current temperature and humidity reported by the device. Notice that `temperature` and `humidity` variables are closed inside double brackets `{{}}`, so the endpoint will be expecting this information to complete the body. In the following, there is some code examples calling this endpoint.
 
-![](../.gitbook/assets/emailendpoint.png)
+![](../.gitbook/assets/EmailEndpoint.png)
 
-Calling endpoints is well documented [here](http://docs.thinger.io/arduino/#coding-using-endpoints-calling-endpoints), but it is basically required to call the endpoint by using the `call_endpoint` method, which requires the endpoint id, `ExampleEmail` in this example, and the optional data to be sent to the endpoint, which is a `pson` document \(quite similar to JSON\) with two keys named `temperature` and `humidity` holding the readings from a DHT sensor. In the following there is an example of such call.
+Calling endpoints is well documented [here](http://docs.thinger.io/arduino/#coding-using-endpoints-calling-endpoints), but it is basically required to call the endpoint by using the `call_endpoint` method, which requires the endpoint id, `ExampleEmail` in this example, and the optional data to be sent to the endpoint, which is a `pson` document (quite similar to JSON) with two keys named `temperature` and `humidity` holding the readings from a DHT sensor. In the following there is an example of such call.
 
 ```cpp
 pson data;
@@ -47,7 +47,7 @@ thing.call_endpoint("ExampleEmail", data);
 
 **Note**: If you want to include a single value in the email body, you can use the double bracket `{{}}` without any key, and send a `pson` document from the device with a single value. So, the following body:
 
-```text
+```
 Temperature is: {{}} ºC
 ```
 
@@ -64,21 +64,20 @@ An HTTP endpoint is a generic type of endpoint that can be used to interact with
 
 The configurable parameters are the following:
 
-* **Request URL**: Configure the method \(GET, POST, PUT, PATCH, or DELETE\), and the request URL.
+* **Request URL**: Configure the method (GET, POST, PUT, PATCH, or DELETE), and the request URL.
 * **Request Headers**: It is possible to add headers to the request, that can be useful for adding authorizations, control caches, configure content type, etc.
-* **Request Body**: The body can be either a custom body with an specific content, or a JSON payload with the information sent by the device. In a custom body it is possible to add custom variables, like shown in the email example. This way, it is possible to create contents in different formats like XML, SOAP, etc \(remember to add the adequate content-type in this case\).
+* **Request Body**: The body can be either a custom body with an specific content, or a JSON payload with the information sent by the device. In a custom body it is possible to add custom variables, like shown in the email example. This way, it is possible to create contents in different formats like XML, SOAP, etc (remember to add the adequate content-type in this case).
 
-![](../.gitbook/assets/httpendpoint.png)
+![](../.gitbook/assets/HTTPEndpoint.png)
 
 ### Telegram Bot Endpoint
 
 This endpoint is pre-configured to send data to a telegram bot in a simple way and thus use the messaging platform to get alerts or data from the IoT devices through Thinger.io.
 
-![](../.gitbook/assets/image%20%28259%29.png)
+![](<../.gitbook/assets/image (433).png>)
 
 The next parameters need to be configured to work with telegram bot:
 
 * **Bot Token**: Is the bot identification and authorization stream, this parameter can be left empty on this form in order to specify it directly in the device source code with the key "token".
 * **Chat Identifier**: Is a 10 digits chat identificator that can be obtained from Telegram conversation information. It can be left empty at this configuration and be called in the source code with the key "chat".
 * **Chat Message**: Is the text and device data that wants to be sent in the message, it can be specify here or hard coded in the device to be send on the endpoint call with the key "message".
-

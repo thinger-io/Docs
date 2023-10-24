@@ -30,7 +30,7 @@ coverY: 0
 
 * Widgets now have a "Show Offline" parameter to "turn off" the widget if the data is not recent.
 
-<figure><img src="../.gitbook/assets/image (339).png" alt=""><figcaption><p>Show Offline Configuration based on Timespan.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (77).png" alt=""><figcaption><p>Show Offline Configuration based on Timespan.</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/alarm.gif" alt=""><figcaption><p>Widget displayed as "Disconnected".</p></figcaption></figure>
 
@@ -68,24 +68,24 @@ coverY: 0
 
 
 
-    <figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption><p>Alarm Rule Configuration</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption><p>Alarm Rule Configuration</p></figcaption></figure>
 
     * Multiple endpoint notifications on activation, normalization, or reminder., i.e., for sending an email, a message to mobile, etc.
     * Alarm instance management via Acknowledge, Shelve, Latch, or Clear, including reactivation timeouts and operator annotations.
 
 <div align="center" data-full-width="false">
 
-<figure><img src="../.gitbook/assets/image (15).png" alt="Alarm Instances"><figcaption><p>Alarm Instances</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (66).png" alt="Alarm Instances"><figcaption><p>Alarm Instances</p></figcaption></figure>
 
 </div>
 
 * Support for cloning almost any thinger.io resource, from dashboards to data buckets, file storages, and projects.
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>Clone Resource Functionality</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (38).png" alt=""><figcaption><p>Clone Resource Functionality</p></figcaption></figure>
 
 * HTTP endpoints now support embedded NodeJS 🧑‍💻 scripts for custom payload processing when calling third-party services.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>HTTP Endpoints with custom NodeJS Payload processor</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (32).png" alt=""><figcaption><p>HTTP Endpoints with custom NodeJS Payload processor</p></figcaption></figure>
 
 **Improved**
 

@@ -14,7 +14,7 @@ This documentation provides information about the mobile app of the Thinger.io I
 
 Using this application it is possible to access the user account of the web console, this way all the devices registered automatically will be imported. Note that by entering the user credentials it is also possible to set the web domain of the instance you are working with, thus allowing access to accounts of private Thinger.io instances
 
-![](<../.gitbook/assets/image (365).png>)
+![](<../.gitbook/assets/image (356).png>)
 
 Working in this mode we can obtain useful information such as the connection status of the devices or the time when the last keep alive was received.
 
@@ -22,7 +22,7 @@ Working in this mode we can obtain useful information such as the connection sta
 
 It is also possible to import individual devices without logging into any user account by means of the "Device Tocken" feature, which allows sharing authorization privileges to work with the API of any device even if it belongs to another user account or it's connected to a different server instance. [The **Device Tokens** section of the documentation](https://docs.thinger.io/features/devices-administration#device-tokens) explains how to create and manage the permissions in the web console, and how to create a QR token that allows a simple and fast way to import devices into the Smartphone APP.&#x20;
 
-![deviceC token QR](../.gitbook/assets/devicec.png)
+![deviceC token QR](../.gitbook/assets/deviceC.png)
 
 To import devices using Tokens, go to the "Scanned" section of the APP by selecting it in the bottom of the interface. Then press the blue  `"+" Add button` and select one the way to introduce the device token from both options: Clipboard if the Device Token has been copied in textual mode or QR Scanner if is possible to show the QR image on another screen. &#x20;
 

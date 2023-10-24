@@ -69,7 +69,7 @@ The CC3000 chip from Texas Instruments was one of the first low-cost WiFi chips 
 
 So for this module is required to have installed the **Adafruit CC3000 Libraries**, as they are directly used by the thinger client. You can install it directly from the Arduino Library Manager by searching `cc3000`.
 
-![Install CC3000 Arduino Libraries](<../.gitbook/assets/image (423).png>)
+![Install CC3000 Arduino Libraries](<../.gitbook/assets/image (268).png>)
 
 The following example will allow connecting your Arduino device with the CC3000 module to the cloud platform in a few lines. Just modify the `arduino_secrets.h` file with your own information.
 
@@ -174,7 +174,7 @@ For using Arduino Yun, the device must be connected to a network with Internet, 
 
 The Arduino MKR1000 is a microcontroller based on the Atmel ATSAMW25 SoC (System on Chip), that is part of the SmartConnect family of Atmel Wireless devices, specifically designed for IoT projects and devices. A good 32 bit computational power similar to the Zero board, the usual rich set of I/O interfaces, low power WiFi with a Cryptochip for secure communication, and the ease of use of the Arduino Software (IDE) for code development and programming. All these features make this board the preferred choice for the emerging IoT battery-powered projects in a compact form factor.
 
-![](../.gitbook/assets/arduino\_mkr1000.png)
+![](../.gitbook/assets/Arduino\_MKR1000.png)
 
 The following example will allow connecting the MKR1000 device to the cloud platform in a few lines using the WiFi interface. Just modify the `arduino_secrets.h` file with your own information.
 
@@ -237,7 +237,7 @@ For using MKR1000 over the default TLS/SSL connection it is required to install 
 
 The Arduino MKR WiFi 1010 is the easiest point of entry to basic IoT and pico-network application design. Whether you are looking at building a sensor network connected to your office or home router, or if you want to create a BLE device sending data to a cellphone, the MKR WiFi 1010 is your one-stop-solution for many of the basic IoT application scenarios. The board's main processor is a low power Arm® Cortex®-M0 32-bit SAMD21, like in the other boards within the Arduino MKR family. The WiFi and Bluetooth® connectivity is performed with a module from u-blox, the NINA-W10, a low power chipset operating in the 2.4GHz range. On top of those, secure communication is ensured through the Microchip® ECC508 crypto chip. Besides that, you can find a battery charger, and a directionable RGB LED on-board.
 
-![Arduino MKR1010](<../.gitbook/assets/image (426).png>)
+![Arduino MKR1010](<../.gitbook/assets/image (269).png>)
 
 The following example will allow connecting the MKR1010 device to the cloud platform in a few lines using the WiFi interface. Just modify the `arduino_secrets.h` file with your own information.
 
@@ -391,7 +391,7 @@ For using Arduino 33 IoT over the default TLS/SSL connection it is required to i
 
 The brain of the board is the Raspberry Pi RP2040 silicon; a dual-core Arm Cortex M0+ running at 133MHz. It has 264KB of SRAM, and the 16MB of flash memory is off-chip to give you extra storage. But what’s really exciting is the on-board connectivity options. The hugely popular and highly adaptable u-blox NINA-W102 radio module is on there to make this a true IoT champion. It’s got on-board, built-in sensors to turn your builds into powerhouse projects, too. Microphone and motion sensing add a depth of possibilities that’s almost impossible to find in a board of this size. The Arduino Nano RP2040 Connect is the premium choice for RP2040 devices, and the perfect option for upgrading your projects and unlocking the potential of new ones.
 
-![Arduino Nano RP2040](<../.gitbook/assets/image (418).png>)
+![Arduino Nano RP2040](<../.gitbook/assets/image (285).png>)
 
 {% hint style="warning" %}
 The integration with Thinger.io requires downloading an additional library called "Arduino WiFiNINA" that allows communicating with the U-BLOX WiFi module.
@@ -465,7 +465,7 @@ Portenta H7 simultaneously runs high level code along with real time tasks. The 
 
 H7's main processor is the dual core STM32H747 including a Cortex® M7 running at 480 MHz and a Cortex® M4 running at 240 MHz. The two cores communicate via a _Remote Procedure Call_ mechanism that allows calling functions on the other processor seamlessly.
 
-![Arduino Portenta H7](<../.gitbook/assets/image (421).png>)
+![Arduino Portenta H7](<../.gitbook/assets/image (313).png>)
 
 {% tabs %}
 {% tab title="ArduinoPortentaH7.ino" %}

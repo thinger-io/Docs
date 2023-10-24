@@ -8,11 +8,11 @@ Thinger.io server will compare the location of the device, create alerts accordi
 
 ### Creating new geofence
 
-![](<../.gitbook/assets/image (341).png>)
+![](<../.gitbook/assets/image (357).png>)
 
 Each defined geofence will create in the lower panel a profile that will allow to configure its behavior. The next image shows the configuration options for the geofences created above for each situation in which any device can be located
 
-![](<../.gitbook/assets/image (331).png>)
+![](<../.gitbook/assets/image (373).png>)
 
 * **name**: Identification of the geofence area
 * **On Enter**: Allows selecting an endpoint that will be called automatically when the devices just **entered** the area, I.e. when the last position was out of the border and the new position is into the border.&#x20;
@@ -24,13 +24,13 @@ Each defined geofence will create in the lower panel a profile that will allow t
 
 Note that, when a new geofence is created, the device (or each device of the type/group) will obtain two properties with the geofences configuration. These properties can be checked or edited in the device (Asset/group) properties section as shown below:
 
-![](<../.gitbook/assets/image (363).png>)
+![](<../.gitbook/assets/image (401).png>)
 
 ### Configuring Geofence output
 
 Geofences output can be configured for each of the four possible states (in, out, in, out) through the lower menu, where the endpoint profiles created in the account can be selected. The endpoints are very versatile tools that allow configuring messages that leave the platform in a simple way, being able to program automatic behaviors. You can learn much more about the endpoints feature on the [Endpoints section](endpoints-1.md) of this documentation.&#x20;
 
-![](<../.gitbook/assets/image (361).png>)
+![](<../.gitbook/assets/image (349).png>)
 
 To configure a geofence in a certain state you only need to click on the checkbox located on the left side and display the menu to choose the desired endpoint profile.
 
@@ -38,7 +38,7 @@ To configure a geofence in a certain state you only need to click on the checkbo
 
 The device code must be prepared to make use of the platform's location services. It is only necessary to include among the variables sent to the platform the corresponding cardinal coordinates with the identifiers in their payload `"lat", "lng"`, `"lat", "long"` or `"latitude", "longitude"` as shown in the example of the callback of the HTTP devices:
 
-![](<../.gitbook/assets/image (362).png>)
+![](<../.gitbook/assets/image (379).png>)
 
 {% hint style="warning" %}
 The first release of this feature doesn't work with Thinger.io software client devices and MQTT devices.&#x20;

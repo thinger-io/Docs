@@ -8,7 +8,7 @@ This section describes the process to deploy a private Thinger.io Cloud instance
 
 Private cloud instances can be deployed with different licenses, depending on the project requirements, like host performance, bandwidth; or platform features like rebrands, custom domains, additional support,  plugins, etc. Once the cloud provider is selected, then it is necessary to select the desired license, as shown in the image below:
 
-![](<../../.gitbook/assets/image (392).png>)
+![](<../../.gitbook/assets/image (262).png>)
 
 This pricing includes the software license and all cloud expenses. Note that it is possible to select a monthly or yearly license with a great discount.&#x20;
 
@@ -29,7 +29,7 @@ The next table shows all the different features provided by each license as well
 
 Once the license has been selected, it is possible to customize the service with some options like additional users, support, custom domains, brands, etc. These options appers after selecting a plan, like shown in the figure below:
 
-![Instance license preferences](<../../.gitbook/assets/image (202).png>)
+![Instance license preferences](<../../.gitbook/assets/image (94).png>)
 
 These options are described in more detail in the following:
 
@@ -45,11 +45,11 @@ These options are described in more detail in the following:
 
 After configuring the selected license, the checkout process is really simple, just click on the "Deploy Instance" button, and wait for the checkout pop-up. In the new form, it is necessary to introduce your billing email (it can be different from the admin email) where the invoices will be sent:&#x20;
 
-![Billing email](<../../.gitbook/assets/image (238).png>)
+![Billing email](<../../.gitbook/assets/image (95).png>)
 
 After introducing the billing email, it is necessary to set the billing address. It is possible to set a VAT number if you are a registered company from the European Union in order to calculate the right taxes and build the invoice.
 
-![Billing address configuration](<../../.gitbook/assets/image (114).png>)
+![Billing address configuration](<../../.gitbook/assets/image (109).png>)
 
 Finally, it is necessary to select the payment method between Credit Card or Direct Debit, which allows the domiciliation of the payment with SEPA transferences. Once the payment process is finished, Thinger.io customer management system will automatically configure the cloud host and deploy the private server instance.&#x20;
 

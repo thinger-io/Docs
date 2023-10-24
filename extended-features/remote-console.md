@@ -4,7 +4,7 @@ description: Remote console for IoT devices
 
 # REMOTE CONSOLE
 
-Remote console is a unique Thinger.io feature to allow remote access on your devices. It allows to create web terminals to interact with the device like in a serial interface. It also provides features to create interactive terminals on any Arduino compatible device. 
+Remote console is a unique Thinger.io feature to allow remote access on your devices. It allows to create web terminals to interact with the device like in a serial interface. It also provides features to create interactive terminals on any Arduino compatible device.&#x20;
 
 This feature is specially useful for remote diagnosis, show logs on devices, manage device configuration, or any other functionality, as the console can be easily extended to include new commands.
 
@@ -12,11 +12,11 @@ This feature is specially useful for remote diagnosis, show logs on devices, man
 
 ## Web Serial Interface
 
-By default, the Thinger.io Console can work as a web serial interface, similar to the Arduino Serial Monitor where the device write logs to serial interface. 
+By default, the Thinger.io Console can work as a web serial interface, similar to the Arduino Serial Monitor where the device write logs to serial interface.&#x20;
 
 To use Thinger.io Console it is required to include the `ThingerConsole.h` file and create a instance over `thing` reference.
 
-```text
+```
 #include <ThingerConsole.h>
 
 ThingerConsole console(thing);
@@ -41,9 +41,9 @@ void loop() {
 
 When the terminal is connected in the Thinger.io console, the device will start to send the configured log. If there is no any terminal connected to the device, the device will skip sending any data over the wire.
 
-![Writing to Thinger.io web console](../.gitbook/assets/writing_to_web_serial.gif)
+![Writing to Thinger.io web console](<../.gitbook/assets/writing\_to\_web\_serial (1).gif>)
 
-It is possible to check if the console is connected, so the associated loging code can be omitted, which can be useful if the log involves doing some calculation, reading a sensor, etc. The above example can be improved adding an extra check 
+It is possible to check if the console is connected, so the associated loging code can be omitted, which can be useful if the log involves doing some calculation, reading a sensor, etc. The above example can be improved adding an extra check&#x20;
 
 ```cpp
 unsigned long last_log = 0;
@@ -67,7 +67,7 @@ If web console is not connected, the device will not send any data over the wire
 
 ### Reading from Console
 
-Reading from serial can be done in the same way it is done over Arduino `Serial` interface, for example, the following code sample will check if there is any data available using the `available` method on the console \(in the same way it is used on Arduino `Serial`\) , and will print back to the console:
+Reading from serial can be done in the same way it is done over Arduino `Serial` interface, for example, the following code sample will check if there is any data available using the `available` method on the console (in the same way it is used on Arduino `Serial`) , and will print back to the console:
 
 ```cpp
 void loop() {
@@ -81,7 +81,7 @@ void loop() {
 }
 ```
 
-![Reading from Thinger.io remote console](../.gitbook/assets/console_read.gif)
+![Reading from Thinger.io remote console](../.gitbook/assets/console\_read.gif)
 
 ## Interactive terminals
 
@@ -120,7 +120,7 @@ This will result in a prompt with an interactive terminal in the console, with t
 The function definition with the syntax `[&](int argc, char* argv[]{}`is a C++ lambda function, but it is possible to use any other`void function(int argc, char* argv[]){}`
 {% endhint %}
 
-#### Log Command Example 
+#### Log Command Example&#x20;
 
 There are some cases where commands require to be running during long periods, i.e., to print an ongoing log. In the following example, the command will print a sample log until the command is canceled or the console is closed.
 
@@ -141,13 +141,13 @@ To work with long-running commands it is required to frequently check the `comma
 To cancel a running command on the terminal just press Ctrl+C
 {% endhint %}
 
-![Log Command Example](../.gitbook/assets/iot_long_command_run.gif)
+![Log Command Example](../.gitbook/assets/iot\_long\_command\_run.gif)
 
-#### GPIO Command Example 
+#### GPIO Command Example&#x20;
 
 Some commands may need to accept arguments, i.e., turn on/off a given gpio, print a given string to a display, modify a threshold, etc. For this reason, all commands receive `argc` and `argv` parameters, like in any standard C/C++ main function. `argc` determines the number of arguments, and `argv` is an array of `char*` which holds all parsed parameters. Any command will receive at least one argument, which is the command name.
 
-In the following example, it is created a command to modify digital state of a given GPIO. This function accepts two parameters, which are the GPIO pin number and the desired state. 
+In the following example, it is created a command to modify digital state of a given GPIO. This function accepts two parameters, which are the GPIO pin number and the desired state.&#x20;
 
 ```cpp
 void setup() {
@@ -164,7 +164,7 @@ void setup() {
 }
 ```
 
-![GPIO Command Example](../.gitbook/assets/698jdrxvzx.gif)
+![GPIO Command Example](../.gitbook/assets/698JdrxVzx.gif)
 
 
 
@@ -186,13 +186,13 @@ void setup() {
 
 Once the command is executed it will prompt the user for its name, waiting until it is ready. After typing the name and pressing enter, then it will display the name with a hello.
 
-![Interactive Command Example](../.gitbook/assets/o9a763y2z7.gif)
+![Interactive Command Example](../.gitbook/assets/O9a763y2z7.gif)
 
 ### Terminal Prompt
 
 By default, when the interactive terminal is enabled it will show a prompt with the device identifier. In the following capture, it shows the `esp32` name which is the identifier for the device.
 
-![Default Console Prompt based on the device ID \(esp32\)](../.gitbook/assets/image%20%28429%29.png)
+![Default Console Prompt based on the device ID (esp32)](<../.gitbook/assets/image (291).png>)
 
 The prompt name can be modified by using the `set_prompt("my prompt")` method on the console instance. For example:
 
@@ -204,7 +204,7 @@ void setup(){
 
 Will result on a modified prompt with the `Arduino` name.
 
-![Custom Prompt](../.gitbook/assets/image%20%28432%29.png)
+![Custom Prompt](<../.gitbook/assets/image (289).png>)
 
 ### Default Commands
 
@@ -214,27 +214,25 @@ By default, Thinger.io adds some general utily commands.
 
 Help command will display all registered commands with an associated description.
 
-![Help command to see the registered commands](../.gitbook/assets/image%20%28431%29.png)
+![Help command to see the registered commands](<../.gitbook/assets/image (304).png>)
 
 #### Reboot command
 
-Thinger.io client implements a command that will reboot your device, as in a normal computer. 
+Thinger.io client implements a command that will reboot your device, as in a normal computer.&#x20;
 
-![Reboot command](../.gitbook/assets/image%20%28433%29.png)
+![Reboot command](<../.gitbook/assets/image (305).png>)
 
 #### Clear command
 
 It can be useful to clear the console sometimes, so, it is a clear console command to clear all screen content.
 
-![Clear Command](../.gitbook/assets/867dsm52ca.gif)
+![Clear Command](../.gitbook/assets/867dsM52ca.gif)
 
 ## SSH Connection
 
-Console can be accessed over the Thinger.io web console, but there is also a possibility for connecting devices over standard SSH connections from the Internet \(no local network required\). This feature is a work in progress and will be released soon as a plugin!
+Console can be accessed over the Thinger.io web console, but there is also a possibility for connecting devices over standard SSH connections from the Internet (no local network required). This feature is a work in progress and will be released soon as a plugin!
 
-![](../.gitbook/assets/eb2x26qtrh.gif)
-
-
+![](../.gitbook/assets/Eb2X26QTRh.gif)
 
 
 

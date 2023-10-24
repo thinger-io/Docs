@@ -56,7 +56,7 @@ void loop() {
 
 The ENC28J60 is a very cheap Ethernet controller that can be used with our Arduinos to extend its connectivity. The main advantage of this controller is that it is inexpensive, as you can find this module for a few dollars. The bad news is that all the TCP/IP stack, DNS features, and so on, must run in the microcontroller itself, so there is no enough space in stock Arduinos for building our program. This way, for integrating the thinger.io libraries in the sketch, it would be necessary to disable the DHCP protocol (that uses UDP under the hood), and assign a manual IP address. If this is OK for your project, or you have a compatible microcontroller with more resources (like ESP8266, Teensy, STM32F, etc), then this module can be a great option.
 
-![ENC28J60 Ethernet Module](../.gitbook/assets/enc28j60.jpg)
+![ENC28J60 Ethernet Module](../.gitbook/assets/ENC28J60.jpg)
 
 There are some libraries for managing this boards, but we will use [UIPEthernet](https://github.com/ntruchsess/arduino\_uip), as it provides an standard interface that is compatible with the stock Thinger libraries.
 

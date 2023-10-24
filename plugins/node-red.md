@@ -47,7 +47,7 @@ Node-RED is a development tool with two basic components: a "flow editor" that c
 
 The "Nodes" are the basic building blocks for creating flows. Each node contains its own configuration form and specific behavior, that can be accessed by double-clicking the block once it has been introduced in the web editor canvas. There are a few basic types of nodes:
 
-#### **Inject Nodes**   <img src="../.gitbook/assets/node_inject (1).png" alt="" data-size="original">&#x20;
+#### **Inject Nodes**   <img src="../.gitbook/assets/node_inject.png" alt="" data-size="original">&#x20;
 
 This node allows to automatically start a flow when an event is triggered, at regular intervals defined in the properties form or manually over the web editor. The message sent by these nodes has the payload and topic properties set.&#x20;
 
@@ -55,7 +55,7 @@ This node allows to automatically start a flow when an event is triggered, at re
 
 Node-RED counts with some nodes that allows working with the flow's payload using pre-configured tools or coding their behavior in JavaScript functions that can be created within the editor using a rich text editor. With this proposal, these nodes are provided with both input and output connectors.
 
-**Output and Debug Nodes**              <img src="../.gitbook/assets/node_debug (1).png" alt="" data-size="original">&#x20;
+**Output and Debug Nodes**              <img src="../.gitbook/assets/node_debug.png" alt="" data-size="original">&#x20;
 
 These nodes only have an input connector that allows extracting data from the flow to third parties, files, or debugs console in the web editor.
 
@@ -69,7 +69,7 @@ A flow is represented as a tab within the editor workspace and is the main way t
 
 The flow editor makes it easy to wire together flows using the wide range of nodes in the palette. Flows can be then deployed to the runtime just clicking into "debloy" button:&#x20;
 
-![](../.gitbook/assets/nodered\_deploy-button.png)
+![](<../.gitbook/assets/NodeRED\_deploy button (1).png>)
 
 ### Debug Console
 
@@ -89,7 +89,7 @@ In this section, it is described **how to configure Node-RED** "Thinger.io Nodes
 
 To make this configuration, just drag any Thinger.io Node to the canvas and open its properties form, then go to the last input, called "Server " and click into the edition button, which will open the Thinger-Server configuration menu.
 
-![](../.gitbook/assets/nodeconfiguration.png)
+![](../.gitbook/assets/nodeConfiguration.png)
 
 This form allows you to introduce the credentials of the specific Thinger.io instance address and authorization that is going to receive your Node-RED requests. However, it is important to take care of the next considerations in order to make a proper configuration:&#x20;
 
@@ -99,13 +99,13 @@ This form allows you to introduce the credentials of the specific Thinger.io ins
 * if you want to use a different Thinger.io Server or you aren't running Node-RED from a plugin, it will be necessary to **include its URL or IP Address** in the "Host" box and also a Thinger.io **Access Token with Admin-Access** privileges in the "Token" box, finally, SSL would be preferable in this case.&#x20;
 {% endhint %}
 
-![](../.gitbook/assets/server-configuration.png)
+![](<../.gitbook/assets/server configuration.png>)
 
 ## Thinger.io Nodes
 
 As it was explained in the beginning, this plugin has two purposes: Host a Node-RED server instance together with Thinger.io IoT server and improve their integration by including a set of custom nodes to simplify the extraction of data from Thinger.io IoT devices or calling other platform features. The next list contains a complete description of each node and its properties configuration:
 
-### Asset Iterator              <img src="../.gitbook/assets/asset-iterator (1).png" alt="" data-size="line">
+### Asset Iterator              <img src="../.gitbook/assets/asset-iterator.png" alt="" data-size="line">
 
 It is a **Function** Node that iterates over all the desired assets avaible on Thinger.io Platform given a filter. It is able to receive a JSON from Node-RED flow and automatically query the backend. This node is useful to execute operations over multiple assets at the same time.
 
@@ -221,7 +221,7 @@ Using the "Device Status Change" property of the Server Event Node, it is possib
 
 The next flow uses two Thinger.io Nodes, the first one is triggering the Device Disconnection Server Event that will throw a JSON formatted message with the device ID, the status and the timestamp of the change. The second Node allows calling the Endpoint profile to send the alert with the device information JSON attached so it is possible to custom the message to easily identify the problem.&#x20;
 
-![On device state change call DisconnectionAlert endpoint](<../.gitbook/assets/image (135).png>)
+![On device state change call DisconnectionAlert endpoint](<../.gitbook/assets/image (171).png>)
 
 This flow can be easily imported into your Node-RED workspace using the next JSON:
 
@@ -253,7 +253,7 @@ Note that his is an easy example that only retrieves data from just one MQTT dev
 {% tab title="GPS Geofences" %}
 Geofencing is an interesting IoT use case, with many applications in asset management, fleets or package tracking. The next flow shows how to monitor the location of any device to create an alert when it leaves an area specified with a Geofence Node. &#x20;
 
-![When device outside geofence call alert endpoint](<../.gitbook/assets/image (151).png>)
+![When device outside geofence call alert endpoint](<../.gitbook/assets/image (434).png>)
 
 Creating this integration with the "device\_location" property, it is possible to integrate any kind of device including Thinger.io Software Clients, Sigfox, TTN or even HTTP devices in a very simple way.
 
@@ -271,7 +271,7 @@ This flow can be easily imported into your Node-RED workspace using the next JSO
 {% tab title="Modify Incoming data" %}
 In some situations it is required to change the unit or metric of any variable, it is now possible to make this transformations before store data in a data bucket by use this Node-RED flow:
 
-![Receive device callback, convert units and store](<../.gitbook/assets/image (189).png>)
+![Receive device callback, convert units and store](<../.gitbook/assets/image (402).png>)
 
 &#x20;The configuration is quite simple, fist node retrieves the measurement of any device to be modified by the "function" node, that contains the codification that has been included below, and finally the "bucket write" node allows storing the transformed data.&#x20;
 

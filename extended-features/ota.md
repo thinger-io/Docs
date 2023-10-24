@@ -16,7 +16,7 @@ The update process is done over a **Visual Studio Code extension** that integrat
 
 Before working with this tool it is necessary to install and configure Visual Studio Code and the PlatformIO extension as explained on the [SDK SETUP](../sdk-setup/#visual-studio-code) section of the documentation. Then it is required to **install Thinger.io VSCode extension** directly from the Extension manager. Search for "Thinger.io" or [Checkout on Microsoft Marketplace](https://marketplace.visualstudio.com/items?itemName=thinger-io.thinger-io).&#x20;
 
-![Visual Studio Code Thinger.io Extension for MCU OTA ](<../.gitbook/assets/image (435).png>)
+![Visual Studio Code Thinger.io Extension for MCU OTA ](<../.gitbook/assets/image (255).png>)
 
 This extension will manage the OTA processes with some interesting features such as:&#x20;
 
@@ -32,7 +32,7 @@ This extension will manage the OTA processes with some interesting features such
 
 Before running the OTA it is necessary to configure the extension by accessing the VScode Extensions Manager and selecting the Extensions Settings option.
 
-![Thinger.io Visual Studio Code Extension for OTA updates](<../.gitbook/assets/image (439).png>)
+![Thinger.io Visual Studio Code Extension for OTA updates](<../.gitbook/assets/image (277).png>)
 
 * **Thinger.io Host**: Place here the URL of the Thinger.io Instance you are working with (if using a private instance, otherwise by default it will be backend.thinger.io).
 * **Thinger.io Port**: Specifies the connection port (443 by default).
@@ -46,7 +46,7 @@ The following image provides a token configuration example with the required per
 
 <div align="center">
 
-<img src="../.gitbook/assets/image (444).png" alt="Example Thinger.io Token Configuration for Visual Studio Code Extension">
+<img src="../.gitbook/assets/image (293).png" alt="Example Thinger.io Token Configuration for Visual Studio Code Extension">
 
 </div>
 
@@ -73,7 +73,7 @@ The general requirement to start working with OTA updates for a specific device 
 
 If everything is configured correctly it will be possible to start working with the Thinger.io extension via the new elements added to the bottom toolbar. There are two buttons that allow to select the target device to be flashed, and then compile and upload new firmware binaries.
 
-![Thinger.io Buttons on Visual Studio Code Toolbar](<../.gitbook/assets/image (446).png>)
+![Thinger.io Buttons on Visual Studio Code Toolbar](<../.gitbook/assets/image (318).png>)
 
 **Select Target Device** 🚀
 
@@ -99,7 +99,7 @@ To update your device over OTA, the first time it must be flashed from a serial 
 
 It is possible to clean the selected target device accessing the Visual Studio command Palette with `Ctrl` + `Shift` + `P`, and searching for `Thinger.io`
 
-![Clean Target Device](<../.gitbook/assets/image (445).png>)
+![Clean Target Device](<../.gitbook/assets/image (307).png>)
 
 ### ESP32 OTA
 

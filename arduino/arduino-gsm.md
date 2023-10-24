@@ -16,7 +16,7 @@ The Arduino MKR GSM 1400 takes advantage of the cellular network as a means to c
 
 The board's main processor is a low power Arm® Cortex®-M0 32-bit SAMD21, like in the other boards within the Arduino MKR family. The GSM / 3G connectivity is performed with a module from u-blox, the SARA-U201, a low power chipset operating in the de different bands of the cellular range (GSM 850 MHz, E-GSM 1900 MHz, DCS 1800 MHz, PCS 1900 MHz). On top of those, secure communication is ensured through the Microchip® ECC508 crypto chip. Besides that, you can find a battery charger, and a connector for an external antenna.
 
-![Arduino MKR GSM 1400](<../.gitbook/assets/image (422).png>)
+![Arduino MKR GSM 1400](<../.gitbook/assets/image (306).png>)
 
 The following example will allow connecting your Arduino GSM 1400 to the cloud platform in a few lines. Just modify the `arduino_secrets.h` file with your own information.
 
@@ -81,7 +81,7 @@ The board's main processor is a low power Arm® Cortex®-M0 32-bit SAMD21, like 
 
 This board is designed for global use, providing connectivity on LTE's Cat M1/NB1 bands 1, 2, 3, 4, 5, 8, 12, 13, 18, 19, 20, 25, 26, 28. Operators offering service in that part of the spectrum include: Vodafone, AT\&T, T-Mobile USA, Telstra, and Verizon, among others.
 
-![Arduino MRK NB 1500](<../.gitbook/assets/image (416).png>)
+![Arduino MRK NB 1500](<../.gitbook/assets/image (278).png>)
 
 The following example will allow connecting your Arduino MKR NB 1500 to the cloud platform in a few lines. Just modify the `arduino_secrets.h` file with your own information.
 

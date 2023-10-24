@@ -19,7 +19,7 @@ Note that this feature is reserved for Admin role accounts, so other users with 
 
 To configure a new proxy, just click the "Add Proxy" button and fill out the form according to the next instructions:&#x20;
 
-<figure><img src=".gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
 
 Starting from top, the Proxy Settings section contains the parameters that will help to identify the specific proxy profile, and configure its behavior to be adapted to each particular use case:&#x20;
 
@@ -31,7 +31,7 @@ Starting from top, the Proxy Settings section contains the parameters that will 
 
 The source configuration section allows specifying the port that will receive the connection from the external system.&#x20;
 
-<figure><img src=".gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
 
 The `Target configuration` shows the destiny of the data received at the source port. Note that depending on the selected protocol, these parameters will change:&#x20;
 
@@ -43,7 +43,7 @@ Data from `Source Port` will be sent to another TCP or UDP port accessible by th
 
 Data from the raw port will be sent to a third-party internet server:
 
-<figure><img src=".gitbook/assets/image (15) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (70).png" alt=""><figcaption></figcaption></figure>
 
 * **Target type** `Host Address`
 * **Target Address:** Host IP Address that will receive data from Thinger.io instance
@@ -54,7 +54,7 @@ Data from the raw port will be sent to a third-party internet server:
 
 the Data from raw port will be sent to a plugin port
 
-<figure><img src=".gitbook/assets/image (4) (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
 
 * **Target type** `plugin`
 * **Target Plugin:** To select one of the deployed plugins that is being executed in the server
@@ -65,7 +65,7 @@ the Data from raw port will be sent to a plugin port
 
 This option allows to retrieve data from a third-party service that is accessible by an IoTMP device vía TCP communication. This means that we can extract data from SQL, files or any other resource that is not supported by an HTTP connection. &#x20;
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 * **Target type** `Host Address`
 * **Target Username:** Account username that will own the connection
@@ -80,7 +80,7 @@ This proxy configuration allows connecting HTTP servers in the same network as t
 
 
 
-<figure><img src=".gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
 
 * **Target type** `Host Address`
 * **Target Address:** Host IP Address that will receive data from Thinger.io instance
@@ -97,5 +97,5 @@ After applying the required changes don't forget to press the blue "Uptade Proxy
 
 To delete one o multiple proxy profiles, select them from the list and click the remove button. Once a profile is deleted, it is not possible to restore it, so if in doubt, please consider using the "enable" switch located at the proxy settings menu.&#x20;
 
-<figure><img src=".gitbook/assets/image (10) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 

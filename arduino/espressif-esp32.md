@@ -4,17 +4,17 @@
 
 ESP32 is a series of low-cost, low-power system on a chip microcontrollers with integrated Wi-Fi and dual-mode Bluetooth. There are multiple modules based on this microcontroller that includes different kinds of antennas, pinouts and memory extensions. It is the successor to the ESP8266 microcontroller and is designed to be one of the most relevant IoT impulsor during the next years and there is a great diversity of variants that exploit its capacities together with other peripherals, integrating LoRa communication, audio amplifiers, LCD screens, etc.
 
-![ESP32 WROOM DEV MODULE](../.gitbook/assets/esp32.png)
+![ESP32 WROOM DEV MODULE](../.gitbook/assets/ESP32.png)
 
 ## Install On Arduino IDE
 
 This device can be programmed directly from the Arduino IDE by including the ESP32 core libraries with Arduino Boards Manager. For this step, you will need first to include [https://dl.espressif.com/dl/package\_esp32\_index.json](https://dl.espressif.com/dl/package\_esp32\_index.json) into `Additional Board Manager URLs` field in the Arduino preferences.
 
-![](../.gitbook/assets/esp32\_preferences.PNG)
+![](../.gitbook/assets/ESP32\_Preferences.PNG)
 
 Next, go to the Boards manager to install the ESP32 package. Search for the `esp32` and install the package **esp32 by Espressif Systems**
 
-![](../.gitbook/assets/esp32\_boardsmanager.PNG)
+![](../.gitbook/assets/esp32\_boardsManager.PNG)
 
 After this process you should be able to select this board on your Arduino IDE and start creating your IoT projects with Thinger.io.&#x20;
 

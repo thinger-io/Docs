@@ -61,7 +61,7 @@
   * [Grafana Plugin](plugins/grafana.md)
 * [PRODUCTS](products/README.md)
   * [Product Profile](products/product-profile/README.md)
-    * [Properties](products/properties.md)
+    * [Properties](products/product-profile/properties.md)
     * [Buckets](products/product-profile/buckets.md)
     * [API Resources](products/product-profile/api-resources.md)
     * [Scripts](products/product-profile/scripts.md)

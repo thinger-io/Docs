@@ -8,11 +8,11 @@ The product profile in Thinger.io serves as the central hub for configuring a pr
 
 It looks like in the following picture:
 
-![Product Profile Overview](<../../.gitbook/assets/image (456).png>)
+![Product Profile Overview](<../../.gitbook/assets/image (498).png>)
 
 The next subsections describe the different configurable options inside the Product Profile:
 
-* [Properties](../properties.md)
+* [Properties](properties.md)
 * [Buckets](buckets.md)
 * [API Resources](api-resources.md)
 * [Product Scripts](scripts.md)

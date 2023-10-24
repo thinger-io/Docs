@@ -38,17 +38,17 @@ Private instances can be deployed within minutes over the main cloud provider ho
 
 The administrator of a private instance of Thinger.io can edit the preferences of the subscription using the management portal, for this you must access the website [**https://thinger.chargebeeportal.com/**](https://thinger.chargebeeportal.com/) obtaining a One Time Password that will be sent to your email when you execute the request.
 
-![](<../../.gitbook/assets/image (316).png>)
+![](<../../.gitbook/assets/image (358).png>)
 
 This portal allows to manage every subscription preferences such as **changing the administration email** account**, modify payment details** and also editing the **subscription Addons** for each license that has been contracted on Thinger.io system:
 
-![](<../../.gitbook/assets/image (373).png>)
+![](<../../.gitbook/assets/image (355).png>)
 
 ### Addons contracting
 
 The image below shows the different Addons that can be contracted for a Grow License. Note that Maker subscriptions will not be able to select these options:
 
-![](<../../.gitbook/assets/image (315).png>)
+![](<../../.gitbook/assets/image (327).png>)
 
 * **Additional users**: This option allows to increase the amount of accounts (in addition to the admin account) in order to allow other users to log-in to your instance. It is possible to add as many accounts as required if no plugins are deployed, otherwise, each user plugin will increment the server computational load so it may require high a performance host in order to support their databases, plugins, etc.&#x20;
 * **Extended Support**: This option is recommended in order to obtain Thinger.io engineers development support with a 24-48h response time. All accounts can use the [community discussion](https://community.thinger.io) forum to obtain support from other community developers.
@@ -63,13 +63,13 @@ After modifying any of the subscription parameters Thinger.io server instance ne
 
 This process can be executed using the server administration panel as shown in the image below:&#x20;
 
-![](<../../.gitbook/assets/image (313).png>)
+![](<../../.gitbook/assets/image (408).png>)
 
 ### Manage Payment Methods
 
 It is possible to modify the payment method by accessing the section "Payment Methods" where you can choose to make payments with a Credit Card or Direct Debit that allows the domiciliation of the payment with SEPA transferences.
 
-![](<../../.gitbook/assets/image (377).png>)
+![](<../../.gitbook/assets/image (514).png>)
 
 ### Cancel subscription
 
@@ -81,4 +81,4 @@ To cancel a subscription perform the following steps:&#x20;
 2. Select the subscription you wish to cancel
 3. In the subscription administration panel click on the `cancel subscription` option.
 
-![](<../../.gitbook/assets/image (448) (1).png>)
+![](<../../.gitbook/assets/image (513).png>)
