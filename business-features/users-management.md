@@ -50,11 +50,11 @@ The creation of this User accounts are free of charge for Thinger.io privated in
 
 To start working with user's network, scroll down to the "Administration" section of the main menu and click the "User Accounts" tab to access the accounts management interface, that will display each user account profile and the `Add User` button that allows to create them as explained in the sections below.
 
-![](<.gitbook/assets/image (370).png>)
+![](<../.gitbook/assets/image (370).png>)
 
 Then, pressing the **`+ Add User`** button of the user administration list opens the `User details` form context in which the new user properties can be introduced:
 
-![](<.gitbook/assets/image (354).png>)
+![](<../.gitbook/assets/image (354).png>)
 
 * **Username**: Account username, this parameter also works as user identificator.&#x20;
 * **Role**: Allows to set the new profile as administrator, User or Project member.
@@ -69,19 +69,19 @@ When the form is completed, a new user profile will be added to the IoT server b
 
 Project members are light accounts created to share IoT resources with customers or other kind of  guests that only requires read or display capacities. That way, once a new member profile has been created, it is required to associate it with at least one project using the projects manager and set the priviledges that it will obtain.&#x20;
 
-![](<.gitbook/assets/image (400).png>)
+![](<../.gitbook/assets/image (400).png>)
 
 1\) go to **`Projects`** menu tab and select a previously created project to open the project details panel.&#x20;
 
-![](<.gitbook/assets/image (532).png>)
+![](<../.gitbook/assets/image (532).png>)
 
 2\)Then click the  blue  **`Project Members`**   button to show the project member list. Next image shows an empty project list in which a new member can be added:&#x20;
 
-![](<.gitbook/assets/image (359).png>)
+![](<../.gitbook/assets/image (359).png>)
 
 3\) Clicking the green **`+ Add member`** button allows selecting a user account profile from the server users network list.&#x20;
 
-![](<.gitbook/assets/image (551).png>)
+![](<../.gitbook/assets/image (551).png>)
 
 4\) Once a project member has been associated to the project, select the profile and then using the **`Allow`** section to provide permissions to the user or the **`Deny`** section to manage explicitly forbidden actions, it is possible to select the specific resources and operations that can be used by each account.&#x20;
 
@@ -89,7 +89,7 @@ Project members are light accounts created to share IoT resources with customers
 
 Only Admin accounts are able to create other user accounts. The amount of user accounts that can be created in an instance is defined during the contracting and deployment of the server. If this value is reached (or if no additional user account was contracted) an error message will appear as shown in the image below:
 
-![](<.gitbook/assets/image (270).png>)
+![](<../.gitbook/assets/image (270).png>)
 
 This threshold can be upgraded on "Grow" or "Startup" licenses by going to the management portal, which is only accessible with the administration account using the link below. To access this portal a one-time password will be required. It can be obtained by introducing the appropriate administration e-mail account in the text box.
 
@@ -99,11 +99,11 @@ This threshold can be upgraded on "Grow" or "Startup" licenses by going to the m
 
 The administration portal will show all the licenses that have been subscribed using this e-mail address, allowing to select the one that wants to be updated. Just select the one that wants to be modified and press the option "Edit Subscription", finally pressing the option "Addons", the portal will show all the available options and pricing in the Add Add-ons menu:
 
-![](<.gitbook/assets/image (480).png>)
+![](<../.gitbook/assets/image (480).png>)
 
 After selecting any of them, it is possible to select the amount just before checking out, note that the price  will be fixed per each unit, but it is possible to introduce a discount coupon that will be provided by Thinger.io team if your business model is quite intensive on any of these features in order to hold a cost-effective solution&#x20;
 
-![](<.gitbook/assets/image (417).png>)
+![](<../.gitbook/assets/image (417).png>)
 
 When the subscription begins updated, a confirmation email will be received with an extract of the subscription cost variations. &#x20;
 
@@ -113,13 +113,13 @@ After modifying any of the subscription parameters Thinger.io server instance ne
 
 This process can be executed using the server administration panel as shown in the image below:&#x20;
 
-![](<.gitbook/assets/image (408).png>)
+![](<../.gitbook/assets/image (408).png>)
 
 ## Remove User Account
 
 User accounts can also be deleted from the Server Instance, just selecting the checkbox in the left side of the user account profile and clicking the "Remove User" button.&#x20;
 
-![](<.gitbook/assets/image (143).png>)
+![](<../.gitbook/assets/image (143).png>)
 
 {% hint style="danger" %}
 Note that, when a user account is removed, all its IoT devices, buckets, configurations and personal information will be deleted and it won't be possible to restore them.

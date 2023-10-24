@@ -687,7 +687,7 @@ In this example it is created an advanced widget that will allow both display an
 
 ![Custom HTML Widget to update device properties](<../.gitbook/assets/image (523).png>)
 
-This directive has been created with the following two files from a [File Storage](../file-system.md). The interesting part on this example is how it interacts with the API to update the property values. Internally, the console exposes different classes witch represents different resources on a user account, i.e., buckets, devices, properties, etc. In this example, it is used the `DeviceProperty` class, which takes two parameters: `device`and `property`, which can be obtained from the source parameter passed to the directive:
+This directive has been created with the following two files from a [File Storage](../business-features/file-system.md). The interesting part on this example is how it interacts with the API to update the property values. Internally, the console exposes different classes witch represents different resources on a user account, i.e., buckets, devices, properties, etc. In this example, it is used the `DeviceProperty` class, which takes two parameters: `device`and `property`, which can be obtained from the source parameter passed to the directive:
 
 ```javascript
 $scope.api = new DeviceProperty({device: $scope.source.device_property.device, property: $scope.source.device_property.property});

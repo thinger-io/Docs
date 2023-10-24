@@ -57,8 +57,8 @@ Any individual Sigfox or LoraWAN device can be integrated using our API as HTTP 
 [sigfox.md](lpwan/sigfox.md)
 {% endcontent-ref %}
 
-{% content-ref url="plugins/the-things-network.md" %}
-[the-things-network.md](plugins/the-things-network.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 {% endtab %}
 
@@ -125,6 +125,6 @@ Dashboards, Data buckets or Device resources can be easily shared with third par
 
 Thinger.io platform can be complemented with many different Internet services using **Plugins** that can be found and deployed within seconds Just going to our marketplace and selecting it.
 
-{% content-ref url="plugins/" %}
-[plugins](plugins/)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}

@@ -20,17 +20,17 @@ A product inside Thinger.io is a way to define behaviors for a set of devices of
   * [**Scripts**](product-profile/scripts.md): All data related to a Product can be handled and processed over Scripts for processing payloads in different formats, converting units, creating virtual functions to generate calculated data, etc. There are endless possibilities.
 * [**Product Dashboard**](product-dashboard.md): Create a single dashboard layout for each Product. Each device will display this dashboard automatically with its own set of data from properties, and data buckets, and will be able to interact with the device using the unified API Resources. Example of a Shelly Plug S dashboard:
 
-<figure><img src="../.gitbook/assets/image (55).png" alt=""><figcaption><p>Product Dashboard example over a Shelly Plug S device</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (55).png" alt=""><figcaption><p>Product Dashboard example over a Shelly Plug S device</p></figcaption></figure>
 
 * [**Product Services**](product-dashboard.md): Devices using the IOTMP protocol can provide extended features aside from remote sensing and actuation. At this moment, it includes the possibility to access remotely to web services (using Linux Clients). For example, it will allow controlling the router/gateway admin panel; 3D Printer monitoring page; or any other Industrial product which includes a web frontend for its management. All without using any VPN. Here is an example of remote PLCs management, using in this case PiCtory from [Revolution Pi](https://revolutionpi.com/).
 
-<figure><img src="../.gitbook/assets/image (54).png" alt=""><figcaption><p>Product Remote Web Services - Kunbus Revolutiion Pi Example</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (54).png" alt=""><figcaption><p>Product Remote Web Services - Kunbus Revolutiion Pi Example</p></figcaption></figure>
 
 ## Examples
 
 Don´t want to read the whole documentation? Take a look at some of the available examples:
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><strong>Shelly Plug S</strong></td><td>Wi-Fi smart plug with power metering</td><td><a href="examples/shelly-plug-s.md">shelly-plug-s.md</a></td><td><a href="../.gitbook/assets/Shelly Plug Plus S IoT.jpg">Shelly Plug Plus S IoT.jpg</a></td></tr><tr><td><strong>Kunbus RevPi</strong></td><td>Open Source IPC based on Raspberry Pi</td><td><a href="examples/kunbus-revpi.md">kunbus-revpi.md</a></td><td><a href="../.gitbook/assets/kunbus revpi iot.jpg">kunbus revpi iot.jpg</a></td></tr><tr><td><strong>Shelly Plus 1 PM</strong></td><td>Wi-Fi-operated smart relay with Power Metering</td><td><a href="examples/shelly-plus-1-pm.md">shelly-plus-1-pm.md</a></td><td><a href="../.gitbook/assets/ShellyPlus1PM_9_1051x700.webp">ShellyPlus1PM_9_1051x700.webp</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><strong>Shelly Plug S</strong></td><td>Wi-Fi smart plug with power metering</td><td><a href="examples/shelly-plug-s.md">shelly-plug-s.md</a></td><td><a href="../../.gitbook/assets/Shelly Plug Plus S IoT.jpg">Shelly Plug Plus S IoT.jpg</a></td></tr><tr><td><strong>Kunbus RevPi</strong></td><td>Open Source IPC based on Raspberry Pi</td><td><a href="examples/kunbus-revpi.md">kunbus-revpi.md</a></td><td><a href="../../.gitbook/assets/kunbus revpi iot.jpg">kunbus revpi iot.jpg</a></td></tr><tr><td><strong>Shelly Plus 1 PM</strong></td><td>Wi-Fi-operated smart relay with Power Metering</td><td><a href="examples/shelly-plus-1-pm.md">shelly-plus-1-pm.md</a></td><td><a href="../../.gitbook/assets/ShellyPlus1PM_9_1051x700.webp">ShellyPlus1PM_9_1051x700.webp</a></td></tr></tbody></table>
 
 ## Marketplace
 

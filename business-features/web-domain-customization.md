@@ -10,21 +10,21 @@ This feature is only available in professional licenses, so only Medium, Large a
 
 Pressing "Add Domain" button in the Domains List interface allows to access a domain creation form context, in which it is possible to introduce the new web domain for the instance and description as shown in the image below:&#x20;
 
-![](<.gitbook/assets/image (101).png>)
+![](<../.gitbook/assets/image (101).png>)
 
 Before adding the new web domain, it is necessary to verify the disponibility and create a secure certificate that will provide secure communications with the web console. To make this, press the "Verify Domain" button.&#x20;
 
-![](<.gitbook/assets/image (165).png>)
+![](<../.gitbook/assets/image (165).png>)
 
 ### Redirecting the CNAME Entry&#x20;
 
 An important part of this process is to resolve the redirection between the new web domain and the private server's original web domain by going to the domain administration service.&#x20;
 
-![](<.gitbook/assets/image (159).png>)
+![](<../.gitbook/assets/image (159).png>)
 
 Once the redirection has been made and the DNS service has propagated the A register, it is possible to verify the domain using the Domain Details button.&#x20;
 
-![](<.gitbook/assets/image (138).png>)
+![](<../.gitbook/assets/image (138).png>)
 
 After this process the domain will be ready to be used in a rebranding profile, allowing users to access the private instance with the custom URL.
 
@@ -36,7 +36,7 @@ In the Domain List, clicking over the domain name allows opening the web domain 
 
 Any Web Console profile can be easily deleted just selecting it in the Domain List and clicking into the red "Remove Domain" button.
 
-![](<.gitbook/assets/image (115).png>)
+![](<../.gitbook/assets/image (115).png>)
 
 Note that if a web domain is associated to a web console rebranding, removing it will prevent access to the console.
 
