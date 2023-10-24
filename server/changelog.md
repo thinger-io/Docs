@@ -7,11 +7,12 @@ coverY: 0
 
 ## 5.3.6
 
-**Release Date: 19-09-2023**
+**Release Date: 24-10-2023**
 
 **Added**
 
 * Support for HTTP\_HOST and HTTPS\_HOST environment variables for HTTP requests over a proxy.
+* Support for disabling HOSTNAME resolutions on installed plugins, i.e., useful for plugins that requires querying external public IP (like FTP).
 
 **Improved**
 
