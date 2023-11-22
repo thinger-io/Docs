@@ -71,6 +71,7 @@
 * [WHITE-LABELING](business-features/web-console-rebranding.md)
 * [CUSTOM WEB DOMAIN](business-features/web-domain-customization.md)
 * [SERVER ADMINISTRATION](business-features/server-configuration/README.md)
+  * [License Setting](business-features/server-configuration/license-setting.md)
   * [Server Settings](business-features/server-configuration/settings.md)
   * [Cluster / Server Status](business-features/server-configuration/cluster-server-status.md)
   * [Server Logs](business-features/server-configuration/server-logs.md)
