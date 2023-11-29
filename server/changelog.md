@@ -5,6 +5,15 @@ coverY: 0
 
 # CHANGELOG
 
+## 5.3.7
+
+**Release Date: 30-11-2023**
+
+**Fixed**
+
+* Issue while displaying default project on member accounts.
+* Reset password not working for some email addresses.
+
 ## 5.3.6
 
 **Release Date: 24-10-2023**
