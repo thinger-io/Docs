@@ -13,7 +13,7 @@ Thinger.io instances support multi-tenant web console customizations. By means o
 * [x] Links, Email accounts, copyright
 
 {% hint style="info" %}
-Note that each web console rebrand needs to be supported by an individual web domain, which can be managed in the "Domain" section of the main menu.
+Note that each web console rebrand needs to be supported by an individual web domain, which can be managed in the "Domain" section of the main menu or use the default domain.
 {% endhint %}
 
 ## New console rebranding
@@ -22,37 +22,54 @@ Clicking into "Add Brand" button of the "Rebranding" section allows creating a n
 
 ![](<../.gitbook/assets/image (148).png>)
 
-If the instance subscription doesn't include any rebranding addon, the next message will be shown in the web console: &#x20;
+If the instance subscription doesn't include any rebranding add-on, the next message will be shown in the web console: &#x20;
 
-![](<../.gitbook/assets/image (486).png>)
+<figure><img src="../.gitbook/assets/brands_upgrade.png" alt=""><figcaption></figcaption></figure>
 
-To solve this situation visit "Subscribe Rebranding License" below on this documentation
+Check out the pricing page for information regarding the branding.
 
 ### Adding Branding Details
 
-If the Domain Name is valid, the form context will expand allowing to complete the branding details sections by editing the standard thinger.io values:
+If the Domain Name is valid, the form context will expand allowing to complete the branding details sections by editing the standard Thinger.io values:
 
-![](<../.gitbook/assets/image (149).png>)
+<figure><img src="../.gitbook/assets/brands_information.png" alt=""><figcaption></figcaption></figure>
 
-All the next elements are non-mandatory, so can be left empty and the system will remove their buttons from the main menu:
+All elements in this tab are option and will not be added to the web page if left empty.
 
-* **Domain Name:** Is the URL of the new rebranded web console. This Web Domain needs to be introduced in the system as is explained in the "Custom Web Domain" section.&#x20;
-* **Description:** Place here some additional information about the rebranding profile in order to identify it from the others.
-* **Page title:** Identificator for the web browser tabs
-* **Page URL:** To introduce link to the company, customer or project website
+* **Domain Name:** URL of the new rebranded web console. This Web Domain needs to be introduced in the system as is explained in the [web-domain-customization.md](web-domain-customization.md "mention") section.  The default domain may also be used.
+* **Description: A**dditional information about the rebranding profile in order to identify it from the others.
+* **Page title:** Name for the web browser tabs.
+* **Page URL:** Link to the company, customer or project website
+* **Meta Description:** Brief summary of a web page used as a meta field, displayed as parts of search engines.
+* **Meta Keywords:** Keywords used for search engine indexing.
+* **Share Image:** Image that appears in social networks and messaging apps when a user shares a link to the site.
 * **Company Name:** Name of the project, customer or company this rebranding belongs to.&#x20;
-* **Contact Email:** address for the main menu"Email" button that the users are going to contact for support.
+* **Contact Email:** Address for the main menu"Email" button that the users are going to contact for support.
 * **Twitter Account:**  Social media profile can be added by placing here the complete URL of the twitter profile.
-* **Copyright:** The bottom of the website includes a copyright declaration that can be customized here to protect the rebranding rights. &#x20;
+* **Copyright:** The bottom of the website includes a copyright declaration that can be customized here to protect the rebranding rights.&#x20;
+* **Community Links:** Shows the default community support link from Thinger.io.
+* **Server version:** Shows the server version on the bottom left corner.
 
-### Custom Logotypes
+### Login
 
-What really makes the difference when creating a rebranding is the use of custom logotypes. The second section of the branding editor allows changing each web console logotype separately. To obtain nice results, it is important to take care about the background color of each logotype in order to obtain enough contrast.
+The login page serves as the initial destination for users. Incorporating the company's distinctive image and colors enhances the overall platform experience.
 
-![](<../.gitbook/assets/image (84).png>)
+In this form we will be able to set the background color, or background image, with support for animated images. Select where the box should be located and its style.
+
+<figure><img src="../.gitbook/assets/brands_login_form.png" alt=""><figcaption></figcaption></figure>
+
+This settings will render a login page as he following:
+
+<figure><img src="../.gitbook/assets/brands_login.png" alt=""><figcaption></figcaption></figure>
+
+### Custom Logo
+
+What really makes the difference when creating a rebranding is the use of custom logotypes. The third tab of the branding editor allows changing each web console logo separately. To obtain good results, it is important to take care about the background color of each logotype in order to obtain enough contrast.
+
+<figure><img src="../.gitbook/assets/brands_logos.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-Logotypes need to be introduced in SVG or PNG file format with transparent background&#x20;
+Logotypes need to be introduced in PNG file format with transparent background&#x20;
 {% endhint %}
 
 ### **Custom Top Bar**
@@ -67,7 +84,7 @@ It is important also to take care of selected colors in order to obtain a nice c
 
 Thinger.io web console has been prepared with PWA Smartphone responsive features, allowing to create web apps with web console custom preferences that when used on the smartphone allow a user experience very similar to a common APP thanks to the creation of a custom logo in the main menu and hiding the web browser navigation bar.
 
-![](<../.gitbook/assets/image (552).png>)
+<figure><img src="../.gitbook/assets/brands_pwa.png" alt=""><figcaption></figcaption></figure>
 
 To use the PWA on a smartphone, simply click on the "add to the main menu" option of the browser menu. this functionality can be applied in any of the web console interfaces, even in shared dashboards
 
@@ -128,42 +145,4 @@ A rebranding profile can be easily deleted just selecting it in the Brand List a
 
 ## Increase Rebranding Limits&#x20;
 
-This feature is reserved for professional uses, so only Grow, Startup, and Business licenses can create custom rebranding profiles when the rebranding license is acquired during the subscription of the license or later using the subscription administration console. If the license didn't include any branding Addon, the next error will be shown during the creation of the new brand:&#x20;
-
-![](<../.gitbook/assets/image (439).png>)
-
-The next sections explain how to include the rebranding Addon with a Thinger.io private instance in both situations:  &#x20;
-
-### During the deployment
-
-Our deployment tool allows configuring the license with multiple Add-ons such as custom web domains, custom brands, or additional user accounts. It can be added to the license before the deployment process by means of the configuration table&#x20;
-
-![](<../.gitbook/assets/image (476).png>)
-
-Note that more than one branding or web domain profile can be added, as it is possible to create as many brandings as needed in order to adapt the look and feel of the web console to different IoT projects or customers. When the limit is reached, the web console will show the next error message "cannot create more domains" to inform that it is required to upgrade the number of custom domain profiles as explained in the section below.&#x20;
-
-### After the deployment
-
-If the amount of contracted brand profiles is reached, (or if no additional brands were contracted), it is possible to upgrade the threshold by going to the management portal using the link below.&#x20;
-
-{% hint style="success" %}
-[**Click here to access the subscription administration portal**](https://thinger.chargebeeportal.com/)
-{% endhint %}
-
-The administration portal only can be accessed by the instance administrator using his email address to obtain a one-time password. Once logged in, the administration portal will show all the licenses that have been subscribed to this e-mail address. Just select the license that wants to be modified and press the option "Edit Subscription", finally, pressing the option "Addons", the portal will show all the available options and pricing in the Add Add-ons menu:
-
-![](<../.gitbook/assets/image (480).png>)
-
-After selecting any of them, it is possible to select the amount just before checking out, note that the price  will be fixed per each unit, but it is possible to introduce a discount coupon that will be provided by Thinger.io team if your business model is quite intensive on any of these features in order to hold a cost-effective solution&#x20;
-
-![](<../.gitbook/assets/image (421).png>)
-
-When the subscription begins updated, a confirmation email will be received with an extract of the subscription cost variations.&#x20;
-
-{% hint style="warning" %}
-After modifying any of the subscription parameters Thinger.io server instance needs to be reset in order to update de configuration file values.&#x20;
-{% endhint %}
-
-This process can be executed using the server administration panel as shown in the image below:&#x20;
-
-![](<../.gitbook/assets/image (408).png>)
+This feature is reserved for professional uses, so only Medium and Large subscriptions can create custom rebranding profiles. If the subscription didn't include any branding, it may be upgraded to a superior plan by contacting us at support@thinger.io.
