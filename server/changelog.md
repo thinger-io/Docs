@@ -105,6 +105,7 @@ Once claim is completed, the process may request the configuration of the device
 * Move Swagger to an Angular component. New url https://console.thinger.io/swagger
 * Initial deprecation of InfluxDB v1
 * Widget add time series automatically selects a different name and color for each series.
+* Dashboard source switching now allows switching between bucket tags, with minimum and maximum selected tags.
 * Dashboard internals.
 
 **Fixed**
