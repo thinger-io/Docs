@@ -7,7 +7,7 @@ coverY: 0
 
 ## 6.0.0
 
-**Release Date:** XX-01-2024
+**Release Date:** 29-01-2024
 
 **Added**
 
@@ -110,11 +110,16 @@ Once claim is completed, the process may request the configuration of the device
 
 **Fixed**
 
+* Push button widget not working on mobile devices.
+* Real-time dashboards now work properly with  project members and shared dashboards.
+* Fixed the issue where the dashboard widget with device resource data source was showing offline, despite the widget receiving data.
 * Deletion event not triggered for nested resources, i.e., device property.
 * Creation event not triggered for property resources.
 * Data bucket storage from Products using device resource with fixed interval randomly stop writing.
 * Add Syncs to the tokens actions.
 * Dashboard editing not being disabled on non-active tabs.
+* Token configuration was missing the description field.
+* Delete resource from console sending parameters like index, count...
 
 #### Core
 
