@@ -5,11 +5,25 @@ coverY: 0
 
 # CHANGELOG
 
+## 6.1.0
+
+**Release Date:** XX-02-2024
+
+#### Added
+
+* Products can now configure bucket tags to be used on the automatic initialization. Fixes [https://github.com/thinger-io/thinger-server/issues/81](https://github.com/thinger-io/thinger-server/issues/81)
+* Brand PWA configuration includes support for uploading app icons directly. It also allow the configuration of both 'maskable' and 'any' icon purposes. Fixes [https://github.com/thinger-io/thinger-server/issues/84](https://github.com/thinger-io/thinger-server/issues/84)
+
+#### Improved
+
+* Device property selector for HTML widgets allow selecting any parent node (with nested values), or all property values by not selecting any field. Fixes [https://github.com/thinger-io/thinger-server/issues/16](https://github.com/thinger-io/thinger-server/issues/16)
+* Property PATCH now supports regular JSON for partial property updates. Fixes [https://github.com/thinger-io/thinger-server/issues/16](https://github.com/thinger-io/thinger-server/issues/16)
+
 ## 6.0.0
 
 **Release Date:** 29-01-2024
 
-**Added**
+#### **Added**
 
 * **Property Forms 📝** : Allow creating custom forms for improving the user experience when setting values inside a property, i.e., when configuring a device. The form can be defined at Product level, and it is currently supported by [Formly](https://formly.dev/).&#x20;
 
@@ -95,7 +109,7 @@ Once claim is completed, the process may request the configuration of the device
 
 <figure><img src="../.gitbook/assets/image (616).png" alt=""><figcaption><p>New Icon Picker</p></figcaption></figure>
 
-**Improved**
+#### **Improved**
 
 * Double click on Widget now opens the Widget editor!
 * Create and update properties performance
@@ -108,7 +122,7 @@ Once claim is completed, the process may request the configuration of the device
 * Dashboard source switching now allows switching between bucket tags, with minimum and maximum selected tags.
 * Dashboard internals.
 
-**Fixed**
+#### **Fixed**
 
 * Push button widget not working on mobile devices.
 * Real-time dashboards now work properly with  project members and shared dashboards.
