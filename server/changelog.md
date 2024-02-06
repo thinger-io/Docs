@@ -1,5 +1,7 @@
 ---
 description: All notable changes on Thinger.io will be documented here.
+cover: >-
+  https://images.unsplash.com/photo-1461749280684-dccba630e2f6?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw3fHxzb2Z0d2FyZXxlbnwwfHx8fDE3MDY4MzEwMjh8MA&ixlib=rb-4.0.3&q=85
 coverY: 0
 ---
 
@@ -12,12 +14,16 @@ coverY: 0
 #### Added
 
 * Products can now configure bucket tags to be used on the automatic initialization. Fixes [https://github.com/thinger-io/thinger-server/issues/81](https://github.com/thinger-io/thinger-server/issues/81)
-* Brand PWA configuration includes support for uploading app icons directly. It also allow the configuration of both 'maskable' and 'any' icon purposes. Fixes [https://github.com/thinger-io/thinger-server/issues/84](https://github.com/thinger-io/thinger-server/issues/84)
+* Brand PWA configuration includes support for uploading app icons directly from the filesystem. It also allow the configuration of both 'maskable' and 'any' icon purposes. Fixes [https://github.com/thinger-io/thinger-server/issues/84](https://github.com/thinger-io/thinger-server/issues/84)
+* Brand Share Image includes support for uploading an image directly from the filesystem.
+* Brand Logos are now served from web server instead of a JSON config, which should reduce load time.
+* Brand PWA "start\_url" to make the console installable on Chrome.
 
 #### Improved
 
 * Device property selector for HTML widgets allow selecting any parent node (with nested values), or all property values by not selecting any field. Fixes [https://github.com/thinger-io/thinger-server/issues/16](https://github.com/thinger-io/thinger-server/issues/16)
 * Property PATCH now supports regular JSON for partial property updates. Fixes [https://github.com/thinger-io/thinger-server/issues/16](https://github.com/thinger-io/thinger-server/issues/16)
+* Brand icons and logos are now served from filesystem instead of data url, improving page load.
 
 ## 6.0.0
 
