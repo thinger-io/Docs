@@ -10,3 +10,4 @@ To access the portal, you will need to obtain a one-time key, which will be sent
 
 <figure><img src="../../.gitbook/assets/image (585).png" alt="" width="375"><figcaption></figcaption></figure>
 
+Once logged in to the platform, select the instance you want to manage and follow the steps to upgrade or cancel the license.
