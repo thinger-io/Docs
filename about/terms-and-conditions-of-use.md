@@ -2,16 +2,16 @@
 
 ### A**)** **DEFINITIONS**
 
-For the purposes of these terms and conditions the following definitions apply:
+For the purposes of these terms and conditions, the following definitions apply:
 
 1. Web: The set of web pages that make up the website published under the domain name Thinger.io and its subdomains.
-2. User: Physical person that has provided personal information through any web form.
+2. User: Physical person who has provided personal information through any web form.
 3. Thinger.io: INTERNET OF THINGER S.L.
 4. Private Area: Pages of the Web which access is limited to the Users. Through this Area Users access to services provided by Thinger.io which are regulated in the relevant Terms and Conditions of use and partially in the Legal Notice.
 5. User, Developer or Customer: Companies or developers that subscribe to a Thinger.io platform license, either in one of its cloud or on-premise versions.
 6. Device or Object: Electronic device that has been made and programmed to collect, send and transmit information over the Internet.
 7. Data source: Any other source of information whose data may be acquired by Thinger.io.
-8. Cloud Platform: A set of Internet enabled resources managed by Thinger.io used to provide the service to the developers.
+8. Cloud Platform: A set of Internet-enabled resources managed by Thinger.io used to provide the service to the developers.
 
 ### **B) SCOPE OF APPLICATION**
 
@@ -34,35 +34,35 @@ You can contact us through the following email address: info@thinger.io
 
 ### **D) CONTRACTUAL FRAMEWORK**
 
-1. The contractual framework that establishes the parties rights and obligations is the following: All these documents are published on the Web and in the Private Area and must be expressly accepted by the User at the time of the creation of his user account.
+1. The contractual framework that establishes the parties' rights and obligations is the following: All these documents are published on the Web and in the Private Area and must be expressly accepted by the User at the time of the creation of his user account.
 2. Any subsequent amendments to these documents shall be notified to the User. Upon such notification, if the User continues to use the services, Thinger.io shall understand that he accepts such amendments and the new documents will replace the previous ones.
 3. In case of conflict or inconsistency between these documents, the following order of priority is established: The User, by accepting these Terms and Conditions of use, warrants he has enough capacity to do so and, therefore, to engage the services.
 
 ### **E) SERVICES**
 
-Thinger.io provides to the User a technologic**al** platform accessible via private area. In addition, Thinger.io will offer the following services to its customers from the moment a private instance is deployed:
+Thinger.io provides the User with a technologic**al** platform accessible via private areas. In addition, Thinger.io will offer the following services to its customers from the moment a private instance is deployed:
 
-1. **Technical support:** Technical Support Service can be subscribed during the service contract or later by using the subscription administration portal. This service provides support services to Users only with respect to the use of the Private Area and do not includes support to any other third party service integrated with the platform.
+1. **Technical support:** Technical Support Service can be subscribed during the service contract or later by using the subscription administration portal. This service provides support services to Users only with respect to the use of the Private Area and do not include support to any other third-party service integrated with the platform.
 2. **System updates:** Thinger.io is a tool in constant growth, our developers are working to increase the integration and processing capabilities, as well as to maintain the correct functioning of the features and security protocols used in the software.
 3. **Notification or Complaint Procedure:** To report or complain about any event, the User must notify Thinger.io via e-mail to info@thinger.io. In the e-mail the User must clearly include a description of the fact denounced or notified. In case of a complaint, the User must also include all documentation or information required to identify the complainant, the respondent and the object of the complaint and which shall prove the infringement allegedly committed.
-4. **Additional information request**: Procedure for requesting specific information on the operation and processes carried out by Thinger.io shall be requested via e-mail to info@thinger.io by a client registered on the platform. Thinger.io reserves the right to accept this request and to bill the process as a professional consulting service.\
+4. **Additional information request**: The procedure for requesting specific information on the operation and processes carried out by Thinger.io shall be requested via e-mail to info@thinger.io by a client registered on the platform. Thinger.io reserves the right to accept this request and to bill the process as a professional consulting service.\
    \
    Likewise, the customer acquires a series of responsibilities that must be diligently fulfilled to guarantee the continuity of the relationship with the supplier:\
 
 5. **User obligations related to Cloud Platform:** By accepting the Terms and Conditions of use and by using the Developer Console, the user undertakes to: If during the service usage, Thinger.io detects the existence of malicious software, Thinger.io shall suspend the User's account. Such suspension shall be subject to the conditions of User Suspension clause.
-6. **Limitations on the use and on the content of the services:** Your compliance with any and all applicable laws and regulations is a condition of your access to and use of the Service. You agree that you will not engage in fraudulent or deceptive practices and will not provide products and services to SDNs from the above-mentioned sanctions list, terrorists, extremists and all other intellectual legal or semi-legal entities, when using the Service. Regarding the contents of other Users to which the User gets access, he shall only use and disseminate such content under the conditions specified below.&#x20;
-7. **Any use of this content requires to identify the author:** Modification of this content is not allowed to create a derivative work. Neither the content published by User, nor the contents to which he could link will be reviewed by Thinger.io. However, in the event that any User would denounce those contents or Thinger.io would detect they violate these Terms and Conditions of use, Thinger.io shall proceed in accordance with the provisions for the Suspension of Users.\
+6. **Limitations on the use and on the content of the services:** Your compliance with any and all applicable laws and regulations is a condition of your access to and use of the Service. You agree that you will not engage in fraudulent or deceptive practices and will not provide products and services to SDNs from the above-mentioned sanctions list, terrorists, extremists and all other intellectual legal or semi-legal entities when using the Service. Regarding the contents of other Users to which the User gets access, he shall only use and disseminate such content under the conditions specified below.&#x20;
+7. **Any use of this content requires to identify the author:** Modification of this content is not allowed to create a derivative work. Neither the content published by User, nor the contents to which he could link will be reviewed by Thinger.io. However, in the event that any User denounces those contents or Thinger.io detects they violate these Terms and Conditions of use, Thinger.io shall proceed in accordance with the provisions for the Suspension of Users.\
    Regarding all of the Services, the User agrees to: When a User detects any violation of the requirements of this section may notify Thinger.io according to the Notification or Complaint Procedure.
 
 ### F) PAYMENT TERMS
 
-1. By subscribing to the service, the customer agrees to pay the recurring monthly fee for the use (“Service fee”). While using the Service you consent to pay by card or Paypal.&#x20;
-2. Customer's obligation to pay is non-cancellable while and for use of the service. Thinger.io's measurement of Customer's use of the service is final and never can be considered as partial.
-3. Subscriptions to Thinger.io Platform service can be made on a monthly or yearly basis. The service will be charged at the same intervals according to the price indicated in our pricing list. The initial charge will be made at the time you create your private instance. subscription will automatically renew for additional period until terminated.&#x20;
+1. By subscribing to the service, the customer agrees to pay the recurring monthly fee for the use (“Service fee”). As long as the subscription is active, the customer agrees to receive recurring charges via credit card or PayPal.&#x20;
+2. The customer's obligation to pay is non-cancellable while and for use of the service. Thinger.io's measurement of the Customer's use of the service is final and never can be considered as partial.
+3. Subscriptions to Thinger.io Platform service can be made on a monthly or yearly basis. The service will be charged at the same intervals according to the price indicated in our pricing list. The initial charge will be made at the time you create your private instance. subscription will automatically renew for an additional period until terminated.&#x20;
 4. All Subscription Fees are non-refundable.&#x20;
-5. Taxes: Customer is responsible for any taxes, and the customer will pay for the Services without any reduction in taxes. If required, Thinger.io may provide the Certificate of Tax Residency to avoid double taxation.
-6. **Disputes**: Invoice disputes must be submitted before the payment due date. If the disputed invoice has not yet been paid, Thinger.io may apply the credit memo amount to the disputed invoice and Customer will be responsible for paying the resulting net balance due on that invoice. To the fullest extent permitted by law, Customer waives all claims relating to Service fee unless claimed within 60 (sixty) days after the invoice date. Thinger.io does not refund the Service fee. Refunds (if any) are at our discretion and will only be in the form of credit for the Service. Nothing in this Agreement obligates Thinger.io, Inc. to extend credit to any party.
-7. **Late payments**: Delays on payment will cause the customer account suspension and further termination for breach of this Agreement. Unless otherwise agreed with the Customer, all applicable Service fees should be paid without any requirement to provide a purchase order number on thinger.io's invoice (or otherwise).
+5. Taxes: The customer is responsible for any taxes, and the customer will pay for the Services without any reduction in taxes. If required, Thinger.io may provide the Certificate of Tax Residency to avoid double taxation.
+6. **Disputes**: Invoice disputes must be submitted before the payment due date. If the disputed invoice has not yet been paid, Thinger.io may apply the credit memo amount to the disputed invoice and the Customer will be responsible for paying the resulting net balance due on that invoice. To the fullest extent permitted by law, Customer waives all claims relating to Service fee unless claimed within 60 (sixty) days after the invoice date. Thinger.io does not refund the Service fee. Refunds (if any) are at our discretion and will only be in the form of credit for the Service. Nothing in this Agreement obligates Thinger.io, Inc. to extend credit to any party.
+7. **Late payments**: Delays on payment will cause the customer account to be suspended and further termination for breach of this Agreement. Unless otherwise agreed with the Customer, all applicable Service fees should be paid without any requirement to provide a purchase order number on thinger.io's invoice (or otherwise).
 
 ### G) GENERAL
 
@@ -70,7 +70,7 @@ Thinger.io provides to the User a technologic**al** platform accessible via priv
 
 1. **Governing Law:** This Agreement shall be governed by and construed in accordance with the laws of the kingdom of Spain.
 2. **Arbitration:** Any controversy or claim arising out of or relating to this Agreement, or the breach thereof, shall be settled exclusively by arbitration in Madrid, Spain in accordance with the Commercial Arbitration Rules of the Kingdom of Spain in effect, and judgment upon the award rendered by the arbitrator(s) may be entered in any court having jurisdiction thereof.
-3. **Suspension of Users:** Thinger.io reserves the right to suspend the service:Thinger.io shall study the notification received from a third party, conducting checks it deems appropriate. The suspension shall last from receipt of the notification until Thinger.io has determined the veracity of the statements made by a User. In the event that Thinger.io concluded that allegations made by a User with respect to another are truthful, it will terminate the User's account. Otherwise, the suspension will be canceled. \
+3. **Suspension of Users:** Thinger.io reserves the right to suspend the service:Thinger.io shall study the notification received from a third party, conducting checks it deems appropriate. The suspension shall last from receipt of the notification until Thinger.io has determined the veracity of the statements made by a User. In the event that Thinger.io concludes that allegations made by a User with respect to another are truthful, it will terminate the User's account. Otherwise, the suspension will be canceled. \
    While the suspension is taking place, all the information regarding the User shall be blocked, not being accessed by any other User.
 4. **Termination of Service:** The Terms and Conditions of use may be terminated when one of the following events occurs: After repeated collection attempts the subscription amount is not being paid. A service that has been suspended due to malicious use of the platform, the customer has not been notified of the rectification of such use. Or when the customer cancels the subscription through the administration portal ([https://thinger.chargebeeportal.com/portal/v2/](https://thinger.chargebeeportal.com/portal/v2/)). Note that, in order to protect the integrity of the deployed infrastructures, cancellation requests will not be handled by e-mail or phone call, as Thinger.io cannot verify the authenticity of the requester.\
    \
