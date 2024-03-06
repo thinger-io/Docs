@@ -51,7 +51,7 @@
 
 ## BUSINESS FEATURES
 
-* [PLUGINS MARKETPLACE](https://marketplace.thinger.io/)
+* [PLUGINS MARKETPLACE](business-features/plugins-marketplace.md)
 * [PRODUCTS](business-features/products/README.md)
   * [Product Profile](business-features/products/product-profile/README.md)
     * [Properties](business-features/products/product-profile/properties.md)
