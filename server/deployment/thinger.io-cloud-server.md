@@ -33,7 +33,7 @@ Additionally, all these subscriptions provide:
 
 After selecting the license and completing the payment process, you will receive an email containing a link to a page where you can choose the desired base hostname and deployment region.
 
-![Instance license preferences](<../../.gitbook/assets/image (94).png>)
+![Instance license preferences](../../.gitbook/assets/cloud\_configuration.png)
 
 These options are described in more detail in the following:
 
