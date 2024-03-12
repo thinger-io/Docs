@@ -9,17 +9,17 @@ Thinger.io IoT instances can be deployed on-premise or on any kind of cloud or l
 On-premise instances can be deployed with different licenses, depending on the project requirements, mainly in terms of platform features like rebrands, custom domains, additional support, plugins, etc. License codes can be purchased [here](https://pricing.thinger.io).\
 
 
-|                      | MEDIUM                             | LARGE                                | PERPETUAL                         |
-| -------------------- | ---------------------------------- | ------------------------------------ | --------------------------------- |
-| **Devices**          | 1000                               | 2500                                 | Unlimited                         |
-| **Plugins**          | 3                                  | 5                                    | 5                                 |
-| **Multi-tenant**     | Up to 5                            | Up to 15                             | Single                            |
-| **Features**         | Business                           | Business                             | Business                          |
-| **White-labels**     | 1                                  | 5                                    | 1                                 |
-| **MQTT Support**     | ✓                                  | ✓                                    | ✓                                 |
-| **Guest accounts**   | Unlimited                          | Unlimited                            | Unlimited                         |
-| **Support**          | Extended Support Available (Paid)  | Extended Support Available (Paid)    | Extended Support Available (Paid) |
-| **Recommended use**  | Business B2B or B2B2C IoT product  | Consultancies with multiple projects | Companies without limits          |
+| Features                  | MEDIUM                             | LARGE                                | PERPETUAL                         |
+| ------------------------- | ---------------------------------- | ------------------------------------ | --------------------------------- |
+| **Devices**               | 1000                               | 2500                                 | Unlimited                         |
+| **Plugins**               | 3                                  | 5                                    | 5                                 |
+| **Multi-tenant**          | Up to 5                            | Up to 15                             | Single                            |
+| **Extended** **Features** | Business                           | Business                             | Business                          |
+| **White-labels**          | 1                                  | 5                                    | 1                                 |
+| **MQTT Support**          | ✓                                  | ✓                                    | ✓                                 |
+| **Guest accounts**        | Unlimited                          | Unlimited                            | Unlimited                         |
+| **Support**               | Extended Support Available (Paid)  | Extended Support Available (Paid)    | Extended Support Available (Paid) |
+| **Recommended use**       | Business B2B or B2B2C IoT product  | Consultancies with multiple projects | Companies without limits          |
 
 ### 2.  Checkout and payment options
 
