@@ -9,7 +9,7 @@ coverY: 0
 
 ## 6.1.0
 
-**Release Date:** XX-03-2024
+**Release Date:** March 2024
 
 #### Added
 
@@ -43,7 +43,7 @@ coverY: 0
 
 ## 6.0.0
 
-**Release Date:** 29-01-2024
+**Release Date:** 11-03-2024
 
 #### **Added**
 
