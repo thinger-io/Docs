@@ -2,31 +2,28 @@
 
 ## Subscribing and Deploying On-premise Instances
 
-Thinger.io IoT instances can be deployed on-premise over any kind of cloud or local host, that way the user will have full control over the whole infrastructure. This section describes how to obtain an On-premise license and how to deploy a private Thinger.io On-premise instance within minutes. Just follow the next steps:
+Thinger.io IoT instances can be deployed on-premise or on any kind of cloud or local host, providing users with full control over the entire infrastructure. This license is particularly well-suited for enterprises that need to host their own data. This section outlines the process of obtaining an on-premise license and deploying a private Thinger.io on-premise instance within minutes.
 
 ### 1. Select the right license
 
 On-premise instances can be deployed with different licenses, depending on the project requirements, mainly in terms of platform features like rebrands, custom domains, additional support, plugins, etc. License codes can be purchased [here](https://pricing.thinger.io).\
 
 
-|                           | **MEDIUM**                         | **LARGE**                            | **UNLIMITED**            |
-| ------------------------- | ---------------------------------- | ------------------------------------ | ------------------------ |
-| **Hardware requirements** | 1 Cores, 1GB RAM                   | 2 Cores, 4GB RAM                     | Unlimited                |
-| **Devices/Assets**        | 1000                               | 2000                                 | Unlimited                |
-| **Plugins**               | 3                                  | 5                                    | Unlimited                |
-| **Multitenant**           | Up to 5                            | Up to 5                              | Unlimited                |
-| **Business Features**     | ✓                                  | ✓                                    | ✓                        |
-| **Rebranding**            | 1                                  | 5                                    | Unlimited                |
-| **Custom Domain**         | 1                                  | 5                                    | Unlimited                |
-| **MQTT Support**          | ✓                                  | ✓                                    | ✓                        |
-| **Guest accounts**        | Unlimited                          | Unlimited                            | Unlimited                |
-| **Extended support**      | Available                          | Available                            | ✓                        |
-| **HA Cluster**            |                                    |                                      | Available                |
-| **Recommended use**       | Business B2B or B2B2C IoT product  | Consultancies with multiple projects | Companies without limits |
+|                      | MEDIUM                             | LARGE                                | PERPETUAL                         |
+| -------------------- | ---------------------------------- | ------------------------------------ | --------------------------------- |
+| **Devices**          | 1000                               | 2500                                 | Unlimited                         |
+| **Plugins**          | 3                                  | 5                                    | 5                                 |
+| **Multi-tenant**     | Up to 5                            | Up to 15                             | Single                            |
+| **Features**         | Business                           | Business                             | Business                          |
+| **White-labels**     | 1                                  | 5                                    | 1                                 |
+| **MQTT Support**     | ✓                                  | ✓                                    | ✓                                 |
+| **Guest accounts**   | Unlimited                          | Unlimited                            | Unlimited                         |
+| **Support**          | Extended Support Available (Paid)  | Extended Support Available (Paid)    | Extended Support Available (Paid) |
+| **Recommended use**  | Business B2B or B2B2C IoT product  | Consultancies with multiple projects | Companies without limits          |
 
 ### 2.  Checkout and payment options
 
-After contacting our team you will receive an email with the link to set up the payment method using our subscription management tool which is always available [**on this link.**](https://thinger.chargebeeportal.com/portal/v2/login?forward=portal\_main) in order to make modifications to the subscription or the payment method.
+After payment is processed, you will receive an email with the link to set up begin the installation process and your license token.
 
 ### 3.  On-premise install
 

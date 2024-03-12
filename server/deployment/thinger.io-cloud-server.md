@@ -2,65 +2,61 @@
 
 ## Subscribing and Deploying a Cloud Instance
 
-This section describes the process to deploy a private Thinger.io Cloud instance within minutes by just accessing the [**Pricing Page**](https://pricing.thinger.io) (Cloud Pricing section) in the "PRICING" link from our [Web Home](https://thinger.io). This pricing is also a deployment system that allows to setup a private IoT Server instance within minutes, just following the next three steps:&#x20;
+This section describes the process to deploy a private Thinger.io Cloud instance within minutes by just accessing the [**Pricing Page**](https://thinger.io/pricing). This pricing is also a deployment system that will setup a private Thinger.io Server instance within minutes, just following the next three steps:&#x20;
 
 ### 1. Select a license
 
-Private cloud instances can be deployed with different licenses, depending on the project requirements, like host performance, bandwidth; or platform features like rebrands, custom domains, additional support,  plugins, etc. Once the cloud provider is selected, then it is necessary to select the desired license, as shown in the image below:
+Private cloud instances can be deployed with different licenses, depending on the requirements, like host performance, bandwidth or other platform features like branding, custom domains, additional support,  plugins, etc. Once the cloud provider is selected, then it is necessary to select the desired license, as shown in the image below:
 
-![](<../../.gitbook/assets/image (262).png>)
+![](../../.gitbook/assets/cloud\_pricing.png)
 
-This pricing includes the software license and all cloud expenses. Note that it is possible to select a monthly or yearly license with a great discount.&#x20;
+This pricing includes the software license and all cloud expenses. Note that yearly subscriptions offer a discount over the monthly one.&#x20;
 
 The next table shows all the different features provided by each license as well as a desirable purpose specification. It is possible to select one license and change it in the future using the [subscription management portal](https://thinger.chargebeeportal.com).&#x20;
 
-|                              | **SMALL**           | **MEDIUM**         | **LARGE**         | **UNLIMITED**      |
-| ---------------------------- | ------------------- | ------------------ | ----------------- | ------------------ |
-| **Devices**                  | Unlimited           | Unlimited          | Unlimited         | Unlimited          |
-| **Plugins**                  | 1                   | 3                  | 6                 | Unlimited          |
-| **Rebranding**               |                     | ✓                  | ✓                 | Included           |
-| **Custom Domain**            |                     | ✓                  | ✓                 | Included           |
-| **Multiple Account**         |                     | ✓                  | ✓                 | Included           |
-| **Extended support**         |                     | ✓                  | ✓                 | ✓                  |
-| **HA Cluster**               |                     |                    |                   |                    |
-| **Recommended network size** | Individual projects | <10 user accounts. | 10 to 50 accounts |  >50 user accounts |
+<table><thead><tr><th width="191"></th><th width="178">SMALL</th><th width="184">MEDIUM</th><th width="211">LARGE</th></tr></thead><tbody><tr><td><strong>Devices</strong></td><td>100</td><td>1000</td><td>2500</td></tr><tr><td><strong>Plugins</strong></td><td>1</td><td>3</td><td>5</td></tr><tr><td><strong>Multi-tenant</strong></td><td></td><td>✓ (Up to 5)</td><td>✓ (Up to 15)</td></tr><tr><td><strong>White-labels</strong></td><td></td><td>✓ (Up to 1)</td><td>✓ (Up to 5)</td></tr><tr><td><strong>Server size</strong></td><td>M1</td><td>M2</td><td>M3</td></tr><tr><td><strong>Features</strong></td><td>Extended</td><td>Business</td><td>Plus Business</td></tr><tr><td><strong>Support</strong></td><td>Community</td><td>Extended Support Available (Paid)</td><td>Extended Support Available (Paid)</td></tr><tr><td><strong>MQTT Support</strong></td><td>✓</td><td>✓</td><td>✓</td></tr><tr><td><strong>Daily Backups</strong></td><td>As a service</td><td>As a service</td><td>✓</td></tr></tbody></table>
+
+Additionally, all these subscriptions provide:
+
+* Unlimited Data Points, only limited by the underlying instance storage
+* Advanced Analytics, meaning that aggregation windows are provided
+
+#### Dedicated server
+
+<table><thead><tr><th width="128">Size</th><th width="113">CPU</th><th>RAM</th><th>Storage</th><th>Network Transfer</th></tr></thead><tbody><tr><td><strong>M1</strong></td><td>2</td><td>1GB</td><td>40GB SSD</td><td>2TB</td></tr><tr><td><strong>M2</strong></td><td>2</td><td>4GB</td><td>80GB SSD</td><td>4TB</td></tr><tr><td><strong>M3</strong></td><td>4</td><td>16GB</td><td>320GB SSD</td><td>6TB</td></tr></tbody></table>
+
+#### Additional features
+
+<table><thead><tr><th width="198"></th><th>Small</th><th>Medium</th><th>Large</th></tr></thead><tbody><tr><td>Dashboards</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>Data Buckets</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>Endpoints</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>Access Tokens</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>File Storages</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>Asset Management</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>Projects</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>Syncs</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>Claims</td><td>-</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>Products</td><td>1</td><td>5</td><td>10</td></tr><tr><td>Proxies</td><td>-</td><td>5</td><td>10</td></tr><tr><td>Oauth Clients</td><td>-</td><td>3</td><td>5</td></tr></tbody></table>
 
 ### 2.  Configure license
 
-Once the license has been selected, it is possible to customize the service with some options like additional users, support, custom domains, brands, etc. These options appers after selecting a plan, like shown in the figure below:
+After selecting the license and completing the payment process, you will receive an email containing a link to a page where you can choose the desired base hostname and deployment region.
 
 ![Instance license preferences](<../../.gitbook/assets/image (94).png>)
 
 These options are described in more detail in the following:
 
+* **E-mail**: This is the e-mail address that must be used when creating the Thinger.io account in the private instance deployed. It will be the main account with admin privileges, allowing to create (if contracted) new users, domains, brands, etc. It does not need to match the billing e-mail address.
+* **Hostname**: Enter the hostname for your private IoT instance. This hostname will always be accompanied by the subdomain "aws.thinger.io" to access your host.
 * **Region**: Cloud providers provides servers in different geographic locations. This option allows to select the closest region to your business or project in order to minimize latency between the instance and the devices, users consuming information, etc. It is recommended to select the closest region to the project location.
-* **Hostname**: Enter the hostname for your private IoT instance. This hostname will always be accompanied by the subdomain ".thinger.io" to access your host. It is possible to add custom domains selecting the additional domains option.
-* **Admin Email**: This is the email address that must be used when creating the Thinger.io account in the private instance deployed. It will be the main account with admin privileges, allowing to create (if contracted) new users, domains, brands, etc.
-* **Additional users**: This option allows to increase the amount of accounts (in addition to the admin account) in order to allow other users to log-in to your instance. It is possible to add as many accounts as required if no plugins are deployed, otherwise, each user plugin will increment the server computational load so it may require high a performance host in order to support their databases, plugins, etc.&#x20;
-* **Extended Support**: This option is recommended in order to obtain Thinger.io engineers development support with a 24-48h response time. All accounts can use the [community discussion](https://community.thinger.io) forum to obtain support from other community developers.
-* **Custom Domains**: It is the amount of different web domains that can be redirected to the same Private Instance. The instance will automatically provision and renew SSL certificates to support the new defined domains. Domains are required for different brands, as they are associated to the domain name.
-* **Custom Brands**: It is the amount of different console brands that can be created over the same instance. In each brand it is possible to customize some accent colors, logos, copyrights, contact emails, title, etc. Notice that each brand requires a custom domain, as the customization is done for each domain name.
 
-### 3. Checkout and payment options
+### 3. Instance deployment
 
-After configuring the selected license, the checkout process is really simple, just click on the "Deploy Instance" button, and wait for the checkout pop-up. In the new form, it is necessary to introduce your billing email (it can be different from the admin email) where the invoices will be sent:&#x20;
+After the configuration has been done, a launch process will execute to deploy your environment, and a progress bar will be shown to give feedback on the current status of the deployment.
 
-![Billing email](<../../.gitbook/assets/image (95).png>)
+![Billing email](../../.gitbook/assets/cloud\_deployment.png)
 
-After introducing the billing email, it is necessary to set the billing address. It is possible to set a VAT number if you are a registered company from the European Union in order to calculate the right taxes and build the invoice.
-
-![Billing address configuration](<../../.gitbook/assets/image (109).png>)
-
-Finally, it is necessary to select the payment method between Credit Card or Direct Debit, which allows the domiciliation of the payment with SEPA transferences. Once the payment process is finished, Thinger.io customer management system will automatically configure the cloud host and deploy the private server instance.&#x20;
+Once the process is done, you may follow the [Steps After Cloud Deployment](thinger.io-cloud-server.md#steps-after-cloud-deployment).
 
 ## Steps After Cloud Deployment
 
-The deployment process delays a few minutes. As soon as it has been completed, a confirmation email will be sent to the `Admin Email`configured in the checkout process, meaning that the server is completely ready to be used. To start working with it, just follow the next steps:
+As soon as the deployment process has been completed, a confirmation email will be sent to the `Admin E-mail` configured in the configuration process, meaning that the server is completely ready to be used. To start working with it, just follow the next steps:
 
 ### First Login
 
-1. Access the server by writing the configured domain in a web browser, for example: [https://acme.do.thinger.io](https://acme.do.thinger.io). This step should show you the Thinger.io login screen.
-2. Note that this server has never been accessed before, and it is a completely isolated instance so there is not any user account created. Then, it is necessary to click on `Create an account`button, and fill the form to create a new user profile using the `Admin Email` address provided while configuring the instance (any other address will not be authorized to sign up).
+1. Access the server by writing the configured domain in a web browser, for example: [https://acme.aws.thinger.io](https://acme.aws.thinger.io). This step should show you the Thinger.io login screen.
+2. Note that this server has never been accessed before, and it is a completely isolated instance so there is not any user account created. Then, it is necessary to click on `Create an account`button, and fill the form to create a new user profile using the `Admin E-mail` address provided while configuring the instance (any other address will not be authorized to sign up).
 3. After creating the new account it is possible to access the new server. It is not necessary to confirm the mail address.
 
 ### Device Connection
@@ -68,7 +64,7 @@ The deployment process delays a few minutes. As soon as it has been completed, a
 When working with a private Thinger.io Cloud Instance, it is necessary to point your devices to the newly created hostname. If you are using the [Arduino](../../arduino/) or [Linux](../../linux.md) client libraries, i.e., for Arduino, ESP8266, ESP32, Raspberry Pi, etc., you should add a definition on top of your code to point to your host. So, modify your sketch like this:
 
 ```
-#define THINGER_SERVER "acme.do.thinger.io"
+#define THINGER_SERVER "acme.aws.thinger.io"
 
 // the rest of your code goes here
 ```
