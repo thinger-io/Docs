@@ -73,11 +73,11 @@ Thinger.io is a platform in constant growth, our development team is continuousl
 * [x] Bucket tags
 * [x] Plugins common repository
 
-2023
+### 2023
 
 * [x] Alerts manager&#x20;
 * [x] Devices claim process
-* [ ] Custom form creator
+* [x] Custom form creator
 * [ ] Automation scheduler
 * [ ] COAP integration
 * [ ] Python software client
@@ -85,6 +85,8 @@ Thinger.io is a platform in constant growth, our development team is continuousl
 * [ ] Reporting tool
 * [ ] New web-APP console
 * [ ] Devices integration for our marketplace strategy&#x20;
+
+### 2024
 
 
 
