@@ -98,8 +98,8 @@
 ***
 
 * [ABOUT](about/README.md)
-  * [IoT Ecosystem](about/community.md)
-  * [Resources](about/resources.md)
+  * [Community & Social Links](about/community.md)
+  * [Branding](about/resources.md)
   * [Terms & Conditions](about/terms-and-conditions.md)
   * [Privacy Policy](about/privacy-policy.md)
   * [Service Level Agreement](about/service-level-agreement.md)
