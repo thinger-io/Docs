@@ -45,11 +45,7 @@ Each API Resource can define a target destination, where the incoming request pa
 
 The target options available are the following:
 
-* [**None**](api-resources.md#none)**:** The request will not reach any destination.
-* [**Device Resource**](api-resources.md#device-resource): The request will be forwarded to an IOTMP device resource.&#x20;
-* [**Device Property**](api-resources.md#device-property): The request will be forwarded to a Device Property.
-* [**Device Topic**](api-resources.md#device-topic): The request will be published on a given topic (MQTT).
-* [**Product Function**](api-resources.md#product-function): The request will be forwarded to a Product Function.
+<table><thead><tr><th width="184">Target</th><th>Description</th></tr></thead><tbody><tr><td>None</td><td>The request will not reach any destination.</td></tr><tr><td>Device Resource</td><td>The request will be forwarded to a connected IOTMP device resource.</td></tr><tr><td>Device Stream</td><td>The request will generate a device resource stream event that can be used by an event subscriber, or used within the product profile for writing to a data bucket, updating a property, and calling to an endpoint.</td></tr><tr><td>Device Property</td><td>The request will be forwarded to a Device Property.</td></tr><tr><td>Device Topic</td><td>The request will be published on a given topic (MQTT).</td></tr><tr><td>Device Function</td><td>The request will be forwarded to a Product Function.</td></tr></tbody></table>
 
 <figure><img src="../../../.gitbook/assets/image (51).png" alt=""><figcaption><p>Product - APi Request Configuration</p></figcaption></figure>
 

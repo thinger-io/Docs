@@ -9,37 +9,61 @@ coverY: 0
 
 ## 6.1.0
 
-**Release Date:** March 2024
+**Community Release Date:**  08-04-2024.
+
+**Private Servers Release Date:**  15-04-2024.
 
 #### Added
 
 * Brand PWA configuration includes support for uploading app icons directly from the filesystem. It also allow the configuration of both 'maskable' and 'any' icon purposes. Fixes [https://github.com/thinger-io/thinger-server/issues/84](https://github.com/thinger-io/thinger-server/issues/84)
+
+<figure><img src="../.gitbook/assets/image (617).png" alt="" width="375"><figcaption><p>PWA Images can be uploaded from filesystem</p></figcaption></figure>
+
 * Brand Share Image includes support for uploading an image directly from the filesystem.
+
+<figure><img src="../.gitbook/assets/image (618).png" alt="" width="374"><figcaption><p>Share Image can be uploaded from filesystem</p></figcaption></figure>
+
 * Brand Logos are now served from web server instead of a JSON config, which should reduce load time.
 * Brand PWA "start\_url" to make the console installable on Chrome.
-* Products can now be configured to resend device data to a given endpoint. For example, fetch a given resource every n seconds, or take data from a topic, and resend it to another service.ç
+* Products can now be configured to resend device data to a given endpoint. For example, fetch a given resource every n seconds, or take data from a topic, and resend it to another service.
+
+<figure><img src="../.gitbook/assets/image (619).png" alt="" width="375"><figcaption><p>Endpoint configuration fon product profile.</p></figcaption></figure>
+
 * Products can now configure bucket tags to be used on the automatic initialization. Fixes [https://github.com/thinger-io/thinger-server/issues/81](https://github.com/thinger-io/thinger-server/issues/81)
+
+<figure><img src="../.gitbook/assets/image (620).png" alt="" width="375"><figcaption><p>Data tags configuration on the Product bucket.</p></figcaption></figure>
+
+* Products can now handle Resource Streams, i.e., to create custom profiles for HTTP devices.
+
+<figure><img src="../.gitbook/assets/image (621).png" alt="" width="375"><figcaption><p>New Device Stream target on Product API Resources.</p></figcaption></figure>
+
 * Endpoint call event now provides context about the caller.
+
+<figure><img src="../.gitbook/assets/image (622).png" alt="" width="375"><figcaption><p>Endpoint call caller context</p></figcaption></figure>
 
 #### Improved
 
 * Add some resources cache for a better performance on massive endpoint calls and bucket writes.
-* HTTP devices has been migrated to a new connection schema where it is possible to log their statistics, like bytes sent, received, and connections.
+* HTTP devices has been migrated to a new connection schema where it is possible to log their statistics, like bytes sent, received, and connections, as any other MQTT or IOTMP device.
 * HTTP devices can be used now used inside dashboards with resources defined at product level.
 * Device property selector for HTML widgets allow selecting any parent node (with nested values), or all property values by not selecting any field. Fixes [https://github.com/thinger-io/thinger-server/issues/16](https://github.com/thinger-io/thinger-server/issues/16)
 * Property PATCH now supports regular JSON for partial property updates. Fixes [https://github.com/thinger-io/thinger-server/issues/16](https://github.com/thinger-io/thinger-server/issues/16)
 * Brand icons and logos are now served from filesystem instead of data url, improving page load.
 * Dashboard HTML widgets from external storage now longer requires public storage access. In case of members of a project, they will require read access to the storage.
 * Product properties, topics, resources, and functions can be generated now by calling a product function.&#x20;
-* Product payload editors are now using Monaco editor with some syntax color. Still under improvement to add variables and function on auto-completion.
 * Product bucket writes can now override tags values based on the write payload. Previously, tags like device were always being set by the product, discarding any "device" field present on the payload.
+* Compatibility with OpenSSL 3.0 on SSL certificate provisioning.
+* IP Geocoding automatic updates.
 
 #### Fixed
 
-* Fix Apex Charts widget colors not honoring time series color configuration.
+* Apex Charts widget colors not honoring time series color configuration.
 * Binary data on a product payload not processed correctly.
+* Visual Studio Code not opening the file storage correctly.
 * Products with just "run" resources where not displayed on the API explorer.
 * Product profile list for buckets, endpoints, auto provision and api resources were displaying always "Property" instead of the resource type.
+* Info page display on empty or restricted resources.
+* Statistics on sockets count.
 
 ## 6.0.0
 
