@@ -27,7 +27,7 @@ coverY: 0
 * Brand PWA "start\_url" to make the console installable on Chrome.
 * Products can now be configured to resend device data to a given endpoint. For example, fetch a given resource every n seconds, or take data from a topic, and resend it to another service.
 
-<figure><img src="../.gitbook/assets/image (619).png" alt="" width="375"><figcaption><p>Endpoint configuration fon product profile.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (619).png" alt="" width="375"><figcaption><p>Endpoint configuration on product profile.</p></figcaption></figure>
 
 * Products can now configure bucket tags to be used on the automatic initialization. Fixes [https://github.com/thinger-io/thinger-server/issues/81](https://github.com/thinger-io/thinger-server/issues/81)
 
