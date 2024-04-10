@@ -7,6 +7,30 @@ coverY: 0
 
 # CHANGELOG
 
+## 6.2.0
+
+**Community Release Date:**  XX-04-2024.
+
+**Private Servers Release Date:**  XX-04-2024.
+
+#### Added
+
+* Claims now support including additional projects on the claim process. This way, claimed resources can be added automatically to parent "global" projects that can be used to manage the resources with different profiles.
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Additional projects where claimed resources will be included on the claim process.</p></figcaption></figure>
+
+* Projects can be configured to limit bucket data access based on project devices. This functionality is useful for displaying aggregated data on the project dashboard or for restricting data access to project members. Additionally, this option can be set in the claim settings, ensuring that member projects are automatically created with this access limitation in place.
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Limit Bucket data option on Project settings.</p></figcaption></figure>
+
+**Improved**
+
+*   Templating system (used on products or endpoints) can now process placeholders with spaces.&#x20;
+
+    ```
+    {{ payload : FunctionName = 22 }}
+    ```
+
 ## 6.1.0
 
 **Community Release Date:**  08-04-2024.
