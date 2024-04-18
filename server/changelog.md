@@ -7,7 +7,7 @@ coverY: 0
 
 # CHANGELOG
 
-## 6.2.0
+## 6.2.1
 
 **Community Release Date:**  18-04-2024.
 
@@ -46,6 +46,8 @@ coverY: 0
 * Problem when removing nested resources, i.e., Bucket exports, Project Members.
 * Bucket exports should not display set projects and clone context actions.
 * Bucket exports not loading by default.
+* Apex Chart Widget preview preventing dashboard from being saved.
+* Apex Chart Widget series colors are not being updated when the widget has titles.
 
 ## 6.1.0
 
