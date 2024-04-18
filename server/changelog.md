@@ -9,9 +9,9 @@ coverY: 0
 
 ## 6.2.0
 
-**Community Release Date:**  XX-04-2024.
+**Community Release Date:**  18-04-2024.
 
-**Private Servers Release Date:**  XX-04-2024.
+**Private Servers Release Date:**  24-04-2024.
 
 #### Added
 
@@ -28,6 +28,8 @@ coverY: 0
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Limit Bucket data option on Project settings.</p></figcaption></figure>
 
+* Device Tokens are now available for MQTT and HTTP devices, as they can have regular API resources over a product.
+
 **Improved**
 
 *   Templating system (used on products or endpoints) can now process placeholders with spaces.&#x20;
@@ -35,12 +37,14 @@ coverY: 0
     ```
     {{ payload : FunctionName = 22 }}
     ```
+* Internal LRU cache with a modern and safer implementation.
 
 **Fixed**
 
 * MQTT and HTTP devices can now also devices Device tokens via GUI, as they can define API resources over Products.
-
-
+* Problem when removing nested resources, i.e., Bucket exports, Project Members.
+* Bucket exports should not display set projects and clone context actions.
+* Bucket exports not loading by default.
 
 ## 6.1.0
 
