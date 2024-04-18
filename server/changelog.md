@@ -38,6 +38,7 @@ coverY: 0
     {{ payload : FunctionName = 22 }}
     ```
 * Internal LRU cache with a modern and safer implementation.
+* Removed unused 'curl' dependency on the base image, slightly reducing image size.
 
 **Fixed**
 
