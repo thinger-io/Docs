@@ -57,7 +57,7 @@ coverY: 0
 
 #### Added
 
-* Brand PWA configuration includes support for uploading app icons directly from the filesystem. It also allow the configuration of both 'maskable' and 'any' icon purposes. Fixes [https://github.com/thinger-io/thinger-server/issues/84](https://github.com/thinger-io/thinger-server/issues/84)
+* Brand PWA configuration includes support for uploading app icons directly from the filesystem. It also allows the configuration of both 'maskable' and 'any' icon purposes. Fixes [https://github.com/thinger-io/thinger-server/issues/84](https://github.com/thinger-io/thinger-server/issues/84)
 
 <figure><img src="../.gitbook/assets/image (617).png" alt="" width="375"><figcaption><p>PWA Images can be uploaded from filesystem</p></figcaption></figure>
 
@@ -86,12 +86,12 @@ coverY: 0
 #### Improved
 
 * Add some resources cache for a better performance on massive endpoint calls and bucket writes.
-* HTTP devices has been migrated to a new connection schema where it is possible to log their statistics, like bytes sent, received, and connections, as any other MQTT or IOTMP device.
+* HTTP devices have been migrated to a new connection schema where it is possible to log their statistics, like bytes sent, received, and connections, as any other MQTT or IOTMP device.
 * HTTP devices can be used now used inside dashboards with resources defined at product level.
-* Device property selector for HTML widgets allow selecting any parent node (with nested values), or all property values by not selecting any field. Fixes [https://github.com/thinger-io/thinger-server/issues/16](https://github.com/thinger-io/thinger-server/issues/16)
+* Device property selector for HTML widgets allows selecting any parent node (with nested values), or all property values by not selecting any field. Fixes [https://github.com/thinger-io/thinger-server/issues/16](https://github.com/thinger-io/thinger-server/issues/16)
 * Property PATCH now supports regular JSON for partial property updates. Fixes [https://github.com/thinger-io/thinger-server/issues/16](https://github.com/thinger-io/thinger-server/issues/16)
 * Brand icons and logos are now served from filesystem instead of data url, improving page load.
-* Dashboard HTML widgets from external storage now longer requires public storage access. In case of members of a project, they will require read access to the storage.
+* Dashboard HTML widgets from external storage no longer require public storage access. In the case of members of a project, they will require read access to the storage.
 * Product properties, topics, resources, and functions can be generated now by calling a product function.&#x20;
 * Product bucket writes can now override tags values based on the write payload. Previously, tags like device were always being set by the product, discarding any "device" field present on the payload.
 * Compatibility with OpenSSL 3.0 on SSL certificate provisioning.
@@ -99,10 +99,10 @@ coverY: 0
 
 #### Fixed
 
-* Apex Charts widget colors not honoring time series color configuration.
-* Binary data on a product payload not processed correctly.
+* Apex Charts widget colors do not honor time series color configuration.
+* Binary data on a product payload is not processed correctly.
 * Visual Studio Code not opening the file storage correctly.
-* Products with just "run" resources where not displayed on the API explorer.
+* Products with just "run" resources were not displayed on the API explorer.
 * Product profile list for buckets, endpoints, auto provision and api resources were displaying always "Property" instead of the resource type.
 * Info page display on empty or restricted resources.
 * Statistics on sockets count.
