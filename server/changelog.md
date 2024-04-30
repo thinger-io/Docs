@@ -7,11 +7,11 @@ coverY: 0
 
 # CHANGELOG
 
-## 6.2.1
+## 6.2.2
 
 **Community Release Date:**  18-04-2024.
 
-**Private Servers Release Date:**  24-04-2024.
+**Private Servers Release Date:**  30-04-2024.
 
 #### Added
 
@@ -48,6 +48,7 @@ coverY: 0
 * Bucket exports not loading by default.
 * Apex Chart Widget preview preventing dashboard from being saved.
 * Apex Chart Widget series colors are not being updated when the widget has titles.
+* Problem when updating device locations.
 
 ## 6.1.0
 
