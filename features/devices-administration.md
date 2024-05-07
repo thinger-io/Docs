@@ -1,8 +1,20 @@
 # DEVICES ADMINISTRATION
 
-## Create Device
+## Device Instance
 
-The first step to start any IoT project with Thinger.io (except for not connected devices like Sigfox) is creating a device profile, which will relate the hardware device with the user account. Any device in Thinger.io must be registered to get access to the cloud. Each one has its own identifier and credentials and is related to the user account. This section describes the required steps to register a new device in your account.
+\
+A device in Thinger.io is typically a virtual representation of a physical object connected through an IoT terminal. This instance will receive a series of capabilities on the Thinger.io platform, such as:
+
+* State registration (connection, IP, data bandwidth)
+* A unique access REST API
+* Storage of attributes through properties. These can be individual or inherited from a group or product profile.
+* Storage capabilities in data buckets
+
+Device instances can be provisioned in two ways:
+
+## Create a Single Device
+
+The first step to start any IoT project with Thinger.io (except for not connected devices like Sigfox) is creating a device profile, which will relate the hardware device to the user account. Any device in Thinger.io must be registered to get access to the cloud. Each one has its own identifier and credentials and is related to the user account. This section describes the required steps to register a new device in your account.
 
 All device creation and management processes are performed from the devices tab in the main menu
 
@@ -14,9 +26,8 @@ This section allows to show all registered devices and some information about it
 
 If it's your first time on thinger.io this list will be empty. Next, we'll show you how to create your first device. First of all, click on **Add Device** that will open a form in which you can introduce your device identification credentials and select a **Device Type** from the drop-down list, selecting one of these types:&#x20;
 
-* **Generic device**: For devices with Thinger.io software client on it. Such as Raspberry Pi, Linux or Arduino devices.&#x20;
+* **IOTMP device**: For devices with Thinger.io software client on it. Such as Raspberry Pi, Linux or Arduino devices, that will work using IoTMP (Internet of Things Message Protocol)  to transfer the status information and data points.&#x20;
 * **HTTP device**: This option allows creating a virtual device to integrate data via REST API Callback, providing nice integration with third-party platforms and other frameworks (Java, Python) and allowing them to work with their data in a simple way.&#x20;
-* **Thinger Core 32 device**: This is only for ESP32 modules with Thinger.io Core on it that will provide additional features such as security, devices auto-provisioning and OTA.&#x20;
 * **MQTT devices:** For MQTT devices that will work with the Thinger.io embedded broker (only for private instances).
 
 ![](../.gitbook/assets/AddDevice.PNG)
@@ -66,9 +77,19 @@ Once the device gets connected to the account, the interface will change its sta
 
 ![](<../.gitbook/assets/image (363).png>)
 
-Note that the connected device dashboard is able to show an estimated location of the device, that can be customized when modifying the "location" property as explained int the [**properties**](https://docs.thinger.io/console/devices-administration#device-properties) section of this documentation.&#x20;
+Note that the connected device dashboard can show an estimated location of the device, which can be customized when modifying the "location" property as explained in the [**properties**](https://docs.thinger.io/console/devices-administration#device-properties) section of this documentation.&#x20;
 
-Having the first connected device, we are ready to start discovering all the other Thinger.io features.
+Having the first connected device, we are ready to discover all the other Thinger.io features.
+
+## Create a Large Device Network
+
+By means of the `Products` feature, Thinger.io enables efficient management of large fleets of IoT devices through self-provisioning. This means that, instead of manually registering each device, you can create a 'product profile' that represents a specific type of device or category with common characteristics.
+
+Once you've configured a product, you can define its characteristics such as common data buckets to store the historical data of each device, default properties that will be inherited, device dashboard, and data processing scripts.&#x20;
+
+Thinger.io facilitates this process by providing unique access tokens for each device, ensuring a secure and reliable connection. Additionally, through the self-provisioning functionality, devices can automatically register on the platform without manual intervention.
+
+This is especially useful when you need to manage a large number of devices, as it greatly simplifies the onboarding process and subsequent management. In summary, the 'products' functionality with self-provisioning in Thinger.io is a powerful tool for scaling and effectively managing your IoT device fleets.
 
 ## Device Explorer
 
