@@ -22,11 +22,25 @@ Each instance can have more than one administrator account. Only the original ac
 * [x] Accounts Administration
 * [x] Domains or Rebrandings
 
-An Administrator user must be someone the main developer trusts, since he will be able to perform all kinds of operations on the branding and other resources of the instance. In order to deploy these accounts, the subscription must be extended with an additional Addon.
+An Administrator user must be someone the main developer trusts since he will be able to perform all kinds of operations on the branding and other resources of the instance. In order to deploy these accounts, the subscription must be extended with an additional Add-on.
+
+### **Domain admin**
+
+The "domain admin" role has administrator role capacities within a specific web domain that is specified in the. `domain` section of the "new account" form. This role typically grants broad privileges for performing administrative tasks in a multitenant hierarchy such as user management, device configuration, access control, and project monitoring across the entire domain.&#x20;
+
+Some typical functions associated with the "domain admin" role in Thinger.io might include:
+
+* [x] Create and manage IoT resources
+* [x] Work with server plugins
+* [x] Projects and Assets aggrupation
+* [x] Accounts Administration
+* [ ] Domains or Rebrandings
+
+In summary, the "domain admin" role in Thinger.io provides a high level of control and responsibility for administering the platform and resources within a specific domain.
 
 ### **Developer account**
 
-This account is aimed for other collaborators of the organization to develop on the instance with full developement capacities but some limitations on administration priviledges:
+This account is aimed at other collaborators of the organization to develop on the instance with full development capacities but some limitations on administration privileges:
 
 * [x] Create and manage IoT resources
 * [x] Work with server plugins
@@ -36,7 +50,7 @@ This account is aimed for other collaborators of the organization to develop on 
 
 ### **User account**
 
-Guest accounts created for displaying data or work only with the IoT resources that has been specifically shared with him  by an administrator or developer account. They will not be able to create new resources or use the plugins.&#x20;
+Guest accounts are created for displaying data or work only with the IoT resources that has been specifically shared with him  by an administrator or developer account. They will not be able to create new resources or use the plugins.&#x20;
 
 * [ ] Create and manage IoT resources
 * [ ] Work with server plugins
