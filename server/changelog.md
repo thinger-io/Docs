@@ -7,6 +7,12 @@ coverY: 0
 
 # CHANGELOG
 
+## 6.3
+
+**Improved**
+
+* Schema validation error mesages both on API and server logs.
+
 ## 6.2.2
 
 **Community Release Date:**  18-04-2024.

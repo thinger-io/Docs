@@ -514,6 +514,12 @@ void loop() {
 {% endtab %}
 {% endtabs %}
 
+{% hint style="warning" %}
+In case of problems when connecting over secure TLS connections, you can try updating the WiFi firmware by flashing the WiFiFirmwareUpdater example sketch.
+
+<img src="../.gitbook/assets/image (623).png" alt="" data-size="original">
+{% endhint %}
+
 ## Arduino Uno WiFi Rev2
 
 The Arduino Uno WiFi is functionally the same as the Arduino Uno Rev3, but with the addition of WiFi and some other enhancements. It incorporates a brand new 8-bit microprocessor from Microchip and has an onboard IMU (Inertial Measurement Unit). The WiFi Module is a self-contained SoC with integrated TCP/IP protocol stack that can provide access to a WiFi network, or act as an access point.
