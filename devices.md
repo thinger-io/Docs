@@ -2,6 +2,9 @@
 description: >-
   In this section it is explained how to connect your devices to the Thinger.io
   platform.
+cover: >-
+  https://images.unsplash.com/photo-1524234107056-1c1f48f64ab8?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw0fHxlc3A4MjY2fGVufDB8fHx8MTcxNzQ5NzI5MXww&ixlib=rb-4.0.3&q=85
+coverY: -159.57520661157025
 ---
 
 # CONNECT A DEVICE
@@ -10,36 +13,4 @@ As there are many different IoT hardware available nowadays, this section is div
 
 **Arduino compatible devices** such as Arduino MKR WiFi 1010, Arduino GSM 1400, ESP8266, ESP32, etc. In general, any hardware with Internet connectivity that can be programmed on Arduino IDE.
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
-
-**Linux** **devices**, including **Raspberry Pi**, or any other Linux computer running Linux or MacOs.
-
-{% content-ref url="linux.md" %}
-[linux.md](linux.md)
-{% endcontent-ref %}
-
-**MQTT Devices** or software clients can also be integrated with Thinger.io's builtin MQTT broker.
-
-{% content-ref url="mqtt.md" %}
-[mqtt.md](mqtt.md)
-{% endcontent-ref %}
-
-**Low-Power Devices** or "Edge devices" such as **Sigfox**, **The Things Network or TTN Stack,** or any other infrastructure with gateways:
-
-{% content-ref url="lpwan/sigfox.md" %}
-[sigfox.md](lpwan/sigfox.md)
-{% endcontent-ref %}
-
-{% content-ref url="lpwan/the-things-stack.md" %}
-[the-things-stack.md](lpwan/the-things-stack.md)
-{% endcontent-ref %}
-
-**Any other device or third-party Platform** that can't use the Thinger.io software client, can be integrated using our HTTP REST API.
-
-{% content-ref url="http-devices.md" %}
-[http-devices.md](http-devices.md)
-{% endcontent-ref %}
-
-##
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Arduino Compatible Devices</td><td></td><td></td><td><a href=".gitbook/assets/arduino logo.png">arduino logo.png</a></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td>Linux and Raspberry Pi Devices</td><td></td><td></td><td><a href=".gitbook/assets/Raspberry_Pi_Logo.jpg">Raspberry_Pi_Logo.jpg</a></td><td><a href="linux.md">linux.md</a></td></tr><tr><td>MQTT Devices</td><td></td><td></td><td><a href=".gitbook/assets/mqtt_devices.jpeg">mqtt_devices.jpeg</a></td><td><a href="mqtt.md">mqtt.md</a></td></tr><tr><td>Sigfox Devices</td><td></td><td></td><td><a href=".gitbook/assets/sigfox.jpeg">sigfox.jpeg</a></td><td><a href="lpwan/sigfox.md">sigfox.md</a></td></tr><tr><td>LoraWan Devices</td><td></td><td></td><td><a href=".gitbook/assets/lorawan.png">lorawan.png</a></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td>Generic HTTP Devices</td><td></td><td></td><td><a href=".gitbook/assets/https.jpeg">https.jpeg</a></td><td><a href="http-devices.md">http-devices.md</a></td></tr></tbody></table>
