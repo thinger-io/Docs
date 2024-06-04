@@ -21,10 +21,8 @@
   * [OTHER DEVICES](arduino/other-devices.md)
 * [CODING GUIDE](coding-guide.md)
 * [TROUBLESHOOTING](troubleshooting.md)
-* [EXTENDED FEATURES](extended-features/README.md)
-  * [OTA PROGRAMMING](extended-features/ota.md)
-  * [REMOTE CONSOLE](extended-features/remote-console.md)
-  * [REMOTE FILESYSTEM](extended-features/remote-filesystem.md)
+* [REMOTE OTA](ota.md)
+* [REMOTE CONSOLE](remote-console.md)
 
 ## LPWAN DEVICES <a href="#lpwan" id="lpwan"></a>
 

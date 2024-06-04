@@ -1,4 +1,0 @@
-# REMOTE FILESYSTEM
-
-Coming soon!
-
