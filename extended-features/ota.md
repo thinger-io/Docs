@@ -4,55 +4,53 @@ description: Over The Air Device Updates
 
 # OTA PROGRAMMING
 
-Over the Air (OTA) Programing is a method that allows to **remotely send new firmware to IoT devices over the Internet**, no matter where they are as it works with Thinger.io Cloud to deliver the new firrmware binaries.
+Over-the-Air (OTA) Programming is a method that allows the remote sending of new firmware to IoT devices over the Internet, regardless of their location. This process works with the Thinger.io Cloud to deliver the new firmware binaries.
 
-This feature allow us to keep the devices updated with new security patches and code improvements in a fast and scalable way. It is an essential tool for the maintenance of IoT products that will prevent us from traveling to the location of the devices.
+This feature enables us to keep devices updated with new security patches and code improvements quickly and on a large scale. It is an essential tool for the maintenance of IoT products, preventing the need to travel to the devices' locations.
 
-The update process is done over a **Visual Studio Code extension** that integrates with the Thinger.io cloud to upload new firmware binaries to the target device. So, it integrates with the IDE to streamline the development process, **just compile and upload** as if the device where connected to the computer.&#x20;
+The update process is performed using a **Visual Studio Code** extension that integrates with the Thinger.io cloud to upload new firmware binaries to the target device. This integration with the IDE streamlines the development process, allowing developers to compile and upload firmware as if the device were connected to the computer.
 
-![OTA Programming Example for ESP8266 over Visual Studio Code](../.gitbook/assets/iot-ota.gif)
+{% embed url="https://youtu.be/AHqfI7yP1-o" fullWidth="false" %}
 
 ## IDE Configuration
 
-Before working with this tool it is necessary to install and configure Visual Studio Code and the PlatformIO extension as explained on the [SDK SETUP](../sdk-setup/#visual-studio-code) section of the documentation. Then it is required to **install Thinger.io VSCode extension** directly from the Extension manager. Search for "Thinger.io" or [Checkout on Microsoft Marketplace](https://marketplace.visualstudio.com/items?itemName=thinger-io.thinger-io).&#x20;
+Before working with this tool it is necessary to install and configure Visual Studio Code and the PlatformIO extension as explained in the [SDK SETUP](../sdk-setup/#visual-studio-code) section of the documentation. Then, you need to **install the Thinger.io VSCode extension** directly from the Extension manager. Search for "Thinger.io" or [Checkout on Microsoft Marketplace](https://marketplace.visualstudio.com/items?itemName=thinger-io.thinger-io).&#x20;
 
-![Visual Studio Code Thinger.io Extension for MCU OTA ](<../.gitbook/assets/image (255).png>)
+<figure><img src="../.gitbook/assets/image (624).png" alt=""><figcaption><p>Visual Studio Code Thinger.io Extension for MCU OTA </p></figcaption></figure>
 
-This extension will manage the OTA processes with some interesting features such as:&#x20;
+This extension will manage the OTA processes with several interesting features such as:
 
 * OTA updates directly from the Internet over Thinger.io
-* Device switcher to search & select the target device for the update
-* Real-time device connection status
-* Compatible with multiple PlatformIO configuration environments inside a Project
-* Automatic build and upload over the Internet in a single click
-* OTA with compression support both on ESP8266 and ESP32
-* MD5 Checksum verification for firmware binaries
+* Device and Product switcher to search and select the target device(s) for the update
+* Real-time device connection status and input/output indicators
+* Compatibility with multiple PlatformIO configuration environments within a project
+* Automatic build and upload over the Internet with a single click
+* OTA with compression support for ESP8266, ESP32, and Arduino Portenta devices
+* MD5 checksum verification for firmware binaries, both compressed and uncompressed
 
 ### Extension Configuration
 
-Before running the OTA it is necessary to configure the extension by accessing the VScode Extensions Manager and selecting the Extensions Settings option.
+Before running the OTA, it is necessary to configure the extension by accessing the VS Code Extensions Manager and selecting the Extensions Settings option.
 
-![Thinger.io Visual Studio Code Extension for OTA updates](<../.gitbook/assets/image (277).png>)
+<figure><img src="../.gitbook/assets/image (625).png" alt=""><figcaption><p>Thinger.io Visual Studio Code Extension for OTA updates</p></figcaption></figure>
 
-* **Thinger.io Host**: Place here the URL of the Thinger.io Instance you are working with (if using a private instance, otherwise by default it will be backend.thinger.io).
-* **Thinger.io Port**: Specifies the connection port (443 by default).
-* **Thinger.io Secure**: Enable/disable SSL/TLS connection (enabled by default).
-* **Thinger.io Token**: Place here a Thinger.io `Access Token`with the following permissions:
+* **Thinger.io Host:** Place here the URL of the Thinger.io Instance you are working with (if using a private instance, otherwise by default it will be `backend.thinger.io`).
+* **Thinger.io Port:** Specifies the connection port (443 by default).
+* **Thinger.io Secure:** Verify SSL/TLS connection (enabled by default).
+* **Thinger.io SSL:** Use SSL/TLS encryption (enabled by default).
+* **Thinger.io Token:** Place here a Thinger.io Access Token with the following permissions:
   * ListDevices
   * AccessDeviceResources
   * ReadDeviceStatistics
+  * ListProducts
 
 The following image provides a token configuration example with the required permissions.
 
-<div align="center">
-
-<img src="../.gitbook/assets/image (293).png" alt="Example Thinger.io Token Configuration for Visual Studio Code Extension">
-
-</div>
+<figure><img src="../.gitbook/assets/image (627).png" alt=""><figcaption><p>Example Thinger.io Token Configuration for Visual Studio Code Extension</p></figcaption></figure>
 
 ## Firmware Upload via OTA
 
-The OTA feature is implemented on the default [Thinger.io Arduino client libraries](https://github.com/thinger-io/Arduino-Library) required for the connectivity with the Thinger.io cloud.
+The OTA feature is implemented on the default [Thinger.io Arduino IOTMP client libraries](https://github.com/thinger-io/Arduino-Library) required for the connectivity with the Thinger.io cloud.
 
 The boards that supports OTA updates over the Visual Studio Code extension are the following:
 
@@ -62,6 +60,8 @@ The boards that supports OTA updates over the Visual Studio Code extension are t
 * Arduino MKR WiFi 1010
 * Arduino RPI2040 Connect
 * Arduino MKR NB 1500
+* Arduino Portenta
+* Arduino Opta
 
 The general requirement to start working with OTA updates for a specific device are:
 
@@ -204,6 +204,74 @@ void loop() {
 ```
 {% endtab %}
 {% endtabs %}
+
+### Arduino Portenta/Opta
+
+To add OTA functionality for **Arduino Portenta and Opta devices** it is required to include the `ThingerPortentaOTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
+
+{% tabs %}
+{% tab title="main.cpp" %}
+```cpp
+#define THINGER_SERIAL_DEBUG
+
+#include <ThingerMbed.h>
+#include <ThingerPortentaOTA.h>
+#include "arduino_secrets.h"
+
+ThingerMbed thing(USERNAME, DEVICE_ID, DEVICE_CREDENTIAL);
+ThingerPortentaOTA ota(thing);
+
+void setup() {
+    // configure LED_BUILTIN for output
+    pinMode(LED_BUILTIN, OUTPUT);
+
+    // open serial for debugging
+    Serial.begin(115200);
+
+    // configure wifi network
+    thing.add_wifi(SSID, SSID_PASSWORD);
+
+    // pin control example (i.e. turning on/off a light, a relay, etc)
+    thing["led"] << digitalPin(LED_BUILTIN);
+
+    // resource output example (i.e. reading a sensor value, a variable, etc)
+    thing["millis"] >> outputValue(millis());
+
+    // start thinger on its own task
+    thing.start();
+
+    // more details at http://docs.thinger.io/arduino/
+}
+
+void loop() {
+    // use loop as in normal Arduino Sketch
+    // use thing.lock() thing.unlock() when using/modifying variables exposed on thinger resources
+    delay(1000);
+}
+```
+{% endtab %}
+
+{% tab title="arduino_secrets.h" %}
+```cpp
+#define USERNAME "your_user_name"
+#define DEVICE_ID "your_device_id"
+#define DEVICE_CREDENTIAL "your_device_credential"
+
+#define SSID "your_wifi_ssid"
+#define SSID_PASSWORD "your_wifi_ssid_password"
+```
+{% endtab %}
+{% endtabs %}
+
+{% hint style="warning" %}
+It may be required to update the bootloader of your Portenta/Opta device to enable OTA updates.&#x20;
+
+* Update the Bootloader of your Arduino Portenta/Opta: Run the sketch 'STM32H747\_System\_manage\_Bootloader'
+* Format the QSPI flash memory: Run the sketch 'QSPIFormat'.
+* Run WiFiFirmwareUpdater&#x20;
+
+![](<../.gitbook/assets/image (629).png>)
+{% endhint %}
 
 ### Arduino Nano 33 IOT OTA
 
@@ -476,3 +544,4 @@ lib_deps = thinger.io
 {% hint style="warning" %}
 At this moment, it seems that MKR NB 1500 requires pressing the reset button to apply the OTA update.
 {% endhint %}
+
