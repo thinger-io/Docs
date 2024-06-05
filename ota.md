@@ -2,7 +2,7 @@
 description: Over The Air Device Updates
 ---
 
-# OTA PROGRAMMING
+# REMOTE OTA
 
 Over-the-Air (OTA) Programming is a method that allows the remote sending of new firmware to IoT devices over the Internet, regardless of their location. This process works with the Thinger.io Cloud to deliver the new firmware binaries.
 
@@ -14,9 +14,9 @@ The update process is performed using a **Visual Studio Code** extension that in
 
 ## IDE Configuration
 
-Before working with this tool it is necessary to install and configure Visual Studio Code and the PlatformIO extension as explained in the [SDK SETUP](../sdk-setup/#visual-studio-code) section of the documentation. Then, you need to **install the Thinger.io VSCode extension** directly from the Extension manager. Search for "Thinger.io" or [Checkout on Microsoft Marketplace](https://marketplace.visualstudio.com/items?itemName=thinger-io.thinger-io).&#x20;
+Before working with this tool it is necessary to install and configure Visual Studio Code and the PlatformIO extension as explained in the [SDK SETUP](sdk-setup/#visual-studio-code) section of the documentation. Then, you need to **install the Thinger.io VSCode extension** directly from the Extension manager. Search for "Thinger.io" or [Checkout on Microsoft Marketplace](https://marketplace.visualstudio.com/items?itemName=thinger-io.thinger-io).&#x20;
 
-<figure><img src="../.gitbook/assets/image (624).png" alt=""><figcaption><p>Visual Studio Code Thinger.io Extension for MCU OTA </p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (624).png" alt=""><figcaption><p>Visual Studio Code Thinger.io Extension for MCU OTA </p></figcaption></figure>
 
 This extension will manage the OTA processes with several interesting features such as:
 
@@ -32,7 +32,7 @@ This extension will manage the OTA processes with several interesting features s
 
 Before running the OTA, it is necessary to configure the extension by accessing the VS Code Extensions Manager and selecting the Extensions Settings option.
 
-<figure><img src="../.gitbook/assets/image (625).png" alt=""><figcaption><p>Thinger.io Visual Studio Code Extension for OTA updates</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (625).png" alt=""><figcaption><p>Thinger.io Visual Studio Code Extension for OTA updates</p></figcaption></figure>
 
 * **Thinger.io Host:** Place here the URL of the Thinger.io Instance you are working with (if using a private instance, otherwise by default it will be `backend.thinger.io`).
 * **Thinger.io Port:** Specifies the connection port (443 by default).
@@ -46,7 +46,7 @@ Before running the OTA, it is necessary to configure the extension by accessing 
 
 The following image provides a token configuration example with the required permissions.
 
-<figure><img src="../.gitbook/assets/image (627).png" alt=""><figcaption><p>Example Thinger.io Token Configuration for Visual Studio Code Extension</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (627).png" alt=""><figcaption><p>Example Thinger.io Token Configuration for Visual Studio Code Extension</p></figcaption></figure>
 
 ## Firmware Upload via OTA
 
@@ -73,13 +73,13 @@ The general requirement to start working with OTA updates for a specific device 
 
 If everything is configured correctly it will be possible to start working with the Thinger.io extension via the new elements added to the bottom toolbar. There are two buttons that allow to select the target device to be flashed, and then compile and upload new firmware binaries.
 
-![Thinger.io Buttons on Visual Studio Code Toolbar](<../.gitbook/assets/image (318).png>)
+![Thinger.io Buttons on Visual Studio Code Toolbar](<.gitbook/assets/image (318).png>)
 
 **Select Target Device** 🚀
 
 This button is a device selector, when you click it, it will prompt to search and select a target device from your Thinger.io account.
 
-![Device Selector for OTA Updates over Visual Studio Code](../.gitbook/assets/ota\_device\_selector.gif)
+![Device Selector for OTA Updates over Visual Studio Code](.gitbook/assets/ota\_device\_selector.gif)
 
 {% hint style="info" %}
 When the target device is disconnected, the target device button background color will be red.
@@ -89,7 +89,7 @@ When the target device is disconnected, the target device button background colo
 
 This button compiles and uploads the code to the selected device. In the process it will show a window with the OTA progress.&#x20;
 
-![Compile and upload example for ESP8266](<../.gitbook/assets/iot-ota (1).gif>)
+![Compile and upload example for ESP8266](<.gitbook/assets/iot-ota (1).gif>)
 
 {% hint style="info" %}
 To update your device over OTA, the first time it must be flashed from a serial com port.
@@ -99,7 +99,7 @@ To update your device over OTA, the first time it must be flashed from a serial 
 
 It is possible to clean the selected target device accessing the Visual Studio command Palette with `Ctrl` + `Shift` + `P`, and searching for `Thinger.io`
 
-![Clean Target Device](<../.gitbook/assets/image (307).png>)
+![Clean Target Device](<.gitbook/assets/image (307).png>)
 
 ### ESP32 OTA
 
@@ -270,7 +270,7 @@ It may be required to update the bootloader of your Portenta/Opta device to enab
 * Format the QSPI flash memory: Run the sketch 'QSPIFormat'.
 * Run WiFiFirmwareUpdater&#x20;
 
-![](<../.gitbook/assets/image (629).png>)
+![](<.gitbook/assets/image (629).png>)
 {% endhint %}
 
 ### Arduino Nano 33 IOT OTA
@@ -545,3 +545,70 @@ lib_deps = thinger.io
 At this moment, it seems that MKR NB 1500 requires pressing the reset button to apply the OTA update.
 {% endhint %}
 
+## Firmware Versioning
+
+Firmware versioning is essential for managing updates and maintaining the security of IoT devices. As IoT deployments grow in complexity and scale, proper versioning ensures that devices operate reliably and securely.
+
+Our recommended versioning system follows the Semantic Versioning ([SemVer](https://semver.org/)) approach, which uses a Major.Minor.Patch format:
+
+* **Major**: Incremented for incompatible API changes.
+* **Minor**: Incremented for added functionality in a backwards-compatible manner.
+* **Patch**: Incremented for backwards-compatible bug fixes.
+
+To define your firmware version, it is required to define a preprocessor definition called `THINGER_OTA_VERSION`. This is used inside the firmware and VS Code to decide when a device requires an update.
+
+Each time an OTA update process is started, the system will display a confirmation dialog showing the details of the firmware to be uploaded. This dialog includes the device name, firmware version, and the environment. It ensures that the user is informed about the firmware update specifics before proceeding, providing an additional layer of verification.
+
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption><p>OTA Update Confirmation Dialog with Firmware Version</p></figcaption></figure>
+
+Devices that are already running the current firmware version will not be updated, ensuring that only devices with outdated firmware receive the new update. This helps to optimize the update process, reducing unnecessary data transfer and minimizing downtime for devices that are already up-to-date.
+
+{% hint style="info" %}
+For development purposes, it is possible to remove the **`THINGER_OTA_VERSION`** definition, which will prevent version checking on the update process.
+{% endhint %}
+
+It is possible to define the firmware version in different places, such as:
+
+* In the source code
+* Through external build flags
+* Based on version control, like git tags
+
+Below, we describe the different alternatives in detail.
+
+### Fixed on Code
+
+Define `THINGER_OTA_VERSION` in code before Thinger.io includes. This method involves hardcoding the firmware version directly in your source files. Each time you need to update the firmware version, you must manually change the version number in the code and redeploy the firmware.
+
+{% code title="main.cpp" %}
+```cpp
+#define THINGER_OTA_VERSION "1.0.0"
+
+// Thinger.io includes
+#include <ThingerMbed.h>
+#include <ThingerPortentaOTA.h>
+```
+{% endcode %}
+
+### Fixed Build Flag
+
+Create a build flag in `platformio.ini` with a static version definition. This approach sets the firmware version through build configuration. To update the firmware version, you need to modify the version number in the `platformio.ini` file and rebuild the firmware.
+
+{% code title="platformio.ini" %}
+```ini
+build_flags = 
+    -D THINGER_OTA_VERSION=1.0.0
+```
+{% endcode %}
+
+### Dynamic Build Flag
+
+This is the recommended approach and consists of dynamically setting the firmware version based on version control information, such as git tags. This method ensures the firmware version is automatically updated based on the latest git tag, reducing manual intervention. Each time you tag a new version in git, the build process will automatically use this tag as the firmware version.
+
+To achieve this configuration, it is required to modify the `platformio.ini` file and include a build flag that will be dynamically composed using the `git describe` command. This command retrieves the latest git tag and uses it to set the `THINGER_OTA_VERSION` preprocessor definition.
+
+{% code title="platformio.ini" %}
+```ini
+build_flags = 
+    !echo '-D THINGER_OTA_VERSION='$(git describe --tags)''
+```
+{% endcode %}
