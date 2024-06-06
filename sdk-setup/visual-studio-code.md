@@ -1,6 +1,14 @@
 # Visual Studio Code
 
-For advanced developers and more complex projects it can be interesting to have an advanced IDE with GIT control, code completion, and a bunch of useful extensions to streamline the development process. For this purpose, it is possible to combine two powerful tools: Visual Studio Code, and PlatformIO.
+For advanced developers and more complex projects, an advanced IDE can be beneficial. Visual Studio Code (VS Code) offers features like GIT control, code completion, and a variety of useful extensions to streamline the development process. By combining VS Code with PlatformIO, you get a powerful setup for your Thinger.io projects.
+
+**Benefits of Using Visual Studio Code with PlatformIO:**
+
+* **GIT Control**: Easily manage your version control with integrated GIT support.
+* **Code Completion**: Enjoy enhanced code completion for faster and more accurate coding.
+* **Extensions**: Access a wide range of extensions to add functionality and improve productivity.
+
+To get started, download and install Visual Studio Code and the PlatformIO extension.
 
 ## Install Visual Studio Code
 
@@ -8,11 +16,23 @@ For advanced developers and more complex projects it can be interesting to have 
 
 &#x20;[**Download Visual Studio Code**](https://code.visualstudio.com/download)
 
-![](<../.gitbook/assets/image (386).png>)
+![Visual Studio Code](<../.gitbook/assets/image (386).png>)
 
 ## **Install PlatformIO**
 
-**PlatformIO** is a cross-platform, cross-architecture, multiple framework, professional tool for embedded systems engineers and for software developers who write applications for embedded products. PlatformIO can be installed as a Visual Studio extension. To install the extension,  just navigate to Extensions in Visual Studio Code (`Ctrl` + `Shift` + `X` on Windows or `Command` + `Shift` + `X` on Mac) in VS Code. Then, search for`PlatformIO`, click on `PlatformIO IDE` result, and click on **Install** button.
+PlatformIO is a cross-platform, cross-architecture, multi-framework professional tool for embedded systems engineers and software developers working on embedded products. It can be installed as an extension in Visual Studio Code.
+
+**Steps to Install PlatformIO:**
+
+1. **Open Extensions in Visual Studio Code**:
+   * Press `Ctrl + Shift + X` on Windows or `Command + Shift + X` on Mac to open the Extensions view.
+2. **Search for PlatformIO**:
+   * In the Extensions view, type "PlatformIO" in the search bar.
+3. **Install PlatformIO**:
+   * Click on the **PlatformIO IDE** result.
+   * Click the **Install** button.
+
+Once installed, PlatformIO provides powerful features to enhance your development process for Thinger.io projects.
 
 ![](<../.gitbook/assets/image (329).png>)
 
