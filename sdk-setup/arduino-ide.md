@@ -1,52 +1,64 @@
 # Arduino IDE
 
-Arduino is currently the best framework for learning, prototyping and even developing products, thanks to its simplicity and the large community of developers that is contributing daily to increase its capabilities. That is why at Thinger.io we have developed a Software Client to easily connect Arduino based devices, compatible with a wide variety of hardware. It is available for Windows, Macintosh and Linux distributions, and can be downloaded for free from their official website.
+Arduino is widely recognized as the best framework for learning, prototyping, and even product development. Its simplicity and the robust community of developers continuously enhancing its capabilities make it an excellent choice.
 
-The following sections explains how to install and prepare Arduino IDE to work with Thinger.io client libraries.
+At Thinger.io, we have developed a Software Client to easily connect Arduino-based devices. This client is compatible with a wide variety of hardware and is available for Windows, macOS, and Linux distributions. You can download it for free from the official [Arduino website](https://arduino.cc).
 
-![](<../.gitbook/assets/image (488).png>)
+The following sections will guide you through the installation and preparation of the Arduino IDE to work with Thinger.io client libraries.
 
-## Install Arduino IDE
+<figure><img src="../.gitbook/assets/Captura de pantalla 2024-06-06 a las 23.43.31 (1).png" alt=""><figcaption><p>Arduino IDE</p></figcaption></figure>
 
-It is required a modern version of Arduino supporting `Library Manager` and some other features. Please install a version starting from **1.6.3** from the official Arduino download page. This step is not required if you already have a modern version.
+## Installing the Arduino IDE
 
-[Download Arduino IDE](https://www.arduino.cc/en/Main/Software) from their official website.
+To use Thinger.io with Arduino, you need a modern version of the Arduino IDE that supports the Library Manager and other advanced features. Please ensure you install version 1.6.3 or later. If you already have a compatible version installed, you can skip this step.
+
+1. **Download the Arduino IDE**: Visit the official [Arduino download page](https://www.arduino.cc/en/software) to download the latest version suitable for your operating system (Windows, macOS, or Linux).
+
+Follow the instructions on the website to complete the installation process.
 
 ## Install Thinger.io from Library Manager
 
-Thinger.io Client libraries contains the software for connecting Arduino compatible devices with Thinger.io platform. It is the preferred way for connecting devices to the platform, as it allow to extract all the Thinger.io features.
+Thinger.io Client libraries contain the software needed to connect Arduino-compatible devices with the Thinger.io platform. Using these libraries is the preferred method for connecting devices, as it allows you to leverage all of Thinger.io's features.
 
-The library can be obtained from the Arduino  `Library Manager`, which simplifies searching and installing new libraries and also supports updating libraries when new versions are released, so actually it is preferable using this method:
+To install the Thinger.io library from the Arduino Library Manager:
 
-> Open the **Library Manager** in the Arduino menu in `Sketch` > `Include Library` > `Manage Libraries`
+1. **Open the Library Manager**:
+   * In the Arduino IDE, go to **Sketch > Include Library > Manage Libraries**.
+2. **Search for Thinger.io**:
+   * Use the search bar in the Library Manager to find "Thinger.io".
+3. **Install the Library**:
+   * Select the Thinger.io Client library from the search results and click **Install**.
 
-![Arduino Library Manager](<../.gitbook/assets/image (274).png>)
-
-> Search the library with name **thinger.io** and then click `Install`. You can update the library also from this manager when it is updated.
-
-![Install Thinger.io Client library from Library Manager](https://discoursefiles.s3-eu-west-1.amazonaws.com/original/1X/0e8bc7c86b5aff26aea7649741b592c8157cae11.png)
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Thinger.io Arduino Library</p></figcaption></figure>
 
 ## Install Thinger.io from ZIP
 
-If the preferred way using the Library Manager is not working or you prefer to manage the libraries yourself, you can obtain the `.zip` library file from the official Thinger.io project Github repository by clicking in the link below. This will download a file called `Arduino-Library-master.zip`.
+If you prefer to manage the libraries yourself or the Library Manager is not working, you can manually install the Thinger.io library by following these steps:
 
-[Download Library](https://github.com/thinger-io/Arduino-Library/archive/master.zip)
+1. **Download the ZIP Library**:
+   * Obtain the .zip library file from the official [Thinger.io project GitHub repository](https://github.com/thinger-io/Arduino-Library).
+   * Click on CODE and download the ZIP named [`Arduino-Library-master.zip`](https://github.com/thinger-io/Arduino-Library/archive/refs/heads/master.zip).
+2. **Rename the ZIP File**:
+   * Rename `Arduino-Library-master.zip` to something more relevant, such as `thinger.zip`.
+3. **Import the ZIP Library in Arduino IDE**:
+   * Open the Arduino IDE.
+   * Go to **Sketch > Include Library > Add .ZIP Library...**.
+   * Navigate to and select the `thinger.zip` file.
+   * The Arduino IDE will uncompress and copy the zip library into the Arduino libraries folder, typically located under your Documents folder.
 
-Now **rename** the `Arduino-Library-master.zip` file to something more relevant like `thinger.zip`.
-
-The final step is to **import** the `zip` library using the Arduino IDE. This step will uncompress and copy the `zip` library in the Arduino libraries folder. Which is usually under your Documents folder.
-
-![](../.gitbook/assets/add-zip-library.png)
-
-> `Sketch` > `Include Library` > `Add .ZIP libraries`, and select the `thinger.zip` file created in the previous step.
+![Install Thinger.io from downloaded ZIP library](../.gitbook/assets/add-zip-library.png)
 
 ## Starting a Project
 
-Once Thinger.io Library has been installed, it is possible to start a new project by using some of the default examples provided. There are examples for different boards, so, choose the one that matches your device.
+Once the Thinger.io Library has been installed, you can start a new project using one of the default examples provided. There are examples tailored for different boards, so choose the one that matches your device.
 
-> Open `File` > `Examples` > `thinger.io` and start with an example for your device.
+1. **Open Example Project**:
+   * In the Arduino IDE, go to **File > Examples > thinger.io**.
+   * Select an example that corresponds to your device.
 
-![Open Thinger.io example for an Arduino Compatible Device](<../.gitbook/assets/image (267).png>)
+This will load the example code, which you can then modify to suit your specific needs.
+
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>Thinger.io Arduino Examples </p></figcaption></figure>
 
 &#x20;A basic example for an ESP32 device will look like the following:
 

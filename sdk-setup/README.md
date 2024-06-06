@@ -2,8 +2,8 @@
 
 To develop with Arduino-compatible devices in Thinger.io, you have two main options:
 
-1. **Arduino IDE**
-2. **Visual Studio Code with PlatformIO**
+1. [**Arduino IDE**](arduino-ide.md)
+2. [**Visual Studio Code with PlatformIO**](visual-studio-code.md)
 
 At Thinger.io, we recommend using Visual Studio Code with PlatformIO. This setup offers a superior editing experience, enhanced code completion, support for multiple hardware platforms, and access to extended Thinger.io features such as OTA (Over-The-Air) updates.
 

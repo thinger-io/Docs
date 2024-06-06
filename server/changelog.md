@@ -23,16 +23,16 @@ coverY: 0
 
 * Devices associated with a Product can now display bucket data directly from their pages, under the menu option called "Buckets". Each device can now list all the associated buckets and will filter out its data in the Data view. In future releases, we will add options for exporting, importing, and clearing data. This opens the possibility to avoid sharing raw bucket data with project members, and effectively grant access only to their device data. With this feature, permissions are granted at the device level, with permissions like ViewDeviceBuckets, ReadDeviceBucket, ReadDeviceBucketTag, and ListDeviceBucketTags.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>New Buckets option for Product Devices</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>New Buckets option for Product Devices</p></figcaption></figure>
 
 * Introduced two new specific permissions for listing and reading bucket tags:`ListBucketTags`: Allows listing of bucket tags.`ReadBucketTag`: Allows reading of individual bucket tags. Previously, these operations required the more general `ReadBucketConfig` permission. This change provides more granular control over permissions.
 * Claims now support including additional projects on the claim process. This way, claimed resources can be added automatically to parent "global" projects that can be used to manage the resources with different profiles.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Additional projects where claimed resources will be included on the claim process.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Additional projects where claimed resources will be included on the claim process.</p></figcaption></figure>
 
 * Projects can be configured to limit bucket data access based on project devices. This functionality is useful for displaying aggregated data on the project dashboard or for restricting data access to project members. Additionally, this option can be set in the claim settings, ensuring that member projects are automatically created with this access limitation in place.
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Limit Bucket data option on Project settings.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Limit Bucket data option on Project settings.</p></figcaption></figure>
 
 * Device Tokens are now available for MQTT and HTTP devices, as they can have regular API resources over a product.
 
