@@ -9,9 +9,72 @@ coverY: 0
 
 ## 6.3
 
-**Improved**
+**Community Release Date:**  12-06-2024.
 
-* Schema validation error mesages both on API and server logs.
+**Private Servers Release Date:**  18-06-2024.
+
+#### Added
+
+**Products**
+
+* 🗺️ Products now include a new functionality to configure how devices should be displayed on an Assets Maps widget, including icons, background colors, labels, and extended information when the icon is clicked. It supports conditional icons and background colors according to the latest bucket data, property values, or device status.
+
+<figure><img src="../.gitbook/assets/asset_map (1).gif" alt=""><figcaption><p>Assets Map with custom icons and fields.</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (638).png" alt=""><figcaption><p>Product Visualization configuration, with support for multiple icons, backgrounds, and fields.</p></figcaption></figure>
+
+* 📡 Initial support for Device events as a source for Product resources (properties, buckets, endpoints), i.e., for reacting to device connection events.
+
+<figure><img src="../.gitbook/assets/image (631).png" alt=""><figcaption><p>Device Event as a new data source for properties, buckets, or endpoints.</p></figcaption></figure>
+
+* 🧩 Initial support for multiple data sources on Product properties, i.e., listening for different events/resources to update a single property.
+
+<figure><img src="../.gitbook/assets/image (632).png" alt=""><figcaption><p>Multiple data sources on Product Properties</p></figcaption></figure>
+
+* 🔄 Initial support for Product properties PATCH to allow partial updates.
+
+<figure><img src="../.gitbook/assets/image (633).png" alt=""><figcaption><p>Product Property Patch feature for partial value updates.</p></figcaption></figure>
+
+*   📥 Initial support for property data fetch on Product property, endpoints, and buckets template payloads. For example, it can be useful for modifying incoming bucket data based on device configuration.
+
+
+
+    <figure><img src="../.gitbook/assets/image (634).png" alt=""><figcaption><p>Property Data Fetch is now supported on properties, buckets, and endpoints template payloads.</p></figcaption></figure>
+
+**Other**
+
+* 📊 New Assets Table widget to display device information in a table, with the possibility to export data to a PDF report, CSV file, and filter and sort columns. The asset table can merge multiple pieces of information from each asset, i.e., from device state, buckets, or properties.
+
+<figure><img src="../.gitbook/assets/image (639).png" alt=""><figcaption><p>New Assets Table widget to display any asset information.</p></figcaption></figure>
+
+* 🔔 New notification icon to stay updated on the latest news in the Thinger.io ecosystem, like server updates, new library releases, etc.
+
+<figure><img src="../.gitbook/assets/image (635).png" alt=""><figcaption><p>New notification icon with the latest news in the Thinger.io ecosystem.</p></figcaption></figure>
+
+* 🔒 Support for enabling legacy TLS protocols (TLS v1.0 and TLS v1.1) by reducing OpenSSL security level. This can be useful to support connectivity with old devices not supporting newer TLS versions. It can be configured under Cluster Host > Settings > SSL Certificates.
+
+<figure><img src="../.gitbook/assets/image (636).png" alt=""><figcaption><p>TLS 1.0 and TLS 1.1. Support</p></figcaption></figure>
+
+* 👥 Enable configuration for setting additional members and roles on project claims.
+
+<figure><img src="../.gitbook/assets/image (637).png" alt=""><figcaption><p>Automatically add new members/roles to the Claim Project, i.e., for supervision and management.</p></figcaption></figure>
+
+#### Improved
+
+* 🛠️ Product profile resources now simplify the payload configuration, by allowing the selection of the source event, source payload, or a template payload. It also allows defining a custom payload processing function that is easier to configure than the current `{{payload:fn}}` definition.
+* ✅ Schema validation error messages both on API and server logs.
+* 📉 Reduce required buffer size for each connected device.
+* 📈 Increased maximum dynamic buffer size, supporting larger message sizes.
+* 🔄 Product API Resource responses can now use template placeholders, including properties or other API resources.
+* 📝 Improved claim resources landing with more informative messages.
+
+#### Fixed
+
+* 🛠️ Send `device_state_change` after product initialization.
+* 🛠️ Installing development plugin versions.
+* 🛠️ Bucket export download URL for buckets updated from a Project Member.
+* 🛠️ Inside and outside expression comparators on alarms.
+* 🛠️ Potential socket leak if the client did not try to perform the TLS handshake.
 
 ## 6.2.2
 
