@@ -59,6 +59,10 @@ coverY: 0
 
 <figure><img src="../.gitbook/assets/image (637).png" alt=""><figcaption><p>Automatically add new members/roles to the Claim Project, i.e., for supervision and management.</p></figcaption></figure>
 
+* 🔌 Devices services configured over Products will now use a configurable range of ports. This will simplify on-premise setup and speed up service access, as there will be no need to manage firewall rules dynamically.
+
+<figure><img src="../.gitbook/assets/image (640).png" alt=""><figcaption><p>New Host Configuration to set the dynamic ports range when using Product Services.</p></figcaption></figure>
+
 #### Improved
 
 * 🛠️ Product profile resources now simplify the payload configuration, by allowing the selection of the source event, source payload, or a template payload. It also allows defining a custom payload processing function that is easier to configure than the current `{{payload:fn}}` definition.
