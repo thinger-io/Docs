@@ -79,6 +79,7 @@ coverY: 0
 * 🛠️ Bucket export download URL for buckets updated from a Project Member.
 * 🛠️ Inside and outside expression comparators on alarms.
 * 🛠️ Potential socket leak if the client did not try to perform the TLS handshake.
+* 🛠️ Console permissions when a developer/admin closes an external project.
 
 ## 6.2.2
 
