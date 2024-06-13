@@ -9,7 +9,7 @@ coverY: 0
 
 ## 6.3
 
-**Community Release Date:**  12-06-2024.
+**Community Release Date:**  13-06-2024.
 
 **Private Servers Release Date:**  18-06-2024.
 
