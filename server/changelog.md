@@ -80,6 +80,8 @@ coverY: 0
 * 🛠️ Inside and outside expression comparators on alarms.
 * 🛠️ Potential socket leak if the client did not try to perform the TLS handshake.
 * 🛠️ Console permissions when a developer/admin closes an external project.
+* 🛠️ Dashboard widget on community server not allowing to select a value.&#x20;
+* 🛠️ Dashboard not showing configurable time selector.&#x20;
 
 ## 6.2.2
 
