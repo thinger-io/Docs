@@ -807,7 +807,7 @@ angular.module('deviceControlWidget', [])
             let url = document.querySelector("script[src*='deviceControlWidget.js']");
             return url.src.replace('.js','.html');
         },
-        controller: ["$scope", "DeviceResource" function($scope, DeviceResource){
+        controller: ["$scope", "DeviceResource", function($scope, DeviceResource){
             
             $scope.center = function(){
                 console.log("center clicked");
