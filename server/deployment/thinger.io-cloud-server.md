@@ -12,11 +12,7 @@ Private cloud instances can be deployed with different licenses, depending on th
 
 This pricing includes the software license and all cloud expenses. Note that yearly subscriptions offer a discount over the monthly one.&#x20;
 
-The next table shows all the different features provided by each license as well as a desirable purpose specification. It is possible to select one license and change it in the future using the [subscription management portal](https://thinger.chargebeeportal.com).
-
-{% hint style="info" %}
-We are currently migration our subscriptions to a new management portal. If you encounter issues with the link, please try this [alternative link](https://billing.stripe.com/p/login/00g9D1fN50SIcpOfYY).
-{% endhint %}
+The next table shows all the different features provided by each license as well as a desirable purpose specification. It is possible to select one license and change it in the future using the [subscription management portal](https://billing.stripe.com/p/login/00g9D1fN50SIcpOfYY).
 
 <table><thead><tr><th width="191">Features</th><th width="178">SMALL</th><th width="184">MEDIUM</th><th width="211">LARGE</th></tr></thead><tbody><tr><td><strong>Devices</strong></td><td>100</td><td>1000</td><td>2500</td></tr><tr><td><strong>Plugins</strong></td><td>1</td><td>3</td><td>5</td></tr><tr><td><strong>Multi-tenant</strong></td><td></td><td>✓ (Up to 5)</td><td>✓ (Up to 15)</td></tr><tr><td><strong>White-labels</strong></td><td></td><td>✓ (Up to 1)</td><td>✓ (Up to 5)</td></tr><tr><td><strong>Server size</strong></td><td>M1</td><td>M2</td><td>M3</td></tr><tr><td><strong>Extended</strong> <strong>Features</strong></td><td>Extended</td><td>Business</td><td>Business Plus</td></tr><tr><td><strong>Support</strong></td><td>Community</td><td>Extended Support Available (Paid)</td><td>Extended Support Available (Paid)</td></tr><tr><td><strong>MQTT Support</strong></td><td>✓</td><td>✓</td><td>✓</td></tr><tr><td><strong>Daily Backups</strong></td><td>As a service</td><td>As a service</td><td>✓</td></tr></tbody></table>
 
