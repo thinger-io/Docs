@@ -1,69 +1,40 @@
-# MOBILE APP
+# SMARTPHONE APP
 
 ## Introduction
 
-![](../.gitbook/assets/mobile.jpg)
+![](../.gitbook/assets/app\_feature\_blog-1.png)
 
 This documentation provides information about the mobile app of the Thinger.io IoT platform. This way you will learn how to manage different elements of the platform on your smartphone. The app is available on Google Play and the App Store and it is ready for being downloaded.
 
-&#x20;[![Get it on Google Play](../.gitbook/assets/google-play-badge.png)](https://play.google.com/store/apps/details?id=io.thinger.app) [![Get it on App Store](../.gitbook/assets/download-on-the-app-store.png)](https://itunes.apple.com/us/app/thinger-io/id1359235289)
+[![](../.gitbook/assets/GetItOnGooglePlay\_Badge\_Web\_color\_English-1.png)  ](https://play.google.com/store/apps/details?id=io.thinger.mobile.app\&pli=1) [  ![](../.gitbook/assets/Download\_on\_the\_App\_Store\_Badge\_US-UK\_RGB\_wht\_092917.png)](https://apps.apple.com/us/app/thinger-io/id6503300549)
 
-## Usage
+## Features
+
+The application offers almost the same features as the web application. Access the capabilities of Thinger.io to the palm of your hand, enabling you to manage and control IoT devices and workflows anytime, anywhere.
+
+![](../.gitbook/assets/statistics-portrait-505x1024.png)  ![](../.gitbook/assets/side\_menu-portrait-505x1024.png)
+
+![](../.gitbook/assets/shelly-portrait-505x1024.png) ![](../.gitbook/assets/assets-portrait-505x1024.png)
 
 ### Logging in&#x20;
 
-Using this application it is possible to access the user account of the web console, this way all the devices registered automatically will be imported. Note that by entering the user credentials it is also possible to set the web domain of the instance you are working with, thus allowing access to accounts of private Thinger.io instances
+This application can be used to login with both the community console (setting by default) or against your private server.
 
-![](<../.gitbook/assets/image (356).png>)
+![](../.gitbook/assets/login-portrait-505x1024.png)
 
-Working in this mode we can obtain useful information such as the connection status of the devices or the time when the last keep alive was received.
+For configuring the connection against your private server click on the Settings button and set up your hostname.
 
-### Add Device with Device Token
+<figure><img src="../.gitbook/assets/settings-portrait-505x1024.png" alt=""><figcaption></figcaption></figure>
 
-It is also possible to import individual devices without logging into any user account by means of the "Device Tocken" feature, which allows sharing authorization privileges to work with the API of any device even if it belongs to another user account or it's connected to a different server instance. [The **Device Tokens** section of the documentation](https://docs.thinger.io/features/devices-administration#device-tokens) explains how to create and manage the permissions in the web console, and how to create a QR token that allows a simple and fast way to import devices into the Smartphone APP.&#x20;
+### App Rebranding for Business
 
-![deviceC token QR](../.gitbook/assets/deviceC.png)
+Are you a business interested in application rebranding? [Let us know](https://thinger.io/contact-us)! We offer customization options to align the app with your brand’s identity, providing a seamless experience for your users.
 
-To import devices using Tokens, go to the "Scanned" section of the APP by selecting it in the bottom of the interface. Then press the blue  `"+" Add button` and select one the way to introduce the device token from both options: Clipboard if the Device Token has been copied in textual mode or QR Scanner if is possible to show the QR image on another screen. &#x20;
+#### Customization Options
 
-### Receive and send data
+* **Brand Colors**: Customize the app’s color scheme to match your brand.
+* **Logo and Icons**: Replace default icons and logos with your own.
+* **Feature Adjustments**: Tailor the app’s features to better suit your business needs.
 
-With the Thinger.io app is very easy to check the status of your devices. All resources of the device are divided in different cards with all the available information. You can visualize and update output resources, edit and post input resources and call run resources.
 
-A specific resource value can be updated by pressing the blue `Update` button, also dragging the screen downward (pull-to-refresh) will update all of them.
 
-![pull to refresh](../.gitbook/assets/refresh.jpg)
-
-**Posting** a resource just requires to fill the input fields and press the green button. If you don't fill some field, the post is done with the latest value (in grey).
-
-![input resource](../.gitbook/assets/input.jpg)
-
-For call to **run** resources just press the paper plane icon.
-
-![run resource](../.gitbook/assets/run.jpg)
-
-### Charts
-
-A cool function of the Thinger.io app is how easy becames to monitor real-time devices data with three different charts types: lines, bars and pie chart.
-
-By pressing the _**Charts**_ button of any resource opens a simple mobile-optimized dashboard that plots device data using dynamic scales. Behind the chart there is the legend. Pressing on every item you can select/unselect them. Keep in mind that you can represent numbers, but no strings o booleans. Additionally, the pie chart just works with positive numbers.
-
-Do you want to try another amazing function? Rotate your device and watch the charts in full screen.
-
-![full screen chart](../.gitbook/assets/full\_screen.jpg)
-
-### Settings
-
-Each imported device can be configured using the device settings button, which is accessible using the wheel chain button on the top of the screen.
-
-&#x20;&#x20;
-
-![settings](../.gitbook/assets/settings.jpeg)
-
-This interface allows to show or custom:
-
-* **Name** is an alias for each added device. It is very useful in order to hide the identity of devices to third people.&#x20;
-* Inside the **Token QR** section, the token authorization can be visualized in order to share with a friend.
-* The button **Remove** deletes the device from the smartphone.
-
-![deviceC token QR](../.gitbook/assets/token.jpeg)

@@ -91,7 +91,7 @@
 * [THINGER.IO HARDWARE](others/hardware/README.md)
   * [ClimaStick](others/hardware/climastick-devices.md)
   * [WiFi Button](others/hardware/wifi-button.md)
-* [MOBILE APP](others/mobile.md)
+* [SMARTPHONE APP](others/mobile.md)
 
 ***
 
