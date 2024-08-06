@@ -29,7 +29,7 @@ To install the Thinger.io library from the Arduino Library Manager:
 3. **Install the Library**:
    * Select the Thinger.io Client library from the search results and click **Install**.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Thinger.io Arduino Library</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Thinger.io Arduino Library</p></figcaption></figure>
 
 ## Install Thinger.io from ZIP
 
@@ -58,7 +58,7 @@ Once the Thinger.io Library has been installed, you can start a new project usin
 
 This will load the example code, which you can then modify to suit your specific needs.
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>Thinger.io Arduino Examples </p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Thinger.io Arduino Examples </p></figcaption></figure>
 
 &#x20;A basic example for an ESP32 device will look like the following:
 

@@ -43,6 +43,7 @@
 * [DATA BUCKETS](features/buckets.md)
 * [DASHBOARDS](features/dashboards.md)
 * [ENDPOINTS](features/endpoints-1.md)
+* [ALERTS](features/alerts.md)
 * [ACCESS TOKENS](features/access-tokens.md)
 * [GEOFENCING](features/geofencing.md)
 * [ASSET TYPES & GROUPS](features/assets-manager.md)

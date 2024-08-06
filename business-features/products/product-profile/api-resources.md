@@ -37,7 +37,7 @@ Each product can define any number of API resources, and each resource is unique
 
 Choose a resource identifier that represents its purpose, i.e., it can be used to control device actions: "power", "reboot", "configure", or for reading sensor data:  "temperature", ·"humidity".&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Products - API Resource Identifier</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption><p>Products - API Resource Identifier</p></figcaption></figure>
 
 ## API Resource Request
 

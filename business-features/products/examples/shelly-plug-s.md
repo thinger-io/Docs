@@ -6,7 +6,7 @@ description: WiFi Smart Plug with Power Metering
 
 ## Product Description
 
-<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption><p>Shelly Plug S</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (1).png" alt=""><figcaption><p>Shelly Plug S</p></figcaption></figure>
 
 Shelly Plug S is a WiFi Smart Plug with power metering, that can be easily integrated into the platform. As it supports the MQTT protocol by default, it is not required to re-flash the device, keeping the device warranty.
 
