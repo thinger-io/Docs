@@ -142,4 +142,30 @@ Alarm management in the alarm List is a critical function that allows users to m
 * **Set Projects:** Assigning alarms to projects helps in organizing and managing them within specific contexts. This is particularly useful in larger deployments where alarms may pertain to different devices, locations, or operational areas.
 * **Remove:** Removing alarms from the system is necessary for cleaning up outdated or irrelevant alarms. This ensures that the Alarm List remains relevant and uncluttered, making it easier to manage current alarms.
 
-####
+## estoAlarms Inspector
+
+The **Alarms Inspector** in Thinger.io is a tool designed to provide detailed insights into the behavior of the alarms.  It helps users track and analyze the behavior of the alert system by showing the event history of alarms. It helps users understand the lifecycle and behavior of each alarm by providing a detailed timeline of events.
+
+**Filtering Options**
+
+The Alarms Inspector offers several filtering options that allow users to focus on specific types of alarm events. These filters include:
+
+1. **alarm\_instance\_activate**
+   * **Filter Events:** Shows events where an alarm instance is activated.
+2. **alarm\_instance\_create**
+   * **Filter Events:** Displays events where a new alarm instance is created.
+3. **alarm\_instance\_delete**
+   * **Filter Events:** Shows events where an alarm instance is deleted.
+4. **alarm\_instance\_normalize**
+   * **Filter Events:** Displays events where an alarm instance is normalized, indicating that the condition triggering the alarm is back to normal.
+5. **alarm\_instance\_update**
+   * **Filter Events:** Shows events where an alarm instance is updated with new information or conditions.
+6. **alarm\_rule\_create**
+   * **Filter Events:** Displays events where a new alarm rule is created.
+7. **alarm\_rule\_delete**
+   * **Filter Events:** Shows events where an alarm rule is deleted.
+8. **alarm\_rule\_execute**
+   * **Filter Events:** Displays events where an alarm rule is executed, showing the process of checking conditions and triggering alarms.
+9. **alarm\_rule\_update**
+   * **Filter Events:** Shows events where an alarm rule is updated with new parameters or conditions.
+
