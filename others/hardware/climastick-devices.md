@@ -324,9 +324,9 @@ Your can download the device datasheet from the following link:
 
 You can download and edit the device files using eagle cad:
 
-ClimaStick V1 design files (.sch & .brd)
+[ClimaStick V1 design files (.sch & .brd)](https://acme.thinger.io/v1/users/jt/storages/ClimaStickFiles/files/)
 
-ClimaStick V2 design files (.sch & .brd)
+[ClimaStick V2 design files (.sch & .brd)](https://acme.thinger.io/v1/users/jt/storages/ClimaStickFiles/files/)
 
 ### Disclaimer
 
