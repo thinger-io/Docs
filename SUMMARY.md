@@ -69,11 +69,6 @@
 * [USER ACCOUNTS](business-features/users-management.md)
 * [WHITE-LABELING](business-features/web-console-rebranding.md)
 * [CUSTOM WEB DOMAIN](business-features/web-domain-customization.md)
-* [SERVER ADMINISTRATION](business-features/server-configuration/README.md)
-  * [License Setting](business-features/server-configuration/license-setting.md)
-  * [Server Settings](business-features/server-configuration/settings.md)
-  * [Cluster / Server Status](business-features/server-configuration/cluster-server-status.md)
-  * [Server Logs](business-features/server-configuration/server-logs.md)
 * [OAUTH2 CLIENTS](business-features/oauth2-clients.md)
 * [PROXIES](business-features/proxies.md)
 
@@ -82,6 +77,11 @@
 * [SERVER DEPLOYMENT](server/deployment/README.md)
   * [Thinger.io Cloud](server/deployment/thinger.io-cloud-server.md)
   * [On-Premise](server/deployment/on-premise.md)
+* [SERVER ADMINISTRATION](server/server-configuration/README.md)
+  * [License Setting](server/server-configuration/license-setting.md)
+  * [Server Settings](server/server-configuration/settings.md)
+  * [Cluster / Server Status](server/server-configuration/cluster-server-status.md)
+  * [Server Logs](server/server-configuration/server-logs.md)
 * [SERVER API](server/api.md)
 * [CHANGELOG](server/changelog.md)
 
