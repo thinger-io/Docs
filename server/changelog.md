@@ -7,6 +7,100 @@ coverY: 0
 
 # CHANGELOG
 
+## 6.4
+
+**Community Release Date:**  22-01-2025.
+
+**Private Servers Release Date:**  29-01-2024.
+
+#### Added
+
+*   **Plugin Installation Dialog**:
+
+    * Support for custom volumes, enabling the mounting of custom file storages to plugins like Node-RED, FTP, etc.
+
+    <figure><img src="../.gitbook/assets/image (1).png" alt="" width="563"><figcaption><p>Custom Volumes to be attached to Plugins</p></figcaption></figure>
+
+    * Support for configuring custom environment variables, e.g., for enabling Node-RED projects.
+
+<figure><img src="../.gitbook/assets/image (2).png" alt="" width="563"><figcaption><p>Custom Environment Variables on Plugins</p></figcaption></figure>
+
+* **Virtual Devices**: Initial support for devices that are always connected and can fetch data from external resources (e.g., endpoints via products). Example use case: creating a weather device fetching weather data and forecasts.
+
+<figure><img src="../.gitbook/assets/image (5).png" alt="" width="563"><figcaption><p>Virtual Devices</p></figcaption></figure>
+
+* **Product Plugin Exporter**: Export products to a file storage, with options to:
+  * Set plugin image, name, description, and version.
+  * Edit markdown readme with images, changelogs, etc.
+
+<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>New Product Plugin Exporter</p></figcaption></figure>
+
+* **New Event**: `endpoint_call_response`, providing the result of endpoint calls.
+* **Billing Menu for Admins**: Added a menu item linking to the customer portal.
+
+<figure><img src="../.gitbook/assets/image (7).png" alt="" width="312"><figcaption><p>New Billing </p></figcaption></figure>
+
+* **Account Deletion**: Community users can now delete their accounts.
+
+<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption><p>Community users can remove their accounts</p></figcaption></figure>
+
+* **Enhanced Product Profile Resources**: Resources can now target endpoints, plugins paths, call other api resources, and enable operations based on their responses.
+* **Experimental MongoDB Backend**:
+  * Support for custom data retention policies for individual buckets.
+  * Deprecates InfluxDB for new instances.
+
+<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption><p>MongoDB Backend as new </p></figcaption></figure>
+
+***
+
+#### Improved
+
+* **Default Plugin Shell**: Updated to point to `/bin/sh` (used in minimal images). Configurable via the `task.shell` parameter.
+* **Plugin Installation**: Plugins can now be installed directly from file storages, where Plugins are exported by default in the Plugin Exporter feature.
+*   **Plugin Management Page**: Migrated to Angular with new features:
+
+    * Supports reading `readme.md` and images from file storage.
+
+    <figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p>New Plugin Management Page.</p></figcaption></figure>
+* **Console Component**: Updated to Angular with text search functionality.
+*
+
+    <figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption><p>New console component migrated to Angular</p></figcaption></figure>
+* **Charts**: Migrated to Angular using `ng-apexcharts`, resolving several issues.
+* **Location Updates**: Location properties now update with the current latitude and longitude values.
+* **File Storage API**:
+  * Added support for specifying storage paths using the `path` parameter.
+  * Automatically creates parent directories when uploading a file via `PUT` if they do not exist.
+* **Swagger API Schema**: Improved schema definitions for better clarity and usability.
+
+***
+
+#### Fixed
+
+* **Bucket Operations**:
+  * Resolved bucket writes with empty tag values.
+  * Fixed bucket reads not using the `project` field.
+* **Endpoint Calls**:
+  * Fixed endpoint call tests not displaying `application/json` body with UTF-8 encoding in response headers.
+* **Plugin Environment Variables**:
+  * Fixed creation of environment variables for plugins without default values.
+  * Fixed issues when adding environment variables to such plugins.
+* **Project Roles**: Fixed form creation for project roles.
+* **Device Buckets**: Fixed an unauthorized message when a project member accesses `DeviceBucket`.
+* **Resource Streams**: Fixed product resource streams not initializing for non-IoTMP/PROTO devices on connection.
+* **Dashboard**:
+  * Fixed window titles containing placeholders.
+  * Fixed removal of incorrect sub-widgets in group widgets.
+  * Fixed missing sources in widgets within group widgets.
+  * Sharing a dashboard now automatically grants file storage read permissions if required (e.g., for HTML widgets).
+* **Frontend API**: Fixed API resource permissions.
+* **Mobile App**: Fixed issues with loading HTML widgets.
+* **HTML Widgets**: Fixed reliance on public access to file storage.
+* **Project Switching**:
+  * Admin users within a project no longer see the info page.
+  * Redirecting to the default state when switching projects now applies to all users.
+* **Resource List**: Under some conditions, a resource list, i.e., devices, may display duplicated items.
+
 ## 6.3
 
 **Community Release Date:**  17-06-2024.
@@ -388,11 +482,7 @@ Once claim is completed, the process may request the configuration of the device
     * Multiple endpoint notifications on activation, normalization, or reminder., i.e., for sending an email, a message to mobile, etc.
     * Alarm instance management via Acknowledge, Shelve, Latch, or Clear, including reactivation timeouts and operator annotations.
 
-<div align="center" data-full-width="false">
-
-<figure><img src="../.gitbook/assets/image (66).png" alt="Alarm Instances"><figcaption><p>Alarm Instances</p></figcaption></figure>
-
-</div>
+<div align="center" data-full-width="false"><figure><img src="../.gitbook/assets/image (66).png" alt="Alarm Instances"><figcaption><p>Alarm Instances</p></figcaption></figure></div>
 
 * Support for cloning almost any thinger.io resource, from dashboards to data buckets, file storages, and projects.
 
@@ -725,7 +815,7 @@ Once claim is completed, the process may request the configuration of the device
 
 *   Experimental **IOTMP Proxies** (TCP/HTTP) for connecting with device local network resources, i.e., devices/routers webpages, terminals, RDP, VNC, etc. These proxies requires new IOTMP client library for Linux.
 
-    ![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/5/5f75f79c013adb100f77cb875914de881ed23808\_2\_682x500.png)
+    ![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/5/5f75f79c013adb100f77cb875914de881ed23808_2_682x500.png)
 
     Example of the IOTMP Linux Client working on a [RevPi](https://revolutionpi.com/), providing access to device configuration over the local web page:
 
@@ -776,7 +866,7 @@ Discussion Topic: [Thinger.io Community Forum](https://community.thinger.io/t/pl
 * File Storage explorer does not download binary files automatically when clicked, it just displays a download button: ![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/a/a166b629602cc508587dce113f2d765d22067f34.png)
 * Storage API now determine if a file without extension is `text/plain` or `application/octect-stream` to set the correct `content-type` on HTTP response
 * Add option `rewrite_base_path` to avoid base path rewrite in plugins reverse proxy
-* File Storages can now be opened with VS Code when the plugin is installed ![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/c/cc16e30b6bf877efdfe068dbd4ae565916898332\_2\_948x748.jpeg)
+* File Storages can now be opened with VS Code when the plugin is installed ![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/c/cc16e30b6bf877efdfe068dbd4ae565916898332_2_948x748.jpeg)
 
 #### \[4.5.3] 2022-07-13
 
@@ -808,10 +898,10 @@ Discussion Topic: [Thinger.io Community Forum](https://community.thinger.io/t/pl
 
 *   New administration feature called 'Proxies' (starting on MEDIUM instances), which allows creating custom proxies to plugins or local services, i.e, redirect TCP or UDP traffic to Node-RED (for example, for COAP devices), or provide access to local InfluxDB2 install
 
-    ![image|615x500](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/f/f8b596ac16ee9fcd6c6021fc61a956ea9201078f\_2\_732x750.png)
+    ![image|615x500](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/f/f8b596ac16ee9fcd6c6021fc61a956ea9201078f_2_732x750.png)
 *   New plugin InfluxDB2 (starting on MEDIUM instances, as it requires Proxies feature). It supports accessing the InfluxDB2 GUI and API for custom configurations, dashboards, alerts, ingestion, etc.
 
-    ![image|616x500](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/b/b9181507304f07b8a3499e1079384c5e435ab1a3\_2\_836x750.jpeg)
+    ![image|616x500](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/b/b9181507304f07b8a3499e1079384c5e435ab1a3_2_836x750.jpeg)
 * A plugin install can now initialize any resource in the console, i.e., InfluxDB2 plugin automatically initializes a proxy
 * Plugins can now be defined without a task, i.e., the InfluxDB2 plugin does not deploy any additional container
 
@@ -896,7 +986,7 @@ Discussion Topic: [Thinger.io Community Forum](https://community.thinger.io/t/pl
 * Server API updates with support for querying branch information and statistics from localhost
 *   Landing pages for each resource type, providing information and links to resources
 
-    ![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/f/f0dac6aa0146b5b9d584f03532ecb9ed95f853eb\_2\_517x345.png)
+    ![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/f/f0dac6aa0146b5b9d584f03532ecb9ed95f853eb_2_517x345.png)
 * Support for launching processes inside plugins and get the command response over http/websocket
 * Shell over a plugin instance is now executed inside the plugin container (using exec)
 * Shell over a plugin now adapts to the original terminal size
@@ -1156,7 +1246,7 @@ Discussion Topic: [Thinger.io Community Forum](https://community.thinger.io/t/pl
 
 *   Apex Charts are now available (in BETA)!
 
-    ![image|660x479](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/d/dbf03ebaff5b5e608b69e7910b9a8ecc93e98cb9\_2\_463x500.gif)
+    ![image|660x479](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/d/dbf03ebaff5b5e608b69e7910b9a8ecc93e98cb9_2_463x500.gif)
 * Add aggregation based on client browser timezone
 * Allow MQTT 3.1 client connections (in addition to 3.1.1)
 * Initial support for VSCode plugin (starting from Medium instances). Contact us for more details.

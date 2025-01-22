@@ -61,7 +61,7 @@ This device is provided with a buzzer, that allows a simple way to know the devi
 Brand new device is not ready to use, WiFi connection credentials and user information should be introduced. During the first run, a hotspot will be created by the device. This hotspot allows users accessing a graphical configuration interface using common web navigator. Follow next steps to access this interface and configure the WiFi credentials.
 
 {% hint style="info" %}
-In order to save battery, the configuration hotspot is hold up for 180 seconds (3 minutes**). After this time the WiFi button will automatically turn its power supply off**, so if the process wasn’t completed it will be restarted by pressing the main button one time.
+In order to save battery, the configuration hotspot is hold up for 180 seconds (3 minute&#x73;**). After this time the WiFi button will automatically turn its power supply off**, so if the process wasn’t completed it will be restarted by pressing the main button one time.
 {% endhint %}
 
 1\)      With the bottom switch in “ON” position, press the device and listen the Wake-up signal (one “bip”).
@@ -202,7 +202,7 @@ This section covers how to setup your computer to start working with the ClimaSt
 
 4- Open Sketch > Include Library > Manage Libraries, and search for **Thinger.io** libraries. Then install the Thinger.io Platform and WiFi Button libraries, as shown in the following picture.
 
-![](../../.gitbook/assets/climastick\_libraries.png)
+![](../../.gitbook/assets/climastick_libraries.png)
 
 Now your computer is ready to start programming these devices to easily adapt their behavior to multiple use cases.
 
@@ -238,7 +238,7 @@ In order to provide an upgradeable system, these devices can be re-programed usi
 
 4\)      If this process was carried out properly, an “OTA” hotspot will be opened. Using a computer, developers can connect Arduino IDE to this network and send new firmware to the button via Wireless Port.
 
-#### **USB-**UART Programming
+#### **USB-**&#x55;ART Programming
 
 1\)Button enclosure disassembling
 

@@ -38,17 +38,17 @@ Private instances can be deployed within minutes over the main cloud provider ho
 
 The administrator of a private instance of Thinger.io can edit the preferences of the subscription using the management portal, for this you must access the website [**https://billing.stripe.com/p/login/00g9D1fN50SIcpOfYY**](https://billing.stripe.com/p/login/00g9D1fN50SIcpOfYY) obtaining a One Time Password that will be sent to your email when you execute the request.
 
-![](../../.gitbook/assets/stripe\_login.png)
+![](../../.gitbook/assets/stripe_login.png)
 
-This portal allows to manage subscription preferences such as **changing the administration email** account**, modify payment details** and also editing the **subscription Addons** for each license that has been contracted on Thinger.io system:
+This portal allows to manage subscription preferences such as **changing the administration email** accoun&#x74;**, modify payment details** and also editing the **subscription Addons** for each license that has been contracted on Thinger.io system:
 
-![](../../.gitbook/assets/stripe\_customer\_portal.png)
+![](../../.gitbook/assets/stripe_customer_portal.png)
 
 ### Manage Payment Methods
 
 It is possible to modify the payment method by accessing the section "Payment Methods" where you can choose to make payments with a Credit Card or Direct Debit that allows the domiciliation of the payment with SEPA transferences.
 
-![](../../.gitbook/assets/stipe\_payment\_options.png)
+![](../../.gitbook/assets/stipe_payment_options.png)
 
 ### Addons contracting
 
@@ -72,4 +72,4 @@ To cancel a subscription perform the following steps:&#x20;
 2. Select the subscription you wish to cancel
 3. In the subscription administration panel click on the `cancel subscription` option.
 
-![](../../.gitbook/assets/stripe\_cancel\_subscription.png)
+![](../../.gitbook/assets/stripe_cancel_subscription.png)

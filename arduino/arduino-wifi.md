@@ -168,13 +168,13 @@ void loop() {
 For using Arduino Yun, the device must be connected to a network with Internet, just with Ethernet or a Wifi connection. It can be configured in the Arduino Yun web configuration.
 {% endhint %}
 
-![Arduino Yun network configuration](../.gitbook/assets/arduino\_yun\_network.png)
+![Arduino Yun network configuration](../.gitbook/assets/arduino_yun_network.png)
 
 ## Arduino MKR1000
 
 The Arduino MKR1000 is a microcontroller based on the Atmel ATSAMW25 SoC (System on Chip), that is part of the SmartConnect family of Atmel Wireless devices, specifically designed for IoT projects and devices. A good 32 bit computational power similar to the Zero board, the usual rich set of I/O interfaces, low power WiFi with a Cryptochip for secure communication, and the ease of use of the Arduino Software (IDE) for code development and programming. All these features make this board the preferred choice for the emerging IoT battery-powered projects in a compact form factor.
 
-![](../.gitbook/assets/Arduino\_MKR1000.png)
+![](../.gitbook/assets/Arduino_MKR1000.png)
 
 The following example will allow connecting the MKR1000 device to the cloud platform in a few lines using the WiFi interface. Just modify the `arduino_secrets.h` file with your own information.
 
@@ -231,7 +231,7 @@ void loop() {
 For using MKR1000 over the default TLS/SSL connection it is required to install the Thinger.io server certificate in the board with the Wifi101 Firmware Updater located in the Tools menu.
 {% endhint %}
 
-![WiFi 101 Certificates Updater](../.gitbook/assets/mkr1000\_ssl\_certificate.png)
+![WiFi 101 Certificates Updater](../.gitbook/assets/mkr1000_ssl_certificate.png)
 
 ## Arduino MKR1010
 
@@ -299,7 +299,7 @@ void loop() {
 For using MKR1010 over the default TLS/SSL connection it is required to install the Thinger.io server certificate in the board with the Wifi101 Firmware Updater located in the Tools menu.
 {% endhint %}
 
-![WiFiNINA Certificates Updater](../.gitbook/assets/mkr1000\_ssl\_certificate.png)
+![WiFiNINA Certificates Updater](../.gitbook/assets/mkr1000_ssl_certificate.png)
 
 ## Arduino Nano 33 IoT
 
@@ -385,7 +385,7 @@ void loop() {
 For using Arduino 33 IoT over the default TLS/SSL connection it is required to install the Thinger.io server certificate in the board with the Wifi101 Firmware Updater located in the Tools menu.
 {% endhint %}
 
-![WiFiNINA Certificates Updater](../.gitbook/assets/mkr1000\_ssl\_certificate.png)
+![WiFiNINA Certificates Updater](../.gitbook/assets/mkr1000_ssl_certificate.png)
 
 ## Arduino Nano RP2040
 
@@ -457,7 +457,7 @@ void loop() {
 For using Arduino Nano RP2040 over the default TLS/SSL connection it is required to install the Thinger.io server certificate in the board with the Wifi101 Firmware Updater located in the Tools menu.
 {% endhint %}
 
-![WiFiNINA Certificates Updater](../.gitbook/assets/mkr1000\_ssl\_certificate.png)
+![WiFiNINA Certificates Updater](../.gitbook/assets/mkr1000_ssl_certificate.png)
 
 ## Arduino Portenta H7
 
@@ -517,7 +517,7 @@ void loop() {
 {% hint style="success" %}
 In case of problems when connecting over secure TLS connections, you can try updating the WiFi firmware by flashing the WiFiFirmwareUpdater example sketch.
 
-<img src="../.gitbook/assets/image (623).png" alt="" data-size="original">
+<img src="../.gitbook/assets/image (623) (1).png" alt="" data-size="original">
 {% endhint %}
 
 ## Arduino Opta Wifi
@@ -633,7 +633,7 @@ void loop() {
 {% hint style="success" %}
 In case of problems when connecting over secure TLS connections, you can try updating the WiFi firmware by flashing the WiFiFirmwareUpdater example sketch.
 
-<img src="../.gitbook/assets/image (623).png" alt="" data-size="original">
+<img src="../.gitbook/assets/image (623) (1).png" alt="" data-size="original">
 {% endhint %}
 
 ## Arduino Uno WiFi Rev2
@@ -700,6 +700,6 @@ void loop() {
 For using this board with he default TLS/SSL connection it is required to install the Thinger.io server certificate in the board with the Wifi101 Firmware Updater located in the Tools menu.
 {% endhint %}
 
-![](../.gitbook/assets/mkr1000\_ssl\_certificate.png)
+![](../.gitbook/assets/mkr1000_ssl_certificate.png)
 
 ###

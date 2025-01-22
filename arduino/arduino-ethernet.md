@@ -65,7 +65,7 @@ void loop() {
 {% hint style="success" %}
 In case of problems when connecting over secure TLS connections, you can try updating the WiFi firmware by flashing the WiFiFirmwareUpdater example sketch.
 
-<img src="../.gitbook/assets/image (623).png" alt="" data-size="original">
+<img src="../.gitbook/assets/image (623) (1).png" alt="" data-size="original">
 {% endhint %}
 
 ## Arduino Opta Ethernet
@@ -182,7 +182,7 @@ void loop() {
 {% hint style="success" %}
 In case of problems when connecting over secure TLS connections, you can try updating the WiFi firmware by flashing the WiFiFirmwareUpdater example sketch.
 
-<img src="../.gitbook/assets/image (623).png" alt="" data-size="original">
+<img src="../.gitbook/assets/image (623) (1).png" alt="" data-size="original">
 {% endhint %}
 
 ## Arduino with Ethernet Shield
@@ -237,7 +237,7 @@ The ENC28J60 is a very cheap Ethernet controller that can be used with our Ardui
 
 ![ENC28J60 Ethernet Module](../.gitbook/assets/ENC28J60.jpg)
 
-There are some libraries for managing this boards, but we will use [UIPEthernet](https://github.com/ntruchsess/arduino\_uip), as it provides an standard interface that is compatible with the stock Thinger libraries.
+There are some libraries for managing this boards, but we will use [UIPEthernet](https://github.com/ntruchsess/arduino_uip), as it provides an standard interface that is compatible with the stock Thinger libraries.
 
 The following example will allow connecting a device using the ENC28J60 interface to the cloud platform in a few lines using the WiFi interface. Just modify the `arduino_secrets.h` file with your own information.
 
