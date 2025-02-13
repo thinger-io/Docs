@@ -6,7 +6,7 @@ Thinger.io IoT instances can be deployed on-premise or on any kind of cloud or l
 
 ### 1. Select the right license
 
-On-premise instances can be deployed with different licenses, depending on the project requirements, mainly in terms of platform features like rebrands, custom domains, additional support, plugins, etc. License codes can be purchased [here](https://pricing.thinger.io).\
+On-premise instances can be deployed with different licenses, depending on the project requirements, mainly in terms of platform features like rebrands, custom domains, additional support, plugins, etc. License codes can be purchased [here](https://thinger.io/pricing).\
 
 
 | Features                  | MEDIUM                             | LARGE                                | PERPETUAL                         |
@@ -33,7 +33,7 @@ Once you have received the license token by email, it is possible to easily depl
 Install [Docker Engine](https://docs.docker.com/install/) and [Docker Compose ](https://docs.docker.com/compose/install/)before following this guide.
 {% endhint %}
 
-This guide assumes you are installing Thinger.io on a fresh Linux host with Docker support, as it will run databases like `MongoDB` and `InfluxDB`, and will start listening on several ports: `80`, `443`, `1883`,`8883`, `25200`, `25202`, `25204` and `25206` . It will also create a root directory in `/data` where all the Thinger.io data and database information will be stored.
+This guide assumes you are installing Thinger.io on a fresh Linux host with Docker support, as it will run databases like `MongoDB`, and will start listening on several ports: `80`, `443`, `1883`,`8883`, `25200`, `25202`, `25204` and `25206` . It will also create a root directory in `/data` where all the Thinger.io data and database information will be stored.
 
 To start, just launch the following command that will download the `docker-compose` file associated to your license:
 
@@ -55,12 +55,15 @@ It should display something like the following:
 
 {% code title="docker-compose.yml" %}
 ```yaml
-version: '3.7'
+networks:
+  backend:
+    name: backend
+
 services:
 
   # Thinger.io server
   thinger:
-    image: thinger/server:latest
+    image: thinger/server:alpha
     container_name: thinger
     user: root
     volumes:
@@ -73,7 +76,7 @@ services:
       - -v0
       - --runpath=/data
     environment:
-      - TOKEN=ce84fc9f089227a4828f66c470d9319533611ee37adc41676ba1ef5a92bd1dca0f2258962d19627010525e437c2cbf48a
+      - TOKEN={{TOKEN}}
       - HOST_VOLUME=/data/thinger
     network_mode: host
     restart: always
@@ -90,47 +93,24 @@ services:
       start_period: 2m
     depends_on:
       - mongodb
-      - influxdb
 
   # mongodb
   mongodb:
-    image: mongo:4
+    image: mongo:8.0
     container_name: "mongodb"
     environment:
       - MONGO_DATA_DIR=/data/db
       - MONGO_LOG_DIR=/dev/null
       - MONGO_INITDB_ROOT_USERNAME=thinger
-      - MONGO_INITDB_ROOT_PASSWORD=PiIcgpUcl0r5xUb/cXP8WS5G
+      - MONGO_INITDB_ROOT_PASSWORD={{SALT}}
       - MONGO_INITDB_DATABASE=thinger
     volumes:
       - /data/mongodb:/data/db
+    networks:
+      - backend
     ports:
       - 127.0.0.1:27017:27017
-    command: mongod --quiet
-    restart: always
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "200k"
-        max-file: "10"
-
-  # influxdb
-  influxdb:
-    image: influxdb:2.4
-    container_name: influxdb2
-    ports:
-      # The API for InfluxDB is served on port 8086
-      - 8086:8086
-    volumes:
-      - /data/influxdb2:/var/lib/influxdb2
-    environment:
-      - DOCKER_INFLUXDB_INIT_MODE=setup
-      - DOCKER_INFLUXDB_INIT_USERNAME=thinger
-      - DOCKER_INFLUXDB_INIT_PASSWORD=PiIcgpUcl0r5xUb/cXP8WS5G
-      - DOCKER_INFLUXDB_INIT_ORG=thinger
-      - DOCKER_INFLUXDB_INIT_BUCKET=thinger
-      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=ce84fc9f089227a4828f66c470d9319533611ee37adc41676ba1ef5a92bd1dca0f2258962d19627010525e437c2cbf48a
-      - INFLUXDB_REPORTING_DISABLED=true
+    command: mongod --maxConns 10000 --quiet
     restart: always
     logging:
       driver: "json-file"
@@ -159,6 +139,7 @@ services:
         max-file: "10"
     depends_on:
       - thinger
+
 ```
 {% endcode %}
 
@@ -186,8 +167,8 @@ f03c87626902: Pull complete
 db577de2586f: Pull complete
 Digest: sha256:156bb95f155ce9d3706c6a2f17d2a6750cf62e91777a610625910c7ebf780894
 Status: Downloaded newer image for thinger/server:latest
-Pulling mongodb (mongo:4)...
-4: Pulling from library/mongo
+Pulling mongodb (mongo:8)...
+8: Pulling from library/mongo
 2746a4a261c9: Pull complete
 4c1d20cdee96: Pull complete
 0d3160e1d0de: Pull complete
@@ -202,19 +183,7 @@ bca9e535ddb8: Pull complete
 9c3edad81b2a: Pull complete
 6dbcf78fe5ae: Pull complete
 Digest: sha256:7a1406bfc05547b33a3b7b112eda6346f42ea93ee06b74d30c4c47dfeca0d5f2
-Status: Downloaded newer image for mongo:4
-Pulling influxdb (influxdb:1.7)...
-1.7: Pulling from library/influxdb
-146bd6a88618: Pull complete
-9935d0c62ace: Pull complete
-db0efb86e806: Pull complete
-5dd32e36b488: Pull complete
-750868d0ab2b: Pull complete
-f4d98645d729: Pull complete
-c8bd5f153b8d: Pull complete
-f458001f5cb1: Pull complete
-Digest: sha256:eae897c8ebf85ac3e2bdff8ba053d40a3df7598c41f4b63d42faf2603e2eef74
-Status: Downloaded newer image for influxdb:1.7
+Status: Downloaded newer image for mongo:8
 Pulling ouroboros (pyouroboros/ouroboros:)...
 latest: Pulling from pyouroboros/ouroboros
 8e402f1a9c57: Pull complete
@@ -240,9 +209,8 @@ Then, the Thinger.io instance and the associated databases will be running:
 ```bash
 root@docker-s-1vcpu-1gb-fra1-01:~# docker ps
 CONTAINER ID        IMAGE                   COMMAND                  CREATED             STATUS                    PORTS                                                                          NAMES
-c7075dd45e5d        mongo:4                 "docker-entrypoint.s…"   43 minutes ago      Up 43 minutes             127.0.0.1:27017->27017/tcp                                                     mongodb
-ff9d6178773b        influxdb:2.4            "/entrypoint.sh infl…"   43 minutes ago      Up 43 minutes             127.0.0.1:8082->8082/tcp, 127.0.0.1:8086->8086/tcp, 127.0.0.1:8089->8089/udp   influxdb
-8ee8b4c924dd        thinger/server:latest   "thinger -v1 --runpa…"   47 minutes ago      Up 43 minutes (healthy)                                                                                  thinger
+c7075dd45e5d        mongo:8                 "docker-entrypoint.s…"   43 minutes ago      Up 43 minutes             127.0.0.1:27017->27017/tcp                                                     mongodb
+8ee8b4c924dd        thinger/server:latest   "thinger -v0 --runpa…"   47 minutes ago      Up 43 minutes (healthy)                                                                                  thinger
 eee1b9479368        pyouroboros/ouroboros   "ouroboros"              47 minutes ago      Up 47 minutes                                                                                            ouroboros
 ```
 
