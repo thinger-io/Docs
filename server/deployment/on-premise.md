@@ -200,7 +200,6 @@ Digest: sha256:cfa29916459fb8c578fce084ce839a0d3bee478b83a21b6b1d10c6b78bc4a372
 Status: Downloaded newer image for pyouroboros/ouroboros:latest
 Creating mongodb   ... done
 Creating ouroboros ... done
-Creating influxdb  ... done
 Creating thinger   ... done
 ```
 
