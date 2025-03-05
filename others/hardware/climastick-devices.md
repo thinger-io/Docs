@@ -4,6 +4,8 @@ description: Environmental and inertial sensing device based on ESP8266 processo
 
 # ClimaStick
 
+<figure><img src="../../.gitbook/assets/clima.png" alt="" width="188"><figcaption></figcaption></figure>
+
 ## ClimaStick Reference
 
 This board is a complete Internet of Things development kit, that integrates WiFi connectivity along with a set of powerful sensors to provide environmental and motion sensing. This way, it is possible to create several connected projects easily. It is fully compatible with the Thinger.io cloud infrastructure, and provides easy to use libraries that can be used in the Arduino IDE.
@@ -16,7 +18,7 @@ This board is a complete Internet of Things development kit, that integrates WiF
 
 #### ClimaStick V2:
 
-![](../../.gitbook/assets/i0\_7.png)
+![](../../.gitbook/assets/i0_7.png)
 
 ### Board Features
 
@@ -71,7 +73,7 @@ This section covers how to setup your computer to start working with the ClimaSt
 
 4- Open Sketch > Include Library > Manage Libraries, and search for **Thinger.io** libraries. Then install the Thinger.io and ClimaStick libraries, as shown in the following picture.
 
-![](../../.gitbook/assets/climastick\_libraries.png)
+![](../../.gitbook/assets/climastick_libraries.png)
 
 5- Connect the ClimaStick to your computer and select its serial communication port number on: Tools > Port. It normally will be a COM port, or named as /dev/cu.SLAB\_USBtoUART on Mac.
 
@@ -174,11 +176,11 @@ This example is quite useful while requiring accurate temperature values. Due to
 
 After some time, your bucket should look like:
 
-![](../../.gitbook/assets/climastick\_bucket.png)
+![](../../.gitbook/assets/climastick_bucket.png)
 
 That will allow you to create historical dashboards like the following:
 
-![](../../.gitbook/assets/climastick\_dashboard.png)
+![](../../.gitbook/assets/climastick_dashboard.png)
 
 ## ClimaStick Functions
 
@@ -316,9 +318,9 @@ Click below to download lastest ClimaStick.h library:
 
 Your can download the device datasheet from the following link:
 
-[ClimaStick V1 Datasheet >](https://github.com/thinger-io/Docs/tree/9fc057586e6704dcf058d1a33a7f25ae648c002c/hardware/climaStick/assets/ClimaStick\_Datasheet.pdf)
+[ClimaStick V1 Datasheet >](https://github.com/thinger-io/Docs/tree/9fc057586e6704dcf058d1a33a7f25ae648c002c/hardware/climaStick/assets/ClimaStick_Datasheet.pdf)
 
-[ClimaStick V2 Datasheet >](https://github.com/thinger-io/Docs/tree/9fc057586e6704dcf058d1a33a7f25ae648c002c/hardware/climaStick/assets/ClimaStick\_V2\_Datasheet.pdf)
+[ClimaStick V2 Datasheet >](https://github.com/thinger-io/Docs/tree/9fc057586e6704dcf058d1a33a7f25ae648c002c/hardware/climaStick/assets/ClimaStick_V2_Datasheet.pdf)
 
 ### Design files
 
