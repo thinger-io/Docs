@@ -90,6 +90,7 @@
 * [OTHER SOFTWARE](others/other-software/README.md)
   * [Server Monitoring Client](others/other-software/server-monitoring-client.md)
 * [THINGER.IO HARDWARE](others/hardware/README.md)
+  * [Thinger32 NB-IoT](others/hardware/thinger32-nb-iot.md)
   * [ClimaStick](others/hardware/climastick-devices.md)
   * [WiFi Button](others/hardware/wifi-button.md)
 * [SMARTPHONE APP](others/mobile.md)

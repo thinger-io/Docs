@@ -19,15 +19,15 @@ coverY: 0
 
     * Support for custom volumes, enabling the mounting of custom file storages to plugins like Node-RED, FTP, etc.
 
-    <figure><img src="../.gitbook/assets/image (1).png" alt="" width="563"><figcaption><p>Custom Volumes to be attached to Plugins</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (1) (1).png" alt="" width="563"><figcaption><p>Custom Volumes to be attached to Plugins</p></figcaption></figure>
 
     * Support for configuring custom environment variables, e.g., for enabling Node-RED projects.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt="" width="563"><figcaption><p>Custom Environment Variables on Plugins</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt="" width="563"><figcaption><p>Custom Environment Variables on Plugins</p></figcaption></figure>
 
 * **Virtual Devices**: Initial support for devices that are always connected and can fetch data from external resources (e.g., endpoints via products). Example use case: creating a weather device fetching weather data and forecasts.
 
-<figure><img src="../.gitbook/assets/image (5).png" alt="" width="563"><figcaption><p>Virtual Devices</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1).png" alt="" width="563"><figcaption><p>Virtual Devices</p></figcaption></figure>
 
 * **Product Plugin Exporter**: Export products to a file storage, with options to:
   * Set plugin image, name, description, and version.

@@ -559,7 +559,7 @@ To define your firmware version, it is required to define a preprocessor definit
 
 Each time an OTA update process is started, the system will display a confirmation dialog showing the details of the firmware to be uploaded. This dialog includes the device name, firmware version, and the environment. It ensures that the user is informed about the firmware update specifics before proceeding, providing an additional layer of verification.
 
-<figure><img src=".gitbook/assets/image (4) (1) (2).png" alt=""><figcaption><p>OTA Update Confirmation Dialog with Firmware Version</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (4) (1) (2) (1).png" alt=""><figcaption><p>OTA Update Confirmation Dialog with Firmware Version</p></figcaption></figure>
 
 Devices that are already running the current firmware version will not be updated, ensuring that only devices with outdated firmware receive the new update. This helps to optimize the update process, reducing unnecessary data transfer and minimizing downtime for devices that are already up-to-date.
 

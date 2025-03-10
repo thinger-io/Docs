@@ -26,7 +26,7 @@ Defining a property inside a Product Profile allows scaling the properties manag
 
 By default, the Product profile presents a Properties table that is empty. Like in the following image:
 
-<figure><img src="../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>Product Property - Properties section on a Product Profile</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption><p>Product Property - Properties section on a Product Profile</p></figcaption></figure>
 
 To create a new Property, click on `Add` button from the table, and a popup will appear for its configuration. It is quite similar to the process of configuring a [Bucket](buckets.md).
 
