@@ -52,12 +52,11 @@ Designed by Thinger.io team, this board has been made for **developers, makers, 
 
 ## **Example code**
 
-
+This example code shows how to work with the NB-IoT connection by means of TinyGSM and Thinger.io libraries. To work with the WiFi or Bluetooth modems, developers just need to use the ESP32 common source codes.&#x20;
 
 ````
 ```cpp
 
-//#define THINGER_SERVER "upm.aws.thinger.io"
 #define THINGER_SERVER "acme.thinger.io"
 #define HEXACORE_DEVELOPMENT
 #define THINGER_SERIAL_DEBUG
