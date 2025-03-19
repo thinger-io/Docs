@@ -954,52 +954,84 @@ Note that, when the editing mode is enabled, the tabs order can also be customiz
 
 Thinger.io allows setting some parameters of the dashboard behavior. Accessing the settings menu just requires to activate the dashboard edit mode and then click on the blue "Settings" button in the upper area of the dashboard. The next context will appear, which has three main tabs to organize the work that can be made with this menu:
 
-![](<../.gitbook/assets/image (273).png>)
+<div data-full-width="false"><figure><img src="../.gitbook/assets/dashboard_settings_1.png" alt=""><figcaption><p>Layout tab in dashboard settings</p></figcaption></figure></div>
 
-### Layout configuration
+### Layout
 
 This section allows to custom the main dashboard configuration parameters, such as:
 
 * **Name**: Dashboard name that will be shown on the header and browser tab
 * **Description**: Dashboard description for additional information&#x20;
 * **Columns**: This number allows selecting the logical amount of horizontal places that can be used to insert widgets on the dashboard. Each widget can be scaled to fill more than one position.&#x20;
-* **Background image**: The background image can be selected in order to custom dashboard appearance&#x20;
-* **Border radius**: widget corners will be rounded according to this parameter
+* **Row Height**: This number sets the minimum height of a dashboard row in pixels.
+* **Background**: Either the background image or a hexadecimal color can be set in order to customize dashboard appearance&#x20;
+* **Border radius**: Widget corners will be rounded according to this parameter
 * **Hide Header**: Shared dashboards have been provided with a header that shows the dashboard name, but this header can be hidden if the developer switches this option on.&#x20;
-* **Make template**: To enable template feature (as explained below)
-* **Share Dashboard**: To create a dashboard link and authorization in order to share it with thirds
 
-### Dashboard Templates
-
-This feature allows using one dashboard configuration over different data sources (devices or buckets) that can be changed dynamically, allowing them to display their data over the same widgets. This way the same layout can be used to show information of many devices with the same resource name in an agile way.
-
-\<gift - changing a template data source>
-
-{% hint style="info" %}
-Note that the template system only is able to show data from different devices when they have the same resource ID, as it works replacing the device ID.&#x20;
-{% endhint %}
-
-To enable the Dashboard Template feature just switch the edition mode on, open the settings menu and click into the "template" option of "layout" section. Then, a new top bar will show the devices and data buckets that are being currently displayed:
-
-![](<../.gitbook/assets/image (320).png>)
-
-Clicking over each data source box allows to change it with another resource from the devices or dashboard lists.&#x20;
-
-![](<../.gitbook/assets/image (295).png>)
-
-### Share Dashboard
+### Share
 
 By default, any dashboard is private to the account owner. This feature allows to share an isolated read-only version of the dashboard so others can display the information. To share a dashboard, just enter in the dashboard config and enable the `Share` switch. After enabling the dashboard sharing, an URL will be generated, which can be publicly shared.
 
-![](<../.gitbook/assets/image (264).png>)
+![Share tab in dashboard settings](../.gitbook/assets/dashboard_settings_2.png)
 
 {% hint style="info" %}
 Any modification on a shared dashboard widget that includes new device or data bucket resources must be updated in the authorization by means of the Access Tokens menu or by re-generating the link by turning the shared dashboard option off and on again.&#x20;
 {% endhint %}
 
-### Developer section
+### Developer
 
-Finally, for more advanced users, the dashboard settings section allows access to the JSON file where all interface parameters are configured. This allows you to customize each element in a flexible way, but it is also the best way to copy a dashboard for replication or post it in the community discussion forum.
+For more advanced users, the dashboard settings section allows access to the JSON file where all interface parameters are configured. This allows you to customize each element in a flexible way, but it is also the best way to copy a dashboard for replication or post it in the community discussion forum.
 
-![](<../.gitbook/assets/image (284).png>)
+![Developer tab in dashboard settings](../.gitbook/assets/dashboard_settings_3.png)
 
+### Placeholders
+
+Dashboard placeholders allow defining variables to be used in any part of the dashboard by using its placeholder name inside double braces. The value can be extracted from a device property or set manually.
+
+<figure><img src="../.gitbook/assets/dashboard_settings_4.png" alt=""><figcaption><p>Placeholders tab in dashboard settings</p></figcaption></figure>
+
+This placeholders can then be used in widget titles, widget subtitles, values, HTML templates, etc. Here is an example for using the above placeholder as the value of a text widget.
+
+<figure><img src="../.gitbook/assets/dashboard_settings_5.png" alt=""><figcaption><p>Configuration of a text widget value with a placeholder</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/dashboard_settings_6.png" alt=""><figcaption><p>Text widget with the placeholder value</p></figcaption></figure>
+
+
+
+### Functions
+
+Dashboard functions allow processing data before being used in widgets, i.e., limiting number of decimals, converting units, etc.
+
+By clicking on the 'Add Function' button, a new function will be declared, which we can then use to transform value of a widget source.
+
+<figure><img src="../.gitbook/assets/dashboard_settings_7.png" alt=""><figcaption><p>Functions tab in dashboard settings</p></figcaption></figure>
+
+Afterwards, when configuring a widget sources, the processing function needs to be set.
+
+<figure><img src="../.gitbook/assets/dashboard_settings_8.png" alt=""><figcaption><p>Setting the processing function in a widget source</p></figcaption></figure>
+
+Additionally, previously defined dashboard placeholders, can be used in the functions, by using a variable named \`shared.placeholders\`. Check the following images:
+
+<figure><img src="../.gitbook/assets/dashboard_settings_9.png" alt=""><figcaption><p>Device property used as dashboard placeholder</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/dashboard_settings_10.png" alt=""><figcaption><p>Dashboard placeholder value as the property value</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/dashboard_settings_11.png" alt=""><figcaption><p>Dashboard function using the value of a placeholder</p></figcaption></figure>
+
+{% hint style="info" %}
+Transformation of value is done for each individual value, and not over a whole series.
+{% endhint %}
+
+### Controls
+
+In the controls tab, some additional dashboard configuration can be done regarding time selection for time series sources., when a widget source belonging to a dashboard has a configurable timeframe and aggregation window.
+
+<figure><img src="../.gitbook/assets/dashboard_settings_13.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/dashboard_settings_12.png" alt=""><figcaption></figcaption></figure>
+
+* **Aggregations**: Limits the available aggregations that can be selected in the dashboard.
+* **Range Selector**: Limits the available time range selectors that can be selected in the dashboard.
+* **Hide hours**: Hides the hours in the absolute time range selector
+
+<figure><img src="../.gitbook/assets/dashboard_settings_14.png" alt=""><figcaption></figcaption></figure>
