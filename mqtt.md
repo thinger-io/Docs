@@ -41,10 +41,10 @@ The integration's second part is configuring any device or program as a client t
     ```
     backend.thinger.io
     ```
-* **Broker Port**: 1883 or 8883 for SSL/TLS
-* **User Name**: Thinger.io user account ID
+* **Broker Port**: 1883 for non-secure connections, or 8883 for SSL/TLS
+* **User Name**: Thinger.io username (not email address)
 * **Client ID**: The device identifier that was configured at the device form
-* **Password**: Must be the same key that was placed on Thinger.io "Device Credentials" parameter
+* **Password**: Must be the same password that was placed on Thinger.io "Device Credentials" parameter
 * **MQTT version**: Currently Thinger.io supports 3.1 or 3.1.1 versions of the protocol
 
 ![example using MQTT.fx client with an "acme" server](<.gitbook/assets/image (276).png>)
