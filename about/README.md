@@ -19,84 +19,16 @@ What began as a backend project to retrieve data and control devices in real-tim
 
 For some more of the history and highlights check out blog: [https://thinger.io/blog/](https://thinger.io/blog/)
 
-## Development roadmap&#x20;
+## Development & Roadmap
 
-Thinger.io is a platform in constant growth, our development team is continuously analyzing the requirements of the IoT market to identify the best features to be included in the platform. There is still a long way to go to have a platform as complete as we would like it to be. Moreover, thanks to the plugin marketplace we can integrate with a great number of third-party platforms. The following list details the most important expansion projects that will be developed soon:
+Thinger.io is a constantly evolving IoT platform designed to meet the dynamic needs of the IoT community. Our development efforts focus on enhancing core features, integrations, and overall usability to ensure the platform remains powerful, flexible, and easy to use.
 
-### 2020
+Instead of maintaining a fixed roadmap here, we encourage you to stay up to date and actively participate in shaping the future of Thinger.io through the following channels:
 
-* [x] On-premise instances deployment&#x20;
-* [x] File System&#x20;
-* [x] MQTT broker
-* [x] Global device properties&#x20;
-* [x] Project & products manager
-* [x] Shared resources manager
-* [x] Node-RED Plugin integration
-* [x] Server monitor and settings menu&#x20;
-* [x] Grafana Plugin
-* [x] Geofencing tool
-* [x] Assets Manager
-* [x] Dashboard templates
-* [x] Guest user accounts (read-only)
-* [x] Maps widget improvement&#x20;
-* [x] Dashboard tabs
+* **Community Forums**: Share your ideas, feature requests, and feedback at [community.thinger.io](https://community.thinger.io). This is the best place to interact with our team and fellow Thinger.io users.
+* **Discord Server**: Join our vibrant community on [Discord](https://discord.com/invite/xAc24hdWZE), where you can ask questions, discuss projects, and connect directly with other IoT enthusiasts and our developers.
 
-### 2021
+If your company has specific feature requirements or needs to expedite certain capabilities, feel free to reach out directly at [info@thinger.io](mailto:info@thinger.io). We’re always open to collaboration that benefits the whole community.
 
-* [x] IoT MP Beta release
-* [x] New web home
-* [x] Assets Map Widget
-* [x] Improved Guest member features
-* [x] Extended Node-RED Integration
-* [x] Customizable Login&#x20;
-* [x] PlatformIO Plugin
-* [x] HTTP devices Integration plugin
-* [x] ESP32 & ESP8266 OTA
-* [x] Centralized instances monitoring system
-* [x] ASIO Linux software client
-* [x] Projects & users manager revision
-* [x] OAuth2 Clients\*
-* [x] NB-IoT integration Client (TCP/UDP)\*
-
-### 2022
-
-* [x] MQTT integration improvement&#x20;
-* [x] InfluxDB tagged data buckets
-* [x] Product Manager
-* [x] Java Script IoT client\*
-* [x] Custom plugins support\*
-* [x] IoTMP Proxys
-* [x] Reverse Proxy for Linux software client
-* [x] MQTT-REST API interface in Products feature
-* [x] Project member and global roles
-* [x] Influx2 integration and plugin
-* [x] Bucket tags
-* [x] Plugins common repository
-
-### 2023
-
-* [x] Alerts manager&#x20;
-* [x] Devices claim process
-* [x] Custom form creator
-* [ ] Automation scheduler
-* [ ] COAP integration
-* [ ] Python software client
-* [ ] Projects Manager 2.0 with individual groups
-* [ ] Reporting tool
-* [ ] New web-APP console
-* [ ] Devices integration for our marketplace strategy&#x20;
-
-### 2024
-
-
-
-\*Released but not yet documented
-
-If you have identified any feature that is not included on this list, please feel free to send us your request to info@thinger.io.&#x20;
-
-**What if my company already needs one of these future features?**&#x20;
-
-The features that are on this list will be developed soon, the order has been set according to priorities and in an incremental logic, that optimizes our resources, however, it is possible to anticipate the development of some features if there are required to create any project, if you are in this situation, you can contact us and we will study how to collaborate to reorganize resources and anticipate the feature development.&#x20;
-
-Note that the developments always return to the community and never give exclusivity on their use, so your company can collaborate in the growth of new features as many others did in the past to increase the capabilities of thinger.io with the features that we can all use today.
+Thank you for helping us improve Thinger.io!
 

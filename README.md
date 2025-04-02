@@ -34,4 +34,4 @@ Thinger.io platform is formed by two main products a Backend (which is the actua
 * **Extend with custom features** with multiple plugins to integrate IoT projects into your company's software or any other third party Internet service. &#x20;
 * **Custom the appearance** thanks to our fully rebrandeable frontend, that allows introducing your branding colors, logotypes and web domain&#x20;
 
-Are you ready to start creating IoT projects? [**Create here your free account**](https://console.thinger.io/#/signup) and learn below how to use all this technology.
+Are you ready to start creating IoT projects? [**Create here your free account**](https://console.thinger.io/signup) and learn below how to use all this technology.
