@@ -8,7 +8,7 @@ This section describes the process to deploy a private Thinger.io Cloud instance
 
 Private cloud instances can be deployed with different licenses, depending on the requirements, like host performance, bandwidth or other platform features like branding, custom domains, additional support,  plugins, etc. Once the cloud provider is selected, then it is necessary to select the desired license, as shown in the image below:
 
-![](../../.gitbook/assets/cloud\_pricing.png)
+![](../../.gitbook/assets/cloud_pricing.png)
 
 This pricing includes the software license and all cloud expenses. Note that yearly subscriptions offer a discount over the monthly one.&#x20;
 
@@ -27,13 +27,13 @@ Additionally, all these subscriptions provide:
 
 #### Additional features
 
-<table><thead><tr><th width="198"></th><th>Extended</th><th>Business</th><th>Business Plus</th></tr></thead><tbody><tr><td>Dashboards</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>Data Buckets</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>Endpoints</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>Access Tokens</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>File Storages</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>Asset Management</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>Projects</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>Syncs</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>Claims</td><td>-</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>Products</td><td>1</td><td>5</td><td>10</td></tr><tr><td>Proxies</td><td>-</td><td>5</td><td>10</td></tr><tr><td>Oauth Clients</td><td>-</td><td>3</td><td>5</td></tr></tbody></table>
+<table><thead><tr><th width="198"></th><th>Small</th><th>Medium</th><th>Large</th></tr></thead><tbody><tr><td>Dashboards</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>Data Buckets</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>Endpoints</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>Access Tokens</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>File Storages</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>Asset Management</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>Projects</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>Syncs</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>Claims</td><td>-</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>Products</td><td>1</td><td>5</td><td>10</td></tr><tr><td>Proxies</td><td>-</td><td>5</td><td>10</td></tr><tr><td>Oauth Clients</td><td>-</td><td>3</td><td>5</td></tr></tbody></table>
 
 ### 2.  Configure license
 
 After selecting the license and completing the payment process, you will receive an email containing a link to a page where you can choose the desired base hostname and deployment region.
 
-![Instance license preferences](../../.gitbook/assets/cloud\_configuration.png)
+![Instance license preferences](../../.gitbook/assets/cloud_configuration.png)
 
 These options are described in more detail in the following:
 
@@ -45,7 +45,7 @@ These options are described in more detail in the following:
 
 After the configuration has been done, a launch process will execute to deploy your environment, and a progress bar will be shown to give feedback on the current status of the deployment.
 
-![Billing email](../../.gitbook/assets/cloud\_deployment.png)
+![Billing email](../../.gitbook/assets/cloud_deployment.png)
 
 Once the process is done, you may follow the [Steps After Cloud Deployment](thinger.io-cloud-server.md#steps-after-cloud-deployment).
 
