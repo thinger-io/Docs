@@ -7,6 +7,75 @@ coverY: 0
 
 # CHANGELOG
 
+## 6.5
+
+**Community Release Date:**  02-06-2025.
+
+**Private Servers Release Date:**  09-06-2025.
+
+#### Added
+
+* Dashboards now implement lazy-loading to avoid fetching data from all tabs until they are accessed. This significantly improves loading times on large dashboards.
+* Initial support for **mTLS (mutual TLS)** on MQTT devices. This feature is currently under testing in selected deployments and is not yet intended for production use. Contact us for early access or details.
+* Products now display a **graph view** of data sources and targets, helping visualize the flow configuration within the product profile.
+* Added **property-level permissions** in products to control which device properties a project member can view or edit.
+* It is now possible to **edit dashboards on individual devices** (when inherited from a product). Editing can be restricted through new property permissions, allowing project owners to override the product dashboard while limiting access for end users.
+* Introduced **user properties**, available under _Profile > Properties_. These will be further integrated into other system areas such as alarms, custom forms, and automations.
+* Added support for **MongoDB Transforms**, offering the same functionality previously available for InfluxDB. MongoDB now provides full parity in terms of data processing capabilities.
+* Initial support for using **Device Buckets** as data sources in dashboards.
+* Introduced **Group Hierarchies**: you can now create nested groups and subgroups, enabling more organized asset structures.
+* Project members can now be **restricted to specific groups or subgroups** within a project.
+
+***
+
+#### Enhancements
+
+* Support for **JPG and WebP** formats when selecting plugin icons in the product plugin exporter.
+* Added `build_date` and `license` to the `/v1/server/version` endpoint, preparing for Community On-Premise releases.
+* Hide the billing link when using a Community license.
+* Removed Twitter link from the menu and brand settings.
+* Automatically **clean up Docker user networks** when the last plugin is uninstalled.
+* Improved Docker logging by printing **command responses** to the plugin logs.
+* Plugin installation dialog now **displays the resource ID** if the name is not available.
+* Added support for **binary data** in HTTP requests with unknown content types.
+* Dashboard placeholders can now **accept multiple values** from a single data source.
+* Dashboard functions can now access placeholders via the **`shared` variable**.
+* Product property forms now support **dates as keys** and **multi-field value inputs**.
+* Multiple improvements to **MongoDB Bucket performance and data retrieval**.
+* Plugin installer now correctly handles cases where only **development versions** of the plugin are available.
+
+***
+
+#### Fixed
+
+* Fixed **public signup logic** for Community On-Premise instances.
+* Fixed **console access over private IPs** in On-Premise deployments.
+* Fixed **ApexCharts not displaying** inside Group Widgets.
+* Fixed **incorrect data types** returned in the Server Statistics API.
+* Resolved an issue where **global roles** were not applied in the Console.
+* Fixed missing error **details in alert banners** from failed HTTP requests.
+* Prevented database callback structures from being created on **virtual devices**.
+* Fixed loading of HTML Widgets from **public storages**, regardless of access settings.
+* Restored default **HTTP connection timeout** to 10 minutes.
+* Fixed plugin configuration: **volumes and environment variables** were not applied properly.
+* Fixed confirmation **message not updating** after changing the user password.
+* Fixed the **multiple-resource-selector** making unnecessary API calls.
+* Fixed **Control Widget** not working inside Group Widgets.
+* Fixed **dashboard updates from buckets** not being reflected in real-time.
+
+***
+
+#### Chore
+
+* Updated Angular runtime to **Angular 19**, aligning with the latest development best practices.
+* Upgraded **ng-zorro-antd** to version 19.3.1.
+* Updated **OpenSSL** to version 3.4.1.
+* Updated **CMake** to version 3.31.
+* Updated **Boost** to version 1.87.
+* Updated **mongoc** to version 1.30.1.
+* Updated **mongocxx** to release r4.0.
+* Updated **Crypto++** to version 2.36.0.
+
 ## 6.4
 
 **Community Release Date:**  22-01-2025.
