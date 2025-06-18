@@ -15,16 +15,47 @@ coverY: 0
 
 #### Added
 
-* Dashboards now implement lazy-loading to avoid fetching data from all tabs until they are accessed. This significantly improves loading times on large dashboards.
-* Initial support for **mTLS (mutual TLS)** on MQTT devices. This feature is currently under testing in selected deployments and is not yet intended for production use. Contact us for early access or details.
 * Products now display a **graph view** of data sources and targets, helping visualize the flow configuration within the product profile.
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Product Graph View</p></figcaption></figure>
+
 * Added **property-level permissions** in products to control which device properties a project member can view or edit.
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Property-level permissions on products to control access on project members.</p></figcaption></figure>
+
 * It is now possible to **edit dashboards on individual devices** (when inherited from a product). Editing can be restricted through new property permissions, allowing project owners to override the product dashboard while limiting access for end users.
+
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Dashboards editions at device level, to override a product dashboard.</p></figcaption></figure>
+
 * Introduced **user properties**, available under _Profile > Properties_. These will be further integrated into other system areas such as alarms, custom forms, and automations.
+
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>User Properties under Profile > Properties.</p></figcaption></figure>
+
 * Added support for **MongoDB Transforms**, offering the same functionality previously available for InfluxDB. MongoDB now provides full parity in terms of data processing capabilities.
-* Initial support for using **Device Buckets** as data sources in dashboards.
+
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>Data transform on MongoDB buckets backends.</p></figcaption></figure>
+
+* Initial support for using **Device Buckets** as data sources in dashboards. Device Buckets are defined at the product level. This avoids the need to share a root bucket when sharing devices across projects.
+
+<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption><p>Device Buckets are inherited from Product buckets definition.</p></figcaption></figure>
+
 * Introduced **Group Hierarchies**: you can now create nested groups and subgroups, enabling more organized asset structures.
+
+<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>Group Hierarchies to enable subgroups.</p></figcaption></figure>
+
 * Project members can now be **restricted to specific groups or subgroups** within a project.
+
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption><p>New member permissions to restrict access to specific asset groups.</p></figcaption></figure>
+
+* New **Flow** feature in the Product Profile, enabling the definition of custom **sources** and **targets**.\
+  You can now redirect data flows, for example, from a topic to an HTTP endpoint, or from a device property update to a topic. This feature deprecates the previous Endpoint, as it is much more versatile.
+
+<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption><p>New Flow feature in the Product Profile</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption><p>Flow configuration interface in the Product Profile, showing available target options such as Device Resource, Endpoint Call, and Product Function.</p></figcaption></figure>
+
+* Initial support for **mTLS (mutual TLS)** on MQTT devices. This feature is currently under testing in selected deployments and is not yet intended for production use. Contact us for early access or details.
+* Dashboards now implement lazy-loading to avoid fetching data from all tabs until they are accessed. This significantly improves loading times on large dashboards.
 
 ***
 
@@ -43,6 +74,7 @@ coverY: 0
 * Product property forms now support **dates as keys** and **multi-field value inputs**.
 * Multiple improvements to **MongoDB Bucket performance and data retrieval**.
 * Plugin installer now correctly handles cases where only **development versions** of the plugin are available.
+* User sessions are now preserved for 24 hours by default. Opening Thinger.io in a new browser tab within that period will no longer trigger permission prompts.
 
 ***
 
@@ -62,6 +94,7 @@ coverY: 0
 * Fixed the **multiple-resource-selector** making unnecessary API calls.
 * Fixed **Control Widget** not working inside Group Widgets.
 * Fixed **dashboard updates from buckets** not being reflected in real-time.
+* Device status filters not working on alarm rules
 
 ***
 
@@ -88,37 +121,37 @@ coverY: 0
 
     * Support for custom volumes, enabling the mounting of custom file storages to plugins like Node-RED, FTP, etc.
 
-    <figure><img src="../.gitbook/assets/image (1) (1).png" alt="" width="563"><figcaption><p>Custom Volumes to be attached to Plugins</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt="" width="563"><figcaption><p>Custom Volumes to be attached to Plugins</p></figcaption></figure>
 
     * Support for configuring custom environment variables, e.g., for enabling Node-RED projects.
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt="" width="563"><figcaption><p>Custom Environment Variables on Plugins</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt="" width="563"><figcaption><p>Custom Environment Variables on Plugins</p></figcaption></figure>
 
 * **Virtual Devices**: Initial support for devices that are always connected and can fetch data from external resources (e.g., endpoints via products). Example use case: creating a weather device fetching weather data and forecasts.
 
-<figure><img src="../.gitbook/assets/image (5) (1).png" alt="" width="563"><figcaption><p>Virtual Devices</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1) (1).png" alt="" width="563"><figcaption><p>Virtual Devices</p></figcaption></figure>
 
 * **Product Plugin Exporter**: Export products to a file storage, with options to:
   * Set plugin image, name, description, and version.
   * Edit markdown readme with images, changelogs, etc.
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>New Product Plugin Exporter</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption><p>New Product Plugin Exporter</p></figcaption></figure>
 
 * **New Event**: `endpoint_call_response`, providing the result of endpoint calls.
 * **Billing Menu for Admins**: Added a menu item linking to the customer portal.
 
-<figure><img src="../.gitbook/assets/image (7).png" alt="" width="312"><figcaption><p>New Billing </p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1).png" alt="" width="312"><figcaption><p>New Billing </p></figcaption></figure>
 
 * **Account Deletion**: Community users can now delete their accounts.
 
-<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption><p>Community users can remove their accounts</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10) (1).png" alt=""><figcaption><p>Community users can remove their accounts</p></figcaption></figure>
 
 * **Enhanced Product Profile Resources**: Resources can now target endpoints, plugins paths, call other api resources, and enable operations based on their responses.
 * **Experimental MongoDB Backend**:
   * Support for custom data retention policies for individual buckets.
   * Deprecates InfluxDB for new instances.
 
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption><p>MongoDB Backend as new </p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>MongoDB Backend as new </p></figcaption></figure>
 
 ***
 
@@ -130,11 +163,11 @@ coverY: 0
 
     * Supports reading `readme.md` and images from file storage.
 
-    <figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p>New Plugin Management Page.</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (8) (1).png" alt=""><figcaption><p>New Plugin Management Page.</p></figcaption></figure>
 * **Console Component**: Updated to Angular with text search functionality.
 *
 
-    <figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption><p>New console component migrated to Angular</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (12) (1).png" alt=""><figcaption><p>New console component migrated to Angular</p></figcaption></figure>
 * **Charts**: Migrated to Angular using `ng-apexcharts`, resolving several issues.
 * **Location Updates**: Location properties now update with the current latitude and longitude values.
 * **File Storage API**:
@@ -256,16 +289,16 @@ coverY: 0
 
 * Devices associated with a Product can now display bucket data directly from their pages, under the menu option called "Buckets". Each device can now list all the associated buckets and will filter out its data in the Data view. In future releases, we will add options for exporting, importing, and clearing data. This opens the possibility to avoid sharing raw bucket data with project members, and effectively grant access only to their device data. With this feature, permissions are granted at the device level, with permissions like ViewDeviceBuckets, ReadDeviceBucket, ReadDeviceBucketTag, and ListDeviceBucketTags.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>New Buckets option for Product Devices</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>New Buckets option for Product Devices</p></figcaption></figure>
 
 * Introduced two new specific permissions for listing and reading bucket tags:`ListBucketTags`: Allows listing of bucket tags.`ReadBucketTag`: Allows reading of individual bucket tags. Previously, these operations required the more general `ReadBucketConfig` permission. This change provides more granular control over permissions.
 * Claims now support including additional projects on the claim process. This way, claimed resources can be added automatically to parent "global" projects that can be used to manage the resources with different profiles.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Additional projects where claimed resources will be included on the claim process.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Additional projects where claimed resources will be included on the claim process.</p></figcaption></figure>
 
 * Projects can be configured to limit bucket data access based on project devices. This functionality is useful for displaying aggregated data on the project dashboard or for restricting data access to project members. Additionally, this option can be set in the claim settings, ensuring that member projects are automatically created with this access limitation in place.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Limit Bucket data option on Project settings.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Limit Bucket data option on Project settings.</p></figcaption></figure>
 
 * Device Tokens are now available for MQTT and HTTP devices, as they can have regular API resources over a product.
 

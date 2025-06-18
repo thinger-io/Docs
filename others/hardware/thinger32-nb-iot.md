@@ -7,7 +7,7 @@ description: >-
 
 # Thinger32 NB-IoT
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 Unlock the **next level of IoT development** with this **ESP32 + Quectel BC66 hybrid board**. Combining the **power and flexibility** of the **ESP32** with the **low-power, wide-area communication** of the **NB-IoT Quectel BC66**, this board is the **perfect solution for developing IoT projects that demand high efficiency, long-range connectivity, and seamless integration**.
 
@@ -30,7 +30,7 @@ Designed by Thinger.io team, this board has been made for **developers, makers, 
 
 ## **Pinout**
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt="" width="375"><figcaption><p>Thinger32 NB-IoT Pinout</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt="" width="375"><figcaption><p>Thinger32 NB-IoT Pinout</p></figcaption></figure>
 
 ## **Getting Started**
 
@@ -222,13 +222,15 @@ void loop() {
 
 ## Documentation
 
-{% file src="../../.gitbook/assets/esp32-pico_series_datasheet_en.pdf" %}
-
-{% file src="../../.gitbook/assets/Quectel_BC660K_GL_NB_IoT_Specification_V1_4_1-3009753.pdf" %}
+{% file src="../../.gitbook/assets/Thinger.io BC660 NB-IoT Platformio project.zip" %}
 
 {% file src="../../.gitbook/assets/Schematic Thinger32NB-IoT.pdf" %}
 
 {% file src="../../.gitbook/assets/Thinger32NB-IoT Measurements.pdf" %}
+
+{% file src="../../.gitbook/assets/esp32-pico_series_datasheet_en.pdf" %}
+
+{% file src="../../.gitbook/assets/Quectel_BC660K_GL_NB_IoT_Specification_V1_4_1-3009753.pdf" %}
 
 ## **Use Cases**
 
@@ -238,5 +240,5 @@ void loop() {
 🔹 **Home Automation** – Wi-Fi and cellular connectivity for smart devices\
 🔹 **Agriculture & Environment** – Remote sensing with ultra-low power requirements
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 

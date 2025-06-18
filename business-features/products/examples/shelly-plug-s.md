@@ -6,7 +6,7 @@ description: WiFi Smart Plug with Power Metering
 
 ## Product Description
 
-<figure><img src="../../../.gitbook/assets/image (8) (1).png" alt=""><figcaption><p>Shelly Plug S</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption><p>Shelly Plug S</p></figcaption></figure>
 
 Shelly Plug S is a WiFi Smart Plug with power metering, that can be easily integrated into the platform. As it supports the MQTT protocol by default, it is not required to re-flash the device, keeping the device warranty.
 
@@ -46,11 +46,7 @@ Both properties are updated from the following device topics:
 
 To configure the properties in the product profile, just click  `Add` on the properties section. On the dialog, enter the property identifier (i.e., power or relay), select the `Device Topic` source, fill the `Topic`, and configure the payload, as shown in the following picture:
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (542).png" alt=""><figcaption><p>Shelly Plug S - Property configuration for storing current power</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (542).png" alt=""><figcaption><p>Shelly Plug S - Property configuration for storing current power</p></figcaption></figure></div>
 
 By default, the payload established on the property is`{{payload}}`, which is a placeholder that will be replaced with the contents received from the configured source. In this case, from the MQTT topic configured. So, any information that is received there is saved automatically in each device property. Cool!
 
