@@ -1,7 +1,7 @@
 ---
 description: >-
   The Thinger32NB-IoT is a compact dev board that combines Quectel BC660 with an
-  Espressif ESP32-PICO-D4 to provide a simple to use development board for IoT
+  Espressif ESP32-PICO-D4 to provide a simple-to-use development board for IoT
   projects.
 ---
 
@@ -14,7 +14,7 @@ Unlock the **next level of IoT development** with this **ESP32 + Quectel BC66 hy
 * The BC660K-GL is a high-performance LTE Cat NB2 module which supports multiple frequency bands of B1/ 2/ 3/ 4/ 5/ 8/ 12/ 13/ 17/ 18/ 19/ 20/ 25/ 28/ 66/ 70/ 85 with extremely low power consumption, it provides a flexible and scalable platform for the migration from GSM/GPRS to NB-IoT networks.
 * The ESP32-PICO-D4 is a powerful MCU module with WiFi, Bluetooth®, and BLE connectivity and comes integrated with 8MB SPI flash, 2MB SPI Pseudo static RAM (PSRAM), and a 40 MHz crystal oscillator. The ESP32 microcontroller itself features two CPU cores that can be individually controlled, with an adjustable clock frequency between 80 - 240MHz and a low-power co-processor for minor tasks, such as monitoring peripherals. It supports a range of peripherals, including an SD card interface, capacitive touch sensors, ADC, DAC, Two-Wire Automotive Interface (TWAI), Ethernet, high-speed SPI, UART, I2S, I2C, etc.
 
-Designed by Thinger.io team, this board has been made for **developers, makers, and industry professionals** leveraging the best integration with Thinger.io platform. This board enables **Wi-Fi, Bluetooth, and NB-IoT** connectivity, all in a compact form factor with **USB 3.0 support and up to 10 versatile GPIO options**.
+Designed by the Thinger.io team, this board has been made for **developers, makers, and industry professionals,** leveraging the best integration with the Thinger.io platform. This board enables **Wi-Fi, Bluetooth, and NB-IoT** connectivity, all in a compact form factor with **USB 3.0 support and up to 10 versatile GPIO options**.
 
 ## **Technical Specifications**
 
@@ -38,21 +38,21 @@ Designed by Thinger.io team, this board has been made for **developers, makers, 
 
 * **Arduino IDE** (with ESP32 board manager) or **Visual Studio Code** with **Platformio** extension.&#x20;
 * **USB Driver for CP2102** (if needed)
-* Install Thinger.io library on your project
+* Install the Thinger.io library on the project
 
 **2. Connect the Board**
 
-* Use a **USB 3.0 cable** for fast communication, then check the data transference by opening the Serial Monitor.&#x20;
+* Use a **USB 3.0 cable** for fast communication, then check the data transfer by opening the Serial Monitor.&#x20;
 * Insert a **microSIM card** for NB-IoT connectivity.
 
-**3. Upload Your First Sketch**
+**3. Upload the First Sketch**
 
 * Use the **Arduino Framework** and Thinger.io libraries for easy programming.
 * Configure **Wi-Fi or NB-IoT** connectivity in a few lines of code.
 
 ## **Example code**
 
-This example code shows how to work with the NB-IoT connection by means of TinyGSM and Thinger.io libraries. To work with the WiFi or Bluetooth modems, developers just need to use the ESP32 common source codes.&#x20;
+This example code shows how to work with the NB-IoT connection by means of TinyGSM and Thinger.io libraries. To work with the WiFi or Bluetooth modems, developers just need to use the ESP32 common source code.&#x20;
 
 ````
 ```cpp
@@ -68,7 +68,7 @@ This example code shows how to work with the NB-IoT connection by means of TinyG
 #define SerialMon Serial
 #define SerialAT Serial1
 
-// Select your modem:
+// Select the modem:
 #define TINY_GSM_MODEM_BC660
 #define TINY_GSM_DEBUG SerialMon
 //#define DUMP_AT_COMMANDS

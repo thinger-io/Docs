@@ -8,7 +8,7 @@ description: Environmental and inertial sensing device based on ESP8266 processo
 
 ## ClimaStick Reference
 
-This board is a complete Internet of Things development kit, that integrates WiFi connectivity along with a set of powerful sensors to provide environmental and motion sensing. This way, it is possible to create several connected projects easily. It is fully compatible with the Thinger.io cloud infrastructure, and provides easy to use libraries that can be used in the Arduino IDE.
+This board is a complete Internet of Things development kit that integrates WiFi connectivity along with a set of powerful sensors to provide environmental and motion sensing. This way, it is possible to create several connected projects easily. It is fully compatible with the Thinger.io cloud infrastructure and provides easy-to-use libraries that can be used in the Arduino IDE.
 
 ### Board Layout
 
@@ -23,30 +23,30 @@ This board is a complete Internet of Things development kit, that integrates WiF
 ### Board Features
 
 * Environmental sensing for temperature, relative humidity, barometric pressure, and lux intensity. A micro weather station!
-* Inertial Measurements Unit (IMU), integrating an accelerometer, a gyroscope, and a digital compass.
-* Li-Po Charger. It is able to charge (and be powered by) batteries from a solar panel or the built-in USB.
+* Inertial Measurement Unit (IMU), integrating an accelerometer, a gyroscope, and a digital compass.
+* Li-Po Charger. It can charge (and be powered by) batteries from a solar panel or the built-in USB.
 * RGB Led (only in ClimaStick V1).
 * User button.
 * Fully compatible with the Arduino Environment. Can be programmed directly from the Arduino IDE. There are libraries for reading the sensors and connecting the board to the Thinger.io Cloud or other Internet services.
 
 ### Sample Use Cases
 
-* Education: This board provides an easy to use environment for education. It is fully compatible with the Arduino IDE, so they can still use this friendly environment. It also integrates multiple sensors that the students can use for building their projects. The students can start coding projects directly without wiring multiple sensors and controllers in big protoboards, avoiding possible shorts and burns. Moreover, it integrates WiFi, so they can get one step further building connected solutions, building dashboards, sending emails, recording data, and so on.
-* Remote Telemetry: It provides a full IMU with Wifi connectivity that can be used for remote telemetry. The low weight of the device (4gr) and the option for setting a different power supply than the USB, make this board an excellent option for monitoring drones or UAVs in real-time.
+* Education: This board provides an easy-to-use environment for education. It is fully compatible with the Arduino IDE, ensuring continued use of this familiar environment. The board also integrates multiple sensors, allowing students to develop projects directly. This eliminates the need for extensive wiring of multiple sensors and controllers on large protoboards, thereby avoiding potential shorts and burns. Moreover, its integrated WiFi capabilities enable students to advance in building connected solutions, including creating dashboards, sending emails, and recording data.
+* Remote Telemetry: It provides a full IMU with Wifi connectivity that can be used for remote telemetry. The low weight of the device (4gr) and the option for setting a different power supply than the USB make this board an excellent option for monitoring drones or UAVs in real-time.
 * Industry 4.0: It can be used in industrial environments for predictive maintenance, as it is possible to measure vibrations, temperature, and humidity in real-time and determine if the sensed parameters are between normal operation thresholds.
-* Weather Station: This device can be used as a micro weather station. It can be powered easily from a battery and a solar panel, and collaborate with weather platforms, or just store your information in the Thinger.io cloud.
+* Weather Station: This device can be used as a micro weather station. It can be powered easily from a battery and a solar panel, and collaborate with weather platforms, or just store the information in the Thinger.io cloud.
 
 {% hint style="info" %}
-To obtain high accurate weather variables, the PCB processor must be hibernated using "ESP.deepsleep()" instruction. &#x20;
+To obtain highly accurate weather variables, the PCB processor must be hibernated using the "ESP.deepsleep()" instruction. &#x20;
 {% endhint %}
 
 ## Configure Environment
 
-This section covers how to setup your computer to start working with the ClimaStick device.
+This section covers how to set up the computer to start working with the ClimaStick device.
 
 ### Install required components
 
-* You may need to install the CP2102 drivers from Silicon Labs if the ClimaStick device is not recognized from your computer. This driver is for the USB to serial interface to communicate with the board.
+* CP2102 drivers from Silicon Labs may need to be installed if the ClimaStick device is not recognized by the computer. This driver facilitates USB-to-serial communication with the board.
 
 [Download page >](http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx)
 
@@ -56,55 +56,57 @@ This section covers how to setup your computer to start working with the ClimaSt
 
 ### Configure Arduino IDE
 
-1- Open File > Preferences > Additional\_Boards\_URL\_Manager to include the "ESP8266 boards manager link" that you can retrieve from [Github community project](https://github.com/esp8266/Arduino). It is normally `http://arduino.esp8266.com/stable/package_esp8266com_index.json`
+1- Open File > Preferences > Additional\_Boards\_URL\_Manager to include the "ESP8266 boards manager link" that can be retrieved from the [Github community project](https://github.com/esp8266/Arduino). It is normally:
+
+`http://arduino.esp8266.com/stable/package_esp8266com_index.json`
 
 ![](../../.gitbook/assets/i4.PNG)
 
-2- Open Tools > Boards > Boards Manager... and search for ESP8266 package, then install the last version.
+2- Open Tools > Boards > Boards Manager... and search for ESP8266 package, then install the latest version.
 
 ![](<../../.gitbook/assets/i5 (1).PNG>)
 
-3- Now you can program almost any ESP82XX processor directly from the Arduino IDE. From the Tools > Boards you should see now the new ESP8266 community boards installed.
+3- Almost any ESP82XX processor can now be programmed directly from the Arduino IDE. Under `Tools > Boards`, the newly installed ESP8266 community boards should be visible.
 
 1. For program ClimaStick V1 select **NODE\_MCU V1.0 (ESP-12E Module)**.
 2. For program ClimaStick V2 select **WeMos D1 Mini Lite**.
 
 ![](../../.gitbook/assets/i6.png)
 
-4- Open Sketch > Include Library > Manage Libraries, and search for **Thinger.io** libraries. Then install the Thinger.io and ClimaStick libraries, as shown in the following picture.
+4- Open Sketch > Include Library > Manage Libraries, and search for **Thinger.io** libraries. Then install the Thinger.io and ClimaStick libraries:
 
 ![](../../.gitbook/assets/climastick_libraries.png)
 
-5- Connect the ClimaStick to your computer and select its serial communication port number on: Tools > Port. It normally will be a COM port, or named as /dev/cu.SLAB\_USBtoUART on Mac.
+5- Connect the ClimaStick to the computer and select its serial communication port number on: Tools > Port. It normally will be a COM port, or named as /dev/cu.SLAB\_USBtoUART on Mac.
 
-6- Now you can start developing with Thinger.io ClimaStick! It is helpful to start with the examples provided in the library, by opening File > Examples > ClimaStick
+6- Now, start developing with Thinger.io ClimaStick! It is helpful to start with the examples provided in the library by opening File > Examples > ClimaStick.
 
 ### Uploading firmware
 
-The ClimaStick board can be programmed directly by pressing the Upload button of the Arduino IDE as it has been designed with an automatic synchronization circuitry.  However, if the synchronization fails or the program is not able to connect with the PCB, please follow the next check-list in order to identify the problem:&#x20;
+The ClimaStick board can be programmed directly by pressing the Upload button of the Arduino IDE, as it has been designed with an automatic synchronization circuitry.  However, if the synchronization fails or the program is not able to connect with the PCB, please follow the next checklist in order to identify the problem:&#x20;
 
 #### Firmware upload Troubleshooting
 
-* Be sure that your micro USB wire allows data transmission. Some cables are only for electrical power and may not work properly.
-* Verify that your operating system properly recognize the CP2102 serial port interface.
-* Checkout the selected serial COM port on Arduino IDE: Tools > Port
-* ⚠ **Flash boot mode:** If you are sure that everything is configured properly, and the problem still persists, you can force a flash boot up by keeping pressed the USR button of the board, then press the RST button once, and finally release the USR button. After doing this, the PCB should be ready to receive the program.&#x20;
+* Be sure that the micro USB wire allows data transmission. Some cables are only for electrical power and may not work properly.
+* Verify that the operating system properly recognizes the CP2102 serial port interface.
+* Check the selected serial COM port on Arduino IDE: Tools > Port
+* ⚠ **Flash boot mode:** If it is confirmed that everything is configured properly and the problem persists, a flash boot-up can be forced by pressing the USR button on the board, then pressing the RST button once, and finally releasing the USR button. Following this procedure, the PCB should be ready to receive the program.
 
 {% hint style="info" %}
-ClimaStick's processor status can be checked be opening the Serial Port inspector of ArduinoIDE and selecting 74.880 baudrate. When booting up, the PCB will print the bootstatus between two possibilities:  &#x20;
+ClimaStick's processor status can be checked by opening the Serial Port inspector of Arduino IDE and selecting 74.880 baudrate. When booting up, the PCB will print the boot status between two possibilities:  &#x20;
 
-1\) If the processor is in normal execution mode, a message ended with the command "mode(3,6)" will be printed.&#x20;
+1\) If the processor is in normal execution mode, a message ending with the command "mode(3,6)" will be printed.&#x20;
 
-2\) If Flash mode, a message ended in  "mode(1,6)" means that the processor is ready to receive a new sketch.&#x20;
+2\) If Flash mode, a message ending in  "mode(1,6)" means that the processor is ready to receive a new sketch.&#x20;
 {% endhint %}
 
 ## QuickStart Examples
 
-Now you should be ready to open any example of the ClimaStick library and upload it to your ClimaStick device. On Arduino IDE, open File > Examples > ClimaStick and you will find some examples that illustrates the most useful functions over the board features, like sensors, like accessing the IMU, reading battery levels, read weather conditions, changing led state, and so on.
+The system should now be ready to open and upload any example from the ClimaStick library to the ClimaStick device. In the Arduino IDE, navigate to `File > Examples > ClimaStick` to access examples illustrating the most useful functions of the board's features, including sensors, IMU access, battery level readings, weather conditions, and LED state changes.
 
 ### ClimaStick Auto
 
-The ClimaStick\_Auto example code, is a little sketch that integrates all ClimaStick functionality, defining all sensor resources that will be accesible from the Thinger.io Platform:
+The ClimaStick\_Auto example code is a little sketch that integrates all ClimaStick functionality, defining all sensor resources that will be accessible from the Thinger.io Platform:
 
 ```cpp
 #include <ClimaStick.h>
@@ -134,7 +136,7 @@ void loop() {
 
 ### Data Recording using Sleep
 
-You can easily configure your board for record environment values and then go to sleep. This is quite useful while powering the device from a battery. The following example will write the environment values to the `BucketId`, that you must create in your Thinger.io console.
+The board can be easily configured to record environment values and then enter a sleep state. This functionality is quite useful when powering the device from a battery. This example will write the environment values to the specified `BucketId`, which must be created in the Thinger.io console.
 
 ```cpp
 #include <ClimaStick.h>
@@ -166,25 +168,25 @@ void loop() {
 }
 ```
 
-This example is quite useful while requiring accurate temperature values. Due to the low power dissipation capacity, the small ClimaStick board gets hot after a few seconds of work, so it is not possible to make accurate temperature readings while the device is working constantly. For reading temperature more accurately, it is possible to sleep the processor, and wait a few minutes before trying to get a fresh sensor read. The board supports the `thing.sleep(seconds)` function, that will sleep the processor and all WiFi transmissions. After the sleep, the device will start again like a normal reboot.
+This example is particularly useful when accurate temperature values are required. Due to its low power dissipation capacity, the small ClimaStick board heats up quickly after a few seconds of operation, making accurate temperature readings challenging during constant work. To obtain more accurate temperature data, it is advisable to put the processor to sleep and wait a few minutes before taking a fresh sensor reading. The board supports the `thing.sleep(seconds)` function, that will sleep the processor and all WiFi transmissions. After the sleep, the device will start again like a normal reboot.
 
 > **⚠ DEEPSLEEP CONSIDERATIONS:**
 >
 > * To allow the processor to automatically wake up it is mandatory to weld the WKUP connexion of the board bottom as shown in the section "other considerations".&#x20;
-> * During the deepSleep mode, it is not possible to flash code. To change the program you will need to make a forced flash mode boot up as described in the Uploading firmware section.
+> * During the deepSleep mode, it is not possible to flash code. To change the program, make a forced flash mode boot up as described in the Uploading firmware section.
 > * Note that, when the processor makes a hard reset, all dynamic variables will lost its values.
 
-After some time, your bucket should look like:
+After some time, the bucket should look like:
 
 ![](../../.gitbook/assets/climastick_bucket.png)
 
-That will allow you to create historical dashboards like the following:
+That will allow creating historical dashboards like:
 
 ![](../../.gitbook/assets/climastick_dashboard.png)
 
 ## ClimaStick Functions
 
-You can run the ClimaStick functions to read any sensor value as required by your application. Here we describe some of the most important functions. Using these functions requires always to initialie the sensors on the setup method:
+The ClimaStick functions can be executed to read any sensor value as required by the application. Here we describe some of the most important functions. Using these functions always requires initializing the sensors in the setup method:
 
 ```cpp
 void setup() {
@@ -271,38 +273,41 @@ This section covers different considerations while using the board.
 
 ### General Considerations
 
-* The device should be powered with a 5V USB power supply, being able to provide current from 250 to 1000mah.
-* This board has a low heat dissipation capacity, so it is normal that it keeps hot on high transmission processes. The temperature sensor could read high values while doing full duplex communication process.
-* This device is developed for prototyping and support software development, so it is not protected to support hard weather conditions without the proper cover case.
-* Try to avoid touching the components surfaces while using the device, it can produce an electrostatic shock on the device, producing shortcuts and malfunction. It is recommended to take the board from the edges like in the following illustration.
+*
+* The device should be powered by a 5V USB power supply capable of providing 250 to 1000mAh of current.
+* This board has a low heat dissipation capacity, so it is normal for it to heat up during high transmission processes. The temperature sensor may read elevated values while performing full-duplex communication.
+* This device is developed for prototyping and software development support; therefore, it is not designed to withstand harsh weather conditions without an appropriate protective enclosure.
+* Avoid touching the component surfaces while using the device, as electrostatic discharge can cause short circuits and malfunctions. It is recommended to handle the board by its edges:
 
-<img src="../../.gitbook/assets/i2.PNG" alt="" data-size="original">&#x20;
+<figure><img src="../../.gitbook/assets/i2.PNG" alt=""><figcaption></figcaption></figure>
 
-* If necessary, clean the circuit using a non-damaging contact cleaner like Isopropyl alcohol and soft brush.&#x20;
+* If necessary, clean the circuit using a non-damaging contact cleaner like Isopropyl alcohol and a soft brush.&#x20;
 * Store in a cool, dry place. Protected from dust.
 
 ### External Power Supply
 
-* If you use the VIN power header, be careful to connect it in the correct position, as it is shown in the following image. Not following this directive could damage the protection diode.
+* If the VIN power header is used, care must be taken to connect it in the correct position. Not following this directive could damage the protection diode.
 
-<img src="../../.gitbook/assets/i1.PNG" alt="" data-size="original">&#x20;
+&#x20;
 
-* ⚠ Do not use VIN power supply and USB power supply at the same time! It can damage your hardware.
+<figure><img src="../../.gitbook/assets/i1.PNG" alt="" width="375"><figcaption></figcaption></figure>
+
+* ⚠ Do not use the VIN power supply and USB power supply at the same time! It can damage the hardware.
 
 ### Battery Power Supply
 
-* You can power and charge a battery directly from the board. Use the BAT power header, and take care to of the polarity, as it is shown in the following picture:
+* A battery can be powered and charged directly from the board. Use the BAT power header, and take care of the polarity:
 
-<img src="../../.gitbook/assets/i3.PNG" alt="" data-size="original">&#x20;
+<figure><img src="../../.gitbook/assets/i3.PNG" alt="" width="375"><figcaption></figcaption></figure>
 
-* BAT header is connected to a lithium battery charger that can manage 3.7Vdc, 500mah Li-Po / li-ion batteries charge and discharge process.
-* To charge a battery, connect it on BAT header and power on the ClimaStick through USB / VIN connectors. The battery charger will manage the charging voltage to increase the life battery and stop the charging cycle when the voltage drops up to 4.2Vdc.
-* ⚠ If you are using a different battery, plug it on VIN connector.
-* ⚠ If cell voltage drops under 3.6V, an automatic battery protection circuit will power off the system.
+* BAT header is connected to a lithium battery charger that can manage 3.7Vdc, 500mAh Li-Po / Li-ion batteries' charge and discharge process.
+* To charge a battery, connect it to the BAT header and power on the ClimaStick through USB / VIN connectors. The battery charger will manage the charging voltage to increase the battery life and stop the charging cycle when the voltage drops to 4.2Vdc.
+* ⚠ If a different battery is being used, it should be plugged into the VIN connector.
+* ⚠ If the cell voltage drops under 3.6V, an automatic battery protection circuit will power off the system.
 
 ### Wake-up selector
 
-When using Deep-sleep function, it is necessary to weld together the two connectors of the WKUP port in order to close the WKUP circuitry (GPIO16-RESET). this port is not originally soldered to avoid malfunctions of the programming process. It is normal that by enabling this option it is necessary to force the flash mode before each reprogramming.
+When using the Deep-sleep function, it is necessary to weld together the two connectors of the WKUP port in order to close the WKUP circuitry (GPIO16-RESET). This port is not originally soldered to avoid malfunctions in the programming process. It is normal that, by enabling this option, it is necessary to force the flash mode before each reprogramming.
 
 ![](<../../.gitbook/assets/image (515).png>)
 
@@ -310,13 +315,13 @@ When using Deep-sleep function, it is necessary to weld together the two connect
 
 ### Arduino Library
 
-Click below to download lastest ClimaStick.h library:
+Click below to download latest ClimaStick.h library:
 
 {% file src="../../.gitbook/assets/ClimaStickV2_5.zip" %}
 
 ### Datasheets
 
-Your can download the device datasheet from the following link:
+Download the device datasheet from:
 
 [ClimaStick V1 Datasheet >](https://github.com/thinger-io/Docs/tree/9fc057586e6704dcf058d1a33a7f25ae648c002c/hardware/climaStick/assets/ClimaStick_Datasheet.pdf)
 
@@ -324,7 +329,7 @@ Your can download the device datasheet from the following link:
 
 ### Design files
 
-You can download and edit the device files using eagle cad:
+Download and edit the device files using Eagle CAD:
 
 [ClimaStick V1 design files (.sch & .brd)](https://acme.thinger.io/v1/users/jt/storages/ClimaStickFiles/files/)
 
@@ -332,4 +337,4 @@ You can download and edit the device files using eagle cad:
 
 ### Disclaimer
 
-* This device is commercialized by the Thinger.io platform (INTERNET OF THINGER S.L) as a development kit, so it is not subject to commerce homologation rules. The device owner is liable for all injuries to third parties and damage to their properties.&#x20;
+* This device is commercialized by the Thinger.io platform (INTERNET OF THINGER S.L.) as a development kit, so it is not subject to commerce homologation rules. The device owner is liable for all injuries to third parties and damage to their properties.&#x20;

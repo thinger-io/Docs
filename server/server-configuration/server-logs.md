@@ -1,6 +1,6 @@
 # Server Logs
 
-Thigner.io server instances provide a logging console, that allows to visualize the program status and events in real-time. These data can be used to evaluate the behavior of the server or any integration that is being developed.&#x20;
+Thigner.io server instances provide a logging console that allows visualizing the program status and events in real-time. These data can be used to evaluate the behavior of the server or any integration that is being developed.&#x20;
 
 {% hint style="info" %}
 This feature is only available for the instance's manager account&#x20;
@@ -8,16 +8,18 @@ This feature is only available for the instance's manager account&#x20;
 
 ## Start Logging
 
+<figure><img src="../../.gitbook/assets/image (763).png" alt=""><figcaption></figcaption></figure>
+
 Follow the next steps to start logging the events of the server instance:
 
-![](<../../.gitbook/assets/image (410).png>)
+<figure><img src="../../.gitbook/assets/image (762).png" alt=""><figcaption></figcaption></figure>
 
-1. Go to "Cluster Hosts" section of Thinger.io main menu. The Host list will display all the server instances that have been connected in the same cluster classified by its web domain.&#x20;
+1. Go to the "Cluster Hosts" section of Thinger.io's main menu. The Host list displays all server instances connected within the same cluster, classified by their web domain.
 2. Click the desired instance to access the server administration panel&#x20;
-3. On the right top corner, choose "Logs" tab to open the logging console
-4. Press "Connect" button to start the log sampling
+3. On the top right corner, choose the "Logs" tab to open the logging console
+4. Press the "Connect" button to start the log sampling
 
-![](<../../.gitbook/assets/image (570).png>)
+<figure><img src="../../.gitbook/assets/image (764).png" alt=""><figcaption></figcaption></figure>
 
 The structure of the log entries consists of six columns in which the following data is specified:
 

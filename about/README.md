@@ -2,22 +2,22 @@
 description: >-
   Thinger.io is an Open-source cloud-based IoT Platform developed by INTERNET OF
   THINGER SL, a Spanish company whose objective is to provide an efficient,
-  consistent and easy to use technology for IoT.
+  consistent and easy-to-use technology for IoT.
 ---
 
 # ABOUT
 
 ## History
 
-Thinger.io Platform project started life in early 2015 despite firsts source code lines was made on 2014, as a side-project by Phd. Alvaro Luis Bustamante when he was working as a researcher at the University Carlos III of Madrid (Spain). After studying different solutions to work online with cheap electronic devices, he realized that all the existing platforms were very difficult to use, inefficient or doesn't have enough capacities to create professional IoT projects in a simple way.&#x20;
+The Thinger.io Platform project began in early 2015, with its initial source code lines written in 2014. It originated as a side-project by Dr. Álvaro Luis Bustamante while he was a researcher at the University Carlos III of Madrid (Spain). After studying various solutions for online interaction with affordable electronic devices, he found existing platforms to be either difficult to use, inefficient, or lacking sufficient capabilities to simply create professional IoT projects.
 
 > _"Why I have to select a compatible vendor hardware? Why I need to use an Operating System just for my toaster? Why my device must run a scripting language that burn the batteries? Why I have to rely on a specific vendor and its closed platform? These are some questions I made myself before starting to work in the thinger.io platform."_
 
-What began as a backend project to retrieve data and control devices in real-time,  quickly became a much more general tool that could be easily extended in any direction. In 2018 the project was turned into a loyalty-founded company and released an enterprise version of Thinger.io platform technology to provide professional support for IoT projects with the original vision of a perfect balance between simple but powerful technology.  &#x20;
+What began as a backend project to retrieve data and control devices in real-time quickly became a much more general tool that could be easily extended in any direction. In 2018, the project was turned into a loyalty-founded company and released an enterprise version of the Thinger.io platform technology to provide professional support for IoT projects with the original vision of a perfect balance between simple but powerful technology.  &#x20;
 
 
 
-For some more of the history and highlights check out blog: [https://thinger.io/blog/](https://thinger.io/blog/)
+For some more of the history and highlights, check outthe  blog: [https://thinger.io/blog/](https://thinger.io/blog/)
 
 ## Development & Roadmap
 

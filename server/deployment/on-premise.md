@@ -23,35 +23,37 @@ On-premise instances can be deployed with different licenses, depending on the p
 
 ### 2.  Checkout and payment options
 
-After payment is processed, you will receive an email with the link to set up begin the installation process and your license token.
+***
+
+After payment is processed, an email will be received containing a link to begin the setup and installation process, along with the license token.
 
 ### 3.  On-premise install
 
-Once you have received the license token by email, it is possible to easily deploy Thinger.io on your host with a few commands. Before starting this guide, please, install [Docker Engine](https://docs.docker.com/install/) and [Docker Compose](https://docs.docker.com/compose/install/) in your computer or server.&#x20;
+Once the license token has been received by email, Thinger.io can be easily deployed on the host with a few commands. Before starting this guide, please install [Docker Engine](https://docs.docker.com/install/) and [Docker Compose](https://docs.docker.com/compose/install/) on the computer or server.&#x20;
 
 {% hint style="success" %}
 Install [Docker Engine](https://docs.docker.com/install/) and [Docker Compose ](https://docs.docker.com/compose/install/)before following this guide.
 {% endhint %}
 
-This guide assumes you are installing Thinger.io on a fresh Linux host with Docker support, as it will run databases like `MongoDB`, and will start listening on several ports: `80`, `443`, `1883`,`8883`, `25200`, `25202`, `25204` and `25206` . It will also create a root directory in `/data` where all the Thinger.io data and database information will be stored.
+This guide assumes Thinger.io is being installed on a fresh Linux host with Docker support, as it will run databases like `MongoDB`, and will start listening on several ports: `80`, `443`, `1883`,`8883`, `25200`, `25202`, `25204` and `25206` . It will also create a root directory in `/data` where all the Thinger.io data and database information will be stored.
 
-To start, just launch the following command that will download the `docker-compose` file associated to your license:
+To start, just launch this command that will download the `docker-compose` file associated with the license:
 
 ```bash
 curl https://subscriptions.thinger.io/v1/docker-compose.yml?token={LICENSE} -o docker-compose.yml
 ```
 
 {% hint style="warning" %}
-Never share or publish your LICENSE key as it may consist of a security risk for your host. License keys are issued per host, so do not reuse them between hosts. &#x20;
+Never share or publish the LICENSE key as it may pose a security risk for the host. License keys are issued per host, so do not reuse them between hosts. &#x20;
 {% endhint %}
 
-Ensure that your `docker-compose` file has been downloaded correctly:
+Ensure that the `docker-compose` file has been downloaded correctly:
 
 ```bash
 cat docker-compose.yml
 ```
 
-It should display something like the following:
+It should display:
 
 {% code title="docker-compose.yml" %}
 ```yaml
@@ -143,13 +145,13 @@ services:
 ```
 {% endcode %}
 
-Then, if everything seems to be correct, just run the following command to start all the processes defined in `docker-compose.yml` and run them in detached mode with `-d` option:
+Then, if everything seems to be correct, just run this command to start all the processes defined in `docker-compose.yml` and run them in detached mode with `-d` option:
 
 ```yaml
 docker-compose up -d
 ```
 
-If everything goes fine, it should show something like the following information (it may take several minutes to complete depending on your network connection):
+If everything goes fine, it should show something like this information (it may take several minutes to complete depending on the network connection):
 
 ```bash
 root@docker-s-1vcpu-1gb-fra1-01:~# docker-compose up -d
@@ -213,32 +215,32 @@ c7075dd45e5d        mongo:8                 "docker-entrypoint.s…"   43 minute
 eee1b9479368        pyouroboros/ouroboros   "ouroboros"              47 minutes ago      Up 47 minutes                                                                                            ouroboros
 ```
 
-Then, you can access your on-premise instance by pointing your browser to your host IP address.
+Then, the on-premise instance can be accessed by pointing a browser to the host's IP address.
 
 {% hint style="info" %}
-The latest versions of Ubuntu come with `UFW` (the default firewall configuration tool for Ubuntu). It may be blocking Thinger.io ports by default. Configure it properly or disable it (not recommended)  with `sudo ufw disable`
+The latest versions of Ubuntu come with `UFW` (The default firewall configuration tool for Ubuntu). It may be blocking Thinger.io ports by default. Configure it properly or disable it (not recommended)  with `sudo ufw disable`
 {% endhint %}
 
 ## Steps After On-premise Deployment
 
-To start working with your on-premise installation, just follow the next steps:
+To start working with the on-premise installation, just follow the next steps:
 
 ### First Login
 
-1. Access the server by writing the local IP address of your host, for example: [https://1](https://acme.do.thinger.io)92.168.1.100. This step should show the Thinger.io login screen after accepting to use a self-signed certificate (the browser will ask you about a security issue with the certificate).
-2. Note that this server has never been accessed before, and it is a completely isolated instance so there is not any user account created. Then, it is necessary to click on `Create an account`button, and fill the form to create a new user profile using the `Admin Email` address provided in the license configuration (any other address will not be authorized to sign up).
-3. After creating the new account it is possible to access the new server. It is not necessary to confirm the mail address.
+1. Access the server by writing the local IP address of the host, for example: [https://1](https://acme.do.thinger.io)92.168.1.100. This step should show the Thinger.io login screen after accepting to use a self-signed certificate (The browser will prompt a security issue regarding the certificate).
+2. Note that this server has never been accessed before, and it is a completely isolated instance, so no user account has been created. Then, it is necessary to click on `Create an account`button, and fill the form to create a new user profile using the `Admin Email` address provided in the license configuration (any other address will not be authorized to sign up).
+3. After creating the new account, it is possible to access the new server. It is not necessary to confirm the email address.
 
 ### Device Connection
 
-When working with a private Thinger.io instance, it is necessary to point your devices to the newly created server. If you are using the [Arduino](../../arduino/) or [Linux](../../linux.md) client libraries, i.e., for Arduino, ESP8266, ESP32, Raspberry Pi, etc., you should add a definition on top of your code to point to your host. So, modify your sketch like this:
+When working with a private Thinger.io instance, it is necessary to point devices to the newly created server. If the [Arduino](../../arduino/) or [Linux](../../linux.md) client libraries are being used (e.g., for Arduino, ESP8266, ESP32, Raspberry Pi, etc.), a definition should be added at the top of the code to point to the host. The sketch should be modified as follows:
 
 ```
 #define THINGER_SERVER "192.168.1.100"
 
-// the rest of your code goes here
+// the rest of the code goes here
 ```
 
 {% hint style="info" %}
-If this host definition is not provided, your devices will try to connect with the public instance.&#x20;
+If this host definition is not provided, the devices will try to connect with the public instance.&#x20;
 {% endhint %}

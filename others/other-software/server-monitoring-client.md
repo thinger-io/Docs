@@ -4,13 +4,13 @@ description: Track system metrics from Thinger.io Platform
 
 # Server Monitoring Client
 
-The Linux Monitoring Client is a software module based on the Thinger.io Linux Client that keeps track of different system metrics, and publishes them to the Thinger.io Platform in order to keep track of a server or an embedded Linux device or a fleet of them.
+The Linux Monitoring Client is a software module based on the Thinger.io Linux Client that tracks various system metrics and publishes them to the Thinger.io Platform, enabling the monitoring of individual servers, embedded Linux devices, or entire fleets.
 
 ## Resource Tracking
 
 The client tracks different metrics for System Information as well as for six different types of resources: general system information, CPU, system memory, network interfaces, filesystem mount points, and I/O drives.
 
-Apart from uploading the resource information to Thinger.io Platform, the resources can be queried directly to the client or from the local server running the client at http://localhost:7890/monitor
+Apart from uploading the resource information to Thinger.io Platform, the resources can be queried directly to the client or from the local server running the client at http://localhost:7890/monitor.
 
 ### General System Information
 
@@ -18,36 +18,36 @@ There is some system information that can be relevant from a server administrati
 
 Currently, the metrics the client is retrieving are:
 
-* Hostname
-* Uptime
-* OS version
-* Quantity of normal and security updates (Ubuntu server)
-* If a reboot is required to apply updates (Ubuntu server)
+* Hostname.
+* Uptime.
+* OS version.
+* Quantity of normal and security updates (Ubuntu server).
+* If a reboot is required to apply updates (Ubuntu server).
 
 ### CPU
 
-To evaluate the performance of the CPU, the following metrics are tracked:
+To evaluate the performance of the CPU, these metrics are tracked:
 
-* Number of cores
-* CPU usage
-* CPU load for 1m, 5m and 15m
+* Number of cores.
+* CPU usage.
+* CPU load for 1m, 5m and 15m.
 
 ### System Memory (RAM)
 
-As having reliable information about the system memory used is vital for capacity planning and maintaining the integrity of your servers, the following metrics are collected:
+As having reliable information about the system memory used is vital for capacity planning and maintaining the integrity of the servers, these metrics are collected:
 
-* Total, used and available memory capacity
-* Memory usage
-* Total, used and available swap memory capacity
-* Swap memory usage
+* Total, used and available memory capacity.
+* Memory usage.
+* Total, used and available swap memory capacity.
+* Swap memory usage.
 
 ### Network Interfaces
 
-For each network interface the following is tracked:
+For each network interface, the following is tracked:
 
-* Internal/Private IP
-* Incoming and Outgoing network speed
-* Incoming and Outgoing total network transfer
+* Internal/Private IP.
+* Incoming and Outgoing network speed.
+* Incoming and Outgoing total network transfer.
 
 It will also retrieve the public IP of the server.
 
@@ -55,27 +55,27 @@ It will also retrieve the public IP of the server.
 
 Each filesystem corresponds to one partition of a drive, from which it will track:
 
-* Capacity
-* Capacity free
-* Capacity used
-* Capacity usage (percentage)
+* Capacity.
+* Capacity free.
+* Capacity used.
+* Capacity usage (percentage).
 
 ### I/O Drives
 
-To provide insight on how a server is performing, the following I/O drive metrics are monitored:
+To provide insight on how a server is performing, these I/O drive metrics are monitored:
 
-* Input and Output operation speed
-* Disk usage
+* Input and Output operation speed.
+* Disk usage.
 
 ## Configuration
 
-The basic device configuration is tracked over a JSON file located in the server. Additional configurations are tracked trough the device properties to allow live configuration changes through the Thinger.io Platform.
+The basic device configuration is tracked over a JSON file located on the server. Additional configurations are tracked through the device properties to allow live configuration changes through the Thinger.io Platform.
 
 ### Basic device configuration
 
-The configuration will be auto created on first launch when it is auto provisioned.
+The configuration will be auto-created on first launch when it is auto-provisioned.
 
-The file structure is as follows:
+The file structure is:
 
 ```javascript
 {
@@ -104,11 +104,11 @@ As mentioned before, the configuration for the resources will be in the device p
 
 It contains five sections:
 
-* defaults: boolean value indicating whether the name of the first element of each resource will have a default name instead of the resource name. Useful when tracking different devices with one dashboard.
-* interfaces: JSON array with the name of the network interfaces to track.
+* defaults: a boolean value indicating whether the name of the first element of each resource will have a default name instead of the resource name. Useful when tracking different devices with one dashboard.
+* interfaces: JSON array with the names of the network interfaces to track.
 * filesystems: JSON array with the mount point of the partitions to track.
 * drives: JSON array with the Linux devices to track.
-* server: Object containing the host IP to listen in and port to launch the local server.
+* server: Object containing the host IP to listen on and the port to launch the local server.
 
 Here is an example `resources` property value:
 
@@ -133,7 +133,7 @@ Here is an example `resources` property value:
 
 ## First Launch
 
-This module has the feature to auto provision the device in the Thinger.io Platform, but also allows to input a configuration if it's already provisioned.
+This module has the feature to auto-provision the device in the Thinger.io Platform, but also allows for inputting a configuration if it's already provisioned.
 
 It is also capable of creating a system service so the monitor is always running regarding if the server has been rebooted.
 
@@ -146,10 +146,10 @@ Download the installation script from the [last software release](https://github
 ```
 
 {% hint style="info" %}
-For update and reboot abilities it needs to be run with root user
+For update and reboot abilities, it needs to be run with the root user
 {% endhint %}
 
-### Without auto provision
+### Without auto-provision
 
 If the device is already provisioned, we will need to set the user id, device id and credentials in the configuration file and launch the software as:
 
@@ -158,7 +158,7 @@ If the device is already provisioned, we will need to set the user id, device id
 ```
 
 {% hint style="warning" %}
-If the operating system is not Ubuntu or OpenSSL is installed in a different folder than default, it is neccesary to indicate the certificates directory by declaring the variable SSL\_CERT\_DIR before calling the installer or the binary:
+If the operating system is not Ubuntu or OpenSSL is installed in a different folder than the default, it is necessary to indicate the certificates directory by declaring the variable SSL\_CERT\_DIR before calling the installer or the binary:
 
 Ex: `SSL_CERT_DIR=/etc/ssl/certs ./installer_thinger_monitor.sh`
 {% endhint %}

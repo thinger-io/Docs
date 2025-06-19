@@ -119,7 +119,7 @@ coverY: 0
 
 *   **Plugin Installation Dialog**:
 
-    * Support for custom volumes, enabling the mounting of custom file storages to plugins like Node-RED, FTP, etc.
+    * Support for custom volumes, enabling the mounting of custom file storage to plugins like Node-RED, FTP, etc.
 
     <figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt="" width="563"><figcaption><p>Custom Volumes to be attached to Plugins</p></figcaption></figure>
 
@@ -127,38 +127,38 @@ coverY: 0
 
 <figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt="" width="563"><figcaption><p>Custom Environment Variables on Plugins</p></figcaption></figure>
 
-* **Virtual Devices**: Initial support for devices that are always connected and can fetch data from external resources (e.g., endpoints via products). Example use case: creating a weather device fetching weather data and forecasts.
+* **Virtual Devices**: Initial support for devices that are always connected and can fetch data from external resources (e.g., endpoints via products). Example use case: creating a weather device that fetches weather data and forecasts.
 
 <figure><img src="../.gitbook/assets/image (5) (1) (1).png" alt="" width="563"><figcaption><p>Virtual Devices</p></figcaption></figure>
 
 * **Product Plugin Exporter**: Export products to a file storage, with options to:
   * Set plugin image, name, description, and version.
-  * Edit markdown readme with images, changelogs, etc.
+  * Edit the markdown readme with images, changelogs, etc.
 
 <figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption><p>New Product Plugin Exporter</p></figcaption></figure>
 
 * **New Event**: `endpoint_call_response`, providing the result of endpoint calls.
 * **Billing Menu for Admins**: Added a menu item linking to the customer portal.
 
-<figure><img src="../.gitbook/assets/image (7) (1).png" alt="" width="312"><figcaption><p>New Billing </p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1).png" alt="" width="208"><figcaption><p>New Billing </p></figcaption></figure>
 
 * **Account Deletion**: Community users can now delete their accounts.
 
 <figure><img src="../.gitbook/assets/image (10) (1).png" alt=""><figcaption><p>Community users can remove their accounts</p></figcaption></figure>
 
-* **Enhanced Product Profile Resources**: Resources can now target endpoints, plugins paths, call other api resources, and enable operations based on their responses.
+* **Enhanced Product Profile Resources**: Resources can now target endpoints, plugin paths, call other api resources, and enable operations based on their responses.
 * **Experimental MongoDB Backend**:
   * Support for custom data retention policies for individual buckets.
   * Deprecates InfluxDB for new instances.
 
-<figure><img src="../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>MongoDB Backend as new </p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1).png" alt="" width="563"><figcaption><p>MongoDB Backend as new </p></figcaption></figure>
 
 ***
 
 #### Improved
 
 * **Default Plugin Shell**: Updated to point to `/bin/sh` (used in minimal images). Configurable via the `task.shell` parameter.
-* **Plugin Installation**: Plugins can now be installed directly from file storages, where Plugins are exported by default in the Plugin Exporter feature.
+* **Plugin Installation**: Plugins can now be installed directly from file storage, where Plugins are exported by default in the Plugin Exporter feature.
 *   **Plugin Management Page**: Migrated to Angular with new features:
 
     * Supports reading `readme.md` and images from file storage.
@@ -183,7 +183,7 @@ coverY: 0
   * Resolved bucket writes with empty tag values.
   * Fixed bucket reads not using the `project` field.
 * **Endpoint Calls**:
-  * Fixed endpoint call tests not displaying `application/json` body with UTF-8 encoding in response headers.
+  * Fixed endpoint call tests are not displaying `application/json` body with UTF-8 encoding in response headers.
 * **Plugin Environment Variables**:
   * Fixed creation of environment variables for plugins without default values.
   * Fixed issues when adding environment variables to such plugins.
@@ -192,8 +192,8 @@ coverY: 0
 * **Resource Streams**: Fixed product resource streams not initializing for non-IoTMP/PROTO devices on connection.
 * **Dashboard**:
   * Fixed window titles containing placeholders.
-  * Fixed removal of incorrect sub-widgets in group widgets.
-  * Fixed missing sources in widgets within group widgets.
+  * Fixed the removal of incorrect sub-widgets in group widgets.
+  * Fixed missing sources in widgets within the group widgets.
   * Sharing a dashboard now automatically grants file storage read permissions if required (e.g., for HTML widgets).
 * **Frontend API**: Fixed API resource permissions.
 * **Mobile App**: Fixed issues with loading HTML widgets.
@@ -215,17 +215,17 @@ coverY: 0
 
 * 🗺️ Products now include a new functionality to configure how devices should be displayed on an Assets Maps widget, including icons, background colors, labels, and extended information when the icon is clicked. It supports conditional icons and background colors according to the latest bucket data, property values, or device status.
 
-<figure><img src="../.gitbook/assets/asset_map (1).gif" alt=""><figcaption><p>Assets Map with custom icons and fields.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/asset_map (1).gif" alt="" width="480"><figcaption><p>Assets Map with custom icons and fields.</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (638).png" alt=""><figcaption><p>Product Visualization configuration, with support for multiple icons, backgrounds, and fields.</p></figcaption></figure>
 
 * 📡 Initial support for Device events as a source for Product resources (properties, buckets, endpoints), i.e., for reacting to device connection events.
 
-<figure><img src="../.gitbook/assets/image (631).png" alt=""><figcaption><p>Device Event as a new data source for properties, buckets, or endpoints.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (631).png" alt="" width="435"><figcaption><p>Device Event as a new data source for properties, buckets, or endpoints.</p></figcaption></figure>
 
 * 🧩 Initial support for multiple data sources on Product properties, i.e., listening for different events/resources to update a single property.
 
-<figure><img src="../.gitbook/assets/image (632).png" alt=""><figcaption><p>Multiple data sources on Product Properties</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (632).png" alt="" width="439"><figcaption><p>Multiple data sources on Product Properties</p></figcaption></figure>
 
 * 🔄 Initial support for Product properties PATCH to allow partial updates.
 
@@ -241,13 +241,13 @@ coverY: 0
 
 * 📊 New Assets Table widget to display device information in a table, with the possibility to export data to a PDF report, CSV file, and filter and sort columns. The asset table can merge multiple pieces of information from each asset, i.e., from device state, buckets, or properties.
 
-<figure><img src="../.gitbook/assets/image (639).png" alt=""><figcaption><p>New Assets Table widget to display any asset information.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (639).png" alt="" width="563"><figcaption><p>New Assets Table widget to display any asset information.</p></figcaption></figure>
 
 * 🔔 New notification icon to stay updated on the latest news in the Thinger.io ecosystem, like server updates, new library releases, etc.
 
-<figure><img src="../.gitbook/assets/image (635).png" alt=""><figcaption><p>New notification icon with the latest news in the Thinger.io ecosystem.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (635).png" alt="" width="377"><figcaption><p>New notification icon with the latest news in the Thinger.io ecosystem.</p></figcaption></figure>
 
-* 🔒 Support for enabling legacy TLS protocols (TLS v1.0 and TLS v1.1) by reducing OpenSSL security level. This can be useful to support connectivity with old devices not supporting newer TLS versions. It can be configured under Cluster Host > Settings > SSL Certificates.
+* 🔒 Support for enabling legacy TLS protocols (TLS v1.0 and TLS v1.1) by reducing OpenSSL security level. This can be useful to support connectivity with old devices that don't support newer TLS versions. It can be configured under Cluster Host > Settings > SSL Certificates.
 
 <figure><img src="../.gitbook/assets/image (636).png" alt=""><figcaption><p>TLS 1.0 and TLS 1.1. Support</p></figcaption></figure>
 
@@ -255,15 +255,15 @@ coverY: 0
 
 <figure><img src="../.gitbook/assets/image (637).png" alt=""><figcaption><p>Automatically add new members/roles to the Claim Project, i.e., for supervision and management.</p></figcaption></figure>
 
-* 🔌 Devices services configured over Products will now use a configurable range of ports. This will simplify on-premise setup and speed up service access, as there will be no need to manage firewall rules dynamically.
+* 🔌 Device services configured over Products will now use a configurable range of ports. This will simplify on-premise setup and speed up service access, as there will be no need to manage firewall rules dynamically.
 
-<figure><img src="../.gitbook/assets/image (640).png" alt=""><figcaption><p>New Host Configuration to set the dynamic ports range when using Product Services.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (640).png" alt="" width="525"><figcaption><p>New Host Configuration to set the dynamic ports range when using Product Services.</p></figcaption></figure>
 
 #### Improved
 
-* 🛠️ Product profile resources now simplify the payload configuration, by allowing the selection of the source event, source payload, or a template payload. It also allows defining a custom payload processing function that is easier to configure than the current `{{payload:fn}}` definition.
-* ✅ Schema validation error messages both on API and server logs.
-* 📉 Reduce required buffer size for each connected device.
+* 🛠️ Product profile resources now simplify the payload configuration by allowing the selection of the source event, source payload, or a template payload. It also allows defining a custom payload processing function that is easier to configure than the current `{{payload:fn}}` definition.
+* ✅ Schema validation error messages are both in the API and server logs.
+* 📉 Reduce the required buffer size for each connected device.
 * 📈 Increased maximum dynamic buffer size, supporting larger message sizes.
 * 🔄 Product API Resource responses can now use template placeholders, including properties or other API resources.
 * 📝 Improved claim resources landing with more informative messages.
@@ -276,7 +276,7 @@ coverY: 0
 * 🛠️ Inside and outside expression comparators on alarms.
 * 🛠️ Potential socket leak if the client did not try to perform the TLS handshake.
 * 🛠️ Console permissions when a developer/admin closes an external project.
-* 🛠️ Dashboard widget on community server not allowing to select a value.&#x20;
+* 🛠️ Dashboard widget on community server not allowing the selection of a value.&#x20;
 * 🛠️ Dashboard not showing configurable time selector.&#x20;
 
 ## 6.2.2
@@ -287,12 +287,12 @@ coverY: 0
 
 #### Added
 
-* Devices associated with a Product can now display bucket data directly from their pages, under the menu option called "Buckets". Each device can now list all the associated buckets and will filter out its data in the Data view. In future releases, we will add options for exporting, importing, and clearing data. This opens the possibility to avoid sharing raw bucket data with project members, and effectively grant access only to their device data. With this feature, permissions are granted at the device level, with permissions like ViewDeviceBuckets, ReadDeviceBucket, ReadDeviceBucketTag, and ListDeviceBucketTags.
+* Devices associated with a Product can now display bucket data directly from their pages, under the menu option called "Buckets". Each device can now list all the associated buckets and will filter out its data in the Data view. In future releases, we will add options for exporting, importing, and clearing data. This opens the possibility to avoid sharing raw bucket data with project members and effectively grant access only to their device data. With this feature, permissions are granted at the device level, with permissions like ViewDeviceBuckets, ReadDeviceBucket, ReadDeviceBucketTag, and ListDeviceBucketTags.
 
 <figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>New Buckets option for Product Devices</p></figcaption></figure>
 
-* Introduced two new specific permissions for listing and reading bucket tags:`ListBucketTags`: Allows listing of bucket tags.`ReadBucketTag`: Allows reading of individual bucket tags. Previously, these operations required the more general `ReadBucketConfig` permission. This change provides more granular control over permissions.
-* Claims now support including additional projects on the claim process. This way, claimed resources can be added automatically to parent "global" projects that can be used to manage the resources with different profiles.
+* Introduced two new specific permissions for listing and reading bucket tags:`ListBucketTags`: Allows listing of bucket tags.`ReadBucketTag`: Allows reading of individual bucket tags. Previously, these operations required a more general `ReadBucketConfig` permission. This change provides more granular control over permissions.
+* Claims now support including additional projects in the claim process. This way, claimed resources can be added automatically to parent "global" projects that can be used to manage the resources with different profiles.
 
 <figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Additional projects where claimed resources will be included on the claim process.</p></figcaption></figure>
 
@@ -304,7 +304,7 @@ coverY: 0
 
 **Improved**
 
-*   Templating system (used on products or endpoints) can now process placeholders with spaces.&#x20;
+*   The templating system (used on products or endpoints) can now process placeholders with spaces.&#x20;
 
     ```
     {{ payload : FunctionName = 22 }}
@@ -314,11 +314,11 @@ coverY: 0
 
 **Fixed**
 
-* MQTT and HTTP devices can now also devices Device tokens via GUI, as they can define API resources over Products.
+* MQTT and HTTP devices can now also define Device tokens via the GUI, as they can define API resources over Products.
 * Problem when removing nested resources, i.e., Bucket exports, Project Members.
 * Bucket exports should not display set projects and clone context actions.
-* Bucket exports not loading by default.
-* Apex Chart Widget preview preventing dashboard from being saved.
+* Bucket exports are not loading by default.
+* Apex Chart Widget preview is preventing the dashboard from being saved.
 * Apex Chart Widget series colors are not being updated when the widget has titles.
 * Problem when updating device locations.
 
@@ -338,7 +338,7 @@ coverY: 0
 
 <figure><img src="../.gitbook/assets/image (618).png" alt="" width="374"><figcaption><p>Share Image can be uploaded from filesystem</p></figcaption></figure>
 
-* Brand Logos are now served from web server instead of a JSON config, which should reduce load time.
+* Brand Logos are now served from the web server instead of a JSON config, which should reduce load time.
 * Brand PWA "start\_url" to make the console installable on Chrome.
 * Products can now be configured to resend device data to a given endpoint. For example, fetch a given resource every n seconds, or take data from a topic, and resend it to another service.
 
@@ -352,21 +352,21 @@ coverY: 0
 
 <figure><img src="../.gitbook/assets/image (621).png" alt="" width="375"><figcaption><p>New Device Stream target on Product API Resources.</p></figcaption></figure>
 
-* Endpoint call event now provides context about the caller.
+* The endpoint call event now provides context about the caller.
 
 <figure><img src="../.gitbook/assets/image (622).png" alt="" width="375"><figcaption><p>Endpoint call caller context</p></figcaption></figure>
 
 #### Improved
 
-* Add some resources cache for a better performance on massive endpoint calls and bucket writes.
+* Add a resource cache for better performance on massive endpoint calls and bucket writes.
 * HTTP devices have been migrated to a new connection schema where it is possible to log their statistics, like bytes sent, received, and connections, as any other MQTT or IOTMP device.
-* HTTP devices can be used now used inside dashboards with resources defined at product level.
+* HTTP devices can now be used inside dashboards with resources defined at the product level.
 * Device property selector for HTML widgets allows selecting any parent node (with nested values), or all property values by not selecting any field. Fixes [https://github.com/thinger-io/thinger-server/issues/16](https://github.com/thinger-io/thinger-server/issues/16)
 * Property PATCH now supports regular JSON for partial property updates. Fixes [https://github.com/thinger-io/thinger-server/issues/16](https://github.com/thinger-io/thinger-server/issues/16)
-* Brand icons and logos are now served from filesystem instead of data url, improving page load.
+* Brand icons and logos are now served from the filesystem instead of a data URL, improving page load.
 * Dashboard HTML widgets from external storage no longer require public storage access. In the case of members of a project, they will require read access to the storage.
 * Product properties, topics, resources, and functions can be generated now by calling a product function.&#x20;
-* Product bucket writes can now override tags values based on the write payload. Previously, tags like device were always being set by the product, discarding any "device" field present on the payload.
+* Product bucket writes can now override tag values based on the write payload. Previously, tags like device were always being set by the product, discarding any "device" field present on the payload.
 * Compatibility with OpenSSL 3.0 on SSL certificate provisioning.
 * IP Geocoding automatic updates.
 
@@ -374,11 +374,11 @@ coverY: 0
 
 * Apex Charts widget colors do not honor time series color configuration.
 * Binary data on a product payload is not processed correctly.
-* Visual Studio Code not opening the file storage correctly.
+* Visual Studio Code is not opening the file storage correctly.
 * Products with just "run" resources were not displayed on the API explorer.
-* Product profile list for buckets, endpoints, auto provision and api resources were displaying always "Property" instead of the resource type.
-* Info page display on empty or restricted resources.
-* Statistics on sockets count.
+* Product profile list for buckets, endpoints, auto provision, and api resources were always displaying "Property" instead of the resource type.
+* The info page displays on empty or restricted resources.
+* Statistics on socket count.
 
 ## 6.0.0
 
@@ -386,25 +386,25 @@ coverY: 0
 
 #### **Added**
 
-* **Property Forms 📝** : Allow creating custom forms for improving the user experience when setting values inside a property, i.e., when configuring a device. The form can be defined at Product level, and it is currently supported by [Formly](https://formly.dev/).&#x20;
+* **Property Forms 📝** : Allow creating custom forms for improving the user experience when setting values inside a property, i.e., when configuring a device. The form can be defined at a Product level, and it is currently supported by [Formly](https://formly.dev/).&#x20;
 
 <figure><img src="../.gitbook/assets/image (586).png" alt="" width="457"><figcaption><p>Property Forms</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (587).png" alt="" width="398"><figcaption><p>Device property editor using a form</p></figcaption></figure>
 
-* **Property Location** 📍: Location properties now display a map for picking the address directly from the map or via a search bar for using an address. Once an address is selected, it automatially fills the coordinates and timezone.
+* **Property Location** 📍: Location properties now display a map for picking the address directly from the map or via a search bar for using an address. Once an address is selected, it automatically fills in the coordinates and timezone.
 
 <figure><img src="../.gitbook/assets/image (588).png" alt="" width="398"><figcaption><p>Property location editor</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (591).png" alt="" width="396"><figcaption><p>Property raw fields generated by location editor.</p></figcaption></figure>
 
-* **Dashboard Functions** ⚡: Dashboard now supports creating custom functions for processing any data used in dashboard, i.e., for changing units, cropping decimals, or filtering values. Conversion functions can be selected on the data source configuration.
+* **Dashboard Functions** ⚡: Dashboard now supports creating custom functions for processing any data used in the dashboard, i.e., for changing units, cropping decimals, or filtering values. Conversion functions can be selected in the data source configuration.
 
 <figure><img src="../.gitbook/assets/image (593).png" alt="" width="454"><figcaption><p>Dashboard Functions.</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (594).png" alt="" width="456"><figcaption><p>Source processing using Dashboard Function.</p></figcaption></figure>
 
-* **Dashboard Placeholders** 🏷: Dashboard now supports settings placeholders from a fixed value, or a device property. Placeholders can be used in a any string field on the dashboard, i.e., titles, units, or even inside functions to change the functions behaviour depending on current device configuration.
+* **Dashboard Placeholders** 🏷: Dashboard now supports settings placeholders from a fixed value or a device property. Placeholders can be used in any string field on the dashboard, i.e., titles, units, or even inside functions to change the behaviour of the function depending on the current device configuration.
 
 <figure><img src="../.gitbook/assets/image (597).png" alt="" width="455"><figcaption><p>Dashboard Placeholders.</p></figcaption></figure>
 
@@ -412,7 +412,7 @@ coverY: 0
 
 <figure><img src="../.gitbook/assets/image (599).png" alt="" width="454"><figcaption><p>Dashboard Placeholder used inside Dashboard Function.</p></figcaption></figure>
 
-* **Dashboard Property Button** 🆕 : New "Property Button" widget for opening device properties for its modification, even if they have a Property Form defined.
+* **Dashboard Property Button** 🆕 : New "Property Button" widget for opening device properties for modification, even if they have a Property Form defined.
 
 <figure><img src="../.gitbook/assets/image (600).png" alt="" width="458"><figcaption><p>Property Button Configuration.</p></figcaption></figure>
 
@@ -426,9 +426,9 @@ coverY: 0
 
 <figure><img src="../.gitbook/assets/image (605).png" alt=""><figcaption><p>Property Table</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (604).png" alt=""><figcaption><p>Property Table Configuration</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (604).png" alt="" width="462"><figcaption><p>Property Table Configuration</p></figcaption></figure>
 
-* **Claiming Feature**☝️: The Claiming Feature is a versatile and user-friendly tool designed for administrators to configure and expose a selected number of resources, such as devices, for end-user claiming. This feature enables administrators to effortlessly set up various resources which end-users can subsequently request. Upon a successful request, these resources, like specific devices, are automatically integrated into the end-users' accounts. This streamlined process not only enhances user experience by simplifying resource acquisition but also provides administrators with efficient control over resource distribution and management.
+* **Claiming Feature**☝️: The Claiming Feature is a versatile and user-friendly tool designed for administrators to configure and expose a selected number of resources, such as devices, for end-user claiming. This feature enables administrators to set up various resources that end-users can subsequently request effortlessly. Upon a successful request, these resources, like specific devices, are automatically integrated into the end-users' accounts. This streamlined process not only enhances user experience by simplifying resource acquisition but also provides administrators with efficient control over resource distribution and management.
 
 <figure><img src="../.gitbook/assets/image (606).png" alt=""><figcaption><p>Claim Configuration</p></figcaption></figure>
 
@@ -436,49 +436,51 @@ One of the key strengths of this feature is its flexibility in claiming methods:
 
 <figure><img src="../.gitbook/assets/image (607).png" alt=""><figcaption><p>Claim Details</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (608).png" alt=""><figcaption><p>Claim Process - Initial Step</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (608).png" alt="" width="563"><figcaption><p>Claim Process - Initial Step</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (609).png" alt=""><figcaption><p>Claim Process - Review</p></figcaption></figure>
+The second phase shows:
 
-Once claim is completed, the process may request the configuration of the devices, i.e., via the Property Forms defined on the product.&#x20;
+<figure><img src="../.gitbook/assets/image (609).png" alt="" width="563"><figcaption><p>Claim Process - Review</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (610).png" alt=""><figcaption><p>Claim Process - Complete &#x26; Configure</p></figcaption></figure>
+Once the claim is completed, the process may request the configuration of the devices, i.e., via the Property Forms defined on the product.&#x20;
+
+<figure><img src="../.gitbook/assets/image (610).png" alt="" width="563"><figcaption><p>Claim Process - Complete &#x26; Configure</p></figcaption></figure>
 
 *   **Configurable Brand Accounts**👨‍💼: We've introduced a new "Accounts" section for each brand. This enhancement allows more control over brand-specific behaviors, including:
 
-    * **Cross Sign-In Control:** Decide whether users registered with one brand can log in to another, enhancing security and user management.
+    * **Cross Sign-In Control:** Determine whether users registered with one brand can log in to another, thereby enhancing security and user management.
     * **Public Sign-Up Options:** Choose whether to allow public sign-up for each brand, providing flexibility in user onboarding.
     * **Automated Role Assignment:** Set specific account roles for users who register through public sign-up, such as automatically assigning 'member' status for device claiming purposes.
 
-    This update offers more customization to better align with your brand's unique operational needs.
+    This update offers more customization to better align with the brand's unique operational needs.
 
 <figure><img src="../.gitbook/assets/image (611).png" alt=""><figcaption><p>Brands Accounts Configuration</p></figcaption></figure>
 
-* **Configurable Brand Scripts** 🖥️ : We've rolled out an exciting update: you can now configure custom scripts for your brand's index.html. This enhancement is perfect for integrating tools like Google Tag Manager and monitor your customers traffic.&#x20;
+* **Configurable Brand Scripts** 🖥️: An update has been released that allows for the configuration of custom scripts for a brand's `index.html`. This enhancement facilitates the integration of tools such as Google Tag Manager and the monitoring of customer traffic.
 
 <figure><img src="../.gitbook/assets/image (613).png" alt=""><figcaption><p>Brand Scripts Configuration</p></figcaption></figure>
 
-* **New Permissions** 🔒: Console is introducing an array of specific new permissions, enhancing the granularity with which administrators can control member access and actions within the console. This update distinctly separates permissions for actions performed through the API from those executed directly on the console interface. In the current version, all existing permissions will continue to function as before. However, future updates will require the explicit assignment of 'View' permissions to maintain the access level. This change lays the groundwork for more precise and customizable user role management, ensuring enhanced security and efficiency in operation. At this moment they are partially released for Devices, but will be covering the whole console in future updates.
+* **New Permissions** 🔒: Console is introducing an array of specific new permissions, enhancing the granularity with which administrators can control member access and actions within the console. This update distinctly separates permissions for actions performed through the API from those executed directly on the console interface. In the current version, all existing permissions will continue to function as before. However, future updates will require the explicit assignment of 'View' permissions to maintain the access level. This change lays the groundwork for more precise and customizable user role management, ensuring enhanced security and efficiency in operation. At this moment, they are partially released for Devices, but will be covering the whole console in future updates.
 
-<figure><img src="../.gitbook/assets/image (615).png" alt=""><figcaption><p>New View</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (615).png" alt="" width="563"><figcaption><p>New View</p></figcaption></figure>
 
-* **Updated Editors** :woman\_technologist:: Now editors are based on Monaco (the editor from Visual Studio Code) with support to maximize the editor and copy the contents:
+* **Updated Editors** :woman\_technologist:: Now, editors are based on Monaco (the editor from Visual Studio Code) with support to maximize the editor and copy the contents:
 
 <figure><img src="../.gitbook/assets/image (614).png" alt="" width="375"><figcaption><p>New Code/Value editor in the console.</p></figcaption></figure>
 
-* **New Icon Picker** :unicorn: :  There is a new icon picker with much more variety of icon and improved search capabilities.
+* **New Icon Picker** :unicorn: :  There is a new icon picker with a much greater variety of icons and improved search capabilities.
 
-<figure><img src="../.gitbook/assets/image (616).png" alt=""><figcaption><p>New Icon Picker</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (616).png" alt="" width="563"><figcaption><p>New Icon Picker</p></figcaption></figure>
 
 #### **Improved**
 
-* Double click on Widget now opens the Widget editor!
-* Create and update properties performance
+* Double-click on Widget now opens the Widget editor!
+* Create and update properties' performance.
 * Time series data should not present data wraps anymore.
 * Internal Google Maps loader to potentially avoid multiple loads.
-* Buckets API query now supports "group\_by" parameter.
-* Move Swagger to an Angular component. New url https://console.thinger.io/swagger
-* Initial deprecation of InfluxDB v1
+* Buckets API query now supports the "group\_by" parameter.
+* Move Swagger to an Angular component. New URL: https://console.thinger.io/swagger
+* Initial deprecation of InfluxDB v1.
 * Widget add time series automatically selects a different name and color for each series.
 * Dashboard source switching now allows switching between bucket tags, with minimum and maximum selected tags.
 * Dashboard internals.
@@ -486,19 +488,19 @@ Once claim is completed, the process may request the configuration of the device
 #### **Fixed**
 
 * Push button widget not working on mobile devices.
-* Real-time dashboards now work properly with  project members and shared dashboards.
+* Real-time dashboards now work properly with project members and shared dashboards.
 * Fixed the issue where the dashboard widget with device resource data source was showing offline, despite the widget receiving data.
 * Deletion event not triggered for nested resources, i.e., device property.
 * Creation event not triggered for property resources.
-* Data bucket storage from Products using device resource with fixed interval randomly stop writing.
-* Add Syncs to the tokens actions.
-* Dashboard editing not being disabled on non-active tabs.
+* Data bucket storage from Products using device resources with a fixed interval randomly stops writing.
+* Add Syncs to the tokens' actions.
+* Dashboard editing is not being disabled on non-active tabs.
 * Token configuration was missing the description field.
-* Delete resource from console sending parameters like index, count...
+* Delete resource from the console, sending parameters like index, count...
 
 #### Core
 
-* Partial migration from AngularJs to Angular 17
+* Partial migration from AngularJS to Angular 17
 * Update OpenSSL to versión 3
 * Update Boost to 1.83.0
 * Update Mongoc to 1.25.1
@@ -511,7 +513,7 @@ Once claim is completed, the process may request the configuration of the device
 
 **Fixed**
 
-* Issue while displaying default project on member accounts.
+* Issue while displaying the default project on member accounts.
 * Reset password not working for some email addresses.
 
 ## 5.3.6
@@ -521,15 +523,15 @@ Once claim is completed, the process may request the configuration of the device
 **Added**
 
 * Support for HTTP\_HOST and HTTPS\_HOST environment variables for HTTP requests over a proxy.
-* Support for disabling HOSTNAME resolutions on installed plugins, i.e., useful for plugins that requires querying external public IP (like FTP).
+* Support for disabling HOSTNAME resolutions on installed plugins, i.e., useful for plugins that require querying an external public IP (like FTP).
 
 **Improved**
 
-* Prevent large navigation breadcrumb overlapping the right menu button.
+* Prevent large navigation breadcrumbs from overlapping the right menu button.
 
 **Fixed**
 
-* Device link to a Product web page not working on mobile devices (on the aside menu).
+* Device link to a Product web page not working on mobile devices (in the aside menu).
 * Error while updating account limits.
 * Support for 303 HTTP See Other status.
 
@@ -555,13 +557,13 @@ Once claim is completed, the process may request the configuration of the device
 **Fixed**
 
 * Problem while counting active alarm instances on the menu.
-* Alarms not triggering notifications on creation when it has immediate activation.
-* Alarms not allowing to select hours as reminder intervals.
+* Alarms that are not triggering notifications on creation when it has immediate activation.
+* Alarms that do not allow for selecting hours as reminder intervals.
 * IOTMP with multiple property stream subscriptions.
-* Products not processing API Responses payload configuration, but returning just the original payload.
-* Input template params to Product API Request targeting functions not being correctly processed.
-* Plugins that require a MongodDB user to interact with the database fail to upgrade.
-* Dashboard widget settings being closed when removing widget background.
+* Products that do not process the API Responses payload configuration, but return just the original payload.
+* Input template params to Product API Request targeting functions are not being correctly processed.
+* Plugins that require a MongoDB user to interact with the database fail to upgrade.
+* Dashboard widget settings are closed when removing the widget background.
 
 ## 5.3.0
 
@@ -571,22 +573,22 @@ Once claim is completed, the process may request the configuration of the device
 
 **Added**
 
-*   New Alarms feature ⏰ (BETA)! A completely new solution for managing IoT alarms, which includes rule definitions, and alarm instances management. Some key features of the new solution:
+*   New Alarms feature ⏰ (BETA)! A completely new solution for managing IoT alarms, which includes rule definitions and alarm instance management. Some key features of the new solution:
 
-    * Multiple data sources for configuring alarms triggering include data buckets, device properties, and device state.
+    * Multiple data sources for configuring alarm triggering include data buckets, device properties, and device state.
     * Multiple severities: High, medium, low, none.
-    * Independent activation and normalization conditions, including confirmations based on timespan or a number of consecutive events.
+    * Independent activation and normalization conditions, including confirmations based on timespan or several consecutive events.
 
 
 
     <figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption><p>Alarm Rule Configuration</p></figcaption></figure>
 
-    * Multiple endpoint notifications on activation, normalization, or reminder., i.e., for sending an email, a message to mobile, etc.
+    * Multiple endpoint notifications on activation, normalization or reminder, i.e., for sending an email, a message to mobile, etc.
     * Alarm instance management via Acknowledge, Shelve, Latch, or Clear, including reactivation timeouts and operator annotations.
 
 <div align="center" data-full-width="false"><figure><img src="../.gitbook/assets/image (66).png" alt="Alarm Instances"><figcaption><p>Alarm Instances</p></figcaption></figure></div>
 
-* Support for cloning almost any thinger.io resource, from dashboards to data buckets, file storages, and projects.
+* Support for cloning almost any thinger.io resource, from dashboards to data buckets, file storage, and projects.
 
 <figure><img src="../.gitbook/assets/image (38).png" alt=""><figcaption><p>Clone Resource Functionality</p></figcaption></figure>
 
@@ -596,13 +598,13 @@ Once claim is completed, the process may request the configuration of the device
 
 **Improved**
 
-* The bucket list automatically refreshes the bucket state, i.e., when finish exporting or importing, which happens on a clone operation.
+* The bucket list automatically refreshes the bucket state, i.e., when it finishes exporting or importing, which happens on a clone operation.
 * IOTMP proxies now work correctly with TLS endpoints.
 * HTTP over IOTMP now correctly supports WebSockets.
 * Resource list and navigation:
   * It is possible to change the maximum number of elements to display per page.
   * Page navigation/sorting is not reset after entering one element and going back to the list.
-* Changelog is now available at https://docs.thinger.io/server/changelog.
+* The changelog is now available at https://docs.thinger.io/server/changelog.
 
 **Fixed**
 
@@ -610,10 +612,10 @@ Once claim is completed, the process may request the configuration of the device
 * The bucket field selector now displays an input text for manually selecting the fields if the latest values cannot be queried, i.e., when they are older than one week.
 * Double loading of HTML widgets when the dashboard is open.&#x20;
 * Proxy configuration was not displayed correctly if the source was different than TCP.
-* Bucket export list not being displayed under some circumstances.
-* Resource lists on the front-end not showing correct permissions on members.
-* Prevent members navigate to specific resources if no permissions are available.
-* UpdateDevice permission on front-end.
+* The bucket export list is not being displayed under some circumstances.
+* Resource lists on the front-end are not showing the correct permissions for members.
+* Prevent members from navigating to specific resources if no permissions are available.
+* Update the Device permission on the front-end.
 
 ## 5.2.2
 
@@ -634,10 +636,10 @@ Once claim is completed, the process may request the configuration of the device
 *   Included support for installing Products over plugins. Now, there are some Shelly devices added to the plugins Marketplace. We will grow it soon! Looking for contributors and partnerships!
 
     ![image|690x254](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/a/a6b362ec39d695137800fa1239b5eba0932e9e7b.png)
-*   Initial support for devices auto-provisioning over products. It is currently based on the device id but will include other features like white lists, manual approval, etc.
+*   Initial support for devices auto-provisioning over products. It is currently based on the device id, but will include other features like white lists, manual approval, etc.
 
     ![image|690x97](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/8/8b34fc5afab7db6575db3146caecd2f7a2addb36.png)
-* New Plugins Marketplace based on a monorepo repository: [Thinger.io Plugins](https://github.com/thinger-io/plugins). It will allow better maintainability, and simplify new contributions!
+* New Plugins Marketplace based on a monorepo repository: [Thinger.io Plugins](https://github.com/thinger-io/plugins). It will allow better maintainability and simplify new contributions!
 *   Initial Plugin Exporter feature inside Products. This way, a Product can be easily converted to a Plugin. enhancing user contributions.
 
     ![image|672x500](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/2/20c14412e568658f446c89acbdb123aa17de79b0.png)
@@ -646,9 +648,9 @@ Once claim is completed, the process may request the configuration of the device
 #### Improved
 
 * Avoid creating a Docker network if the plugin does not run a task (i.e., products).
-* Plugins marketplace on frontend, with better image alignment.
-* Permissions assigned to user File Storages are 1000:1000, so they can be easily edited over plugins, i.e, in Node-Red, VSCode, Juypyter plugins, etc.
-* Plugin files copied on installation now have 1000:1000 permissions, so, they are modifiable over plugin shells.
+* Plugins marketplace on the frontend, with better image alignment.
+* Permissions assigned to user File Storage are 1000:1000, so they can be easily edited over plugins, i.e, in Node-Red, VSCode, Jupyter plugins, etc.
+* Plugin files copied on installation now have 1000:1000 permissions, so they are modifiable over plugin shells.
 
 #### Fixed
 
@@ -661,7 +663,7 @@ Once claim is completed, the process may request the configuration of the device
 
 #### Fixed
 
-* Temporal restore of default IOTMP buffer size until IOTMP-Websocket supports growing buffers
+* Temporal restore of the default IOTMP buffer size until IOTMP-Websocket supports growing buffers
 
 ## 5.1.11
 
@@ -686,7 +688,7 @@ Once claim is completed, the process may request the configuration of the device
 
 #### Improved
 
-* Bulk bucket writes are now also supported from products
+* Bulk bucket writes are now also supported by products
 
 ## 5.1.8
 
@@ -694,15 +696,15 @@ Once claim is completed, the process may request the configuration of the device
 
 #### Fixed
 
-* Center images on dashboard image widget.
-* Remove undesired console.log used in development
-* HTML widgets from file storages may fail to load
-* Dashboard add widget modal closes when adding new background color
+* Center images on the dashboard image widget.
+* Remove the undesired console.log used in development
+* HTML widgets from file storage may fail to load
+* The dashboard add widget modal closes when adding a new background color
 
 #### Improved
 
 * DynamoDB can now use field projections from dashboards to save bandwidth
-* Reduced dashboards max chunks fetch to support large datasets on DynamoDB
+* Reduced dashboards' max chunks fetch to support large datasets on DynamoDB
 
 ## 5.1.7
 
@@ -755,12 +757,12 @@ Once claim is completed, the process may request the configuration of the device
 #### Fixed
 
 * Plugin Environment variables not initialized on upgrade.
-* Dashboard error popups hidden on device dashboard.
-* Menu on mobile not responding to first touch event.
+* Dashboard error popups are hidden on the device dashboard.
+* The menu on mobile is not responding to the first touch event.
 
 #### Improved
 
-* Disconnect mechanism after server restart. It should correctly handle device disconnections and its events.
+* Disconnect the mechanism after server restart. It should correctly handle device disconnections and their events.
 
 ## 5.1.1
 
@@ -772,11 +774,11 @@ Once claim is completed, the process may request the configuration of the device
 
 * Infinity scroll on mobile view.
 * Support for bulk data bucket writes, i.e., `[{"ts": 1675360078000, "val1": 0, "val2": 1},{"ts": 1675360088000, "val1":1, "val2":3}]`. Only working on private instances at this time.
-* Clock icon display full time when the mouse is over
-*   Clock icon display full time when the mouse is over
+* The clock icon displays full time when the mouse is over
+*   The clock icon displays full time when the mouse is over
 
     ![image|182x135](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/6/616158f54504d519396aa69cf69509bb1f98aa41.png)
-*   Protocol column now displays the connection security
+*   The protocol column now displays the connection security
 
     ![image|351x171](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/d/d3932440a5d1fc78ea67869a049cce0fdfcdc2fa.png)
 *   Error/Info messages on mobile view
@@ -791,13 +793,13 @@ Once claim is completed, the process may request the configuration of the device
 * Resource inspector not opening
 * Minor bugs
 * Bucket import error reporting
-* Plugins logs not working with the latest Docker versions
-* Locks not deleted when Sync is removed
+* Plugin logs are not working with the latest Docker versions
+* Locks are not deleted when Sync is removed
 
 #### Improved
 
-* Scrollbars on left menu and content are now overlay scrollbars with auto hide.
-* Action buttons are now displayed on the left on desktop view.
+* Scrollbars on the left menu and content are now overlay scrollbars with auto-hide.
+* Action buttons are now displayed on the left in desktop view.
 
 
 
@@ -815,20 +817,20 @@ Once claim is completed, the process may request the configuration of the device
 #### Added
 
 * Support for **ARM64** (Raspberry Pi, Apple M1, Apple M2).
-* New 'Syncs' feature inside the Toolbox section: Semaphores for distributed IoT devices that can be used for bandwidth limiters, access control, max number of devices doing OTA, etc. This feature can be used both from API or IOTMP devices using new `lock_sync` and `unlock_sync` methods. Each lock acquires a fixed number of slots if they are available.
+* New 'Syncs' feature inside the Toolbox section: Semaphores for distributed IoT devices that can be used for bandwidth limiters, access control, max number of devices doing OTA, etc. This feature can be used both from the API and IOTMP devices using the new `lock_sync` and `unlock_sync` methods. Each lock acquires a fixed number of slots if they are available.
 
 
 
 ![image|412x499](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/8/87ace18f88f840aec4e43c27baac2343d28ea838.png)
 
-* New Content-security-policy HTTP header configuration on Cluster Settings > Deployment.
-* Products can now target a File Storage for its script (still under testing). It will automatically load the `index.js` script on the Storage.
+* New Content-Security-Policy HTTP header configuration on Cluster Settings > Deployment.
+* Products can now target a File Storage for their script (still under testing). It will automatically load the `index.js` script into the Storage.
 
 
 
 ![image|475x107](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/7/7fdc94029e5bbdd3d4f8140feed4f5da88bab1e7.png)
 
-* Product APIs can now target a script function for its destination and include additional placeholder data from properties or other device APIs.
+* Product APIs can now target a script function for their destination and include additional placeholder data from properties or other device APIs.
 
 
 
@@ -842,9 +844,9 @@ Once claim is completed, the process may request the configuration of the device
 #### Improved
 
 * Installed plugins are now automatically updated on impersonation changes.
-*   UI with better support for mobile devices. Will be released as an APP. Still under development! :technologist:
+* UI with better support for mobile devices. Will be released as an APP. Still under development! :technologist:
 
-    ![image|232x500](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/0/03e8a7ed74c46b4d097b2e1e7986b52a0b10958e.jpeg)
+![image|232x500](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/0/03e8a7ed74c46b4d097b2e1e7986b52a0b10958e.jpeg)
 
 #### Core
 
@@ -861,7 +863,7 @@ Once claim is completed, the process may request the configuration of the device
 
 #### Fixed
 
-* SSL automatic updates
+* SSL automatic updates.
 
 #### Added
 
@@ -870,44 +872,44 @@ Once claim is completed, the process may request the configuration of the device
 
 #### Improved
 
-* Validate sort and order query parameters on resource listing
+* Validate sort and order query parameters on resource listing.
 
 #### \[4.6.6] 2022-11-22
 
 #### Fixed
 
-* Database initialization for users without an initial password
-* Device access without permissions, i.e., from a member
+* Database initialization for users without an initial password.
+* Device access without permissions, i.e., from a member.
 
 #### \[4.6.5] 2022-11-22
 
 #### Fixed
 
-* Bucket clear error
-* Remove export create log
+* Bucket clear error.
+* Remove export, create log.
 
 #### \[4.6.4] 2022-10-28
 
 #### Fixed
 
-* Bucket export with custom date interval does nothing.
-* Difference transformation without aggregation provoked an error.
-* Representation issue on dashboard when setting absolute timeframe after a relative timeframe.
+* Bucket export with a custom date interval does nothing.
+* The difference transformation without aggregation provoked an error.
+* Representation issue on the dashboard when setting an absolute timeframe after a relative timeframe.
 
 #### \[4.6.3] 2022-10-27
 
 #### Added
 
-* New setting on Dashboard control allow to hide hours from absolute date range picker.
+* A new setting on the Dashboard control allows hiding hours from the absolute date range picker.
 
 #### Improved
 
-* Aggregated dashboard time series queries that includes a transform (i.e., a difference or derivative), now automatically expands the query interval (lower bound) to display the expected range displayed on the UI.
+* Aggregated dashboard time series queries that include a transform (i.e., a difference or derivative) now automatically expand the query interval (lower bound) to display the expected range on the UI.
 
 #### Fixed
 
-* Date-time selector now relies on datetime-local HTML5 component, removing some issues related with previous date-time picker.
-* Access tokens without a project should not limit accessing to project resources
+* Date-time selector now relies on the datetime-local HTML5 component, removing some issues related to the previous date-time picker.
+* Access tokens without a project should not limit access to project resources
 
 #### \[4.6.1] 2022-10-13
 
@@ -915,7 +917,7 @@ Once claim is completed, the process may request the configuration of the device
 
 #### Added
 
-*   Experimental **IOTMP Proxies** (TCP/HTTP) for connecting with device local network resources, i.e., devices/routers webpages, terminals, RDP, VNC, etc. These proxies requires new IOTMP client library for Linux.
+*   Experimental **IOTMP Proxies** (TCP/HTTP) for connecting with device local network resources, i.e., devices/routers webpages, terminals, RDP, VNC, etc. These proxies require a new IOTMP client library for Linux.
 
     ![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/5/5f75f79c013adb100f77cb875914de881ed23808_2_682x500.png)
 
@@ -931,32 +933,32 @@ Once claim is completed, the process may request the configuration of the device
 *   Each project can now define a set of **Project Roles** that can be used by any member within a project.
 
     ![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/c/c97d1016ff70708f110041ff0cbcd0fb26cb388b.png)
-*   Each developer/admin account can now define a set of **Global Roles** that can be used by any member within any project. For example, a general purpose read role that can be shared in all projects.
+*   Each developer/admin account can now define a set of **Global Roles** that can be used by any member within any project. For example, a general-purpose read role that can be shared in all projects.
 
     ![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/8/8321e7caa769129c79afc43cb67b9727a8a17be5.png)
-*   **Project member permissions** can be now established by **roles** in addition to custom member permissions, simplifying permissions management. All global roles, project roles, and custom permissions can be established together (if required).
+*   **Project member permissions** can now be established by **roles** in addition to custom member permissions, simplifying permissions management. All global roles, project roles, and custom permissions can be established together (if required).
 
     ![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/7/7562321053f93999a22c98ee4f6f1bc04bf6a66c.png)
 
 #### Improved
 
-* Members will go to the first allowed section after login or refresh, instead to the default Project Dashboard, i.e., devices or dashboards if they do not have access to read project dashboard.
-* Device resource streams includes now different signals: start, stop, data, and error (on IOTMP devices), in order to keep track of streams.
+* Members will go to the first allowed section after login or refresh, instead of the default Project Dashboard, i.e., devices or dashboards, if they do not have access to read the project dashboard.
+* Device resource streams now include different signals: start, stop, data, and error (on IOTMP devices), in order to keep track of streams.
 *   Device Terminal now supports multiple concurrent sessions (with the IOTMP linux client).
 
     ![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/b/b29b3be6647dc9efbb4721372f2edf2b53342d61.png)
-* Server can now use wildcard certificates, stored as `*.mydomain.com` on the certificates folder. Provisioning wildcard certificates over Domains section is not possible.
-* Internal socket server can now filter socket connections based on IP address. Used at this moment internally for proxies security.
+* The server can now use wildcard certificates, stored as `*.mydomain.com` in the certificates folder. Provisioning wildcard certificates over the 'Domains' section is not possible.
+* Internal socket server can now filter socket connections based on IP address. Used at this moment internally for proxies' security.
 
 #### Fixed
 
 * Very high loads over websockets could cause a crash under some circumstances.
 * Automatic transition to newly created resources when they are nested more than 2 levels (i.e., while creating a new project member).
 * Potential crash with multi-thread product initialization at startup.
-* Switching between projects, or opening/closing projects reporting forbidden under some circumstances.
-* Set projects displayed on proxies (proxies does not support projects).
+* Switching between projects or opening/closing projects is forbidden under some circumstances.
+* Set projects displayed on proxies (proxies do not support projects).
 * Missing selectors when configuring specific token permissions, i.e., over a proxy.
-* Access Tokens now are limited to the project scope where they are defined.
+* Access Tokens are now limited to the project scope where they are defined.
 * Payload not being sent on IOTMP devices.
 
 #### \[4.5.4] 2022-07-14
@@ -965,10 +967,12 @@ Discussion Topic: [Thinger.io Community Forum](https://community.thinger.io/t/pl
 
 #### Improved
 
-* File Storage explorer does not download binary files automatically when clicked, it just displays a download button: ![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/a/a166b629602cc508587dce113f2d765d22067f34.png)
-* Storage API now determine if a file without extension is `text/plain` or `application/octect-stream` to set the correct `content-type` on HTTP response
-* Add option `rewrite_base_path` to avoid base path rewrite in plugins reverse proxy
-* File Storages can now be opened with VS Code when the plugin is installed ![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/c/cc16e30b6bf877efdfe068dbd4ae565916898332_2_948x748.jpeg)
+* File Storage Explorer does not download binary files automatically when clicked, it just displays a download button: ![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/a/a166b629602cc508587dce113f2d765d22067f34.png)
+* Storage API now determines if a file without an extension is `text/plain` or `application/octect-stream` to set the correct `content-type` on the HTTP response.
+* Add option `rewrite_base_path` to avoid base path rewrite in plugins' reverse proxy.
+* File Storages can now be opened with VS Code when the plugin is installed.
+
+<figure><img src="../.gitbook/assets/https%3A%2F%2Fdiscoursefiles.png" alt=""><figcaption></figcaption></figure>
 
 #### \[4.5.3] 2022-07-13
 
@@ -976,17 +980,18 @@ Discussion Topic: [Thinger.io Community Forum](https://community.thinger.io/t/pl
 
 #### Added
 
-*   Support for limiting range selector on dashboard (i.e., allow only relative and/or absolute range selection).
+* Support for limiting range selector on dashboard (i.e., allow only relative and/or absolute range selection).
 
-    ![image|609x305](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/1/11881a346e70d3c79b0ebee50792c68fbed75317.png)
+![image|609x305](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/1/11881a346e70d3c79b0ebee50792c68fbed75317.png)
+
 * Screen helpers for all resources on Thinger.io, with links to documentation, API, features, etc.
 
 #### Improved
 
 * Location set from a device property now overwrites geo-ip location, and:
-  * Trigger `device_location_changed` event with new location
-  * Execute the Geofence configuration to trigger any action based on location change
-  * Fixed location is now displayed correctly on Assets Maps
+  * Trigger `device_location_changed` event with a new location.
+  * Execute the Geofence configuration to trigger any action based on location change.
+  * Fixed location is now displayed correctly on Assets Maps.
 
 #### Fixed
 
@@ -998,27 +1003,29 @@ Discussion Topic: [Thinger.io Community Forum](https://community.thinger.io/t/pl
 
 #### Added
 
-*   New administration feature called 'Proxies' (starting on MEDIUM instances), which allows creating custom proxies to plugins or local services, i.e, redirect TCP or UDP traffic to Node-RED (for example, for COAP devices), or provide access to local InfluxDB2 install
+* New administration feature called 'Proxies' (starting on MEDIUM instances), which allows creating custom proxies to plugins or local services, i.e, redirect TCP or UDP traffic to Node-RED (for example, for COAP devices), or provide access to local InfluxDB2 install:
 
-    ![image|615x500](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/f/f8b596ac16ee9fcd6c6021fc61a956ea9201078f_2_732x750.png)
-*   New plugin InfluxDB2 (starting on MEDIUM instances, as it requires Proxies feature). It supports accessing the InfluxDB2 GUI and API for custom configurations, dashboards, alerts, ingestion, etc.
+![image|615x500](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/f/f8b596ac16ee9fcd6c6021fc61a956ea9201078f_2_732x750.png)
 
-    ![image|616x500](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/b/b9181507304f07b8a3499e1079384c5e435ab1a3_2_836x750.jpeg)
-* A plugin install can now initialize any resource in the console, i.e., InfluxDB2 plugin automatically initializes a proxy
-* Plugins can now be defined without a task, i.e., the InfluxDB2 plugin does not deploy any additional container
+* New plugin InfluxDB2 (starting on MEDIUM instances, as it requires Proxies feature). It supports accessing the InfluxDB2 GUI and API for custom configurations, dashboards, alerts, ingestion, etc.
+
+<figure><img src="../.gitbook/assets/https%3A%2F%2Fdiscoursefiles (1).png" alt="" width="563"><figcaption></figcaption></figure>
+
+* A plugin install can now initialize any resource in the console, i.e., InfluxDB2 plugin automatically initializes a proxy.
+* Plugins can now be defined without a task, i.e., the InfluxDB2 plugin does not deploy any additional container.
 
 #### Improved
 
-* Swagger API Generation (tested on proxies API)
-* Plugin installs from File Storages
-* Left menu now correctly displays the current selected plugin
+* Swagger API Generation (tested on the proxies API).
+* Plugin installs from File Storages.
+* The left menu now correctly displays the current selected plugin.
 
 #### Fixed
 
-* Some fixes on dashboards using image widget and map widget with geofences
-* Devices API v2 not respecting the v2 specification (wrapping response inside 'out')
-* Loading bucket data view without access to bucket config (required for loading tags information), i.e., when a member does not have permissions for ReadBucketConfig
-* Plugins API now supports "id" query parameter, required for Plugin selector
+* Some fixes on dashboards using image widget and map widget with geofences.
+* Devices API v2 not respecting the v2 specification (wrapping response inside 'out').
+* Loading bucket data view without access to bucket config (required for loading tags information), i.e., when a member does not have permissions for ReadBucketConfig.
+* Plugins API now supports "id" query parameter, required for Plugin selector.
 
 #### \[4.4.0] 2022-06-20
 
@@ -1026,31 +1033,31 @@ Discussion Topic: [Thinger.io Community Forum](https://community.thinger.io/t/pl
 
 #### Added
 
-*   Bucket view now display tag values in the first columns
+*   Bucket view now displays tag values in the first column:
 
     ![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/2/24817cae42a920023d367d11c3e8a31882767d76.png)
-* Buckets data query API now supports a new query param 'fields' for selecting specific fields from a bucket, i.e., ?fields=temperature,humidity
-* Buckets data query API now includes a v2 endpoint removing unnecessary 'val', or aggregation/transformation name on each measurement.
+* Bucket's data query API now supports a new query param 'fields' for selecting specific fields from a bucket, i.e., ?fields=temperature, humidity.
+* Bucket's data query API now includes a v2 endpoint, removing the unnecessary 'val', or aggregation/transformation name, on each measurement.
 
 #### Improved
 
-* Dashboards now select only required fields from a bucket, improving bandwidth/resources for buckets with several fields
-* Bucket view now auto-resize columns according to the content size
-* Bucket view now display a 'Loading' overlay while fetching data
-* InfluxDB2 performance by relying on InfluxQL queries when possible
-* Grafana plugin is now able to automatically configure data sources (both InfluxDB1 (compatibility) and InfluxDB2)
+* Dashboards now select only required fields from a bucket, improving bandwidth/resources for buckets with several fields.
+* Bucket view now auto-resizes columns according to the content size.
+* Bucket view now displays a 'Loading' overlay while fetching data.
+* InfluxDB2 performance relies on InfluxQL queries when possible.
+* Grafana plugin is now able to automatically configure data sources (both InfluxDB1 (compatibility) and InfluxDB2).
 
 #### \[4.3.2] 2022-06-15
 
 #### Fixed
 
-* Map widget initialization when the map is placed on a dashboard tab
+* Map widget initialization occurs when the map is placed on a dashboard tab.
 
 #### \[4.3.1] 2022-06-14
 
 #### Fixed
 
-* Fix problem while installing plugins on small instances
+* Fix the problem while installing plugins on small instances.
 
 #### \[4.3.0] 2022-06-12
 
@@ -1058,16 +1065,17 @@ Discussion Topic: [Thinger.io Community Forum](https://community.thinger.io/t/pl
 
 #### Added
 
-*   Support for switching projects in the mobile view
+* Support for switching projects in the mobile view:
 
-    ![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/e/e44c561db24474b414567e02dffd76a97dd0ca00.png)
-*   Show dashboard name on project dash instead of the default navigation bar
+![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/e/e44c561db24474b414567e02dffd76a97dd0ca00.png)
 
-    ![image|572x133](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/8/897bed6625ab3fd946e743a67b8aee5f9882b898.png)
+* Show dashboard name on the project dashboard instead of the default navigation bar:
+
+![image|572x133](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/8/897bed6625ab3fd946e743a67b8aee5f9882b898.png)
 
 #### Fixed
 
-* Project dashboard switch when the user is not a member
+* The project dashboard switches when the user is not a member.
 
 #### \[4.2.0] 2022-06-08
 
@@ -1075,59 +1083,64 @@ Discussion Topic: [Thinger.io Community Forum](https://community.thinger.io/t/pl
 
 #### Added
 
-*   Open Graph support for title, description and image, configurable for each brand, i.e., when sharing a link over a social network.
+* Open Graph support for title, description and image, configurable for each brand, i.e., when sharing a link over a social network.
 
-    ![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/d/daab6585ebd0293b085c01462542ef384497eb77.png)
-*   Bucket data viewer now includes a filter by time
+![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/d/daab6585ebd0293b085c01462542ef384497eb77.png)
 
-    ![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/4/4b8761926365715a40002ad6b9defd5bba04d0af.png)
-*   Set project dialog now keeps previous assigned projects on the resources
+* The bucket data viewer now includes a filter by time:
 
-    ![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/a/a4f0a652eb9657eca3327bf098c767c87511f383.png)
-* Full support for new time-series backend: InfluxDB2
-* Server API updates with support for querying branch information and statistics from localhost
-*   Landing pages for each resource type, providing information and links to resources
+![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/4/4b8761926365715a40002ad6b9defd5bba04d0af.png)
 
-    ![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/f/f0dac6aa0146b5b9d584f03532ecb9ed95f853eb_2_517x345.png)
-* Support for launching processes inside plugins and get the command response over http/websocket
-* Shell over a plugin instance is now executed inside the plugin container (using exec)
-* Shell over a plugin now adapts to the original terminal size
-*   Show page title according to navigation state, i.e., 'Devices | esp32 | terminal'
+* The Set Project dialog now keeps previously assigned projects on the resources:
 
-    ![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/1/1e2576e237b96420f5d638a12499bd012fd85db1.png)
-*   Console rebrand based on new image/logo, including emails
+![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/a/a4f0a652eb9657eca3327bf098c767c87511f383.png)
 
-    ![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/7/7825f8e7d53761dddddd6c43a480396c2814ba48.png)
+* Full support for new time-series backend: InfluxDB2.
+* Server API updates with support for querying branch information and statistics from localhost.
+* Landing pages for each resource type, providing information and links to resources:
+
+![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/f/f0dac6aa0146b5b9d584f03532ecb9ed95f853eb_2_517x345.png)
+
+* Support for launching processes inside plugins and getting the command response over HTTP/WebSocket.
+* Shell over a plugin instance is now executed inside the plugin container (using exec).
+* Shell over a plugin now adapts to the original terminal size.
+* Show page title according to navigation state, i.e., 'Devices | esp32 | terminal':
+
+![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/1/1e2576e237b96420f5d638a12499bd012fd85db1.png)
+
+* Console rebrand based on new image/logo, including emails:
+
+![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/7/7825f8e7d53761dddddd6c43a480396c2814ba48.png)
 
 #### Improved
 
-* InfluxDB2 queries performance when using 'heavy' buckets with multiple tag values
-* Data bucket import now excludes empty or null values
-* Internal proxies to plugins, required for supporting latest Grafana version and its security requirements
-* Plugins can now (and should) set image version inside the task.image field (i.e. grafana/grafana:8.5.4) , so it can be decoupled from plugin version
-* InfluxDB2 + Grafana integration, with automatic source configuration on install
-* Console terminals now uses a custom user-friendly scrollbar
-* Dashboard view on mobile when controls are enabled (timespan selector and aggregation)
-* Mobile navigation when clicking on menu or showing tables
-* Data bucket viewer now display local time instead of ISO date on bucket entries.
-* Better compatibility for showing last update timestamp on dashboard widgets (even time series charts)
-* Using 'password' type on account management
-* Fix tachometer widget scaling and value update
+* InfluxDB2 queries perform poorly when using 'heavy' buckets with multiple tag values.
+* Data bucket import now excludes empty or null values.
+* Internal proxies to plugins, required for supporting the latest Grafana version and its security requirements.
+* Plugins can now (and should) set the image version inside the task. Image field (i.e. grafana/grafana:8.5.4), so it can be decoupled from the plugin version.
+* InfluxDB2 + Grafana integration, with automatic source configuration on install.
+* Console terminals now use a custom user-friendly scrollbar.
+* Dashboard view on mobile when controls are enabled (timespan selector and aggregation).
+* Mobile navigation occurs when clicking on the menu or showing tables.
+* Data bucket viewer now displays local time instead of ISO date on bucket entries.
+* Better compatibility for showing last update timestamp on dashboard widgets (even time series charts).
+* Using 'password' type on account management.
+* Fix the tachometer widget scaling and value update.
 
 #### Fixed
 
-* Multiple dashboards queries on dashboards when using buckets with several tags values
-* Undesired timestamp plot on time series chart when no field mapping is present on the widget source
-* Slider widget malfunction when setting step width smaller than 1.0
-* Dashboard aggregation controls shown on community version (only supported on private instances)
-* Console terminal not releasing window
-* Plugin markdown not shown
-* Migration to new dashboard sources not working correctly on control widgets
-* Download bucket exports not working on the community
-* Problems with device terminals after the 4.0.0 upgrade
-* Search by id or name problem after introducing 'domain' on resources
-* MQTT Fix potential crash with malformed inputs
-* Email fixes when using multiple brands and multiple email servers
+* Multiple dashboard queries on dashboards when using buckets with several tag values.
+* Undesired timestamp plot on time series chart when no field mapping is present on the widget source.
+* The slider widget malfunctions when setting the step width smaller than 1.0.
+* Dashboard aggregation controls are shown on the community version (only supported on private instances).
+* The console terminal is not releasing the window.
+* The plugin markdown is not shown.
+* Migration to the new dashboard sources is not working correctly on control widgets.
+* Download bucket exports are not working on the community.
+* Problems with device terminals after the 4.0.0 upgrade.
+* Search by id or name problem after introducing 'domain' on resources.
+* MQTT Fix potential crash with malformed inputs.
+* Email fixes when using multiple brands and multiple email servers.
 
 #### \[4.0.0] 2022-05-18
 
@@ -1135,70 +1148,75 @@ Discussion Topic: [Thinger.io Community Forum](https://community.thinger.io/t/pl
 
 #### Added
 
-*   Support for multiple time series sources on time series widgets, i.e. charts, html time series, and maps.
+* Support for multiple time series sources on time series widgets, i.e. charts, html time series, and maps:
 
-    ![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/1/1b374698e2152e21eb5158198e488b173c935c89.png)
-*   Add new "Product" section to allow defining device profiles, that will help when managing devices at scale.
+![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/1/1b374698e2152e21eb5158198e488b173c935c89.png)
 
-    ![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/4/4053724a51c50312897c4301c4f6bcf688eb0e05.png)
+* Add new "Product" section to allow defining device profiles, that will help when managing devices at scale:
 
-    * It supports updating device properties from MQTT topics / device resources
-    * It supports defining buckets from MQTT topics/device resources
-    * It allows creating custom device APIs for MQTT/HTTP/IOTMP devices.
-    * Add support for processing data payloads with NodeJS runtime.
-    * Add support for defining per-product dashboard, which is inherited by each device. Devices now automatically open the product dashboard if it is available.
-    * It adds another property hierarchy for devices, with this order Product > Type > Group > Device.
-*   Data buckets now supports tags: multiple data from the same type can be stored in the same bucket.
+![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/4/4053724a51c50312897c4301c4f6bcf688eb0e05.png)
 
-    ![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/9/95c65278062f5a9279f6c624066ff04dfa7d82af.png)
-*   Dashboard support for buckets with tags.
+* It supports updating device properties from MQTT topics/device resources.
+* It supports defining buckets from MQTT topics/device resources.
+* It allows creating custom device APIs for MQTT/HTTP/IOTMP devices.
+* Add support for processing data payloads with NodeJS runtime.
+* Add support for defining per-product dashboard, which is inherited by each device. Devices now automatically open the product dashboard if it is available.
+* It adds another property hierarchy for devices, with this order Product > Type > Group > Device.
+* Data buckets now supports tags: multiple data from the same type can be stored in the same bucket:
 
-    ![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/b/bbad3b3fa08665555c1d085a44dd3f8fc0639178.png)
-*   New role named "Domain Admin", with the ability to manage developer/members inside the specified domain(s).
+![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/9/95c65278062f5a9279f6c624066ff04dfa7d82af.png)
 
-    ![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/f/fc92a1f7f5d1227a47893fd2583cc921141db5e4.png)
+* Dashboard support for buckets with tags:
+
+![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/b/bbad3b3fa08665555c1d085a44dd3f8fc0639178.png)
+
+* New role named "Domain Admin", with the ability to manage developer/members inside the specified domain(s):
+
+![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/f/fc92a1f7f5d1227a47893fd2583cc921141db5e4.png)
+
 * Initial support for device shadow information, i.e., being able to display last stream data on a dashboard even if de device is disconnected.
-* Add new Inspector tool for any resource, so, it is possible to see live Events related to monitored resources, i.e., MQTT live data sent by a device.
+* Add a new Inspector tool for any resource, so, it is possible to see live Events related to monitored resources, i.e., MQTT live data sent by a device.
 * Disabling a device from its settings disconnects the ongoing connection.
-* APIs now support additional content-types: messagepack, cbor, ubjson, and form data.
-*   Support for InfluxDB transformations on dashboards
+* APIs now support additional content types: messagepack, cbor, ubjson, and form data.
+* Support for InfluxDB transformations on dashboards:
 
-    ![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/1/1bd173177445f1f26fb2265244ccb2f00a41be70.png)
-* Support for MQTT retained messages
+![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/1/1bd173177445f1f26fb2265244ccb2f00a41be70.png)
+
+* Support for MQTT retained messages.
 
 #### Improved
 
-* Aggregated data in dashboards now use browser timezone to display data correctly.
-* Device API now lazy load device resources when clicked, useful for devices with several resources.
+* Aggregated data in dashboards now uses the browser's timezone to display data correctly.
+* Device API now lazy loads device resources when clicked, useful for devices with several resources.
 * Device API now keeps track of opened resources when refreshing the API with the button.
 * Tokens and Device Tokens can be easily copied with a button.
 * Allow plugins to update current token permissions.
-* Auto-hide track waypoints on map widget depending on map zoom level.
-* Bucket data view now displays the real field case on the columns.
+* Auto-hide track waypoints on the map widget depending on the map zoom level.
+* The bucket data view now displays the real field case in the columns.
 
 #### Fixed
 
-* Brand email configuration not working properly
-* Profile Settings link not working
-* Buckets source switch not working when changing from a device resource to anything else
-* Disabling a bucket was not stopping a device resource streaming properly
-* Closing hosts dashboard throw error on console
-* Resource selector not taking the correct selected id when using similar ids
-* Device event 'device\_authentication\_failed' not throw
-* Device enable/disable setting not working properly
-* Fix Device API curl example when body request is 'false'
-* Endpoint HTTP request body editor not showing until 'Test' section is opened
-* Fixed butter-bar not showing while loading pages
-* Fixed Image/MJPEG widget not updating images or updating after modifications
-* MQTT client timeout not being used
+* Brand email configuration is not working properly.
+* Profile Settings link not working.
+* Buckets source switch is not working when changing from a device resource to anything else.
+* Disabling a bucket did not stop a device resource from streaming properly.
+* Closing the host's dashboard throws an error on the console.
+* Resource selector not taking the correct selected id when using similar ids.
+* Device event 'device\_authentication\_failed' is not thrown.
+* Device enable/disable setting is not working properly.
+* Fix Device API curl example when the body request is 'false'.
+* Endpoint HTTP request body editor does not show until the 'Test' section is opened.
+* Fixed the butter-bar not showing while loading pages.
+* Fixed Image/MJPEG widget not updating images or updating after modifications.
+* MQTT client timeout is not being used.
 
 #### Core
 
-* Updated OpenSSL version from 1.1.1j to 1.1.1m
-* Updated Boost version from 1.75 to 1.78
-* Updated mongoc version from 1.20.0
-* Updated mongocxx version from 3.6.2 to 3.6.6
-* Updated CryptoPP from 8.4.0 to 8.6.0
+* Updated OpenSSL version from 1.1.1j to 1.1.1m.
+* Updated Boost version from 1.75 to 1.78.
+* Updated mongoc version from 1.20.0.
+* Updated mongocxx version from 3.6.2 to 3.6.6.
+* Updated CryptoPP from 8.4.0 to 8.6.0.
 
 #### \[3.4.2] 2021-11-11
 
@@ -1206,68 +1224,74 @@ Discussion Topic: [Thinger.io Community Forum](https://community.thinger.io/t/pl
 
 #### Added
 
-*   Initial version for OAuth2 Client authentication flow, i.e., connecting third party apps like Alexa
+* Initial version for OAuth2 Client authentication flow, i.e., connecting third-party apps like Alexa:
 
-    ![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/1/10162c1e1aa1d58c85022eb1ca69c40454afd52f.png)
-*   New plugin: HTTP Device, supporting scaling HTTP devices deployments
+![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/1/10162c1e1aa1d58c85022eb1ca69c40454afd52f.png)
 
-    ![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/4/4cb41b2179b5db8a452e2ba8738c302d7a9d0e58.png)
-*   Hide Menu option for members
+* New plugin: HTTP Device, supporting scaling HTTP device deployments:
 
-    ![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/7/7266e6c8a0d366e0e85b1502dd0f6cd404b61b9f.png)
+![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/4/4cb41b2179b5db8a452e2ba8738c302d7a9d0e58.png)
+
+* Hide the Menu option for members:
+
+![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/7/7266e6c8a0d366e0e85b1502dd0f6cd404b61b9f.png)
+
 * Improved HTML Widgets with support for custom AngularJS directives!
-* Opening restricted link will redirect to the target url after login
-*   Support for disabling Swagger API pages. Available on Host Settings > Deployment
+* Opening a restricted link will redirect to the target URL after login.
+* Support for disabling Swagger API pages. Available on Host Settings > Deployment:
 
-    ![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/2/27920332be1db283e1a581ebd1f216464a217959.png)
-*   Now it is possible to configure X-Frame-Options, to allow adding iframes on known pages. Available on Host Settings > Deployment
+![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/2/27920332be1db283e1a581ebd1f216464a217959.png)
 
-    ![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/0/03ebb7e9ba9237e7269b39332f468383a204b494.png)
-* Endpoints have optional field name for displaying & search purposes
+* Now it is possible to configure X-Frame-Options to allow adding iframes on known pages. Available on Host Settings > Deployment:
+
+![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/0/03ebb7e9ba9237e7269b39332f468383a204b494.png)
+
+* Endpoints have an optional field name for displaying & search purposes.
 * Dozens of new server events that can be used with Node-RED, i.e., any resource create/update/delete.
-* API Endpoint '/v1/server/events' to query all available server events
-* API Endpoint '/v1/server/assets' to query server assets types
+* API Endpoint '/v1/server/events' to query all available server events.
+* API Endpoint '/v1/server/assets' to query server asset types.
 * API Endpoint '/v2/users//events' with support for registering/unregistering server events, providing commands feedback.
-*   Brand configuration for web metadata like keywords and description
+* Brand configuration for web metadata, like keywords and description:
 
-    ![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/f/f57a96bf1a08d23e0988223b6807eb2acd87a004.png)
-* Access tokens now provides a field with the hostname for easier cloud integration
-* Devices can now be enabled or disabled from settings
+![image](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/f/f57a96bf1a08d23e0988223b6807eb2acd87a004.png)
+
+* Access tokens now provide a field with the hostname for easier cloud integration.
+* Devices can now be enabled or disabled from settings.
 
 #### Improved
 
-* Dashboards refresh buckets and properties sources in real-time
-* Removed "#!" from URLs. Previous URLs are still valid
-* Platform security by preventing refresh token re-usage
-* Improve refreshing token mechanism on frontend (avoiding multiple queries)
-* Internal event system is now much more flexible and fault tolerant
+* Dashboards refresh buckets and properties sources in real-time.
+* Removed "#!" from URLs. Previous URLs are still valid.
+* Platform security by preventing refresh token re-usage.
+* Improve the refreshing token mechanism on the frontend (avoiding multiple queries).
+* The internal event system is now much more flexible and fault-tolerant.
 
 #### Fixed
 
-* Show server version option in custom brand configuration
-* Set Project button not showing sometimes while changing between projects
-* Add resource button with broken layout when switching to a project with some selected items
-* Server not registering above 50 MQTT listeners after restart
-* Password update from users section not triggering internal event for database update
-* New instances not showing Hosts section after initial deployment
-* Time series chart with absolute dates not working
-* Set project dialog not showing Project selector under some circumstances
-* Access token link not working on shared dashboard settings
-* Device connection event trigger order on reconnection when 'reusing' credentials
-* Server Event 'device\_state\_listener' not triggering with MQTT devices on disconnect
+* Show server version option in custom brand configuration.
+* Set Project button is not showing sometimes while changing between projects.
+* Add resource button with broken layout when switching to a project with some selected items.
+* Server not registering above 50 MQTT listeners after restart.
+* Password update from the users section is not triggering the internal event for database update.
+* New instances are not showing the Hosts section after initial deployment.
+* Time series chart with absolute dates not working.
+* Set project dialog is not showing the Project selector under some circumstances.
+* Access token link not working on shared dashboard settings.
+* Device connection event trigger order on reconnection when 'reusing' credentials.
+* Server Event 'device\_state\_listener' not triggering with MQTT devices on disconnect.
 
 #### \[3.3.0] 2021-08-10
 
 #### Added
 
-*   Support for branding on login form, signup, forgot password, etc. It is possible to set background color, image, location of the forms, and hide public signup.
+* Support for branding on login form, signup, forgot password, etc. It is possible to set the background color, image, location of the forms, and hide the public signup:
 
-    ![image|690x306](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/0/0848b751e0a0b29a512e374d96aee92c9fc31e0c.gif) ![image|690x306](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/0/0e38c2aa99e10c34eed5b5d877d781afb8f11d5b.png)
+![image|690x306](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/0/0848b751e0a0b29a512e374d96aee92c9fc31e0c.gif) ![image|690x306](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/0/0e38c2aa99e10c34eed5b5d877d781afb8f11d5b.png)
 
 #### Fixed
 
-* A problem with `PATCH` and `PUT` methods on properties, causing issues with Project dashboards or slider widget.
-* Groups section in console should be working now for members with allowed permissions
+* A problem with `PATCH` and `PUT` methods on properties, causing issues with the Project dashboards or the slider widget.
+* Groups section in the console should be working now for members with allowed permissions
 * Fix `Set Project` menu button for types and groups.
 * Assets menu now behaves correctly according to member permissions
 
@@ -1275,125 +1299,137 @@ Discussion Topic: [Thinger.io Community Forum](https://community.thinger.io/t/pl
 
 #### Added
 
-*   Configurable default project for members after login
+* Configurable default project for members after login:
 
-    ![image|690x83](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/f/f3d8701f936e1d2b128bf6ce2f9f27851b2437fb.png)
-*   Configurable dashboard for each project, shown by default after the member login or project selection
+![image|690x83](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/f/f3d8701f936e1d2b128bf6ce2f9f27851b2437fb.png)
 
-    ![image|581x106](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/c/cb8b723b247a921dd054a73fec386968db5a1eee.png)
-* Console interface adapts to member permissions, hiding non-available actions or sections.
-*   Accounts management now allows changing per-user account limits (dashboards, devices, etc.)
+* A configurable dashboard for each project, shown by default after the member logs in or project:
 
-    ![image|690x390](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/2/2d72071d6622ed2dffeaff2f8a82cb8a3829a22d.png)
-*   Configurable Bucket data retention policy per-user account and default setting.
+<figure><img src="../.gitbook/assets/image (647).png" alt=""><figcaption></figcaption></figure>
 
-    ![image|690x64](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/3/31d281300b423e15d271964fb285a73a08f67e76.png)
-*   Impersonate functionality to check other accounts easily from admin account
+* Console interface adapts to member permissions, hiding unavailable actions or sections.
+* Account management now allows changing per-user account limits (dashboards, devices, etc.):
 
-    ![image|690x390, 100%](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/f/f3eb76840142764dcf5ba40c8f143d89a57492fc.png)
-* Support for linking dashboard widgets to another dashboard
-* Websocket support for IOTMP and MQTT devices
-* Support for selecting timestamp as field from bucket data
-* Dashboard background now supports HTML color, i.e., #aabbcc instead of an url image
+![image|690x390](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/2/2d72071d6622ed2dffeaff2f8a82cb8a3829a22d.png)
+
+* Configurable Bucket data retention policy per-user account and default setting:
+
+![image|690x64](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/3/31d281300b423e15d271964fb285a73a08f67e76.png)
+
+* Impersonate functionality to check other accounts easily from the admin account:
+
+![image|690x390, 100%](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/f/f3eb76840142764dcf5ba40c8f143d89a57492fc.png)
+
+* Support for linking dashboard widgets to another dashboard.
+* Websocket support for IOTMP and MQTT devices.
+* Support for selecting a timestamp as a field from bucket data.
+* Dashboard background now supports HTML color, i.e., #aabbcc instead of a URL image.
 
 **Improved**
 
-* Keep menu and sub-menu items as "active" respecting the hierarchy
-* Refactored bucket layout section with different sections grouped by functionality
-* Hide project column when there is some project selected in the console
-* Hide "ugly" resource names when navigating on resources inside a project, i.e., user.device
-* Increased keep alive tolerance for better device connection stability
-* Disable close project button for members
+* Keep menu and sub-menu items as "active" respecting the hierarchy.
+* Refactored bucket layout section with different sections grouped by functionality.
+* Hide the project column when there is a project selected in the console.
+* Hide "ugly" resource names when navigating on resources inside a project, i.e., user.device.
+* Increased keep-alive tolerance for better device connection stability.
+* Disable close project button for members.
 
 **Fixed**
 
-* Apex Charts color contrast in title, subtitle, and axis labels
-* Device creation error when switching from Generic to HTTP after filling some fields
-* Bucket download links for community buckets exported to S3
-* Disable internal database creations for members
-* Bucket export state when export fails
-* DB error while updating a device without stats
-* Invalid property update event when modified from dashboard slider (or PATCH REST API)
-* Disable property creation when parent resource does not exists
+* Apex Charts color contrast in title, subtitle, and axis labels.
+* Device creation error when switching from Generic to HTTP after filling in some fields.
+* Bucket download links for community buckets exported to S3.
+* Disable internal database creations for members.
+* Bucket export state when export fails.
+* DB error while updating a device without stats.
+* Invalid property update event when modified from dashboard slider (or PATCH REST API).
+* Disable property creation when parent resource does not exist.
 
 #### \[3.1.0] - 2021-05-05
 
 **Added**
 
-*   New HTML widget for its use with time series data (i.e., display tables)
+* New HTML widget for its use with time series data (i.e., display tables):
 
-    ![image|690x267](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/1/190105ba8ee1adb5842715a8cc14616bf9856c96.png)
-* Current HTML widget now supports multiple values to be selected
+![image|690x267](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/1/190105ba8ee1adb5842715a8cc14616bf9856c96.png)
+
+* Current HTML widget now supports multiple values to be selected.
 
 **Fixed**
 
-* Install/upgrade custom plugin version
-* Geofences not working for some polygons
-* Fix led colors editor (each color in a single row)
-* Set X and Y axis limits on time series charts to prevent freezes with wrong values
-* Fix a problem with min and max y-axis on time series chart when set to zero
-* Fix legacy bug regarding buckets query & merging
-* Allow to modify an existing widget type
-* Fix template replacement when using \{{\}} as pattern
+* Install/upgrade custom plugin version.
+* Geofences are not working for some polygons.
+* Fix the LED colors editor (each color in a single row).
+* Set X and Y axis limits on time series charts to prevent freezes with wrong values.
+* Fix a problem with the min and max y-axis on the time series chart when set to zero.
+* Fix legacy bug regarding buckets query & merging.
+* Allow modification of an existing widget type.
+* Fix template replacement when using \{{\}} as a pattern.
 
 **Improved**
 
-* Starting a plugin will show its log by default (some plugins require boot time, so this provides feedback to user)
-* Plugins with master or latest tags will force an update when installing or upgrading
-* Security when mounting volumes insides plugins
+* Starting a plugin will show its log by default (some plugins require boot time, so this provides feedback to the user).
+* Plugins with master or latest tags will force an update when installing or upgrading.
+* Security when mounting volumes inside plugins.
 
 #### \[3.0.0] - 2021-04-16
 
 **Added**
 
-*   Apex Charts are now available (in BETA)!
+* Apex Charts are now available (in BETA)!:
 
-    ![image|660x479](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/d/dbf03ebaff5b5e608b69e7910b9a8ecc93e98cb9_2_463x500.gif)
-* Add aggregation based on client browser timezone
-* Allow MQTT 3.1 client connections (in addition to 3.1.1)
+![image|660x479](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/d/dbf03ebaff5b5e608b69e7910b9a8ecc93e98cb9_2_463x500.gif)
+
+* Add aggregation based on the client browser's timezone.
+* Allow MQTT 3.1 client connections (in addition to 3.1.1).
 * Initial support for VSCode plugin (starting from Medium instances). Contact us for more details.
-* Added openapi.json to support restish
-* Add support for displaying last known location of a device on map
+* Added openapi.json to support restish.
+* Add support for displaying last known location of a device on the map.
 
 **Improved**
 
-* Show plugins in menu only if the plugin is running to avoid confusion
-* Assets Map widget options are now more legible with different backgrounds
-* Upgraded widgets buttons
-* Dashboard error handling with time series chart
-* Thinger.io Docker image is now smaller
+* Show plugins in menu only if the plugin is running to avoid confusion.
+* Assets Map widget options are now more legible with different backgrounds.
+* Upgraded widget buttons.
+* Dashboard error handling with a time series chart.
+* Thinger.io Docker image is now smaller.
 * Plugins engine now supporting installs from Storages, setting custom user, etc.
 
 **Fixed**
 
 * A problem with instances using the server "www." subdomain.
-* Storage editor not opening due to Chrome security fix
+* Storage editor not opening due to Chrome security fix.
 
 #### \[2.9.9] - 2021-02-28
 
 **Added**
 
-*   New widget "Assets Maps" for viewing all assets by type/group in map, with search capabilities.
+* New widget "Assets Maps" for viewing all assets by type/group in map, with search capabilities:
 
-    ![image|660x479,50%](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/a/a49c08bc984ac19d69af6de77ae0491e0141cad4.png)
-*   New widget "Source Switcher" acting as previous template feature: allow to change the device/bucket within a tab.
+![image|660x479,50%](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/a/a49c08bc984ac19d69af6de77ae0491e0141cad4.png)
 
-    ![VI0ZxIsiH6|492x387,75%](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/a/aa4c95d244ad947f7037e1857295dcbfbb885028.gif)
-*   Add support for disabling fullscreen button on widgets (@rin67630) .
+* New widget "Source Switcher" acting as previous template feature: allow to change the device/bucket within a tab:
 
-    ![image|208x46](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/b/baf6d4e0d0cc69c583d00321689a502744f240c5.png)
-*   Add an option in the shared dashboard settings to automatically update the permissions from the shared link.
+![VI0ZxIsiH6|492x387,75%](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/a/aa4c95d244ad947f7037e1857295dcbfbb885028.gif)
 
-    ![image|327x89](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/9/993d72a82a0ccd93217a8ec6b92f9e09b0c671de.png)
+* Add support for disabling fullscreen button on widgets (@rin67630):
+
+![image|208x46](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/b/baf6d4e0d0cc69c583d00321689a502744f240c5.png)
+
+* Add an option in the shared dashboard settings to automatically update the permissions from the shared link:
+
+![image|327x89](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/9/993d72a82a0ccd93217a8ec6b92f9e09b0c671de.png)
+
 * Add support to modify min row height in dasbhoards.
 * Buckets can now support an asset type and group.
 * Add an option for setting asset types and groups for devices/buckets creation and from its settings/lists.
 * Devices can hold now a friendly name, i.e., a serial number, plate id, etc.
 * Support for creating new accounts (members and developers) without a password. The user will be required to initialize the password via email.
 * New page that allows the developers/members initialize their accounts passwords.
-*   Support for multi-brand email templates and servers. Brands can now define its own emails templates and custom mail servers for communicating with users.
+* Support for multi-brand email templates and servers. Brands can now define its own emails templates and custom mail servers for communicating with users:
 
-    ![image|544x500,75%](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/1/1626029a3575529e9881c8f1e8cfd667e8b3e71a.png)
+![image|544x500,75%](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/1/1626029a3575529e9881c8f1e8cfd667e8b3e71a.png)
+
 * Added email template editor and mail server settings inside Brands section with options for template testing.
 * Add STARTTLS support in SMTP for old servers not supporting direct SSL/TLS connections.
 
@@ -1401,78 +1437,78 @@ Discussion Topic: [Thinger.io Community Forum](https://community.thinger.io/t/pl
 
 * Changed legacy email templates.
 * SMTP interface will correctly send the From Name.
-* Users without a verified email address, can verify it automatically after initializing/resetting its password (which requires an email).
-* All source selectors will display the friendly name of the resource, i.e, friendly name of a project, device, bucket.
-* Search supports now both search by id and friendly name in all resources.
-* Control Widgets (buttons/sliders) now supports mapped values (i.e., a field inside a resource).
+* Users without a verified email address can verify it automatically after initializing/resetting their password (which requires an email).
+* All source selectors will display the friendly name of the resource, i.e, the friendly name of a project, device or bucket.
+* Search supports now both searching by id and friendly name in all resources.
+* Control Widgets (buttons/sliders) now support mapped values (i.e., a field inside a resource).
 
 **Removed**
 
-* Email communications when bucket export, clear, and delete succeed/failed.
-* Google Vector Maps by default in dashboards, as they were not enough performant.
+* Email communications when bucket export, clear, and delete succeed/fail.
+* Google Vector Maps are used by default in dashboards, as they were not performant enough.
 
 **Fixed**
 
 * Swagger API rendering problems. Now it is completely usable again.
 * Tachometer widget when setting major axis to 0 (@hjfosse).
 * Fix case search root resources (domains, hosts, brands, etc.).
-* Fixed an error while removing panel title and subtitle (not updating).
-* Cropped aggregation menu from charts widget when the chart was smaller than the menu.
-* Fix chart aggregation menu padding hiding right selector border.
+* Fixed an error while removing the panel title and subtitle (not updating).
+* Cropped the aggregation menu from the charts widget when the chart was smaller than the menu.
+* Fix the chart aggregation menu padding, hiding the right selector border.
 * Fixed some problems when loading multiple maps on dashboards.
 
 **Core**
 
 * Propagate websocket proxy error to caller in clustered deployments.
 * Asset types and groups are automatically created in the device/bucket creation (from API).
-* Updated OpenSSL version from 1.1.1h to 1.1.1j
-* Updated Boost version from 1.74 to 1.75
-* Updated mongoc version from 1.17.1 to 1.17.4
-* Updated mongocxx version from 3.6.0 to 3.6.2
-* Updated CryptoPP from 8.2.0 to 8.4.0
-* Updated MaxMindDB from 1.4.3 to 1.5.2
+* Updated OpenSSL version from 1.1.1h to 1.1.1j.
+* Updated Boost version from 1.74 to 1.75.
+* Updated mongoc version from 1.17.1 to 1.17.4.
+* Updated mongocxx version from 3.6.0 to 3.6.2.
+* Updated CryptoPP from 8.2.0 to 8.4.0.
+* Updated MaxMindDB from 1.4.3 to 1.5.2.
 
 #### \[2.9.8] - 2021-02-03
 
 **Added**
 
-* Initial support for columns sorting in all console lists (devices, buckets, dashboards, etc.)
+* Initial support for column sorting in all console lists (devices, buckets, dashboards, etc.):
 
 ![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/5/5475c0318cedc12ae4a8f3eaf721ad677a36d0d3.png)
 
-* Add support for configuring axis on chart widget
+* Add support for configuring axis on chart widget:
 
 ![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/2/24054f81487d97215d43018050ac85fa1de27d80.png)
 
-* Add support for setting placeholders in widgets title and subtitles
+* Add support for setting placeholders in widgets title and subtitles:
 
 ![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/f/fb73f973f0f3dae22d961a0f08e3c063a694ce92.png)
 
-* Add support for showing last widget update
+* Add support for showing last widget update:
 
 ![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/6/6a99ce53e110b55789715100843ea6f903f8233f.png)
 
 **Improved**
 
-* Forgot, login, change password and signup forms metadata for improved browser compatibility
+* Forgot, login, change password and signup forms metadata for improved browser compatibility.
 
 **Fixed**
 
-* Device tokens not opening under some circumstances
-* Email settings not being updated
-* Properties listing on types and groups (removed Source column)
-* Legacy PSON error while decoding uint64\_t values
+* Device tokens are not opening under some circumstances.
+* Email settings are not being updated.
+* Properties listing on types and groups (removed Source column).
+* Legacy PSON error while decoding uint64\_t values.
 
 **Core**
 
-* Upgrade nlohmann JSON to 3.9.1
+* Upgrade nlohmann JSON to 3.9.1.
 * Experimental support for IOTMP protocol on private instances that will allow:
   * Clients running on different languages (currently C++, Node.JS, web). Support needed for Python, Java, etc.
-  * Resource Path Parameters
-  * Custom return code for HTTP methods
-  * Publish/Subscribe to MQTT topics
-  * Listen to server events
-  * Remote Shell on Linux
+  * Resource Path Parameters.
+  * Custom return code for HTTP methods.
+  * Publish/Subscribe to MQTT topics.
+  * Listen to server events.
+  * Remote Shell on Linux.
 
 #### \[2.9.7] - 2020-11-09
 
@@ -1481,7 +1517,7 @@ Discussion Topic: [Thinger.io Community Forum](https://community.thinger.io/t/pl
 * Add dashboard 'Developer' tab in settings showing source config, so users can share, copy, or edit dashboards from editor.
 * Add dashboard tabs, so, one dashboard can contain multiple tabs with different names and icons.
 * Add dashboard widget: push button (on only while it is pressed).
-* Add support for nested values on endpoint templates, i.e., \{{location.lat\}} \{{location.lng\}}
+* Add support for nested values on endpoint templates, i.e., \{{location.lat\}} \{{location.lng\}}.
 * Add role field in accounts list showing: Admin, Developer, and Project Member.
 * Add icon color on progressbar widget.
 * Add inner icon size for button widgets.
@@ -1504,11 +1540,11 @@ Discussion Topic: [Thinger.io Community Forum](https://community.thinger.io/t/pl
 
 **Core**
 
-* Updated server Docker base image to Ubuntu 20.04
-* Updated SSL version to 1.1.1h
-* Updated C++ Boost library to 1.74.0
-* Updated MongoDB to mongoc 1.17.1 and mongocxx 3.6.0
-* Reduce Docker image size: \~6MB
+* Updated the server Docker base image to Ubuntu 20.04.
+* Updated SSL version to 1.1.1h.
+* Updated C++ Boost library to 1.74.0.
+* Updated MongoDB to mongoc 1.17.1 and mongocxx 3.6.0.
+* Reduce Docker image size: \~6 MB.
 
 #### \[2.9.6] - 2020-10-28
 
@@ -1519,8 +1555,8 @@ Discussion Topic: [Thinger.io Community Forum](https://community.thinger.io/t/pl
 
 **Improved**
 
-* Improve UI by adding icon according to its type to resource selectors.
-* Improve messages in dashboard when the device is not available.
+* Improve UI by adding an icon according to its type to resource selectors.
+* Improve messages in the dashboard when the device is not available.
 
 **Fixed**
 
@@ -1530,40 +1566,40 @@ Discussion Topic: [Thinger.io Community Forum](https://community.thinger.io/t/pl
 
 **Fixed**
 
-* Change device credentials not working properly (thanks rin67630).
+* Change device credentials are not working properly (thanks rin67630).
 * Map size on load.
-* Remove plugin problem.
-* Removing user account did correctly clean all user plugins.
-* Bug with passwords being too long
+* Remove the plugin problem.
+* Removing the user account correctly cleans all user plugins.
+* Bug with passwords being too long.
 
 **Improved**
 
-* Disable console being embedded into an iframe for security reasons (Clickjacking)
+* Disable console being embedded into an iframe for security reasons (Clickjacking).
 
 #### \[2.9.3] - 2020-10-01
 
 **Added**
 
-* Add support for users with role 'Project Member', specially useful for end users
-  * Project Members are not limited with the regular max user license limit.
-  * Project Members customizes the menu, hiding features not available for end-users
-* Add support for setting custom profile picture, removing the Gravatar approach.
+* Add support for users with role 'Project Member', especially useful for end users
+  * Project Members are not limited by the regular max user license limit.
+  * Project Members customize the menu, hiding features not available for end-users
+* Add support for setting a custom profile picture, removing the Gravatar approach.
 * Add support for changing roles to accounts between user, admin, and member.
 
 **Improved**
 
-* User deletes now correctly erases all buckets, running plugins, and other critical resources associated to the account.
-* Token and members permissions with the possibility to set wildcards on actions, i.e., List\*, Read\*, etc.
+* User deletes now correctly erases all buckets, running plugins, and other critical resources associated with the account.
+* Token and members' permissions with the possibility to set wildcards on actions, i.e., List\*, Read\*, etc.
 * Adding a member to a project now displays a selector with search capabilities (for admins).
 
 **Fixed**
 
 * Batch users removal.
-* Fix removing properties from types, and groups after its deletion.
-* Fix restart other hosts in the cluster from Cluster Host Admin.
+* Fix removing properties from types and groups after their deletion.
+* Fix and restart other hosts in the cluster from the Cluster Host Admin.
 * Remove bucket exports after bucket deletion.
-* Remove contextual "Set projects" button on resources that does not support it.
-* Avoid sending current project params on requests that does not support it.
+* Remove the contextual "Set projects" button on resources that do not support it.
+* Avoid sending current project params on requests that do not support it.
 * "Close" project after account logout.
 * Other minor UI fixes.
 
@@ -1571,55 +1607,55 @@ Discussion Topic: [Thinger.io Community Forum](https://community.thinger.io/t/pl
 
 **Added**
 
-* Add support for defining assets types and assets groups.
-* Add support for defining geofences, at device, type, and groups levels.
+* Add support for defining asset types and asset groups.
+* Add support for defining geofences at device, type, and group levels.
 * Add support for showing geofences in device overview.
-* Add support for "inherited" properties in devices from its assets types and groups.
-* Viewer for assets types, groups and all assets in map.
-* Generated device tokens points to the custom instance, so Mobile APP can be used with private instances.
+* Add support for "inherited" properties in devices from their asset types and groups.
+* Viewer for asset types, groups and all assets in the map.
+* Generated device tokens point to the custom instance, so the Mobile APP can be used with private instances.
 * Contextual menu on device list supports changing its type, group, and project.
 * Contextual menu on any other resource supports changing its project.
-* Resource lists show now the current project of each resource. Also type/group for devices.
+* Resource lists now show the current project of each resource. Also, type/group for devices.
 
 **Improved**
 
-* Map widget contains more features, like show track route, default zoom level, map type, path color, show waypoints, default location, show geofences, or hide default Google Maps control.
-* Dashboards show now the dashboard name in the page title to differentiate several dashboards open.
+* The Map widget contains more features, like showing track route, default zoom level, map type, path color, show waypoints, default location, show geofences, or hide default Google Maps control.
+* Dashboards now show the dashboard name in the page title to differentiate between several open dashboards.
 * Now it is possible to do insensitive case searches in lists or other resource selectors.
-* Property selectors now apply filtering at DB level when searching.
+* Property selectors now apply filtering at the DB level when searching.
 
 **Fixed**
 
-* Some problems with maps not loading property or showing "ghost" markers.
+* Some problems with maps not loading properly or showing "ghost" markers.
 * Printing nested values, i.e., location.lat, from buckets onto a dashboard.
-* Fixed properties listing for devices with same root identifier.
-* Fixed bucket export listing for buckets with same root identifier.
-* Minor bug fixes and improvements
+* Fixed properties listing for devices with the same root identifier.
+* Fixed bucket export listing for buckets with the same root identifier.
+* Minor bug fixes and improvements.
 
 #### \[2.8.2] - 2020-07-21
 
 **Fixed**
 
-* Brand limitation was not applying correctly
-* Updating a device property from a shared dashboard
+* The brand limitation was not applied correctly.
+* Updating a device property from a shared dashboard.
 
 #### \[2.8.0] - 2020-07-14
 
 **Added**
 
-* Add plugin settings for enabling public access to them (useful for plugins managing its own authentication like Grafana)
-* Add support for writable filesystems on plugins (useful for installing plugins, i.e, inside Grafana)
-* Add changelog viewer
+* Add plugin settings for enabling public access to them (useful for plugins managing their own authentication, like Grafana).
+* Add support for writable filesystems on plugins (useful for installing plugins, i.e, inside Grafana).
+* Add changelog viewer.
 
 **Fixed**
 
-* Fixed plugin management control states
-* Fixed Dashboard switch button when modifying a value from a property
-* Minor bug fixes and improvements
+* Fixed plugin management control states.
+* Fixed Dashboard switch button when modifying a value from a property.
+* Minor bug fixes and improvements.
 
 **Security**
 
-* Fixed plugins privileges when running a shell over a container. Now all containers run with UID and GUID 1000.
+* Fixed plugin privileges when running a shell over a container. Now all containers run with UID and GUID 1000.
 
 #### \[2.7.6] - 2020-07-10
 
@@ -1627,18 +1663,18 @@ Discussion Topic: [Thinger.io Community Forum](https://community.thinger.io/t/pl
 
 * Admin section "Cluster Hots", supporting viewing all Thinger.io nodes in the cluster, and:
   * View host resources in real time, like connections, CPU/RAM usage, etc.
-  * Configure Thinger.io: HTTP Server, Thinger Server, MQTT Server, Email, Buckets, SSL Certificates, Accounts, Deployment and Restart Server
-  * View host logs in real-time
+  * Configure Thinger.io: HTTP Server, Thinger Server, MQTT Server, Email, Buckets, SSL Certificates, Accounts, Deployment and Restart Server.
+  * View host logs in real-time.
 * Brand support for PWA (Progressive Web Applications), setting theme color, icons, App name...
 * Dashboard settings:
-  * Now supports dashboard backgrounds
-  * Now supports setting round corners on widgets
-  * Allow alpha widgets, setting colors like "#000000aa"
-  * Allow hide header with a shared dashboard
+  * Now supports dashboard backgrounds.
+  * Now supports setting round corners on widgets.
+  * Allow alpha widgets, setting colors like "#000000aa".
+  * Allow hiding the header with a shared dashboard.
 
 **Fixed**
 
-* Timezone update in settings
-* Date visualization on buckets according to timezone
-* Complex object visualization on buckets
-* Dashboard edition on mobile;
+* Timezone update in settings.
+* Date visualization on buckets according to timezone.
+* Complex object visualization on buckets.
+* Dashboard edition on mobile.

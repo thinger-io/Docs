@@ -2,15 +2,15 @@
 
 ## Subscribing and Deploying a Cloud Instance
 
-This section describes the process to deploy a private Thinger.io Cloud instance within minutes by just accessing the [**Pricing Page**](https://thinger.io/pricing). This pricing is also a deployment system that will setup a private Thinger.io Server instance within minutes, just following the next three steps:&#x20;
+This section describes the process to deploy a private Thinger.io Cloud instance within minutes by just accessing the [**Pricing Page**](https://thinger.io/pricing). This pricing is also a deployment system that will set up a private Thinger.io Server instance within minutes, just following the next three steps:&#x20;
 
 ### 1. Select a license
 
-Private cloud instances can be deployed with different licenses, depending on the requirements, like host performance, bandwidth or other platform features like branding, custom domains, additional support,  plugins, etc. Once the cloud provider is selected, then it is necessary to select the desired license, as shown in the image below:
+Private cloud instances can be deployed with different licenses, depending on the requirements, like host performance, bandwidth or other platform features like branding, custom domains, additional support,  plugins, etc. Once the cloud provider is selected, it is necessary to select the desired license:
 
 ![](../../.gitbook/assets/cloud_pricing.png)
 
-This pricing includes the software license and all cloud expenses. Note that yearly subscriptions offer a discount over the monthly one.&#x20;
+This pricing includes the software license and all cloud expenses. Note that yearly subscriptions offer a discount over the monthly ones.&#x20;
 
 The next table shows all the different features provided by each license as well as a desirable purpose specification. It is possible to select one license and change it in the future using the [subscription management portal](https://billing.stripe.com/p/login/00g9D1fN50SIcpOfYY).
 
@@ -31,23 +31,23 @@ Additionally, all these subscriptions provide:
 
 ### 2.  Configure license
 
-After selecting the license and completing the payment process, you will receive an email containing a link to a page where you can choose the desired base hostname and deployment region.
+After license selection and completion of the payment process, an email will be received containing a link to a page where the desired base hostname and deployment region can be chosen.
 
 ![Instance license preferences](../../.gitbook/assets/cloud_configuration.png)
 
-These options are described in more detail in the following:
+These options are described in more detail:
 
-* **E-mail**: This is the e-mail address that must be used when creating the Thinger.io account in the private instance deployed. It will be the main account with admin privileges, allowing to create (if contracted) new users, domains, brands, etc. It does not need to match the billing e-mail address.
-* **Hostname**: Enter the hostname for your private IoT instance. This hostname will always be accompanied by the subdomain "aws.thinger.io" to access your host.
-* **Region**: Cloud providers provides servers in different geographic locations. This option allows to select the closest region to your business or project in order to minimize latency between the instance and the devices, users consuming information, etc. It is recommended to select the closest region to the project location.
+* **E-mail**: This is the e-mail address that must be used when creating the Thinger.io account in the private instance deployed. It will be the main account with admin privileges, allowing the creation (if contracted) of new users, domains, brands, etc. It does not need to match the billing e-mail address.
+* **Hostname**: Enter the hostname for the private IoT instance. This hostname will always be accompanied by the subdomain "aws.thinger.io" to access the host.
+* **Region**: Cloud providers provide servers in different geographic locations. This option allows selecting the closest region to the business or project in order to minimize latency between the instance and the devices, users consuming information, etc. It is recommended to select the closest region to the project location.
 
 ### 3. Instance deployment
 
-After the configuration has been done, a launch process will execute to deploy your environment, and a progress bar will be shown to give feedback on the current status of the deployment.
+After the configuration has been done, a launch process will execute to deploy the environment, and a progress bar will be shown to give feedback on the current status of the deployment.
 
 ![Billing email](../../.gitbook/assets/cloud_deployment.png)
 
-Once the process is done, you may follow the [Steps After Cloud Deployment](thinger.io-cloud-server.md#steps-after-cloud-deployment).
+Once the process is done, follow the [Steps After Cloud Deployment](thinger.io-cloud-server.md#steps-after-cloud-deployment).
 
 ## Steps After Cloud Deployment
 
@@ -55,20 +55,20 @@ As soon as the deployment process has been completed, a confirmation email will 
 
 ### First Login
 
-1. Access the server by writing the configured domain in a web browser, for example: [https://acme.aws.thinger.io](https://acme.aws.thinger.io). This step should show you the Thinger.io login screen.
-2. Note that this server has never been accessed before, and it is a completely isolated instance so there is not any user account created. Then, it is necessary to click on `Create an account`button, and fill the form to create a new user profile using the `Admin E-mail` address provided while configuring the instance (any other address will not be authorized to sign up).
-3. After creating the new account it is possible to access the new server. It is not necessary to confirm the mail address.
+1. Access the server by writing the configured domain in a web browser, for example: [https://acme.aws.thinger.io](https://acme.aws.thinger.io). This step shows the Thinger.io login screen.
+2. Note that this server has never been accessed before, and it is a completely isolated instance, so no user account has been created. Then, it is necessary to click on `Create an account`button, and fill the form to create a new user profile using the `Admin E-mail` address provided while configuring the instance (any other address will not be authorized to sign up).
+3. After creating the new account, it is possible to access the new server. It is not necessary to confirm the email address.
 
 ### Device Connection
 
-When working with a private Thinger.io Cloud Instance, it is necessary to point your devices to the newly created hostname. If you are using the [Arduino](../../arduino/) or [Linux](../../linux.md) client libraries, i.e., for Arduino, ESP8266, ESP32, Raspberry Pi, etc., you should add a definition on top of your code to point to your host. So, modify your sketch like this:
+When working with a private Thinger.io Cloud Instance, it is necessary to point devices to the newly created hostname. If the [Arduino](../../arduino/) or [Linux](../../linux.md) client libraries are being used (e.g., for Arduino, ESP8266, ESP32, Raspberry Pi, etc.), a definition should be added at the top of the code to point to the host. The sketch should be modified as follows:
 
 ```
 #define THINGER_SERVER "acme.aws.thinger.io"
 
-// the rest of your code goes here
+// the rest of the code goes here
 ```
 
 {% hint style="info" %}
-If this host definition is not provided, your devices will try to connect with the public instance.&#x20;
+If this host definition is not provided, the devices will try to connect with the public instance.&#x20;
 {% endhint %}
