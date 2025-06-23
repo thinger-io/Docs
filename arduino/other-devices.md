@@ -2,15 +2,15 @@
 
 ## TI Launchpad CC3200
 
-The TI CC3200 was the natural evolution of the CC3000/CC3100 chip. Instead on providing a single chip for managing the WiFi communications, it also integrates a powerful programmable MCU, in the same way the ESP8266 is doing. So you can program your code and have WiFi capabilities right out of the box. The easiest way to start with this chip is by using the TI CC3200 Launchpad, which integrates the chip, as well as some sensors, leds, and the USB to serial so you can program the board right from the USB.
+The TI CC3200 was the natural evolution of the CC3000/CC3100 chip. Instead of providing a single chip for managing the WiFi communications, it also integrates a powerful programmable MCU, in the same way the ESP8266 does. So you can program your code and have WiFi capabilities right out of the box. The easiest way to start with this chip is by using the TI CC3200 Launchpad, which integrates the chip, as well as some sensors, LEDs, and the USB-to-serial so you can program the board right from the USB.
 
 ![](../.gitbook/assets/ti-cc3200.png)
 
-To program this board it is possible to use an Arduino-based IDE that is called [Energia](http://energia.nu/download/). So, download and install it before continue. Checkout also the required instructions for programming the CC3200, as you need to make a short between two pins.
+To program this board, it is possible to use an Arduino-based IDE that is called [Energia](http://energia.nu/download/). So, download and install it before continuing. Check out also the required instructions for programming the CC3200, as you need to make a short between two pins.
 
 Once the environment is available and you can program the board examples, then you should install the Thinger Arduino Client Libraries also in the Energia IDE. Check the [Manual Import](./#installation-manual-import) for reference.
 
-The following example will allow connecting your device to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials, and the **wifi\_ssid**, **wifi\_password** with the WiFi credentials.
+This example will allow connecting your device to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials, and the **wifi\_ssid**, **wifi\_password** with the WiFi credentials.
 
 ```cpp
 #include <WiFi.h>
@@ -27,11 +27,11 @@ void loop() {
 }
 ```
 
-Want to add some device resources \(led, sensors, etc.\) to interact with them from the Internet?, check the [Add Resources](./#coding-adding-resources) section.
+Want to add some device resources (LED, sensors, etc.) to interact with them from the Internet? Check the [Add Resources](./#coding-adding-resources) section.
 
 ## SeeedStudio LinkIT ONE
 
-The LinkIt ONE development board is an open source, high performance, Arduino footprint board for prototyping Internet of Things \(IoT\) devices. The list of capabilities is truly staggering. The board is based around a powerful ARM7 EJ-S™ processor, but has onboard GSM, GPRS, Wi-Fi, Bluetooth BR/EDR/BLE, GPS, Audio codec, and SD card connector \(and more!\).
+The LinkIt ONE development board is an open-source, high-performance, Arduino footprint board for prototyping Internet of Things (IoT) devices. The list of capabilities is truly staggering. The board is based around a powerful ARM7 EJ-S™ processor, but has onboard GSM, GPRS, Wi-Fi, Bluetooth BR/EDR/BLE, GPS, Audio codec, and SD card connector (and more!).
 
 The board is programmed through the Arduino IDE with a plugin from MediaTek. Check the [MediaTek LinkIt™ ONE SDK for Arduino](http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit/sdk_intro/index.gsp)
 
@@ -41,7 +41,7 @@ The board is programmed through the Arduino IDE with a plugin from MediaTek. Che
 
 ### WIFI Connection
 
-The following example will allow connecting your device to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials, and the **wifi\_ssid**, **wifi\_password** with the WiFi credentials.
+This example will allow connecting your device to the cloud platform in a few lines. Just replace the sketch **username**, **deviceId**, and **deviceCredential** with your own credentials, and the **wifi\_ssid**, **wifi\_password** with the WiFi credentials.
 
 {% tabs %}
 {% tab title="" %}
@@ -73,7 +73,7 @@ void loop() {
 
 ### GPRS Connection
 
-It is also possible to connect the board by using the GPRS connection, so it does not require a WiFi connection for the communication, improving the board mobility. Note that the current version of the LinkIt ONE does not support a SIM with PIN, so remove the PIN befor its use. In this case, it is only necessary to provide the **apn**, **username**, and **password** provided by your network operator. But you can skip this process if your SIM already integrates this information.
+It is also possible to connect the board by using the GPRS connection, so it does not require a WiFi connection for communication, improving the board's mobility. Note that the current version of the LinkIt ONE does not support a SIM with PIN, so remove the PIN before its use. In this case, it is only necessary to provide the **APN**, **username**, and **password** provided by your network operator. But you can skip this process if your SIM already integrates this information.
 
 {% tabs %}
 {% tab title="LinkItOneGRPS.ino" %}
@@ -109,4 +109,3 @@ void loop() {
 ```
 {% endtab %}
 {% endtabs %}
-

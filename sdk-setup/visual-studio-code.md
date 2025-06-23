@@ -1,10 +1,10 @@
 # Visual Studio Code
 
-For advanced developers and more complex projects, an advanced IDE can be beneficial. Visual Studio Code (VS Code) offers features like GIT control, code completion, and a variety of useful extensions to streamline the development process. By combining VS Code with PlatformIO, you get a powerful setup for your Thinger.io projects.
+For advanced developers and more complex projects, an advanced IDE can be beneficial. Visual Studio Code (VS Code) offers features like GIT control, code completion, and a variety of useful extensions to streamline the development process. By combining VS Code with PlatformIO, a powerful setup for Thinger.io projects is obtained.
 
 **Benefits of Using Visual Studio Code with PlatformIO:**
 
-* **GIT Control**: Easily manage your version control with integrated GIT support.
+* **GIT Control**: Version control can be easily managed with integrated GIT support.
 * **Code Completion**: Enjoy enhanced code completion for faster and more accurate coding.
 * **Extensions**: Access a wide range of extensions to add functionality and improve productivity.
 
@@ -12,7 +12,7 @@ To get started, download and install Visual Studio Code and the PlatformIO exten
 
 ## Install Visual Studio Code
 
-**Visual Studio Code** is a free distribution source-code editor developed by Microsoft for Windows, Linux and macOS. It can be extended via [extensions](https://en.wikipedia.org/wiki/Plug-in\_\(computing\)), available through a central repository to add language support, new programming languages, [themes](https://en.wikipedia.org/wiki/Theme\_\(computing\)), and [debuggers](https://en.wikipedia.org/wiki/Debugger), or perform [static code analysis](https://en.wikipedia.org/wiki/Static\_code\_analysis). It can be downloaded for free from the official website.
+**Visual Studio Code** is a free source-code editor developed by Microsoft for Windows, Linux and macOS. It can be extended via [extensions](https://en.wikipedia.org/wiki/Plug-in_\(computing\)), available through a central repository to add language support, new programming languages, [themes](https://en.wikipedia.org/wiki/Theme_\(computing\)), and [debuggers](https://en.wikipedia.org/wiki/Debugger), or perform [static code analysis](https://en.wikipedia.org/wiki/Static_code_analysis). It can be downloaded for free from the official website.
 
 &#x20;[**Download Visual Studio Code**](https://code.visualstudio.com/download)
 
@@ -32,29 +32,29 @@ PlatformIO is a cross-platform, cross-architecture, multi-framework professional
    * Click on the **PlatformIO IDE** result.
    * Click the **Install** button.
 
-Once installed, PlatformIO provides powerful features to enhance your development process for Thinger.io projects.
+Once installed, PlatformIO provides powerful features to enhance the development process for Thinger.io projects.
 
 ![](<../.gitbook/assets/image (329).png>)
 
 ## Starting a Project
 
-Once Visual Studio code with PlatformIO is installed, it is possible to create a new project for our specific board. For this purpose, we can access PIO Home, and click on the `New Project` button:
+Once Visual Studio Code with PlatformIO is installed, it is possible to create a new project for our specific board. For this purpose, we can access the PIO Home and click on the `New Project` button:
 
 ![Create a new Project from PIO Home.](<../.gitbook/assets/image (263).png>)
 
-For this example, we will be using the ESP32 board, so, in the `Project Wizard` pop-up we enter a `Project Name`, select the `Espressif ESP32 Dev Module`, as a generic ESP32 board, and the `Arduino` Framework. Once done, click on `Finish` and wait PlatformIO to download the required toolchains for the device.
+For this example, we will be using the ESP32 board, so in the `Project Wizard` pop-up, we enter a `Project Name`, select the `Espressif ESP32 Dev Module`, as a generic ESP32 board, and the `Arduino` Framework. Once done, click on `Finish` and wait for PlatformIO to download the required toolchains for the device.
 
 ![PlatformIO project Wizard](<../.gitbook/assets/image (290).png>)
 
-After the project initialization is done, PlatformIO generates a file structure like the following:
+After the project initialization is done, PlatformIO generates a file structure:
 
 ![PlatformIO default project structure](<../.gitbook/assets/image (301).png>)
 
-As shown in the above picture, each PlatformIO project has a configuration file named `platformio.ini` in the root directory for the project. This is a [INI-style](http://en.wikipedia.org/wiki/INI\_file)file.
+As shown in the above picture, each PlatformIO project has a configuration file named `platformio.ini` in the root directory of the project. This is an INI-style file.
 
-`platformio.ini` has sections (each denoted by a `[header]`) and key / value pairs within the sections. Lines beginning with `;`are ignored and may be used to provide comments.
+`platformio.ini` has sections (each denoted by a `[header]`) and key/value pairs within the sections. Lines beginning with `;`are ignored and may be used to provide comments.
 
-In our default `ESP32` project looks like the following:
+In our default `ESP32` project:
 
 ```bash
 [env:esp32dev]
@@ -73,7 +73,7 @@ framework = arduino
 lib_deps = thinger.io
 ```
 
-After this configuration is done, it is possible to start compiling for our device. A basic example for our ESP32 device will look like the following:
+After this configuration is done, it is possible to start compiling for our device. A basic example for our ESP32 device:
 
 {% tabs %}
 {% tab title="main.cpp" %}

@@ -6,19 +6,19 @@ description: Thinger.io documentation for Arduino based on GSM connectivity
 
 ## Introduction
 
-Using Arduino with GSM connectivity is a great option for connecting your Arduino board wirelessly to the Internet in a few minutes. Connecting a device to a GSM network is simple, and it is only required a module with GSM connectivity and a SIM card. There are some boards with GSM connectivity on the Arduino ecosystem, like the MKR GSM 1400 that uses the 3G network for Internet connectivity, and the MKR NB 1500, using a narrowband solution, allowing the use of LTE Cat M1 or NB LTE-M.
+Using Arduino with GSM connectivity is a great option for connecting the Arduino board wirelessly to the Internet in a few minutes. Connecting a device to a GSM network is simple, and it only requires a module with GSM connectivity and a SIM card. There are some boards with GSM connectivity on the Arduino ecosystem, like the MKR GSM 1400 that uses the 3G network for Internet connectivity, and the MKR NB 1500, using a narrowband solution, allowing the use of LTE Cat M1 or NB LTE-M.
 
-In this documentation we cover how to connect devices over GSM by using different approaches, like using Arduino MRK GSM 1400 or Arduino MKR NB 1500.
+In this documentation, we cover how to connect devices over GSM by using different approaches, like using Arduino MKR GSM 1400 or Arduino MKR NB 1500.
 
 ## Arduino MKR GSM 1400
 
-The Arduino MKR GSM 1400 takes advantage of the cellular network as a means to communicate. The GSM / 3G network is the one that covers the highest percentage of the world's surface, making this connectivity option very attractive when no other connectivity options exist. Whether you are looking at building a gateway to your own remote sensor network, or if you need a single device sending a text message when an event happens at the other side of the country, the MKR GSM 1400 will help you to quickly implement a solution to accommodate your needs.
+The Arduino MKR GSM 1400 takes advantage of the cellular network as a means to communicate. The GSM / 3G network is the one that covers the highest percentage of the world's surface, making this connectivity option very attractive when no other connectivity options exist. Whether for building a gateway to a remote sensor network or for a single device sending a text message when an event occurs across the country, the MKR GSM 1400 assists in quickly implementing a solution to accommodate such needs.
 
-The board's main processor is a low power Arm® Cortex®-M0 32-bit SAMD21, like in the other boards within the Arduino MKR family. The GSM / 3G connectivity is performed with a module from u-blox, the SARA-U201, a low power chipset operating in the de different bands of the cellular range (GSM 850 MHz, E-GSM 1900 MHz, DCS 1800 MHz, PCS 1900 MHz). On top of those, secure communication is ensured through the Microchip® ECC508 crypto chip. Besides that, you can find a battery charger, and a connector for an external antenna.
+The board's main processor is a low-power Arm® Cortex®-M0 32-bit SAMD21, like in the other boards within the Arduino MKR family. The GSM / 3G connectivity is performed with a module from u-blox, the SARA-U201, a low power chipset operating in the de different bands of the cellular range (GSM 850 MHz, E-GSM 1900 MHz, DCS 1800 MHz, PCS 1900 MHz). On top of those, secure communication is ensured through the Microchip® ECC508 crypto chip. Besides that, a battery charger and a connector for an external antenna can be found.
 
 ![Arduino MKR GSM 1400](<../.gitbook/assets/image (306).png>)
 
-The following example will allow connecting your Arduino GSM 1400 to the cloud platform in a few lines. Just modify the `arduino_secrets.h` file with your own information.
+This example will allow connecting the Arduino GSM 1400 to the cloud platform in a few lines. The `arduino_secrets.h` file just needs to be modified with the relevant information.
 
 {% tabs %}
 {% tab title="ArduinoGSM1400.ino" %}
@@ -43,7 +43,7 @@ void setup() {
   // set builtin led to output
   pinMode(LED_BUILTIN, OUTPUT);
 
-  // pin control example over internet (i.e. turning on/off a light, a relay, etc)
+  // pin control example over the Internet (i.e. turning on/off a light, a relay, etc)
   thing["led"] << digitalPin(LED_BUILTIN);
 
   // resource output example (i.e. reading a sensor value, a variable, etc)
@@ -75,15 +75,15 @@ void loop() {
 
 ## Arduino MKR NB 1500
 
-Add Narrowband communication to your project with the MKR NB 1500. It's the perfect choice for devices in remote locations without an Internet connection, or in situations in which power isn't available like on-field deployments, remote metering systems, solar-powered devices, or other extreme scenarios.
+Add Narrowband communication to the project with the MKR NB 1500. It's the perfect choice for devices in remote locations without an Internet connection, or in situations in which power isn't available, like on-field deployments, remote metering systems, solar-powered devices, or other extreme scenarios.
 
-The board's main processor is a low power Arm® Cortex®-M0 32-bit SAMD21, like in the other boards within the Arduino MKR family. The Narrowband connectivity is performed with a module from u-blox, the SARA-R410M-02B, a low power chipset operating in the de different bands of the IoT LTE cellular range. On top of those, secure communication is ensured through the Microchip® ECC508 crypto chip. Besides that, the pcb includes a battery charger, and a connector for an external antenna.
+The board's main processor is a low-power Arm® Cortex®-M0 32-bit SAMD21, like in the other boards within the Arduino MKR family. The Narrowband connectivity is performed with a module from u-blox, the SARA-R410M-02B, a low power chipset operating in the de different bands of the IoT LTE cellular range. On top of those, secure communication is ensured through the Microchip® ECC508 crypto chip. Besides that, the PCB includes a battery charger and a connector for an external antenna.
 
 This board is designed for global use, providing connectivity on LTE's Cat M1/NB1 bands 1, 2, 3, 4, 5, 8, 12, 13, 18, 19, 20, 25, 26, 28. Operators offering service in that part of the spectrum include: Vodafone, AT\&T, T-Mobile USA, Telstra, and Verizon, among others.
 
 ![Arduino MRK NB 1500](<../.gitbook/assets/image (278).png>)
 
-The following example will allow connecting your Arduino MKR NB 1500 to the cloud platform in a few lines. Just modify the `arduino_secrets.h` file with your own information.
+This example will allow connecting the Arduino MKR NB 1500 to the cloud platform in a few lines. The `arduino_secrets.h` file just needs to be modified with the relevant information.
 
 {% tabs %}
 {% tab title="ArduinoMKRNB1500.ino" %}
@@ -108,7 +108,7 @@ void setup() {
   // set builtin led to output
   pinMode(LED_BUILTIN, OUTPUT);
 
-  // pin control example over internet (i.e. turning on/off a light, a relay, etc)
+  // pin control example over the Iinternet (i.e. turning on/off a light, a relay, etc)
   thing["led"] << digitalPin(LED_BUILTIN);
 
   // resource output example (i.e. reading a sensor value, a variable, etc)

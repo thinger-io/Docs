@@ -11,19 +11,19 @@ This how-to will cover how to get the first steps while using the thinger.io pla
 
 ## Requirements
 
-* A Raspberry Pi running with Raspbian, and a terminal or SSH access. Other OS like Ubuntu or Debian may work but have not been tested yet. This tutorial has been tested with Debian buster version.
-* Register a device in the thinger.io console and keep the credentials by hand. If you need help with this part, please check this other [how-to](https://community.thinger.io/t/register-a-device-in-the-console/23).
+* A Raspberry Pi running Raspbian, and a terminal or SSH access. Other OS like Ubuntu or Debian may work but have not been tested yet. This tutorial has been tested with Debian Buster version.
+* Register a device in the thinger.io console and keep the credentials by hand. If any help is needed, please check this other [how-to](https://community.thinger.io/t/register-a-device-in-the-console/23).
 
 ## Install Dependencies
 
-Thinger.io implementation for Linux requires some tools and libraries for its compiling:
+Thinger.io implementation for Linux requires some tools and libraries for its compilation:
 
 * A C++ compiler (GCC or Clang)
-* CMake to guide the compiling and search installed libraries
+* CMake to guide the compilation and search for installed libraries
 * OpenSSL for using secure connections with the platform
 * Boost Libraries used for high-performance async input/output&#x20;
 
-To install these dependencies, update the apt repository and installed packages first.
+To install these dependencies, update the apt repository and install packages first.
 
 ```
 sudo apt update
@@ -44,13 +44,13 @@ Download the latest Linux Client version from GitHub.
 git clone https://github.com/thinger-io/IOTMP-Linux.git
 ```
 
-Enter in the IOTMP-Linux folder we just cloned.
+Enter the IOTMP-Linux folder we just cloned.
 
 ```bash
 cd IOTMP-Linux
 ```
 
-Create a build folder and enter into it:
+Create a build folder and enter it:
 
 ```bash
 mkdir build

@@ -4,9 +4,7 @@ description: Manage properties, buckets, API Resources, or custom scripts within
 
 # Product Profile
 
-The product profile in Thinger.io serves as the central hub for configuring a product, providing access to various tools such as setting device properties, data storage, custom API creation, and custom scripts for tailored payloads and functionalities.
-
-It looks like in the following picture:
+The product profile in Thinger.io serves as the central hub for configuring a product, providing access to various tools such as setting device properties, data storage, custom API creation, and custom scripts for tailored payloads and functionalities:
 
 ![Product Profile Overview](<../../../.gitbook/assets/image (498).png>)
 

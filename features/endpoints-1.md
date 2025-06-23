@@ -1,42 +1,43 @@
 # ENDPOINTS
 
-An endpoint, is the entry point to a service, a process, or any other destination. So, in Thinger.io an endpoint can be defined like a target destination that can be called by devices to perform any action, like sending an email, send a SMS, call a REST API, interact with IFTTT, call a device from a different account, or call any other HTTP endpoint.
+An endpoint is the entry point to a service, a process, or any other destination. So, in Thinger.io, an endpoint can be defined like a target destination that can be called by devices to perform any action, like sending an email, sending an SMS, calling a REST API, interacting with IFTTT, calling a device from a different account, or calling any other HTTP endpoint.
 
-Calling those endpoints directly by devices can be complex in small microcontrollers, and would require more bandwidth in devices. This way, Thinger.io can handle endpoints calls that can be requested directly by devices, activating them by using its identifier and passing any information required. It also adds some flexibility, as the endpoint request can be dinamically changed as necessary, while the deployed code in the device remains the same.
+Calling those endpoints directly by devices can be complex in small microcontrollers, and would require more bandwidth in devices. This way, Thinger.io can handle endpoint calls that can be requested directly by devices, activating them by using their identifier and passing any information required. It also adds some flexibility, as the endpoint request can be dynamically changed as necessary, while the deployed code in the device remains the same.
 
 ## Create Endpoint
 
-To manage all your endpoints, it is necessary to access to the Endpoints section, by clicking in the following menu item:
+To manage all the endpoints, it is necessary to access the Endpoints section, by clicking on the menu item:
 
-![](../.gitbook/assets/EndpointTab.PNG)
+![](../.gitbook/assets/ep.png)
 
-Then click on the Add Endpoint button that will open a new interface for entering the endpoint details, like in the following screenshot:
+Then click on the Add Endpoint button, which will open a new interface for entering the endpoint details:
 
-![](../.gitbook/assets/AddEndpoint.png)
+![](../.gitbook/assets/aep.png)
 
-Here it is necessary to configure different parameters:
+Here, it is necessary to configure different parameters:
 
-* **Endpoint Id**: Unique identifier for your endpoint (_the device must use this identifier for activating the endpoint_).&#x20;
-* **Endpoint Description**: Fill here any description or detailed information you need to keep about the dashboard.
+* **Endpoint Identifier**: Unique identifier for the endpoint (_the device must use this identifier for activating the endpoint_).&#x20;
+* **Endpoint Name**: Unique name for the endpoint.
+* **Endpoint Description**: Fill here any description or detailed information needed to keep about the dashboard.
 * **Endpoint Type**: Defines the endpoint type, depending on the selected type, the endpoint will present different fields. In the following sections are described some of these types.
 
 ## Useful Endpoint types
 
 ### Email Endpoint
 
-An email endpoint allows sending emails from your devices. You can define your target email address, subject, and compose your email body.
+An email endpoint enables the sending of emails from devices. The target email address, subject, and email body can be defined.
 
-The configurable parameters are the following:
+The configurable parameters are:
 
-* **Email Address**: The target email address of your message.
+* **Email Address**: The target email address of the message.
 * **Email Subject**: The email subject.
-* **Email Body**: Allows defining the email body, that can be a plain JSON text with the data sent from your device, or a custom body that can contain also information gathered from your device.
+* **Email Body**: Allows defining the email body, which can be a plain JSON text with the data sent from the device, or a custom body that can also contain information gathered from the device.
 
-In the following screenshot, there is an example of an email endpoint that contains some text and variables that are filled when the device calls the endpoint, adding the current temperature and humidity reported by the device. Notice that `temperature` and `humidity` variables are closed inside double brackets `{{}}`, so the endpoint will be expecting this information to complete the body. In the following, there is some code examples calling this endpoint.
+There is an example of an email endpoint that contains some text and variables that are filled when the device calls the endpoint, adding the current temperature and humidity reported by the device. Notice that `temperature` and `humidity` variables are closed inside double brackets `{{}}`, so the endpoint will be expecting this information to complete the body.
 
 ![](../.gitbook/assets/EmailEndpoint.png)
 
-Calling endpoints is well documented [here](http://docs.thinger.io/arduino/#coding-using-endpoints-calling-endpoints), but it is basically required to call the endpoint by using the `call_endpoint` method, which requires the endpoint id, `ExampleEmail` in this example, and the optional data to be sent to the endpoint, which is a `pson` document (quite similar to JSON) with two keys named `temperature` and `humidity` holding the readings from a DHT sensor. In the following there is an example of such call.
+Calling endpoints is well documented [here](http://docs.thinger.io/arduino/#coding-using-endpoints-calling-endpoints), but it is basically required to call the endpoint by using the `call_endpoint` method, which requires the endpoint id, `ExampleEmail` in this example, the optional data to be sent to the endpoint, which is a `pson` document (quite similar to JSON) with two keys named `temperature` and `humidity` holding the readings from a DHT sensor:
 
 ```cpp
 pson data;
@@ -45,7 +46,7 @@ data["humidity"] = dht.readHumidity();
 thing.call_endpoint("ExampleEmail", data);
 ```
 
-**Note**: If you want to include a single value in the email body, you can use the double bracket `{{}}` without any key, and send a `pson` document from the device with a single value. So, the following body:
+**Note**: To include a single value in the email body, use the double bracket `{{}}` without any key, and send a `pson` document from the device with a single value:
 
 ```
 Temperature is: {{}} ºC
@@ -60,21 +61,21 @@ thing.call_endpoint("ExampleEmail", data);
 
 ### HTTP Endpoint
 
-An HTTP endpoint is a generic type of endpoint that can be used to interact with any other web service or web application. So, this endpoint can be configured to make any HTTP request, by configuring the method, URL, headers, and body.
+An HTTP endpoint is a generic type of endpoint that can be used to interact with any other web service or web application. So, this endpoint can be configured to make any HTTP request by configuring the method, URL, headers, and body.
 
-The configurable parameters are the following:
+The configurable parameters are:
 
 * **Request URL**: Configure the method (GET, POST, PUT, PATCH, or DELETE), and the request URL.
-* **Request Headers**: It is possible to add headers to the request, that can be useful for adding authorizations, control caches, configure content type, etc.
-* **Request Body**: The body can be either a custom body with an specific content, or a JSON payload with the information sent by the device. In a custom body it is possible to add custom variables, like shown in the email example. This way, it is possible to create contents in different formats like XML, SOAP, etc (remember to add the adequate content-type in this case).
+* **Request Headers**: It is possible to add headers to the request, which can be useful for adding authorizations, controlling caches, configuring content type, etc.
+* **Request Body**: The body can be either a custom body with a specific content or a JSON payload with the information sent by the device. In a custom body, it is possible to add custom variables, as shown in the email example. This way, it is possible to create content in different formats like XML, SOAP, etc (remember to add the adequate content-type in this case).
 
 ![](../.gitbook/assets/HTTPEndpoint.png)
 
 ### Telegram Bot Endpoint
 
-This endpoint is pre-configured to send data to a telegram bot in a simple way and thus use the messaging platform to get alerts or data from the IoT devices through Thinger.io.
+This endpoint is pre-configured to send data to a Telegram bot in a simple way and thus use the messaging platform to get alerts or data from the IoT devices through Thinger.io.
 
-![](<../.gitbook/assets/image (433).png>)
+![](../.gitbook/assets/epep.png)
 
 The next parameters need to be configured to work with telegram bot:
 

@@ -6,11 +6,11 @@ coverY: 140
 
 # OVERVIEW
 
-This documentation is related to connecting Arduino compatible devices to Thinger.io. In Thinger.io it is possible to connect almost any Arduino board using Ethernet, WiFi, GSM, or even hardware from different vendors that are compatible with the Arduino ecosystem, like ESP8266, ESP32, and TI CC3200.
+This documentation is related to connecting Arduino-compatible devices to Thinger.io. In Thinger.io, it is possible to connect almost any Arduino board using Ethernet, WiFi, GSM, or even hardware from different vendors that are compatible with the Arduino ecosystem, like ESP8266, ESP32, and TI CC3200.
 
-Thinger.io provides a library for such devices, simplifying the cloud connectivity, i.e., handling the network connection, managing reconnection to cloud, exposing resources from a device, like a sensor, or actuator. This library is specifically designed for Arduino IDE ecosystem, but it is also possible to use Visual Studio code with PlatformIO. With this library, you can easily program your devices and connect them within minutes. Once the device is connected it is possible to create dashboards, store device information in data buckets, or send its data to external services.
+Thinger.io provides a library for such devices, simplifying the cloud connectivity, i.e., handling the network connection, managing reconnection to the cloud, and exposing resources from a device, like a sensor or actuator. This library is specifically designed for the Arduino IDE ecosystem, but it is also possible to use Visual Studio Code with PlatformIO. With this library, devices can be easily programmed and connected within minutes. Once the device is connected, it is possible to create dashboards, store device information in data buckets, or send its data to external services.
 
-<figure><img src=".gitbook/assets/Thingerio-ArchitectureN.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Thingerio-ArchitectureN.png" alt="" width="563"><figcaption></figcaption></figure>
 
 This library supports multiple network interfaces and boards:
 

@@ -24,7 +24,7 @@ After adding the new web domain, it is necessary to verify the availability and 
 
 An important part of this process is to resolve the redirection between the new web domain and the private server's original web domain by going to the domain administration service.&#x20;
 
-![](<../.gitbook/assets/image (159).png>)
+![](<../.gitbook/assets/image (159) (1).png>)
 
 Once the redirection has been made and the DNS service has propagated the A record, it is possible to verify the domain using the Domain Details button. If it is not validated, an error message will pop up. If it is validated, the following will be shown:
 

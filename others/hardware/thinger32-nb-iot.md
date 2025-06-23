@@ -7,7 +7,7 @@ description: >-
 
 # Thinger32 NB-IoT
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
 
 Unlock the **next level of IoT development** with this **ESP32 + Quectel BC66 hybrid board**. Combining the **power and flexibility** of the **ESP32** with the **low-power, wide-area communication** of the **NB-IoT Quectel BC66**, this board is the **perfect solution for developing IoT projects that demand high efficiency, long-range connectivity, and seamless integration**.
 

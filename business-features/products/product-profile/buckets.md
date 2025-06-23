@@ -1,5 +1,5 @@
 ---
-description: Store time series data from your devices with a few clicks.
+description: Store time series data from the devices with a few clicks.
 ---
 
 # Buckets
@@ -8,11 +8,11 @@ A data bucket is a way to store time series data, i.e., data that is collected a
 
 Time series data can be used in a wide range of industries and applications, like:
 
-* Predictive maintenance: time series data from IoT sensors can be used to monitor the health of equipment and predict when maintenance is required, reducing downtime and increasing efficiency.
-* Energy management: time series data from smart meters can be used to optimize energy usage in buildings and reduce costs.
-* Supply chain optimization: time series data can be used to monitor the movement of goods and optimize the supply chain, reducing waste and increasing efficiency.
-* Healthcare: time series data from wearable devices can be used to monitor patients' health and provide insights for treatment and care.
-* Environmental monitoring: time series data from sensors in the environment can be used to monitor air and water quality, and track changes in weather patterns and wildlife populations.
+* Predictive maintenance: Time series data from IoT sensors can be used to monitor the health of equipment and predict when maintenance is required, reducing downtime and increasing efficiency.
+* Energy management: Time series data from smart meters can be used to optimize energy usage in buildings and reduce costs.
+* Supply chain optimization: Time series data can be used to monitor the movement of goods and optimize the supply chain, reducing waste and increasing efficiency.
+* Healthcare: Time series data from wearable devices can be used to monitor patients' health and provide insights for treatment and care.
+* Environmental monitoring: Time series data from sensors in the environment can be used to monitor air and water quality, and track changes in weather patterns and wildlife populations.
 
 {% hint style="info" %}
 Take a look at [Data Buckets](../../../features/buckets.md) for more information.
@@ -21,17 +21,17 @@ Take a look at [Data Buckets](../../../features/buckets.md) for more information
 Defining a Bucket inside a Product Profile allows scaling the buckets management. It can be used for:
 
 * Automatic bucket provisioning and configuration.
-* Automatic bucket ingestion from MQTT topic or IOTMP device resource for devices associated with the product.
+* Automatic bucket ingestion from the MQTT topic or IOTMP device resource for devices associated with the product.
 * Automatic data tagging inside the bucket. Use just one bucket for multiple devices. Each measurement is tagged by device and its group, which can be easily filtered when using dashboards or querying data
 * Data preprocessing before its insertion, i.e., modifying measurement units, filtering undesired data, etc.
 
-By default, the Product profile presents a Buckets table that is empty. Like in the following image:
+By default, the Product profile presents a Buckets table that is empty:
 
-<figure><img src="../../../.gitbook/assets/image (30).png" alt=""><figcaption><p>Product Bucket - Buckets section on a Product Profile</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (30) (1).png" alt=""><figcaption><p>Product Bucket - Buckets section on a Product Profile</p></figcaption></figure>
 
-To create a new Bucket, click on `Add` button from the table, and a popup will appear for its configuration. It is quite similar to the process of configuring a [Property](properties.md).
+To create a new Bucket, click on `Add` button from the table, and a pop-up will appear for its configuration. It is quite similar to the process of configuring a [Property](properties.md).
 
-<figure><img src="../../../.gitbook/assets/image (24).png" alt=""><figcaption><p>Product Buckt - Bucket creation</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (24) (1).png" alt="" width="563"><figcaption><p>Product Buckt - Bucket creation</p></figcaption></figure>
 
 The following sections describe the different options available.
 
@@ -41,20 +41,20 @@ Each product can define any number of buckets, and each bucket is uniquely ident
 
 Choose a bucket identifier that represents its purpose, i.e., "productA\_temperature", "productA\_location", "productB\_consumption", etc.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (50).png" alt=""><figcaption><p>Product Bucket - Bucket Identifier</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (50) (1).png" alt="" width="563"><figcaption><p>Product Bucket - Bucket Identifier</p></figcaption></figure>
 
 {% hint style="danger" %}
-Do not initialize the bucket manually, as it is automatically initialized by the Product on the first data item.
+There is no need to manually initialize the bucket, as the Product automatically handles its initialization with the first data item.
 {% endhint %}
 
 The bucket must **NOT** be created manually, as the product is able to initialize it automatically with the required configuration.  It is created with the arrival of the first data point. If the bucket is removed, it is created again automatically.
 
-Any bucket with a fixed identifier, i.e., "productA\_temperature", will be created with two tags on it: `device` and `group`. As multiple devices can be writing to the same bucket simultaneously, tags let the platform differentiate all different sources (and groups) that are writing to the bucket:
+Any bucket with a fixed identifier, i.e., "productA\_temperature", will be created with two tags on it: `device` and `group`. As multiple devices can be writing to the same bucket simultaneously, tags let the platform differentiate all the different sources (and groups) that are writing to the bucket:
 
-<img src="../../../.gitbook/assets/image (57).png" alt="" data-size="original">
+<img src="../../../.gitbook/assets/image (57) (1).png" alt="" data-size="original">
 
-* **device**: This will contain the device identifier where the data has been originated, i.e., the one that has published on a specific topic. It is automatically filled by the product, and should not arrive in the payload.
-* **group**: This will contain the device group, as it can be useful for creating dashboards with aggregated data by groups, i.e., average consumptions of devices on floor 1. It is automatically filled by the product, and should not arrive in the payload.
+* **device**: This will contain the identifier of the device that originated the data (i.e., the publisher on a specific topic). It is automatically populated by the product and should not be part of the payload.
+* **group**: This will contain the device group, as it can be useful for creating dashboards with aggregated data by groups, i.e., average consumption of devices on floor 1. It is automatically filled by the product and should not arrive in the payload.
 
 #### Dynamic Bucket Identifiers
 
@@ -78,11 +78,11 @@ A bucket can fetch time series data automatically from different sources:
 * [**Device Resource**](buckets.md#device-resource): Used if the value to insert in a bucket must be taken from an IOTMP device resource.
 * [**Device Topic**](buckets.md#device-topic): Used if the value to insert in a bucket must be taken from a topic (MQTT).
 
-<figure><img src="../../../.gitbook/assets/image (68).png" alt=""><figcaption><p>Product Bucket - Bucket Source Configuration</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (68) (1).png" alt="" width="563"><figcaption><p>Product Bucket - Bucket Source Configuration</p></figcaption></figure>
 
 ### None
 
-Setting the bucket source to `None` will prevent the bucket to be updated automatically.
+Setting the bucket source to `None` will prevent the bucket from being updated automatically.
 
 ### Device Resource
 
@@ -94,7 +94,7 @@ The configuration fields are:
 * **Sampling Interval**: Used to specify the resource sampling interval (in seconds). The default is 0, which means that the device should update the value by itself via [stream](../../../coding-guide.md#streaming-resource-data) calls. Any other value greater than 0 will configure the Product to fetch the resource value at the provided interval. &#x20;
 * **Payload**: Used to configure the resulting value that will be stored in the bucket. The value that arrives from the device resource becomes available at the `{{payload}}` placeholder, which is the default configuration. Take a look at the [Payloads](payloads.md) section to know more about the possibilities when defining payloads, like using Product Scripts for data conversion.
 
-<figure><img src="../../../.gitbook/assets/image (63).png" alt=""><figcaption><p>Product Bucket - Device Resource configured as Bucket source</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (63) (1).png" alt="" width="563"><figcaption><p>Product Bucket - Device Resource configured as Bucket source</p></figcaption></figure>
 
 #### Available Payload Placeholders
 
@@ -115,9 +115,9 @@ Setting the bucket source to `Device Topic` will configure the Product to automa
 The configuration fields are:
 
 * **Topic**: Used to specify the topic that will be used as a source for the new bucket values. Use topic placeholders like `{{device}}` or MQTT single-level wildcards `+` to capture data from multiple devices. For example, devices providing information on the topic `my_product/device_aabbccdd/temperature` can be configured both as `my_product/{{device}}/temperature` or `my_product/+/temperature`.
-* **Payload**: Used to configure the resulting value that will be stored on the data bucket. The value that arrives from the topic becomes available at the `{{payload}}` placeholder, which is the default configuration. Take a look at the [Payloads](payloads.md) section to know more about the possibilities when defining payloads, like using Product Scripts for data conversion.
+* **Payload**: Used to configure the resulting value that will be stored in the data bucket. The value that arrives from the topic becomes available at the `{{payload}}` placeholder, which is the default configuration. Take a look at the [Payloads](payloads.md) section to know more about the possibilities when defining payloads, like using Product Scripts for data conversion.
 
-<figure><img src="../../../.gitbook/assets/image (19).png" alt=""><figcaption><p>Product Bucket - Device Topic configured as Bucket Source</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (19) (1).png" alt="" width="563"><figcaption><p>Product Bucket - Device Topic configured as Bucket Source</p></figcaption></figure>
 
 #### Available Payload Placeholders
 
@@ -135,4 +135,4 @@ The placeholders that are available for the Payload configuration are all values
 
 Each bucket defined inside a Product can be enabled or disabled independently, for example, to temporarily disable the automatic data insertion from a topic or a device resource. It can include a description for a better understanding of its purpose, usage, or source.
 
-<figure><img src="../../../.gitbook/assets/image (58).png" alt=""><figcaption><p>Product Bucket - Bucket configuration</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (58) (1).png" alt="" width="563"><figcaption><p>Product Bucket - Bucket configuration</p></figcaption></figure>

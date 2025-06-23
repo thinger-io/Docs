@@ -21,7 +21,7 @@ Several scenarios may lead to the malfunctioning of the software client, thereby
 
 ### Enabling DEBUG
 
-If a newly programmed device is showing problems to be "online" on Thinger.io Server or even is being locked, the debug function will help to identify the issue. Include the following definition in your sketch, but make sure it comes first, **before any other includes**. When using Arduino framework it is necessary to enable `Serial` communication, as all the debugging information is displayed over Serial.
+If a newly programmed device is showing problems to be "online" on Thinger.io Server or is even being locked, the debug function will help to identify the issue. Include the following definition in the sketch, but make sure it comes first, **before any other includes**. When using the Arduino framework, it is necessary to enable `Serial` communication, as all the debugging information is displayed over Serial.
 
 ```cpp
 #define THINGER_SERIAL_DEBUG
@@ -33,7 +33,7 @@ void setup() {
 }
 ```
 
-When you incorporate this command, the program will display all communication traces on the device Serial port. The following section demonstrates a successful connection for an ESP8266 device.
+When this command is incorporated, the program will display all communication traces on the device's Serial port. The following section demonstrates a successful connection for an ESP8266 device.
 
 ```
 [NETWORK] Connecting to network my_wifi_SSID
@@ -50,62 +50,62 @@ When you incorporate this command, the program will display all communication tr
 [THINGER] Authenticated
 ```
 
-With the debug traces is it possible to determine what is happening inside the sketch.
+With the debug traces, is it possible to determine what is happening inside the sketch.
 
 {% hint style="info" %}
-Enable DEBUG traces for a better troubleshooting. Don't forget to open the Serial port.
+Enable DEBUG traces for better troubleshooting. Don't forget to open the Serial port.
 {% endhint %}
 
 ### Possible Errors
 
-#### Cant connect to network
+#### Can't connect to the network
 
 * On WiFi, check the network credentials as WiFi SSID, PASSWORD.
-* On Ethernet, ensure the cable is properly plugged to a network.
-* On GSM, ensure you are setting the correct APN and the module is correctly powered. Check network signal and antennas.
+* On Ethernet, ensure the cable is properly plugged into a network.
+* For GSM, ensure the correct APN is set and the module is correctly powered. Check the network signal and antennas.
 
-#### Cant connect to Thinger.io Server
+#### Can't connect to Thinger.io Server
 
-* The device is trying to connect to standard Thinger.io server. On private server instances, set your server address by using the definition `#define THINGER_SERVER "acme.thinger.io"` on top of your code. [More details](server/deployment/thinger.io-cloud-server.md#device-connection).
+* The device is trying to connect to the standard Thinger.io server. On private server instances, set the server address by using the definition `#define THINGER_SERVER "acme.thinger.io"` at the top of the code. [More details](server/deployment/thinger.io-cloud-server.md#device-connection).
 
 #### Error while connecting Thinger.io Server
 
-* Disable the secure TLS/SSL connection by placing`#define _DISABLE_TLS_` on the top of your code. If it works, please review how you can include proper TLS/SSL certificates on your device for a secure connection.
-* Using MQTT try to test non SSL connection through 1883 port.
+* Disable the secure TLS/SSL connection by placing`#define _DISABLE_TLS_` at the top of the code. If it works, please review how to include proper TLS/SSL certificates on the device for a secure connection.
+* Using MQTT, try to test a non-SSL connection through the 1883 port.
 
 #### Authentication Error
 
-* If you are using a private server instance, ensure your device is pointing to your server by using the definition `#define THINGER_SERVER "acme.thinger.io"` on top of your code. [More details.](server/deployment/thinger.io-cloud-server.md#device-connection)
-* Check the username, Device ID and Device Credentials are the same as the platform configuration.
+* For private server instances, it is essential to ensure the device is pointing to the correct server by including the definition `#define THINGER_SERVER "acme.thinger.io"` at the top of the code. [More details.](server/deployment/thinger.io-cloud-server.md#device-connection)
+* Check that the username, Device ID and Device Credentials are the same as the platform configuration.
 
 #### No Debug Traces
 
 * Delete any delay() instructions.
-* Verify sensors connection and other libraries behavior. Ensure the setup function is able to end.
+* Verify sensors' connection and other libraries' behavior. Ensure the setup function is able to end.
 * Identify and delete `while(1)` loops.
 
 ## Support / Find help
 
-If you're unable to find a solution even after following these instructions, we've established additional resources to assist you:
+If a solution remains elusive even after following these instructions, additional resources have been established for assistance. Searching for "Thinger.io" in a browser:
 
-<figure><img src=".gitbook/assets/image (78).png" alt=""><figcaption><p>Ask our community</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
 
 ### **Community Discussion Forum**
 
-[Community Discussion Forum](https://community.thinger.io) is a forum, designed to provide developers a platform to exchange ideas, share their projects, and seek advice among fellow Thinger.io users. It is currently the best avenue for quick and free assistance with development issues, as many queries have likely been previously asked and resolved by other developers. So, your first step should be to use the search bar to locate a similar post:
+[Community Discussion Forum](https://community.thinger.io) is a forum designed to provide developers a platform to exchange ideas, share their projects, and seek advice among fellow Thinger.io users. It is currently the best avenue for quick and free assistance with development issues, as many queries have likely been previously asked and resolved by other developers. So, the first step should be to use the search bar to locate a similar post:
 
-<figure><img src=".gitbook/assets/image (79).png" alt=""><figcaption><p>Thinger.io community forum</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
-Optimizing the use of this resource involves browsing for existing topics related to your query before starting a new one. However, if creating a new topic is necessary, please consider the following:
+Optimizing the use of this resource involves browsing for existing topics related to a query before starting a new one. However, if creating a new topic is necessary, please consider:
 
-* It is preferable to write in **English**, as it broadens the pool of people who can understand and potentially provide diverse opinions or solutions to your problem.&#x20;
+* It is preferable to write in **English**, as it broadens the pool of people who can understand and potentially provide diverse opinions or solutions to the problem.&#x20;
 * Choose an engaging and descriptive title and select the most suitable category.&#x20;
-* Compose a comprehensive description of your issue, which includes context, use case, or project objectives. This will help others grasp your situation.&#x20;
+* Compose a comprehensive description of the issue, which includes context, use case, or project objectives. This will help others grasp this situation.&#x20;
 * Don't forget to supply all the necessary information to recreate the problem, such as: Source code, Libraries and PCB specifications, Compiler output and Debug connection trace, as well as Thinger.io configuration.&#x20;
-* Always be polite, remember that other developers are under no obligation to assist you, and if they do, it is out of goodwill.
-* If you wish to share some source code, kindly utilize the Preformatted text option for optimal display.
+* Remember to always be polite; other developers are under no obligation to assist, and any help received is a gesture of goodwill.
+* If sharing source code, please use the **Preformatted text** option for optimal display.&#x20;
 
-<figure><img src=".gitbook/assets/image (80).png" alt=""><figcaption><p>Use preformatted text when sharing source code</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (80) (1).png" alt=""><figcaption><p>Use preformatted text when sharing source code</p></figcaption></figure>
 
 ### **Extended Support**
 

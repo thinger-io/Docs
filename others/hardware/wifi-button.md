@@ -13,11 +13,11 @@ description: >-
 
 <figure><img src="../../.gitbook/assets/https%3A%2F%2Ffiles.png" alt="" width="563"><figcaption></figcaption></figure>
 
-![](<../../.gitbook/assets/image (106).png>)
+![](<../../.gitbook/assets/image (106) (1).png>)
 
 These devices are aimed at creating simple interfaces, Huma-Internet, which can be used for any kind of project in education, connected industry, or home automation. Depending on the user requirements, the WiFi-Button can be used to execute functions through Thinger.io Platform, such as sending a notification via email, endpoints to IFTTT, messages to other devices or even, by means of a Thinger.io Server Event, trigger the execution of a flow in Node-RED.
 
-![](<../../.gitbook/assets/image (132).png>)
+![](<../../.gitbook/assets/image (132) (1).png>)
 
 Our buttons come with an example program that enables configuration of a WiFi network and Thinger.io credentials via an onboard web server. Once configured, the device instantly connects to the specified Thinger.io Server to perform programmed functions. Afterward, the WiFi Button's hardware enters a hibernation state to conserve battery, extending its life to over 3000 pulsations under optimal conditions.
 
@@ -70,11 +70,11 @@ To conserve battery, the configuration hotspot remains active for 180 seconds (3
 
 2\)      Using a Smartphone or a Personal computer with WiFi connectivity, open the WiFi configuration and look for the button device WiFi hotspot. Then connect to this network by introducing the password, which will be the same as the WiFi SSID (wifi network name).
 
-![](<../../.gitbook/assets/image (91).png>)
+![](<../../.gitbook/assets/image (91) (1).png>)
 
 3\)      When the device begins to connect to the access point, a Web Browser should automatically open the configuration interface:
 
-![](<../../.gitbook/assets/image (126).png>)
+![](<../../.gitbook/assets/image (126) (1).png>)
 
 {% hint style="danger" %}
 WARNING! If the computer is connected to the Wi-Fi hotspot but the web browser doesn't show this interface, it is possible to manually access it by opening a web browser and entering the 192.168.4.1 address in the browser bar.
@@ -82,7 +82,7 @@ WARNING! If the computer is connected to the Wi-Fi hotspot but the web browser d
 
 4\)      Select **“Configure WiFi”** option by pressing the button on the main menu. This option initiates a scan to identify higher-quality WiFi signals within the surrounding environment (home or office), displaying them in the subsequent menu.
 
-![](<../../.gitbook/assets/image (86).png>)
+![](<../../.gitbook/assets/image (86) (1).png>)
 
 {% hint style="info" %}
 IMPORTANT: If the desired Wi-Fi Network SSID doesn't appear in this list, pressing 'Scan' will launch a new scanning process. If the problem persists, the SSID can be manually entered into the SSID text box.

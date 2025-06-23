@@ -8,36 +8,36 @@ coverY: 0
 
 ## Sketch Overview
 
-Almost all Arduino Sketches looks the same. There is a setup method, and there is a loop method. Nothing changes here while integrating with Thinger.io. However you must know where you should define your device resources, or where it is possible to interact with external services. In general terms, any device resource (led, relay, sensor, servo, etc.) must be defined inside the `setup()` method. As well as you initialize your devices, set the input/output direction of a digital pin, or initialize the Serial port speed, you also need to initialize here your resources. This basically consists on configuring what values or resources you want to expose over the Internet.
+Almost all Arduino Sketches share a common structure, consisting of a `setup` method and a `loop` method. This structure remains unchanged when integrating with Thinger.io. However, it is important to understand where device resources should be defined and where interaction with external services is possible. In general terms, any device resource (such as an LED, relay, sensor, or servo) must be defined inside the `setup()` method. Similar to initializing devices, setting the input/output direction of a digital pin, or initializing the Serial port speed, resources also need to be initialized here. This essentially involves configuring which values or resources are to be exposed over the Internet.
 
-The `loop()` is the place to always call to the `thing.handle()` method, so the thinger libraries can handle the connection with the platform. This is the place also for calling your endpoints, or streaming real-time data to a dashboard. Please, take into account to **do not add any delay inside the `loop()`** except if you know what you are doing, like working with deep sleep modes or so in your device. Any other delay will condition the proper functioning of Thinger in your device. Also it can be bad to read a sensor value in every loop if the sensor takes too much time to complete a read. This will result in a device with a noticeable lag while attending to our commands.
+The `loop()` is the designated place to consistently call the `thing.handle()` method, allowing the Thinger libraries to manage the platform connection. This method also serves as the location for calling endpoints or streaming real-time data to a dashboard. It is important to avoid adding any delays within the `loop()` unless specific actions, such as working with deep sleep modes on a device, are being implemented. Any other delay will negatively impact Thinger's proper functioning on the device. Additionally, reading a sensor value in every loop iteration can be detrimental if the sensor requires significant time to complete a read, as this will lead to a device with noticeable lag when responding to commands.
 
 ```cpp
-// add required headers according to your device
+// add required headers according to the device
 #include <ThingerESP32.h>
 
-// initialize Thinger instance (type can change depending on your device)
+// initialize Thinger instance (type can change depending on the device)
 ThingerESP32 thing("username", "deviceId", "deviceCredential");
 
 void setup() {
-    // initialize your sensors and pins
+    // initialize sensors and pins
 
-    // initialize wifi (see examples for your device)
+    // initialize wifi (see examples for the device)
 
     // add resources here, like sensors, lights, etc.
 }
 
 void loop() {
-  // call always the thing handle in the loop and avoid any delay here
+  // call always the thing handled in the loop and avoid any delay here
   thing.handle(); 
-  // here you can call endpoints
-  // and also you can stream resources
+  // here it is possible to call endpoints
+  // and also it is possible to stream resources
 }
 ```
 
 ## Setting Credentials
 
-All the devices connected to the platform needs to be authenticated against the server. When you create a [device in the console](https://link\_to\_console) you are basically creating a new device identifier and setting a device credential. Therefore, you need to setup this credentials also in your Arduino code so the device can be recognized and associated to your account. This is normally done while initializing the Thinger instance in the code. That is, when you define the `thing` instance. Replace the your `username`, `deviceId`, and `deviceCredential` with the values you have registered in the cloud. Note that credentials uses to be defined inside `arduino_secrets.h`
+All devices connected to the platform require authentication against the server. When a device is created [in the console](https://link_to_console/), a new device identifier is generated and device credentials are set. Therefore, these credentials must also be configured in the Arduino code to allow the device to be recognized and associated with the account. This is typically done during the initialization of the Thinger instance in the code, specifically when the `thing` instance is defined. The `username`, `deviceId`, and `deviceCredential` should be replaced with the values registered in the cloud. It is worth noting that credentials used to be defined inside `arduino_secrets.h`.
 
 ```cpp
  ThingerESP32 thing("username", "deviceId", "deviceCredential");
@@ -45,27 +45,29 @@ All the devices connected to the platform needs to be authenticated against the 
 
 ## Adding Resources
 
-In the Thinger.io platform, each device can define several resources. You can think that a resource is anything you can sense or actuate. For example, a typical resource will be a sensor value like temperature or humidity, or a relay that turns on and off a light. This way, you should define the resources you need to expose over the Internet.
+In the Thinger.io platform, each device can define several resources. A resource can be considered anything that can be sensed or activated. For example, typical resources include a sensor value like temperature or humidity, or a relay that controls a light. Therefore, the resources that need to be exposed over the Internet should be defined.
 
-All resources must be defined inside the `setup()` method of the Arduino sketch. This way the resources are configured at the beginning, but can be accessed later as necessary.
+All resources must be defined inside the `setup()` method of the Arduino sketch. This way, the resources are configured at the beginning, but can be accessed later as necessary.
 
 There are three different types of resources, which are explained in the following sections.
 
 ### Input Resources
 
-If you need to control or actuate your IoT device, it is necessary to define an input resource. In this way, an input resource is anything that can provide information to your device. For example, it can be a resource for turning on and off a light or a relay, change a servo position, adjust a device parameter, etc.
+If control or actuation of an IoT device is required, an input resource must be defined. An input resource serves as a source of information for the device. Examples include resources for controlling a light or relay, adjusting a servo position, or modifying a device parameter.
 
-To define an input resource it is used the operator `<<` pointing to the resource name, and it uses a C++11 Lambda function to define the function.
+To control or actuate an IoT device, it is necessary to define an input resource. An input resource is anything that can provide information to a device. Examples include a resource for turning a light or a relay on and off, changing a servo position, or adjusting a device parameter.
+
+To define an input resource it the operator is used `<<` , pointing to the resource name, and it uses a C++11 Lambda function to define the function.
 
 The input resource function takes one parameter of type `pson` that is a variable type that can contain booleans, numbers, floats, strings, or even structured information like in a JSON document.
 
 The following subsections will show how to define different input resources for typical use cases.
 
-#### _**Turn on/off a led, a relay, etc**_
+#### _**Turn on/off a LED, a relay, etc**_
 
-This kind of resources only requires an on/off state so it can be enabled or disabled as required. As the `pson` type can hold multiple data types, we can think that the `pson` parameter of the input function is like a boolean.
+This kind of resource only requires an on/off state, so it can be enabled or disabled as required. As the `pson` type can hold multiple data types, we can think that the `pson` parameter of the input function is like a boolean.
 
-So, inside the `setup` function you can place a resource called `led` (but you can use any other name), of input type (using the operator `<<`), that takes a reference to a `pson` parameter. This example will turn on/off the digital pin 10 using a ternary operator over the `in` parameter.
+So, inside the `setup` function, place a resource called `led` (but use any other name), of input type (using the operator `<<`), that takes a reference to a `pson` parameter. This example will turn on/off the digital pin 10 using a ternary operator over the `in` parameter.
 
 ```cpp
 thing["led"] << [](pson& in){
@@ -75,7 +77,7 @@ thing["led"] << [](pson& in){
 
 #### _**Modify a servo position**_
 
-Modifying a servo position is quite similar to turning on/off a led. In this case, however, it is necessary to use an integer value. As the `pson` type can hold multiple data types, we can still use the `pson` type as an integer value.
+Modifying a servo position is quite similar to turning on/off a LED. In this case, however, it is necessary to use an integer value. As the `pson` type can hold multiple data types, we can still use the `pson` type as an integer value.
 
 ```cpp
 thing["servo"] << [](pson& in){
@@ -85,7 +87,7 @@ thing["servo"] << [](pson& in){
 
 #### _**Update sketch variables**_
 
-You can use the input resources also for updating your sketch variables, so you can change your device behaviour dynamically. This is quite useful in some situations where you want to temporary disable an alarm, change the reporting intervals, update an hysteresis value, and so on. In this way, you can define additional resources to change your variables.
+Input resources can also be used to update sketch variables, allowing for dynamic changes in device behavior. This is quite useful in situations where it is desirable to temporarily disable an alarm, change reporting intervals, update a hysteresis value, and so on. In this way, additional resources can be defined to change variables.
 
 ```cpp
 float hysteresis = 0; // defined as a global variable
@@ -96,7 +98,7 @@ thing["hysteresis"] << [](pson& in){
 
 #### _**Pass multiple data**_
 
-The `pson` data type can hold not only different data types, but also is fully compatible with JSON documents. So you can use the Pson data type to receive multiple values at the same time. This example will receive two different floats that are stored with the `lat` and `lon` keys.
+The `pson` data type can hold not only different data types, but also is fully compatible with JSON documents. The PSON data type can be utilized to receive multiple values simultaneously. This example will receive two different floats that are stored with the `lat` and `lon` keys.
 
 ```cpp
 thing["location"] << [](pson& in){
@@ -107,11 +109,11 @@ thing["location"] << [](pson& in){
 
 #### _**Show Input Resources State in Dashboards and API**_
 
-The Dashboards or API works in a way that when you open them, they query the associated resources to correctly print its current state, i.e., the switch is on or off. In this way, when the API or a Dashboard is open, each associated input resource is called, receiving empty data in the call, as there is no intention to control the resource (the pson input will be empty).
+The Dashboards or API work in a way that when opening them, they query the associated resources to correctly print their current state, i.e., the switch is on or off. In this way, when the API or a Dashboard is open, each associated input resource is called, receiving empty data in the call, as there is no intention to control the resource (the pson input will be empty).
 
-So, how the Dashboards or the API knows what is the current state of an input resource? The resource must set its current state in the input parameter, if it is empty, or use the input value if there is one. This way, we can obtain three different things: query the current resource state (without modifying it), modify the current resource state, and obtain the expected input on the resource (this is how the API explorer on the device works).
+So, how do the Dashboards or the API know what is the current state of an input resource? The resource must set its current state in the input parameter, if it is empty, or use the input value if there is one. This way, we can obtain three different things: query the current resource state (without modifying it), modify the current resource state, and obtain the expected input on the resource (this is how the API explorer on the device works).
 
-Therefore, a correct input resource definition that actually allows to display the current state of the resource in a Dashboard or in the API, will be like this example code.
+Therefore, a correct input resource definition that actually allows to display of the current state of the resource in a Dashboard or in the API, will be like this example code.
 
 ```cpp
 thing["resource"] << [](pson& in){
@@ -124,7 +126,7 @@ thing["resource"] << [](pson& in){
 };
 ```
 
-This sample code basically returns the current state (like a boolean, a number, etc) if there is no input control, or use the incoming data to update the current state. This can be easily adapted for controlling a led, while showing its current state in the dashboard once opened or updated.
+This sample code basically returns the current state (like a boolean, a number, etc) if there is no input control, or uses the incoming data to update the current state. This can be easily adapted for controlling a LED, while showing its current state in the dashboard once opened or updated.
 
 ```cpp
 thing["led"] << [](pson& in){
@@ -137,13 +139,13 @@ thing["led"] << [](pson& in){
 };
 ```
 
-Note: for controlling a digital pin just use the method explained in the Easier Resources Section.
+Note: For controlling a digital pin, just use the method explained in the Easier Resources Section.
 
 ### Output Resources
 
-Output resources should be used in general when you need to sense or read a sensor value, like temperature, humidity, etc. So the output resources are quite useful for extracting information from the device.
+Output resources should be used in general when needed to sense or read a sensor value, like temperature, humidity, etc. So the output resources are quite useful for extracting information from the device.
 
-To define an output resource it is used the operator `>>` pointing out of the resource name, and it uses a C++11 Lambda function to define the output function.
+To define an output resource it is used the operator `>>` to point to the resource name, and it uses a C++11 Lambda function to define the output function.
 
 The output resource function takes one parameter of `pson` type that is a variable type that can contain booleans, numbers, floats, strings, or even structured information like in a JSON document.
 
@@ -151,7 +153,7 @@ The following subsections will show how to define different output resources for
 
 #### _**Read a sensor value**_
 
-Defining an output resource is quite similar to defining an input resource, but in this case it is used the operator `>>`. In the callback function we can fill the out value with any value we want, like in this case the output from a sensor reading.
+Defining an output resource is quite similar to defining an input resource, but in this case it is used the operator `>>`. In the callback function, we can fill the output value with any value we want, like in this case, the output from a sensor reading.
 
 ```cpp
 thing["temperature"] >> [](pson& out){
@@ -159,9 +161,9 @@ thing["temperature"] >> [](pson& out){
 };
 ```
 
-#### _**Read multiple data**_
+#### _**Read multiple datasets**_
 
-In the same way the input resources can receive multiple values at the same time, the output resources can also provide multiple data. This is an example for providing both latitude and longitude from a GPS.
+In the same way, the input resources can receive multiple values at the same time, the output resources can also provide multiple data. This is an example of providing both latitude and longitude from a GPS.
 
 ```cpp
 thing["location"] >> [](pson& out){
@@ -172,7 +174,7 @@ thing["location"] >> [](pson& out){
 
 #### _**Read sketch variables**_
 
-If your sketch cannot provide a single sensor reading, as it is doing some kind of data integration, an output resource can be used also for reading your sketch variables, where the computed result is updated frequently.
+If the sketch cannot provide a single sensor reading, as it is doing some kind of data integration, an output resource can also be used for reading the sketch variables, where the computed result is updated frequently.
 
 ```cpp
 float yaw = 0; // defined as a global variable
@@ -183,9 +185,9 @@ thing["yaw"] >> [](pson& out){
 
 ### Input/Output Resources
 
-The last resource type is a resource that not only takes an input or an output, but takes both parameters. This is quite useful when you want to read an output that depends on a input, i.e., when you need to provide a changing reference value to a sensor.
+The last resource type is a resource that not only takes an input or an output, but takes both parameters. This is particularly useful when an output is dependent on an input, such as when a changing reference value needs to be provided to a sensor.&#x20;
 
-This kind of resources are defined with the operator `=`. In this case the function takes two different `pson` parameters. One for input data and another one for output data. This example provides an altitude reading using the BMP180 Sensor. It takes the reference altitude as input, and provides the current altitude as output.
+These kinds of resources are defined with the operator `=`. In this case, the function takes two different `pson` parameters. One for input data and another for output data. This example provides an altitude reading using the BMP180 Sensor. It takes the reference altitude as input and provides the current altitude as output.
 
 ```cpp
 thing["altitude"] = [](pson& in, pson& out){
@@ -193,7 +195,7 @@ thing["altitude"] = [](pson& in, pson& out){
 };
 ```
 
-You can also define more complex input/output resources, that takes several input values, to provide also multiple output values, like in this example that takes `value1` and `value2` to provide the `sum` and `mult` values.
+Also, define more complex input/output resources that take several input values, to provide multiple output values, like in this example that takes `value1` and `value2` to provide the `sum` and `mult` values.
 
 ```cpp
 thing["in_out"] = [](pson& in, pson& out){
@@ -204,27 +206,27 @@ thing["in_out"] = [](pson& in, pson& out){
 
 ### Resources without parameters
 
-It is also possible to define resources that does not require any input nor generates any output. They are just like callbacks that can be executed as you want, for example to reboot the device, or do some required action.
+It is also possible to define resources that do not require any input or generate any output. These are like callbacks that can be executed as needed, for example, to reboot the device or perform a required action.
 
 In this case, the resource is defined as a function without any input or output parameters.
 
 ```cpp
 thing["resource"] = [](){
-    // write here your execution code
+    // write here the execution code
 };
 ```
 
 ## Easier Resources
 
-The client library also includes some useful syntactic sugar definitions for declaring resources more easily without having to think in input or or output resources. This syntactic sugar features are macros that are expanded automatically to define the resources in the standard way.
+The client library also includes some useful syntactic sugar definitions for declaring resources more easily without having to think about input or output resources. These syntactic sugar features are macros that are expanded automatically to define the resources in the standard way.
 
-The advantage of using this kind of definitions is that your resources will be able to handle state when you query them from the API. For example, if you have a digital pin enabled or disabled, you will be able to see its current state both in the API explorer or in a dashboard.
+The advantage of using this kind of definition is that resources will be able to handle the state when queried from the API. For example, if a digital pin is enabled or disabled, its current state will be visible in both the API explorer and a dashboard.
 
 ### Control a digital pin
 
-This kind of resources will allow defining a resource for declaring a control over a digital pin, so you can alternate over on/off states, that can be used for controlling a led, a relay, a light, etc.
+This kind of resource will allow defining a resource for declaring control over a digital pin, so it is possible to alternate over on/off states, which can be used for controlling a LED, a relay, a light, etc.
 
-It is required to define the digital pin as OUTPUT in your setup code, or the resource will not work properly.
+It is required to define the digital pin as OUTPUT in the setup code, or the resource will not work properly.
 
 ```cpp
 thing["relay"] << digitalPin(PIN_NUMBER);
@@ -233,15 +235,15 @@ thing["relay"] << invertedDigitalPin(PIN_NUMBER);
 
 ### Define Output Resources
 
-This kind of resources will allow defining a resource for declaring a read-only resource, like a value obtained from a sensor, or a given variable in our sketch.
+This kind of resource will allow defining a resource for declaring a read-only resource, like a value obtained from a sensor, or a given variable in our sketch.
 
-In this example we are defining a resource that exposes a sensor reading, like the DHT11 sensor temperature.
+In this example, we are defining a resource that exposes a sensor reading, like the DHT11 sensor temperature.
 
 ```cpp
 thing["temperature"] >> outputValue(dht.readTemperature());
 ```
 
-But it is also possible to define a output resource for any global variable in our sketch.
+But it is also possible to define an output resource for any global variable in our sketch.
 
 ```cpp
 thing["variable"] >> outputValue(myVar);
@@ -249,19 +251,19 @@ thing["variable"] >> outputValue(myVar);
 
 ### Modify Sketch Variables
 
-Our sketch usually defines some parameters or variables that are used inside the loop code. This kind of resources are normally used to handle or control the execution behaviour. With this kind of resources we can modify any parameter we want to expose, like a float, an integer, a boolean, etc.
+Our sketch usually defines some parameters or variables that are used inside the loop code. These kinds of resources are normally used to handle or control the execution behaviour. With these kinds of resources, we can modify any parameter we want to expose, like a float, an integer, a boolean, etc.
 
-In this example it is possible to remotely modify the boolean `sdLogging` variable defined as a global variable.
+In this example, it is possible to remotely modify the boolean `sdLogging` variable defined as a global variable.
 
 ```cpp
 thing["logging"] << inputValue(sdLogging);
 ```
 
-It is also possible to define a callback function to know when the variable has changed, so we can perform any other action. For this use case, define the resource as the following to have some code executed when the `hysteresisVar` changes.
+It is also possible to define a callback function to know when the variable has changed, so we can perform any other action. For this use case, define the resource to have some code executed when the `hysteresisVar` changes.
 
 ```cpp
 thing["hysteresis"] << inputValue(hysteresisVar, {
-    // execute some code when the value change
+    // execute some code when the value changes
     Serial.println("Hystereis changed to: ");
     Serial.print(hysteresisVar);
 });
@@ -269,9 +271,9 @@ thing["hysteresis"] << inputValue(hysteresisVar, {
 
 ### Servo control
 
-It is also possible to define a resource for controlling a servo instance. This way, the defined resource will automatically handle your servo instance, reading its current position, or changing to a new one according to the API interactions.
+It is also possible to define a resource for controlling a servo instance. This way, the defined resource will automatically handle the servo instance, reading its current position, or changing to a new one according to the API interactions.
 
-For defining a servo resource just define and initialize your servo as usual, and then use the declared instance in the resource definition.
+To define a servo resource, just define and initialize the servo as usual, and then use the declared instance in the resource definition.
 
 ```cpp
 thing["servo"] << servo(myServoInstance);
@@ -283,9 +285,9 @@ In Thinger.io, it is possible that devices can communicate between them. There a
 
 ### Same account communication
 
-For this use case, in which both devices belong to the same user account, there is a specific method that allows devices to communicate with other devices with low latency and simple codification. this communication can contain data or not (it is possible to make an empty call). let's Suppose that we have two devices: `deviceA` and `deviceB`, and we want to communicate both calling from `deviceB`to a specific `deviceA` input resource. We can use "thing.call\_device(,);" as shown in the example below:
+For this use case, in which both devices belong to the same user account, there is a specific method that allows devices to communicate with other devices with low latency and simple codification. This communication can contain data or not (it is possible to make an empty call). Let's suppose that we have two devices: `deviceA` and `deviceB`, and we want to communicate both calls from `deviceB`to a specific `deviceA` input resource. We can use "thing.call\_device(,);":
 
-The `deviceA` defines a resource like in the following example.
+The `deviceA` defines a resource:
 
 ```cpp
 setup(){
@@ -295,12 +297,12 @@ setup(){
 }
 ```
 
-`deviceB` can easily call this resource and send data to it by running the following command.
+`deviceB` can easily call this resource and send data to it:
 
 ```cpp
 loop(){
     thing.handle();
-    // be sure to call it at an appropiate rate
+    // be sure to call it at an appropriate rate
     thing.call_device("deviceA", "resource_On_A");
 }
 ```
@@ -317,12 +319,12 @@ setup(){
 }
 ```
 
-Then `deviceB` can call this method providing the appropriated input by defining a `pson` type that is filled with the same keys used on `resourceOnA`, as shown in the code below:
+Then `deviceB` can call this method, providing the appropriate input by defining a `pson` type that is filled with the same keys used on `resourceOnA`:
 
 ```cpp
 loop(){
     thing.handle();
-    // be sure to call it at an appropiate rate
+    // be sure to call it at an appropriate rate
     pson data;
     data["anyValue1"] = 3;
     data["anyValue2"] = 43.1;
@@ -330,7 +332,7 @@ loop(){
 }
 ```
 
-`deviceB` can also call this method by providing the information from an defined resource that generates the information, in this case, the call is similar as the previous example, but using the resource as the data source.
+`deviceB` can also call this method by providing the information from a defined resource that generates the information. In this case, the call is similar to the previous example, but using the resource as the data source.
 
 ```cpp
 setup(){
@@ -342,26 +344,28 @@ setup(){
 
 loop(){
     thing.handle();
-    // be sure to call it at an appropiate rate
+    // be sure to call it at an appropriate rate
     thing.call_device("deviceA", "resourceOnA", thing["resourceName"]);
 }
 ```
 
 ### Communication between different accounts
 
-If we want to communicate devices from different accounts, we can do that through calling an endpoint of type `Thinger.io Device Call`. Just register an endpoint of this type in the console, like in the following example.
+If we want to communicate devices from different accounts, we can do that by calling an endpoint of type `Thinger.io Device Call`. Just register an endpoint of this type in the console:
 
-![](.gitbook/assets/device\_call.png)
+<figure><img src=".gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
 
-In this case it is required to define different parameters in the endpoint:
+In this case, it is required to define different parameters in the endpoint:
 
-* Endpoint Identifier: The endpoint id that the device will use for calling the device.
-* Device Owner: The device owner username.
-* Device Identifier: The device id of the other account.
+* Endpoint Identifier: The endpoint ID that the device will use for calling the device.
+* Endpoint Name: The name of the endpoint, which does not need to equal the "Endpoint Identifier". The endpoint will show in the list of endpoints with this name.
+* Endpoint Description: This is an optional field. It is useful to remember what the endpoint consists of.
+* Device Owner: The device owner's username.
+* Device Identifier: The device ID of the other account.
 * Resource Name: The resource on the device to be called.
 * Device Access Token: A device token generated in the other account for granting external access to the device.
 
-Once defined, the device will be able to call the endpoint, as explained in the following section. It basically consists on calling the `call_endpoint`method.
+Once defined, the device will be able to call the endpoint, as explained in the following section. It basically consists of calling the `call_endpoint`method.
 
 ```cpp
 thing.call_endpoint("DeviceACall");
@@ -369,23 +373,23 @@ thing.call_endpoint("DeviceACall");
 
 ## Using Endpoints
 
-In Thinger.io, an endpoint is defined as some kind of external resource that can be accessed by the device. With the endpoints feature, devices can easily send emails, SMS, push data to external Web Services, interact with IFTTT, and any general action that can be made by using WebHooks (Calling HTTP/HTTPS URLs).
+In Thinger.io, an endpoint is defined as some kind of external resource that can be accessed by the device. With the endpoints feature, devices can easily send emails, SMS, push data to external Web Services, interact with IFTTT, and perform any general action that can be made by using WebHooks (Calling HTTP/HTTPS URLs).
 
-Calling an endpoint is so easy from the Arduino sketch, as it is only required to call the `call_endpoint` method over the `thing` variable.
+Calling an endpoint is so easy from the Arduino sketch, as it only requires calling the `call_endpoint` method over the `thing` variable.
 
 ```cpp
 thing.call_endpoint("endpoint_id");
 ```
 
-Endpoints can be called from the device code in order to execute any action like sending a predefined email. The call can also include some reading values, which is specially useful to send device's data to  third-party services.
+Endpoints can be called from the device code in order to execute any action, like sending a predefined email. The call can also include some reading values, which is especially useful to send the device's data to third-party services.
 
 {% hint style="warning" %}
-**Extra attention must be taken while calling resources, in order to avoid uncontrolled recurrency. If the interval is too short the server will lock the device connection**
+**Extra attention must be taken while calling resources, in order to avoid uncontrolled recurrency. If the interval is too short, the server will lock the device connection**
 {% endhint %}
 
 ### Calling Endpoints
 
-In this case we will see a simple example to send an email alert based on a temperature value. For this example, we have configured an email endpoint called `high_temp_email` that contains some warning text about the temperature. For this case we do not want to check the temperature every millisecond, so we are introducing some variables to control the sensing and warning frequency. In this example, the temperature is checked every hour, and if it is above 30ºC, it will call the endpoint called `high_temp_email` which will send us an email with the predefined text. It is important here to **do not add delays** inside the loop method, as it will prevent the required execution of the `thing.handle()` method, so we are using here a non-blocking delay based on the `millis()` function.
+In this case, we will see a simple example to send an email alert based on a temperature value. For this example, we have configured an email endpoint  `high_temp_email` that contains some warning text about the temperature. For this case, we do not want to check the temperature every millisecond, so we are introducing some variables to control the sensing and warning frequency. In this example, the temperature is checked every hour, and if it is above 30ºC, it will call the endpoint called `high_temp_email` which will send us an email with the predefined text. It is important here **not to add delays** inside the loop method, as it will prevent the required execution of the `thing.handle()` method, so we are using a non-blocking delay based on the `millis()` function.
 
 ```cpp
 unsigned long lastCheck = 0;
@@ -404,11 +408,11 @@ loop(){
 }
 ```
 
-You can be so creative here and call your endpoints when the presence sensor makes a detection, when your humidity sensor reports that there is no water in your plants, when the location of a device is not as expected, and many other stuff. Other interesting way of using endpoints is by its integration with IFTTT, so you can interact with multiple third-party services!
+Endpoints offer significant creative flexibility, allowing for automation based on various events. For example, endpoints can be triggered by a presence sensor detection, a humidity sensor reporting no water in plants, or a device's unexpected location. Furthermore, endpoints can be integrated with services like IFTTT (If This Then That) to interact with multiple third-party platforms.
 
 ### Sending Data to Endpoints
 
-Sending data to an endpoint (in JSON format) is also quite easy. We need to call also the `call_endpoint` method, but in this case adding some information based on the `pson` data format, which will be automatically converted to JSON. For example, if we want to report data to a third party service like Keen.io, we can create such kind of endpoints in the console. Once configured, we can call the endpoint with our readings, for example with humidity and temperature values from a DHT sensor.
+Sending data to an endpoint (in JSON format) is also quite easy. We also need to call the `call_endpoint` method, but in this case, adding some information based on the `pson` data format, which will be automatically converted to JSON. For example, if we want to report data to a third-party service like Keen.io, we can create such kind of endpoint in the console. Once configured, we can call the endpoint with our readings, for example, with humidity and temperature values from a DHT sensor.
 
 ```cpp
 // be careful of sending data at an appropriate rate!
@@ -418,7 +422,7 @@ data["humidity"] = dht.readHumidity();
 thing.call_endpoint("keen_endpoint", data);
 ```
 
-You can also send data based on a defined resource, i.e., suppose you have a resource that already serves the temperature and humidity. It is possible to reuse this definition for sending this same data to the endpoint, without having to redefine the sensor reading, like in the following example.
+Data can also be sent based on a defined resource; for instance, if a resource already provides temperature and humidity. It is possible to reuse this definition for sending the same data to the endpoint, without having to redefine the sensor reading:
 
 ```cpp
 setup(){
@@ -437,7 +441,7 @@ loop(){
 
 ### Email Type Endpoint Example
 
-This is a simple example, applied to email type endpoint, with custom body
+This is a simple example, applied to an email-type endpoint, with a custom body
 
 ```cpp
 setup()
@@ -456,7 +460,7 @@ loop()
 
 Notice that there are a variable that limitates the run of this "if" just once, its important to define any condition or method to warrantee that this kind of enpoint call is executed just once (or at appropiate rate), because it can get a lot of emails generated by the microcontroller across thinger.io platform.
 
-At endpoint configuration, in the custom body email, must add double brackets "" to invoke the variable sent by the microcontroller, in our example, we used the following body
+At endpoint configuration, in the custom body email, we must add double brackets "" to invoke the variable sent by the microcontroller.
 
 `"The actual level is %"`
 
@@ -466,22 +470,20 @@ And receiving an email with the text:
 
 ## Using Data Buckets
 
-Thinger.io provides an easy to use and extremely scalable virtual storage system, that allows to store long term device data from device output resources. This information can be used to be plotted in dashboards, or can be exported in different formats for offline processing or third party Data Analysis process.
+Thinger.io provides an easy-to-use and extremely scalable virtual storage system that allows for storing long-term device data from device output resources. This information can be used to be plotted in dashboards, or can be exported in different formats for offline processing or a third-party Data Analysis process.
 
 ### From Device Resource
 
-It is not necessary to implement specific codification in your device firmware to start storing data in a data bucket, because they will retrieve information from your output resources, just configure your Data Bucket to set the source and sampling interval as it is explained in our Console documentation at: [http://docs.thinger.io/console/#data-buckets](http://docs.thinger.io/console/#data-buckets)
+It is not necessary to implement specific codification in device firmware to start storing data in a data bucket. Data buckets will retrieve information from output resources; simply configure the Data Bucket to set the source and sampling interval as explained in the [Console documentation.](http://docs.thinger.io/console/#data-buckets)&#x20;
 
 ### Streaming Resource Data
 
-It is also possible to let he device stream the information when required, i.e., by raising an event when detected. In this case, we can use the "Update by Device" option while configuring the bucket, and we will use the streaming resource instruction as described here:
-
-Using a previous defined Output Resource, that was called for example \["location"], it could be done like in the following code snippet.
+To enable the device to stream information only when required, such as upon event detection, the "Update by Device" option can be used during bucket configuration. This utilizes streaming resource instructions. For instance, using a previously defined Output Resource named "location," this could be achieved with this code snippet:
 
 ```cpp
  void loop() {
   thing.handle();
-  // use your own logic here to determine when to stream/record the resource.
+  // use the logic here to determine when to stream/record the resource.
   if(requires_recording){
       thing.stream("location");
   }
@@ -490,7 +492,7 @@ Using a previous defined Output Resource, that was called for example \["locatio
 
 ### From Write Call
 
-This option will allow setting the bucket in a state that it will not register any information by default, but it will just wait for writing calls, both from the Arduino library using the write\_bucket method, as shown here, or calling the REST API directly like done with Sigfox. This feature opens the option to register information in the same bucket from different devices, or store information from devices that are not connected permanently with the server, that are in sleep mode, or use a different technology like Sigfox.
+This option will allow setting the bucket in a state that it will not register any information by default, but it will just wait for writing calls, both from the Arduino library using the write\_bucket method, as shown here, or calling the REST API directly, as done with Sigfox. This feature opens the option to register information in the same bucket from different devices, or store information from devices that are not connected permanently with the server, that are in sleep mode, or use a different technology like Sigfox.
 
 Here is an example of an ESP8266 device writing information to a bucket using the write\_bucket function:
 
@@ -514,7 +516,7 @@ void loop() {
 }
 ```
 
-Note that this instruction will retrieve the \["door\_status"] resource PSON, so it is also possible to call this function by attaching a custom PSON, as shown down below:
+Note that this instruction will retrieve the \["door\_status"] resource PSON, so it is also possible to call this function by attaching a custom PSON:
 
 ```cpp
 void loop(){
@@ -531,11 +533,11 @@ void loop(){
 
 ## Streaming Resources
 
-In Thinger.io you can open WebSockets connections against your devices, so you can receive sensor values, events, or any other information in real-time. The WebSockets are mainly used in the Dashboard feature of the Console, and are normally used for streaming resources at a fixed configurable interval. This functionality is available right out of the box when you define an output resource. However, if you want to transmit the information right when it is required, like when your device detects a movement, presence, etc., you must program some code, that is quite similar to calling an endpoint.
+In Thinger.io, WebSocket connections can be opened against devices to receive real-time sensor values, events, or other information. WebSockets are primarily utilized in the Console's Dashboard feature for streaming resources at a fixed, configurable interval. This functionality is available by default when an output resource is defined. However, to transmit information precisely when required, such as upon detection of movement or presence, a specific code, similar to calling an endpoint, must be programmed.
 
-In this case, you must detect when you want to stream the event, like the accelerometer value is over some threshold, your presence sensor is making a detection, or the compass heading is changing. This is up to you when it is necessary to stream new data. Streaming resources also requires that another endpoint is connected listening for them (i.e., from a WebSocket connection), so if there is no one listening for this data, the data is not sent. This is handled automatically by the client library and the server, therefore it is safe to stream data always, as the device will transmit the information only when there is a destination.
+In such cases, it is necessary to detect when to stream the event, for example, when an accelerometer value exceeds a threshold, a presence sensor makes a detection, or the compass heading changes. The determination of when to stream new data is left to the implementer. Streaming resources also require that another endpoint is connected, listening for them (i.e., from a WebSocket connection), so if there is no one listening for this data, the data is not sent. This is handled automatically by the client library and the server, therefore, it is safe to stream data always, as the device will transmit the information only when there is a destination.
 
-The following example will report the compass heading in real-time if the heading value changes more than 1 degree.
+This example will report the compass heading in real-time if the heading value changes by more than 1 degree.
 
 ![](.gitbook/assets/esp8266-real-time-websockets.gif)
 
@@ -559,15 +561,15 @@ void loop() {
 
 ## Enabling Debug Output
 
-Thinger.io library provides extensive logging of its activities, which is especially useful when one needs to troubleshoot authentication and Wi-Fi connectivity issues. Include the following definition in your sketch, but _make sure it comes first, before any other includes_ (it was reported to cause crashes on some boards otherwise).
+Thinger.io library provides extensive logging of its activities, which is especially useful when one needs to troubleshoot authentication and Wi-Fi connectivity issues. Include this definition in the sketch, but _make sure it comes first, before any other includes_ (it was reported to cause crashes on some boards otherwise):
 
 ```
 #define THINGER_SERIAL_DEBUG
 
-// the rest of your sketch goes here
+// the rest of the sketch goes here
 ```
 
-It is also necessary to enable `Serial` communication, as all the debugging information is displayed over Serial. So enable it in your sketch in the setup method.
+It is also necessary to enable `Serial` communication, as all the debugging information is displayed over the Serial. So, enable it in the sketch in the setup method.
 
 ```
 void setup() {
@@ -577,14 +579,14 @@ void setup() {
 
 ## Listen for Connection State
 
-Sometimes it can be useful for your application to know what is the current connection status with Thinger.io, i.e., to notify disconnected status with a led, request device configuration after authentication, or any other internal control flow according to connection state.
+Sometimes it can be useful for an application to know the current connection status with Thinger.io, i.e., to notify disconnected status with a LED, request device configuration after authentication, or any other internal control flow according to connection state.
 
-In order to create a listener for such connection states, it can be done with the `set_state_listener` function in the `setup()` method. For example, itis possible to define a listener that will receive the different connection states for the network, server, or authentication:&#x20;
+In order to create a listener for such connection states, it can be done with the `set_state_listener` function in the `setup()` method. For example, it is possible to define a listener that will receive the different connection states for the network, server, or authentication:&#x20;
 
 ```cpp
 void setup(){
     
-    // your setup code here..
+    // the setup code here..
     
     thing.set_state_listener([&](ThingerClient::THINGER_STATE state){
         switch(state){
@@ -619,7 +621,7 @@ void setup(){
   }
 ```
 
-In the following table it is detailed the different values and its description.
+In this table it is detailed the different values and their descriptions.
 
 | State                     | Description                                                                                                               |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
@@ -634,5 +636,5 @@ In the following table it is detailed the different values and its description.
 | SOCKET\_TIMEOUT           | The socket timed out while reading or writing, so the connection will be closed.                                          |
 | THINGER\_AUTHENTICATING   | Thinger.io client is connected and it is being authenticated.                                                             |
 | THINGER\_AUTHENTICATED    | Thinger.io client is connected and authenticated, so it can use Thinger.io, i.e., call an endpoint, read a property, etc. |
-| THINGER\_AUTH\_FAILED     | Thinger.io client authentication failed. Please, review your server, username, device id, and password.                   |
+| THINGER\_AUTH\_FAILED     | Thinger.io client authentication failed. Please, review the server, username, device id, and password.                    |
 | THINGER\_STOP\_REQUEST    | Thinger.io client was requested to stop, i.e., from the source code, or by the server.                                    |

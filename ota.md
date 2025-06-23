@@ -14,7 +14,7 @@ The update process is performed using a **Visual Studio Code** extension that in
 
 ## IDE Configuration
 
-Before working with this tool it is necessary to install and configure Visual Studio Code and the PlatformIO extension as explained in the [SDK SETUP](sdk-setup/#visual-studio-code) section of the documentation. Then, you need to **install the Thinger.io VSCode extension** directly from the Extension manager. Search for "Thinger.io" or [Checkout on Microsoft Marketplace](https://marketplace.visualstudio.com/items?itemName=thinger-io.thinger-io).&#x20;
+Before working with this tool, it is necessary to install and configure Visual Studio Code and the PlatformIO extension as explained in the [SDK SETUP](sdk-setup/#visual-studio-code) section of the documentation. Then, **install the Thinger.io VSCode extension** directly from the Extension Manager. Search for "Thinger.io" or [Checkout on Microsoft Marketplace](https://marketplace.visualstudio.com/items?itemName=thinger-io.thinger-io).&#x20;
 
 <figure><img src=".gitbook/assets/image (624).png" alt=""><figcaption><p>Visual Studio Code Thinger.io Extension for MCU OTA </p></figcaption></figure>
 
@@ -34,25 +34,23 @@ Before running the OTA, it is necessary to configure the extension by accessing 
 
 <figure><img src=".gitbook/assets/image (625).png" alt=""><figcaption><p>Thinger.io Visual Studio Code Extension for OTA updates</p></figcaption></figure>
 
-* **Thinger.io Host:** Place here the URL of the Thinger.io Instance you are working with (if using a private instance, otherwise by default it will be `backend.thinger.io`).
+* **Thinger.io Host:** The URL of the Thinger.io instance being used should be placed here (if using a private instance, otherwise by default it will be `backend.thinger.io`).
 * **Thinger.io Port:** Specifies the connection port (443 by default).
 * **Thinger.io Secure:** Verify SSL/TLS connection (enabled by default).
 * **Thinger.io SSL:** Use SSL/TLS encryption (enabled by default).
-* **Thinger.io Token:** Place here a Thinger.io Access Token with the following permissions:
+* **Thinger.io Token:** Place here a Thinger.io Access Token with these permissions:
   * ListDevices
   * AccessDeviceResources
   * ReadDeviceStatistics
   * ListProducts
 
-The following image provides a token configuration example with the required permissions.
-
 <figure><img src=".gitbook/assets/image (627).png" alt=""><figcaption><p>Example Thinger.io Token Configuration for Visual Studio Code Extension</p></figcaption></figure>
 
 ## Firmware Upload via OTA
 
-The OTA feature is implemented on the default [Thinger.io Arduino IOTMP client libraries](https://github.com/thinger-io/Arduino-Library) required for the connectivity with the Thinger.io cloud.
+The OTA feature is implemented on the default [Thinger.io Arduino IOTMP client libraries](https://github.com/thinger-io/Arduino-Library) required for connectivity with the Thinger.io cloud.
 
-The boards that supports OTA updates over the Visual Studio Code extension are the following:
+The boards that support OTA updates over the Visual Studio Code extension are:
 
 * Espressif ESP8266
 * Espressif ESP32
@@ -63,21 +61,21 @@ The boards that supports OTA updates over the Visual Studio Code extension are t
 * Arduino Portenta
 * Arduino Opta
 
-The general requirement to start working with OTA updates for a specific device are:
+The general requirements to start working with OTA updates for a specific device are:
 
 1. Have a PlatformIO project on Visual Studio Code for the target device. More details [here](https://docs.thinger.io/sdk-setup/visual-studio-code#starting-a-project).
-2. Have a basic Thinger.io firmware for your device, and ensure you it can connect to the cloud.
+2. A basic Thinger.io firmware should be prepared for the device, ensuring its ability to connect to the cloud.
 3. Modify the sketch to include the OTA functionality. More details in each specific device section.
 4. Flash the initial firmware over a serial communication port on the computer.
-5. Use the Thinger.io Visual Studio Code toolbar buttons to select your device and flash new firmware.
+5. The initial firmware can then be flashed over a serial communication port on the computer.
 
-If everything is configured correctly it will be possible to start working with the Thinger.io extension via the new elements added to the bottom toolbar. There are two buttons that allow to select the target device to be flashed, and then compile and upload new firmware binaries.
+Subsequently, the Thinger.io Visual Studio Code toolbar buttons can be used to select the device and flash new firmware. If the configuration is correct, it will be possible to begin working with the Thinger.io extension through the new elements added to the bottom toolbar. Two buttons are available to select the target device for flashing, and then to compile and upload new firmware binaries.
 
 ![Thinger.io Buttons on Visual Studio Code Toolbar](<.gitbook/assets/image (318).png>)
 
 **Select Target Device** 🚀
 
-This button is a device selector, when you click it, it will prompt to search and select a target device from your Thinger.io account.
+This button is a device selector. Upon activation, a prompt will appear for the selection of a target device from the user's Thinger.io account.
 
 ![Device Selector for OTA Updates over Visual Studio Code](.gitbook/assets/ota_device_selector.gif)
 
@@ -87,23 +85,23 @@ When the target device is disconnected, the target device button background colo
 
 **Compile and Update ▶️**
 
-This button compiles and uploads the code to the selected device. In the process it will show a window with the OTA progress.&#x20;
+This button compiles and uploads the code to the selected device. In the process, it will show a window with the OTA progress.&#x20;
 
 ![Compile and upload example for ESP8266](<.gitbook/assets/iot-ota (1).gif>)
 
 {% hint style="info" %}
-To update your device over OTA, the first time it must be flashed from a serial com port.
+To update the device over OTA, the first time, it must be flashed from a serial COM port.
 {% endhint %}
 
 **Clean Target Device** 🗑️
 
-It is possible to clean the selected target device accessing the Visual Studio command Palette with `Ctrl` + `Shift` + `P`, and searching for `Thinger.io`
+It is possible to clean the selected target device by accessing the Visual Studio command Palette with `Ctrl` + `Shift` + `P`, and searching for `Thinger.io` :
 
 ![Clean Target Device](<.gitbook/assets/image (307).png>)
 
 ### ESP32 OTA
 
-To add OTA functionality for **ESP32** it is only required to include the `ThingerESP32OTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
+To add OTA functionality for **ESP32,** it is only required to include the `ThingerESP32OTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support:
 
 {% tabs %}
 {% tab title="main.cpp" %}
@@ -154,7 +152,7 @@ void loop() {
 
 ### ESP8266 OTA
 
-To add OTA functionality for **ESP8266** it is only required to include the `ThingerESP8266OTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
+To add OTA functionality for **ESP8266,** it is only required to include the `ThingerESP8266OTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support:
 
 {% tabs %}
 {% tab title="main.cpp" %}
@@ -207,7 +205,7 @@ void loop() {
 
 ### Arduino Portenta/Opta
 
-To add OTA functionality for **Arduino Portenta and Opta devices** it is required to include the `ThingerPortentaOTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
+To add OTA functionality for **Arduino Portenta and Opta devices,** it is required to include the `ThingerPortentaOTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support:
 
 {% tabs %}
 {% tab title="main.cpp" %}
@@ -264,9 +262,9 @@ void loop() {
 {% endtabs %}
 
 {% hint style="warning" %}
-It may be required to update the bootloader of your Portenta/Opta device to enable OTA updates.&#x20;
+It may be required to update the bootloader of the Portenta/Opta device to enable OTA updates.&#x20;
 
-* Update the Bootloader of your Arduino Portenta/Opta: Run the sketch 'STM32H747\_System\_manage\_Bootloader'
+* Update the Bootloader of the Arduino Portenta/Opta: Run the sketch 'STM32H747\_System\_manage\_Bootloader'
 * Format the QSPI flash memory: Run the sketch 'QSPIFormat'.
 * Run WiFiFirmwareUpdater&#x20;
 
@@ -275,7 +273,7 @@ It may be required to update the bootloader of your Portenta/Opta device to enab
 
 ### Arduino Nano 33 IOT OTA
 
-To add OTA functionality for **Arduino Nano 33 IOT** it is required to include the `ThingerWiFiNINAOTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
+To add OTA functionality for **Arduino Nano 33 IOT,** it is required to include the `ThingerWiFiNINAOTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support:
 
 {% tabs %}
 {% tab title="main.cpp" %}
@@ -343,7 +341,7 @@ lib_deps = thinger.io
 
 ### Arduino MKR WiFi 1010 OTA
 
-To add OTA functionality for Arduino **MKR WiFi 1010** it is required to include the `ThingerWiFiNINAOTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
+To add OTA functionality for Arduino **MKR WiFi 1010,** it is required to include the `ThingerWiFiNINAOTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support:
 
 {% tabs %}
 {% tab title="main.cpp" %}
@@ -409,7 +407,7 @@ lib_deps = thinger.io
 
 ### Arduino RPI2040 Connect OTA
 
-To add OTA functionality for **Arduino RPI2040 Connect** it is only required to include the `ThingerMbedOTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
+To add OTA functionality for **Arduino RPI2040 Connect,** it is only required to include the `ThingerMbedOTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support:
 
 {% tabs %}
 {% tab title="main.cpp" %}
@@ -465,7 +463,7 @@ void loop() {
 
 ### Arduino MKR NB 1500 OTA
 
-To add OTA functionality for **MKR NB 1500** it is only required to include the `ThingerMKRNBOTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support can be as the following:
+To add OTA functionality for **MKR NB 1500,** it is only required to include the `ThingerMKRNBOTA.h` header and create an instance of it. A complete example for a basic firmware with OTA support:
 
 {% tabs %}
 {% tab title="main.cpp" %}
@@ -477,7 +475,7 @@ To add OTA functionality for **MKR NB 1500** it is only required to include the 
 #include "arduino_secrets.h"
 
 ThingerMKRNB thing(USERNAME, DEVICE_ID, DEVICE_CREDENTIAL);
-// OTA seems to not work if no reset button pressed
+// OTA seems not to work if no reset button is pressed
 ThingerMKRNBOTA ota(thing);
 
 void setup() {
@@ -493,7 +491,7 @@ void setup() {
   // set builtin led to output
   pinMode(LED_BUILTIN, OUTPUT);
 
-  // pin control example over internet (i.e. turning on/off a light, a relay, etc)
+  // pin control example over the Internet (i.e. turning on/off a light, a relay, etc)
   thing["led"] << digitalPin(LED_BUILTIN);
 
   // resource output example (i.e. reading a sensor value, a variable, etc)
@@ -555,7 +553,7 @@ Our recommended versioning system follows the Semantic Versioning ([SemVer](http
 * **Minor**: Incremented for added functionality in a backwards-compatible manner.
 * **Patch**: Incremented for backwards-compatible bug fixes.
 
-To define your firmware version, it is required to define a preprocessor definition called `THINGER_OTA_VERSION`. This is used inside the firmware and VS Code to decide when a device requires an update.
+To define the firmware version, it is required to define a preprocessor definition called `THINGER_OTA_VERSION`. This is used inside the firmware and VS Code to decide when a device requires an update.
 
 Each time an OTA update process is started, the system will display a confirmation dialog showing the details of the firmware to be uploaded. This dialog includes the device name, firmware version, and the environment. It ensures that the user is informed about the firmware update specifics before proceeding, providing an additional layer of verification.
 
@@ -573,11 +571,11 @@ It is possible to define the firmware version in different places, such as:
 * Through external build flags
 * Based on version control, like git tags
 
-Below, we describe the different alternatives in detail.
+Different alternatives are described in detail below.
 
 ### Fixed on Code
 
-Define `THINGER_OTA_VERSION` in code before Thinger.io includes. This method involves hardcoding the firmware version directly in your source files. Each time you need to update the firmware version, you must manually change the version number in the code and redeploy the firmware.
+Define `THINGER_OTA_VERSION` in the code before Thinger.io includes. This method requires hardcoding the firmware version directly in the source files. Each firmware version update necessitates a manual change of the version number in the code and subsequent redeployment of the firmware.
 
 {% code title="main.cpp" %}
 ```cpp
@@ -591,7 +589,7 @@ Define `THINGER_OTA_VERSION` in code before Thinger.io includes. This method inv
 
 ### Fixed Build Flag
 
-Create a build flag in `platformio.ini` with a static version definition. This approach sets the firmware version through build configuration. To update the firmware version, you need to modify the version number in the `platformio.ini` file and rebuild the firmware.
+Create a build flag in `platformio.ini` with a static version definition. This approach sets the firmware version through build configuration. To update the firmware version, modify the version number in the `platformio.ini` file and rebuild the firmware.
 
 {% code title="platformio.ini" %}
 ```ini
@@ -602,7 +600,7 @@ build_flags =
 
 ### Dynamic Build Flag
 
-This is the recommended approach and consists of dynamically setting the firmware version based on version control information, such as git tags. This method ensures the firmware version is automatically updated based on the latest git tag, reducing manual intervention. Each time you tag a new version in git, the build process will automatically use this tag as the firmware version.
+This is the recommended approach and consists of dynamically setting the firmware version based on version control information, such as git tags. This method ensures the firmware version is automatically updated based on the latest git tag, reducing manual intervention. Each time a new version in git is tagged, the build process will automatically use this tag as the firmware version.
 
 To achieve this configuration, it is required to modify the `platformio.ini` file and include a build flag that will be dynamically composed using the `git describe` command. This command retrieves the latest git tag and uses it to set the `THINGER_OTA_VERSION` preprocessor definition.
 

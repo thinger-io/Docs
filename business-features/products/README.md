@@ -11,20 +11,20 @@ Have an IoT product and want to simplify its management at scale? Configure data
 
 ## Features
 
-A product inside Thinger.io is a way to define behaviors for a set of devices of the same type. At this moment it is able to offer different capabilities:
+A product inside Thinger.io is a way to define behaviors for a set of devices of the same type. At this moment, it is able to offer different capabilities:
 
 * [**Product Profile**](product-profile/)**:** The product profile in Thinger.io serves as the central hub for configuring a product, providing access to various tools such as setting device properties, time series data storage, custom API creation, and custom scripts for tailored payloads and functionalities.
   * [**Properties**](product-profile/properties.md): Store and manage various metadata related to the devices in a fleet, including the latest device state, owner information, device information, location, custom configuration, and more. This helps organizations to keep track of their devices and make quick updates when needed.
   * [**Buckets**](product-profile/buckets.md): Automatic storage of time-series data for a specified resource name/interval or MQTT topic. This helps organizations effectively manage and analyze data from large numbers of IoT devices.
   * [**API Resources**](product-profile/api-resources.md): Unified API access for various devices and protocols, payload processing capabilities, and compatibility with MQTT and the Device API Explorer. These features simplify the integration of different devices and systems, making it easier to test and manage them.
-  * [**Scripts**](product-profile/scripts.md): All data related to a Product can be handled and processed over Scripts for processing payloads in different formats, converting units, creating virtual functions to generate calculated data, etc. There are endless possibilities.
-* [**Product Dashboard**](product-dashboard.md): Create a single dashboard layout for each Product. Each device will display this dashboard automatically with its own set of data from properties, and data buckets, and will be able to interact with the device using the unified API Resources. Example of a Shelly Plug S dashboard:
+  * [**Scripts**](product-profile/scripts.md): All data related to a Product can be handled and processed through Scripts for processing payloads in different formats, converting units, creating virtual functions to generate calculated data, etc. There are endless possibilities.
+* [**Product Dashboard**](product-dashboard.md): Create a single dashboard layout for each Product. Each device will display this dashboard automatically with its own set of data from properties and data buckets, and will be able to interact with the device using the unified API Resources. Example of a Shelly Plug S dashboard:
 
-<figure><img src="../../.gitbook/assets/image (55).png" alt=""><figcaption><p>Product Dashboard example over a Shelly Plug S device</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (55) (1).png" alt=""><figcaption><p>Product Dashboard example over a Shelly Plug S device</p></figcaption></figure>
 
-* [**Product Services**](product-dashboard.md): Devices using the IOTMP protocol can provide extended features aside from remote sensing and actuation. At this moment, it includes the possibility to access remotely to web services (using Linux Clients). For example, it will allow controlling the router/gateway admin panel; 3D Printer monitoring page; or any other Industrial product which includes a web frontend for its management. All without using any VPN. Here is an example of remote PLCs management, using in this case PiCtory from [Revolution Pi](https://revolutionpi.com/).
+* [**Product Services**](product-dashboard.md): Devices using the IOTMP protocol can provide extended features aside from remote sensing and actuation. At this moment, it includes the possibility to access web services remotely (using Linux Clients). For example, it will allow controlling the router/gateway admin panel, 3D Printer monitoring page, or any other Industrial product that includes a web frontend for its management. All without using any VPN. Here is an example of remote PLCs management, using in this case PiCtory from [Revolution Pi](https://revolutionpi.com/).
 
-<figure><img src="../../.gitbook/assets/image (54).png" alt=""><figcaption><p>Product Remote Web Services - Kunbus Revolutiion Pi Example</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (54) (1).png" alt=""><figcaption><p>Product Remote Web Services - Kunbus Revolutiion Pi Example</p></figcaption></figure>
 
 ## Examples
 
@@ -34,14 +34,14 @@ Don´t want to read the whole documentation? Take a look at some of the availabl
 
 ## Marketplace
 
-Want to integrate your Product into our Plugin Marketplace? Just [**become a Partner**](https://thinger.io/become-a-partner)!
+Want to integrate the Product into our Plugin Marketplace? Just [**become a Partner**](https://thinger.io/become-a-partner)!
 
 Some of its benefits are:
 
 * The product is directly available as a Plugin from the Thinger.io Marketplace.&#x20;
-* Zero-pain integration for your customers. Just a few clicks to have hundreds of devices managed at scale.
-* Your products and brand are featured on our web and marketplace. It provides broad visibility in one of the largest IoT Communities.
-* Best-in-class integration for your products. On-demand training and integration development by Thinger.io experts.
-* Private Cloud for demos and POCs with your customers.
+* Zero-pain integration for the customers. Just a few clicks to have hundreds of devices managed at scale.
+* The products and brand are featured on our website and marketplace. It provides broad visibility in one of the largest IoT Communities.
+* Best-in-class integration for the products. On-demand training and integration development by Thinger.io experts.
+* Private Cloud for demos and POCs with the customers.
 
 {% embed url="https://thinger.io/become-a-partner" %}

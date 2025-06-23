@@ -2,25 +2,25 @@
 
 ## Introduction
 
-ESP32 is a series of low-cost, low-power system on a chip microcontrollers with integrated Wi-Fi and dual-mode Bluetooth. There are multiple modules based on this microcontroller that includes different kinds of antennas, pinouts and memory extensions. It is the successor to the ESP8266 microcontroller and is designed to be one of the most relevant IoT impulsor during the next years and there is a great diversity of variants that exploit its capacities together with other peripherals, integrating LoRa communication, audio amplifiers, LCD screens, etc.
+ESP32 is a series of low-cost, low-power system-on-chip microcontrollers with integrated Wi-Fi and dual-mode Bluetooth. There are multiple modules based on this microcontroller that include different kinds of antennas, pinouts and memory extensions. It is the successor to the ESP8266 microcontroller and is designed to be one of the most relevant IoT impulsors during the next years and there is a great diversity of variants that exploit its capacities together with other peripherals, integrating LoRa communication, audio amplifiers, LCD screens, etc.
 
 ![ESP32 WROOM DEV MODULE](../.gitbook/assets/ESP32.png)
 
 ## Install On Arduino IDE
 
-This device can be programmed directly from the Arduino IDE by including the ESP32 core libraries with Arduino Boards Manager. For this step, you will need first to include [https://dl.espressif.com/dl/package\_esp32\_index.json](https://dl.espressif.com/dl/package\_esp32\_index.json) into `Additional Board Manager URLs` field in the Arduino preferences.
+This device can be programmed directly from the Arduino IDE by including the ESP32 core libraries with the Arduino Boards Manager. For this step, include this first: [https://dl.espressif.com/dl/package\_esp32\_index.json](https://dl.espressif.com/dl/package_esp32_index.json) into `Additional Board Manager URLs` field in the Arduino preferences.
 
-![](../.gitbook/assets/ESP32\_Preferences.PNG)
+![](../.gitbook/assets/ESP32_Preferences.PNG)
 
 Next, go to the Boards manager to install the ESP32 package. Search for the `esp32` and install the package **esp32 by Espressif Systems**
 
-![](../.gitbook/assets/esp32\_boardsManager.PNG)
+![](../.gitbook/assets/esp32_boardsManager.PNG)
 
-After this process you should be able to select this board on your Arduino IDE and start creating your IoT projects with Thinger.io.&#x20;
+After this process, this board should be selectable on the Arduino IDE, allowing for the creation of IoT projects with Thinger.io.
 
 ## ESP32 WiFi
 
-The following example will allow connecting your device to the cloud platform in a few lines via WiFi interface. Just modify the `arduino_secrets.h` file with your own information.
+This example will allow connecting a device to the cloud platform in a few lines via the WiFi interface. The `arduino_secrets.h` file just needs to be modified with the relevant information.
 
 {% tabs %}
 {% tab title="ESP32.ino" %}
@@ -72,7 +72,7 @@ void loop() {
 {% tabs %}
 {% tab title="ESP32Eth.ino" %}
 ```cpp
-// It may be required to define this according to your specific board
+// It may be required to define this according to a specific board
 // Example RMII LAN8720 (Olimex, etc.)
 #ifndef ETH_PHY_TYPE
 #define ETH_PHY_TYPE  ETH_PHY_LAN8720
@@ -108,7 +108,7 @@ void setup() {
     // enable serial for debugging
     Serial.begin(115200);
 
-    // example of fixed ip address (dhcp is used by default)
+    // example of fixed IP address (DHCP is used by default)
     //thing.set_address("192.168.1.55", "192.168.1.1", "255.255.255.0", "8.8.8.8", "8.8.4.4");
 
     // set desired hostname
@@ -174,19 +174,19 @@ void loop() {
 {% endtab %}
 {% endtabs %}
 
-Once this sketch is loaded in the device, it is possible to follow the next steps to connect it to the platform:
+Once this sketch is loaded on the device, it is possible to follow the next steps to connect it to the platform:
 
-1. Connect to Thinger-Device WiFi with your computer or phone, using `thinger.io` as WiFi password
-2. Wait for the configuration window, or navigate to [http://192.168.4.1](http://192.168.4.1) if it does not appear
-3. Configure the wifi where the ESP32 will be connected, and your thinger.io device credentials
-4. Your device should be now connected to the platform.
+1. Connect to the "Thinger-Device" WiFi with a computer or phone, using "thinger.io" as the WiFi password.
+2. Wait for the configuration window, or navigate to [http://192.168.4.1](http://192.168.4.1) if it does not appear.
+3. Configure the WiFi network to which the ESP32 will connect, and input the Thinger.io device credentials.
+4. The device should now be connected to the platform.
 
 The WebConfig interface includes different methods to control the captive portal:
 
-* **clean\_credentials**: It clean all credentials from the device (WiFi/user parameters). This way, the next time the device is booted will create the captive portal again to request the WiFi configuration. It can be executed after a long press on a button.&#x20;
-* **set\_user**: Initializes the default user for connecting the device to the platform (if set, this parameter is not requested to the user in the captive portal).
-* **set\_device**: Initializes the default device for connecting the device to the platform (if set, this parameter is not requested to the user in the captive portal).
-* **set\_password**: Initializes the default device password for connecting the device to the platform (if set, this parameter is not requested to the user in the captive portal).
+* **clean\_credentials**: It cleans all credentials from the device (WiFi/user parameters). This way, the next time the device is booted will create the captive portal again to request the WiFi configuration. It can be executed after a long press on a button.&#x20;
+* **set\_user**: Initializes the default user for connecting the device to the platform (if set, this parameter is not requested from the user in the captive portal).
+* **set\_device**: Initializes the default device for connecting the device to the platform (if set, this parameter is not requested from the user in the captive portal).
+* **set\_password**: Initializes the default device password for connecting the device to the platform (if set, this parameter is not requested from the user in the captive portal).
 * **add\_setup\_parameter**: Add additional parameters to be requested in the captive portal, for example, any other configuration required for the execution: sampling intervals, meta-data, thresholds, etc.
 * **set\_on\_config\_callback**: Set a callback to receive configuration provided by the user in the captive portal, i.e., user, device, password, or any additional parameter configured.
 * **set\_on\_wifi\_config**: Set a callback to receive the result of the WiFi configuration. If the connection did not succeed, it can be used to clean credentials, so, the captive portal runs again.

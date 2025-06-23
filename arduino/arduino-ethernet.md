@@ -2,15 +2,15 @@
 
 ## Introduction
 
-Using Arduino with Ethernet is a great option for connecting your Arduino board to the Internet in a few minutes. It provides a fastest and reliable connectivity to your IoT devices. There are Ethernet shields that can extend Arduino features, like the Arduino Ethernet Shield for standard Arduinos, or the Arduino MKR ETH Shield for MKR devices. There are also external modules that can be plugged to any microcontroller, like the ENC28J60 module.&#x20;
+Using Arduino with Ethernet is a great option for connecting the Arduino board to the Internet in a few minutes. It provides the fastest and reliable connectivity to the IoT devices. There are Ethernet shields that can extend Arduino features, like the Arduino Ethernet Shield for standard Arduinos, or the Arduino MKR ETH Shield for MKR devices. There are also external modules that can be plugged into any microcontroller, like the ENC28J60 module.&#x20;
 
-In this documentation we cover how to connect devices over Ethernet by using both approaches, the default Arduino Ethernet Shields, and the external ENC28J60 module.
+In this documentation, we cover how to connect devices over Ethernet by using both approaches, the default Arduino Ethernet Shields, and the external ENC28J60 module.
 
 ## Arduino Portenta H7 Ethernet
 
-Portenta H7 simultaneously runs high level code along with real time tasks. The design includes two processors that can run tasks in parallel. For example, is possible to execute Arduino compiled code along with MicroPython one, and have both cores to communicate with one another. The Portenta functionality is two-fold, it can either be running like any other embedded microcontroller board, or as the main processor of an embedded computer.&#x20;
+Portenta H7 simultaneously runs high-level code along with real-time tasks. The design includes two processors that can run tasks in parallel. For example, it is possible to execute Arduino compiled code along with MicroPython code, and have both cores communicate with one another. The Portenta functionality is two-fold, it can either be running like any other embedded microcontroller board or as the main processor of an embedded computer.&#x20;
 
-H7's main processor is the dual core STM32H747 including a Cortex® M7 running at 480 MHz and a Cortex® M4 running at 240 MHz. The two cores communicate via a _Remote Procedure Call_ mechanism that allows calling functions on the other processor seamlessly.
+H7's main processor is the dual-core STM32H747, including a Cortex® M7 running at 480 MHz and a Cortex® M4 running at 240 MHz. The two cores communicate via a _Remote Procedure Call_ mechanism that allows calling functions on the other processor seamlessly.
 
 ![Arduino Portenta H7](<../.gitbook/assets/image (313).png>)
 
@@ -63,14 +63,14 @@ void loop() {
 {% endtabs %}
 
 {% hint style="success" %}
-In case of problems when connecting over secure TLS connections, you can try updating the WiFi firmware by flashing the WiFiFirmwareUpdater example sketch.
+In case of problems when connecting over secure TLS connections, try updating the WiFi firmware by flashing the WiFiFirmwareUpdater example sketch.
 
 <img src="../.gitbook/assets/image (623) (1).png" alt="" data-size="original">
 {% endhint %}
 
 ## Arduino Opta Ethernet
 
-The Arduino Opta is designed for industrial automation, offering robust performance and reliability. It features a dual-core STM32H747 microcontroller, which includes a Cortex® M7 running at 480 MHz and a Cortex® M4 running at 240 MHz. This configuration enables the Opta to handle complex real-time tasks and high-level code execution concurrently.
+The Arduino Opta is designed for industrial automation, offering robust performance and reliability. It features a dual-core STM32H747 microcontroller, which includes a Cortex® M7 running at 480 MHz and a Cortex® M4 running at 240 MHz. This configuration enables Opta to handle complex real-time tasks and high-level code execution concurrently.
 
 With its versatile architecture, the Opta supports running Arduino sketches alongside MicroPython, allowing developers to leverage the strengths of both programming environments. The dual-core setup facilitates inter-core communication via Remote Procedure Call, ensuring smooth and efficient coordination between the two processors. This capability makes the Arduino Opta ideal for advanced automation systems, where precise control and rapid response are crucial.
 
@@ -112,7 +112,7 @@ void setup() {
     pinMode(D2, OUTPUT);
     pinMode(D3, OUTPUT);
 
-    // example for controlling relays and status led
+    // example for controlling relays and status LED
     thing["relay_d0"] << [](pson& in){
         if(in.is_empty()){
             in = (bool) digitalRead(D0);
@@ -149,7 +149,7 @@ void setup() {
         }
     };
 
-    // example for controlling led
+    // example for controlling the LED
     thing["led"] << digitalPin(LED_BUILTIN);
     thing["led_r"] << digitalPin(LEDR);
 
@@ -180,7 +180,7 @@ void loop() {
 {% endtabs %}
 
 {% hint style="success" %}
-In case of problems when connecting over secure TLS connections, you can try updating the WiFi firmware by flashing the WiFiFirmwareUpdater example sketch.
+In case of problems when connecting over secure TLS connections, try updating the WiFi firmware by flashing the WiFiFirmwareUpdater example sketch.
 
 <img src="../.gitbook/assets/image (623) (1).png" alt="" data-size="original">
 {% endhint %}
@@ -189,7 +189,7 @@ In case of problems when connecting over secure TLS connections, you can try upd
 
 ![Arduino Ethernet Shield](../.gitbook/assets/arduino-ethernet.png)
 
-The following example will allow connecting your Arduino device with the Ethernet Shield to the cloud platform in a few lines. Just modify the `arduino_secrets.h` file with your own information.
+This example will allow connecting the Arduino device with the Ethernet Shield to the cloud platform in a few lines. The `arduino_secrets.h` file just needs to be modified with the relevant information.
 
 {% tabs %}
 {% tab title="ArduinoEthernet.ino" %}
@@ -233,13 +233,13 @@ void loop() {
 
 ## Arduino with ENC28J60
 
-The ENC28J60 is a very cheap Ethernet controller that can be used with our Arduinos to extend its connectivity. The main advantage of this controller is that it is inexpensive, as you can find this module for a few dollars. The bad news is that all the TCP/IP stack, DNS features, and so on, must run in the microcontroller itself, so there is no enough space in stock Arduinos for building our program. This way, for integrating the thinger.io libraries in the sketch, it would be necessary to disable the DHCP protocol (that uses UDP under the hood), and assign a manual IP address. If this is OK for your project, or you have a compatible microcontroller with more resources (like ESP8266, Teensy, STM32F, etc), then this module can be a great option.
+The ENC28J60 is a very cheap Ethernet controller that can be used with our Arduinos to extend their connectivity. The main advantage of this controller is that it is inexpensive, as this module costs a few dollars. The bad news is that all the TCP/IP stack, DNS features, and so on, must run in the microcontroller itself, so there is not enough space in stock Arduinos for building our program. This way, for integrating the thinger.io libraries in the sketch, it would be necessary to disable the DHCP protocol (which uses UDP under the hood) and assign a manual IP address. If this is suitable for a project, or if a compatible microcontroller with more resources (such as ESP8266, Teensy, STM32F, etc.) is available, then this module can be a great option.
 
 ![ENC28J60 Ethernet Module](../.gitbook/assets/ENC28J60.jpg)
 
-There are some libraries for managing this boards, but we will use [UIPEthernet](https://github.com/ntruchsess/arduino_uip), as it provides an standard interface that is compatible with the stock Thinger libraries.
+There are some libraries for managing these boards, but we will use [UIPEthernet](https://github.com/ntruchsess/arduino_uip), as it provides a standard interface that is compatible with the stock Thinger libraries.
 
-The following example will allow connecting a device using the ENC28J60 interface to the cloud platform in a few lines using the WiFi interface. Just modify the `arduino_secrets.h` file with your own information.
+This example will allow connecting a device using the ENC28J60 interface to the cloud platform in a few lines using the WiFi interface. The `arduino_secrets.h` file just needs to be modified with the relevant information.
 
 {% tabs %}
 {% tab title="ArduinoENC28J60.ino" %}

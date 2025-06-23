@@ -25,7 +25,7 @@ By following these steps, you can start connecting your device to the Thinger.io
 The best way to start connecting your device is by using the Arduino IDE and loading an example for your device from the Thinger.io client library in File > Examples > thinger.io.
 {% endhint %}
 
-Please, select the device typology you want to connect to get detailed instructions for each specific device.
+Please select the device typology you want to connect to get detailed instructions for each specific device.
 
 {% content-ref url="espressif-esp32.md" %}
 [espressif-esp32.md](espressif-esp32.md)

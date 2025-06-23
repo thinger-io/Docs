@@ -17,42 +17,42 @@ coverY: 0
 
 * Products now display a **graph view** of data sources and targets, helping visualize the flow configuration within the product profile.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Product Graph View</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (60).png" alt=""><figcaption><p>Product Graph View</p></figcaption></figure>
 
 * Added **property-level permissions** in products to control which device properties a project member can view or edit.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Property-level permissions on products to control access on project members.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (2).png" alt=""><figcaption><p>Property-level permissions on products to control access on project members.</p></figcaption></figure>
 
 * It is now possible to **edit dashboards on individual devices** (when inherited from a product). Editing can be restricted through new property permissions, allowing project owners to override the product dashboard while limiting access for end users.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Dashboards editions at device level, to override a product dashboard.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (2).png" alt=""><figcaption><p>Dashboards editions at device level, to override a product dashboard.</p></figcaption></figure>
 
 * Introduced **user properties**, available under _Profile > Properties_. These will be further integrated into other system areas such as alarms, custom forms, and automations.
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>User Properties under Profile > Properties.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (2).png" alt=""><figcaption><p>User Properties under Profile > Properties.</p></figcaption></figure>
 
 * Added support for **MongoDB Transforms**, offering the same functionality previously available for InfluxDB. MongoDB now provides full parity in terms of data processing capabilities.
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>Data transform on MongoDB buckets backends.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (2).png" alt=""><figcaption><p>Data transform on MongoDB buckets backends.</p></figcaption></figure>
 
 * Initial support for using **Device Buckets** as data sources in dashboards. Device Buckets are defined at the product level. This avoids the need to share a root bucket when sharing devices across projects.
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption><p>Device Buckets are inherited from Product buckets definition.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (2).png" alt=""><figcaption><p>Device Buckets are inherited from Product buckets definition.</p></figcaption></figure>
 
 * Introduced **Group Hierarchies**: you can now create nested groups and subgroups, enabling more organized asset structures.
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>Group Hierarchies to enable subgroups.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (2).png" alt=""><figcaption><p>Group Hierarchies to enable subgroups.</p></figcaption></figure>
 
 * Project members can now be **restricted to specific groups or subgroups** within a project.
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption><p>New member permissions to restrict access to specific asset groups.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (2).png" alt=""><figcaption><p>New member permissions to restrict access to specific asset groups.</p></figcaption></figure>
 
 * New **Flow** feature in the Product Profile, enabling the definition of custom **sources** and **targets**.\
   You can now redirect data flows, for example, from a topic to an HTTP endpoint, or from a device property update to a topic. This feature deprecates the previous Endpoint, as it is much more versatile.
 
-<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption><p>New Flow feature in the Product Profile</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10) (2).png" alt=""><figcaption><p>New Flow feature in the Product Profile</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption><p>Flow configuration interface in the Product Profile, showing available target options such as Device Resource, Endpoint Call, and Product Function.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11) (2).png" alt=""><figcaption><p>Flow configuration interface in the Product Profile, showing available target options such as Device Resource, Endpoint Call, and Product Function.</p></figcaption></figure>
 
 * Initial support for **mTLS (mutual TLS)** on MQTT devices. This feature is currently under testing in selected deployments and is not yet intended for production use. Contact us for early access or details.
 * Dashboards now implement lazy-loading to avoid fetching data from all tabs until they are accessed. This significantly improves loading times on large dashboards.
@@ -167,7 +167,7 @@ coverY: 0
 * **Console Component**: Updated to Angular with text search functionality.
 *
 
-    <figure><img src="../.gitbook/assets/image (12) (1).png" alt=""><figcaption><p>New console component migrated to Angular</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (12) (1) (1).png" alt=""><figcaption><p>New console component migrated to Angular</p></figcaption></figure>
 * **Charts**: Migrated to Angular using `ng-apexcharts`, resolving several issues.
 * **Location Updates**: Location properties now update with the current latitude and longitude values.
 * **File Storage API**:
@@ -543,7 +543,7 @@ Once the claim is completed, the process may request the configuration of the de
 
 * Widgets now have a "Show Offline" parameter to "turn off" the widget if the data is not recent.
 
-<figure><img src="../.gitbook/assets/image (77).png" alt=""><figcaption><p>Show Offline Configuration based on Timespan.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (77) (1).png" alt=""><figcaption><p>Show Offline Configuration based on Timespan.</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/alarm.gif" alt=""><figcaption><p>Widget displayed as "Disconnected".</p></figcaption></figure>
 
@@ -581,20 +581,20 @@ Once the claim is completed, the process may request the configuration of the de
 
 
 
-    <figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption><p>Alarm Rule Configuration</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (13) (1).png" alt=""><figcaption><p>Alarm Rule Configuration</p></figcaption></figure>
 
     * Multiple endpoint notifications on activation, normalization or reminder, i.e., for sending an email, a message to mobile, etc.
     * Alarm instance management via Acknowledge, Shelve, Latch, or Clear, including reactivation timeouts and operator annotations.
 
-<div align="center" data-full-width="false"><figure><img src="../.gitbook/assets/image (66).png" alt="Alarm Instances"><figcaption><p>Alarm Instances</p></figcaption></figure></div>
+<div align="center" data-full-width="false"><figure><img src="../.gitbook/assets/image (66) (1).png" alt="Alarm Instances"><figcaption><p>Alarm Instances</p></figcaption></figure></div>
 
 * Support for cloning almost any thinger.io resource, from dashboards to data buckets, file storage, and projects.
 
-<figure><img src="../.gitbook/assets/image (38).png" alt=""><figcaption><p>Clone Resource Functionality</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (38) (1).png" alt=""><figcaption><p>Clone Resource Functionality</p></figcaption></figure>
 
 * HTTP endpoints now support embedded NodeJS 🧑‍💻 scripts for custom payload processing when calling third-party services.
 
-<figure><img src="../.gitbook/assets/image (32).png" alt=""><figcaption><p>HTTP Endpoints with custom NodeJS Payload processor</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (32) (1).png" alt=""><figcaption><p>HTTP Endpoints with custom NodeJS Payload processor</p></figcaption></figure>
 
 **Improved**
 
