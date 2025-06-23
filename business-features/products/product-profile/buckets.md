@@ -1,5 +1,5 @@
 ---
-description: Store time series data from the devices with a few clicks.
+description: Store time series data from your devices with a few clicks.
 ---
 
 # Buckets
@@ -51,8 +51,6 @@ The bucket must **NOT** be created manually, as the product is able to initializ
 
 Any bucket with a fixed identifier, i.e., "productA\_temperature", will be created with two tags on it: `device` and `group`. As multiple devices can be writing to the same bucket simultaneously, tags let the platform differentiate all the different sources (and groups) that are writing to the bucket:
 
-<img src="../../../.gitbook/assets/image (57) (1).png" alt="" data-size="original">
-
 * **device**: This will contain the identifier of the device that originated the data (i.e., the publisher on a specific topic). It is automatically populated by the product and should not be part of the payload.
 * **group**: This will contain the device group, as it can be useful for creating dashboards with aggregated data by groups, i.e., average consumption of devices on floor 1. It is automatically filled by the product and should not arrive in the payload.
 
@@ -73,10 +71,6 @@ Note that if the bucket identifier on the Product contains the `{{device}}` plac
 ## Bucket Source
 
 A bucket can fetch time series data automatically from different sources:
-
-* [**None**](buckets.md#none)**:** Used if the bucket should not be updated from any source.
-* [**Device Resource**](buckets.md#device-resource): Used if the value to insert in a bucket must be taken from an IOTMP device resource.
-* [**Device Topic**](buckets.md#device-topic): Used if the value to insert in a bucket must be taken from a topic (MQTT).
 
 <figure><img src="../../../.gitbook/assets/image (68) (1).png" alt="" width="563"><figcaption><p>Product Bucket - Bucket Source Configuration</p></figcaption></figure>
 
