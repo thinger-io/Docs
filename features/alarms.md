@@ -189,7 +189,7 @@ The alarm list also includes several control functions that appear when one or m
 
 The Alarms Inspector in Thinger.io is a tool designed to provide detailed insights into alarm behavior. It helps users track and analyze the alert system by displaying the event history of alarms. It aids in understanding the lifecycle and behavior of each alarm by providing a detailed timeline of events.
 
-**Filtering Options**&#x20;
+## **Filtering Options**&#x20;
 
 The Alarms Inspector offers several filtering options, allowing users to **focus on specific alarm event types**. These filters include:
 
@@ -203,3 +203,19 @@ The Alarms Inspector offers several filtering options, allowing users to **focus
 * **alarm\_rule\_execute:** Displays events where an alarm rule is executed, showing the process of checking conditions and triggering alarms.
 * **alarm\_rule\_update:** Shows events where an alarm rule is updated with new parameters or conditions.
 
+## Device-events&#x20;
+
+The platform provides access to a set of system-generated signals that represent the current **state and metadata** of each device. These signals can be used for monitoring, automation, and alarm generation.
+
+The available fields include:
+
+* **device**: The unique identifier (device ID).
+* **created**: Timestamp indicating when the device was initially created.
+* **modified**: Timestamp of the most recent configuration change.
+* **enabled**: Boolean flag indicating whether the device is currently enabled or disabled.
+* **connection.ts**: Timestamp of the last known connection activity.
+* **connection.active**: Boolean indicating whether the device is currently connected.
+
+These signals are particularly useful for building automation logic or triggering alerts based on device status. For instance, a common practice when defining alarms is to **verify that a device is both disconnected and enabled**, in order to avoid generating alerts for devices that are intentionally disabled (e.g., under maintenance or decommissioned).
+
+By leveraging these signals, users can implement reliable and meaningful monitoring flows that reflect the real operational status of their IoT infrastructure.
