@@ -68,13 +68,11 @@ Remember that Sigfox devices do not share the concept of "connected devices", as
 
 For this example, the Arduino IDE will be used with an ESP8266 device, such as the NodeMCU. The example code for the ESP8266 can be opened and filled in with the device details: the username, the device ID, and the device credentials established during device creation. These pictures illustrate the relationship between the code and the device created in the account.
 
-<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (766).png" alt=""><figcaption></figcaption></figure>
 
 Once we have established in the code our account identifier, device identifier, and device credentials, we can compile and flash the program. Meanwhile, we can open our device in the cloud console, just by clicking its identifier in the devices list. On the device screen, information regarding the device will be visible, such as its IP address, connection status, and sent/received data in real time. By default, the device will appear as disconnected:
 
-<figure><img src="../.gitbook/assets/image (62).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
 
 Once the device gets connected to the account, the interface will change its status, showing "Online" status, and some connection data like the IP address or the upload/download data amount:
 
@@ -127,7 +125,7 @@ If our device is connected to the platform, we can open our device API explorer 
 
 ![](../.gitbook/assets/leddd.png)
 
-<figure><img src="../.gitbook/assets/buttt.png" alt="" width="476"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/buttt.png" alt=""><figcaption></figcaption></figure>
 
 
 
