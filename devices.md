@@ -6,20 +6,6 @@ description: >-
 cover: >-
   https://images.unsplash.com/photo-1524234107056-1c1f48f64ab8?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw0fHxlc3A4MjY2fGVufDB8fHx8MTcxNzQ5NzI5MXww&ixlib=rb-4.0.3&q=85
 coverY: -72.00266666666667
-layout:
-  cover:
-    visible: true
-    size: hero
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
 ---
 
 # CONNECT A DEVICE

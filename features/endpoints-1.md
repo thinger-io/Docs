@@ -77,8 +77,8 @@ This endpoint is pre-configured to send data to a Telegram bot in a simple way a
 
 ![](../.gitbook/assets/epep.png)
 
-The next parameters need to be configured to work with telegram bot:
+The next parameters need to be configured to work with Telegram bot:
 
-* **Bot Token**: Is the bot identification and authorization stream, this parameter can be left empty on this form in order to specify it directly in the device source code with the key "token".
-* **Chat Identifier**: Is a 10 digits chat identificator that can be obtained from Telegram conversation information. It can be left empty at this configuration and be called in the source code with the key "chat".
-* **Chat Message**: Is the text and device data that wants to be sent in the message, it can be specify here or hard coded in the device to be send on the endpoint call with the key "message".
+* **Bot Token**: Is the bot identification and authorization stream; this parameter can be left empty on this form in order to specify it directly in the device source code with the key "token".
+* **Chat Identifier**: Is a 10-digit chat identifier that can be obtained from Telegram conversation information. It can be left empty at this configuration and be called in the source code with the key "chat".
+* **Chat Message**: The text and device data that is to be sent in the message can be specified here or hardcoded in the device to be sent on the endpoint call with the key "message".

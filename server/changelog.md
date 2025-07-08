@@ -21,27 +21,27 @@ coverY: 0
 
 * Added **property-level permissions** in products to control which device properties a project member can view or edit.
 
-<figure><img src="../.gitbook/assets/image (1) (2).png" alt=""><figcaption><p>Property-level permissions on products to control access on project members.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (2) (1).png" alt=""><figcaption><p>Property-level permissions on products to control access on project members.</p></figcaption></figure>
 
 * It is now possible to **edit dashboards on individual devices** (when inherited from a product). Editing can be restricted through new property permissions, allowing project owners to override the product dashboard while limiting access for end users.
 
-<figure><img src="../.gitbook/assets/image (2) (2).png" alt=""><figcaption><p>Dashboards editions at device level, to override a product dashboard.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (2) (1).png" alt=""><figcaption><p>Dashboards editions at device level, to override a product dashboard.</p></figcaption></figure>
 
 * Introduced **user properties**, available under _Profile > Properties_. These will be further integrated into other system areas such as alarms, custom forms, and automations.
 
-<figure><img src="../.gitbook/assets/image (3) (2).png" alt=""><figcaption><p>User Properties under Profile > Properties.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (2) (1).png" alt=""><figcaption><p>User Properties under Profile > Properties.</p></figcaption></figure>
 
 * Added support for **MongoDB Transforms**, offering the same functionality previously available for InfluxDB. MongoDB now provides full parity in terms of data processing capabilities.
 
-<figure><img src="../.gitbook/assets/image (4) (2).png" alt=""><figcaption><p>Data transform on MongoDB buckets backends.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (2) (1).png" alt=""><figcaption><p>Data transform on MongoDB buckets backends.</p></figcaption></figure>
 
 * Initial support for using **Device Buckets** as data sources in dashboards. Device Buckets are defined at the product level. This avoids the need to share a root bucket when sharing devices across projects.
 
-<figure><img src="../.gitbook/assets/image (5) (2).png" alt=""><figcaption><p>Device Buckets are inherited from Product buckets definition.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (2) (2).png" alt=""><figcaption><p>Device Buckets are inherited from Product buckets definition.</p></figcaption></figure>
 
 * Introduced **Group Hierarchies**: you can now create nested groups and subgroups, enabling more organized asset structures.
 
-<figure><img src="../.gitbook/assets/image (6) (2).png" alt=""><figcaption><p>Group Hierarchies to enable subgroups.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (2) (2).png" alt=""><figcaption><p>Group Hierarchies to enable subgroups.</p></figcaption></figure>
 
 * Project members can now be **restricted to specific groups or subgroups** within a project.
 

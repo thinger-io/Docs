@@ -1,16 +1,5 @@
 ---
 description: This section explains how to identify and solve connection issues
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # TROUBLESHOOTING

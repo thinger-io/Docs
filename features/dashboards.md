@@ -34,7 +34,7 @@ Clicking on the blue "Add Dashboard" button, the new dashboard will be added to 
 
 Initially, the dashboard is empty and set to view mode, which means no changes can be made. To enable modifications, first click the button in the top-right corner to activate edit mode. This action will then reveal a new menu containing options for settings, adding a new tab, or inserting a widget:
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (2).png" alt=""><figcaption></figcaption></figure>
 
 The dashboard edition mode allows moving or resizing existing widgets, but also enables different options using the left-side buttons, such as:
 
@@ -59,7 +59,7 @@ When the edit mode is enabled in the dashboard, a new button `Add Widget` will a
 * **Background**: Optional color for the widget background (defaults to white).
 * **Type:** Click on 'Select widget type' to see a wide variety of widgets available
 
-### Widget list:
+### Widget list
 
 | **Category**          | **Widget**                                                                         | **Description**                                                    |
 | --------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
@@ -87,7 +87,7 @@ When the edit mode is enabled in the dashboard, a new button `Add Widget` will a
 
 As soon as a Widget type is selected, a new tab will pop up:
 
-### **Data Sources:**
+### **Data Sources**
 
 This section serves as an introduction to configuring data visualization, enabling the user to specify the origin of the information. It offers choices such as real-time data from connected devices, historical data from devices or data buckets, device properties, or direct manual input. Subsequently, the different parameters pertinent to each widget type are described:
 
@@ -118,6 +118,8 @@ Some display-type widgets provide aggregation features that can be selected in o
 * **Data Aggregation**: Showing raw data directly from a Bucket could be tricky when there are a lot of data points, especially if the measures are very noisy or irregular. This feature allows aggregating data using different statistics such as medians, means, minimum and maximum values, a counter of data points per period, and a data summary. The aggregation can be applied over different intervals that go from five minutes to one week, by using the next configuration inputs in the widget form, and also using the upper-right parameters on each time series chart widget.
 * **Data Transformation:** Some display-type widgets (time-series chart, HTML series) have a **Transform** selector, which works as an on-the-fly filter applied _after_ the raw value is fetched from the device or bucket but _before_ the widget renders it. The goal is to save users from rewriting firmware or setting up a separate data-processing pipeline just to polish how the metric is presented. According to the Thinger.io documentation, these functions “allow processing data before being used in widgets” for example, rounding numbers, computing rates, or converting units in place.
 * **Dashboard processing:** Some widgets allow the execution of a custom "processing function", which can be previously defined in the dashboard **Settings > Functions** section. [As explained in this section of the documentation. ](https://docs.thinger.io/features/dashboards#functions)
+
+## Display widgets
 
 ### Time Series Chart
 
@@ -161,8 +163,35 @@ The next image shows four different representations of the same dataset and time
 ![](<../.gitbook/assets/image (174).png>)
 
 {% hint style="warning" %}
-Note that the Data Aggregation system is only available in **private server** instances with **InfluxDB**&#x20;
+Note that the Data Aggregation system is only available in **private server** instances&#x20;
 {% endhint %}
+
+### Apex Charts
+
+An ApexChart is a modern JavaScript charting library that enables the creation of interactive and responsive data visualizations. It supports a wide range of chart types, **including line, bar, area, pie, and more**, and is commonly used for embedding charts in web applications with minimal configuration.
+
+<figure><img src="../.gitbook/assets/image (767).png" alt=""><figcaption></figcaption></figure>
+
+This widget is able to display data from multiple data sources in the same chart. Note that the configuration interface allows to add variables or clone a source configuration to make it easier.
+
+<figure><img src="../.gitbook/assets/image (768).png" alt="" width="563"><figcaption></figcaption></figure>
+
+* **Name:** The name of the source to be called.
+* **Color**: A color can be assigned to a data source by selecting it from the color picker. The color can be adjusted using the color spectrum bar, by manually entering RGB (Red, Green, Blue) values, or by moving the dot within the color gradient area. Depending on the data source, it may be possible to configure a single color or multiple colors for different data series.
+* **Data Source**: Designates the origin of the information utilized for visualization or analysis. For comprehensive details, refer to the '**Data Sources**' section above.
+* **Timeframe**: When working with historical data stored in _Data Bucket_ or _Device Bucket_ sources, the Timeframe parameter defines the specific period to be rendered. It provides multiple predefined and configurable range options.
+  * **Latest Value:** Displays only the most recent data point received.
+  * **Relative:** Displays data from a rolling time window, defined in relation to the current moment. Users can specify the duration of this window and the time units (in hours, minutes, or seconds).
+  * **Absolute:** Presents data within a precisely defined, static time frame. Users set both a fixed start date and time, as well as a fixed end date and time, for the data to be displayed.
+  * **Configurable:** This parameter offers crucial advanced configuration within the dashboard profile, enabling dynamic adjustment of the timeframe based on other dashboard elements or custom logic. These powerful options are essential for precisely tailoring the time duration and other settings to your specific visualization needs.
+* **Time Period**: This option allows setting up the time range during which the widget should retrieve and represent real-time data or the last received value.
+* **Data Aggregation**: Given potentially noisy or irregular raw Bucket data with numerous points, this feature enables data aggregation. Statistics, as detailed in the table below, can be applied over intervals ranging from five minutes to one week. Configuration is handled via widget form inputs and the upper-right parameters of each time series chart widget.
+
+#### Apex charts customization options
+
+Una parcitularidad de los apex charts es que permiten personalizar la visualización de los datos aportando una gran variedad de templates con los que ajustar mejor al tipo de datos y el aspecto deseado. La sección Widget Settings contiene las siguientes funciones con esta finalidad:
+
+<figure><img src="../.gitbook/assets/image (770).png" alt=""><figcaption></figcaption></figure>
 
 ### Tachometer Chart
 
@@ -310,6 +339,35 @@ Finally, the "**Display Options**" tab allows to customize the final appearance 
 * **Hide Controls:** Toggle this option to hide the standard user interface controls of the map, useful for creating a more streamlined or embedded visual.
 
 {% embed url="https://www.youtube.com/watch?t=51s&v=3QDDOPMg22g" %}
+
+### Asset Map
+
+The **Asset Map** widget allows users to display the geographic locations of assets in real-time using a map interface. It provides powerful visual insight for tracking the deployment, status, and grouping of assets across regions. This is especially beneficial for operations teams, asset managers, and analysts who require spatial awareness of device locations and statuses.
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+Note that devices can be plotted from different aggrupations, so once this widget is selected, it's possible to choose from:&#x20;
+
+* **From Asset Type**: Selecting this option provides a dropdown to choose a specific type of asset. Only assets belonging to the selected type will be displayed. This is useful when the goal is to analyze or visualize a particular category of assets.
+* **From Asset Group:** Choosing this option presents a dropdown to select a specific asset group. This is beneficial when assets are organized into logical groups and the focus is on data from a particular group.
+* **From Asset Product:** If this option is selected, a dropdown appears for choosing a specific product asset. This is helpful when interested in the performance or status of assets associated with a particular product line.
+
+
+
+<figure><img src="../.gitbook/assets/image (2).png" alt="" width="563"><figcaption></figcaption></figure>
+
+Then the "display options" menu allows to custom the looc and feel  of the map with multiple options such as:&#x20;
+
+* **Map Type**: This crucial dropdown determines the base visual style of the map itself. It offers various cartographic representations:
+  * &#x20;**Roadmap**: Shows standard road networks, labels, and general geographical features. It's good for general navigation and understanding locations.
+  * **Satellite**: Displays satellite imagery, offering a realistic view of the terrain and buildings. Useful for detailed visual inspection of asset locations.
+  * **Hybrid**: This option combines satellite imagery with road and label overlays, providing the realism of a satellite view alongside navigational aids from a roadmap.
+  * **Terrain**: This displays geographical features such as mountains, valleys, and elevation changes, which is useful for understanding the topography surrounding assets
+* **Show Options**: It groups further display-related configurations.
+* **Show Search**: If activated, displays a search bar on the map widget. This allows users to search for specific locations or addresses directly on the map.
+* **Connected**: This toggle controls the visibility or special styling of assets that are currently connected or online within the system. If active, connected assets appear in a specific color or with an icon to denote their live status.
+* **Disconnected**: Similar to "Connected," this toggle likely controls the visibility or styling of assets that are currently disconnected or offline. If active, disconnected assets might be shown with a different color, icon, or even filtered out if the toggle is off.
+* **Clustering**: This is a very common feature in map widgets, especially when dealing with many assets. If active, assets that are geographically close to each other will be grouped into a single "cluster icon". Zooming in, these clusters break apart to reveal individual assets. This prevents the map from becoming too cluttered when many assets are in a small area.
 
 ### Image/MJPEG
 
@@ -591,6 +649,43 @@ Finally,  the "**Display Options**" tab allows to custom behavior of the widget:
 * **Min Value**: Maximum value of the slider.
 * **Max Value**: Minimum value of the slider.
 * **Step Width**: Slider precision.
+
+### HTML Time Series&#x20;
+
+Plot historical data points over time using customizable HTML-based charting. Enables detailed analysis of trends and variations.
+
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
+To configure this widget, select "HTML Time Series" from the Widget menu's "Type" tab. This will reveal a new configuration panel. Then, the HTML Time Series menu tab allows selecting multiple data sources, blending data from device resources, data buckets or properties into the same table; however, it is recommended to choose data that comes from the same source.&#x20;
+
+<figure><img src="../.gitbook/assets/image (5).png" alt="" width="563"><figcaption></figcaption></figure>
+
+Finally, using the "code snippet" section, it's possible to customize the appearance of the table structure. It's important to take care of the data structure when calling the variables. The example above has been created by means of a simple source code in HTML, whose variable ID's must fit with the ones introduced in the source "Name" input box.&#x20;
+
+```html
+<div style="width=100%; height:100%; overflow-y:scroll">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Temperature</th>
+          <th>Humidity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="entry in value">
+          <td>{{entry.ts| date:'medium'}}</td>
+           <td>{{entry.temperature}}</td>
+           <td>{{entry.humidity}}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+```
+
+
+
+
 
 ## Dashboard Control Widgets
 
