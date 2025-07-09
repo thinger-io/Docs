@@ -65,7 +65,7 @@ The data from the raw port will be sent to a plugin port
 
 This option allows for the retrieval of data from a third-party service that is accessible by an IoTMP device vía TCP communication. This means that we can extract data from SQL, files or any other resource that is not supported by an HTTP connection. &#x20;
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * **Target type** `Host Address`
 * **Target Username:** Account username that will own the connection
