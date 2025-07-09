@@ -63,8 +63,8 @@ When the edit mode is enabled in the dashboard, a new button `Add Widget` will a
 
 | **Category**          | **Widget**                                                                         | **Description**                                                    |
 | --------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| **Display**           | Assets Map                                                                         | Displays geolocated devices on a map.                              |
-|                       | Assets Table                                                                       | Shows asset data in a tabular format.                              |
+| **Display**           | [Assets Map](dashboards.md#asset-map)                                              | Displays geolocated devices on a map.                              |
+|                       | [Assets Table](dashboards.md#html-time-series)                                     | Shows asset data in a tabular format.                              |
 |                       | [Apex Charts](dashboards.md#apex-charts)                                           | Advanced charts (line, bar, area) using ApexCharts library.        |
 |                       | [Time Series Chart](https://docs.thinger.io/features/dashboards#time-series-chart) | Plots historical data over time using line charts.                 |
 |                       | [Donut Chart](https://docs.thinger.io/features/dashboards#donut-chart)             | Visualizes percentages or parts of a whole.                        |
@@ -77,8 +77,8 @@ When the edit mode is enabled in the dashboard, a new button `Add Widget` will a
 |                       | [Led Indicator](https://docs.thinger.io/features/dashboards#virtual-led)           | Color-coded LED icon reflecting a binary or threshold state.       |
 |                       | [Clock](https://docs.thinger.io/features/dashboards#clock)                         | Shows the current time or a timestamp from data.                   |
 |                       | [HTML Widget](https://docs.thinger.io/features/dashboards#html-widget)             | Fully custom content using raw HTML.                               |
-|                       | HTML Time Series                                                                   | Custom time-series visualizations with HTML formatting.            |
-|                       | Group Widget                                                                       | Groups multiple widgets in one frame for better layout.            |
+|                       | [HTML Time Series](dashboards.md#html-time-series)                                 | Custom time-series visualizations with HTML formatting.            |
+|                       | [Group Widget](dashboards.md#group-widget)                                         | Groups multiple widgets in one frame for better layout.            |
 | **Device Control**    | [On/Off State](https://docs.thinger.io/features/dashboards#on-off-state)           | Switch to toggle a boolean device property (true/false).           |
 |                       | [Slider](https://docs.thinger.io/features/dashboards#slider)                       | Adjusts a numeric value in a defined range via slider.             |
 |                       | Property Button                                                                    | Triggers an action or sends a value when clicked.                  |
