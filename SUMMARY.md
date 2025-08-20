@@ -27,7 +27,7 @@
 ## LPWAN DEVICES <a href="#lpwan" id="lpwan"></a>
 
 * [SIGFOX](lpwan/sigfox.md)
-* [LoRaWAN (TTN)](lpwan/the-things-stack.md)
+* [LoRaWAN](lpwan/the-things-stack.md)
 
 ## OTHER DEVICES <a href="#other-clients" id="other-clients"></a>
 
