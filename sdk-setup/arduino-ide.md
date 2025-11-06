@@ -47,7 +47,7 @@ If there is a preference to manage the libraries manually or if the Library Mana
     * Navigate to and select the `thinger.zip` file.
     * The Arduino IDE will uncompress and copy the zip library into the Arduino libraries folder, typically located under the Documents folder.
 
-    <figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (11) (2).png" alt=""><figcaption></figcaption></figure>
 
 ## Starting a Project
 

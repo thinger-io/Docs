@@ -12,6 +12,8 @@ Thinger.io's plugin collection extends the platform's capabilities, offering a r
 
 * [Node-RED](https://marketplace.thinger.io/plugins/node-red/)
 * [The Things Stack](https://marketplace.thinger.io/plugins/ttn-stack/)
+* [Chirpstack](https://marketplace.thinger.io/plugins/chirpstack/)
+* [LORIOT](https://marketplace.thinger.io/plugins/loriot/)
 * [HTTP Device](https://marketplace.thinger.io/plugins/http-device/)
 * [Sigfox](https://marketplace.thinger.io/plugins/sigfox/)
 

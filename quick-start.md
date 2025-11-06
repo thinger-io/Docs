@@ -28,9 +28,9 @@ The most suitable devices to start working with Thinger.io are the ESP8266 or ES
 
 
 
-<figure><img src=".gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (9) (2).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/image (10).png" alt="" width="470"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (10) (2).png" alt="" width="470"><figcaption></figcaption></figure>
 
 The basic example contains two simple resources to send and retrieve to the device, i.e., controlling a digital pin or reading a value from the device.  It can be modified with many different functionalities that we have explained in the [**Coding**](coding-guide.md) **Guide** section.  After modifying the source code, just flash the device again and wait for the device to connect.
 

@@ -26,7 +26,7 @@ Defining a property inside a Product Profile enables scalable property managemen
 
 By default, the Product profile presents a Properties table that is empty:
 
-<figure><img src="../../../.gitbook/assets/image (5) (1) (1) (1) (1).png" alt=""><figcaption><p>Product Property - Properties section on a Product Profile</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Product Property - Properties section on a Product Profile</p></figcaption></figure>
 
 To create a new Property, click on `Add` button from the table, and a pop-up will appear for its configuration. It is quite similar to the process of configuring a [Bucket](buckets.md).
 
@@ -107,7 +107,7 @@ The placeholders that are available for the Payload configuration are all values
 
 It is possible to define a default property value for all devices within a Product. In the property configuration, there is a tab for the Default Value. The Default Value accepts any JSON value, i.e., for placing a default configuration.
 
-<figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Product Property . Default Value configuration</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Product Property . Default Value configuration</p></figcaption></figure>
 
 When a device is configured within a Product, it will automatically inherit the default product properties (in the same way it happens with Asset Types and Asset Groups). For example, the above property with a default value can be observed inside the device properties. The `Source` column in the properties table indicates that this property comes from a Product. Note that inherited properties from Products, Asset Types, or Asset Groups, cannot be removed or edited directly from the device properties to avoid undesired changes on all devices. However, it is possible to create a new property with the same identifier to override the default one inherited from Products, Asset Types, or Asset Groups.
 

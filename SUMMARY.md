@@ -55,6 +55,7 @@
   * [Product Profile](business-features/products/product-profile/README.md)
     * [Properties](business-features/products/product-profile/properties.md)
     * [Buckets](business-features/products/product-profile/buckets.md)
+    * [Flows](business-features/products/product-profile/flows.md)
     * [API Resources](business-features/products/product-profile/api-resources.md)
     * [Scripts](business-features/products/product-profile/scripts.md)
     * [Payloads](business-features/products/product-profile/payloads.md)

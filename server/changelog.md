@@ -41,18 +41,18 @@ coverY: 0
 
 * Introduced **Group Hierarchies**: you can now create nested groups and subgroups, enabling more organized asset structures.
 
-<figure><img src="../.gitbook/assets/image (6) (2) (2).png" alt=""><figcaption><p>Group Hierarchies to enable subgroups.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (2) (2) (1).png" alt=""><figcaption><p>Group Hierarchies to enable subgroups.</p></figcaption></figure>
 
 * Project members can now be **restricted to specific groups or subgroups** within a project.
 
-<figure><img src="../.gitbook/assets/image (7) (2).png" alt=""><figcaption><p>New member permissions to restrict access to specific asset groups.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (2) (2).png" alt=""><figcaption><p>New member permissions to restrict access to specific asset groups.</p></figcaption></figure>
 
 * New **Flow** feature in the Product Profile, enabling the definition of custom **sources** and **targets**.\
   You can now redirect data flows, for example, from a topic to an HTTP endpoint, or from a device property update to a topic. This feature deprecates the previous Endpoint, as it is much more versatile.
 
-<figure><img src="../.gitbook/assets/image (10) (2).png" alt=""><figcaption><p>New Flow feature in the Product Profile</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10) (2) (1).png" alt=""><figcaption><p>New Flow feature in the Product Profile</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (11) (2).png" alt=""><figcaption><p>Flow configuration interface in the Product Profile, showing available target options such as Device Resource, Endpoint Call, and Product Function.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11) (2) (1).png" alt=""><figcaption><p>Flow configuration interface in the Product Profile, showing available target options such as Device Resource, Endpoint Call, and Product Function.</p></figcaption></figure>
 
 * Initial support for **mTLS (mutual TLS)** on MQTT devices. This feature is currently under testing in selected deployments and is not yet intended for production use. Contact us for early access or details.
 * Dashboards now implement lazy-loading to avoid fetching data from all tabs until they are accessed. This significantly improves loading times on large dashboards.
@@ -121,15 +121,15 @@ coverY: 0
 
     * Support for custom volumes, enabling the mounting of custom file storage to plugins like Node-RED, FTP, etc.
 
-    <figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Custom Volumes to be attached to Plugins</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Custom Volumes to be attached to Plugins</p></figcaption></figure>
 
     * Support for configuring custom environment variables, e.g., for enabling Node-RED projects.
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt="" width="563"><figcaption><p>Custom Environment Variables on Plugins</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Custom Environment Variables on Plugins</p></figcaption></figure>
 
 * **Virtual Devices**: Initial support for devices that are always connected and can fetch data from external resources (e.g., endpoints via products). Example use case: creating a weather device that fetches weather data and forecasts.
 
-<figure><img src="../.gitbook/assets/image (5) (1) (1) (1).png" alt="" width="563"><figcaption><p>Virtual Devices</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Virtual Devices</p></figcaption></figure>
 
 * **Product Plugin Exporter**: Export products to a file storage, with options to:
   * Set plugin image, name, description, and version.
@@ -289,16 +289,16 @@ coverY: 0
 
 * Devices associated with a Product can now display bucket data directly from their pages, under the menu option called "Buckets". Each device can now list all the associated buckets and will filter out its data in the Data view. In future releases, we will add options for exporting, importing, and clearing data. This opens the possibility to avoid sharing raw bucket data with project members and effectively grant access only to their device data. With this feature, permissions are granted at the device level, with permissions like ViewDeviceBuckets, ReadDeviceBucket, ReadDeviceBucketTag, and ListDeviceBucketTags.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>New Buckets option for Product Devices</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>New Buckets option for Product Devices</p></figcaption></figure>
 
 * Introduced two new specific permissions for listing and reading bucket tags:`ListBucketTags`: Allows listing of bucket tags.`ReadBucketTag`: Allows reading of individual bucket tags. Previously, these operations required a more general `ReadBucketConfig` permission. This change provides more granular control over permissions.
 * Claims now support including additional projects in the claim process. This way, claimed resources can be added automatically to parent "global" projects that can be used to manage the resources with different profiles.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Additional projects where claimed resources will be included on the claim process.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Additional projects where claimed resources will be included on the claim process.</p></figcaption></figure>
 
 * Projects can be configured to limit bucket data access based on project devices. This functionality is useful for displaying aggregated data on the project dashboard or for restricting data access to project members. Additionally, this option can be set in the claim settings, ensuring that member projects are automatically created with this access limitation in place.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Limit Bucket data option on Project settings.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Limit Bucket data option on Project settings.</p></figcaption></figure>
 
 * Device Tokens are now available for MQTT and HTTP devices, as they can have regular API resources over a product.
 
