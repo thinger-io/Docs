@@ -344,7 +344,7 @@ Finally, the "**Display Options**" tab allows to customize the final appearance 
 
 The **Asset Map** widget allows users to display the geographic locations of assets in real-time using a map interface. It provides powerful visual insight for tracking the deployment, status, and grouping of assets across regions. This is especially beneficial for operations teams, asset managers, and analysts who require spatial awareness of device locations and statuses.
 
-<figure><img src="../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Note that devices can be plotted from different aggrupations, so once this widget is selected, it's possible to choose from:&#x20;
 
@@ -354,7 +354,7 @@ Note that devices can be plotted from different aggrupations, so once this widge
 
 
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 Then the "display options" menu allows to custom the looc and feel  of the map with multiple options such as:&#x20;
 
@@ -654,11 +654,11 @@ Finally,  the "**Display Options**" tab allows to custom behavior of the widget:
 
 The **HTML Time Series** widget in Thinger.io is a versatile component designed primarily for rendering **custom data tables** within a dashboard. It enables advanced, fully customizable representations of time-series or real-time data through user-defined HTML templates, supporting precise formatting and layout control. As it plot historical data points over time using customizable HTML-based charting it's perfect to enable detailed analysis of trends and variations.
 
-<figure><img src="../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 To configure this widget, select "HTML Time Series" from the Widget menu's "Type" tab. This will reveal a new configuration panel. Then, the HTML Time Series menu tab allows selecting multiple data sources, blending data from device resources, data buckets or properties into the same table; however, it is recommended to choose data that comes from the same source.&#x20;
 
-<figure><img src="../.gitbook/assets/image (5) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 Finally, using the "code snippet" section, it's possible to customize the appearance of the table structure. It's important to take care of the data structure when calling the variables. The example above has been created by means of a simple source code in HTML, whose variable ID's must fit with the ones introduced in the source "Name" input box.&#x20;
 
@@ -687,13 +687,13 @@ Finally, using the "code snippet" section, it's possible to customize the appear
 
 The **Group Widget** is a container element designed to organize and group multiple individual widgets within a single visual unit. This structure allows for a semantically meaningful layout, enabling users to associate related widgets visually and functionally.
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Upon creation, the Group Widget appears as an empty placeholder, as shown in the first image. However, a **“+” button** is located in the upper-right corner, which allows users to add widgets to the group. Clicking this button reopens the standard widget creation interface—meaning any compatible widget can be embedded within the group.
 
 Once added, the child widgets are arranged in a flexible grid layout. Users can add any combination of widgets, such as time series charts, indicators, text blocks, or numeric gauges, as illustrated in the second image, which shows a live humidity visualization with both gauge and time-series representations.
 
-<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 **Key Functionalities:**
 

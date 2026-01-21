@@ -30,8 +30,7 @@ The structure of the log entries consists of six columns in which the following 
 * **Program Module:** This column informs about the feature that is being used by each event.
 * **Message:** Is the log content including a message type identification and a description
 
-\
-
+<br>
 
 | Date | Hour | PC | Thread |   |   |
 | ---- | ---- | -- | ------ | - | - |

@@ -30,7 +30,7 @@ Designed by the Thinger.io team, this board has been made for **developers, make
 
 ## **Pinout**
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1).png" alt="" width="375"><figcaption><p>Thinger32 NB-IoT Pinout</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt="" width="375"><figcaption><p>Thinger32 NB-IoT Pinout</p></figcaption></figure>
 
 ## **Getting Started**
 
@@ -240,5 +240,5 @@ void loop() {
 🔹 **Home Automation** – Wi-Fi and cellular connectivity for smart devices\
 🔹 **Agriculture & Environment** – Remote sensing with ultra-low power requirements
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 

@@ -18,13 +18,13 @@ This capability allows products to remain generic and flexible, delegating devic
 
 By default, the Product profile presents a Flow table that is empty:
 
-<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Products - Flows section on a Product Profile</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>Products - Flows section on a Product Profile</p></figcaption></figure>
 
 ### Defining a Flow
 
 To create a new Flow, press de button `add` in the Flow section of the Product Profile configurator. Once selected, a pop-up with the flow configuration will appear:&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Products - Flow Configurator</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Products - Flow Configurator</p></figcaption></figure>
 
 ## Flow Identifier
 
@@ -32,7 +32,7 @@ Following the schema of other product-profile configurations, each flow must hav
 
 Choose a resource identifier that represents its purpose, i.e. "Device Alarm Handler", "Message forwarder", etc.
 
-<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption><p>Products - Flows Identifier</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption><p>Products - Flows Identifier</p></figcaption></figure>
 
 ## Flow Source
 

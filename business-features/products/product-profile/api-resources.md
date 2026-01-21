@@ -23,7 +23,7 @@ The advantages of designing IOT products to become accessible over REST APIs are
 
 By default, the Product profile presents an API Resources table that is empty:
 
-<figure><img src="../../../.gitbook/assets/image (10) (1) (1).png" alt=""><figcaption><p>Products - API Resources section on a Product Profile</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10) (1) (1) (1).png" alt=""><figcaption><p>Products - API Resources section on a Product Profile</p></figcaption></figure>
 
 To create a new API Resource, click on `Add` button from the table, and a pop-up will appear for its configuration. It is quite similar to the process of configuring a [Property](properties.md) or a [Bucket](buckets.md) for the product.
 
@@ -37,7 +37,7 @@ Each product can define any number of API resources, and each resource is unique
 
 Choose a resource identifier that represents its purpose, i.e., it can be used to control device actions: "power", "reboot", "configure", or for reading sensor data:  "temperature", ·"humidity".&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Products - API Resource Identifier</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Products - API Resource Identifier</p></figcaption></figure>
 
 ## API Resource Request
 
@@ -84,7 +84,7 @@ The configuration fields are:
 * **Property**: Used to specify the device property name that will be written.
 * **Payload**: Used to configure the final payload that will be stored on the device property. The value that arrives from the API request becomes available at the `{{payload}}` placeholder, which is the default configuration. Take a look at the [Payloads](payloads.md) section to know more about the possibilities when defining payloads, like using Product Scripts for data conversion.
 
-<figure><img src="../../../.gitbook/assets/image (9) (1) (1).png" alt="" width="563"><figcaption><p>Product - API Resource configuration for Device Property target </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (1) (1) (1).png" alt="" width="563"><figcaption><p>Product - API Resource configuration for Device Property target </p></figcaption></figure>
 
 #### Available Payload Placeholders
 
@@ -154,7 +154,7 @@ The source options available are:
 * **Product Function**: The response payload will be based on de data returned by a Script function.
 * **Request Response**: The response payload will be based on the data returned by the request.
 
-<figure><img src="../../../.gitbook/assets/image (11) (1) (1).png" alt="" width="563"><figcaption><p>Product - API Response Configuration</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11) (1) (1) (1).png" alt="" width="563"><figcaption><p>Product - API Response Configuration</p></figcaption></figure>
 
 ### None
 

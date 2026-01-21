@@ -6,7 +6,7 @@ description: WiFi Smart Plug with Power Metering
 
 ## Product Description
 
-<figure><img src="../../../.gitbook/assets/image (8) (1) (1).png" alt="" width="392"><figcaption><p>Shelly Plug S</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (1) (1) (1).png" alt="" width="392"><figcaption><p>Shelly Plug S</p></figcaption></figure>
 
 Shelly Plug S is a WiFi Smart Plug with power metering, that can be easily integrated into the platform. As it supports the MQTT protocol by default, it is not required to re-flash the device, keeping the device warranty.
 
@@ -260,7 +260,7 @@ function toOnOff(value){
 }
 ```
 
-As described in [Properties](../product-profile/properties.md) and [Buckets](broken-reference) sections, it is possible to configure the API Resource payload to call this function to transform the incoming payload.
+As described in [Properties](../product-profile/properties.md) and [Buckets](/broken/pages/3pDG42OCCQAgVBHl147K) sections, it is possible to configure the API Resource payload to call this function to transform the incoming payload.
 
 ```
 {{payload:toOnOff}}

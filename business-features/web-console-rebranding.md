@@ -16,7 +16,7 @@ Thinger.io instances support multi-tenant web console customizations. By means o
 Note that each web console rebrand needs to be supported by an individual web domain, which can be managed in the "Domain" section of the main menu, or use the default domain.
 {% endhint %}
 
-## New console rebranding
+## New Console Rebranding
 
 Select "Brands" on the Thinger menu:
 

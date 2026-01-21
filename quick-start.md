@@ -61,8 +61,8 @@ Any individual Sigfox or LoraWAN device can be integrated using our API as HTTP 
 [sigfox.md](lpwan/sigfox.md)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="/broken/pages/-Lq7I9DKCCfk50wpGUfo" %}
+[Broken link](/broken/pages/-Lq7I9DKCCfk50wpGUfo)
 {% endcontent-ref %}
 {% endtab %}
 

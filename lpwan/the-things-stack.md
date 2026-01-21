@@ -97,13 +97,13 @@ This generic template provides a product with the following basic configuration
 
 This Uplink Property stores the last uplink received from the device. It is used to recall essential information needed to send downlinks to the device or to visualize specific device metadata in dashboards.
 
-<figure><img src="../.gitbook/assets/image (3).png" alt="" width="415"><figcaption><p>Uplink Property</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt="" width="415"><figcaption><p>Uplink Property</p></figcaption></figure>
 
 #### Generic Data Bucket
 
 A pre-configured data bucket is also created within this product template to provide a generic "end-of-pipeline" storage solution for the data. This bucket automatically stores time-series data from device uplinks.
 
-<figure><img src="../.gitbook/assets/image (5).png" alt="" width="407"><figcaption><p>Generic Data Bucket</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1).png" alt="" width="407"><figcaption><p>Generic Data Bucket</p></figcaption></figure>
 
 {% hint style="info" %}
 It is **recommended** (though not required) to perform **data decoding at the bucket stage** rather than at the API resource level. This approach ensures that the **raw uplink message** stored in the product property remains **unaltered**, preserving the exact payload format originally received from the LNS plugin.
@@ -113,7 +113,7 @@ It is **recommended** (though not required) to perform **data decoding at the bu
 
 Pre-configured uplink and downlink endpoints have been created within the product profile configuration, defining a unified data communication bridge with the LNS Thinger.io Plugin. These channels communicate directly with the LNS plugin, so all data incoming to and outgoing from these endpoints is expected to be correctly formatted according to the standardized schema.
 
-<figure><img src="../.gitbook/assets/image (6).png" alt="" width="461"><figcaption><p>API resources</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1).png" alt="" width="461"><figcaption><p>API resources</p></figcaption></figure>
 
 {% hint style="info" %}
 These API endpoints use the standardized format described in the plugin documentation. Do not modify the endpoint structure unless you understand the implications for cross-LNS compatibility.
@@ -125,9 +125,9 @@ The Device autoprovisioning will need to be configured in the application that h
 
 * The **prefix** needs to be specified in both the product autoprovision schema and in the LNS application plugin configuration. This ensures consistent device identification across both systems.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Autoprovision Configured in Product Profile</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption><p>Autoprovision Configured in Product Profile</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (8).png" alt="" width="482"><figcaption><p>Device ID Prefix configured in LNS Plugin (in this case, The Things Stack)</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1).png" alt="" width="482"><figcaption><p>Device ID Prefix configured in LNS Plugin (in this case, The Things Stack)</p></figcaption></figure>
 
 * The device ID **sufix**: This id sufix is the device EUI wich will be appended in the LNS Thinger Plugin.
 
