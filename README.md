@@ -25,8 +25,7 @@ Sign-up [**HERE** ](https://console.thinger.io/#/signup)to obtain a **free accou
 
 Thinger.io platform is formed by two main products: a Backend (which is the actual IoT server) and a web-based Frontend that simplifies working with all the features using any computer or smartphone. The main features provided by this platform to create IoT projects are:
 
-\
-
+<br>
 
 <figure><img src=".gitbook/assets/image (3) (2).png" alt="" width="563"><figcaption></figcaption></figure>
 

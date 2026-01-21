@@ -72,6 +72,7 @@
 * [CUSTOM WEB DOMAIN](business-features/web-domain-customization.md)
 * [OAUTH2 CLIENTS](business-features/oauth2-clients.md)
 * [PROXIES](business-features/proxies.md)
+* [CLAIM RESOURCES](business-features/claim-resources.md)
 
 ## Server
 
