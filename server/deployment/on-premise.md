@@ -97,7 +97,7 @@ services:
 
   # mongodb
   mongodb:
-    image: mongo:8.0
+    image: mongo:8.0.17
     container_name: "mongodb"
     environment:
       - MONGO_DATA_DIR=/data/db
