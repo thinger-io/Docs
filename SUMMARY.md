@@ -37,6 +37,10 @@
 * [MQTT CLIENTS](mqtt.md)
 * [LINUX / RASPBERRY PI](linux.md)
 
+## SECURITY
+
+* [USER ACCOUNTS](security/user-accounts.md)
+
 ## PLATFORM FEATURES <a href="#features" id="features"></a>
 
 * [DEVICES ADMINISTRATION](features/devices-administration.md)
