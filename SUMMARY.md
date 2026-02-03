@@ -78,6 +78,10 @@
 * [PROXIES](business-features/proxies.md)
 * [CLAIM](business-features/claim.md)
 
+## ENTERPRISE FEATURES
+
+* [IDENTITY PROVIDERS](enterprise-features/identity-providers.md)
+
 ## Server
 
 * [SERVER DEPLOYMENT](server/deployment/README.md)
