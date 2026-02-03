@@ -7,6 +7,120 @@ coverY: 0
 
 # CHANGELOG
 
+## 7.0
+
+**Community Release Date**: 04-02-2026
+
+**Private Servers Release Date:**  \~18-02-2026
+
+### Added
+
+#### 🔐 Authentication & Security
+
+* **Federated authentication via OpenID Connect (OIDC)**, allowing users to sign in using external identity providers (Google, Microsoft, Auth0, Okta, PingOne, and custom OIDC).
+* **Multi-Factor Authentication (MFA)** support, including:
+  * **TOTP** (RFC 6238) with QR code setup and backup codes.
+  * **WebAuthn** security keys as a second factor.
+  * **Passkeys** for passwordless authentication with cross-platform support.
+* **OAuth2 Device Authorization Flow**, enabling secure device login via verification URLs.
+* **Certificate-based authentication** for device auto-provisioning, with enhanced credential validation.
+* **Login attempt limiting** for both password and MFA authentication, protecting accounts against repeated failed sign-in attempts.
+
+***
+
+#### 🚨 Alarms & Rules
+
+* **Advanced alarm rule testing tools**, including:
+  * Source data testing.
+  * Dry-run mode for rule evaluation and notifications.
+  * Copyable numeric variables from test results.
+* New **`present` and `absent` comparators**, enabling alarms that detect missing or non-reporting devices.
+* **GROUP BY support** for alarm data sources in MongoDB and InfluxDB.
+* Variable-friendly naming for alarm data sources in time-series configurations.
+* Alarm instance list now includes **Origin ID and Origin Name** fields.
+
+***
+
+#### 📁 File Explorer & File Management
+
+* **New file explorer** for browsing and managing files on devices.
+* Support for custom **terminal images** when accessing storage terminals.
+* **Filesystem API for devices**, enabling upload, download and file management operations on compatible IOTMP devices (ThinRemote).
+* **Filesystem API v2 for storages**, with streaming uploads for large files and improved path validation.
+
+***
+
+#### 🧩 Plugins & Marketplace
+
+* **Modernized plugin marketplace UI**, with improved browsing and filtering.
+* Improved plugin README rendering with:
+  * GitHub-style markdown
+  * Syntax highlighting
+  * Alerts, tables of contents and proper image resolution
+* Improved plugin image and asset resolution across the platform.
+
+***
+
+#### 📊 Monitoring & Metrics
+
+* **Initial system and Docker monitoring components**, providing container-level metrics.
+* New APIs for retrieving **container and runtime statistics**.
+
+***
+
+#### 🔌 Devices & Connectivity
+
+* **Subdevice (virtual device) support**, allowing devices to be dynamically created from MQTT gateway flows.
+* Improved device connectivity handling with **timeout-based lifecycle management** (sleep / wake / disconnect states).
+
+***
+
+#### 🧩 Products, APIs & Flows
+
+* **Granular API endpoints** for product profile resources.
+* Support for **handling endpoint call responses** in product profiles.
+* Display of **full API endpoint URLs** when device identifier resolvers are configured.
+* Support for **array field matching** in event filters.
+* Product and device context is now fully included in resource stream events.
+
+***
+
+#### 🖥️ UI & Dashboards
+
+* Migration of **text widgets**, **device console**, and **terminal components** from AngularJS to Angular.
+* New **text widget** with color, icon, and value-based rules.
+
+***
+
+### Improved
+
+* Updated **Node.js runtime to 24 LTS**, including an improved permission model.
+* Improved **HTTP and streaming support**
+* Improved **product configuration schema validation**, returning structured JSON error responses.
+* Reduced unnecessary dashboard data refreshes and improved bucket data consistency.
+
+***
+
+### Fixed
+
+* Fixed multiple **alarm rule evaluation edge cases**, including:
+  * GROUP BY behavior without aggregation.
+  * Missing data source handling.
+  * Query limits affecting device status rules.
+* Fixed authentication issues in mixed and federated flows.
+* Correct handling of tag parameters in API requests and dashboards.
+* Fixed CSV import issues related to timestamp parsing and normalization.
+* Various UI fixes related to widgets, layouts and rendering.
+
+***
+
+### Internal
+
+* Removal of legacy protocols and dependencies.
+* Toolchain upgrade to **Ubuntu 24.04 and latest dependencies.**
+* Performance improvements in scripting, sockets and request handling.
+* Cleanup of deprecated code paths and noisy logs.
+
 ## 6.5
 
 **Community Release Date:**  02-06-2025.
