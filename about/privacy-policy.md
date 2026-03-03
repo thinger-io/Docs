@@ -4,44 +4,197 @@ description: Privacy Policy Statement on the Use of this Service (Website)
 
 # Privacy Policy
 
-As of February 1, 2024
+## Privacy Policy
 
-**1. Definition of Policy**
+**Last updated:** 03/03/2026
 
-1.1 The following Privacy Policy is adopted by INTERNET OF THINGER S.L. ("Thinger.io" or "We") regarding the use of Thinger.io Cloud Platform and related web pages and services (the **"Service"** ), excluding affiliated websites covered by independent privacy policies. This Privacy Policy applies to information collected through the Service and otherwise (for example, if you contact us directly). However, it does not cover any information, whether personal or not, that may be collected through other websites or in other venues. Your use of the Service and our remaining services is subject to this Privacy Policy, which may be updated periodically to reflect changes in how we collect, use, and/or share information.
+This Privacy Policy explains how **INTERNET OF THINGER S.L.** (“Thinger.io”, “we”, “us”, “our”) collects and processes personal data when you visit or use **https://thinger.io** and related websites, products, services, and documentation (collectively, the “Services”).
 
-1.2 It is your responsibility to review this Privacy Policy together with the actual date of the change. Please check this Privacy Policy each time you use our Service to ensure you are aware of any changes in our practices. Your continued use of the Service will signify your acceptance of any changes to our Privacy Policy.
+This Policy is intended to provide the information required by the EU General Data Protection Regulation (“GDPR”) and applicable Spanish data protection laws.
 
-**2. Collection**
+***
 
-2.1 You may not access the Service without providing some portion of the required personal information to us. If you request receipt of certain notifications and updates, we will collect personally identifiable information, which you voluntarily give us. The said information may include your name, telephone number, email address, postal address, and any other information that would allow someone to personally identify you. Certain non-personally identifiable information, or non-PII, may also be collected when you use the Service, including the type of Internet browser and operating system you use, region, other navigational clickstream data, etc.
+### 1) Data Controller
 
-2.2 You may collect personal information of individuals approached to use the Service by you ( **"Members"** ). You represent and warrant that your users accept this Privacy Policy and agree to share their personal data with you. You are liable for all and any breach of the personally identifiable information of Users.
+**Controller:** INTERNET OF THINGER S.L.\
+**VAT/Tax ID:** ESB88230602\
+**Registered office:** C/Jacinto Benavente, 2A. Planta 1ª. Edificio Tripark. 28232 – Las Rozas de Madrid. Spain\
+**Contact email:** info@thinger.io
 
-2.3 Pursuant to the Service use, certain personal data and sensitive data can be collected by you with the help of specific technical equipment for remote monitoring and control ( **"IoT Devices"** ). You represent and warrant that you have a legal right to such collection and Users agree upon said data collection.
+If you contact us, please include enough information for us to verify your identity.
 
-2.4 We obtain information from third-party sources. For example, we may collect information about you from social networks, accounting services providers and data analytics providers. Additionally, if you create or log into your account through a third-party platform (such as Google, Facebook, or GitHub), we will have access to certain information from that platform, such as your name and email, in accordance with its determined authorization procedures.
+***
 
-**3. Purpose and Use**
+### 2) Data Protection Officer (DPO)
 
-3.1 INTERNET OF THINGER S.L. uses the personally identifiable information to provide you with public information regarding us and our services; to share news, updates and reports in response to your inquiries; for gaining an understanding of your needs; for performing statistical analysis or analyses of global Service usage; for security and legal compliance; for notifying you of any changes to this Service or our remain services; for billing; and for other services. We also reserve the right to make full use of information that is not personally identifiable information.
+**Data Protection Officer (DPO):** We have not appointed a DPO, as we are not legally required to do so. For privacy-related questions, please contact us at **info@thinger.io**
 
-**4. Disclosure**
+***
 
-4.1 We will not sell, share, or rent your information to others except to our staff and to trusted third parties and affiliates when we need to share the information to provide a product or service you have requested. Without limiting the above, we will share your personal data with third parties only in the ways that are described in this Privacy Policy.
+### 3) Personal Data We Process
 
-4.2 It may happen, the disclosure of your personally identifiable information would be necessary in response to a subpoena, court order, or a request for cooperation from law enforcement or other governmental agency globally, in accordance with applicable law. Your personal data may also be shared when we believe disclosure is necessary in connection with efforts to investigate, prevent, or take other action regarding actual or suspected illegal activity or other wrongdoing, to protect and defend the rights, property or safety of the Service, INTERNET OF THINGER S.L., our users, or others.
+Depending on how you interact with the Services, we may process:
 
-4.3 We will use commercially reasonable efforts to make you aware of the disclosure of your personal information contrary to the terms outlined in this Privacy Policy (e.g., in the event of any material security breach).
+* **Identification and contact data:** name, surname, email address, phone number (if provided).
+* **Professional data:** company name, role/department, country (if provided).
+* **Content you provide:** messages, inquiries, support requests, and attachments you submit.
+* **Account and service data (if you create/use an account):** username, authentication data, API keys/tokens, settings, subscription details, billing contact details.
+* **Technical and usage data:** IP address, device identifiers, browser type, operating system, pages viewed, timestamps, and similar usage logs.
+* **Cookie and tracker data:** as described in our [**Cookie Policy**](cookie-policy.md).
 
-**5. Third Parties**
+We do **not** intentionally collect special categories of data (e.g., health data, political opinions). Please avoid including such data in free-text fields unless strictly necessary.
 
-5.1 The Service may contain links to other websites owned and operated by third parties. Third parties and affiliates may collect information from you, and their computer servers may be located outside your region. Browsing of third-party websites and/or using their services is out of the scope of this Privacy Policy. We do not control, and are not responsible for, the privacy and security practices of any third parties. Please acknowledge their privacy and security terms prior to any interaction with third parties.
+***
 
-**6. No tracking**
+### 4) Where Personal Data Comes From
 
-6.1 Nowadays, some browsers provide the "Do Not Track" feature in a proprietary way. There is no common understanding of how to interpret Do Not Track requests. The Service does not currently respond to Do Not Track signals.
+We collect personal data:
 
-**7. Unsubscribe request**
+* **Directly from you** (forms, emails, account creation, support tickets).
+* **Automatically** (cookies, logs, analytics when you browse).
+* **From service providers** acting on our behalf (e.g., hosting, email delivery, analytics), only as needed to provide the Services.
 
-By accepting the [Terms of Use](https://thingsboard.io/products/paas/terms-of-use/), you subscribe to our newsletters and remain in email campaigns without limitation. You can opt out at any time by using the unsubscribe links at the bottom of our emails. Our Service gives you the ability to delete all personal information from within the Service. You can completely delete your account and data by clicking the "Delete Account" button, which is available on the User Profile Page. Please note, however, that we may need to retain certain information for record-keeping purposes, to complete transactions or to comply with our legal obligations.
+***
+
+### 5) Purposes and Legal Bases
+
+We process personal data for the following purposes and under the following legal bases:
+
+#### A) Responding to inquiries (Contact forms / email)
+
+* **Purpose:** handle your request and communicate with you.
+* **Data:** identification/contact data; message content; company/department (if provided).
+* **Legal basis:** **consent** (Art. 6(1)(a) GDPR) and/or **pre-contractual measures** (Art. 6(1)(b)) when your request relates to a potential contract.
+* **Retention:** see Section 7.
+
+#### B) Providing and operating the Services (accounts, authentication, platform features)
+
+* **Purpose:** create and manage accounts, provide functionality, deliver the service, customer support.
+* **Data:** account and service data; technical data; support communications.
+* **Legal basis:** **performance of a contract** (Art. 6(1)(b)).
+* **Retention:** see Section 7.
+
+#### C) Security, fraud prevention, and abuse detection
+
+* **Purpose:** protect the Services, prevent abuse, investigate incidents, ensure integrity and availability.
+* **Data:** technical and usage data; logs; account identifiers.
+* **Legal basis:** **legitimate interests** (Art. 6(1)(f)) in keeping our systems secure.
+* **Retention:** see Section 7.
+
+#### D) Analytics and service improvement
+
+* **Purpose:** understand how users interact with the website to improve content and performance.
+* **Data:** technical/usage data; cookie identifiers.
+* **Legal basis:** **consent** (Art. 6(1)(a)) for non-essential cookies/trackers, as applicable.
+* **Retention:** see Section 7 and Cookie Policy.
+
+#### E) Marketing communications (optional)
+
+* **Purpose:** send newsletters, product updates, and marketing communications.
+* **Data:** contact data; preferences (subscription status).
+* **Legal basis:** **consent** (Art. 6(1)(a)). You can withdraw at any time (see Section 9).
+* **Retention:** until you withdraw consent or unsubscribe, plus limited time to record suppression (see Section 7).
+
+#### F) Billing and payments (if you purchase Services)
+
+* **Purpose:** manage subscriptions, invoicing, payments, accounting.
+* **Data:** billing contact details; transaction and invoice data.
+* **Legal basis:** **performance of a contract** (Art. 6(1)(b)) and **legal obligation** (Art. 6(1)(c)) for accounting/tax.
+* **Retention:** see Section 7.
+
+#### G) Legal compliance and claims
+
+* **Purpose:** comply with legal obligations, respond to lawful requests, defend legal claims.
+* **Data:** as required for the specific obligation/claim.
+* **Legal basis:** **legal obligation** (Art. 6(1)(c)) and/or **legitimate interests** (Art. 6(1)(f)).
+* **Retention:** for the legally required periods.
+
+***
+
+### 6) Recipients and Data Sharing (Disclosures)
+
+We do not sell your personal data.
+
+We may share personal data with:
+
+* **Service providers (processors)** that help us operate the Services (e.g., hosting, email delivery, analytics, customer support tools). They process data under our instructions and subject to appropriate contractual safeguards.
+* **Professional advisors** (legal, accounting) when necessary.
+* **Public authorities** when required by law or to protect rights and safety.
+
+***
+
+### 7) Data Retention
+
+We keep personal data only for as long as necessary for the purposes described above:
+
+* **Contact requests:** for the time needed to handle your request and follow-up; then stored for a limited period for record-keeping and legal defense (typically up to **2 years** depending on limitation periods).
+* **Accounts and service data:** for as long as your account is active; after deletion, data may be retained for a limited period for security, backups, and legal obligations.
+* **Marketing subscriptions:** until you unsubscribe/withdraw consent; we may retain minimal data in a suppression list to ensure we respect your choice.
+* **Billing and invoices:** retained for the legally required tax/accounting periods (typically **5 years**).
+* **Security logs:** retained for a limited period necessary for security monitoring and incident investigation (typically **1 month**).
+* **Cookies/trackers:** see our [**Cookie Policy**](cookie-policy.md) for cookie-specific durations.
+
+***
+
+### 8) International Data Transfers
+
+We may use service providers located in, or that store/process data in, countries outside the European Economic Area (EEA).
+
+Where international transfers occur, we rely on appropriate safeguards, such as:
+
+* **European Commission adequacy decisions**, and/or
+* **Standard Contractual Clauses (SCCs)**, and additional measures where necessary.
+
+Details can be requested via **info@thinger.io**.
+
+***
+
+### 9) Your Rights (GDPR)
+
+Subject to applicable law, you have the right to:
+
+* **Access** your personal data
+* **Rectification** of inaccurate data
+* **Erasure** (“right to be forgotten”)
+* **Restriction** of processing
+* **Data portability**
+* **Objection** to processing based on legitimate interests
+* **Withdraw consent** at any time (this does not affect processing already carried out)
+
+To exercise your rights, contact us at **info@thinger.io**. We may request information to verify your identity.
+
+***
+
+### 10) Right to Lodge a Complaint (Supervisory Authority)
+
+If you believe our processing of your personal data infringes data protection law, you have the right to lodge a complaint with your supervisory authority.
+
+For Spain, the supervisory authority is the **Agencia Española de Protección de Datos (AEPD)**.
+
+***
+
+### 11) Security Measures
+
+We implement appropriate technical and organizational measures to protect personal data against accidental or unlawful destruction, loss, alteration, unauthorized disclosure, or access.
+
+No method of transmission or storage is 100% secure, but we work to protect your data using industry-standard practices.
+
+***
+
+### 12) Children
+
+Our Services are not directed to children under 16. We do not knowingly collect personal data from children. If you believe a child has provided personal data, contact us at **info@thinger.io**.
+
+***
+
+### 13) Changes to this Privacy Policy
+
+We may update this Privacy Policy from time to time. We will post the updated version on this page and update the “Last updated” date.
+
+***
+
+### 14) Contact
+
+For any privacy-related questions, contact: **info@thinger.io**
+
+***
