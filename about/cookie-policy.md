@@ -2,7 +2,7 @@
 
 ## Cookie Policy
 
-**Last updated:** 03/06/2026
+**Last updated:** 03/03/2026
 
 This Cookie Policy explains how **INTERNET OF THINGER S.L.** (“we”, “us”, “our”) uses cookies and similar technologies on **https://thinger.io** (the “Website”).
 
