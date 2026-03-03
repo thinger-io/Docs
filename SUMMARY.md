@@ -113,4 +113,5 @@
   * [Branding](about/resources.md)
   * [Terms & Conditions](about/terms-and-conditions.md)
   * [Privacy Policy](about/privacy-policy.md)
+  * [Cookie Policy](about/cookie-policy.md)
   * [Service Level Agreement](about/service-level-agreement.md)
