@@ -35,7 +35,7 @@ The configurable parameters are:
 
 There is an example of an email endpoint that contains some text and variables that are filled when the device calls the endpoint, adding the current temperature and humidity reported by the device. Notice that `temperature` and `humidity` variables are closed inside double brackets `{{}}`, so the endpoint will be expecting this information to complete the body.
 
-![](../.gitbook/assets/EmailEndpoint.png)
+<img src="../.gitbook/assets/EmailEndpoint.png" alt="" width="563">
 
 Calling endpoints is well documented [here](http://docs.thinger.io/arduino/#coding-using-endpoints-calling-endpoints), but it is basically required to call the endpoint by using the `call_endpoint` method, which requires the endpoint id, `ExampleEmail` in this example, the optional data to be sent to the endpoint, which is a `pson` document (quite similar to JSON) with two keys named `temperature` and `humidity` holding the readings from a DHT sensor:
 
@@ -69,7 +69,7 @@ The configurable parameters are:
 * **Request Headers**: It is possible to add headers to the request, which can be useful for adding authorizations, controlling caches, configuring content type, etc.
 * **Request Body**: The body can be either a custom body with a specific content or a JSON payload with the information sent by the device. In a custom body, it is possible to add custom variables, as shown in the email example. This way, it is possible to create content in different formats like XML, SOAP, etc (remember to add the adequate content-type in this case).
 
-![](../.gitbook/assets/HTTPEndpoint.png)
+<img src="../.gitbook/assets/HTTPEndpoint.png" alt="" width="563">
 
 ### Telegram Bot Endpoint
 

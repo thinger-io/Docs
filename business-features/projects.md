@@ -86,7 +86,7 @@ Permissions can be added individually for each resource, but it is also possible
 
 When a resource type is selected on the list (for example: buckets), the interface will show additional options to provide permissions to  all profiles `Any Bucket` or to an individual profile from the existing buckets list `Specific Bucket` :&#x20;
 
-![](<../.gitbook/assets/image (435).png>)
+<img src="../.gitbook/assets/image (435).png" alt="" width="563">
 
 Finally, the same logic is applied to the `Actions` section, allowing to provide full permissions to the selected resource profile `Any Action` or to select only one specific permission `Select specific action` .
 

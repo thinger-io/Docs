@@ -37,7 +37,7 @@ Under the "Internet & Security" menu, it is possible to configure "Advanced - De
 
 For the Shelly Plug S device example, we will define two different properties to store the latest device state. Shelly Plug S can connect to an MQTT broker, and once connected, it periodically sends information like temperature, relay state, real-time power consumption, available updates, etc. In this example, we will use the current power consumption and rely on the state, so <mark style="color:purple;">power</mark> and <mark style="color:green;">relay</mark> are defined as device properties:
 
-![Properties definition for Shelly Plug S SmartPlug](<../../../.gitbook/assets/image (582).png>)
+<img src="../../../.gitbook/assets/image (582).png" alt="Properties definition for Shelly Plug S SmartPlug" width="563">
 
 Both properties are updated from this device topics:
 
@@ -74,7 +74,7 @@ This code can be easily modified inside the Product Script section on the Produc
 
 
 
-![Product script example for transforming payloads](<../../../.gitbook/assets/image (506).png>)
+<img src="../../../.gitbook/assets/image (506).png" alt="Product script example for transforming payloads" width="563">
 
 To use this function, it is only required to reference it when configuring the payload. In this case, it is used `:` to indicate that the payload must be replaced with the contents returned from the function name:&#x20;
 
@@ -132,7 +132,7 @@ shellies/{{device}}/{{field=temperature|overtemperature}}
 
 In this example, a placeholder is defined with the notation \{{<mark style="color:orange;">field</mark>=<mark style="color:blue;">temperature</mark>|<mark style="color:green;">overtemperature</mark>\}}, which specifies two measurement fields: <mark style="color:blue;">temperature</mark> and <mark style="color:green;">overtemperature</mark>. This means that the payload from the topics `shellies/{{device}}/temperature` and `shellies/{{device}}/overtemperature` will be stored together in the same bucket, using the corresponding field name. A topic configuration works when storing data in a bucket:
 
-![Topic Configuration to bucket data example](<../../../.gitbook/assets/image (563).png>)
+<img src="../../../.gitbook/assets/image (563).png" alt="Topic Configuration to bucket data example" width="563">
 
 This is the configuration for a bucket:
 
@@ -236,7 +236,7 @@ In addition, it is possible to define a custom payload, i.e., using different fi
 
 That will store the information according to our definition:
 
-![MQTT Data sample modified before bucket insert](<../../../.gitbook/assets/image (535).png>)
+<img src="../../../.gitbook/assets/image (535).png" alt="MQTT Data sample modified before bucket insert" width="563">
 
 ### API Resources
 
@@ -268,7 +268,7 @@ As described in [Properties](../product-profile/properties.md) and [Buckets](/br
 
 After saving the new API Resource, we can go to the device API, and the new `relay`resource will appear.
 
-![Device API for resource created over Product ](<../../../.gitbook/assets/image (580).png>)
+<img src="../../../.gitbook/assets/image (580).png" alt="Device API for resource created over Product " width="563">
 
 However, there seems to be something wrong there! The API can detect that the resource is expecting an input (`Resource Input` header is present), but nothing more appears. We are expecting here a true/false input, or just a switch to turn the relay on and off.&#x20;
 
@@ -280,7 +280,7 @@ This can be solved by assigning a default payload value on the API definition, w
 
 Now, refreshing the API explorer will display the relay resource expecting a boolean that can be easily changed over the GUI. At this moment, it is possible to turn on and off the switch button. It will call the API Resource on the product, which will convert the incoming payload to 'on' and 'off', and then will be transmitted to the required topic for the Shelly Plug S device. Cool! :sunglasses:
 
-![Device API for resource created over Product ](<../../../.gitbook/assets/image (560).png>)
+<img src="../../../.gitbook/assets/image (560).png" alt="Device API for resource created over Product " width="563">
 
 However, this use case can be improved a little bit. For example, suppose that it is required to display the current relay state to avoid always showing the default 'false' value set before. For this purpose, we can reference other properties or even API responses. To reference a property, i.e., the 'relay' one configured on the [Properties](../product-profile/properties.md) section, we can set a default value with `=property.<property_name>`:
 

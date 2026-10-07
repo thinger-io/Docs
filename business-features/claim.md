@@ -48,7 +48,7 @@ Then, there are some configuration options that must be used to custom de claim 
 * **Enabled switch**: Allows controlling whether a claim is active, without the need to delete it.
 * **Max Claims**: Defines the number of times the claim can be executed.\
   A value of `0` or an empty field allows **unlimited claims**, as indicated in the interface:\
-  &#xNAN;_“Number of maximum claims that can be done. 0 or empty for unlimited claims.”_
+  _“Number of maximum claims that can be done. 0 or empty for unlimited claims.”_
 * **Claim resources:** Select the **Resource Type,** it can be anyone of Thinger.io resources and choose **one or more resources** from the list.
 
 <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>

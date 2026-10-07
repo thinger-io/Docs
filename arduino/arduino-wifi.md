@@ -123,7 +123,7 @@ void loop() {
 
 The Arduino Yún is a microcontroller board based on the ATmega32u4 and the Atheros AR9331. The Atheros processor supports a Linux distribution based on OpenWrt named OpenWrt-Yun. The board has built-in Ethernet and WiFi support, a USB-A port, micro-SD card slot, 20 digital input/output pins (of which 7 can be used as PWM outputs and 12 as analog inputs), a 16 MHz crystal oscillator, a micro USB connection, an ICSP header, and 3 reset buttons. This board lets the programmable ATmega32u4 communicate with the Internet by using the Bridge Library that exposes some functions running in the Linux distribution.
 
-![Arduino Yun Board](../.gitbook/assets/arduino-yun.png)
+<img src="../.gitbook/assets/arduino-yun.png" alt="Arduino Yun Board" width="563">
 
 This example will allow connecting an Arduino Yun to the cloud platform in a few lines using the WiFi interface. The `arduino_secrets.h` file just needs to be modified with the relevant information. Notice that it is not required to configure any network parameters in the code, as this is managed by the running Linux distribution. However, it may be necessary to connect with the Arduino Yun via WiFi to connect it to a local network.
 
@@ -231,13 +231,13 @@ void loop() {
 For using MKR1000 over the default TLS/SSL connection, it is required to install the Thinger.io server certificate on the board with the Wifi101 Firmware Updater located in the Tools menu.
 {% endhint %}
 
-![WiFi 101 Certificates Updater](../.gitbook/assets/mkr1000_ssl_certificate.png)
+<img src="../.gitbook/assets/mkr1000_ssl_certificate.png" alt="WiFi 101 Certificates Updater" width="563">
 
 ## Arduino MKR1010
 
 The Arduino MKR WiFi 1010 serves as an accessible entry point for basic IoT and pico-network application design. It is a comprehensive solution for many fundamental IoT application scenarios, whether building a sensor network connected to an office or home router, or creating a BLE device that sends data to a cellphone. The board's primary processor is a low-power Arm® Cortex®-M0 32-bit SAMD21, consistent with other boards in the Arduino MKR family. WiFi and Bluetooth® connectivity are handled by the u-blox NINA-W10 module, a low-power chipset operating in the 2.4GHz range. Additionally, the Microchip® ECC508 crypto chip ensures secure communication. The board also features a battery charger and a directional RGB LED.
 
-![Arduino MKR1010](<../.gitbook/assets/image (269).png>)
+<img src="../.gitbook/assets/image (269).png" alt="Arduino MKR1010" width="563">
 
 This example will allow connecting the MKR1010 device to the cloud platform in a few lines using the WiFi interface. The `arduino_secrets.h` file just needs to be modified with the relevant information.
 

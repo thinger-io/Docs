@@ -56,7 +56,7 @@ This kind of token can be defined directly from the Thinger.io Console in the `A
 
 To add permissions to the token for writing to a single bucket, configuration can be performed to grant access to various resources and actions within the account:
 
-![](../.gitbook/assets/token_permission.png)
+<img src="../.gitbook/assets/token_permission.png" alt="" width="563">
 
 ### Getting Tokens From User Credentials
 

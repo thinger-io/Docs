@@ -150,7 +150,7 @@ This resource definition will be translated to the following resource in the pla
 
 Beyond the useful device API explorer, which facilitates interaction with devices, specific information about the REST API endpoint can be obtained by clicking the Show Query button. This reveals details such as the method type, URL, content type, request body, and response body. Additionally, clicking `Curl`allows for copying the command to interact with the device directly from the console. The preceding example translates to the following REST API call:
 
-![](<../.gitbook/assets/showQuery (1).PNG>)
+<img src="../.gitbook/assets/showQuery (1).PNG" alt="" width="563">
 
 There is more information available about the API for interacting with the devices [here](http://docs.thinger.io/api/#devices-api-access-device-resources).
 

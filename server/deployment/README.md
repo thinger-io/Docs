@@ -48,7 +48,7 @@ This portal allows managing subscription preferences such as **changing the admi
 
 It is possible to modify the payment method by accessing the section "Payment Methods", and choosing to make payments with a Credit Card or a Direct Debit that allows the domiciliation of the payment with SEPA transfers.
 
-![](../../.gitbook/assets/stipe_payment_options.png)
+<img src="../../.gitbook/assets/stipe_payment_options.png" alt="" width="401">
 
 ### Addons contracting
 
@@ -72,4 +72,4 @@ To cancel a subscription:&#x20;
 2. Select the subscription to be canceled.
 3. In the subscription administration panel, click on the `cancel subscription` option.
 
-![](../../.gitbook/assets/stripe_cancel_subscription.png)
+<img src="../../.gitbook/assets/stripe_cancel_subscription.png" alt="" width="353">

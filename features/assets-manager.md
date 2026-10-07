@@ -42,7 +42,7 @@ Selecting one or several devices will display new buttons in the upper area of t
 
 <figure><img src="../.gitbook/assets/image (105).png" alt=""><figcaption></figcaption></figure>
 
-![](<../.gitbook/assets/image (512).png>)
+<img src="../.gitbook/assets/image (512).png" alt="" width="563">
 
 All the devices that were checked will be associated with the selected Type, from then on they will inherit their properties and the alert and geofences configuration, so let's explain how to configure those features.
 

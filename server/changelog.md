@@ -960,7 +960,7 @@ Once the claim is completed, the process may request the configuration of the de
 * Installed plugins are now automatically updated on impersonation changes.
 * UI with better support for mobile devices. Will be released as an APP. Still under development! :technologist:
 
-![image|232x500](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/0/03e8a7ed74c46b4d097b2e1e7986b52a0b10958e.jpeg)
+<img src="https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/0/03e8a7ed74c46b4d097b2e1e7986b52a0b10958e.jpeg" alt="image|232x500" width="563">
 
 #### Core
 
@@ -1033,23 +1033,23 @@ Once the claim is completed, the process may request the configuration of the de
 
 *   Experimental **IOTMP Proxies** (TCP/HTTP) for connecting with device local network resources, i.e., devices/routers webpages, terminals, RDP, VNC, etc. These proxies require a new IOTMP client library for Linux.
 
-    ![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/5/5f75f79c013adb100f77cb875914de881ed23808_2_682x500.png)
+    <img src="https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/5/5f75f79c013adb100f77cb875914de881ed23808_2_682x500.png" alt="" width="563">
 
     Example of the IOTMP Linux Client working on a [RevPi](https://revolutionpi.com/), providing access to device configuration over the local web page:
 
     ![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/e/e4fb3e49e52e3005b6fecf992a21c9d41b9a29e2.jpeg)
 *   Support for defining **Web Services** inside `Products` section. It allows defining web pages that can be accessed over an IOTMP linux client.
 
-    ![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/2/2ce86149f84152af3a0343c7f4a4ad0e61296ed8.png)
+    <img src="https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/2/2ce86149f84152af3a0343c7f4a4ad0e61296ed8.png" alt="" width="563">
 *   Ability to **create project members** directly from the "Add Member" section, creating the user automatically by providing only the email address.
 
     ![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/1/1950978482fe7a4e2d55d6d79a78a5094b6fa360.png)
 *   Each project can now define a set of **Project Roles** that can be used by any member within a project.
 
-    ![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/c/c97d1016ff70708f110041ff0cbcd0fb26cb388b.png)
+    <img src="https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/c/c97d1016ff70708f110041ff0cbcd0fb26cb388b.png" alt="" width="375">
 *   Each developer/admin account can now define a set of **Global Roles** that can be used by any member within any project. For example, a general-purpose read role that can be shared in all projects.
 
-    ![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/8/8321e7caa769129c79afc43cb67b9727a8a17be5.png)
+    <img src="https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/8/8321e7caa769129c79afc43cb67b9727a8a17be5.png" alt="" width="375">
 *   **Project member permissions** can now be established by **roles** in addition to custom member permissions, simplifying permissions management. All global roles, project roles, and custom permissions can be established together (if required).
 
     ![](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/original/2X/7/7562321053f93999a22c98ee4f6f1bc04bf6a66c.png)
@@ -1119,7 +1119,7 @@ Discussion Topic: [Thinger.io Community Forum](https://community.thinger.io/t/pl
 
 * New administration feature called 'Proxies' (starting on MEDIUM instances), which allows creating custom proxies to plugins or local services, i.e, redirect TCP or UDP traffic to Node-RED (for example, for COAP devices), or provide access to local InfluxDB2 install:
 
-![image|615x500](https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/f/f8b596ac16ee9fcd6c6021fc61a956ea9201078f_2_732x750.png)
+<img src="https://discoursefiles.s3.dualstack.eu-west-1.amazonaws.com/optimized/2X/f/f8b596ac16ee9fcd6c6021fc61a956ea9201078f_2_732x750.png" alt="image|615x500" width="563">
 
 * New plugin InfluxDB2 (starting on MEDIUM instances, as it requires Proxies feature). It supports accessing the InfluxDB2 GUI and API for custom configurations, dashboards, alerts, ingestion, etc.
 

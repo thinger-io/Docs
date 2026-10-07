@@ -81,7 +81,7 @@ Any individual Sigfox or LoraWAN device can be integrated using our API as HTTP 
 
 Thinger.io enables users to organize, monitor, and interact with connected devices through a unified interface. It allows real-time visibility into device status, access to and control over device resources (such as sensors or actuators), and the ability to store historical data in _Data Buckets_ for later analysis. Additionally, it supports tagging and grouping devices, making it easier to manage large-scale deployments. Overall, this feature is essential for maintaining a structured, scalable, and easily manageable IoT system.
 
-![](.gitbook/assets/ipdev.png)
+<img src=".gitbook/assets/ipdev.png" alt="" width="563">
 
 T4. Store, Show & Share Data
 

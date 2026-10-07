@@ -117,7 +117,7 @@ To use the PWA on a smartphone, simply click on the "add to the main menu" optio
 
 The PWA function parameters will be automatically configured based on the preferences of the other tabs of the web console rebranding. So it is not possible to introduce different ones. &#x20;
 
-![](<../.gitbook/assets/image (384).png>)
+<img src="../.gitbook/assets/image (384).png" alt="" width="563">
 
 ### Email Templates
 
