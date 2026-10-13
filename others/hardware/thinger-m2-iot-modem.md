@@ -4,7 +4,9 @@ The Thinger M2IoT Modem is a compact M.2-format connectivity module that combine
 
 <figure><img src="../../.gitbook/assets/frente_rev_DSC9621.jpg" alt=""><figcaption></figcaption></figure>
 
-\{% hint style="warning" %\} The M2IoT uses the **M.2 2242 mechanical format only**. Its pinout is **not compatible with standard M.2 slots** (for example, the ones found on laptops or SSD adapters). Use it only with carrier boards designed for this module.&#x20;
+{% hint style="warning" %}
+The M2IoT uses the **M.2 2242 mechanical format only**. Its pinout is **not compatible with standard M.2 slots** (for example, the ones found on laptops or SSD adapters). Use it only with carrier boards designed for this module.&#x20;
+{% endhint %}
 
 Designed by the Thinger.io team, this module is aimed at developers, makers and industry professionals who need to add **Wi-Fi, Bluetooth and cellular NB-IoT connectivity** to their own hardware with minimal integration effort and the best compatibility with the Thinger.io platform. The ESP32 handles the application and the Wi-Fi/Bluetooth connectivity, and controls the Quectel modem through a UART and a few control lines, so the whole module can be programmed from a single processor using the Arduino Framework, ESP-IDF or MicroPython.
 
@@ -38,72 +40,72 @@ Designed by the Thinger.io team, this module is aimed at developers, makers and 
 | VBUS (connector pins 1 and 2)               | 5 V     | TBD     |
 | 3.3 V output (connector pins 38, 49 and 54) | 3.3 V   | TBD     |
 
-\{% hint style="info" %\} The 3.3 V pins are connected to the ESP32 supply rail and can be used as a reference or to power low-consumption external circuits. The supply of the NB-IoT modem is generated internally and is not available at the connector. \{% endhint %\}
+The 3.3 V pins are connected to the ESP32 supply rail and can be used as a reference or to power low-consumption external circuits. The supply of the NB-IoT modem is generated internally and is not available at the connector.&#x20;
 
 ### Hardware overview
 
-\<figure>\<img src="m2iot-overview.jpg" alt="">\<figcaption>\<p>Main components of the Thinger M2IoT Modem\</p>\</figcaption>\</figure>
-
-| Element            | Description                                                                                                  |
-| ------------------ | ------------------------------------------------------------------------------------------------------------ |
-| ESP32-PICO-D4      | Main processor with Wi-Fi, Bluetooth and 4 MB of flash. It runs the user application and controls the modem. |
-| Quectel BC660K-GL  | NB-IoT modem, connected to the ESP32 through a UART and three control lines.                                 |
-| 1NCE eSIM          | Soldered MFF2 eSIM connected to the BC660K-GL.                                                               |
-| WiFi-ANT (U.FL)    | Antenna connector for Wi-Fi and Bluetooth.                                                                   |
-| NB ANT (U.FL)      | Antenna connector for NB-IoT.                                                                                |
-| M.2 edge connector | Power, UART0, configurable GPIOs and SIM lines.                                                              |
-
-\{% hint style="warning" %\} Never power the module without an antenna attached to the NB ANT connector while the modem is transmitting. \{% endhint %\}
+| Element           | Description                                                                                                  |
+| ----------------- | ------------------------------------------------------------------------------------------------------------ |
+| ESP32-PICO-D4     | Main processor with Wi-Fi, Bluetooth and 4 MB of flash. It runs the user application and controls the modem. |
+| Quectel BC660K-GL | NB-IoT modem, connected to the ESP32 through a UART and three control lines.                                 |
+| 1NCE eSIM         | Soldered MFF2 eSIM connected to the BC660K-GL.                                                               |
+| WiFi-ANT (U.FL)   | Antenna connector for Wi-Fi and Bluetooth.                                                                   |
+| NB ANT (U.FL)     | Antenna connector for NB-IoT.                                                                                |
 
 #### LEDs
 
-| LED            | Indicates                                                | Behavior                                                                                 |
-| -------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| Modem power    | The Quectel BC660K-GL is powered on.                     | On while the modem is on.                                                                |
-| Network status | NB-IoT connection status (NETLIGHT output of the modem). | Driven by the modem. The blinking pattern depends on the modem LED mode (`AT+QLEDMODE`). |
-| TX             | ESP32 UART0 transmission.                                | Blinks when the ESP32 sends data through UART0 (programming or serial console).          |
-| User           | Free for the user application.                           | Connected to GPIO21. Set GPIO21 to HIGH to turn it on.                                   |
+<figure><img src="../../.gitbook/assets/ESQUEMA LED (1).png" alt=""><figcaption></figcaption></figure>
+
+| LED                            | Indicates                                                | Behavior                                                                                 |
+| ------------------------------ | -------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| LED1 - Modem power - RED       | The Quectel BC660K-GL is powered on.                     | On while the modem is on.                                                                |
+| LED2 - Network status - YELLOW | NB-IoT connection status (NETLIGHT output of the modem). | Driven by the modem. The blinking pattern depends on the modem LED mode (`AT+QLEDMODE`). |
+| LED3 - TX - BLUE               | ESP32 UART0 transmission.                                | Blinks when the ESP32 sends data through UART0 (programming or serial console).          |
+| LED4 - User - RED              | Free for the user application.                           | Connected to GPIO21. Set GPIO21 to HIGH to turn it on.                                   |
 
 ### Pinout
 
-\<figure>\<img src="m2iot-pinout.png" alt="">\<figcaption>\<p>Thinger M2IoT Modem Pinout\</p>\</figcaption>\</figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2026-10-13 a las 14.10.50.png" alt="" width="375"><figcaption></figcaption></figure>
 
 The following table shows the connections available at the M.2 edge connector. Pins that are not listed are not connected.
 
-| M.2 pin                       | Signal     | ESP32 GPIO | Notes                                                                                 |
-| ----------------------------- | ---------- | ---------- | ------------------------------------------------------------------------------------- |
-| 1, 2                          | VBUS       |            | Power input (5 V)                                                                     |
-| 3, 25, 40, 47, 56, 63, 65, 67 | GND        |            | Ground                                                                                |
-| 4                             | TXD0       | GPIO1      | UART0 TX. Console and programming.                                                    |
-| 6                             | RXD0       | GPIO3      | UART0 RX. Console and programming.                                                    |
-| 8                             | IO0        | GPIO0      | Boot mode selection. Keep LOW at reset to enter the flash download mode.              |
-| 10                            | RESET      | EN         | ESP32 reset (active LOW).                                                             |
-| 20                            | TxBC-RxESP | GPIO4      | Connected to the TXD output of the modem (ESP32 RX). Also available at the connector. |
-| 22                            | RxBC-TxESP | GPIO13     | Connected to the RXD input of the modem (ESP32 TX). Also available at the connector.  |
-| 24                            | IO12       | GPIO12     | ADC2, touch. Strapping pin: do not drive it HIGH at boot.                             |
-| 26                            | IO14       | GPIO14     | ADC2, touch                                                                           |
-| 28                            | IO27       | GPIO27     | ADC2, touch                                                                           |
-| 30                            | IO26       | GPIO26     | ADC2, DAC2                                                                            |
-| 32                            | IO25       | GPIO25     | ADC2, DAC1                                                                            |
-| 34                            | IO32       | GPIO32     | ADC1, touch                                                                           |
-| 36                            | IO33       | GPIO33     | ADC1, touch                                                                           |
-| 38, 49, 54                    | +3.3V      |            | 3.3 V output                                                                          |
-| 42                            | IO19       | GPIO19     |                                                                                       |
-| 44                            | IO21       | GPIO21     | Shared with the user LED.                                                             |
-| 46                            | IO22       | GPIO22     |                                                                                       |
-| 48                            | PWRKEY     | GPIO23     | Controls the power key of the modem.                                                  |
-| 50                            | PSM\_EINT  | GPIO5      | Controls the PSM\_EINT input of the modem.                                            |
-| 52                            | RESET\_BC  | GPIO18     | Resets the modem.                                                                     |
-| 68                            | IO\_EXT    |            | SIM data line.                                                                        |
-| 70                            | RST\_EXT   |            | SIM reset line.                                                                       |
-| 72                            | CLK\_EXT   |            | SIM clock line.                                                                       |
-| 74                            | SIM\_VDD   |            | SIM supply.                                                                           |
+| M.2 pin                       | Signal          | ESP32 GPIO | Notes                                                                                 |
+| ----------------------------- | --------------- | ---------- | ------------------------------------------------------------------------------------- |
+| 1, 2                          | VBUS            |            | Power input (5 V)                                                                     |
+| 3, 25, 40, 47, 56, 63, 65, 67 | GND             |            | Ground                                                                                |
+| 4                             | TXD0            | GPIO1      | UART0 TX. Console and programming.                                                    |
+| 6                             | RXD0            | GPIO3      | UART0 RX. Console and programming.                                                    |
+| 8                             | IO0             | GPIO0      | Boot mode selection. Keep LOW at reset to enter the flash download mode.              |
+| 10                            | RESET           | EN         | ESP32 reset (active LOW).                                                             |
+| 20                            | TxBC-RxESP      | GPIO4      | Connected to the TXD output of the modem (ESP32 RX). Also available at the connector. |
+| 22                            | RxBC-TxESP      | GPIO13     | Connected to the RXD input of the modem (ESP32 TX). Also available at the connector.  |
+| 24                            | IO12            | GPIO12     | ADC2, touch. Strapping pin: do not drive it HIGH at boot.                             |
+| 26                            | IO14            | GPIO14     | ADC2, touch                                                                           |
+| 28                            | IO27            | GPIO27     | ADC2, touch                                                                           |
+| 30                            | IO26            | GPIO26     | ADC2, DAC2                                                                            |
+| 32                            | IO25            | GPIO25     | ADC2, DAC1                                                                            |
+| 34                            | IO32            | GPIO32     | ADC1, touch                                                                           |
+| 36                            | IO33            | GPIO33     | ADC1, touch                                                                           |
+| 38, 49, 54                    | +3.3V           |            | 3.3 V output                                                                          |
+| 42                            | IO19            | GPIO19     |                                                                                       |
+| 44                            | IO21            | GPIO21     | Shared with the user LED.                                                             |
+| 46                            | IO22            | GPIO22     |                                                                                       |
+| 48                            | PWRKEY          | GPIO23     | Controls the power key of the modem.                                                  |
+| 50                            | PSM\_EINT       | GPIO5      | Controls the PSM\_EINT input of the modem.                                            |
+| 52                            | RESET\_BC       | GPIO18     | Resets the modem.                                                                     |
+| 66                            | BC\_EXT\_ENABLE |            | BC660 external power control                                                          |
+| 68                            | SIM\_IO\_EXT    |            | SIM IO external pin                                                                   |
+| 70                            | SIM\_RST\_EXT   |            | SIM RST external pin                                                                  |
+| 72                            | SIM\_CLK\_EXT   |            | SIM CLK external pin                                                                  |
+| 74                            | SIM\_VDD        |            | SIM VDD                                                                               |
 
-\{% hint style="danger" %\} GPIO4, GPIO13, GPIO23, GPIO5 and GPIO18 are used internally to communicate with and control the NB-IoT modem. **Do not drive them from external hardware** if the modem is in use. \{% endhint %\}
+{% hint style="info" %}
+GPIO4, GPIO13, GPIO23, GPIO5 and GPIO18 are used internally to communicate with and control the NB-IoT modem. **Do not drive them from external hardware** if the modem is in use.
+{% endhint %}
 
-\{% hint style="info" %\} GPIO21 is the default SDA pin of the I2C bus in the Arduino framework, and it is shared with the user LED. If it is used as SDA, the LED will blink with the bus activity. Another pin can be assigned with `Wire.begin(SDA, SCL)`. \{% endhint %\}
-
-\{% hint style="warning" %\} The SIM lines (pins 68, 70, 72 and 74) are connected to the on-board eSIM. Do not connect an additional SIM card to these lines. \{% endhint %\}
+{% hint style="info" %}
+The SIM lines (pins 68, 70, 72 and 74) are connected to the on-board eSIM. Do not connect an additional SIM card to these lines.&#x20;
+{% endhint %}
 
 #### Internal connections to the NB-IoT modem
 
@@ -227,7 +229,9 @@ void loop() {
 }
 ```
 
-\{% hint style="info" %\} If the modem does not power on automatically, generate a pulse on the PWRKEY line (GPIO23) before starting the connection. The timings required by the modem are described in the Quectel BC660K-GL hardware design document. \{% endhint %\}
+{% hint style="info" %}
+If the modem does not power on automatically, generate a pulse on the PWRKEY line (GPIO23) before starting the connection. The timings required by the modem are described in the Quectel BC660K-GL hardware design document. \{% endhint %\}
+{% endhint %}
 
 ### Design files
 
