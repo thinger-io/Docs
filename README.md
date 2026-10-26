@@ -5,6 +5,9 @@ description: >-
   of projects within minutes.
 ---
 
+> [!IMPORTANT]
+> **This documentation has moved to [docs.thinger.io](https://docs.thinger.io).** This repository is archived and no longer updated: the old pages redirect to their new location. For questions and corrections, use the [community forum](https://community.thinger.io).
+
 # OVERVIEW
 
 ## What is Thinger.io?
